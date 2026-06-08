@@ -16,14 +16,33 @@ A small utility repository used to extract text from DOCX files and produce simp
 
 ## Usage
 
-1. Place source `.docx` files under `input/docx/`
-2. Run the extractor:
+1. Place source `.docx` files under `input/docx/` (or any folder you prefer).
+
+2. Run the extractor. The script now accepts either a single `.docx` file or a directory containing `.docx` files, plus an optional output directory:
 
 ```bash
-python docx2txt.py
+# Convert a single file (writes to default output folder next to the script)
+python docx2txt.py input/docx/example.docx
+
+# Convert all .docx files in a folder (non-recursive)
+python docx2txt.py input/docx/champions-syncs
+
+# Convert and specify an output folder
+python docx2txt.py input/docx/champions-syncs -o output/txt/champions-syncs
 ```
 
-Outputs will be written to `docx2txt_output/` and `output/` as Markdown score files.
+Notes about behavior:
+
+- If `input` is a file, only that file is converted.
+- If `input` is a directory, the script iterates non-recursively over all `*.docx` files in that directory and converts them.
+- Use `-o/--output` to set the destination folder for generated `.txt` files; if omitted, the default is `docx2txt_output/` located next to the script.
+- The script creates the output directory if it does not exist, skips non-`.docx` files, and reports missing files without aborting the whole run.
+
+Dependency: the script uses the `python-docx` package. Install with:
+
+```bash
+pip install python-docx
+```
 
 ## Notes
 
