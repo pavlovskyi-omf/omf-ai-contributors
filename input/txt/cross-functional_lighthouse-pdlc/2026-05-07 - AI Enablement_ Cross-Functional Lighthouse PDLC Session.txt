@@ -1,0 +1,1161 @@
+AI Enablement Cross-Functional Lighthouse PDLC Session-20260507_135954UTC-Meeting Recording
+May 7, 2026, 1:59PM
+1h 31m 4s
+
+Nikita Kumar   0:29
+Hello!
+
+Vlad Grubman   0:30
+Good morning, everyone.
+
+Nikita Kumar   0:31
+Hey, man.
+Giving everyone a couple of minutes to join in.
+
+Eugene Semenyuk   0:48
+Play song.
+Hello, good morning.
+
+Nikita Kumar   0:59
+Hello, for Gary, giving everyone a minute or two to hop in here.
+
+Eugene Semenyuk   1:08
+Best.
+I do.
+
+Nikita Kumar   2:02
+I think we can get started. Hello, everyone. Happy Thursday. Welcome back to our cross-functional session. We're going to continue today with webhooks and then a little bit of a real-life use case scenario with Eugene. So he will take over and work with the team on requirements hardening, some webhooks, and how to start actually connecting all these things together.
+
+Eugene Semenyuk   2:07
+Yeah.
+Ms.
+You.
+Yes.
+
+Nikita Kumar   2:25
+We also have a few of our use cases identified for cross-functional sessions going forward. So once those have been reviewed by the leadership team, we will also paste those and everyone can get an idea of what cross-functional use cases will be doing in the next following sessions, which teams they'll be affecting. So you can come in if it's for your team.
+
+Eugene Semenyuk   2:38
+Yeah.
+
+Nikita Kumar   2:46
+You don't have to come in if it's not for your team. So we just want to make sure that your time is allocated properly because we know there's a lot of meetings. But if there's a use case that's interesting for you and it says it's for digital or per product or for dev, you are more than welcome to join in and also start working on those with us as a team. Basically, how we plan on running the following use case sessions will be.
+
+Eugene Semenyuk   2:49
+Okay.
+Yeah.
+Yeah.
+Yeah.
+
+Nikita Kumar   3:09
+The first session will be us kind of showing you hands-on how to do the use case and what tools to kind of use. The second session will be show and tell from you guys building the use cases as part of homework, but also bringing them in and troubleshooting them with us for your specific team and build them for your specific criteria as well. So once we have all of that approved, we'll send that across to the team as well.
+
+Eugene Semenyuk   3:18
+And.
+
+Nikita Kumar   3:30
+I'll pass it over to you, Eugene, to continue our lesson.
+
+Eugene Semenyuk   3:33
+Yeah, thank you, Nikita. Hi, everyone. So, yeah, let me remind you what we did previously. So, yeah, last time we discussed the value of autonomous agents, like health, and yeah, and even created some automation to run.
+to run testability agent.
+Based on some event, yeah, in our case, yeah, if I remember, so yeah, we used a status transition, so yeah, when we move JIRA item from to do to in progress state, our agent triggered automatically just some.
+to this specific Jira item. So yeah, today, today we'd like to continue this topic and make this cross-functional. So we've built cross-functional requirements, review requirements, Hardwin workflow that will execute.
+Few agents from different functions, and after that, in the end, come up with a decision, like, is this user story ready?
+Ready for development.
+or we need to adjust something. So yeah, let me share my screen and...
+Yeah.
+And continue, so yeah, today.
+You can, yeah, today you can follow me and do things along with me. So yeah, we have all the agents prepared and you can reuse these agents. So yeah, feel free to go with me to...
+Maybe stop me if you need some kind of clarifications. So yeah, first of all, let's start with the user story that we will work today. So I took the user story from a self-service team. So this is backend story.
+about suppress offers from blah blah blah blah blah. Yeah, and we have a user story with acceptance criteria. So, and I've moved this user story to Codney Sandbox project, yeah, because we will experiment a lot with this user story.
+So yeah, we need to have some safe space. So yeah, that's why we use Codemi Sandbox Project and our Jira training environment.
+That you may see here, so yeah, as some, yeah, we we we use these do sandbox on our previous.
+workshops. So yeah, we will continue experimenting in this in this sandbox.
+So, yeah, uh, last time we we asked you to...
+You send your emails. So yeah, if you would like to participate in this hands-on exercise, so yeah, you need to have admin permissions in our Code Me Sandbox project. So yeah, if you
+Yeah, if you haven't sent your email yet, so yeah, please share your email in the chat.
+now or later. So yeah, my colleagues will add you to today's project and you will be able to repeat all the steps together with me.
+Okay.
+We have, we have this user story, and I will go for today to create.
+to create cross-functional user story review from business digital point of view, from quality assurance, and from engineering. So we will utilize multiple agents in multiple tools. So yeah, let me first of all show what we will do.
+build today. So I've already created a workflow. So I'm going to run this workflow, demonstrate what we would like to achieve, and then we will create this workflow from scratch. So yeah, let's see what we have in this.
+to automation flow. So this workflow triggers on work item transition from to do to in progress status. I also applied condition
+Like it should pick only the user stories that I've created. So I am a reporter for this particular user story. So yeah, I guess, yeah, today we will have multiple individuals who will work together with me. So yeah, that's
+That's important step to.
+
+Joshua Smith   8:53
+Where is this webhook configured?
+Is it a webhook?
+
+Eugene Semenyuk   8:57
+Yeah, I mean, yeah, we we have web hooks, but yeah, we we we use web hooks for external agent in code mean.
+So yeah, but...
+Yeah, in this in this case, so yeah, it works, it works automatically in Jira, so yeah, this is, yeah, we will we will go through this workflow step by step, I will I will be creating this, so yeah, now my idea is just to...
+
+Joshua Smith   9:27
+The.
+
+Eugene Semenyuk   9:34
+to show what we have. Like, yeah, in the first, as a first stage, we have digital story review. So our workflow will review the user story from a digital point of view, then leave a comment with this.
+Uh, review, then we use, then we will use our testability analysis agent.
+Also, add a comment, and then we will execute code agent. So, yeah, we will send a request to to code me webhook and in code me we have agent that analyze.
+technical feasibility to implement this user story. So the agent analyze repository, the documents, dependencies, analyze user story description, and come up with some decisions. So is it feasible to implement this user story
+For this particular project, or yeah, we we may need some some additional details.
+and maybe technical decisions to implement this user story.
+Yeah, and finally, finally, we have cross-functional agent that combines all the reviews from different roles.
+
+Nikita Kumar   10:55
+Eugene.
+Sorry, there's a quick message if you can share the link that you're showing in the chat.
+
+Eugene Semenyuk   11:04
+Um...
+Yeah, let me, let me check.
+
+Nikita Kumar   11:08
+Yeah.
+Also, if I put a thumbs up next to your name or next to your email, it means I've added you to JIRA. You do have to request for confluence. We can send you the details again for that.
+
+Eugene Semenyuk   11:22
+Mhm.
+
+Nikita Kumar   11:22
+Sorry, I mean you have to request for code me. For Jer, I'm adding people in as we speak, as you're sending your emails through. And we added everyone that also sent them in on Tuesday as well.
+
+Eugene Semenyuk   11:34
+Two.
+
+Swathy Lokula   11:35
+So, Eugene, the one you're showing is not the G right, the is the code me sandbox, right?
+
+Eugene Semenyuk   11:36
+My, my.
+browser.
+
+Swathy Lokula   11:41
+Which we have to raise it.
+
+Eugene Semenyuk   11:42
+Ohh.
+Could you please repeat your...
+
+Swathy Lokula   11:47
+The one where you are demoing is the code me sandbox. We we have access to Jeevan, yeah.
+
+Eugene Semenyuk   11:47
+Question.
+This.
+This is, this is, this is, yeah, this is Jira project with name called me sandbox. So, yeah, and yeah, this is like sandbox project where where you can experiment with any Jira item, yeah, without.
+
+Sanjay Kumar Parui   12:00
+Yes.
+When I click on that, you know, the thunder button, right, it is automation button. It is doing something but not navigating with the page that it is showing for you. I don't know what I'm missing.
+
+Eugene Semenyuk   12:11
+Gina.
+Yeah, so sorry, something doesn't know something wrong with my VTI, so yeah, let me double check because...
+
+Sanjay Kumar Parui   12:28
+I don't know if it's good.
+
+Eugene Semenyuk   12:34
+I lost my browser.
+Ohh.
+
+Sanjay Kumar Parui   12:38
+Mhm.
+
+Jatin Bagga   12:41
+Let's build an agent to figure out how you lost your browser. And that'll be cool.
+
+Dhanalakshmi Chinnasamy   12:42
+S.
+
+Eugene Semenyuk   12:44
+Yeah.
+Yeah.
+Hi, it's not responding strange.
+Mm.
+So yeah, sorry, I have some technical things. So yeah, I have minimized my browser and Windows, Windows button is not working.
+And...
+So, probably...
+Inboard.
+Yeah, maybe I can use Task Manager.
+
+Jurijs Markelovs   13:45
+And someone else, while Eugene is trying to fix these issues, share the link to what Eugene is working on.
+
+Eugene Semenyuk   13:45
+Um...
+Mhm.
+
+Sanjay Kumar Parui   14:17
+Can I share my screen quickly? I just want to show what I'm seeing. Maybe it's for everybody or just me.
+
+Eugene Semenyuk   14:24
+Could someone please share, like, any any JR link to our to our chat? So, yeah, I need I need to somehow open my browser, yeah, and yeah, it looks like...
+
+Sanjay Kumar Parui   14:24
+Ohh.
+I'll say that.
+
+Nikita Kumar   14:38
+Do you want any of the any training link sent? Is that what you're asking for?
+
+Eugene Semenyuk   14:38
+I don't have any other.
+Any, yeah, yeah, yeah, yeah, just please send any link, so yeah, it should open my, it should open my.
+
+Nikita Kumar   14:45
+Okay.
+
+Sanjay Kumar Parui   14:48
+Browser.
+Yeah.
+
+Eugene Semenyuk   14:51
+This chat to make it easier? Yeah, any, yeah, any, any of OK.
+
+Sanjay Kumar Parui   14:52
+Yeah.
+The.
+It.
+
+Eugene Semenyuk   14:56
+Yeah, yeah, I see the guys, yeah, singing, yeah.
+
+Sanjay Kumar Parui   14:57
+But.
+Eugene, like, I'm sharing my screen. So this is where, like, I saw, like, you clicked on this, create AI test cases, right? I click on this, it says it does something, but it doesn't go to any page. I am trying to navigate to that page where.
+
+Eugene Semenyuk   15:03
+Mhm.
+Yeah.
+Yeah.
+
+Sanjay Kumar Parui   15:18
+I can do set up, so like what you're following.
+
+Eugene Semenyuk   15:21
+So, yeah, you, yeah, actually, you don't need to to click create AI this cases. So, yeah, they, yeah, when when you click this automation button, it opens automation rules that that's available for manual execution.
+So yeah, in your case, so yeah.
+For now, yeah, please don't do anything. So I will show you how to, yeah, how to, how to start and how to navigate to required pages. So yeah, I see that my, my browser.
+
+Sanjay Kumar Parui   15:50
+Okay.
+Okay.
+
+Eugene Semenyuk   16:07
+Yeah, I see my browser.
+Yeah, available.
+Yeah, it's still a bit freezing.
+I got it.
+On.
+
+Debamitra Bhattacharjee   16:32
+So, Eugene, I can see the automation flow list. You want that link? I can share that. Do you want to try that?
+
+Eugene Semenyuk   16:32
+Okay, thanks. Things happen.
+No, no, no, no.
+Yeah, we just need this training environment that Nikita shared. So
+Okay, let me probably...
+
+Sujan Shrestha   16:56
+Hey, Nikita, so did you shared a link for?
+The service now to get the access for admin role for the web and coordinate, right? So, how long is it gonna take for the approval for that? So...
+
+Nikita Kumar   17:08
+Yes.
+That just depends on how long the approver takes because we don't have access to giving like we it's not on the EPAM side to give you the access. So it just depends on how long it takes the group to approve it.
+
+Eugene Semenyuk   17:18
+Ohh.
+
+Sujan Shrestha   17:21
+Ohh, OK.
+Thanks.
+
+Nikita Kumar   17:28
+Yeah. If you requested emails for Jira, I've already put everybody in so far. So if there's a thumbs up next to your email, that means it already went in.
+
+Eugene Semenyuk   17:29
+Yeah.
+
+Sujan Shrestha   17:42
+Thank you.
+
+Nikita Kumar   17:43
+Yep, no problem.
+
+Eugene Semenyuk   17:51
+Okay, I have some alternative while it's...
+Free in a bit, so I can open.
+From my physical machine.
+Yeah, and we need...
+What item? OK.
+Okay, here is our rule.
+So yeah, for now, I'm just describing the rules. So yeah, you don't need to do anything. So yeah, we will run this rule and see what we will have in the end. And then we will start building.
+
+Nikita Kumar   18:43
+Can you, sorry, Eugene, can you send that? Can you send that link so people can follow along with it as well?
+so they can view it or show them how to get back here again.
+
+Eugene Semenyuk   18:52
+You don't need to, you don't need, yes, sorry, you don't need to follow along with me for now. So yeah, yeah.
+
+Oleksandr Pavlovskyi   18:53
+Good.
+
+Nikita Kumar   18:59
+Okay.
+
+Eugene Semenyuk   19:01
+Thank you. Okay, so
+Yeah, where I stopped. Okay. Yeah, we have three agents that reviews the user story from different perspectives. Yeah, and then we have final agent that analyze all three decisions. And based on this decision, come up with some common decision, like what we should do.
+Next, yeah, should we proceed with this user story or should we?
+Yeah, should we move this user story back to some refinement? Yeah, and yeah, we even have some condition. So yeah, if we have not ready statement in our comment, so we translate this work item to do state.
+So, yeah, let's...
+Let's execute this rule.
+And see.
+Yeah, and see what we will receive.
+So yeah, let me remove all the comments. So yeah.
+Yeah, and yeah, please do not do anything for now. Because yeah, you can trigger some rules. You can start some other flows. So yeah, for now, yeah, please do not do anything. So yeah, and let our automation to do something.
+Yeah, and then we will try to create it from scratch.
+Okay, we move the user story from to do to in progress state. Yeah, and now we can open.
+Audit logs and see.
+Yeah, it should appear.
+Here, yeah, let me double check that. Yeah, it is enabled.
+Best in India.
+And.
+Yeah, let me double-check.
+Oh, someone, someone created good test cases for.
+For this particular user story.
+So yeah, and actually we don't need them.
+So yeah, and please do not.
+Do not do anything with this user story or anything connected with this project for now, so yeah.
+Yeah, let me double-check the rules.
+Okay, we move the user story from to do to into progress.
+To, to, to, yeah.
+Of course.
+
+Joshua Smith   22:15
+So, is that supposed to trigger something when it's when the status is changed?
+
+Eugene Semenyuk   22:21
+No, it looks like probably someone who who clicked manually to create the AI test cases, so yeah.
+So yeah, it added some test cases to these.
+to this user story.
+And yeah, probably we need to wait a date.
+Mhm.
+
+Joshua Smith   22:54
+The while we're rating is the idea, just trying to make sure I understand the idea here, is it to like as there are status changes to this JIRA ticket, does that trigger events like that then like a webhook is listening to in the next step to kick off the agent?
+
+Eugene Semenyuk   22:54
+Why?
+Yeah.
+Yeah, some of the agents trigger by Jira automation. So, yeah, as robot agents are inside the Atlassian infrastructure, so yeah, they trigger naturally.
+So yeah, but for some other external agents, like call me agents or any other agents, we use web hooks that triggers these agents.
+Okay, yeah, I see that.
+Yeah, this is my...
+a rule that in progress state right now.
+Ohh.
+Yeah, and we can even see some comments. So yeah, we see testability analysis.
+We see business and digital review. So yeah, for testability, what we have, yeah, we have testability assumptions. So yeah.
+In general, it is testable, but requires some assumptions. From business and digital review, it also approved this recommendation.
+And also we should wait for technical review.
+So, let's update.
+Looks like it's still executing.
+Okay.
+I.
+Yeah.
+Yeah, here is our technical technical review. And yeah, confidence is 75%. And what is our verdict? Yeah, it's feasible to implement this user story in this in this project.
+So yeah, here we can see some impacted modules or files.
+required changes. So what we should change somewhere. So yeah, it can be some light version of implementation plan.
+Yeah, and yeah, here is our cross-functional, cross-functional review. So, like, overall verdict, proceed with caution. Like, we have executive summary.
+cross-functional alignment, like different point of views, like business logic, platform consistency, measurement, feasibility, key concerns that we should keep in mind.
+And some consolidated recommendation recommendations based on all the rules.
+and critical assumptions to validate. Yeah, and the, yeah, business reviewers.
+So yeah, technical visibility it is.
+Yeah, both performed by myself, by the agent with my credentials, yeah, and other things conducted by Jira Automation.
+So yeah, that's the main idea that that's the main idea of the use case that we would like to create.
+and implement. So yeah, let me double check my...
+My browser.
+Still not responding.
+Yeah, let me kill it.
+Yes.
+And start again, Task Manager.
+Okay.
+And.
+Yeah.
+Yeah, that's so slow.
+Yeah.
+Okay, let's start here. So, okay, from this point, you can start work with me. So what you need to do? So let's open, let's open Jira.
+training environment and find the code me sandbox project. So yeah, if you don't have it here, so you can click more spaces in left sidebar. And
+Find sandbox here.
+So, then?
+We need to click more actions for this particular project and click.
+Space Settings.
+Under the space settings, we have automation.
+Yes.
+Yeah, and here we can create our our great autonomous flows.
+Yeah, we what we need to do, we need to create a click, create flow and create from scratch.
+
+Jatin Bagga   29:37
+Hey, Eugene, so we're gonna start, like, we're gonna start doing it as you're talking now, right? Like...
+
+Eugene Semenyuk   29:38
+Mhm.
+Right, right.
+
+Jatin Bagga   29:43
+Okay, so we're gonna do it with you.
+
+Eugene Semenyuk   29:46
+Yeah.
+
+Nikita Kumar   29:48
+I think there's another comment. Someone's not able to see the space setting in theirs.
+
+Eugene Semenyuk   29:55
+If you don't, if you don't have this option, yeah, that means that you don't have permissions, so yeah, please share your your email, yeah, and our folks will add you.
+To do this project as an admill.
+
+Joshua Smith   30:12
+Was it, Eugene, was it create from scratch or use a template? I missed that.
+
+Eugene Semenyuk   30:16
+Yeah, create from scratch.
+Yeah, template is good feature, so yeah, we can even use some robot stuff to implement the flow, yeah, but...
+For training purpose, we need to understand each step. So yeah, we will create it from scratch.
+
+Joshua Smith   30:39
+So I'm not seeing that first box, like add a trigger. I have example flow.
+
+Eugene Semenyuk   30:39
+So, okay.
+
+Sanjay Kumar Parui   30:42
+Yeah, you can skip that. You have options, skip it like on the right side. I think it's giving some, for me also I got the same thing. Yeah, no problem.
+
+Eugene Semenyuk   30:48
+Yeah.
+
+Joshua Smith   30:48
+Got it. Thank you. That did it, Sanjay. Thanks.
+
+Sanjay Kumar Parui   30:52
+Mhm.
+
+Eugene Semenyuk   30:52
+Yeah, awesome.
+OK, let's proceed. So, yeah, first of all, we need to select the first the first trigger, so we can, yeah, we can use manual trigger for work item, but to create autonomous agent, we need to use some even base trigger. So, for our...
+For our use case, we will use.
+Work item transitioned.
+So, yeah, but uh, but there are many, many others.
+Yeah, many, many other triggers like work item created, work item commented, comment edited, work item moved, updated, work logged. So yeah, there are many, many events that can be used as a trigger for our workflow.
+Yeah, but for our case, yeah, let's use...
+
+Nikita Kumar   31:52
+Sorry, Eugene, I'm going to interfere again. My bad. I've added people to the space. I know, Jhonathan, you're already on it. I see it. I see you in the space, but I'm not sure why you also are not seeing the space settings.
+
+Jatin Bagga   32:05
+Yeah, I'm not seeing say settings. I'm in here because I'm like I can click everything, but I don't see the settings for some bizarre reason.
+
+Nikita Kumar   32:12
+Yeah, I've also added you all as admin in here and I see your name in and marked as admin as well.
+
+Eugene Semenyuk   32:21
+So, yeah.
+
+Jatin Bagga   32:21
+Yeah, maybe we can troubleshoot that later, I guess. Right now, maybe we can just continue with this to get through this use case, and then we can circle back, maybe Nikita.
+
+Nikita Kumar   32:29
+Yeah, yeah, we can circle back off on.
+
+Eugene Semenyuk   32:31
+So, yeah, and please, please maybe double check your mailbox. So, yeah, maybe there is some email that with with invite to this project, yeah, and probably you need to accept the invite.
+
+Anu Perera   32:33
+Okay.
+
+Eugene Semenyuk   32:45
+So yeah, maybe it will help.
+
+Debamitra Bhattacharjee   32:48
+Yeah, I got an email and I accepted that. I've actually opened the link with that email invitation, but still it's not showing in my code with sandbox that.
+
+Eugene Semenyuk   32:56
+Mhm.
+Mhm.
+
+Biniam Wubyeshaw   33:02
+Settings, spec setting. I think you might you might need to refresh it. I refreshed it and I was able to see automation.
+
+Eugene Semenyuk   33:03
+So, probably, probably it requires some time.
+
+Debamitra Bhattacharjee   33:11
+Okay.
+
+Biniam Wubyeshaw   33:12
+Okay, let me try to refresh it. Yeah, Adrien, can you start like I'm in auto machine now? What's next? I think you are ahead on.
+
+Eugene Semenyuk   33:23
+So yeah, let me open one more tab.
+
+Biniam Wubyeshaw   33:26
+Thank you.
+
+Eugene Semenyuk   33:26
+So yeah, in automation you need to create a quick create flow and create from scratch.
+
+Debamitra Bhattacharjee   33:32
+Okay.
+
+Eugene Semenyuk   33:35
+Yeah, and...
+Yeah, and if you will have something like skip, yeah, you can you can skip.
+Yeah, and here you should see.
+You should be able to see this add trigger.
+Yeah, and we should search for work item transition.
+Yeah, we need to select from to do.
+Two.
+in progress.
+Oh, misclick, sorry.
+Um...
+Transition from to do to in progress.
+Yeah, and yeah, for training purpose, so this step is required. Let's add a condition.
+Yeah, because, uh...
+Yeah, we need to make sure that we won't touch other user stories. So yeah, let's, yeah, let's work with the.
+yeah, with only specific user story that we created. So, yeah.
+Let's click at condition and and select user condition.
+And here, yeah, yeah, let's use default condition like reporter Ace. Yeah, and here we need to add our user ID. Yeah, for some reason, yeah, we should provide a unique identifier, like not a fancy name. So yeah, how to get your...
+unique identifier.
+So, you need to...
+Someone sees blank page.
+
+Sanjay Kumar Parui   35:29
+I I got a little drop down, the Eugene.
+
+Eugene Semenyuk   35:29
+Yeah, you, you.
+You can, you can refresh.
+Mhm.
+
+Sanjay Kumar Parui   35:35
+When I click on that, I got there's a drop down criteria. I don't know why you're not getting a drop down.
+
+Eugene Semenyuk   35:41
+What, what kind of dropped out?
+
+Sanjay Kumar Parui   35:42
+No, not there. When you see on the criteria, you should start typing in your name.
+
+Swathy Lokula   35:43
+Get the.
+
+Jatin Bagga   35:46
+Okay.
+
+Eugene Semenyuk   35:46
+Uh huh.
+
+Jatin Bagga   35:48
+Mm.
+
+Eugene Semenyuk   35:49
+User condition, yeah, we need to select, yeah.
+
+Jatin Bagga   35:50
+That's what I see in Blasanjay. I found my name, for instance, through that option.
+
+Sanjay Kumar Parui   35:50
+And yeah.
+
+Eugene Semenyuk   35:52
+Yeah.
+
+Sanjay Kumar Parui   35:55
+Yeah.
+Yeah, if you click on that user condition and then go to criteria, click, yeah, click on the criteria box and then start typing your name.
+
+Eugene Semenyuk   35:56
+The.
+Yeah.
+Yeah.
+
+Biniam Wubyeshaw   36:06
+Maybe he's he's not in the OneMain domain, that's maybe the reason. OK.
+
+Sanjay Kumar Parui   36:07
+Interesting.
+
+Eugene Semenyuk   36:07
+Yeah.
+
+Swathy Lokula   36:09
+Ohh.
+
+Eugene Semenyuk   36:10
+Yeah.
+Yeah.
+
+Sanjay Kumar Parui   36:11
+So, we are getting our drop-down list, so we can get from there.
+
+Eugene Semenyuk   36:15
+So yeah, yeah, if you have drop-down lists, so yeah, you can select your name. Yeah, but for those who don't have it, so yeah, let me show you how to find it. So yeah, click your profile tab button.
+At the top right corner, yeah, and click profile button here.
+Yeah, it will open.
+Your account.
+That's interesting.
+Yes.
+Now, let me authorize.
+Yeah.
+Yeah, and here is my ID.
+Like, under the people.
+Yeah, I just need to copy and paste it. Yeah, and I can see my name here.
+Yeah.
+So yeah, using this condition, so this workflow will pick up.
+Items that.
+I moved from.
+to do to in progress state and the items where I am a reporter.
+So yeah, okay, I guess we're done with the, we're done with with trigger, so then we need to use.
+Our first agent to.
+
+Jatin Bagga   38:13
+Eugene, what is 2 by 65? Is that sort of the criteria that we use for this workflow? Is that what it is?
+
+Eugene Semenyuk   38:20
+Could you please repeat your question? So what?
+
+Jatin Bagga   38:22
+2 slash 65 added. What does that mean? That's the condition. So like when we said it's work transition, second we added a condition. Is that what it's saying?
+
+Eugene Semenyuk   38:27
+This.
+Yeah.
+So yeah, in Jira automation, you have limited amount of steps that you can add. So yeah, and yeah, yeah, and the limit is 65.
+
+Jatin Bagga   38:39
+Oh, got it. Oh, interesting.
+Got it. Thank you.
+
+Eugene Semenyuk   38:47
+So yeah, we need to add.
+Click New Step. Select Action.
+and click Use Agent.
+So we will see before you can use this step, you'll need to connect Atlassian automation to Robo. Let's click connect.
+Yeah, after that, you will see the list of agents available in Sandbox. Let's start with digital review.
+We have, let's search for.
+
+Joshua Smith   39:20
+So I'm not sure if it, if this happened to anyone else or not. Maybe it was just me, but whenever I clicked on the account settings to go to get my ID, it took me out of the automation and didn't save the work I did.
+Tsao.
+I just have to go back, I guess.
+
+Eugene Semenyuk   39:34
+Oh.
+
+Jatin Bagga   39:36
+You, Josh, you're saying like in the drop-down, your name didn't pop up and that when you looked at the work item transition or after that?
+
+Eugene Semenyuk   39:36
+Yeah, probably.
+
+Joshua Smith   39:43
+No, when I clicked, I was well into this automation flow, but when I clicked on the profile, it took me to a separate page and didn't save my workflow.
+So I guess now I'm just going to go back and create it again, which is fine. I just wanted to clarify in case that happened to anyone else or if there's something else I should do.
+
+Eugene Semenyuk   39:54
+Up.
+So, so, so, so, yeah, probably, yeah, if if you go to profile, so yeah, maybe don't click it and just use the right-click and open a new tab.
+
+Joshua Smith   40:10
+Got it. No, I found actually when I clicked on, when I clicked on new automation, it, that was pretty cool because it found the old one that I was created, that I had been creating. So we're good.
+
+Eugene Semenyuk   40:10
+It will be, yeah, safe.
+Oh, awesome. Yeah, it's smart enough. Pleasantly, yeah.
+
+Joshua Smith   40:21
+It's pretty cool.
+
+Eugene Semenyuk   40:23
+Okay, so yeah, let's proceed with the first agent. So yeah, we need to use a digital story reviewer.
+Okay.
+Yeah, created by Eugene.
+So yeah, as a prompt, yeah, we can say something like, review this user story.
+So it will be conversation starter for these.
+this agent. So our workflow will send our user story and this small starter.
+and agent will come up with some analysis. So yeah, and agent response will be saved to agent response variable that we will use.
+Next. So yeah, let's click next.
+
+Jatin Bagga   41:26
+Wait, I'm sorry, I didn't quite follow. What did you, those double curly braces? What is that? So it's an agent response. What is that again?
+
+Eugene Semenyuk   41:26
+And select.
+This is variable, this, this, this is variable, where agent response stores.
+So, yeah, and we will use this variable for further steps.
+
+Alfredo Achecar   41:48
+Right.
+
+Jatin Bagga   41:49
+So is the general format, it's two curly braces, and then it's lowercase agent and response. So that's if we pick up any user agent, that's how we maintain it, or is this automatically generated all the time?
+
+Eugene Semenyuk   41:51
+Yeah, yeah, yeah.
+Yeah, this is default variable for, so yeah, in these braces, yeah, usually is syntax is for defining variables for for Jira automation, yeah, and yeah, this is default default variable that used for for agents.
+
+Alfredo Achecar   42:04
+But.
+
+Eugene Semenyuk   42:23
+So, yeah, yeah, let me show how we can use it. So, yeah, this is our next step. So, and the next step will be adding a comment, because initially, Jira robot agents in Jira automation, they cannot use skills.
+
+Jatin Bagga   42:24
+Bye.
+
+Eugene Semenyuk   42:43
+Unfortunately, so...
+They can just analyze some information, provide some response, and then we we need to.
+to use something to work with this response. Yeah, in our case, we will add a comment to Jira item. So we need to create an action and find command on work item.
+So, this action will add a comment to our triggered work item. Yeah, and as a comment, we can write everything, but...
+We need to provide our agent response. So yeah, let's just click copy response.
+A button, so we need to copy this variable by this button.
+And just paste it here.
+Like agent response.
+Yeah, and I recommend to uncheck this button, prevent duplicates by only adding this comment answer the particular work item. Yeah, because if you will, yeah, in case if you rerun this workflow.
+It it may skip in this command.
+So, yeah, I recommend it.
+
+Jatin Bagga   44:04
+Sorry, Eugene, I got a little lost. So I was in the use agent. We talked about the reference, the agent response and other steps. I click next and then it added the use agent on my left, sort of the workflow itself. And then.
+
+Eugene Semenyuk   44:13
+Yeah.
+Okay.
+
+Jatin Bagga   44:19
+And then I think, yeah, so then you said we need to add another action.
+
+Eugene Semenyuk   44:24
+Mhm.
+
+Jatin Bagga   44:25
+And so, yeah, so we got here and then I clicked on use agent again, and that's wrong. I need to click on.
+
+Eugene Semenyuk   44:29
+No, no, no, no, no, you, you, you don't need you don't need to click use agent, so you need you need to use comment.
+
+Jatin Bagga   44:33
+Okay.
+
+Eugene Semenyuk   44:37
+On work item action.
+Because, yeah, the first the first step provide us review, and the next step we will use this review to edit as a comment to Jira item. So, yeah, that's why that's why we need this comment on work item step and use agent response.
+As a common text.
+Yeah, and yeah, please uncheck prevent duplicates by only adding this comment on.
+Yeah, and click next.
+Yeah, frankly speaking, we've done with the first.
+With the first step, it is a digital review.
+Yeah, and now we can even add some name to our...
+Workflow.
+Yeah, and maybe save it.
+Yeah, let's click flow details and provide some fancy name.
+Or, like...
+Sample requirements review flow.
+So yeah, to differentiate it, so let's add your name.
+Yes, yeah, I know, yeah, yeah, you, you, you, you will use the same name, so yeah, let's let's provide a...
+Yeah, your your your your personal name to the or or any or any other identifier that can help you to.
+To identify your particular workflow.
+Yeah, from my case, it will be a requirements review flow, Eugene.
+
+Jatin Bagga   46:43
+Sorry, Eugene, maybe because I'm flipping between one screen to the other. Sorry, I don't want to hold up everyone. How did you get to, once you've added the comment, how did you get to this page? I see another turn this flow on.
+
+Eugene Semenyuk   46:53
+Hello, yeah, yeah, you can, you just need to click flow details button.
+
+Jatin Bagga   46:58
+Okay, got it. Sorry, my bad.
+
+Eugene Semenyuk   47:00
+This one, yeah, no worries, that's fine, yeah, yeah, and just provide fancy name.
+Or for your flow.
+Thank you.
+
+Joshua Smith   47:11
+And I just have a quick question because it might be relevant when we actually do this in our prod environment. So the condition applied for my user, I copied that string in the URL that you highlighted and put it in it, but it still wasn't recognized. So I'm like showing a deleted user question mark.
+It's probably like a issue where I'm not in the on the project.
+
+Alfredo Achecar   47:34
+Did you?
+Josh, I will check that you didn't include the question mark at the end.
+
+Eugene Semenyuk   47:39
+No.
+
+Joshua Smith   47:42
+OK, let me, good call, let me check that.
+
+Eugene Semenyuk   47:46
+And.
+
+Jatin Bagga   47:46
+And Josh, can you place your screenshot there because I think we might encounter this later. So that'd be good.
+
+Joshua Smith   47:50
+Yep.
+
+Eugene Semenyuk   47:53
+Yeah, and now we can click turn on flow.
+
+Joshua Smith   47:58
+I do not have the question mark. I put a screenshot in.
+
+Eugene Semenyuk   48:08
+Yeah, let me see.
+And yeah, and I suppose you don't have, you don't have a...
+Um...
+Drop down here in criteria.
+To do, yeah, let's.
+
+Joshua Smith   48:33
+The dropdown.
+
+Eugene Semenyuk   48:35
+Yeah, let's make sure that you copied.
+The right ID.
+
+Joshua Smith   48:42
+Okay, thanks. I see Alfredo put in a screenshot, so it's everything before the question mark.
+
+Eugene Semenyuk   48:42
+Like...
+So, yeah, you, yeah, you.
+
+Joshua Smith   48:48
+All right. I think that might be my issue. Yeah, thanks. I'll try it again with that specific section.
+
+Eugene Semenyuk   48:54
+Mm-hmm.
+Okay, yeah.
+Feel free to message me later.
+So yeah, we can. Okay, let's proceed. So yeah, let's.
+Let's open, let's go back to JIRA.
+To our sandbox project.
+Yeah, and now let's...
+Yeah, let's clone.
+Clone my user story that.
+That I...
+demonstrated before. So this is CS.
+184. So, yeah, let's get to to make sure that everyone works on the on their own work item. So, yeah, let's let's clone.
+Let's clone this work item. Yeah, and please change reporter. So yeah, put yourself as a reporter. Yeah, for example.
+If I was Svetlana, so yeah, I will.
+I will put.
+Like this.
+Yeah, signing, I don't need signing.
+So, yeah, and just glee clone.
+So yeah, before we go next, so yeah, let's make sure that everyone has their own ticket.
+So, yeah, you, you can call on this.
+CS item that we have here.
+Yeah, let me remove the label.
+Yeah, and uh, yeah.
+Before we go next, let me disable my first version.
+Because, yeah, multiple, multiple rules can be applied for one work item if they map the specific condition. So, yeah, that's why we we set up.
+Like this condition, like reporter is current user.
+So, yeah.
+What we do next?
+So, yeah, let's...
+Let's move your work item from to do to in progress state.
+Oh, we see a lot of comments, so yeah, probably first of all.
+Well, good to remove them.
+Yeah, well, at least we have a date and time, so we can we can figure out what is a new comment.
+Yeah, but anyway, we need to remove.
+For them, so how to see workflow execution?
+
+Simanta Thapa   52:34
+It's it.
+Oh, that was my exact question. Okay.
+
+Eugene Semenyuk   52:40
+Yeah, we can we can open automation.
+So for example, from Flow Builder, you can just click return to flows.
+But I recommend to have two tabs. Yeah, on the first tab, you will have your own workflow.
+Where is mine? Yeah, and the second tab, you can open audit log. Yeah, and see all the executions.
+Tunde.
+Yeah.
+This is my...
+So.
+Yeah, let's probably...
+Will need.
+Yeah.
+We can see a new comment added one minute ago. So yeah, based on review for this particular user story, yeah, we have.
+The business and digital perspective assessment.
+Like business and digital review approved with recommendations.
+Okay, looks like we have...
+The first role in our workflow. So yeah, we still have some time.
+
+Sujan Shrestha   54:22
+So, so how did we trigger that on that particular history, actually using?
+
+Jatin Bagga   54:24
+Can you eat?
+Yeah, can you just go back to the question that just we got asked one more time? So let's say you've cloned the story, now you've got the automation workflow in place. What do we need to do just one more time, please?
+
+Eugene Semenyuk   54:38
+So yeah, once you clone the story, so yeah, you just need to move the status, like from to do to in progress.
+And this status change should trigger your workflow.
+Yeah, actually, actually it will trigger other workflows. Yeah, but we can see no actions performed because condition, condition doesn't matter.
+
+Joshua Smith   55:04
+Why did it trigger those other workflows?
+
+Eugene Semenyuk   55:08
+Yeah, because, yeah, first of all, it triggers this workflow, and then it, yeah, yeah, yeah, this, and then it verifies this condition.
+
+Joshua Smith   55:12
+Ah, but no action. Got it.
+
+Eugene Semenyuk   55:20
+So yeah, that's why, yeah, I changed the status for my item. Yeah, and I can see like other executions, like for example, for Dana, yeah.
+It just, yeah, check the item, then verify that, okay, this is not my reporter. So yeah, I.
+So I won't go further.
+
+Jatin Bagga   55:46
+Sorry, just one more time. So from to do, we just all we do is change the status to in progress and then that gets recorded. That's it.
+
+Eugene Semenyuk   55:46
+Which?
+Uh-huh.
+Yeah, yeah, yeah, you should, yeah, you should wait maybe one or two minutes.
+Or maybe less, and it will add.
+
+Jurijs Markelovs   56:04
+What's the logic? What's the logic behind the status? It says no action performed.
+
+Eugene Semenyuk   56:11
+Uhh...
+So yeah, it means that workflow triggered.
+but no actions executed. So in our workflow, we have two actions and one trigger. So it means that workflow has been triggered, but agent, but yeah, agent has not been executed and.
+The same for comment.
+
+Jurijs Markelovs   56:43
+I'm sorry, it's not clear, Middle East.
+
+Jatin Bagga   56:47
+Me neither. I'm not following.
+
+Eugene Semenyuk   56:48
+And.
+So yeah, okay. Yeah, you can see that some of the executions has this particular status, like no actions performed. So what does it mean?
+So, it means that...
+This workflow, for example, created by Dana, it triggered to this particular work item change.
+No.
+So yeah, but no action executed because this condition doesn't matter. I mean, user condition.
+So, work item transitioned, executed.
+So, yeah, and that's why we see, yeah, we see this record, but this condition, this user condition.
+Yeah, it doesn't matter, and that's why other steps won't be executed.
+And that's why we see no actions performed.
+Because...
+In other cases, we will see success.
+Yeah, for example, for for for Josh, so yeah, we can see that.
+Or.
+workflow triggered, used this agent and commented the work item.
+So, yeah, and if we open it.
+We should be able to see this analysis.
+Yeah, here it is.
+
+Swathy Lokula   58:44
+Eugene, how do we troubleshoot if there is an issue with my flow?
+
+Akash Gupta   58:45
+It.
+
+Eugene Semenyuk   58:49
+Yeah, yeah.
+Yeah, good, good, good question. So, yeah, here...
+Let me find some...
+There should be some workflow with error. So yeah, maybe next page, success, yeah, some errors. Yeah, for example, sometimes you will receive such status.
+So yeah, you can open and see what's wrong. So in this case, yeah, common body was empty.
+So, yeah, looks like probably, yeah, Dana forgotten to to add the the body, or it was some.
+Some intermediate issue.
+So, yeah, but yeah, you can you can use this to identify, like, what what failed and what what the reason.
+
+Jurijs Markelovs   59:49
+There is also option to, in a drop down, validate the flow. Not sure what it does.
+
+Eugene Semenyuk   59:54
+Yeah.
+Mm-hmm.
+
+Jurijs Markelovs   1:00:07
+On that blue, blue drop-down.
+
+Eugene Semenyuk   1:00:10
+Yeah.
+
+Jurijs Markelovs   1:00:12
+Yeah.
+
+Eugene Semenyuk   1:00:12
+Let's double-check.
+Yeah, it it it will dates uh like that that you have everything.
+Uh, like required fields and so on.
+So yeah, at least this validate flow will prevent such such issues where you forget, for example, if you forget this.
+
+Nikita Kumar   1:00:41
+Did you join?
+
+Eugene Semenyuk   1:00:41
+Agent response and comment.
+
+Nikita Kumar   1:00:43
+I know we're at 11 o'clock now. Do we, we can discuss if we want to move this to open hours or if we want to add it to next week's conversation instead. But yeah, we can take it. I know, because I know it's already 11 with everybody right now. And we have another call after this.
+
+Eugene Semenyuk   1:00:51
+Who?
+Yeah, so yeah, let's let's continue next Thursday, yeah, because next Thursday we have one more session regarding this use case, yeah, and yeah, at least we we add some, yeah, we we created some deliverable part, so yeah, next we will proceed with adding a QA agent.
+
+Nikita Kumar   1:01:10
+What?
+
+Eugene Semenyuk   1:01:20
+and Engineering Agent.
+
+Nikita Kumar   1:01:24
+Thanks, Eugene.
+
+Eugene Semenyuk   1:01:24
+So yeah, if you have any questions, so yeah, feel free to ping me. So yeah, or yeah, feel free to join our tomorrow's office hours. Yeah, we can debug together.
+
+Jatin Bagga   1:01:31
+It.
+Yeah, Eugene, just one question I think, and maybe it's something you can cover later. It's about Power Automate versus this automation workflow. Just want to understand a little bit of a difference in commonalities between the two. So maybe it's tomorrow office hour question or something, but that would be great.
+
+Eugene Semenyuk   1:01:38
+Yeah.
+Mm-hmm.
+
+Debamitra Bhattacharjee   1:01:50
+Absolutely, yeah, let's discuss it tomorrow. And Eugene, another last question. So in the criteria, I'm not able to see my name. So suppose I need to create a workflow and I need to add one of my colleagues' name. How do I even get their IDs?
+
+Jatin Bagga   1:01:50
+Okay.
+Thank you.
+
+Eugene Semenyuk   1:02:06
+Yeah, you can open, yeah, click your account.
+
+Debamitra Bhattacharjee   1:02:09
+No, that's okay. That's for me. I can check. But how about like if the reporter is someone else, someone other than me in my project?
+
+Eugene Semenyuk   1:02:11
+Oh, that's...
+Mhm.
+AL.
+Yeah, you can do similar. You can, yeah, just click people.
+
+Debamitra Bhattacharjee   1:02:24
+Okay.
+
+Eugene Semenyuk   1:02:24
+Fine, yeah, for example, Adam.
+
+Debamitra Bhattacharjee   1:02:26
+Okay.
+
+Eugene Semenyuk   1:02:27
+Yeah, and use his ID.
+
+Debamitra Bhattacharjee   1:02:28
+Oh.
+Okay.
+
+Eugene Semenyuk   1:02:31
+Yeah, like this.
+
+Debamitra Bhattacharjee   1:02:33
+But is it something like a user access issue? Like some people are able to see the dropdown for with the name values and some, I mean, like, I'm not able to see, and I think some other guy also mentioned.
+
+Eugene Semenyuk   1:02:39
+No.
+Yeah, yeah, probably, yeah, yeah, yeah, the same for me. So, yeah, I I guess this is like some some access issue.
+
+Debamitra Bhattacharjee   1:02:48
+Okay.
+OK, cool. The workflow worked for me. It added comment in the Jira, so I'll go with that.
+
+Eugene Semenyuk   1:02:58
+Yeah, awesome.
+
+Akash Gupta   1:03:00
+Hey, Eugene, the workflow worked for me as well because I see it added comment in GRAB. However, it says no actions performed in audit.
+
+Eugene Semenyuk   1:03:02
+Mm-hmm.
+That's fine, because probably your workflow triggered to some others work item.
+Because, yeah.
+Turn, turn, turn, turn. Yeah, if you if.
+
+Akash Gupta   1:03:30
+The second.
+
+Sujan Shrestha   1:03:30
+Yeah, if you go to different pages, you can see those accents being successful, Akash.
+
+Eugene Semenyuk   1:03:34
+Yeah.
+Yeah, yeah.
+Maybe we can filter by status.
+
+Sujan Shrestha   1:03:39
+Just click on the just click on your one of the requirement there and you can see.
+
+Debamitra Bhattacharjee   1:03:44
+Yeah, can you filter the status? You can see, I guess.
+
+Eugene Semenyuk   1:03:52
+Two to two.
+And did more painting controls.
+
+Sujan Shrestha   1:03:56
+Now you can just click on one of the flow there on somebody's name and it will show one of the socks is there.
+
+Akash Gupta   1:03:57
+Ops.
+I ping my what I'm seeing, you know, the screenshots in the chat.
+
+Eugene Semenyuk   1:04:04
+Mhm.
+Actions.
+Fingers.
+Mmh.
+*****.
+Yeah, you can just filter your exact flow here. Yeah, for example, I selected only mine.
+Because, yeah, it triggers each time.
+Like, yeah, if somebody else updated their own item, so yeah, you can see the same for me, like one success and multiple no actions required.
+Yes, it triggered to other items transitioned, but stopped here on this condition.
+And the same should be for you, for your.
+Uh, yeah, for for for yours.
+
+Akash Gupta   1:05:08
+Okay.
+
+Eugene Semenyuk   1:05:08
+Workflow, yeah.
+Okay, any any other questions?
+Okay, thank you. Thank you for active participation in this session. Yeah, and yeah, in case of any questions, feel free to go to connect with me or join our office hours. So yeah, we will continue next Tuesday. Have a good rest of the day and see you soon.
+Bye.
+
+Sujan Shrestha   1:05:42
+Yeah.
+
+Nicholas Crowley stopped transcription

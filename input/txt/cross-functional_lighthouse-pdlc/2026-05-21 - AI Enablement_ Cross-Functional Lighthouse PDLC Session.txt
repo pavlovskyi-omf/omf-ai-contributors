@@ -1,0 +1,789 @@
+AI Enablement Cross-Functional Lighthouse PDLC Session-20260519_140031UTC-Meeting Recording
+May 19, 2026, 2:00PM
+57m 32s
+
+Vlad Grubman   0:04
+Good.
+Let's get folks time to join.
+
+Eugene Semenyuk   0:28
+Hello, good morning.
+
+Vira Melnyk   0:31
+Hello!
+
+Sukalya Rajendran   0:32
+Good morning.
+
+Eugene Semenyuk   0:35
+No.
+Let's wait a few more minutes for more people to join us.
+In.
+Okay.
+You.
+Yeah.
+And
+Yeah.
+Yeah.
+Yeah.
+Yeah.
+Yeah.
+No.
+Chatting will join us a bit later. OK, yeah, while we are waiting, so yeah, I'd like to.
+I'd like to admit that, yes, and maybe...
+recognize some guys. So yeah, I, yeah, I've seen that some of you experimenting with your own Jira automation workflows and trying to build your your AI agents in an autonomous way, like.
+to create autonomous agents to react on some events in Jira or maybe in some other systems like GitHub. So yeah.
+I really love this direction.
+Yeah, and...
+Yeah, this is inspiring as well.
+Okay.
+Yeah.
+So I guess we can start. So maybe other folks will join us a bit later. So yeah, how are you everyone? Good morning and welcome back. So today we'll continue working on our requirements readiness workflow. So we just have
+few small steps left and we will, I hope we will finish them today. So yeah, let me quickly recap where we are. So in the previous sessions, we created a workflow with three
+Let me share my screen first.
+And then this one.
+Okay, here it is.
+So...
+Yeah, can you see my screen with Jira to make sure the workflow?
+
+Vlad Grubman   4:08
+Yep.
+
+Sanjay Kumar Parui   4:09
+Mhm.
+
+Eugene Semenyuk   4:09
+Yeah, thank you. So yeah, in the previous sessions, we created the workflow with three functional reviews. So two of them were robot agents, one reviewed user story from digital and product perspective, and one more agent reviews.
+user story from testing perspective. So yeah, and we also added an engineering review agent using that hook to code me. So that part is essentially important because the code me agent can access to the
+code repository, so it can review the requirements from technical feasibility and implementation impact perspective. So now we have three separate perspectives, digital, QA, and engineering. So today's goal is to bring those reviews together.
+Instead of leaving them as separate comments in the Jira user story, so we want to summarize them and create a decision-making mechanism. So the idea is to add one more or few more steps, like
+And the key step is a cross-functional summary and decision making. Yeah, this agent will aggregate all functional reviews, identify alignment and conflicts, highlighting risks or missing information, and provide a recommendation on
+whether the story is ready for development or needs more refinement. So by that, yeah, by the end of this part, our workload should not only collect feedback from different perspectives, but also help the team to make a more structured
+Uh, requirements of a readiness decision, so...
+Okay.
+Let's build the missing part together. So yeah, at this point of the workflow already collects individual reviews. So yeah, the next step is to pass through those reviews into the final agent that can summarize the feedback and make a cross-functional recommendation.
+So yeah, this is where the flow becomes more useful for real world delivery because teams don't only need to read separate, create separate comments. So they need a clear decision, key risks and next steps. So yeah, let me first.
+Personally, yeah, share the link to...
+detailed user guide how to create this workflow.
+Okay.
+So, yeah, if you if you miss something, you can you can you can reach out to this guide and find missing steps. So, yeah, this guide.
+Not this.
+Yeah, all the steps that we performed during the last sessions, yeah, and it even contains information about our today's today's step steps, yeah, with all the links to the agents or with the screenshots, yeah, and all.
+And everything that you need for this, this workflow.
+Okay, so if you don't have...
+If you, if you don't have this work or created during previous sessions, you can open Jira, you can open Jira project with.
+Yeah, our training to your project, let me send a link.
+To the chat.
+Here it is.
+So yeah, yeah, let me remind a bit. So we are working inside Code Me Sandbox project on one-man financial training instance of Shira. So yeah, it provides us opportunity to play and to play around the different user stories. And yeah, we
+Yeah, we can.
+We can play safely, and yeah.
+We don't afraid that we can break something, because this is training instance. So yeah, if you don't have your own flow, you can clone my flow.
+So you can open filter flows, you can type.
+My name, Eugene, yeah, and you can clone.
+You can copy my flow.
+And you just need to change one thing.
+Inside the main trigger, the first node, you just need to change the name.
+From my name to yours.
+Yeah.
+Okay.
+Um...
+I think we are ready to proceed, so yeah.
+
+Rishabh Gupta   10:05
+Yeah.
+
+Eugene Semenyuk   10:07
+Here is our workflow with three agents. Yeah, the last agent, yeah, the last agent is called me agent that can can create technical feasibility review. Yeah, and
+Yeah, we don't need a node to add comment because, yeah, our agent adds comment by default after the operation completes. So yeah, and by the way, let's quickly review this.
+
+Rishabh Gupta   10:37
+Yeah.
+
+Eugene Semenyuk   10:42
+This agent.
+So, we have technical feasibility aging that that connected to repository that we we are working on. So, this is BFF current loans repository from servicing team. Yeah, because the user story that we work on that we're working on.
+Is is a story from service and team, so yeah, if if you would like to repeat this flow for your particular team, so you can clone this agent and...
+Change data source to your repository, so yeah, and if you, yeah, if you stuck on this.
+on this step. So yeah, feel free to connect with me or Alexander. So yeah, we will be happy to help you. So yeah, let's see.
+The steps, so yeah, it reviews.
+reviews the Jira user story, reads the repository, and yeah, reads architecture files, tests, yeah, I can fix and so on, evaluate visibility after that, it posts the comment structure comment to Jira.
+And in the end, it adds label EI review. Yeah, next I will explain why we need this label.
+So yeah, this agent reviews the user story from engineering point of view, adds a comment, and the label.
+So yeah, that's why we just need to have.
+One execution without at a comment to work item, because yeah, this agent adds a comment automatically, yeah, and we tested it.
+Last call, last session.
+Yeah, now.
+Now we need to add one more agent that we discussed before. The agent that will aggregate all these reviews and provide some decision. Yeah, but
+Here is some tricky moment, because if we will just add a new agent right after.
+The send web request method.
+So...
+We can face the situation where the next agent.
+Yeah, the next agent can be executed.
+before this agent finish this work. So yeah, and in this case, we need some...
+Some weight mechanism, we now we will.
+implemented. So to wait for...
+for this agent.
+We need to add.
+New step.
+And under controls.
+Steps.
+We have.
+We have delete until control. So yeah, let's use it.
+Mhm.
+In event, we can select.
+Work item updated.
+Apply event to trigger for this flow. So yeah, we have only this option. Yeah, and...
+Now, let's add a condition.
+Yeah, and in condition, we have multiple fields that this node can wait. So, yeah, and in this case, we can we can wait for
+for some label. Yeah, and that's why after...
+Yeah, that's why in this code agent that reviews technical feasibility, we add.
+We add a label.
+After.
+after the comment. So yeah, first of all, this agent adds a comment. After that, it adds AI reviewed label. So we can wait for this label to be appeared.
+In Jira.
+Yeah.
+So, yeah, let's select the labels.
+And contains any of.
+And here we can type AI review.
+Mhm.
+Let's wait some time. Yeah, let's add some.
+Time out, period.
+Yeah, let's say at a few minutes.
+Mhm.
+Okay, yeah, and this step, this step will help us to wait for 5 minutes.
+
+Rishabh Gupta   16:29
+Deep update.
+J.K.
+
+Eugene Semenyuk   16:35
+It looks like someone is unmuted.
+
+Rishabh Gupta   16:37
+M.
+
+Eugene Semenyuk   16:39
+Yeah, thank you.
+So yeah, we are waiting for 5 minutes for this agent. Yeah, fantasy speaking, we can decrease, we can decrease this time out. Yeah, but yeah, let's to be in safe position. So yeah, let's use 5 minutes.
+So yeah, it will wait for AI reviewed label. Yeah, and now we can...
+Now we can execute one more agent.
+That will...
+Aggregate all the results.
+Yeah, and now...
+We will use simple use agent node.
+Yeah, and now we just need to find our curls.
+It can turn cross-functional.
+Agent.
+Mhm.
+Review this work item.
+So yeah, we can add simple prompt like review this work item, review this user story. Yeah, so this agent reviews the comments.
+from our agents and provide some decision based on these reviews.
+Okay.
+But now...
+Yeah, and we need one more step.
+Yeah, as usual, yeah, we work with the comments.
+So, yeah, let's add comment or one work item.
+Yeah, and as usual.
+Yeah, we use agent response.
+variable and just place it into the comment.
+And let's uncheck.
+This prevent duplicates because it can affect our testing.
+Mhm.
+Okay.
+So now our flow.
+will execute 3 functional agents. So our functional agents will provide reviews from different point of views. And then
+We'll wait till final agent completes.
+Execution and.
+Use our cross-functional agent that will collect all this information together, yeah, and and it add this information as a comment, yeah, but...
+Um...
+What, what we can do next?
+It will be awesome, too.
+have not only comments, but also some action based on the decision. For example, if our user store is not ready for development, we can move the item to a blocked state.
+Yeah, and it will help us to...
+to classify these items and react quickly.
+So yeah, in this case...
+We can add a condition.
+Yeah, there are a bunch of conditions. We can use JQL or smart values condition. So yeah, in this case, let's probably use smart values condition.
+So, yeah, as a key.
+is a key variable to verify. Let's use our latest agent response.
+So, we will...
+Yeah, we will review our response from cross-functional agent.
+Yeah, and yeah, for example, if...
+If our agent contains...
+Not ready.
+In this case, we can move.
+Yeah.
+We can move this item to blocked state.
+Let's use it.
+on.
+Musician work item.
+Mmh.
+And destination status blocked.
+Mhm.
+Okay.
+And.
+Let me double check one moment.
+Doctor.
+I.
+So yeah, I have if logged.
+And what I used here.
+Mm.
+Okay, yeah, in this case it will work. So in this case it will...
+It will check.
+So if our agent response contains not ready, it will move it to blocked state. Otherwise, it will just finish workflow. But
+But if we need else statement, for example.
+Ohh.
+Move item to some specific status, or add some label, or or add a new comment, so yeah, we can utilize.
+If-else condition.
+Yeah, and we can select similar condition like smart values condition.
+or JT condition.
+So yeah, in this case, we will have opportunity to add L statement.
+Yeah, for example.
+Can we move it under?
+Yeah, for example.
+
+Sanjay Kumar Parui   24:48
+Hey, can, can, can, can you add the how did you navigate to if condition? Sorry, I missed it.
+
+Eugene Semenyuk   24:50
+Mhm.
+Yeah, yeah, sure.
+
+Sanjay Kumar Parui   24:55
+Andrew.
+
+Eugene Semenyuk   24:57
+So...
+Yeah, we need to click new step condition.
+And, if or else condition options.
+Yeah, and here we will have...
+Search structure.
+
+Sanjay Kumar Parui   25:18
+Head.
+I don't get that new condition there. I get it in the bottom only.
+So, you, after a cross-function center is the synthesizer, I got this work item, and after that, I need to add that, right? The new, then I don't see their option.
+
+Eugene Semenyuk   25:30
+Mhm.
+Yeah, let me.
+Yeah, let me start it from script.
+
+Sanjay Kumar Parui   25:39
+Ernest for everybody.
+
+Eugene Semenyuk   25:45
+Ten, 10, 10.
+
+Sanjay Kumar Parui   25:45
+Yeah.
+
+Eugene Semenyuk   25:48
+So yeah, after our comment, so yeah, we can...
+Click at stop.
+
+Sanjay Kumar Parui   25:55
+Oh, you treated the other ones?
+
+Eugene Semenyuk   25:55
+And then select condition.
+
+Sanjay Kumar Parui   25:59
+Got it, okay, okay.
+
+Eugene Semenyuk   26:00
+Yeah, I, yeah, I, I deleted previous ones, yeah, started from started from scratch.
+
+Sanjay Kumar Parui   26:02
+Oh, okay, okay, got it.
+
+Gayathri Venkataraman   26:05
+Yeah, that's all I missed. Eugene, can we not instead of deleting, can we not just add it and drag and drop it to the under that?
+
+Eugene Semenyuk   26:07
+Yeah, yeah.
+Yeah, yeah, yeah, yeah, yeah, I, I, I, I just did it, yeah.
+
+Gayathri Venkataraman   26:15
+Okay.
+I tried to drag and drop for me. It's not, I'm not able to do it a single tile. When I try click and like, you know, select to drop it, the whole tile is getting selected, like whole set of whatever I've done, the steps, all steps are getting selected, not the same.
+
+Eugene Semenyuk   26:19
+Just move the.
+Mhm.
+
+Gayathri Venkataraman   26:37
+Individual step.
+
+Eugene Semenyuk   26:39
+Mm-hmm.
+That's interesting, so...
+Yeah, if you would like so, you can share your screen and we can.
+Sit together.
+
+Gayathri Venkataraman   26:57
+At the end, I can show it to Jain, you can hear.
+
+Eugene Semenyuk   26:59
+Yeah, yeah, okay. So yeah, we can just click new step.
+Select condition.
+If or else
+So, yeah, if we would like to build if-else logic, so yeah, if we, if we just need one condition, like just one if statement, so yeah, we can use just smart values condition.
+So yeah, but in our case, yeah, let's.
+Let's play with if-else.
+Yeah, let's, yeah, we can, we can also select all conditions match or at least one condition match.
+So yeah, let's add a condition, smart, smart values condition.
+First, well, you will be agent response, so we can copy it from from our.
+Last, last comment, or...
+From...
+From this agent.
+by clicking copy in response.
+Yeah, and let's go back to our condition.
+So, agent response, let's select contains, and here we need not.
+Alrighty.
+Mhm.
+Then we can click next.
+
+Swathy Lokula   28:44
+The ready spelling was incorrect.
+
+Eugene Semenyuk   28:48
+Ah, yeah, thank you.
+Yeah.
+One more.
+OK, yeah, we and we need action.
+Altron Z.
+Okay.
+And destination status will be blocked.
+Next, yeah, and we can even...
+Assign work item to someone.
+Ohh, that's interesting.
+Yeah, I don't have...
+This selection.
+
+Swathy Lokula   29:56
+We have.
+
+Eugene Semenyuk   29:56
+User triggered. Yeah, you probably will have. So yeah, you can leave it as it is or select a specific person.
+
+Swathy Lokula   29:57
+So, look at that table.
+
+Eugene Semenyuk   30:06
+So, yeah, in my case, it will be initiator, so user who triggered the event.
+So, yeah, and I will I will move the item from to do to in progress state and the.
+Yeah, I expect that in this case.
+It will assign.
+the user story to me. Yeah, in case of...
+Not radio result.
+Yeah, and also...
+We can add.
+Else statement.
+Yeah, we can we can even use else if statement, like add some conditions to to else, yeah, but.
+It probably would have made it here.
+
+Swathy Lokula   30:57
+How did you get the else block, Eugene?
+
+Eugene Semenyuk   31:00
+Yeah, just, yeah, let me remove it. Yeah, here is all this button at else.
+
+Swathy Lokula   31:04
+Okay.
+
+Eugene Semenyuk   31:11
+So, we can click.
+Yeah, we can even add some more conditions.
+To make it like.
+If, uh, else if, yeah, but in our case, yeah, let's just have else.
+And.
+What action we can have?
+And I can use here.
+Ohh, we we we even can send email to somebody.
+But in our vacation.
+Mentor Cureton.
+
+Swathy Lokula   32:01
+I got an else if block instead of else.
+
+Eugene Semenyuk   32:05
+Mhm.
+
+Swathy Lokula   32:08
+When I clicked on that.
+
+Eugene Semenyuk   32:09
+So, yeah, you, you, yeah, you can specify some, you can specify some condition.
+Here.
+Yeah, and in this case it will be L-safe.
+Ohh.
+Okay, let's just leave some comment.
+We already have a label like EI review.
+So we can add some comment like.
+Link AI.
+I mean, you.
+Completed.
+Mhm.
+Okay, let's...
+Update our workflow.
+Mhm.
+Yeah, and now it looks like we were done, so we have three functional agents that reviews user story.
+We have cross-functional agent.
+Some decision.
+Making a logic and even some actions.
+Like, move item to block state.
+if user story is not ready and assign.
+Work item to some some person, yeah, and even some else statement.
+Or we can.
+They can.
+We can create comments like, work item is ready or...
+development. Yeah, let's use something like this.
+I can't speak anything in lowercase.
+Yeah, now let's check that our workflow is enabled.
+And now we can test it.
+So yeah, let's open.
+Let's open some work item.
+So yeah, if you already cloned my user stories, so yeah, you can use it. If not, so...
+Yeah, you can.
+You can open my User Story.
+So, I'm going to delete all the comments.
+From previous week.
+So, yeah, and you just need to clone this user story.
+Yeah, because we need to make sure that we will execute JIRA Automation for one work item. So yeah, please do not change status or yeah, do not, don't do anything with this particular item.
+Yeah, except cloning. So yeah, you can clone this work item.
+Change reporter to...
+Your name?
+Yeah, and click clone.
+Yeah, and then we can test it. So yeah, let's remove AI review of label.
+Yeah, to make everything, yeah, let's make everything clear.
+Yeah, we we don't have any comments.
+Yeah, we just have.
+Or user story, so it's unassigned.
+Report to me.
+So yeah, let's trigger it.
+Move from to do to in progress.
+OK.
+And now we can.
+Yeah, you can, you can open, yeah, if you're under the flow.
+You can.
+Just right click Automation, click on New tab.
+Yeah, and now we will open.
+Audit lock to see.
+How's it going?
+MM.
+Yeah, and we can even filter.
+Our workflows.
+And.
+
+Sanjay Kumar Parui   38:15
+For me to say, no action performed.
+
+Eugene Semenyuk   38:18
+Yeah, that's that that that's okay because.
+Yeah, look, for example, my requirements review flow was triggered for multiple work items. Yeah, but also with no action performed. Yeah, but here we can see the work items.
+
+Sanjay Kumar Parui   38:38
+Mm.
+
+Eugene Semenyuk   38:42
+Like this, this, and this, yeah, and for example, for this one.
+I am not a reporter.
+So, that's why, that's why.
+That's why my flow has no actions performed, because my workflow has condition.
+
+Sanjay Kumar Parui   39:03
+Mhm.
+
+Eugene Semenyuk   39:07
+Like, do some actions only if a reporter is this person.
+Yeah, but where is my, where is my user story?
+I'm curious. Oh, yeah, here it is. It's in progress.
+And we can expand.
+Yeah, we can see even some.
+Even some steps already completed.
+Let's open.
+The User Story.
+But you should have some.
+Some comments.
+Let's scroll down.
+Mhm.
+We have the stability analysis.
+It's testable with assumptions. Some or below we should have...
+Digital review approved with recommendations.
+Yeah, and now we are waiting for engineering review.
+Where is our audit work?
+Yeah, I see.
+Success.
+Yeah, and we can see all our steps, like send web request, call me to execute technical feasibility agent, then delay until our label appears.
+then execute our cross-functional agent. And looks like we have positive result.
+Yeah, and in this case, our so our flow.
+went to else statement. So that's why we just have command on work item instead of.
+Moving item to...
+Blocked state.
+So yeah, let's refresh.
+So, yeah, label ego reviewed.
+Yeah, and we should have a comment like...
+Work item is ready for development. Yeah.
+Work item is ready for development. And this is our cross-functional review.
+So, based on comprehensive analysis of the specialized reviews.
+So, overall verdict.
+Receipt.
+Executive summary, cross-functional alignment.
+Key concerns.
+Some consolidated recommendations.
+and critical assumptions to validate.
+Like source of truth, active status, and some boundary logic.
+Yeah, and below we can see.
+Technical feasibility review: its feasibility is feasible, impacted modules, files.
+And changes required for this repository.
+Yeah, and.
+I suppose it can be a good start even for development.
+Like, okay, we already have this context and probably it can help, it can help to build implementation plan.
+Turn, turn, turn, turn.
+
+Swathy Lokula   43:37
+Where do we see the ready for development? I missed that, sorry.
+
+Eugene Semenyuk   43:41
+It's.
+feasible. Yeah, this is our technical feasibility review. Yeah, and the first comment should be work item is ready for development.
+
+Swathy Lokula   43:53
+Okay.
+
+Eugene Semenyuk   43:54
+Just command by our Jira Automation.
+So, our else.
+Our else statement.
+Was executed, so you can play with this workflow, and yeah, in your in your work item, you can remove for acceptance criteria.
+And repeat these steps, and I'm sure I'm sure that the result of review should be not ready, and your work item should be moved to block status.
+Automatically, yeah, and assign.
+Assign work item to you.
+I.
+So, yeah, in this in this flow, we combine both deterministic ways of automation, like classic automation using using JIRA.
+Automation tools, yeah, and some.
+non-deterministic things like agents, 2 agents, no, 3 agents in Rover and one agent in Codme.
+So yeah, I guess, yeah, probably that's it for this particular demo. So yeah, I hope it will be helpful for you to build your
+your own cross-functional reviews or maybe not reviews, maybe some other use cases.
+Yeah, for example, we can expand this workflow with the...
+other definition of ready checks. Yeah, for example, we can verify that work item has these, these, and these, that work item has estimation, work item.
+has maybe if it requires maybe some documents attached.
+Maybe some sub-tasks created, so yeah, we can also expand this workflow with such such steps.
+And it can provide us.
+It can provide us some decision.
+Like, whether the story ready for...
+For development.
+Or not.
+So, any questions?
+
+Swathy Lokula   46:36
+I have a question, Eugene. So this is on the sandbox. How do we do it in the production environment, the flow, like data production?
+
+Eugene Semenyuk   46:38
+Mhm.
+So yeah, the main requirement is admin access to some project.
+So...
+Yeah, for for for code me sandbox project, yeah, I can provide access for you in in production, yeah, but for for your project, you need to request these permissions from your manager or or team lead, yeah, or work with team lead to create.
+This workflow.
+
+Swathy Lokula   47:18
+*******.
+
+Eugene Semenyuk   47:20
+So, yeah, in the in project settings.
+So, yes, someone with admin access should should add you as an as administrator.
+Yeah, and in this case, you should be able to create automation rules.
+
+Swathy Lokula   47:43
+Okay, thank you. And I did not get the work item ready for development comment. I got other comments. I'm not sure why. I think my if and else block is in.
+
+Sanjay Kumar Parui   47:52
+Yeah, some something for me also missed.
+
+Swathy Lokula   47:56
+Can I share my screen and we can troubleshoot, please?
+
+Sanjay Kumar Parui   47:56
+We have to check.
+
+Eugene Semenyuk   47:59
+Mhm.
+Yeah, let's see.
+
+Swathy Lokula   48:05
+So I had everything same, so I'll go from the top.
+
+Eugene Semenyuk   48:10
+Mhm.
+
+Swathy Lokula   48:11
+the web hook, there's a delay time, the cross function synthesizer, and the work item. And there's a if, I got the else if instead of else, I don't know if that is the problem, but I had the comment as well.
+
+Eugene Semenyuk   48:15
+Yeah.
+You.
+
+Swathy Lokula   48:27
+But when I go into the comments from my Jira that I clone from yours, I only see it starting from here.
+
+Eugene Semenyuk   48:38
+Let's maybe refresh.
+Because, yeah, sometimes it requires.
+refresh. So yeah, let me find your workflow and see.
+What steps were executed?
+Uh-huh, yeah, it's yeah, I see only.
+
+Swathy Lokula   49:03
+Do you want me to go to the audit log?
+
+Eugene Semenyuk   49:05
+Um...
+That's interesting. You have compared to well use.
+
+Swathy Lokula   49:15
+Mhm.
+
+Eugene Semenyuk   49:18
+Not sure when you need it, else if much, could you please open your else statement?
+Do you know?
+Okay.
+Yeah.
+I hope it should.
+Yes.
+Company.
+
+Bandana Sriramka   49:46
+Swathy, I think you have to move the smart condition under the if statement.
+
+Eugene Semenyuk   49:52
+Yeah.
+
+Bandana Sriramka   49:52
+in the if there is no condition specified.
+
+Eugene Semenyuk   49:53
+Mhm.
+Yeah.
+
+Swathy Lokula   50:00
+If block.
+When?
+
+Eugene Semenyuk   50:02
+Yeah, you need that condition below.
+
+Swathy Lokula   50:07
+Oh, did I miss that?
+
+Eugene Semenyuk   50:09
+No, no, under, under, yeah, please click if match, yeah, yeah, if block, yeah, and under the conditions, there is add condition button. Yeah, smart will use condition.
+
+Swathy Lokula   50:11
+Under the if.
+
+Eugene Semenyuk   50:23
+Yeah, and...
+
+Swathy Lokula   50:26
+And dance.
+
+Eugene Semenyuk   50:26
+Here, we should have contains, yeah, and...
+
+Swathy Lokula   50:29
+What, Purdy?
+
+Eugene Semenyuk   50:32
+Yeah, not ready.
+
+Swathy Lokula   50:33
+No.
+Is it the one welcome?
+
+Eugene Semenyuk   50:37
+Yeah, and we should select.
+In first value, we should have agent response, so you can open the, yeah, or yeah, just this, yeah.
+And now we should work, yeah, yeah, and probably that's why.
+
+Swathy Lokula   50:52
+Does it?
+
+Eugene Semenyuk   50:59
+That's why we don't have any.
+
+Swathy Lokula   51:00
+Oh, change to Eads. Okay.
+
+Eugene Semenyuk   51:04
+Yeah.
+
+Swathy Lokula   51:05
+You have to have anything in the else? That's it, all conditions match.
+
+Eugene Semenyuk   51:08
+Yeah, yeah, that's that's it. We don't need any conditions here, so yeah, and now it should work.
+Item is ready for development.
+
+Swathy Lokula   51:19
+Oh, it went too blocked for me.
+
+Eugene Semenyuk   51:22
+Yeah, because in your case, yeah, that's expected because you had an empty condition, yeah, and looks like it is automatically true, yeah, and it went to this branch, like assigned item to you, and...
+
+Swathy Lokula   51:25
+Mmh.
+Exit.
+Okay.
+
+Eugene Semenyuk   51:42
+Yeah, and moved item to block statement.
+
+Swathy Lokula   51:48
+Yeah, let me run this one more time, one thing, but...
+Thank you, thank you, Bandana.
+
+Eugene Semenyuk   51:55
+Yeah. Thank you.
+So yeah, you can try this workflow with...
+Yeah, you can remove, as I said before, you can remove acceptance criteria from the user story and try to see how it will work.
+So I expect that that all reviews will be negative.
+Yeah, and cross-functional review also should be negative with not ready.
+Status and should move your work item to block statement and.
+And.
+Assigned to you, yeah.
+Okay, any any other questions?
+True.
+Okay, so let's stop here for today. So today we completed maybe the most...
+Not the most, the next important part of the requirements readiness workflow. Yeah, and I suppose we completed this workflow. So yeah, we took separate digital QA and engineering reviews and added cross-functional summary and decision step. So yeah, now the workflow can do more than just
+collect, yeah, more than just collect comments. So we could provide consolidated recommendation on whether the story is ready for development, ready with risk or should go back for refinement. So you can play around this workflow, maybe expand with
+some more steps, some more logic, maybe refine the agents that we have here.
+I guess it could be, it can be a good starting point for some other functional or cross-functional workflows. Yeah, for example,
+Mm.
+In the last QA Champions call, so yeah, Bandana demonstrated the idea of the autonomous agent using these Jira Automation workflow.
+So, yeah, looks like our cross-functional things are not on the cross-functional, so yeah, they are also go to different functions, yeah, and have to do some things using this autonomy.
+Okay, so on the next session, we will proceed with other use cases. So yeah, we are still thinking about the next use case. So yeah, if you have some ideas what we can do together next, so yeah, feel free to share it with us. So one of the idea that we would like to
+To work, not sure this week, maybe.
+Maybe on the next week, so yeah, on the...
+Previous champions call, we discussed pretty interesting use case about troubleshooting.
+So...
+Yeah, we thought about the solution that can be used for logs analysis and identify maybe some root causes or some other things that can help to identify the issue.
+So yeah, we hope that it can be also cross-functional. So yeah, we can use different tools. We can also connect some MCP servers. So yeah, I think it should be also interesting.
+But if you have some some other ideas, feel free to share, so we will. I will be happy to.
+to break down these workflow.
+Yeah, and create it from scratch with you.
+So, okay, any other final questions before we close?
+Okay, I think we can finish a bit earlier today. So thanks everyone for joining. Yeah, please think about use cases where event-based automation could help your team. And yeah, and we can explore them in upcoming sessions. Yeah, have a great day.
+rest of the day and see you soon. Bye.
+
+Jatin Bagga   57:24
+Thank you.
+
+Swathy Lokula   57:26
+Thank you.
+
+Eugene Semenyuk   57:28
+Thank you.
+
+ stopped transcription

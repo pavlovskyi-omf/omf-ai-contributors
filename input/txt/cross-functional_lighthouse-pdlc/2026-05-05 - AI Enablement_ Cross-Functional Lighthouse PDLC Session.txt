@@ -1,0 +1,769 @@
+AI Enablement Cross-Functional Lighthouse PDLC Session-20260505_135757UTC-Meeting Recording
+May 5, 2026, 1:57PM
+1h 3m 30s
+
+Nikita Kumar   1:59
+Hello.
+
+Vlad Grubman   2:02
+Hello, hello, everybody!
+
+Nikita Kumar   2:04
+We'll give everyone a few minutes to hop in here.
+
+Vlad Grubman   2:12
+One of these days, we should not give any everybody a few minutes; we should just...
+
+Nikita Kumar   2:15
+Two minutes, just start as soon as the call starts.
+
+Vlad Grubman   2:17
+Start even before the clock hits 10.
+
+Ron Seager   2:18
+Yes.
+The.
+
+Vlad Grubman   2:21
+And just keep moving and everybody's gonna get a case of phone.
+
+Nikita Kumar   2:26
+I think we get the most trouble out of anyone.
+
+Vlad Grubman   2:29
+Yes, I can, I can. If I could sell my phone on eBay, I would not have to work a single day of my life.
+
+Nikita Kumar   2:34
+I'll tell my friend she works at eBay. I'll tell her for you.
+
+Vlad Grubman   2:38
+Thank you.
+
+Nikita Kumar   2:43
+Give everyone 2 minutes.
+And that's all you get.
+All righty, we can get started. This is also recording, so everyone has access to it. Welcome back. In today's session and for Thursday's session, just to give everyone a quick heads up on what's going to be happening. For today, we're going to be going over webhooks and how to make tasks a little bit more autonomous for you guys.
+We are using two different tools because that's what we have access to at the moment. We're going to show you how to do it within CodeMe and in JIRA. And then on Thursday's session, today is more of a learning session. And what we would love for people to do, and Eugene, you can add on this as well since you're doing the demo. We'd love for people to message us or email us, send us your email if you want to get access to.
+admin rights on your project so we can get you guys set up on webhooks as well. But today is going to be a learning session where Eugene is going to walk you guys through what webhooks kind of look like. And then the session on Thursday will be a more hands-on one where we can do it to an applied use case. And you guys can follow along and actually build webhooks and play around with them as well.
+But I will pass the floor over to Eugene. Let me know if I missed anything. Feel free to add any other information as well.
+
+Jason Daggs   5:01
+Can we email you directly for permissions?
+
+Nikita Kumar   5:04
+Yeah, you can email in the chat, you can email me directly or like our team directly. But if you put it in the chat, it'll be easier. We can all see who wants access. And then I think for CodeMe, I believe you have to request access. For JIRA, I think we can play around with giving you access on our side.
+
+Jason Daggs   5:21
+Greg.
+
+Nikita Kumar   5:23
+Mm.
+
+Vlad Grubman   5:23
+The chat will be faster because more people will see it, so we don't have to play.
+
+Iryna Pashko   5:24
+Just.
+
+Eugene Semenyuk   5:26
+Mhm.
+
+Nikita Kumar   5:26
+Yeah.
+
+Vlad Grubman   5:29
+Yeah, past the donut.
+
+Nikita Kumar   5:32
+Right, floor is all yours, Eugene.
+
+Eugene Semenyuk   5:35
+Okay, yeah, thank you guys. Yeah, hi everyone and welcome to our cross-functional PDLC session. Yeah, and before we jump in, so yeah, we reviewed some of your use cases that you presented us a few sessions ago.
+like requirements hardening, definition of thread and definition of done checks, testability, PI review, task generation, release readiness. So yeah, the ideas are strong, but yeah, but many of them are still manual.
+
+Iryna Pashko   6:01
+Yeah.
+
+Eugene Semenyuk   6:13
+And someone has to remember to run the agent, copy context, ask for review, or generate the next artifact. So, today is today is about the next step, like moving from manual AI assistance to even driven.
+execution across our PDLC. So yeah, instead of asking can AI help me when I trigger it or ask it, so yeah, we can we can ask can AI react automatically when the PDLC event happens.
+So this is the shift we are talking about. So we already need to find cross-functional use cases. So now we ask, can they run at the right moment automatically? So yeah, for example, when a Jira story change status,
+So can an agent check readiness? Or when a pull request opens, can an agent review code and recommend tasks? Or when release prep starts, can an agent summarize changes, tasks, and risks?
+So yeah, this is our topic for today. So yeah, we'll start with some small part of theory. Yeah, and then we will explore some tools that will help us to implement such approach. Yeah, and as Nikita mentioned, this
+Thursday, we will try to build something together, yeah, to create some autonomous pipeline or just run some autonomous agent or sequence of agents. So, yeah, let's move on to our today's.
+Topic, yeah, and we'll start with the...
+with a problem.
+So, yeah.
+many workflows look simple. Jira updated, slack being sent, pull request open, review waiting. Yeah, but underneath, people are manually checking readiness, finding missing info, asking clarifying questions, creating subtasks, updating Jira, and notifying others.
+So this creates friction, especially at handoffs between digital engineering and QA. So the goal is not to remove human judgment. So the goal is to reduce repetitive coordination and make checks more consistent.
+Sue.
+Yeah.
+For example, for requirements Hardin, so this is our favorite use case for for this this kind of sessions, or yeah, for example, definition of ready definition of dot checks. So, yeah, what is most manual for today? So, yeah, I would say, so usually it is...
+and Sparks on the ticket, identifying gaps, asking follow up questions, triggering some agents that can do such piece of work. Yeah, but.
+This is the, this is not the effective way of work, I would say. So, yeah, the core idea is...
+Yeah, triggered automation waits for.
+for a human click. So we need to open a robo agent or code me agent or some custom chat GPT or agent in.
+Colclasure or?
+GitHub Copilot. So yeah, this is like manual.
+manual triggered automation or manual triggered AI agents. So event-driven execution reacts when something happens. Yeah, for example, as we mentioned before, pull request in GitHub is open, a Jira ticket change status, a comment is added to our
+JIRA item or release is created. So workflows should not always wait for humans, so they should react to PDLC events. Yeah, and here is the concept of semi-autonomous and autonomous agents. So yeah, semi-autonomous.
+Means a humans and human starts this agent.
+Yeah, for example, yeah, we click some run agent button in any tool. So yes, autonomous means an event starts the agent and the human supervise. Yeah, for example, reviews, yeah, human reviews, the output.
+Yeah, final output of agent or sequence of agents. So the human role changed from like initiating every time.
+to reviewing and approving the output. So that's important. Yeah, autonomy does not mean no human control. So it means human supervised instead of manually triggering repetitive work.
+So, yeah, let's continue.
+Yeah, let's speak a bit about what enables autonomy. So to make this work, we need 4 ingredients, like events, like status change or pull request events, like created, updated, or something like this.
+rules like Jira automations or GitHub actions. So we need agents like a robot called me or agents inside.
+GitHub actions, yeah, and yeah, we need integrations and or web hooks that allow us to interact with different agents, yeah, and the pattern is simple, we have event.
+Trigger.
+agent and action that this agent performs. So start small like one event, one agent, one useful action.
+So, yeah, what do you think for requirements, Hardin? What could be the trigger?
+So, what, what we can use?
+Do you have any ideas? So yeah, feel free to unmute or just...
+
+Doug Ball   13:24
+A status update of a screen.
+
+Eugene Semenyuk   13:24
+Put yourself in chat.
+Yeah, definitely. So yeah, it can be a simple trigger, yeah, like a Jira status update. So when we move it to like something like refinement or...
+to do or ready for development. So yeah, it can trigger this agent.
+to or sequence of agent to verify requirements readiness. So yeah, thank you.
+Ahh.
+Yeah, let's quickly discuss a few examples.
+Yeah, the first scenario will be Jira automation plus ROSA agents. So yeah, for example, a ticket moves to some status, for example, to do. Jira automation fires.
+So, Robo agents run, so the agent can enrich.
+descriptions suggest some subtask, verify PRD quality, and verify testability. Yeah, and maybe some.
+technical feasibility to implement some user story. So for cross-functional PDLC, this is powerful because requirements hardening can happen automatically at the right moment. Yeah, not only requirements hardening, but yeah, any of your use case. So if it's applicable.
+So yeah, it can be triggered at the right moment. So yeah, and in case of PDLC, so, and requirements hardening, so digital.
+Yeah, some digital agent can get clarity checks, engineering gets visibility questions, QA gets just stability gaps. So yeah, and the output could be one readiness comment with gaps by function.
+So...
+So, yeah, and my recommendation, yeah, is use all of these perspectives, yeah, and keep the output simple, like digital gaps, engineering gaps, QA gaps, and readiness recommendation, yeah, and frankly speaking, moreover, we can use like not only robo agents.
+We can trigger also code me, code me agents from this Jira automation. Yeah, and yeah, probably.
+Probably, we will, uh, we will try this today.
+Yeah, and we'll see how it works, how to set up webhook, how to execute some agent based on some event. So yeah, and our next example is GitHub to code me agent. So yeah, for example,
+Yeah, we can configure our repository and add webhooks to.
+called me and some event happens. For example, pull request opens. So a web hook triggers.
+Suncod me agent or workflow.
+And the agent or workflow reviews the pull request.
+On every update or on just opening or or any other operation inside your GitHub repository, yeah, for example, yeah, you you you push something to into your working branch, so yeah, and it can trigger it can trigger.
+Some agent and, for example, verify dependencies.
+Yeah, against other repositories.
+That can be connected with your...
+Yeah, and the yeah, at basic and basic level it reviews code, but as a cross-functional use case, yeah, PR review can do more like from engineering point of view, like is the code sounds sound digital from digital part it can ask something like did behavior or business rule.
+change, yeah, and from QA, what should be tested. So, yeah, so the output should include code risks, product impact, test recommendations, and merge readiness. So, yeah, in this case, it can be truly, truly cross-functional pull request review.
+Yeah, and that can be triggered automatically based on some event. For example, push to some branch or creating pull request or updating pull request and so on.
+Okay.
+And let's speak a bit about impact. So yeah, yeah, I guess it is obvious, yeah, but yeah, let's go through this topic. So yeah, the impact is less weighting, like fewer manual updates.
+So because we don't need to do some operations manually, we don't need trigger agents manually. So yeah, we have less context laws because we don't need.
+Pass context from one agent to another manually, so it can be performed automatically. So, yeah, and of course, yeah, it leads to less rework and, and yeah, and we get, and we get more flow, more consistency, more speed, and more continuous execution.
+So, yeah, and yeah, it...
+It looks like it looks like a CICD pipeline that triggers on some event and and does some sequence of actions. Yeah, and by actions we can we can we can use.
+We can use agents, we can use some deterministic actions.
+like executing something, adding comments, yeah, and so on. Yeah, and the biggest value is not just saving time, so it's reducing coordination, friction between our tracks, digital, engineering, and QA. So yeah, Ravi, I see your hand. Would you like to?
+Add something to Russ.
+
+Ravi Nachimuthu   20:10
+Yeah, I do have a question. So you spoke about the integration between CodeMe and the GitHub and triggering a code review in the result of a PR or some sort of action. I'm wondering, can CodeMe trigger, let's say, if I have a custom agent created in the...
+
+Eugene Semenyuk   20:11
+Mhm.
+Mhm.
+
+Ravi Nachimuthu   20:30
+Could have.
+for specialized code review or architecture review or disk case review or sort of different criteria, gate criteria for my PR, right? So in those situations, can code me trigger each of them and report back the results?
+
+Eugene Semenyuk   20:32
+Mhm.
+Yeah, that's a pretty good question. So do you mean like you have some agents in inside your maybe GitHub actions? I mean in some GitHub flow?
+
+Ravi Nachimuthu   20:59
+No, it's not GitHub Actions. Those are agents available in that account.
+So each organization you can have agents. So let's say I have agent markdown file with rules on how a court will be supposed to occur.
+
+Eugene Semenyuk   21:05
+I mean...
+Yeah, yeah, I see.
+Mhm.
+Yeah, that's, that's pretty good question. Yeah, so yeah, I got it.
+
+Ravi Nachimuthu   21:16
+So, can I put her?
+
+Eugene Semenyuk   21:25
+speaking, not sure about, yeah, is it feasible for Cody to trigger such kind of agents? So, Alexander, do you know something about this?
+So, Ken called me.
+
+Oleksandr Tsyganok   21:40
+Uh, so what, yeah, what type of agents we want to trigger from Cody?
+
+Eugene Semenyuk   21:46
+So it can be some...
+Some agent from repository, for example, in agent MD, or maybe...
+Maybe, maybe some agents in.
+
+Oleksandr Tsyganok   22:02
+Yeah, there is no like, there is no like default built in like functionality to run such like fully like integrated code me like entrance, but it can get like some kind of instructions dynamically. So you can add just in the system prompt like a step to retrieve like.
+
+Eugene Semenyuk   22:02
+No, maybe.
+
+Oleksandr Tsyganok   22:21
+Detailed instruction from a specific file and execute them, but there is like no native like support of, I don't know, just like pick and run this like agent that we exported from cursor or like clot tool or something like that, but yeah, technically we can just build this problem in such way that we will have dynamic.
+
+Eugene Semenyuk   22:22
+Mm.
+Mm-hmm.
+
+Oleksandr Tsyganok   22:43
+behavior in like statically defined agent in the code.
+
+Eugene Semenyuk   22:47
+Yeah, that's a good idea. So yeah, CodeMe agent can pick up some instructions on a D file from repository, execute it. Yeah, there can be some issues if, for example, if you have if you have some comments that should be executed during.
+this agent execution. Yeah, for example.
+Yeah, during your agent work, it should execute some commands in terminal. So in this case, it won't be able to do this.
+Yeah, but...
+If, if this agent can see just some instructions to produce some.
+to produce something without interaction with this terminal. So yeah, I think it should be feasible.
+Two.
+To.
+mimic or imitate.
+Uh, your your agent, yeah, and act as act as your agent, yeah.
+I think.
+This definition.
+Yeah, correct. It's correct.
+Of your code code, the agent can act as your agent.
+
+Jatin Bagga   24:13
+I'm sorry, can you, I'm sorry, I'm not very clear. Can you repeat yourself? Sorry, this is a little fuzzy for me. This is Johnson. Can you just repeat the last part about the Code Me agent, connecting it back to what Ravi had originally asked, please?
+
+Ravi Nachimuthu   24:13
+So, what I'm hearing is, what I'm hearing is.
+
+Eugene Semenyuk   24:15
+Yeah.
+So yeah, for example, if you have some agents inside your repository, for example, like instructions MD or agent MD file, so code me can pick up such file and yeah, and use use this file as instruction for.
+For the agent.
+Like, yeah, for example, you have some agent to generate test cases for some piece of code inside your repository. So yeah, CodeMe agent can pick up these instructions, like how to generate these test cases. Yeah, and it can generate and...
+Place it somewhere.
+Yeah, but there, there, there.
+
+Jatin Bagga   25:18
+Okay, thank you.
+
+Ravi Nachimuthu   25:20
+So, what I'm hearing is the the...
+the nature, the technical ability for CodeMe to trigger such flows, but I don't think it's going to complement what you already have in the GitHub. So if you already have sophisticated agents that are probably manually being triggered on a PR to BR basis, seems like CodeMe cannot do it, it would still be manual.
+and unless we figure out an MCP way of connecting to them.
+
+Jatin Bagga   25:52
+That's what I was asking. Thanks a lot, Ravi. That helps. Thank you.
+
+Eugene Semenyuk   25:53
+Ohh.
+
+Ravi Nachimuthu   25:54
+Mhm.
+
+Eugene Semenyuk   25:59
+Yeah, that's a good point to review, actually.
+Uh, yeah, like, what, what, what kind of agents do you have?
+Yeah, and uh...
+Yeah, yeah, let let let's probably park this this topic, yeah, and connect offline, yeah, and discuss stability, yeah, and some some options.
+
+Ravi Nachimuthu   26:25
+Yeah, yeah, where I'm trying to get to is Eugene, not just speaking about the capabilities, but how can we connect them to the real use cases that we would end up using? Just looking at these capabilities is not going to resonate, right? So I wanted to see if we can put to use.
+
+Eugene Semenyuk   26:29
+Mhm.
+Yeah.
+Absolutely.
+Mhm.
+Yeah, yeah, absolutely agree.
+Yeah, thank you, Ravi.
+
+Chantal Justamond   26:50
+If I may, for Ravi's question, I don't think you can do it with CodeMe, but if you have an agent in GitHub, you could create a workflow that runs like a cron job and then make the agent do whatever it is that you need to do.
+
+Eugene Semenyuk   26:50
+Ah.
+Mhm.
+
+Chantal Justamond   27:09
+I'm doing something like that for a use case right now, where like in your YAML file, you just say like, schedule, cron, and then just like a cron job, you add your time and it will do what it needs to do, if that helps.
+So we can, we don't have to use quote me in that case. If you have like something already in GitHub, you can use a workflow like a multi-agent workflow or just a single workflow where you can schedule it and use it at your own, you know, time.
+
+Eugene Semenyuk   27:29
+Mm-hmm.
+Yeah.
+Mm.
+
+Ravi Nachimuthu   27:47
+Yeah, I think I think that's a way to handle. You know, just just to give you a little bit, you know, where I'm trying to get to, right? So, we are writing code.
+And most times, each team, they may have their own.
+Test of agent that that writes a code based on their expectations. All it does is write code, and then probably it may also have.
+
+Eugene Semenyuk   28:12
+Mhm.
+
+Ravi Nachimuthu   28:20
+within that agent feature to like test coverage and code review and whatnot. So where I'm trying to get to is can we have a multi-agent development in mind where you have an agent that writes code, you have an agent in parallel looking for architectural alignment.
+and another agent looking for coding standard alignment, and another agent looking for code review coverage, another agent looking for the test coverage. Likewise, the multi-agent that are running in parallel.
+
+Eugene Semenyuk   28:52
+Mm-hmm.
+
+Ravi Nachimuthu   28:57
+so that they are validating themselves before you even get to see the code. There are checks and balances being ran and it's ready for you is where I'm trying to get to it. So looking at what you have been showing on the code, I thought there will be some features available where we'd be able to create this multi-agent approach.
+
+Eugene Semenyuk   29:09
+Mhm.
+
+Ravi Nachimuthu   29:19
+for writing, for engineering, so that we can start from the JIRA and say, this is the application that I'm adding a new feature to. And here is a clear structure of the user story. I want a new field in the user interface. That new field is supposed to be mapped all the way to the back end of the database.
+
+Eugene Semenyuk   29:20
+Uh-huh.
+
+Ravi Nachimuthu   29:38
+This is how the backend is mapped, and these are all the different repositories involved in that. Now, go ahead and get it done and get it ready for my review.
+
+Eugene Semenyuk   29:47
+Mm.
+
+Ravi Nachimuthu   29:48
+is where I'm trying to see how can we get to, is CodeMe offering such workflow or I'm trying to do something custom on my side, but I'm trying to see if CodeMe offers something, why not I use it, right?
+
+Eugene Semenyuk   30:06
+Mhm.
+So yeah, definitely, yeah, it's feasible for Code Me and yeah, we're working on similar similar workflow for Seyoum and servicing team. So yeah, like it is implementation plan creation. So it is some sequence of.
+agents that works together and provide implementation plan.
+Or, yeah, consistent implementation plan for for some feature for some some user story with the detailed review of dependencies, architecture, even even asking some questions, because, yeah, sometimes.
+It requires clarifications.
+Yeah, it reviews like not only one repository, but also it can review some dependencies. Yeah, because it's usual.
+Uh, it's usual thing, so yeah, when one to one to one repository depends on another repository, so yeah, you can it can also highlight some some risks, yeah, and even bolder plate and create some code.
+So it's more modular piece of work.
+So, yeah.
+It definitely should be feasible.
+Yeah, and probably, probably, yeah, we will on some of them next on on some of our next session.
+We can, we can, we can briefly briefly describe and discuss these workflows, like how how they work, how to connect few agents into some into some workflow into some sequence of agents.
+For some cases, there can be branches.
+Yeah, for example, the one agent decides like the next flow for other agents. So here can be some condition.
+Yeah, and it can be simple or it can be complex, so yeah, it depends on your needs.
+Okay, thank you guys for great ideas. So yeah, let's spark them and discuss.
+Later, these things.
+OK, I have just one slide with with key takeaways, yeah, and then we will proceed with some some demo.
+Oh.
+Yeah, I yeah.
+Yeah, something like this. So yeah, our key takeaways.
+are simple. So yeah, events are better than manual triggers. Yeah, I guess you've got this. So yeah, agents should act continuously, like not occasionally. So automation reduce.
+coordination, not just effort. So yeah, and start small with one workflow, one trigger, one action. Yeah, and the...
+Good first pilots are some small use cases like Jira status change to readiness review, pull request open to code and task recommendation or code review, like defect move to triage.
+To to provide some impact summary and create release to.
+Already need summary.
+So yeah, the key message is, yeah, in the previous framework, in the previous session, so we identify, I hope, yeah, it helped to identify some cross-functional use cases. Yeah, and today's step forward is making those use cases run at the right moment in the PDLC. So using our pattern.
+So, okay, I guess let's see it for...
+This presentation, uh, yeah, before, before some hands-on.
+In section, do you have any any questions?
+Any other ideas?
+Okay, in this case, today we will start with Jira, with Jira automation and see how we can utilize Jira automation to create some workflows and
+Create autonomous experience.
+Okay.
+Ten, 10.
+Yeah, for this purpose and for training purpose, we will work inside Code Me Sandbox project. Yeah, and yeah, as Nikita requested, yeah, please, please share your emails in the chat. We will add you into this project and you will be able to create your own.
+Automation and test it, yeah, and then, and then try to move it into your...
+
+Nikita Kumar   35:54
+I just...
+Quick note, anyone who's already got a thumbs up on their name, we've already requested for JIRA, but code me, you will have to request yourself. We put the information in the chat as well. So if there's a thumbs up on your name, you've already been invited to JIRA.
+
+Eugene Semenyuk   36:13
+Yeah, thank you.
+Um...
+OK, let me do this.
+So yeah, to create some some automation in JIRA, you should have admin admin rights for for the particular project. So yeah, that's why we requested you to to send your emails. So yeah, we will we will add we will add you to.
+To this project as Admins, so yeah, after.
+After next session, you can you can connect with your team leads and yeah, and ask for access for.
+for your particular use cases, yeah, or just work with your team leads to create these workflows.
+to create some autonomous agents. So yeah, let's start. So how to...
+how to start it. So yeah, let's open some project. Yes, for our case, it will be Code Me Sandbox. Yeah, and we should open.
+Space setting.
+Is.
+Under Space Settings, we have the Automation tab.
+So here we can create some rules.
+some automation rules that can help us to trigger some agents based on some events. So yeah, let's...
+try to create. So yeah, let's use create from scratch.
+So yeah, and our first step will be defining.
+will be defining the trigger. So here can be manual trigger for work item. So that means that we should open some work item and execute automation rule manually.
+So let me demonstrate how it looks like.
+So yeah, here is this lightning button, automation, and we can click it and select the rule, and it will execute this particular Jira automation.
+So yeah, let's...
+Let's think about requirements.
+Hardin in use case, so yeah, let's try to let's try to create some some workflow that will be triggered on some event, and then...
+Execute sequence of agents.
+To review the user story requirements, technical visibility.
+And yeah, after that, aggregate all the information and provide some summary and decision. So yeah, as you may see.
+We have a bunch of triggers that can trigger this workflow.
+like some work item triggers, for example, field value change. We already discussed manual trigger, like multiple work items events, spring completed, version released. Yeah, the most important ones.
+Will be work items.
+Work items comments, edit, edited, work item added, or work item updated.
+So here we can see also some DevOps.
+Things, so yeah, we can we can trigger on some branch create, yeah, because fortunately Jira has integration with GitHub.
+So yeah, it can also triggers on some branch created.
+Even some, if some pull requests created.
+Yeah, and yeah, below we can see some some other integrations.
+And some other triggers.
+Turn, turn, turn, turn, turn.
+Okay.
+What do you think? What is the best trigger for requirements Hardin in use case? So, yeah, we already mentioned it. Yeah, so could you please remind me once again?
+Don't be shy.
+
+Ramakrishnan Varadhan   41:00
+I can play the new version creator.
+
+Bandana Sriramka   41:01
+Work item.
+
+Eugene Semenyuk   41:05
+or work item updated. Yeah, and as I remember, we have...
+Uhh...
+Work.
+Yeah, we have a really interesting trigger work item.
+Transitioned.
+So, uh...
+We can mark, so like from what status to what.
+We can.
+Trigger our flow, so yeah, for this use case, let's probably...
+Yeah, as we have only three statuses, so yeah, let's trigger the agent, not the agent, the flow, so when we move when we move some item from to do to in progress state.
+OK, yeah, we can we can even can add some conditions.
+Yeah, for example, we can add some additional JQL. Yeah, to pick up only items with priority above medium or items assigned to some person. Yeah, but in this case, so yeah, let's use just.
+
+Jason Daggs   42:30
+Yes.
+
+Eugene Semenyuk   42:38
+Our status.
+Transition.
+from to do to in progress.
+So yeah, here we can see a bunch of actions.
+bunch of steps like actions, conditions, branch, controls. So yeah, for this case, we just need to use sequence of agents.
+So, we can...
+We can use that action. Yeah, and here you can see Rover AI. So yeah, we can we can utilize any Rover agent that we have on this Jira instance.
+Yeah, let's.
+Take it.
+Connect.
+Yeah, and here you can see our library with agents.
+So yeah, let's start with testability.
+I have test.
+Analyst agent here.
+So, yeah, we can utilize already created agents.
+Ohh.
+Probably a marked.
+I see a hand, so yeah, feel free to unmute.
+
+Simanta Thapa   44:06
+Are those the agents created in CodeMe or?
+
+Eugene Semenyuk   44:10
+Uh, so they are they are robo agents.
+
+Simanta Thapa   44:14
+A Ruby it got it.
+
+Eugene Semenyuk   44:16
+Mhm.
+
+Jason Daggs   44:16
+Yes.
+
+Eugene Semenyuk   44:19
+Yeah, sorry.
+
+Jatin Bagga   44:20
+Eugenie, I just want to understand what you're showing right now. If I understand the entire workflow, it's like if the status of a particular task or story, let's just say hypothetically, changes, let's say from, I don't know, it started as a backlog or whatever the task is, and it gets into ready for work, and then it's marked complete.
+
+Eugene Semenyuk   44:29
+Mmh.
+
+Jatin Bagga   44:39
+after, let's say, or done, when sort of the development's done, the testing is done. So what you're showing right now is that this could be, we could completely automate this, that as soon as the status changes to done, like real done or whatever the status is, this could actually trigger a pull request or whatever and push the code if we needed to. Is that.
+sort of the genesis of this entire workflow.
+
+Eugene Semenyuk   45:06
+Yeah, actually not like that. So the purpose of this workflow triggers some sequence of agents. So in our case, we will try to mimic requirements Hardin in, yeah, and use three agents.
+Like testability, PRD review, and...
+Technical feasibility.
+Yeah, and trigger this sequence of agents and some work item change status from to do to in progress. So, for example, someone moved to to in progress state, yeah, and yeah, this this this action triggers.
+Our, our flow.
+
+Jatin Bagga   45:56
+Got it. Okay, sorry. I was thinking a little other way around. This is perfect. Thank you.
+
+Eugene Semenyuk   46:01
+Yeah, but actually your case sounds really good. Yeah, and I would say this is next step.
+
+Jatin Bagga   46:11
+Thank you.
+
+Eugene Semenyuk   46:14
+Yeah, on the next level, I would say. Yeah, okay, let's search through the agents.
+I definitely should have, yeah, test analyst.
+Here we can provide some initial prompt.
+It should already have, it should already has our triggered work item in context. So yeah, I can just say something like, review this.
+Work item.
+So, yeah.
+As A context, we will have this small prompt and our JIRA item, yeah, and of course our agent, so the output of this agent will be stored in this variable.
+Sue.
+Yeah, what we can do next? So yeah, first of all, let's try to test our automation. So yeah, we added the first agent.
+Now...
+Yeah, our agent.
+will produce some output, but unfortunately in Jira automation, these Robo agents won't be able to execute something.
+like to create a comment or create a page. So yeah, these things should be.
+should be performed by actions inside the workflow. So yeah, our test analysis agent will provide testability analysis for the user story and we will use command on work item.
+Action.
+To add this analysis as a comment to our.
+your item. So yeah, let's copy this variable.
+Let's uncheck this prevent duplicates by only adding this comment answer particular work item. So yeah, let's click next. Yeah, and let's turn on our first flow. Let's name it like.
+something like PDLC. I already have.
+Version one, so yeah, let's let it be PDLC flow.
+Version 2, yeah, and let's make it.
+Public for all add Admins.
+Mhm.
+Okay, our...
+First, small workflow, small automation.
+Enabled.
+Oh, yeah, let's open.
+Yeah, let's open some JIRA item. Let's remove all the comments.
+Make everything crystal clear.
+Let's also move it to do state.
+So yeah.
+We have some user story.
+And to do state.
+
+Jason Daggs   49:44
+Access.
+
+Eugene Semenyuk   49:45
+So, yeah, we so we don't have any comments, so yeah, it's clear, clear user story.
+So, yeah, and we...
+We would like to move it to in progress state.
+And our flow should be triggered automatically based on this event.
+And we should see a comment with testability analysis.
+in maybe a few minutes. So we can open.
+Automation tab, audit logs, and here we should be able to see.
+Oh, I see that someone, someone creates automation with me. Yeah, good. Oh, I also have...
+One rule enabled, so...
+Let me disable my previous version one.
+Ohh.
+Yes, it can produce some.
+Some mess.
+How did logs? So yeah, we can see all the rules.
+Executed, oh, you can it even executed create the I test cases.
+Interesting.
+So yeah, it's still in progress. So yeah, here, here we can, here you can see all the history regarding the flows. For example.
+Config change or success or some errors. So yeah, and we need to wait.
+For our workflows, my workflow is still executing.
+Yeah, I see you're working along with me. Yeah, that's...
+That's inspiring. Thank you.
+Hmm.
+That's interesting.
+Various.
+Haha, looks like we have some errors.
+Let me see, unable to render a smart.
+Will you?
+That's interesting. Let's get back to our flow.
+Let's make sure that we use it correctly.
+So yeah, our output from the agent should be placed to this variable.
+Yeah, and...
+I guess it should add comment to work item.
+Damn, that's.
+That's strange.
+Yeah, let me...
+Try again, maybe.
+Ah, we are moving from to do to in progress. So yeah, if we will move from done to in progress, it won't work.
+Let's.
+Get back to...
+Our automation audit log.
+Let's wait for...
+Or my PDOC flow version two.
+Yeah, we definitely won't be able to finish this flow today. Yeah, so yeah, but on this Thursday, we can continue. Yeah, and we'll do the fully hands-on session. Yeah, and implement this use case together.
+Mm.
+Yeah, now I see that.
+We have success here.
+Mhm.
+Let's maybe refresh.
+Age.
+Yeah, and we can see.
+A new comment has been added.
+Mhm.
+Yeah, it analyzed the.
+It tried to find the context related to this user story and analyze testability. Yeah, and we can see verdict that is not testable. Yeah, and some testability issues.
+Okay.
+Okay.
+Yeah, it looks like our first automation works. So yeah, we just moved status from to do team progress and our testability analysis agent.
+produced the output automatically. Yeah, and we can see the comment added by Jira automation.
+Do you have any questions regarding this topic?
+
+Sanjay Kumar Parui   56:37
+One question, does this cause this code me agent also, or it is only specific to JR over?
+
+Eugene Semenyuk   56:38
+Yep.
+It can execute code me, code me agents by webhooks, but I think it will be topic for our next session.
+
+Sanjay Kumar Parui   56:51
+Mhm.
+Got it, because I was mentioning, like, if we mark ready for work, we already have one agent that checks the ready for work, you know, and gets a report. So is there a way we can invoke it? So, okay.
+
+Eugene Semenyuk   56:57
+Because.
+Mhm.
+So yeah, for engineering use case, for engineering agent that will check technical feasibility to implement this user story, we will use Codmit agent.
+
+Sanjay Kumar Parui   57:20
+Mhm.
+
+Eugene Semenyuk   57:20
+Because, yeah, code agent will have access to the repository, and yeah, and it will analyze the repository, some documentation inside repository, architecture, yeah, and yeah, analyze technical feasibility for implementation for this user story.
+
+Sanjay Kumar Parui   57:24
+Right.
+Yeah.
+
+Jason Daggs   57:26
+Yeah.
+
+Eugene Semenyuk   57:39
+Yeah. Thank you.
+
+Sanjay Kumar Parui   57:42
+Thank you.
+
+Eugene Semenyuk   57:46
+Ohh.
+
+Yury Yastrabtsou   57:47
+Yeah, I have a question. We build this automation and is it really that it's related to all Jiras in this project or how to distinguish it? So what I'm talking about, for instance, if I'm working in one automation and my colleague
+
+Eugene Semenyuk   57:49
+Mhm.
+Mmh.
+
+Yury Yastrabtsou   58:05
+in project is working on another automation, how to not mix this together, so not mix together or...
+
+Eugene Semenyuk   58:13
+Mhm.
+Yeah, yeah, I see your point. Yeah, and...
+I would say that, uh, for...
+For the specific team needs, it should be some.
+Uhh...
+Yeah, for one use case or set of use cases, it should be 1 automation that works for everyone, like not only for you or for your colleague, but for the whole team. Yeah, and for testing purpose, or maybe some other purpose, how to distinguish,
+
+Yury Yastrabtsou   58:45
+Mhm.
+
+Eugene Semenyuk   58:52
+So you can add some conditions. Yeah, for example, we trigger this workflow for all for all JIRA items inside this project. So yeah, and we trigger it when we move ticket from to do to in progress, but we can add some conditions. For example.
+
+Yury Yastrabtsou   59:12
+The.
+
+Eugene Semenyuk   59:12
+In JQL, we can add JQL condition and like trigger this workflow only for.
+That tickets that moves from this status to this, that's that that Matt to some JQL, for example, priority medium, or assignee this person, or...
+
+Yury Yastrabtsou   59:35
+V.
+
+Eugene Semenyuk   59:40
+reporter, this person. So yeah, we can add multiple conditions to.
+To distinguish this.
+
+Yury Yastrabtsou   59:48
+Okay, and the next question, for instance, we don't need, looks like we don't need these actions for spike, because it's for spike, we have different rules how to produce and what in this case.
+
+Eugene Semenyuk   59:57
+Yeah.
+Do you have separate work item type for spikes? I guess, yes. So yeah, it can be.
+Oh.
+Work item or something like this or work.
+Yeah, it it can it can be.
+
+Yury Yastrabtsou   1:00:23
+Filter moment, right?
+
+Eugene Semenyuk   1:00:23
+Yeah, it can be separated. Yeah, yeah. So you can use work item type, like node spike.
+Yeah, and it will ignore spikes.
+
+Yury Yastrabtsou   1:00:31
+But...
+In common, it's possible, right?
+
+Eugene Semenyuk   1:00:35
+Yeah, yeah.
+
+Yury Yastrabtsou   1:00:36
+Okay, thank you.
+
+Eugene Semenyuk   1:00:37
+So, yeah, we can just add JQL condition.
+Work.
+Item.
+I don't know, type.
+Let's, for example, try this and validate query. Oh, it doesn't know this.
+So yeah, it requires some GQL magic.
+So, yeah, but but it's definitely possible. Yeah, thank you for the question. So, yeah, we have one minute left, so Deb.
+
+Debamitra Bhattacharjee   1:01:10
+Yeah, so yeah, Eugene, one quick question is the automation like creating a PR and then updating something in the confluence document. So suppose we don't have any JITA for that and there is the developer or the like data and data analyst or whoever like.
+
+Eugene Semenyuk   1:01:11
+Do you have any question?
+Mhm.
+
+Debamitra Bhattacharjee   1:01:31
+They're just creating a PR and changing something in the Git repo. Can we still do this automation, just skipping this Jira part?
+
+Eugene Semenyuk   1:01:44
+Uh, yeah, so it can be...
+
+Debamitra Bhattacharjee   1:01:45
+Or it has to be start always with Sheila.
+
+Eugene Semenyuk   1:01:48
+Ohh...
+Yeah, as I say, so yeah, we have trigger with a pull request. Yeah, but in some cases, maybe some pull requests, they can be without link to work item. In some cases, so yeah, in these cases, it will ignore. So yeah, in this case, it will be.
+
+Jason Daggs   1:01:57
+Yeah.
+
+Debamitra Bhattacharjee   1:02:25
+Okay.
+
+Eugene Semenyuk   1:02:25
+from GitHub.
+
+Debamitra Bhattacharjee   1:02:27
+Okay. Okay. Thanks.
+
+Eugene Semenyuk   1:02:33
+So yeah, I guess we're running out of time. So yeah, today, today we've built the first small automation. Yeah, and on the next session, we will try to expand this automation with more agents, like more cross-functional agents.
+We will explore webhooks and integration with GitHub and CodeMe.
+So yeah, stay tuned and yeah, share, please, please share your emails if you would like to participate in hands-on part. Yeah, and...
+Yeah, I guess that's it. Thank you for joining us today.
+And see you soon!
+Have a good day. Bye. Thank you.
+
+Nikita Kumar   1:03:21
+Thanks, Eugene. Yeah, have a great day, everybody.
+
+Yury Yastrabtsou   1:03:22
+Thank you. Thank you too.
+
+Nikita Kumar   1:03:26
+Yeah.
+
+ stopped transcription

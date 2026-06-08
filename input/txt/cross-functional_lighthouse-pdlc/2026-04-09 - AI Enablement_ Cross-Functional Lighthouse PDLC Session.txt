@@ -1,0 +1,723 @@
+AI Enablement Cross-Functional Lighthouse PDLC Session-20260409_100022-Meeting Recording
+April 9, 2026, 2:00PM
+1h 0m 33s
+
+Nikita Kumar   0:04
+Oh, perfect. Thank you so much.
+
+Vlad Grubman   0:05
+Mhm.
+
+Nikita Kumar   0:06
+I was going back and forth with my 2 logins to see which one I could record it.
+
+Vlad Grubman   0:12
+You need an orchestration login to orchestrate the other two logins.
+
+Nikita Kumar   0:15
+Yeah, I need like I need a I need to have an orchestrator panel so it tells me which one to go to.
+
+Svetlana Stogni   0:21
+Yeah.
+
+Nikita Kumar   0:24
+So, give everyone another minute or so to get in here, and then we can get started.
+In the meantime, I guess while we're waiting, for anybody who was not able to get code me access for today, can you just pop your name in the chat or plus one or whatever, just so we know as well. We just want to make sure everyone does get access by the end of next week. That way, when we are doing these hands-on sessions, you are able to follow along with them as well.
+
+Allen Truban   0:50
+Go away.
+Yeah.
+
+Svetlana Stogni   0:53
+Yeah.
+
+Nikita Kumar   1:21
+All right, I think we can get started since we already have this recorded. Welcome back. Today is our second session and this one will be a little bit more hands-on. I'm going to input the items that you're going to kind of need for hands-on today, which is why we're asking you everyone has access to Code V. So what we're going to be doing today is...
+There was no homework last, or I guess on Tuesday it was mostly just to make sure if you had code me access or not. Just pop in here if you don't have access in the chat, just say that you don't have access yet to code me so that we will know. Today's session is supposed to be very interactive as we go down. We're talking about building assistance and then basics of code me.
+
+Allen Truban   1:44
+Yep.
+It.
+
+Nikita Kumar   2:00
+So while we're building assistance, feel free to ask questions. Feel free to stop us if you have any questions or anything else like that in terms of building this assistant because your homework will be based on building assistance going into next week, which you will be presenting to us. So the way that Thursday calls are going to be set up is us giving you a demo on something, you guys hands on following it along with us.
+
+Allen Truban   2:02
+No.
+It.
+
+Nikita Kumar   2:23
+if it's hands-on, also learning it. And then the following Tuesday, everyone who is in these conversations will have to demo what they've been doing for their homework. So everyone will be, you'll be kind of forced and while told to show us what you're working on or we'll be picking on people. So there was no homework this week, just to make sure you have access. If you don't have access by next week, we'll make sure we get you guys in the right groups.
+
+Allen Truban   2:23
+Upon.
+Fix.
+But...
+Jude.
+Yeah.
+
+Nikita Kumar   2:46
+So yeah, without that, I'm going to pass this off to Olex since he's going to be doing the hands-on demo. We're going to go very slow so you guys can follow. So anyone who does have access to CodeMe, please go in there so you can follow along with Olex on how to actually build the demo with him. And we already also put the item in there, the link in there in the chat.
+
+Iryna Pashko   2:49
+Yeah.
+
+Nikita Kumar   3:08
+And that's the prompt that you'll be following in the materials that you will be needing for today. So part one of our demo will be building an assistant, and then part 2 will be going over basics of CodeMe. And at the end, we'll leave some time for Q&A and your homework assignment. So with that, Oleg, I'll pass it to you. If you still don't, if you don't have access, just even.
+put it in the chat or plus sign that you don't have access and we'll take a note of everyone's name on here.
+Any questions before we start?
+Cool. All right, Alex, all you.
+
+Oleksandr Tsyganok   3:43
+Yeah, yes, thanks, Nikita. I think you can also share some set of initial links just to have access to Cody platform, our support channel, and other stuff. Yeah, guys, you can find like this initial link that Nikita already shared.
+
+Nikita Kumar   3:50
+Yes.
+Yeah.
+I will send, I have all of that too. Yeah. And then at the end of the call, I'll also send the support channels, the links, how to access, how to request. I have a whole message for you guys at the end, so we can send that as well.
+
+Oleksandr Tsyganok   4:01
+Mhm.
+Yeah, so you can check initially this like link that Nikita shared and you will have like all references to materials we will use during today's session. Yeah, so our goal today is to create
+
+Mikhail Makarov   4:25
+Okay.
+
+Oleksandr Tsyganok   4:26
+Our goal today, part of our PDLC like process that we saw like on the previous demo, and we will focus on requirements hardware assistant, just to remind you quickly what the functionality for this agent is. We have a user story.
+as input and assistant will be able to run analysis on the quality of the specific task and provide like standardized comment and cross-check like different categories for like quality of a user story.
+If everything fine, we will have this like green flag. If something missing, we will have a set of suggestions that needs to be addressed before we're moving forward with this user story implementation. Yeah, so that will be like our expected like outcome of today's session that you will have.
+Agent in Cody platform, where you can provide link to a specific JIRA item. You can see like some output if you find it with it, you can ask this agent to post results as a JIRA comment, yeah, and you will have this like evidence of.
+quality of a user story. Okay, so first part, we can start with any user story that you have at that moment, or you can use like the ones that I'm using like for testing, so we will have immediately like see like results of like all successful agents executions that you will build.
+But I'm not 100% sure that you will have access to this project. If not, you can use just user story from your project. But please make sure that we use in this training instance of Atlassian that for now, like when we like practicing.
+
+Dhanalakshmi Chinnasamy   6:24
+No.
+
+Oleksandr Tsyganok   6:27
+we are not using like production instance just to not have like some unexpected surprises. So once you will be like comfortable with using platform, we can, and yeah, we will have like some quite high quality edges, we can switch to production. Okay, so we can start with setting up.
+our agent in Code Me. So you can follow with me. So first we will need to create an API token. How you can get to this page? I have like this link, like direct link where you can create it. You can navigate directly or like alternatively.
+You can just go to your account settings.
+And then select security and open this link. Yep.
+
+Nikita Kumar   7:23
+Oh, like, sorry. Quick, as people who are following along, are you guys able to access these links and follow along so far?
+
+Oleksandr Tsyganok   7:32
+I've been able to, yes. You mean you mean you mean this link on this page, right?
+
+Nikita Kumar   7:34
+Okay, great. Thank you.
+
+Simanta Thapa   7:34
+Yep, same here.
+
+Nikita Kumar   7:36
+Yeah, all right, cool. Yeah, I just want to make sure, like, and if we're going too fast, let us know as well. We want to make sure this is as hands-on as possible. Thanks.
+
+Oleksandr Tsyganok   7:37
+Mhm.
+Ohh, yeah.
+
+Lisa Ruby   7:46
+You are going a little fast.
+
+Debamitra Bhattacharjee   7:46
+Yeah.
+
+Nikita Kumar   7:48
+Okay, yeah, we could slow it down a little bit. Thank you.
+
+Oleksandr Tsyganok   7:51
+Sure.
+
+Debamitra Bhattacharjee   7:51
+And one quick question. So this is this API token only for the integration. If the integration is completed, then we don't need to add API token, correct? Yes, if you already configured integration in Codeway and you have it available for your project, you can definitely skip this step.
+Ohh.
+Oke.
+
+Oleksandr Tsyganok   8:12
+Um...
+Yeah, that's for like people who like didn't set it up earlier in code. Yeah, so again, you can like just click directly this like second link or as I was showing, you should navigate to this like specific page where are you able to.
+
+Dhanalakshmi Chinnasamy   8:28
+Ohh.
+
+Oleksandr Tsyganok   8:33
+you to create a new token. So you need to click this like create API token button. You can provide like some name, you can say that it will be used in PodMe.
+And it's like a Jira token. You can select like expiration time. Please make sure that you select in a specific like value, because as you can see, it will expire in one week and you will need to recreate it again. So I think you can enable like this like maximum validity period of like one year.
+So you can select like several months. Later on, you will need to renew this token and update it in CodeMI, because it will be outdated. So make sure that you will copy this token. You will need it later on.
+Ohh.
+Yeah, so I will give you a couple seconds to...
+Follow the steps, and then we will switch to Cortina.
+Okay, so please open a CodeMe instance. Again, you should have, you can use like some link just direct to create this like integrations. I will show you how you can get there. So once you open in like CodeMe platform, you will
+By default, like navigate to like default chat page, but here you have like this integrations button, and that's like where you can create it. Maybe you have like this menu hidden like this, so you see only icons, so you can expand it here on the bottom, and yeah, just for your convenience to see, like, like text description of...
+this feature. Okay, so we should navigate to integrations, then we need to make sure that we check in user integration and we can create user integration. We will go like in much more details what is like this like integration, how it works, and different type of integration. So we'll have a separate session. Don't worry.
+Like for now, it just like enabled to make sure that your agent have a skill to work with Shira, but later on you will learn like all the details about this integration, how they like connecting to like different tools and like all other like low level details. Yeah, for now you can.
+Create this user integration and select Jira in this list. You can use here filter, just type in Jira to find it quickly, or you can find it in dropdown. Yeah, for everybody, we created a separate project.
+For example, here I'm assigned to a coordinate project. You should be assigned to your like a project where you're working on. Potentially, you might not see this project in the list, but if you will try type in the search, you can type training and that will be separate.
+
+Jason Daggs   11:46
+S.
+
+Oleksandr Tsyganok   11:56
+project where everybody who participated in this session can like collaborate, share their assistant, and where we will have like all our training materials added. So to make like your life easier, that's like an option that you can also create like a new integration here.
+We also like get this questions that potentially somebody already have integration created, then you can continue working in this like your team project, but maybe it will be easier for you to isolate like this like training data from like your already like created agents, so yeah.
+
+Jason Daggs   12:22
+Yes.
+Yeah, well, what if we don't have that particular drop-down option?
+
+Oleksandr Tsyganok   12:39
+Yeah, you need to type it. That's like that's what I'm saying that I don't have this option and if you type in training, do you do you see this like project assignment?
+
+Jason Daggs   12:42
+Right.
+No.
+
+Arezu Thakur   12:50
+Yeah, me too. I don't see that.
+
+Divya Ramkumar   12:51
+No.
+
+Oleksandr Tsyganok   12:51
+Alright.
+Okay, can you type like in the chat if you don't see it? And guys, can anybody confirm that you have access to this project? Because that's like was created just today. Maybe not everybody was assigned there.
+Okay, so that's not a problem. If you don't see it, you can use your project for now. We will resolve this issue and assign everybody to this specific project later on.
+
+Nikita Kumar   13:25
+Can you show, can you show people how to select their project on here?
+
+Oleksandr Tsyganok   13:30
+Yeah, it will be it will be presented by default, so if you open in it for me, my default project in this ICESupportMail me for you, it will be like automatically selected, so you can leave it as like default project configuration. Just make sure that once you create in the system, it's created in the same project as this integration.
+I assume that you assign it to a single project, but potentially like some people might have access to like multiple projects. That's like where you need to make sure that you're creating it in the scope of the same project. Okay, so it's not, yeah.
+
+Nikita Kumar   13:49
+Okay.
+Okay, just hold on one second. Hold on before we move on. So for anyone who's not seeing it, are you able to see your default project on there, just like whatever has been pre-filled?
+
+Arezu Thakur   14:12
+Yes. Okay.
+
+Sujan Shrestha   14:13
+Yes.
+
+Jason Daggs   14:13
+Yes.
+
+Nikita Kumar   14:14
+Great, awesome. And then we have a hand up from Arezu.
+
+Arezu Thakur   14:21
+It was the same issue. Sorry about that. I'm gonna...
+
+Nikita Kumar   14:23
+Okay, oh, no worries. Okay, great. So yeah, just use the default project that's there for now. Once all the new projects get put together and put in, we'll be able to add everyone in there. I just want to please let me know, like I'm happy to stop and we can make sure we have everyone following along. So thank you.
+
+Oleksandr Tsyganok   14:40
+Okay, great. So you need to select this credential type Jira. You need to type an alias, just a friendly name so you can distinguish with integration. You can like copy it from this like reference page. We can call it like Jira.
+
+Bandana Sriramka   14:56
+Yeh.
+
+Oleksandr Tsyganok   14:59
+Training.
+OMF, so we will know that it's like not a production instance, it's our like training instance. You need to provide this like URL, URL you can find again here on this like page. Just copy this like URL, one main financial dash training at lesson.net. So just.
+Paste it in the integration page.
+Yeah, here, just like URL.
+
+Bandana Sriramka   15:29
+I.
+
+Oleksandr Tsyganok   15:33
+And also, please make sure that you will select this checkbox because you have a cloud Jira instance. So it's not like deployed in like your internal environment. It's like cloud instance. Then you need to type your email, the same one that you have.
+In the JR, give me one second to show you where you can find it.
+Yeh.
+So you can find it again here, like in your preference or profile, but once you create the security token, it's like same tab. I think you know your like work email, it should be like exactly the same. Yeah, so let me copy it.
+And here we will need like our token.
+Yeah, so I can copy it again.
+because I already copied some data. If you like accidentally close this page, you can like delete, revoke a previous one, create a new one, because as far as I remember, like you cannot get it once you close in this specific page.
+So you can just always like regenerate a new one. So it's not a problem. Okay, so we will need to copy this token here as is. And before you click and save, please click this like test button. So it should say that integration test was successful.
+Yeah, so guys, anybody successfully tested their integration at that moment? Yeah, we have a question.
+
+Mia (Xiaoling) Zhou   17:20
+Oh.
+Mine shows integration test failed.
+
+Oleksandr Tsyganok   17:31
+Please double check your URL that you have a correct username and that you copied like this correct token and you selected correct integration type.
+
+Vlad Grubman   17:44
+Make sure you selected to use your cloud. I, I, I can't count, I can't count the ways I missed that so many times.
+
+Mia (Xiaoling) Zhou   17:47
+I did.
+Mhm, I do it.
+
+Oleksandr Tsyganok   17:52
+Yeah, Jira Cloud checkbox is also important.
+
+Nikita Kumar   17:57
+Can you show the token again to Oleg?
+The URL that we're using is training Atlassian, not the main Atlassian one. So there's a link in our document here that's also been sent.
+
+Bandana Sriramka   18:06
+Yeah.
+
+Oleksandr Tsyganok   18:13
+Yeah, I I will copy this like link again, but yeah, we have like all the details in.
+This like first page that was shared.
+
+Nikita Kumar   18:27
+And can you just show the API token again really quickly?
+
+Oleksandr Tsyganok   18:31
+The page where we can create it, that's...
+
+Nikita Kumar   18:34
+Yeh.
+
+Oleksandr Tsyganok   18:35
+like this like second link on our page. So you can open it. You can click create API token, provide like some name, make sure that you set them like some expiration time in future. You can click create and you can click this copy button.
+
+Nikita Kumar   18:38
+Yeah, do you want me to, I can send that in there if you want.
+And then when you copy it, just save it in your notes or somewhere on this side because you won't be able to see it again.
+
+Oleksandr Tsyganok   19:05
+Yeah, it's not recommended to save in NoC. If you want to save it, it's better to save it in the password manager, because yeah, you can like edit like some somewhere temporary, but yeah, this token will be encrypted in Codne and like securely saved, but yeah, that's.
+
+Nikita Kumar   19:09
+Just for now.
+
+Oleksandr Tsyganok   19:23
+Like better practice not not to like save it somewhere like on in your documents. It's just easier to generate a new one.
+
+Sujan Shrestha   19:33
+So we can create that token as many times as you want, right?
+
+Oleksandr Tsyganok   19:33
+Oke.
+Yes, you can remove the previous token and always create a new one.
+Oke.
+
+Nikita Kumar   19:49
+Mia, were you able to?
+
+Sadananda Mondal   19:49
+Can we integrate GitHub here? GitHub.
+
+Oleksandr Tsyganok   19:54
+No, today we will focus with Jira only. As I mentioned, we will have like deep dive in integration and other tools. We will move forward to GitHub. If you have, if you want to go an extra mile, you can definitely try this like GitHub integration. It's like approved for you, but today we are not focusing on this part.
+
+Jason Daggs   20:05
+Thank you.
+
+Nikita Kumar   20:13
+But you can integrate it as we get further into the sessions. We'll show you how to do a deeper dive into those as well.
+
+Sadananda Mondal   20:13
+Thank you.
+
+Altaf Shariff   20:20
+Yeah, thank you. If you don't mind, can you show?
+
+Oleksandr Tsyganok   20:20
+Yeah.
+
+Nikita Kumar   20:22
+Mia, were you able? Sorry, go ahead.
+
+Altaf Shariff   20:24
+Go ahead, sorry, go ahead.
+
+Mia (Xiaoling) Zhou   20:25
+Yes.
+I think I realize probably I not start creating. I use the create button on the code me first time, so that I got the file. And second time I try use the link you shared in the file, it works.
+
+Jason Daggs   20:36
+The.
+That was.
+
+Oleksandr Tsyganok   20:47
+Okay, cool. Yeah.
+
+Nikita Kumar   20:48
+Okay, awesome.
+
+Oleksandr Tsyganok   20:50
+Okay, I think we can move forward now. So again, you can test this integration. After testing, don't forget to save it. So once you click and save, you should see your selected project, your integration with LS that you provided. It doesn't matter like this name, just for you to distinguish it.
+You should see like this type of integration JIRA and you should see link to your JIRA instance.
+Okay, so we have like integration ready. Now we can create an actual assistant. So it's like really easy to create like assistant in the economy because we have like this built-in functionality to use AI capabilities to generate prompts, like select
+tools and so on. So first of all, you need to make sure that you navigate into assistance tab, the second one after chat with this like robot icon. So if you like assigned to a project, you might see some already created assistant, but.
+your teammates, and we will click this create assistant, not remote assistant, but like create assistant button. And you will see this pop-up that will ask you to describe your ideas, what this assistant should be capable to do.
+Yeah, you can create, like, if you have like any ideas, you can create whatever you want. That's actually like a home task for today's that you can get like in some ideas and create your custom assistance.
+For now, let's focus and create like very specific assistance. So I also like share this link, how we can directly access this, create new assistant functionality from this confluence page. And that's my prompt. So you can type your like slightly different version.
+You can use like MAINFRAME version. Again, we use an AI, so don't expect that you will get exactly the same outputs. That's like not a deterministic tool. It will generate same like functionality and same prompt, but you might get like slightly different outputs. So here you have this like dialogue.
+And I am like just paste in this like text that I have there, so that's like like a need for my system, so I need an assistant that can work with JIRA, can check user story quality, and post comment with summary of identified like missing details, basically exactly.
+what we saw was this like readiness checker assistance that we created before. So you can provide like very simple like phrase, but like with specific tasks it needs to do. And yeah, you just need to create this generate with AI. So that's one option how you can.
+easily get like fully working assistant. Code me have like a knowledge base of best practices of prompt engineering, like how to structure this assistant prompt. So you just need to describe on a high level with like regular human language.
+
+Jason Daggs   24:11
+Okay.
+
+Oleksandr Tsyganok   24:20
+what is a specific task. If you have like some examples, it's better to add these examples, like expected output formats and so on. You have like another option, you have a full control how you can create this assistant manually, but for now, let's try to.
+
+Jason Daggs   24:36
+No, I want.
+Oh.
+
+Oleksandr Tsyganok   24:39
+use AI to generate AI assistance. Yeah, so it takes like time to get like all these details for knowledge base, like processes, like step by step, like all details, which tools need to be connected, the steps that we need to have in the system prompt, so it...
+
+Jason Daggs   24:41
+Ahmad.
+
+Oleksandr Tsyganok   24:59
+should take like some time. Oh, okay, we have like some unexpected error, maybe some transient issue. Okay, let's try another one. Let me try to generate it with AI.
+
+Nikita Kumar   25:35
+Any questions so far?
+
+Sharma, Amit   25:41
+Yeah, I got access denied when I was testing it for integration.
+
+Oleksandr Tsyganok   25:47
+Yeah, double check like that you provided correct username that you copied like this full token. You don't need like to provide like any prefixes or other parts. You can try to regenerate this token and yeah, make sure that you select in this.
+
+Sharma, Amit   26:02
+Yep.
+
+Oleksandr Tsyganok   26:06
+Cloud.
+option for Jira integration.
+
+Sharma, Amit   26:13
+Yeah, sure. Thank you.
+
+Nikita Kumar   26:16
+And then I think Karly also got the unknown error as well. Oh, Vlad, you just answered. No, I asked a clarifying question. Is that during, is that for credentials or is that for when you were trying to create an assistant?
+
+Oleksandr Tsyganok   26:16
+Yeah, so...
+
+Jason Daggs   26:21
+Yeh.
+
+Karly Bolger   26:28
+When I was creating the assistant, after I clicked generate with AI, it spun for a while and then up in the right hand it showed unknown error. So I'm trying it again.
+
+Oleksandr Tsyganok   26:42
+Yeah, please try again, at least for me. As you can see, it was successfully generated agent. So we have suggested name, Jira Story Auditor. I will add like my name here because yeah, we will have like multiple agents created. Again, if you have access to training,
+project, please select it here so everybody can see like results of each other work. You can select share with project so everybody will have access to your assistant and will be able to use it or you can keep it like private for you.
+Yeah, so as we can see, again, you would like select this like training project. If you don't have access to it, you must select exactly the same project as you created this integration. So don't like mix up if you're assigned to like multiple project, don't mix up project selected for integration and project.
+selected here in a system setup. Yeah, so we have a description of this agent. So it says that this is like a system that reviews Jira user story, like clarity, completeness, the stability. So we have like much more details that we like put it initially. It knows now that it should check like personas, business value, and so on.
+So it's assigned automatically with this category, so you can use it for filtering this like quality assurance, project management, engineering. It's created this like initial chat prompts, and that's like a core of our agent functionality, a system instruction. So that's basically your system prompt for your agent that.
+Tells exactly.
+
+Doug Ball   28:29
+Is it?
+Yeah, should it be calling out only reviewing that one specific issue?
+
+Oleksandr Tsyganok   28:30
+Yeh.
+Sorry, didn't get your point. Could you please explain it in details?
+
+Doug Ball   28:39
+On the in conversation starters, it says, please review issue 123.
+Or is that just the blank prompts that you can put anything into?
+
+Oleksandr Tsyganok   28:50
+Yeah, yeah, so that's just an example like for this prompt. If you don't like it, you can always like change it. You can like add that's like some kind of ideas how you can engage user who will use your agent. So AI is not perfect. Like if you see that you have a different like conversation starters that are minuteful to your system, please edit it if you see that something.
+
+Doug Ball   28:51
+Yeah.
+Okay.
+Got it.
+
+Oleksandr Tsyganok   29:14
+Something doesn't work; you can remove, you can add as many conversation starters as you want, then just like an idea, like what what can be meaningful based on this, like very small context that they give to this agent initially, yeah, so as I was saying.
+
+Nikita Kumar   29:29
+One more question, sorry, Alex. Go ahead.
+
+Oleksandr Tsyganok   29:29
+No.
+Mhm.
+Yep.
+
+Jurijs Markelovs   29:33
+Yes, maybe just one step ahead, but once we create this assistant, is there a configuration somewhere where it can be reused?
+Blah, blah, blah, it will be reused, could be reused in the workflows as well, or what's the connection between workflow and assistant if that can be established?
+
+Oleksandr Tsyganok   29:53
+Yes, like we, we like this like our final session for workflows, but just to give you a short answer, workflow simply orchestrates multiple agents, so it's reusing existing agents, but gives them like very specific tasks, so you have like...
+
+Jurijs Markelovs   30:01
+Oke.
+Sorry, by say, by by saying agents immune assistance.
+
+Oleksandr Tsyganok   30:15
+Yes, assistance, so exactly the same, like, like resources, like assistance that we have in economy, like workflows, simply reusing them and like controlling their execution in an automated way and giving them specific tasks.
+
+Jurijs Markelovs   30:16
+Okay.
+
+Oleksandr Tsyganok   30:31
+So same as you interacting in the chat and saying that, hey, like this JR user story reviewer, please review my specific task. That's like a responsibility of workflow, doing it in some like logical steps. But yes, that's like our.
+final topic for discussion, so let's focus on our own system creation. Yeah, so any other questions before we move forward to system instructions like purpose and as it's set up with the system instructions?
+
+Haribabu Ashammorla   31:07
+Som.
+Two.
+
+Oleksandr Tsyganok   31:10
+Okay, cool. Looks like no other questions. Yeah, so system instructions basically is this like main engine of your agent. It fully controls behavior of this agent, so you can like add like all necessary details about expected behavior, what it should do, what it shouldn't do, what's like restricted.
+Like the best practice, and that's like how like CodeME generated the system instructions that we have, like first of all, like a description of a role for this agent, like it's like persona and like main responsibilities. Next, we have like really detailed steps to follow.
+You will have like completely different steps than I have here. Again, because we use an AI tool. It will be like, again, focused on JR, but potentially it will be like completely different steps. And that's like where you need to make sure that.
+You like replicating the steps as you have like currently in your like daily job like processes. So if you know that you have like some standard set of like requirements for this like Jira story or you perform in some steps, you add in specific labels to your tickets. Yeah, please, please add all these like details.
+To agents know it know like which steps to follow. Let's take a look what we get like just from this high level output and what are our steps. Does it actually make sense for me? You can also check like your setup. For me it says that you should use project management toolkits, generic Jira tool.
+
+Altaf Shariff   32:37
+Yeah.
+
+Oleksandr Tsyganok   32:51
+That's like this part of connection. So we create a Jira integration, and that's a tool that we will use. So it will give this agent capability to connect to your Jira instance, retrieve it by here specific Jira key, and yeah, we'll have access to this context from a Jira user story. Yeah, for so far, it makes sense for me.
+Evaluate the story against standard checklist, summary, acceptance criteria, test scenario, business value, dependencies, definition of done, estimation, attachments. Okay, looks fine. We should produce assessment, short summary, sentence, bulleted list, suggestions. Okay.
+Looks fine. Post this assessment as common to Jira issue using generic tool. Yes, that's like part where you need to be like really careful. So it says that it should do it kind of like automatically. Basically, you might get a result that you just post in like URL.
+And the LLM might decide based on this like instructions that it's like allowed to do it without asking user consent. My recommendation that you should change it and say that after user confirmation or approval.
+Let me change it for my specific scenario. Maybe for your case, you want to like fully like autonomous process and maybe you want to use it in like in some kind of workflow scenario and that's like actually you don't want to have this behavior that's AI constantly asking it. But it's better to check like for this like critical parts where we're taking this like decision, we're producing some.
+Comment in Jira that will be linked to our name, so it's better to check it.
+Okay, so my recommendation, just to make sure where you have this like posting this assessment as comment, add this additional check for user confirmation. Okay, so we have like some set of constraints, again, like this best practice tool.
+have like some set of limitations for AIs that you don't want to see like standard use case scenario where this agent might be used and we have this like low level instruction how to use this tool. Yeah, that's a beauty for this automatic generation of this like agent because it's already know about code me like tools and like available.
+functionality and it's already provides this like hints which tool needs to be used. Yeah, you can select models, yeah.
+
+Nikita Kumar   35:39
+Alex, sorry. I'm going to just, just one more thing. For these system instructions, it like right now we have the prompt that we sent you, but basically these are anything that you want your use cases to do, like similar to what we did in ChatGPT with agents. You can also use AI to help build out your system instructions if you ask for what.
+ask it what to do and it'll build out the instructions for you. So it's not like you don't have to come up with it all by yourself. You do have the help of AI to be able to build all of like the instructions itself as well.
+
+Oleksandr Tsyganok   36:14
+Yeah, so you can select like a model by default. I think you will have GPT mini selected. You can select like more powerful model for your agent, but again, based on the your needs, you have like full control. If you like doing like some like coding tasks, but maybe it's better to select codecs, but you need to have like some balance between like.
+cost and like complexity of the tasks that you solve. Yeah, so next part, make sure that you navigate it to this like tools and integration settings. Yeah, that's like where our simple AI chat bots became like a real agent.
+So you need to make sure that you have this like checkbox or generic Jira selected. Yeah, we have this mechanism of default integration. We can have a deep dive on integration stop. You can leave it blank, so that means that it will pick up first
+like integration that it will find in the project that available for you. But I would recommend you just to check in this like drop down that you have access to this like integration that you just created on the previous step, just not to have like some surprises that you created in a different project. So for now you can just select.
+integration that we created together with you on the first step. Yeah, so for now that will be a single tool that we connect to our agent. So once you're done with this like system prompt review, you can click save button.
+And yeah, it will say that a system has been created successfully. Yeah, we have this Jira Story Auditor created by me. Let me check, do we have any other agents that were successfully created? So just to uncheck this filter. Okay, so we have like a bunch of...
+systems already created by other guys. Yeah, that's cool.
+Okay, so let me try to run mine where it is. Yeah, it's here. So we can click this start chat button or we can click this like assistant details. Again, we can return back to it, edit, or we can start chat for like our assistant.
+Yeah, so we have like this conversation starters that we added before, so you can click on it and you can send this like message, but yeah, let's let's make sure that we first of all try and this task for which we designed like our agent, like again.
+Here you have already pre-configured message. If you like slightly like modified your agent or you don't have access to the specific Jira item, you can use your own Jira user story for review. But yeah, that's.
+That's what you can test like right now, together with me, so we will have like all this like comments available in the agent. It looks like that I didn't manage to copy it in the right way.
+Oh, maybe we have this like problem with uh, this automatic.
+Highlight them of a Jira item.
+Okay, plan B. So let me just copy this link.
+From here, just copy a link.
+And yeah, check user story quality, and that's a link to our JIRA item, and then we can send.
+So, if we configured this integration correctly, we should see this generic Jira tool call, and so we should see this like text generation.
+Yeah, so we have like some like summary, some details. You will have completely different outputs because I think you will have slightly different formats for this agent and you will not have like some unified format in order to achieve that.
+you have like standardized output, you need to explicitly guide this like assistant, like what is expected output, like what is rules, we will achieve it like soon, but for now let's try and test that we able to post like all this result that we have here as command.
+Yeah, so, and we already, since we added this like instruction that once user confirms, it says that if you want it, I can paste, paste it, post it as a Jira comment. Okay, please.
+Create.
+Zero comments.
+
+   41:24
+I.
+
+Oleksandr Tsyganok   41:26
+With now is this report?
+I think if you will type yes, it'll also be enough.
+Okay, so we didn't provide it like low level instruction that we need to like post like Jira comment in Jira ADF format. But as you can see, at least for me, it failed like several times.
+But we have like this like recovery mechanisms that it's figure out how to do it correctly, and it says that it's created.
+A comment, and let's like review it, but we will return back to this like error that we got.
+Okay, so we have like, we have like some comments that's not mine. Ah, yeah, I have this one. Okay, cool. So we see that.
+Everybody complaining that missing dependencies, so at least we have kind of same results, so potentially we can build this like feature when agents can like negotiate, they have like a different like opinions, like different perspectives.
+So, you can like run multiple agents and select like best like options, have like some kind of quorum, but yeah, that's kind of like next advanced to talk about, yeah, cool. We have like completely different format in here, yeah, looks nice.
+
+Jason Daggs   42:58
+Yeh.
+
+Oleksandr Tsyganok   43:15
+Okay, what, what actually happened? Like, we have like some errors, and that's like the beauty, like, for this like agents, that since we have like all details of like tool calls, we have like low level issue, we can actually ask why do we have errors so we can learn.
+what happened and based on this like findings, yeah, so that's what I saw that it's like this some ADF format for Jira.
+That it should like support it, like not just in the markdown text, but specific format, and this model that we selected didn't know about it, so we can like learn on it, can like find out that this was a problem.
+Suggest like valid all examples, so we can take this like examples that we managed to run this like sort sort time, and we can add it to like our original prompt, so as a result we will have like much better.
+like results for.
+Based posting this like comment, OK.
+So actually, that's where we can return back. You don't need like to follow this exact steps, but that's what I'm saying that you will not get like perfect like results from the first attempt, which you should like run, test like different options, like have just like multiple iterations.
+Yeah, let me edit it like for full screen. So I will just return back to it and say that, yeah, we have this like refine with AI button when we can fix the like prompt. We can do it like manually, but yeah, why I need to do it manually if I have like AI tools?
+Yeah, I can say that.
+Agent failed to post.
+Four months.
+Oh.
+Cause of I think it called it ADF format.
+Is that?
+It's an example.
+Of valid all.
+OK, let me paste like this example that uh yeah generated.
+Let's maybe just like remove it, make sure that it's just an example.
+
+Nikita Kumar   46:04
+We have a question in the chat too, Oleg.
+
+Oleksandr Tsyganok   46:06
+Yeah, please, please ask.
+
+Nikita Kumar   46:09
+Does it usually take time to populate comments in GRV and the assistance? Or like how much time does it normally take for that to happen?
+
+Oleksandr Tsyganok   46:18
+We just saw it's like almost immediately, so it shouldn't take like long time. You can like retry this like operation if something went wrong. I will show it. Okay, so that's like part of this automatic change. So basically we are modifying our system prompt.
+And we'll try trying to like make it a bit better, so let's let's try it again, like, and we'll see how long it takes to create a comment that will get the answer to our question.
+Yeah, I think that at that moment, like everybody's using CodeMate, potentially we don't have like most powerful hardware at that moment where we hosting it, so yeah, it might take some time to run this operations. Okay, so we have like a...
+list of suggestions. Yeah, we have like this important note. It's like decided to post it just an example. Yeah, looks fine for me. For that case, we can apply this like suggestion. What happened? Am I clicked like wrong button?
+Yeah, it's not a problem. We can like skip like saving it. Let's try another one. Not sure, like...
+What I clicked correctly?
+But yeah, for now, let's not waste time. We saw that we just added this hint.
+Um...
+Okay, and I would paste this like example, save it, and let's run another iteration. Let me copy this like original prompt and see, are we able to create a comment?
+from the first attempt.
+Okay, so it takes time to generate like summary and let's take how much time it takes to create a comment in Shira once it will be ready.
+Oke.
+Please post.
+Okay, so we can like measure how much time it takes to create this like Jira comment.
+
+Jason Daggs   49:06
+The.
+
+Oleksandr Tsyganok   49:11
+I would say like no more than 10 seconds. And as you can see now it's not failing like couple times. It's like immediately creating a correct format as it's expected. Just like a power of like given example to AI in your prompt. So if you know how to do it correctly.
+Always guide UI like this, like low level details, you will have like really good results even with like some like outdated weak models, if you will get this like detailed examples, yeah, so, and the next step here.
+In our page, I have an example of an agent. Yeah, this was like an original prompt, like developed by team in for this, like story readiness checker, so we'd have like some list of like a same test criteria, like...
+all like low level details, not just some garbage that I generated with AI without having an idea what needs to happen here, but really like high quality prompt. And yeah, we have like some standard like format, like really detailed guidance how to like score.
+like this user story. Again, you need like to review it and make it like applicable to your team needs. So you just need to provide as much like knowledge and details as you have in this prompt, then you will get like really relevant results for your team.
+Yeah, so that's that one was used in a row. I have like slightly simplified version here, this like agent system prompt that's already tweaked a bit for code usage, so it have like this details for a tool usage, so it knows that it's connected to Jira.
+We have, like, somewhere here, like, yeah, this tool usage that it can use JIRA, because, like, for all, it's like default like capability and it's not configurable, but yeah, code me can work with like multiple tools, so that's like slightly changed the prompt, so you can try.
+have a like next step, have like this like really detailed agent with predictable format, like some rules, what to output just to see like the difference when you have some control over your system prompt. So again, you can navigate back to your system, so you can go to.
+assistance, find your system that you created, you can edit it, you can go to a system prompt and for me I just will replace it with this system prompt that I got from this document. I will save it and will run.
+Another check, and now we will we should expect exactly the same results for everybody, because we have like very strict like rules for this assistant. What needs to do? It basically says that create always.
+this table, no like additional stuff. It should be like always same format. If everything fine, just replies it everything fine. And if we have like some issues like provided in this very specific like table. So once you will update it, you will have like.
+more or less same results like always came. I will say that post comment to Shira.
+With analysis result.
+And guys who is like following me, yeah, I'm expecting that if you're using like my task for like this test, yeah, we should have like as results this table in the comments.
+Yes, what do we have here?
+Okay, that's actually not a table. Strange.
+Have I like copied on the part of it?
+Or what is missing here? Let me double-check it.
+
+Nikita Kumar   53:49
+Any questions so far? Are you guys able to see similar results on your end as well?
+
+Oleksandr Tsyganok   53:52
+Yep.
+
+Nikita Kumar   53:55
+And we're getting an error for someone.
+Oh, like someone's getting an error that says for JR integration.
+
+Oleksandr Tsyganok   54:03
+Let me check.
+Uh...
+Yeah, so that means that your agent doesn't have integration configured. Can you like go to your original agents? Yeah, edit it.
+
+Altaf Shariff   54:12
+Got it.
+
+Oleksandr Tsyganok   54:24
+And you can scroll down to the very bottom. You should expand available tools. You should see project management section. You can expand it. And you need to make sure that generic JIRA is selected. You should have this checkbox. And you should see something in the dropdown.
+
+Jason Daggs   54:31
+Yes.
+
+Oleksandr Tsyganok   54:44
+If you configure it for the same project, you should see your JR integration and you should select this integration that you created on the first step. If you missed maybe this like part, yeah, please then watch like this recording and try to create this integration.
+Okay, any other questions?
+
+Svetlana Stogni   55:04
+And we will also provide a step-by-step instruction on how to replicate all the steps Oleksandr has shared today.
+Sorry, yeah.
+
+Nikita Kumar   55:15
+Thank you. Any other questions? I know we have 5 minutes left, Oleg, so I wanted to see if we can do like a quick wrap up and homework.
+
+Oleksandr Tsyganok   55:25
+Yes, yeah, let me quickly follow up with like basic functionality that we have in our system. So like all can, yeah.
+
+Nikita Kumar   55:35
+I think we can, sorry, we only have 5 minutes, so I think we should do basic functionality. We can cover that on Tuesday's call, maybe in like the 1st 10 minutes or so, just because we don't want to go over time as well and respect everyone else's calendars. But I would say for homework, what we want people to do is make sure that they can create.
+
+Oleksandr Tsyganok   55:46
+Mhm.
+
+Nikita Kumar   55:56
+another assistant for themselves, whether it's requirements hardening, user story writing, whatever the assistant is for your homework tonight, we'd say, please create an assistant. It could be anything you want it to be. And then on Tuesday, we'll probably cover part of what Oleg is going to be covering, was we were going to cover today, but basics of code me as well as.
+show and tell for the homework. So on Tuesday, we have to make sure you guys are able to actually show and tell what you're working on and show off some of your assistance. And I will be calling on people, so make sure you guys do have those ready to go. And we'll continue into our next lesson on Tuesday as well.
+I see a hand raised.
+
+Oleksandr Tsyganok   56:35
+Yeah, we have another question in the chat. Yeah, let's first go this end.
+
+Jurijs Markelovs   56:38
+Yeah.
+Sorry, yeah, quickly, is there a way to to like recreate Jira ticket in the training environment, meaning like a copy paste, so we can work, we can try to test like a real real tickets, Jira stories?
+
+Oleksandr Tsyganok   56:57
+Yes, usually I'm doing it just with expert functionality and I created specifically an agent that creates this like tickets for me. So I'm just pasting this like XML, but the main part that you need to export full details of a user story. So you can.
+
+Jurijs Markelovs   57:07
+Ohh, nice.
+
+Oleksandr Tsyganok   57:16
+export specifically in XML format because like other exports do not include like every details. So I'm just exporting it, copying this like whole XML and asking agent. So we just let regular agent with Jira access to create this ticket.
+Just make sure that for this agent you selecting a default project where it's need to be created, so you need just provide this like project key where it should create it, and yeah, then that's like in the simplest solutions that I found so far.
+Okay, yeah.
+Any, yeah, I see a question about permissions. Yeah, you will get exactly the same permission as your user have if you create an add default token. Let me show it quickly for you. If we have like 2 minutes, you will have a glip permission, so be careful with it.
+
+Jason Daggs   58:00
+I.
+
+Altaf Shariff   58:13
+Ah.
+
+Oleksandr Tsyganok   58:20
+Where our like page, it's here, so when we create a token.
+Uhh...
+Yeah, yeah. You have like different options how you can create it. We use like a default, like default token creation. So basically whatever permissions you have, like same token permissions you will get, but you can create API token with scopes. So let me provide some like random name.
+That's Jira integration, and they have 375 low-level permissions, so you can select like really low-level permissions. For example, I don't know, maybe you have like some agents that only can delete Jira comments, that's it, so...
+you following least privileged like idea, that's the best practice. So if you know that agent should do like specific stuff, you just providing it like just only this like capabilities. So you have like full control or whatever like it's doing, it cannot like delete everything in your system.
+But for now, for like training purposes, it's like too much to like set up like all this like low level details. So that's why we're creating this like classic tokens.
+
+Jason Daggs   59:39
+S.
+
+Oleksandr Tsyganok   59:46
+Okay, yeah, it looks like we're running out of time. Yes, thank you guys. Again, if you have like any question, let me post this like link at the end. We have this like a support channel, so.
+
+Nikita Kumar   59:48
+Thank you. Yep.
+Right now, actually, I have it ready in the chat. So I got all the links ready. I'm going to send a message out to everybody with all the correct links, materials for today, your homework assignment for today. And we'll see you guys on Tuesday. And in the meantime, if you have any questions, feel free to pop them in this chat, or you can message us directly and we're happy to help.
+
+Oleksandr Tsyganok   1:00:01
+Ohh, OK, cool.
+Great.
+
+Nikita Kumar   1:00:20
+Thanks, everyone. Have a great rest of your day. Thank you.
+
+Oleksandr Tsyganok   1:00:21
+Thank you. Yes, see you on the next session. Thank you so much.
+
+Svetlana Stogni   1:00:21
+Thank you. Thank you.
+
+Sharma, Amit   1:00:25
+Thank you. Bye.
+
+Yury Yastrabtsou   1:00:25
+See you. Thanks so much. Bye.
+
+Sujan Shrestha   1:00:25
+Hi, thanks a lot. Bye.
+
+Nicholas Crowley stopped transcription

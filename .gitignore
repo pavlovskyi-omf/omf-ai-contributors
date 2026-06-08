@@ -59,9 +59,9 @@ Thumbs.db
 *.sqlite3
 
 # Project outputs and large input data
-docx2txt_output/
-output/
-input/
+# docx2txt_output/
+# output/
+# input/
 
 # Windows thumbnail cache
 ehthumbs.db

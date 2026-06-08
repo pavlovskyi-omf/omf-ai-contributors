@@ -1,0 +1,459 @@
+AI Enablement ENGINEERING Champion Sync-20260601_150013UTC-Meeting Recording
+June 1, 2026, 3:00PM
+26m 12s
+
+Eugene Semenyuk   0:37
+Hello.
+Let's wait a couple of minutes for more people to join us.
+Yeah.
+Yeah.
+Yeah.
+Okay, let's probably start. So yeah. Hi everyone. So yeah, welcome to our VI Champions call. So Oleksandr has a public quality today, so yeah, he won't be able to join us. So today I will play a role of Oleksandr and replace him.
+on this session.
+So yeah, thank you everyone for joining of this session today. So yeah, really glad to see you all here. And today's session will be structured in a few ways. So we have first
+Yeah, first we'll discuss some news. After that, we'll go around the room, discuss our updates.
+confirm some demos for Wednesday. And finally, we work up with some next steps and alignment. So yeah, our goal for the day, just to collaborate, unblock each other, and accelerate adoption and smart instruction.
+Wait, so...
+Yeah.
+Yeah, regarding, regarding news, so yeah, I...
+I don't remember any any important news, friendly speaking. So yeah, I guess we can we can move to our status check and like demo demo confirmation. So yeah, let me share my screen.
+So, by the way, do we have any volunteers to share some status experiments?
+Like, have you had a chance to experiment with the AI since our last seeing? So, are you currently working on any AI related use case?
+So, any any volunteers?
+Yeah, Patrick.
+
+Patrick Behnke   5:15
+Not really in terms of a use case, but in doing research and various things, looking at YouTube videos, researching online. I did find a person named Matt Pocock.
+
+Eugene Semenyuk   5:22
+Right.
+Okay.
+Mhm.
+
+Patrick Behnke   5:31
+who is really good with various skills for AI. One of them is called the Grill Me skill. Extremely good for planning. Like, it's absurd how good it is for how small of a prompt it is. So I would suggest looking up the Grill Me skill if you get the chance.
+
+Eugene Semenyuk   5:44
+Mhm.
+Mhm.
+So could you could you please share maybe some links?
+
+Patrick Behnke   5:59
+Yeah, I'll throw something in chat real quick.
+
+Eugene Semenyuk   5:59
+For us, yeah.
+Yeah, it will be.
+available.
+So, yeah.
+Thank you.
+Any any other volunteers?
+Maybe you heard some interesting news or you had some...
+Curious experiments.
+
+Jason Daggs   6:32
+I've been able to get GWIN 3.6 running locally at the 35 billion.
+
+Eugene Semenyuk   6:37
+Mm.
+
+Jason Daggs   6:42
+Dense or yeah.
+So, but that's, you know, 43 tokens a second, something like that. Oh, that's not too bad.
+
+Eugene Semenyuk   6:49
+Mm-hmm.
+Have you tried it, so?
+
+Jason Daggs   6:59
+Mm.
+
+Eugene Semenyuk   6:59
+Sorry, that's interesting. Like, I'm curious about some results for this model. So, how good is it?
+
+Jason Daggs   7:11
+Well, that's a good question. I've actually just started benchmarking it this weekend, so that's where I'm getting the numbers from. I haven't really gone deep into like using it with like open code or open spec or anything like that yet.
+
+Eugene Semenyuk   7:17
+Mhm.
+
+Jason Daggs   7:29
+but that's certainly next on the agenda for a future weekend project. But yes, so far, I'm kind of impressed. It's actually, it actually runs. So, you know, it's a big deal, I guess.
+
+Eugene Semenyuk   7:36
+Mhm.
+Mhm.
+Yeah, that's that sounds really impressive, so yeah, please keep keep us posted, so yeah.
+
+Jason Daggs   7:53
+Yeah, sure.
+
+Eugene Semenyuk   7:55
+Thank you.
+
+Jason Daggs   7:56
+Mhm.
+
+Eugene Semenyuk   7:58
+OK, we, we have, we have few, yeah, before we move to status checks, so yeah, let me let me check, so yeah, we have to Thomas request for.
+For Wednesday, let me check.
+So, yeah, we have this.
+This use case by Amit. So yeah, Amit, I see you are here with us.
+
+Amit Kumar   8:27
+Hey, Eugene, yeah, I spoke to Oleksandr on Friday and...
+
+Eugene Semenyuk   8:28
+Yeah.
+Mhm.
+
+Amit Kumar   8:33
+And I was still doing, you know.
+some test on my local. I think I'll be ready to give a demo on Wednesday for this one.
+
+Eugene Semenyuk   8:43
+Yeah.
+Awesome. Thank you.
+And.
+We have one more, one more ticket.
+Ian Bont.
+Um...
+Shoaib is not with us.
+I see.
+Or, if you with us, so yeah, please raise a hand or unmute.
+So yeah, I probably.
+Will Connect.
+Offline and confirm it.
+Okay, let's probably move to our bullet board and see what we have, what we have here. So,
+Yeah, but before that, so yeah, maybe any any volunteers to...
+To discuss their tickets.
+That that are in progress state.
+So maybe you have some...
+Some news.
+OK.
+
+Deepti Pathak   10:09
+I do have a task which is in progress. I am not able to see it though. Let me see anything.
+
+Eugene Semenyuk   10:15
+Let me maybe scroll down a bit.
+
+Deepti Pathak   10:21
+Or is it in this experience?
+Install it on.
+
+Eugene Semenyuk   10:33
+Yeah, maybe I should use filters.
+
+Deepti Pathak   10:33
+Mm.
+
+Eugene Semenyuk   10:37
+Report or not, we should use assignee.
+
+Deepti Pathak   10:40
+Yeah, just put a sign in DB.
+
+Eugene Semenyuk   10:43
+Yeah, here is the.
+
+Deepti Pathak   10:43
+Or I can try to see, too.
+
+Eugene Semenyuk   10:47
+And.
+I.
+
+Deepti Pathak   10:52
+Yeah.
+
+Eugene Semenyuk   10:54
+Yeah, here it is.
+
+Deepti Pathak   10:55
+Let's see. Okay, yeah, this one. So, haven't done anything. I mean, I have done something, but I wanted to do more integration. So, and I, because of the other task, I didn't get the chance, but I will try to wrap this up today or tomorrow, but should be ready. I needed the pressure, so Alex did requested it to have this.
+
+Eugene Semenyuk   10:58
+Thanks.
+Oh.
+Yeah.
+
+Deepti Pathak   11:16
+demo on Wednesday. So I'll try to wrap this up and we'll be hopefully ready for Wednesday to work on, I mean do it. So already I have completed to create the agent which can create the documentation. So basically I'm not sure which other teams do it, but like just to give a gist of it, couple of years back, we had the audit in our team and not only in our team, in different teams, there was an audit and they also wanted to have.
+
+Eugene Semenyuk   11:24
+Okay.
+Mm-hmm.
+
+Deepti Pathak   11:40
+the documents getting created in a, you know, specific templates like project analysis, test cases, risk assessment, all those things. So now whenever we deploy the JIRAs, we have to make sure that your, if your ticket is standard or normal, you based on that, you are going to add those five documentation into your.
+
+Eugene Semenyuk   11:44
+Mm-hmm.
+
+Deepti Pathak   11:59
+Jira, so documents gets added, but then we all do it in a different way, right? So, we Sukalya already like did this, but I'm just like more little bit enhanced and doing the enhancement on top of it. So, basically, anytime when Jira is getting created, our documentation, at least for project analysis.
+
+Eugene Semenyuk   12:07
+Uh-huh.
+Yeah.
+Yeah.
+And.
+
+Deepti Pathak   12:20
+And risk assessment, couple of documentations based on the JIRA, it gets automatically created and pushed it into our JIRA or in the GitHub, so...
+
+Eugene Semenyuk   12:30
+Mhm.
+
+Deepti Pathak   12:31
+That's the...
+Task.
+
+Eugene Semenyuk   12:34
+Yeah, that's that's quite interesting. So, yeah, and on a high level, so what what tools did you use in this use case?
+
+Deepti Pathak   12:40
+I am using GitHub Agent. That's one. And right now I'm working on integrating the GitHub with the CodeMe. So basically GitHub should call that CodeMe API and a couple of the templates in which some of this, like they wanted to know like the business or the project, all those I would like CodeMe to groom it.
+
+Eugene Semenyuk   12:49
+Okay.
+
+Deepti Pathak   13:00
+put it into there and then push those details into the GitHub documentation.
+
+Eugene Semenyuk   13:06
+Mhm.
+
+Deepti Pathak   13:07
+So that's where I'm a little bit stuck. I have to, I haven't got the time to look into it, but that's what I'm trying to do that integration right now.
+
+Eugene Semenyuk   13:08
+Sorry.
+So, yeah, we we we can we can set up webhook from from GitHub, so yeah, and based on like some some event in GitHub, it can call agent in code me, so yeah, but yeah, but in for this case, you need to have admin rights for the repository.
+
+Deepti Pathak   13:21
+Mhm.
+The code, yeah, yeah, so.
+I have the admin rights. I got the admin rights. I have created in CodeMe the assistant to groom the Jira. I just need to test whether that webhook when I'm calling it from GitHub is working or not.
+
+Eugene Semenyuk   13:37
+Yeah.
+Uh-huh.
+Yeah, OK, so yeah, as yeah, both of yeah, both our Oleksandr are on vacations right now, so yeah, feel free to ping me if you need any any assistance. So yeah, I guess I should be ready to help with the.
+
+Deepti Pathak   14:01
+Okay.
+
+Eugene Semenyuk   14:07
+With web hooks, if you start, if you start quiz.
+
+Deepti Pathak   14:10
+That will be great. Yeah, if I, if I took the, if I will try to work on it today and if I get into all any of the blockers, I will set up a call with you for tomorrow to resolve it.
+
+Eugene Semenyuk   14:11
+Something.
+Okay.
+Yeah, yeah, yeah. Sounds good.
+Thank you.
+Okay.
+Any, any, any other volunteers?
+So, yeah, I, I see that we have...
+Pretty big amount of use cases here, yeah, and I don't want to go one by one.
+So, yeah, if if you have something on your point, mm-hmm.
+
+Jason Daggs   14:45
+I just wanna, yeah, I just wanna point out, so you know, we're I'm a mentor for.
+Five external teams, and then I also do all of the kind of, you know, the enablement for the Guardians team that I'm actually a member of. And so, on that team, we actually have at least one person working on the change of the creating change log from.
+
+Eugene Semenyuk   15:05
+Mhm.
+
+Jason Daggs   15:15
+PR numbers. So that's, they've actually made some good progress on that. So I'm set up to do a demo on the 10th next week. So yeah, hopefully we'll have something interesting to show there.
+
+Eugene Semenyuk   15:28
+Mhm.
+Mhm.
+Sounds.
+Sounds promising. Yeah, and interesting. Yeah. Thank you for your updates.
+
+Jason Daggs   15:38
+Yeah, I think so.
+Mhm.
+
+Eugene Semenyuk   15:45
+Yeah.
+Okay.
+Any other updates on your use cases, guys?
+
+Sukalya Rajendran   15:53
+Yeah, this is Sukalya. Hi, Eugene. I'm working with three other teams on EDS for Light as Lighthouse Phase 2 program. And as part of their use cases, one of the things that they would like to work on is for the root cause analysis for the failures, similar to what we did for the Data Factory platform data pipelines.
+
+Eugene Semenyuk   15:56
+Hello.
+Mhm.
+
+Sukalya Rajendran   16:15
+This team wants to do it for the on-prem tool IBM data stage ETL logs. So I wanted to find out if you have any recommendations of how to set up this process. For now, I think they're working with GitHub Copilot and having the log files stored in the local.
+
+Eugene Semenyuk   16:19
+Mhm.
+
+Sukalya Rajendran   16:34
+and then they make an LLM call and pass the log information to it, and then it comes back with root cause analysis results. But you know, for production setup, how should we actually be tackling this? If you have any feedback around that, I'm eager to hear that.
+
+Eugene Semenyuk   16:41
+Mm-hmm.
+Yeah, to be honest, we started similar conversation within our QA group, like how to analyze and monitor logs from different environments, how to react on some actions, some alerts, how to classify them.
+So, yeah, let's, yeah, in fact speaking, we don't have we don't have solution that that that is ready, so yeah, but I think we can we can collaborate, yeah, and maybe connect into some small working group and brainstorm together like how.
+
+Sukalya Rajendran   17:17
+Okay.
+
+Eugene Semenyuk   17:29
+how we can do this task.
+So yeah, could you please message me directly, like guys who I need to include, yeah, and I'll set up some sessions for us.
+
+Sukalya Rajendran   17:33
+Okay.
+Yeah.
+Okay.
+Okay, actually, I do have a Wednesday weekly meeting like officers for the EDS group. Can I forward that to you? And that'll be a good forum for us to discuss this use case. I'll have all the folks. Okay, cool. Thank you so much.
+
+Eugene Semenyuk   17:49
+Mhm.
+Yeah, yeah, yeah.
+Absolutely, yeah, yeah, and I'll and I'll add other folks.
+
+Sukalya Rajendran   17:59
+Oh yeah, sure. All right, I'll forward that invite to you, Eugene. Thank you. I'm good.
+
+Eugene Semenyuk   18:03
+Yeah, thank you.
+Thanks.
+Let's move on. So, Sam.
+Do you have something to share with us?
+
+Sam Jayavelan   18:13
+Hey, Jain, sorry I joined late. Just wanted to give you the status update. I think I missed that portion of it. Two teams, the Cards acquisition and Bill Brown's comms team, we did have the meeting. We did figure out which two use cases to pick. They like the three use cases, they picked two of them.
+
+Eugene Semenyuk   18:18
+Uh-huh.
+
+Sam Jayavelan   18:34
+They had the option to pick others as well, but we went with the recommendation. So based on that, I updated the story cards, closed them with comments, closed the one that we're not doing with comments and the rest we've added, and also uploaded the meeting minutes and the whatever information was needed. Those are done. I think now what's left is to follow through for the two teams among the three.
+to follow through to make sure that the use cases are completed and they do have the AI champions from my lane. Two of them are there assisting them. So we have that part covered. Another lane is still finishing their assessments. They said they'll get it done today.
+So with that, we should be able to, even if it's a little delayed, we can get started on those as well. That is where we stand. Maybe we are a little slower than the rest, but we will get there.
+
+Eugene Semenyuk   19:33
+Yeah, awesome. Thanks a lot for for your updates. Yeah, appreciate it.
+Okay, let's move on. Any other updates, guys?
+On your use cases, maybe on your...
+like mentors roles or readers, like any kind of updates.
+Available.
+
+Sam Jayavelan   20:12
+Not all of the AI champions were available last week when I connected. So trying to ensure that all of them are engaged. And we'll see if for any reason if they're not, I think the recommendation is to reach out to ask them if they're still engaged and they want to be.
+
+Eugene Semenyuk   20:12
+Okay.
+Mhm.
+
+Sam Jayavelan   20:31
+If not, we can ask, come back here and ask for help, right?
+
+Eugene Semenyuk   20:34
+Uh-huh.
+Yeah, absolutely.
+
+Sam Jayavelan   20:39
+Thank you.
+
+Eugene Semenyuk   20:44
+Okay.
+Okay, before we close, any final questions, ideas to discuss?
+Maybe.
+Again, updates, statuses, or just questions.
+
+Sukalya Rajendran   21:08
+Oh, I did not share the update from the EDS side. Like Sam, I joined late. Sorry about that. So for the three teams, we did engage with them last week. All the teams have finalized the use cases that they're going to be working on and marked out the ones that they don't plan on working as cancelled, done, and added a comment to those Jiras.
+
+Eugene Semenyuk   21:09
+Anything?
+Mhm.
+Yeah, yeah, sure.
+
+Sukalya Rajendran   21:29
+So we're aware that they're not doing that. They're not going to be working on that. And yeah, like I said, I did get a request for help on one of the use cases that I discussed just shortly before. So I think we're going to connect on this Wednesday to brainstorm more as to how we can handle that use case. At least a local solution would work. We have a game plan for that, but.
+when we think of the broader strategy as to how we can make it scalable for the enterprise, we don't have a strategy forward, like you said. So I'd like to collaborate on that. And then the other use case is primarily on Snowflake Cortex. So they have a good handle on that. They didn't need any assistance from the AI mentors. That was the update from the second team.
+
+Eugene Semenyuk   21:58
+Mhm.
+
+Sukalya Rajendran   22:13
+And the third team is they're trying to build an application that will work to capture the metadata and the lineage information for the data that we already have on Snowflake. So it looks like some work is done manually today where the people who are data stewards or the ones who know the data fill out some table information directly in Snowflake to capture this.
+They want to automate it and you know have a user facing application for this. So for this I did connect with Archana. She's the one working on it from the data governance team and she has access to all the AI tools like ChatGPT and GitHub Copilot. So she's going to be working on standing up a draft UI application.
+
+Eugene Semenyuk   22:53
+Yeah.
+
+Sukalya Rajendran   22:58
+using GitHub Copilot, no blockers for now, but I did offer to help in case they have questions. So if we run into any blockers on that use case as well, I'll let you know, Eugene. But for now, we're good.
+
+Eugene Semenyuk   23:08
+Mhm.
+
+Sukalya Rajendran   23:10
+Yeah, those are the updates for ADS.
+
+Eugene Semenyuk   23:10
+Yeah.
+Yeah, thank you. Thanks A lot. Ravi, hello.
+
+Sukalya Rajendran   23:14
+Okay.
+
+Ravi Nachimuthu   23:17
+I'm sorry, I was not part of some of this conversation last week. An update on my side from Origination Polaris side, Andy's team is working on a couple of use cases, both from QA and the engineering side. But rest of the other groups, one with Stephen Marshall and the other one with...
+Collins on the DevOps side. I haven't had a chance to sync up with them yet, and they have been traveling quite a lot recently and trying to get in with them, but I still need a dev mentor, an engineering mentor. And I have a QA mentor, and Uris is helping me out.
+
+Eugene Semenyuk   23:56
+Mhm.
+
+Ravi Nachimuthu   23:58
+and some of it, but I don't have a dev mentor. And I believe Ivanov was trying to get in with Vin. I haven't got any confirmation from him yet. She was also checking with me if I can take three more teams. Ah, I'm already struggling with what I got so far. So unfortunately, I wouldn't be able to, but I still need a dev mentor.
+
+Eugene Semenyuk   24:12
+Mhm.
+Mhm.
+
+Ravi Nachimuthu   24:17
+mentor for my three teams.
+
+Eugene Semenyuk   24:19
+Yeah, yeah, I see. So yeah, yeah, we'll discuss it here and we'll find someone and assign to your to your to your team. So yeah, and yeah, let's continue this discussion tomorrow on our mentors and leaders call. So yeah, I hope we will find someone.
+And assign to you as a top mentor.
+
+Ravi Nachimuthu   24:41
+Yeah, I'm not sure if I'm going to be able to make it. I'll try my level best, but if I couldn't, let's sync a pipeline if possible.
+
+Eugene Semenyuk   24:45
+Mhm.
+Mhm.
+Okay, yeah, yeah, but I hope we will some we will find someone like before before yours, yeah, before tomorrow's morning.
+Yeah.
+I don't think it should be.
+Complicated task for us, so yeah, but but this is strange that you don't have.
+deaf mentor yet. So yeah, but we will figure out and find someone. Thank you.
+Okay, any any other updates?
+Questions.
+Before we close.
+One, two, three. Okay, so let's pause here for today. So, yeah, we have 5 minutes left, so yeah, we can we can finish a bit earlier today. So, yeah, thank you, thank you for joining us today, for sharing your updates, insights, statuses.
+So yeah, have a great rest of the day and see you, see you tomorrow.
+Bye.
+
+Sukalya Rajendran   26:07
+Thank you. Bye.
+
+ stopped transcription

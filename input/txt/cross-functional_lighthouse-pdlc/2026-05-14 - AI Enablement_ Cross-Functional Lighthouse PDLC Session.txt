@@ -1,0 +1,864 @@
+AI Enablement Cross-Functional Lighthouse PDLC Session-20260514_135537UTC-Meeting Recording
+May 14, 2026, 1:55PM
+1h 5m 0s
+
+Oleksandr Pavlovskyi   4:27
+Cool guys, good morning.
+
+Eugene Semenyuk   4:33
+Yeah.
+Hello, good morning.
+
+Lisa Ruby   4:36
+Singh.
+
+Eugene Semenyuk   4:39
+To do.
+
+Oleksandr Pavlovskyi   4:39
+Good morning, Eugene. Good day. Good afternoon.
+
+Eugene Semenyuk   4:44
+Almost good evening.
+
+Oleksandr Pavlovskyi   4:47
+I.
+This is great, that's not good night.
+
+Eugene Semenyuk   4:51
+Yeah.
+
+Oleksandr Pavlovskyi   4:54
+But, who knows?
+Right.
+
+Eugene Semenyuk   4:59
+Yeah, let's wait.
+Mance.
+For more folks to join us.
+Yeah, I've completed a guide about our requirements, readiness requirements, hardening use case. So, yeah, I'd like to use the 1st minutes of our today's meeting to go through this guide and share this guide. So, yeah, you can follow this guide to.
+to implement the use case that we started.
+and discussed last sessions.
+
+Oleksandr Pavlovskyi   5:48
+Alright, alright, deal.
+Yeah.
+And then, then I have prepared several slides and small damage.
+So today we start talking about, we already started talking about MCP servers, yeah, but today in this wide audience, yeah, in this wide group, yeah, we can talk about MCP servers, about some basics, yeah, and I hope somebody of you...
+Ready to share some experience how you using MCPS.
+Alright, let's see.
+
+Eugene Semenyuk   6:27
+Sounds great.
+
+Oleksandr Pavlovskyi   6:31
+Ohh.
+Let's give more, more minute here, but seems like...
+
+Eugene Semenyuk   6:35
+Yeah.
+
+Oleksandr Pavlovskyi   6:37
+People still join, you know, see here.
+
+Eugene Semenyuk   6:47
+Look at.
+
+Oleksandr Pavlovskyi   6:59
+Yeah.
+Ohh...
+
+Eugene Semenyuk   7:02
+Two.
+
+Oleksandr Pavlovskyi   7:02
+This is spotted, yeah, it usually takes 3 minutes. You have to switch from one meeting to another, yeah.
+
+Eugene Semenyuk   7:09
+Mhm.
+Yeah, grab a coffee or something like that.
+Yeah.
+
+Oleksandr Pavlovskyi   7:22
+All right, since everybody's here, yeah.
+
+Eugene Semenyuk   7:23
+Yeah, okay, we have 3 pages. Yeah.
+Okay, so let's start. Hi, everyone. Good morning, good afternoon. Welcome back to our cross-functional PDLC session. Before we move into today's topic, I want to briefly connect this session with what we built last time. So in the previous session, we worked on the cross-functional requirements hardening flow.
+So we started building a workflow that can review Jira user story from multiple perspectives, command them back to the work item, and help the team to decide whether the story is ready for development or needs some refinements. So yeah, I know some people were following along live, and some people may want to repeat the steps later.
+So yeah, before we continue, I want to share a detailed instruction.
+detailed guide how to create this workflow from scratch. So yeah, you can use our recordings from last two sessions or yeah, you can go through these guides. So yeah, let me share my screen.
+Quickly, and uh...
+Present this guide.
+Yeah, I guess the rice green.
+A shirt.
+So yeah, here is the purpose of this agent. It's target outcome, agents used for this particular workflow, some high level flow.
+Prerequisites.
+Yeah, and the most important part, detailed instruction with screenshots and all.
+All necessary information how to build this workflow in.
+in Jira Automation using a robot and code engines. Yeah, and moreover, it has some spoilers because, yeah, it has some steps that we didn't implement during the last session. Yeah, but we will do it a bit later. So, yeah, but you can follow these steps in advance.
+Yeah, and be prepared for the next sessions.
+So yeah, now for today's session.
+We have a new but very, very important topic, MCP servers. So at a high level, we'll talk about what MCPs, which MCP servers we currently have at OMF, how to connect to them, and how we can use them in practical PTLC.
+scenarios. So yeah, our goal is not only to understand the concept, but also to identify some real use cases where MCP service can help product engineering, design, data, operations, QA and other folks. So yeah, and then I'll
+Yeah, I hand it over to Oleksandr, who will walk us through the main topic for today. So, Oleksandr, over to you. Yeah, yeah, cool, cool, cool, Eugene. Thank you. Guys, do you see the screen? Yeah, I'm sharing the presentation.
+
+Oleksandr Pavlovskyi   10:56
+Yeah. Cool. All right. So yeah, hello everyone again. Yeah. So yes, recently thanks for Eugene and our guys from CodeMe team. We explored webhooks, workflows, yeah. And now it's time to talk about another capability.
+that will allow us to use LLMs for even broader range of tasks. Yeah, and today we talk about, we will talk about MCP servers. Guys, I'm curious to know who is already using MCPs in their work. Yeah, so guys, raise your hands or unmute yourself.
+and feel free to share your experience. So guys, just interesting to know, yeah, how much of us already using CMS.
+Recently, we discussed this topic with OK, very cool.
+And for what tool do you use, MCP?
+
+Eric Trenz   11:58
+A few. The main one is probably Jira and then Sigma a little bit.
+Yeah, but yeah, well, sorry, not Jira, I guess it's the Atlassian MCP, but for Jira and Confluence.
+
+Oleksandr Pavlovskyi   12:14
+Mhm.
+
+Eric Trenz   12:19
+Trying to think if there's any other ones, primarily those two.
+
+Oleksandr Pavlovskyi   12:26
+I mean, you use this GitHub Copilot, Cursor.
+Mhm.
+I use it with cursor and ChatGPT. ChatGPT. All right, cool, cool. Patrick, how about you?
+
+Patrick Behnke   12:42
+I've actually made my own.
+I made a one for locally to attach to the services, so that way I can just have the AI talk to everything I have access to.
+
+Oleksandr Pavlovskyi   12:53
+Mhm.
+Great, great, Harris.
+
+Haris Khan   13:00
+Hey, good morning. Yeah, we use it for with Project Bob. We created a bunch of MCP servers and with MCP tools, like, you know, creating a code, adding, editing source file, reading the database file, running system command, like CL command, and we did create one MCP.
+
+Oleksandr Pavlovskyi   13:01
+Buddy.
+
+Haris Khan   13:19
+Server for Jira task as well.
+
+Oleksandr Pavlovskyi   13:23
+Oh, cool. Yeah, that's going to be interesting to hear more about how you, regarding to this development part, you guys, except the ability to use already existed MCP servers. It's not hard to wipe code your own MCP server. Yeah, for your task, for your tools that you're using.
+So technically, each solution that have ability to connect with API, yeah, we can connect to our LLMs, yeah, to our IDEs or some other tools, just developing these MCP servers. Great, great, Haris. So that's going to be interesting to talk more in detail.
+Here, regarding to the development process of the MCP servers.
+Alright, so guys, uh...
+As for MCP servers, yeah, MCP or Model Context Protocol, which is open standard for connecting KI models with external tools and data sources, yeah. So it's often called like USB-C for AI, yeah, because one protocol can support many integrations.
+which gives us ability to use CA agents to access additional context. For example, from Jira, Confluence, or how guys mentioned, Figma, also as GitHub. Yeah, MCP consists of host, server, and client working together to connect
+Application with external system security securely and.
+efficiently, yeah. So in this diagram, yeah, this diagram clearly shows how it works, yeah. Our hosts, such as GitHub Copilot or Coursor, yeah, or Project Bo, or any other tool that support the MCP protocol, gains the ability to connect via API.
+To external services, um, to external service.
+Within the scope of permitted operation, it can retrieve or send data. This enables our EA agents to access additional context and also perform some trained actions. For example, using clients and MCPs, MCP server, our agents can, for example,
+get data or even create Jira task. So that give us ability effectively automate some routine work with Jira, yeah, some processes based on the instructions we're going to provide.
+I will show confidence page here a bit later here, with the list of approved MCP servers here, and those they are currently under review. Since most of them are open source solutions, the security assessment is not very complex, but a security
+protocols and conventions must still be followed. Yeah, so therefore, before installing the new MCP server, make sure it's included in a list of approval tools. And I would like to highlight several services that address our primary needs. Yeah.
+So, Atlassian MCP, it gives ability, yeah, provides the ability to work with Jira Confluence. So, this mean one, this mean no more copy-pasting tickets description like we did here before into GitHub GitHub compiler chart, for example.
+So, moreover, with AI, we can dynamically enrich content and discover dependencies within our documentation. GitHub MCP extends capabilities for working with repositories. Maple MCP provides high-level overviews of recent deployments.
+summarize pass, fail rates, and highlights failed tests. And Playwright MCP provides browser automation capabilities for web developers and, of course, automation QA engineers. So this is an extremely powerful assistant.
+for these tasks.
+And yeah, guys, unlike traditional integrations, MCP provides a standard and scalable way for AI to connect with live data and external systems, including support for two-way actions like reading and writing yet. So to get started, you
+can explore the official documentation for these MCPs, use tools like GitHub Copilot, Corsor with built-in MCP support, connect ready-made servers, or build your own integration using available SDKs, yeah, or
+just web coded, yeah, because it's really pretty simple. It's just usually it's like a REST API application.
+Yeah, and regarding to the link, so let me share the confluence pages, yeah, that I would like to share with you. So, yeah, and I'm going to share the links to the chat. It's going to be like a step-by-step links, yeah, the first one.
+It's about the initial information about the model context protocol. You can read about the idea of this protocol, architecture, how to create, and so on. So it's going to be a very useful link here in case if you would like to
+Create your own MCP server, then let's move, for example, if you want to use some MCP server, yes, so I recommend to visit this page. Here, you can see the approval status and the process.
+how our security team working on the security assessment for MCP servers. So, down tickets means that these servers are already available to use. So, for example, we can find here GitHub MCP server, Figma MCP Atlas, and MCP.
+Microsoft 365 Maple MCP. And yeah, and of course, Lock. Yeah. So if you would like to add more MCP servers, you can communicate it with us, yeah, or directly with your manager.
+and this information gonna be provided to our security team, yeah, and we gonna do, they gonna do the security assessment. So the next page, it's MCP servers configuration, yeah, I created.
+
+Rahul Balu Bankar   20:32
+Great.
+
+Oleksandr Pavlovskyi   20:35
+Sorry, guys.
+Okay, I created, where is it? Where is it? Yeah, configuration guide. I created this like a high level information, how to configure your ideas. Yeah, it's about GitHub Copilot, Coursor, and as for QuoteMe, now the integration is in progress, yeah, but
+I think in the nearest weeks, yeah, or week, yeah, we're going to have this integration ready. So you're going to also have ability to use, accept our existing integrations. Yeah, you can use MCP servers. For example, yeah.
+Figma is that that we need to extend the capabilities of using our and information regarding to MCP servers. Yeah, so I provided the configs for applies MCP.
+Figma MCP, it's Figma MCP, it's tricky keys and I think we're going to have separate discussion on it here because here it's not enough to just to create the configuration. We need to get keys. So this part going to be updated because we need to get some additional approvals from.
+our Slack administrators. And this is going to be a separate topic. But now we feel free to use GitHub, Atlas, and Figma, and probably if needed, we can extend this document with Maple and CPN and some others.
+Is any questions?
+
+Jurijs Markelovs   22:18
+Yes, I'm trying to connect the dots. So yesterday, Eugene, I believe, demoed connection or integration with CodeMe assistance for automation, Jira automation, right? And the way we have configured for the API post request.
+Believe right, so.
+So the integration which you just mentioned, if you scroll up a bit, right? The actual MCP server for the code me, this is just pretty much we were doing the same thing, right? We were just, this is just integration, manual integration, and once we're going to have a code me integration, MCP.
+
+Oleksandr Pavlovskyi   22:56
+Yeah.
+
+Jurijs Markelovs   23:03
+server available, it will not require that manual integration. Is that correct?
+
+Oleksandr Pavlovskyi   23:09
+Yeah, yeah, that's just another way how you can connect these solutions here. Gotcha. All right. Thank you. Yeah, yeah, that's, yeah, for example, we don't have out-of-the-box integration ability to configure this integration for Figma, yeah, but...
+
+Jurijs Markelovs   23:10
+Okay.
+Just a more efficient way to...
+
+Oleksandr Pavlovskyi   23:29
+It can be provided with MCP. So after the integration, the MCP server, the servers supports to code me, yeah, we're going to have ability to connect Figma MCP or any other MCP. So yeah, this is the same thing that we already have, yeah.
+But with a bit different approach, yeah. But today, yeah, we're going to talk more about our ideas, GitHub Copilot, yeah, and Corsor. Because before we didn't have the ability to connect Jira, for example, to GitHub Copilot.
+So guys, I'm going to take our application here, our demo application. If you remember, this is our loan calculator here. So let me remind this application. NPM.
+From there, so what?
+
+Jurijs Markelovs   24:26
+Sorry, Alexander, do you mind to switch to the white background? You can barely, if yeah, maybe just from my eyes, but I would assume not just me.
+
+Oleksandr Pavlovskyi   24:37
+I don't remember where attempts.
+
+Jurijs Markelovs   24:42
+Appreciate that.
+
+Oleksandr Pavlovskyi   24:42
+Settings, all terms here, course here.
+Something like, like this, yeah, ohh, it's not usual for me, yeah, alright, guys, it's better, yeah, is it better?
+Alright, yeah, let's run this application, so this is, if you remember, localhost.
+This is very simple application which give us ability to calculate the loan amount, yeah, and of course this monthly payments, total paid, yeah, and total interest. So we can set some values here, yeah, and get these calculations, yeah.
+So I saw this idea from your calculator that I found it in OMF site. So yeah. And the idea today for you to showcase how to integrate MCP server. So I already have some setup. For example, you can see that GitHub
+repository, GitHub MCP server is all already integrated. You can find this configuration clicking this Gatch icon here, and then you can stop, you can restart this MCP server, and you can move to the configuration file. Yeah, here you can find all configurations.
+Yes.
+Yeah, it's some inputs, yeah, that I was using for my custom MCP server, so don't pay attention on it. So let me demonstrate how I can use, for example, GitHub MCP server. So, for example, I want to find...
+The branch, yeah, where the currency selection feature has been implemented. Yeah, so I'm gonna just ask use.
+Use GitHub MCP. I'm always mentioned this, yeah, because technically, yeah, if I mentioned the repository, my agent will understand what I mean, yeah, but I would like to add.
+Yeah, to to mention once again that you have to be sure that my MCP server will be using to find the branch.
+Ranch.
+Where are we?
+Kern.
+It was implemented.
+All right.
+Let me a bit zoom in, I don't remember, yeah, like this, yeah.
+So, as you can see...
+Ohh...
+Yeah, as you can see, we use GitHub tools.
+For this, it's been the MCP server.
+And it give us ability to do this search, yeah.
+As you can see, during this preparation stage, it found the branch, yeah, the currency selector feature was implemented on a branch, the currency selection, yeah. So, if you need to find some information, your repository, so
+Technically, you can do everything that is available with your API key that you provide to MCP server. So if you have ability, if you provide the ability to create branch, to manage branch, to create pull requests, you can do it with this MCP server. If you want to limit this.
+You can limit it on the level of the API key configuration.
+So let me show you how to implement Atlassian MCP, because the next exercise is going to be about Jira. Let me turn back to our configuration file that I already shared with you and find the Atlassian MCP.
+So, in this case, I'm gonna use the...
+Generic configuration, yeah, where I use the already hosted the hosted MCP server, yeah, and I can get that that by this URL.
+
+Eugene Semenyuk   29:32
+Sorry, Alexander, we have a few hands raised. Yeah.
+
+Oleksandr Pavlovskyi   29:36
+Yeah, yeah, yes.
+
+Swathy Lokula   29:41
+Yeah, yes, Martyn. So, Alexander, the message that you put in there, use GitHub MCP and find the branch. What is, can we not achieve it using an agent? Why, what is the purpose of MCP server? How is it acting differently here as compared to?
+
+Eugene Semenyuk   29:41
+You.
+
+Swathy Lokula   30:00
+Creating an agent.
+
+Oleksandr Pavlovskyi   30:04
+This is the same way. Yeah, we use agent, yeah, but we provide an agent additional possibilities yet to connect to our GitHub server, yeah, to do our GitHub MCP server, and it provides us ability to connect to GitHub API. So our agent.
+Now, we can talk to our GitHub using API.
+Yeah, if you remember how we did it before, yeah, we just our agent run the commands in the terminal. Now we don't run the commands. Now we use API. It's going to be more clearly understand, for example, when we're going to use Atlassian API, yeah, because for example, we can get just access running the commands, for example.
+
+Swathy Lokula   30:30
+Yeah.
+
+Oleksandr Pavlovskyi   30:51
+I don't know, Gits, I don't know, commit something, yeah, like we can do with classical approach without MCP server, without with GitHub, yeah, so...
+You understand? Yeah, the idea. We just doing our agent can now have ability to do API calls. He can get the data, he can send the data, yeah, he can talk to external service. Got it. Thank you.
+
+Swathy Lokula   31:18
+Okay.
+
+Oleksandr Pavlovskyi   31:21
+Is this ability? Yeah, Yudit is.
+
+Jurijs Markelovs   31:25
+Yes, so, so what you showed earlier to add MCP server, that means you already something pre-configured for this for this demo, right? Because one.
+
+Oleksandr Pavlovskyi   31:35
+Yeah, yeah, that was pre-configured. Yeah, and now I'm just adding new lines here. Yeah, I'm adding configuration for Atlassian MCP.
+
+Jurijs Markelovs   31:45
+So basically, in order for me or for us to have these MCP servers available, we need to configure it with that page which you sent previously. Oh, great. Thanks.
+
+Oleksandr Pavlovskyi   31:53
+That's right, that's right, yeah, that's right.
+Yeah.
+
+Denis Platonov   31:57
+Yeah, so the MCP, basically it's like your connection with the explanation for the AI, how to use it. So otherwise, with the rest, you can just give it exact payload and URL and blah, blah, blah, and it can execute that. But with MCP, you don't have to, you can just say like, hey, find me this.
+figure out that, pull me that information, just talking basically to external service like Jira or GitHub. In this case, I think GitHub is maybe misleading a little bit because if you need to find the branch and its local branch, you really don't need to use MCP. But if it's remote branch on the GitHub, yes, then you definitely want to use MCP.
+
+Oleksandr Pavlovskyi   32:25
+Yeah.
+Yeah, yeah, thank you, Denis. Yeah, great explanation.
+
+Debamitra Bhattacharjee   32:45
+And then, what's the point of...
+
+Chantal Justamond   32:45
+What would be an advance? I have my hand raised. What would be an advanced use for MCP servers? Because so far I think like you can only use it locally for like local development and say, but like finding a branch like.
+
+Dhanalakshmi Chinnasamy   32:49
+The.
+
+Chantal Justamond   33:04
+I don't know, like that's pretty basic.
+And also, like, if you want to find some code, you can just go to the line and say, like, show the origin of this line, and then you can see it. What would be like an advanced use for this to kind of like set the stage?
+
+Oleksandr Pavlovskyi   33:25
+Sorry, in advance to use even GitHub, GitHub MCP. Yeah, is this.
+
+Chantal Justamond   33:31
+Yeah, in this case, because for example, I think this is just for local development, because like, you can, I don't think you can use it like in a GitHub action, right? Like, it's not like...
+
+Oleksandr Pavlovskyi   33:37
+Oh.
+Yeah, yeah, regarding to, you can provide integrations with Atlassian, yeah, in GitHub, additional like tools, yeah, but it's a separate topic. So today we're talking about the local development, yeah, for example, we're using the IDs, yeah, but the same approach is available for...
+
+Chantal Justamond   33:52
+Mhm.
+Okay.
+
+Oleksandr Pavlovskyi   34:03
+GitHub. Yeah, you can add additional tools and connect your agents that, for example, in a GitHub, yeah, repository that you're running with GitHub actions to give the similar ability to connect, for example, to Atlassian tool, to Jira or Confluence.
+and get this data with agents. If you talk about ChatGPT, yeah, I'm not sure regarding our enterprise licenses, but there we have similar approach. They use tools integrations, like integration, like in a way of tools. We can also use MCPs, yeah, but as I remember for our...
+licenses, it's not available. So the same approach here, it give us, give them ability, I mean, for example, ChatGPT or GitHub to connect these two tools via API.
+
+Denis Platonov   34:58
+Sorry, if I can chime in. I think, yeah, the question was whether you can, like, let's say, trigger GitHub action locally with MCP. I believe you can, actually. Oh, yeah, yeah, yeah, if it's available, if it's if you add these rights to your API keys that you provide them.
+
+Oleksandr Pavlovskyi   34:58
+But, no.
+
+Denis Platonov   35:18
+when you install the GitHub, yeah, it gives us your ability. And to add one more, sorry, to this case with the GitHub search of the branch, I think it's a pretty good example actually, because the beauty of this is that you have no idea like what file.
+
+Oleksandr Pavlovskyi   35:25
+Yeah.
+
+Denis Platonov   35:39
+where you only know like it was implemented somewhere somehow and the AI actually figures this out like what does it mean like currency selector and figures out like across the branches and otherwise manually it's like it's a pain.
+
+Oleksandr Pavlovskyi   35:55
+That.
+Yeah, yeah. You can see all abilities here. So you can press this icon here. For example, we can find...
+Yeah, GitHub. And you see all tools that are available with this configuration.
+And let's try to find GitHub actions or something like this. You can add issue, you can reply pull request, you can fork repository.
+I was using generic configuration, so I'm not sure if it's was above. So need to double check this, yeah? But you can check all abilities of these tools here. For example, we can open the Atlassian tool, yeah? And that means that with my API key.
+I can add comment to Jira, I can add work log to Jira issue, and so on.
+You can configure this, you can limit access, for example, to some actions.
+Yeah.
+Like this, any other questions?
+Okay, so as you can see, I added these lines. Yeah, and Copilot provided me these action buttons. Yeah, and I can run the MCP server. Yeah, so you see you don't have any errors. Yeah, if I'm going to have any errors, you can track them in our
+in our terminal, yeah. So the server is running and it means that it's available for me to use. Recently, I have used the Atlassian MCP to generate ticket in our Jira. So as you can see, I have asked to create body of story.
+I need to add another one language that's going to be Spanish language to the application. So please follow already existed implementation and specification. So in the first step, it provided me, it generates me the body of Jira ticket. Here is the specs that already present. If you remember, I'm using the spec.
+Kit here, so yeah, so I have all documentation inside these repositories. It's more easier for me to provide instead, for example, if I'm going to have...
+Jira tickets, yes, separately, but this approach is like alternative, yeah, to Jira, so, and it generated the story, yeah, and then, yeah, he started to implement it. I have asked him to, I have interrupted this, yeah.
+And then I ask, now use Atlassian MCP and create JIRA ticket for this. I mentioned that going to be type task for this ticket, yeah, and please assign it to me. Yeah, also it's asked me about the project, so I provided the information about our
+demo about our PDLC enablement project. And as you can see, as a result, it created for me, story, not the story, tickets number 10, 42. Yeah, here it is. You see, it was very simple. Yeah, it was taken for me, I guess, couple of minutes. Yeah, and now I have this user.
+Story, it provided all technical details regarding to the.
+some specifics of implementation, yeah. And what it gives me, it gives me ability to use this ticket.
+To build new specification, so let's ask Copilot, yes, let's use our spec kits and let's specify, specify, yeah, let's specify the this ticket, so...
+That's gonna be...
+I'm going to ask him to create specification for Jira Story EPA EPE 1042. Yeah, that's right. So let's see, yeah. And as we expect, yeah, Copilot will understand that we need to use.
+Or what lies in MCP? Yeah, because I mentioned Jira. Yeah, let's see.
+Sujan.
+King.
+Yeah.
+Atlassian MCP server.
+Alright, well to fetch for a D.
+Let me check.
+What does it mean?
+Atlassian MCP.
+Let me restart, probably, I don't know.
+Maybe this was like a authorization issue, so...
+Okay, it's running. Let's try to, once again, maybe. Okay.
+Okay.
+Yeah, it got, I don't know what, what, what was that? Yeah, some connection issue, probably, as you can see, it got have got the body of the JR ticket.
+NSV.
+Understand the next step going to be creating a new specification.
+Based on the provided information.
+Yeah.
+As you can see, Copilot creates new spec. Yeah, it's going to generate this. So one thing that I would like to mention today, yeah, so we have ability to use not only the MCP servers that's hosted.
+in some external servers, yeah, we can use local hosted MCP servers. For example, if you want to use our custom MCP server or you would like to use some, I don't know, approved version of MCP server, yeah, and you don't want to take...
+Take some additional risk regarding to the open source things, yeah, so guys, you understand, yeah, the idea, yeah, I'm gonna give ability Copilot to finish the generation, yeah, but the next step gonna be implementation. It takes, I think, 2 minutes for us, yeah, using...
+using the MCP server.
+Yeah.
+
+Jatin Bagga   43:40
+Well, like, sorry, this is Jatin. I joined a little late, so if you've answered that question, let me know. But what I heard you, and this was one of my biggest questions, if you're not super technical, like an engineer, let's say a product person, you understand technology, you know a little bit of coding, but not really great at it.
+For a person like that, aka me, I can leverage an existing approved MCP to then connect from like wherever I need to connect it to like whichever source I wanted. Like either it's a Power BI or I don't know, something else that you can just, you know, create like dashboards on the fly using GPT configuration or something.
+You're saying we can do that. Is that what I heard you say?
+
+Oleksandr Pavlovskyi   44:21
+Yeah, yeah, yeah, sure, sure, yeah.
+Okay, and low lift, right? Not a lot of technical stuff required to do this. As you can see, yeah, yeah, the next step gonna be for me just to run the specify implement, yeah.
+And, technically...
+I won't write any line of code, yeah? So in my case, yeah, I can, I can, yeah, of course, it's a question about the quality, yeah, of course, we need to do the code review, yeah, and experts should review this code. But technically, when you need to prepare some MVP,
+Yeah, you just need to prepare it for the innings demo. For example, in our work to this demo, yeah, you can do it. Yeah, with this MCP server, yeah, you can connect your, I don't know, tools where you can extract this documentation, for example, from confluence, one from...
+
+Jatin Bagga   45:24
+JIRA, yeah, and generate this feature. Beautiful. Thank you. I need to watch this video again. Thank you. This is really exciting.
+
+Denis Platonov   45:27
+Yeah, just for example, for them. So, sorry, maybe if it helps, Alexander, could you maybe show how to install MCP server? So, it's usually literally just copy and paste a couple of lines to a certain file, and that's it really.
+
+Oleksandr Pavlovskyi   45:44
+Yeah, yeah, yeah, I was showing this, yeah. So guys, as I showed, yeah, you can get, you have two ways. Yeah, of course, you can install MCP servers from here. Yeah, you can type, I mean, go to the extensions, yeah, you're going to find.
+
+Dhanalakshmi Chinnasamy   45:47
+You.
+
+Eugene Semenyuk   45:51
+Bharat Nagar.
+
+Oleksandr Pavlovskyi   46:03
+all MCP servers that are already available. But I prefer to use more controlled way. How to do this? Yeah, so I'm using this MCP JSON file. How to get this file? It's very simple. You can go to these settings.
+Menu here, and just press on the one of our MCP servers right button, get this context menu and show configuration, and you're gonna find all configuration regarding to all servers. Of course, you're gonna see all, I mean, the status of this MCP servers here, for example.
+The context 7 MCP server is not started for me. It's not available in the chat. To start it, you can press this button or you can find the context 7 MCP here. Yeah, as you can see, it's turned, but it's not run. Yeah. So you can run it from here.
+Yeah, press right button and start server. Ah, it needs to provide API key. Yeah, so you got it. Yeah, yeah, I need to provide it. It's additional step. So API key should be here, not here. Yeah, I need to get this API key. Yeah, it's more easier, for example.
+Unfortunately, I didn't remember how log out, yeah, from here. Atlassian MCP, it's already logged in, yeah, but it gonna propose you to open the one of the Atlassian page, yeah, and then you're gonna...
+Apply the, maybe let's start to restart here. I don't remember how to log out from here. Yeah.
+
+Jurijs Markelovs   47:47
+Do you think, Oleksandr, do you think, sorry to interrupt, do you think it's a good idea to implement this JSON configuration on a global level, not tied to the specific project? Yeah, yeah, I'm using the global configuration for it. Yeah, and of course you can, you can, you can available this for specific project.
+Okay.
+
+Oleksandr Pavlovskyi   48:06
+Yeah, so you can have this copy inside your GitHub folder here, but I don't know.
+
+Jatin Bagga   48:13
+Oleg, sorry, just one thing. Sorry, Oleg, sorry. I know Kai's been waiting, but the comment, I don't know who made that comment earlier. So if you make it global, then we can just plug and play. Is that where you were going with that? Whoever was speaking earlier.
+
+Oleksandr Pavlovskyi   48:24
+Yeah, if you if you're applying this globally, I mean this configuration is global configurations that I'm showing that's gonna be available.
+
+Jatin Bagga   48:31
+Okay.
+
+Oleksandr Pavlovskyi   48:33
+inside your ID and doesn't matter what project did you open.
+It's just like an additional plugin. Yeah, I don't know. I don't remember.
+
+Jatin Bagga   48:40
+Got it.
+
+Denis Platonov   48:43
+Yeah, sir, I think what threw you off is that Oleksandr is a developer, so his IDE, you can see like tons of files and everything, so it looks scary. And in reality, it's just one file, few lines of code, those snippets are available. So if you open any MCP, they say like copy this to this.
+
+Jatin Bagga   48:52
+Yeah, yeah.
+
+Oleksandr Pavlovskyi   48:54
+Right.
+
+Denis Platonov   49:05
+And that's it. It's literally like one minute tops. For some of them, you will need to provide API key, which is usually, again, very easy copy and paste and done, and you never touch it again.
+
+Jatin Bagga   49:09
+Got it.
+Perfect. Thank you.
+
+Oleksandr Pavlovskyi   49:21
+Yeah.
+
+Denis Platonov   49:21
+So it's really not like that hard and not technical at all.
+
+Eugene Semenyuk   49:27
+Yeah, and for some MCP, you can even just click one button. Yeah, for example, I've shared a link to Atlassian MCP. So yeah, you just need to open this link and yeah, accept opening VS Code and click install. Yeah, and it will install.
+
+Oleksandr Pavlovskyi   49:27
+Two.
+
+Eugene Semenyuk   49:46
+This seems to be for you for your VS code automatically, yeah.
+
+Oleksandr Pavlovskyi   49:51
+Yeah.
+Ohh.
+Yeah, Kai.
+
+Kai Jei   49:59
+I left my question in the chat. So I see you're using GitHub Copilot chat, but we have we have access to the ChatGPT license, right? So I was asking, can we technically just open the Codex tab and log into our
+
+Oleksandr Pavlovskyi   50:01
+Yes.
+Mhm.
+ChatGPT enterprise account using that so we can use the Codex agent instead of. Yeah, this question is under discussion. Yeah, I'm going to show you what we have now. Let me show it in our, where is it? Where is Copilot? Seems like it here.
+You know this?
+Yeah, I'm going to show you in the web version, yeah, so I mean, not in the context, yeah, we have ability to use MCP servers, yeah, with this workspace settings.
+But unfortunately, what we're going to get, we don't have permissions. So this question is under discussion now. Yeah, so I'm going to, and the same thing regarding to the tools, yeah? How to turn back. Yeah. And for example, if we go to applications, yeah, and
+
+Kai Jei   51:07
+G.
+
+Oleksandr Pavlovskyi   51:11
+I would like to add, for example, at last an application which provides the same abilities, like, yeah, and as you can see, disabled by Admin, so this is under discussion here, but I'm gonna, I hope that's gonna be available as well for us.
+Inside the ChatGPT and the in the same time in the Codex.
+Because it's.
+
+Kai Jei   51:35
+Okay, so currently all these MCP servers are by default disabled inside of ChatGPT.
+
+Oleksandr Pavlovskyi   51:45
+Some service, yeah, some services are available, yeah, but unfortunately we can control, no, configure them, yeah, you're right.
+
+Kai Jei   51:45
+Like.
+
+Jatin Bagga   51:53
+Yeah, Kai, some are available, some are not. I think just to be clear, like Atlas and Robo, like I was able to enable that, at least to get the input in. You also have Slack and Outlook and stuff, like you can get sort of content from there. Teams as well. So.
+
+Dhanalakshmi Chinnasamy   51:55
+No.
+
+Kai Jei   52:08
+Got you. I think the question I'm asking is if some are available, right?
+Technically, I prefer using VS Code versus going into ChatGPT on web, right? So I'm just asking, can I log into...
+my account in VS Code, basically using my OMF login, just the way it works with a personal account.
+
+Oleksandr Pavlovskyi   52:35
+Who?
+Yeah, a personal account, uh, because if if you took it...
+
+Kai Jei   52:39
+No, like just the way it works.
+So like I'm saying, what on my personal computer.
+I can log into Codex just using my email, right? Yeah.
+So I'm just saying, does that work with our OMF Enterprise ChatGPT account as well? Can I just go to the Codex tab and try to log in with my OMF email as well and just use it inside of VS Code like that?
+
+Denis Platonov   53:06
+Like you have it, Alexander, the codex in VS Code.
+
+Oleksandr Pavlovskyi   53:06
+If you...
+We have, we have, but how we can use the OMF Enterprise account? This is a question, because we need to have this OpenAI API key.
+And I have tried this. Yeah, it's not available for us.
+So, this question more, yeah, regarding to, I think, to our security team, yeah, maybe it's gonna be like a separate request to get the CPI key, but...
+
+Kai Jei   53:27
+Okay.
+Yes.
+
+Oleksandr Pavlovskyi   53:41
+Unfortunately, I don't have an answer to this question.
+
+Kai Jei   53:44
+Got you. So currently, just to clarify, if we wanted to work in VS Code,
+With an agent, we have to default to GitHub Copilot chat, right? Okay.
+
+Oleksandr Pavlovskyi   53:57
+Yeah, yeah, for now it's available. It's definitely available. We can also use CodeMe plugin for VS Code, right, Alexander?
+
+Kai Jei   54:02
+S.
+
+Oleksandr Pavlovskyi   54:06
+Yeah, yeah, yeah, of course.
+
+Kai Jei   54:09
+Got it. Thanks.
+
+Oleksandr Pavlovskyi   54:09
+With all integrations, yeah, that we have in the.
+Yes, Swathy.
+
+Swathy Lokula   54:18
+So I have installed the Atlassian MCP server and am I expecting to see it in the settings once I go there? How does it work?
+You, you have installed right now, yeah? Yeah, I have it successfully installed, but...
+
+Oleksandr Pavlovskyi   54:31
+Yeah, so please share your screen. Let's try to solve it.
+
+Swathy Lokula   54:35
+Two.
+
+Oleksandr Pavlovskyi   54:40
+Eugene, do you have some agenda for some additional agenda for today? Yeah, because I think MCP server, it's a top topic for today, yeah, so...
+
+Eugene Semenyuk   54:45
+No, no, no.
+Yeah, and that's and that's awesome.
+
+Jatin Bagga   54:50
+We've been waiting for this for weeks, so you know, I was expecting we're gonna ask a lot of questions for months, for half of year, right? Yes.
+
+Oleksandr Pavlovskyi   54:53
+Yeah.
+
+Eugene Semenyuk   54:53
+Yeah, for months.
+Mhm.
+And you made it for years.
+
+Oleksandr Pavlovskyi   55:03
+All right, so you have installed this with, all right, so let's see, press this gouge icon, yeah, let's see the configuration for this server, yeah. I don't see anything.
+
+Eugene Semenyuk   55:05
+I.
+
+Oleksandr Pavlovskyi   55:13
+Okay.
+Because you installed like a plugin. It's a bit different. So, yeah, please try to do it. Oh, it's hard to paste a bit, but let me try it.
+
+Swathy Lokula   55:20
+Oh, okay.
+
+Eugene Semenyuk   55:25
+Look, look, you can you you can follow the link that I've sent in chat.
+
+Swathy Lokula   55:32
+I did follow that one.
+
+Oleksandr Pavlovskyi   55:32
+Mhm.
+
+Swathy Lokula   55:36
+Let me try one more time.
+
+Sanjay Kumar Parui   55:37
+Where is the link? Sorry, I I'm missing it.
+
+Eugene Semenyuk   55:41
+Yeah, let me double, yeah, send it again.
+
+Oleksandr Pavlovskyi   55:45
+Facilitators.
+
+Swathy Lokula   55:49
+The.
+
+Eugene Semenyuk   55:49
+Yeah, yeah, this one. Thanks, Justin.
+
+Swathy Lokula   55:54
+Sleepy.
+
+Sanjay Kumar Parui   55:56
+Thank you.
+
+Swathy Lokula   56:00
+Is this the one installed? OK.
+
+Oleksandr Pavlovskyi   56:03
+Let's try to install, yeah, I showed a bit different way, yeah, more engineering way, but yeah, hello.
+
+Eugene Semenyuk   56:05
+Mhm.
+It should open a browser tab.
+
+Swathy Lokula   56:15
+Yeah.
+
+Eugene Semenyuk   56:18
+Yeah, that's open.
+
+Oleksandr Pavlovskyi   56:20
+So, here you can see, yeah, what what rights you gonna provide, so you're gonna provide access to Jira and Confluence.
+
+Eugene Semenyuk   56:23
+Mmh.
+
+Swathy Lokula   56:27
+Okay.
+
+Gayathri Venkataraman   56:31
+Is this option available in cursor as well?
+
+Oleksandr Pavlovskyi   56:35
+Unfortunately, no. In Coursera, it's available to use Atlassian MCP, but everything else probably going to be approved a bit later. But you can use Atlassian MCP, yeah, so this is this.
+
+Joshua Smith   56:51
+Okay.
+So if.
+
+Oleksandr Pavlovskyi   56:53
+Or configuration like we have here, because...
+
+Joshua Smith   56:56
+So if I'm not seeing the MCP servers available in cursor, that's not a problem on my end. It's just because they haven't been approved.
+
+Eugene Semenyuk   56:56
+Yeah, the last one.
+
+Oleksandr Pavlovskyi   57:03
+Yes.
+
+Joshua Smith   57:05
+Yeah. Okay. Thanks.
+
+Oleksandr Pavlovskyi   57:06
+No, no, no, not not this one. It's it probably this is the old one, the last one, yeah, in the list, yeah, yeah.
+
+Eugene Semenyuk   57:10
+Yeah.
+One.
+
+Oleksandr Pavlovskyi   57:16
+All right.
+Okay, let's turn back.
+Okay, so yeah. Oh, yeah, you see.
+
+Swathy Lokula   57:25
+Yes, it.
+It's running.
+
+Oleksandr Pavlovskyi   57:27
+And yeah, thanks, Eugene. It's more easier way. Yeah, it's like it's more straightforward. And if you go to the, could you please press right button on this item? Yeah, and yeah, open this show configuration JSON, yeah, in the middle.
+Yeah. You see another one more lines have been added. Yeah, here. Oh, similar. This is the same. This is the same.
+
+Swathy Lokula   57:50
+Thank you.
+
+Oleksandr Pavlovskyi   57:56
+Yeah, typically this is the same, yeah, yeah, the URL is the same, yeah.
+
+Swathy Lokula   57:59
+The same as yours, OK.
+So if you were to find the MCP from this extensions, how would we find instead of going through the link that Eugene gave?
+
+Oleksandr Pavlovskyi   58:13
+You see this extension, it's in the 1st place.
+So, for example, try MCP and find that license. This is the first the first link, yes, it's let's try to find, for example, GitHub MCP, yeah.
+
+Swathy Lokula   58:17
+Be.
+Mhm.
+
+Oleksandr Pavlovskyi   58:29
+Just type start type GitHub, yeah, GitHub.
+MCP, but we need to find the official official MCP plus.
+Ohh.
+
+Denis Platonov   58:42
+Yeah, most of these MCPs are open source, meaning that they have GitHub pages that you can visit and see like everything.
+
+Swathy Lokula   58:42
+Mm.
+
+Oleksandr Pavlovskyi   58:47
+Yeah.
+Yeah, yeah, but guys...
+And you can install it like from there, not from the market. Yeah, yeah, guys. And but please double check this with a list of approved MCP servers. Yeah. Okay. Yeah.
+
+Swathy Lokula   58:55
+Kristy.
+
+Jatin Bagga   59:07
+Wait, where is the list of approved? Maybe I missed that.
+
+Oleksandr Pavlovskyi   59:10
+In the chat, yeah, the first message from me, yeah, so I have provided the links to our confluence pages.
+
+Jatin Bagga   59:11
+Okay.
+
+Swathy Lokula   59:12
+What was that?
+
+Eugene Semenyuk   59:14
+Oh.
+
+Oleksandr Pavlovskyi   59:19
+Pence.
+There.
+Yeah, action items assignments, yeah, MCP servers approval status means, yeah, so here we can find the list of MCP servers that all already approved, all other is under assessment process, security assessment process.
+
+Eugene Semenyuk   59:26
+Yeah.
+
+Oleksandr Pavlovskyi   59:44
+Unfortunately, we have 5 minutes, yeah. Guys, what I would like to share more today, yeah. Maybe let me take these 5 minutes, yeah, to finish this topic, yeah. So, in the same way, guys, do you see the VS code, yeah?
+
+Swathy Lokula   59:47
+Look at.
+
+Oleksandr Pavlovskyi   1:00:05
+So I was mentioning that, for example, Playwright MCP is also available for us. And we have ability to install this MCP server following these instructions. Yeah, or you can just...
+
+Dhanalakshmi Chinnasamy   1:00:05
+No.
+
+Oleksandr Pavlovskyi   1:00:23
+Add these lines to your configuration file, and of course, if you have...
+If you need to use some specific version, you can download source code. I already did this here, so let me go to the MCP folder here. This is my local folder here, and you can find the source code of the MCP server.
+This can be your custom MCP server, and I have extracted this MCP server here, so this is a source code I already run in PM install. You have to upload all needed packages here, like for every.
+Application, yeah, that we were which we use with GitHub, and now I have ability just to connect it.
+to my Visual Studio code. So this is going to be another one lines, but with a small.
+Difference.
+
+Jurijs Markelovs   1:01:30
+But what's the difference between what we have configured previously, playwright, and now you do in this different way?
+
+Oleksandr Pavlovskyi   1:01:36
+Yeah, it's just for example, yeah, it's just for example when you need to use local hosted MCPs. For example, you're going to use, like Harris mentioned today, they developed their own MCP servers, yeah? So, or you need just to have MCP server.
+for some specific task, yeah. So for example, you need to connect for third party service, yeah, just for checking some data, yeah. And you can develop this MCP servers in.
+in 5 minutes yet just to optimize this API connection to this server. And you need to use this source code from the local instance.
+So you see the difference. Instead of using QRL, I'm just using in arguments, sorry, the link to the execution files. Yeah, in my case, it's going to be CLIGS. So I'm saving this.
+And I can run this MCP server.
+As you can see, it's already wrong, and in the list of tools.
+I can find my playwright in CP.
+And all.
+comments that it should, it's able to run. Yeah, so for example, I can do some browser clicks, I don't know, some handle dialogs, hover, and so on, so I can check. Yeah, I'm glad to showcase this for you, yeah, but unfortunately we don't have.
+time, and this showcase should take, I don't know, up to 10 minutes, yeah, but if you want, I would do this next time. So I just want to share this example to give you an understanding that we can use MCP servers that hosted on external instances, and of course we can.
+upload some code or develop our code, yeah, and use them from our local instance.
+
+Jatin Bagga   1:03:42
+And Oleg, if we have more questions, is the happy hour? Geez, Louise. I mean, the office hours tomorrow are the best place to sort of revisit a couple of things, right? Okay, good. Thank you.
+
+Oleksandr Pavlovskyi   1:03:49
+Yeah.
+Yeah, sure, we can continue this discussion. Yeah, of course. This is this is our this is the meeting with the free agenda, guys. You can bring your questions, yeah, we can continue our demo session and so on. So, any ideas?
+
+Jatin Bagga   1:03:55
+All right.
+Okay.
+All right. Thank you so much. Thank you.
+
+Eugene Semenyuk   1:04:09
+Yeah.
+
+Oleksandr Pavlovskyi   1:04:09
+Cool, cool. You're almost in time. Guys, any other questions?
+So for tomorrow, the home task for you guys, yeah, to try install, to install the MCP server, at least Atlassian and GitHub, yeah, because this is the most popular for us. And looking forward for your feedback.
+
+Swathy Lokula   1:04:29
+Do we have any documentation on this with Alexander?
+
+Oleksandr Pavlovskyi   1:04:31
+Yeah, everything in the chat. The first message today, yeah, this is a, this is the for the confluence page where you can find the configuration for these MCP servers.
+
+Swathy Lokula   1:04:33
+Okay.
+
+Eugene Semenyuk   1:04:40
+Yeah.
+
+Swathy Lokula   1:04:41
+Mm.
+Awesome. Thank you.
+
+Oleksandr Pavlovskyi   1:04:46
+Cool, thank you guys, see you.
+
+Eugene Semenyuk   1:04:49
+Yeah, thanks again for your participation. Have a great rest of the day and see you soon.
+
+Oleksandr Pavlovskyi   1:04:53
+Mm.
+
+Sanjay Kumar Parui   1:04:53
+Yeah, thank you.
+
+Alfredo Achecar   1:04:58
+Thank you.
+
+Nicholas Crowley stopped transcription

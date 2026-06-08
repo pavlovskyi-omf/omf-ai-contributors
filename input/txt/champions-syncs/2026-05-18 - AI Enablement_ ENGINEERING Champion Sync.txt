@@ -1,0 +1,466 @@
+AI Enablement ENGINEERING Champion Sync-20260518_150014UTC-Meeting Recording
+May 18, 2026, 3:00PM
+29m 25s
+
+Sukalya Rajendran   0:15
+Hi, good morning.
+
+Oleksandr Pavlovskyi   0:16
+Yeah, good morning, guys.
+How are you today?
+
+Sukalya Rajendran   0:30
+And.
+One day back to the grind.
+
+Oleksandr Pavlovskyi   0:37
+What?
+To.
+Turn back to the ground.
+Right, so let's wait for a...
+For a minute.
+Ohh.
+All right, while we're waiting for our champions, guys, have you have everyone tried to use MCP servers, configure it for your ideas, maybe some issues?
+Would you like to share maybe some experience?
+
+Chantal Justamond   1:32
+Actually, it wasn't like super easy to set up the JIRA MCP server. At the end, I was able to, but it took me a bit. Let me, I'm just going to share the file that actually worked for me, because it was a little different than yours.
+
+Oleksandr Pavlovskyi   1:44
+Ohh.
+Uh-huh.
+
+Chantal Justamond   1:54
+Hold on, 'cause I'm in another branch, and I...
+
+Oleksandr Pavlovskyi   1:56
+That is it, is it for GitHub Copilot?
+
+Chantal Justamond   2:00
+Yeah, GitHub Copilot.
+Boy, I'm going to have to change branches. One sec. I was doing something else right now.
+Let me see.
+Yeah.
+I think this is fine.
+Hey, where'd it go?
+Oh no.
+Oh, dog nabbit. It went away. But... Oh, shoot, I think I reset it. Well, I guess it's lost. It's lost forever. Then I have to do it again.
+
+Oleksandr Pavlovskyi   2:37
+Yeah.
+No.
+What was the difference?
+
+Jason Daggs   2:52
+What, what was it? Yeah, what was it exactly that you were about to show us?
+
+Chantal Justamond   2:55
+The difference, it was the URL was the auth one. Apparently, there's a new auth URL for JIRA. And I don't know if this affects anything, but for example, I was trying to do authorization for the name server.
+But then I had to do something different to get it to pick up. It was something like MCP Atlassian, and it didn't need the environment variables. After I changed that name, it actually picked it up, and then I was able to click on it.
+
+Jason Daggs   3:31
+Mm.
+
+Chantal Justamond   3:35
+go through the browser. And for me, for some reason, it showed like two different OMF instances. And on the one that it actually said one main financial, because like one said one main and the other one said one main financial.
+
+Oleksandr Pavlovskyi   3:44
+Yeah, yeah.
+
+Chantal Justamond   3:55
+And that's the one that it actually worked for me in order to stop seeing errors in the logs, just as reference. I'm gonna have to do it.
+
+Oleksandr Pavlovskyi   4:05
+Yeah.
+
+Jason Daggs   4:05
+Yeah, one MAIN is the old one, I think.
+
+Chantal Justamond   4:08
+I...
+I think the old one was, there were two that I found. One, it had like MCP at the end. The other one had SSE. And I think the one that worked for me ended with like off 2.
+
+Oleksandr Pavlovskyi   4:21
+Yeah.
+
+Jason Daggs   4:23
+Okay.
+
+Chantal Justamond   4:23
+if that helps anyone. I'm just speaking out of memory. Gonna have to do it again. Geez, hopefully it will be easier.
+
+Jason Daggs   4:31
+So...
+Let's see, I'm trying to find out. I'm just trying to look at what URL I was using for that.
+
+Chantal Justamond   4:44
+And I found it in a JR documentation. Let me see if I can find it. I have the link open to.
+
+Jason Daggs   4:47
+Yeah.
+Yeah, I haven't tried to actually connect to Jira's MCP service yet, or at least I don't think so. I've just been connecting to the REST API and creating an MCP server around that, oddly enough. Interesting. Okay.
+
+Chantal Justamond   4:52
+Share that.
+
+Oleksandr Pavlovskyi   5:09
+Ohh.
+
+Chantal Justamond   5:11
+Here, this is the link that I used. Is the one that it says, I think option three, which is the same as option two. It was Atlassian MCP server. That's how mine got picked up because like there was like a little click that then I was able to like start the server.
+But it only said Atlassian, like it was acting weird. Might have been the name of might have been just like the actual URL worked for me. Either way, that's the option 3 is the one that I used and it worked.
+
+Oleksandr Pavlovskyi   5:49
+Umm, and CPU.
+Strange, because these URLs that I provided, it's official from their GitHub repository. Let me share the link.
+I mean the Atlassian MCP MCP.
+Uhh.
+Galaxy.
+Yeah, we have official MCP server.
+Yeah.
+API GitHub Copilot.com MCP.
+And for me, it works.
+It works in the PVM, and it works in my local environment with the PM, so...
+
+Jason Daggs   6:56
+Hmm.
+
+Oleksandr Pavlovskyi   6:57
+One, one more time, let me.
+Show the link. This is to the GitHub repo, yeah, the link.
+Let me share the screen, guys.
+Seems like this is the most straightforward way how to configure, yeah, because this is universal URL and you are using this HTTPS connection, yeah, and so you don't need to provide any additional parameters and so on, configuration. So
+And all tools that we needed here are available with this MCP.
+Let me share the screen.
+It's gonna be this one.
+Yeah.
+Ohh.
+In CPL.
+Cup at last in MCP.
+Yeah, I mean this one.
+And here we have several.
+No, not this one.
+Okan.
+Yeah.
+this one and here all the configurations that we need to provide.
+And in my case, yeah, so here is an example. I have recorded the video yesterday with a step-by-step instruction how to do this. Could you, Chantal, try to use this configuration right now? And maybe let's take...
+Couple of minutes yet, though.
+to align on this process because I think this is the most easiest way, yeah, how we can configure it for GitHub Copilot and also this URL works for cursor, yeah.
+
+Jason Daggs   9:16
+Look at, look at the URL that I used for.
+
+Oleksandr Pavlovskyi   9:20
+Yeah, this is, oh, it's here. MS is here.
+
+Jason Daggs   9:23
+It SSE, right? It's the one for, I guess, single sign-on enabled through Okta.
+
+Oleksandr Pavlovskyi   9:32
+Uhh...
+
+Jason Daggs   9:32
+I think that's what it is.
+
+Oleksandr Pavlovskyi   9:34
+SSE, I don't know what is what does it mean SSE.
+
+Jason Daggs   9:36
+Mmh.
+Yeah, I think that's the URL I used because it prompted me for single sign-on to access the MCP server.
+
+Oleksandr Pavlovskyi   9:48
+But this works as well. Let me show how it works. Yeah, let me just...
+
+Jason Daggs   9:48
+I think.
+Okay.
+Stop.
+Oh.
+
+Chantal Justamond   10:04
+Working up until later, when I was like, "Ohh, this is why," but like the one from confluence that it was shared before, that one was not. I was just seeing an off error.
+
+Oleksandr Pavlovskyi   10:06
+Yeah.
+Yeah, guys.
+
+Jason Daggs   10:08
+Gotcha. Okay. Okay.
+
+Oleksandr Pavlovskyi   10:10
+And...
+And sometimes it's confusing because it's hard to log out from MCP. It's not absolutely clear from the one side, yeah. So you just need to go to this configuration, for example, like in my case, yeah, I want to, sometimes you can get the error message here, yeah, if you didn't complete the authorization process.
+
+Jason Daggs   10:18
+Gotcha. Okay.
+
+Oleksandr Pavlovskyi   10:38
+to the final step, yeah, or maybe you get, you use this old instance, I mean, one main.com. Yeah, so in this case, it can get all needed permissions here to use MCP server. So you just need to go to this configuration.
+screen, yeah, and just press right mouse button, yeah, and disconnect MCP server. And then you can try to authorize again. So in this case, use this another account, yeah, just to refresh your connection.
+Connection saying it's gonna propose you the following here.
+So, then approve. In my case, I have three options here. Yeah, we have also this one main financial training, this testing environment here, but I'm using the new one, yeah, this long, long name, yeah, one main financial dot at last.
+For this, it doesn't work. Yeah, it seems like this is limited.
+A, then accept.
+It's going to propose me to open. And as you can see, it run. Yeah, so here I also can see the status. Yeah, 31 tools are available. And here.
+Atlassian, and I see all.
+permissions that my MCP server has. As you can see, I have permissions to use Jira and Confluence.
+So it's really straightforward. So could you please try maybe right now, yeah, maybe in a parallel with our meeting here, to use this configuration.
+Unfortunately, it's complex to me to copy-paste, but let me try to do it from...
+Vijay.
+VS code.
+Guys, how about the rest? Did you did you have similar issues?
+
+Sukalya Rajendran   12:58
+I just tried the GitHub MCP server and that works fine from VS Code Editor. I have not tried to, actually I did try Atlassian too. I did it the way you have here and it's working for me.
+
+Oleksandr Pavlovskyi   13:16
+OK, so I'm gonna paste.
+and GitHub to the chat. So, Chantal, could you please try, for example, to configure with this URL? It should be very straightforward, yeah, because this is the most, I think, the most official MCP server, yeah.
+
+Sam Jayavelan   13:37
+So I tried for GitHub, it works for me. For the rest of it, I tried through cursor and they said we don't have access to it. So.
+
+Chantal Justamond   13:38
+Yeah, no.
+
+Oleksandr Pavlovskyi   13:46
+Yeah, that's right. Coursor is limited here, but for Coursor, but for Coursor, Atlassian is available, so yeah, guys, you're gonna see a similar picture like here, like I have, so if you move to, if you open the preferences and...
+
+Sam Jayavelan   13:49
+Okay, so it this is.
+
+Oleksandr Pavlovskyi   14:07
+Cursor settings and find MCP.
+MCP tools, yeah. As you can see, all SCP servers are limited except Atlassian MCP. And the configuration is the same.
+
+Sam Jayavelan   14:23
+Okay, so...
+
+Oleksandr Pavlovskyi   14:27
+I mean the same URL.
+
+Sam Jayavelan   14:28
+Sofa.
+Oh, so for cursor, I can start using this is it because we had asked for a role group from cursor and they gave us a restricted access. And then we were told again that we have to work with the AI team, accelerated team to get that incorporated.
+So I wasn't sure, like it's been like on and off. So I was just trying to understand if someone can help us with that. If we can get Jira and Figma access, right? Like at least minimum Jira access on cursor and you're saying it's available to us.
+
+Oleksandr Pavlovskyi   15:07
+In A cursor, seems not. I have tried all of our MCPS. I don't remember if we have Figma here.
+
+Sam Jayavelan   15:16
+But this is working. You're saying I can try this now and it should work?
+
+Oleksandr Pavlovskyi   15:16
+But we.
+Oh, it should work here for a mini cursor, yeah?
+Of course, sir.
+It should definitely work for GitHub Copilot, yeah, because there we don't have limits to any of MCP servers, so you technically can configure anything, yeah, but...
+
+Sam Jayavelan   15:38
+GitHub is working. GitHub is working. That's not the problem. Talking about Atlassian for Confluence and for Jira tickets, right? We have not been able to get that connected and we worked with Cursor to get like restricted access so that, you know, only people who are approved can get it.
+
+Oleksandr Pavlovskyi   15:40
+Yeah.
+
+Sam Jayavelan   15:59
+And they have done that, but I don't know how to incorporate it in, and I'm trying to connect with the Rick Runners team and here with EPM as well to get that moving. So I just don't know how to move this forward. And then now I'm seeing that we do have access, so I'm a little confused.
+Has this been approved and can we actually just start using it?
+
+Oleksandr Pavlovskyi   16:21
+Mhm.
+
+Sam Jayavelan   16:23
+Okay.
+
+Oleksandr Pavlovskyi   16:23
+Yeah, let me let me get updates also from our side, yeah, so...
+
+Sam Jayavelan   16:28
+Yeah.
+
+Oleksandr Pavlovskyi   16:29
+Yeah, so, but you guys tried from your side also, yeah, you understand, yeah, it's...
+
+Sam Jayavelan   16:34
+Okay, yeah, I'm keeping trying. I just mean like a bouncing between couple of teams. So at the end of it, I just want to make sure the teams have access and we are good with restricted access. We are good with, you know, whatever access has been provided, just need and good, okay for it to be included so we can start using it. That's all.
+
+Oleksandr Pavlovskyi   16:58
+Okay, okay. All right, Chantal, please try, yeah, and let us know regarding to the results, yeah, because for me it works, yeah.
+
+Chantal Justamond   17:06
+Yeah, that one doesn't work for me. That one doesn't work for me. But the one with Auth2 does.
+
+Oleksandr Pavlovskyi   17:08
+Ohh.
+Le.
+Yeah, so maybe let me check our MCP. Maybe I have provided.
+You're wrong.
+Um, what license, what license? No, the same.
+Not the same, yeah.
+Yeah.
+All right, all right guys. So yeah, let's turn back to our usual agenda. We have 13 minutes. So this Wednesday, we have the next, our regular, like our session. Yeah, and we plan to talk about.
+build troubleshooting this agent on DB pipeline failures. That's going to be demo from Bala. And yeah, I've got confirmation from her last week. So this week, we're going to have this demo. And then maybe you have any updates on.
+On it.
+
+Sukalya Rajendran   18:22
+Yeah, this is Sukalya Palas from our Data Factory Platform team, and we're still testing this out in the lower environment. We ran into a challenge where the bedrock LLM access was not working, so we're trying a fix in dev, but...
+
+Oleksandr Pavlovskyi   18:23
+Awesome.
+
+Sukalya Rajendran   18:41
+The details are ready and it was working last week. So it's a matter of troubleshooting and fixing things and getting things ready for Wednesday's demo. I think we should be on track.
+
+Oleksandr Pavlovskyi   18:50
+Cool, cool, great. Alright, so we have one demo and let's go.
+Yeah, let's go one by one. Okay, Deepti, do we have Deepti on the call? Yeah.
+
+Deepti Pathak   19:05
+Yeah, Alex, I am in the call and I'm still not ready. I didn't get chance this week to work at all, but I will try my best to wrap this up. But this is only very small configuration. I'm left to do it and I haven't done that, but I'll try to do it. If I do it, I'll let you know and I'll let Sukalya know about it.
+
+Oleksandr Pavlovskyi   19:08
+Yeah.
+Okay, okay, thank you.
+OK, let's move on.
+The next one from Patrick, I don't see Patrick today.
+Let me open the list of our participants here. Enable project guidelines. Okay, yeah.
+This is QA, this is for QA.
+Mm.
+Yeah, another one ticket from from your team, Sukalya Adnan.
+It's for Shamlou.
+Shamlou ticket.
+
+Sukalya Rajendran   20:04
+This one I have to find out for an update. I don't think they worked on this task last week.
+Yeah, this wouldn't be ready yet.
+
+Oleksandr Pavlovskyi   20:15
+All right.
+Okan.
+Jira creation and evaluation use case. Jason, how about this one?
+
+Jason Daggs   20:23
+Yeah, so I, you know, I didn't get to work on any of this last week. We had too many production issues. So I'll try to make some progress this week and see what we can do.
+
+Oleksandr Pavlovskyi   20:35
+Okay, so probably for the next week, yeah, it's going to be ready.
+
+Jason Daggs   20:39
+Yeah, yeah, that'd be true.
+
+Oleksandr Pavlovskyi   20:41
+Okay, so it's Eugene.
+Mm.
+The ticket from the build. Okay, so probably this is going to be ready. Do we have somebody from the wellness team today?
+All right, so let me check it directly with Loquen.
+And one more to auto generate GitHub release nodes that creation. Yeah, this is very interesting ticket.
+Uh, but...
+Seems like the status is the same. Okay, so let me double check this.
+Okay, do we have Ravi or Amit? No.
+All right.
+Automated change log, but yeah, so seems like you haven't started this ticket yet, Jason, am I right? Automated change log summary to team slack merge code.
+
+Jason Daggs   21:59
+Yes, that is correct. I haven't haven't been able to do any of that work yet.
+
+Oleksandr Pavlovskyi   22:05
+Okay, another one idea and something new from not something new.
+Can you create your intake use case?
+politicalization.
+Snowflake pipeline. Yeah, Snowflake is very popular topic for us. Guys, we have lack of our ideas, yeah. Do you have any, any, how to say, I don't know, maybe a vision regarding to...
+Ohh.
+I don't know, probably it's time to move to more maybe advanced advanced tickets, advanced advanced use cases, yeah, maybe based on some workflows and so on. Maybe on the level of the PDLC where we can connect some roles. So guys, how do you think how we can?
+I don't know, plan our agenda for the next sessions, because seems like we don't submit some basic tickets, because we all know how to create, I don't know, simple agent, how to do the code review, or maybe to do some routine task, you know, maybe small workflows.
+So because of this, yeah, you facilitate to submit tickets like this. And it's okay because you're moving to the next level, yeah, and it's time for more advanced use cases. But more advanced use cases should take more time, yeah, for this practical implementation based on your projects. So
+
+Jason Daggs   23:40
+I've been blocked, well, from doing anything more advanced because of our lack of Slack integration. Because a lot of those advanced things will enable keeping a human in the loop, and we've got to do that. It's got to happen in a much more efficient way, in my opinion. So.
+
+Oleksandr Pavlovskyi   23:54
+Mhm.
+
+Jason Daggs   24:01
+That Slack is kind of key to that, or Teams, depending on whatever the case may be, both really.
+
+Oleksandr Pavlovskyi   24:08
+Okay, so...
+
+Jason Daggs   24:09
+to get that real-time feedback for the whole team.
+
+Oleksandr Pavlovskyi   24:12
+Yeah, yeah. And you know what I would like to propose you guys to talk of Deepti, if I remember, yeah, you have already get the access to the to Slack MCP to integrate. So could you please maybe share just, I don't know, steps that you did?
+
+Deepti Pathak   24:26
+That is right, yes.
+
+Oleksandr Pavlovskyi   24:33
+This Wednesday, to, I don't know, to talk about these guidelines, yeah, how to get access to to Slack MCP.
+
+Deepti Pathak   24:44
+Sure, so let me share the steps today in this group chat, and then from there we can continue. And if you think I should go through that on Wednesday, I can do that.
+
+Oleksandr Pavlovskyi   24:45
+Yeah.
+Yeah.
+Sure, short, short demo, yeah, because Slack is a very important topic, yeah, and in some cases, yeah, it's confusing. For example, I didn't get the approval, yeah, I have requested to add the application, yeah, to the Slack, yeah, but I didn't get the approval. So for me, it's going to be especially interesting to get these.
+Guidelines from you this Wednesday.
+
+Deepti Pathak   25:15
+Oh, so when you say you didn't get the approval, did they reject it or they didn't see it?
+
+Oleksandr Pavlovskyi   25:16
+Who?
+They see, they solve this, yeah, but I don't know, probably they they need not rejected, but I didn't get the answer. I'm gonna remind them to today, yeah, I have requested it on Thursday, but seems like it's...
+
+Deepti Pathak   25:34
+Yeah, I do the same. I just like they, you just tag them and then just in the Slack admin and they should be able to do it. But if they, yeah.
+
+Oleksandr Pavlovskyi   25:44
+Okay, but...
+
+Deepti Pathak   25:44
+They might not be there offline that day. It could be something.
+
+Oleksandr Pavlovskyi   25:47
+But that's going to be different, that's going to be very, I don't know, this topic definitely makes sense, yeah, because we need to align on this flow, yeah, how to get this access. So if you prepare some demo, yeah, just regarding to your steps that you did, yeah, to get this access, that's going to be great.
+
+Deepti Pathak   25:57
+Okay.
+Okay.
+
+Oleksandr Pavlovskyi   26:06
+OK, so I'm gonna create for your ticket just to just for our tracking, yeah, and like, like, like the use case, yeah, so...
+You, you gonna be ready? Yeah, or do you committing on this? Ohh, cool, yeah.
+
+Deepti Pathak   26:21
+Yeah, yeah, I'm good with it. Yeah, I'll do that.
+
+Oleksandr Pavlovskyi   26:25
+All right, so Jason, yeah, this is going to be for your interest in as well.
+We, yeah, we're reading your lips. It's okay, you're on mute, but we understood you.
+
+Jason Daggs   26:41
+Yeah, yeah, I was saying thank you. Sorry.
+
+Oleksandr Pavlovskyi   26:45
+Yeah.
+Right, right, guys.
+All right, so guys, please try this MCP servers, yeah, because you see, from the one side, it's very simple, simple steps, yes, that we should do, but we have these confusions. And just let me know, yeah, because we need to align on this, I mean, on this guide.
+that they provided, yeah. If something wrong here, yeah, we need to correct this, yeah, to build the guide, yeah, that's going to work for everyone. I know that some things, yes, that can be different between, for example, your local machines, your enterprise machines, your...
+PVMs, also we have virtual machines that say, no, yeah, and this is a bit different things, yeah, and have different security policies. So for example, for some of this environment, yeah, these URLs can be blocked. So maybe we need to correct this guide. So guys, please write me direct messages, yeah, if you...
+If you see these problems.
+Okay, Chantal, how about... Oh, Chantal, disconnected. She's leaving. Yeah. Okay, yeah, I will double check with her after this call. All right, guys, any other topics to discuss for today?
+All right, so thank you all, and see you tomorrow.
+
+Sukalya Rajendran   28:21
+Thank you.
+
+Oleksandr Pavlovskyi   28:22
+Bye, guys.
+
+Deepti Pathak   28:25
+Thank you. Bye.
+
+ stopped transcription

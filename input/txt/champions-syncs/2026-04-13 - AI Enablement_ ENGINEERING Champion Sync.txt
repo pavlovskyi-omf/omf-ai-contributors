@@ -1,0 +1,768 @@
+AI Enablement ENGINEERING Champion Sync-20260413_145821UTC-Meeting Recording
+April 13, 2026, 2:58PM
+47m 9s
+
+Eugene Semenyuk   1:44
+Hello.
+Good morning.
+
+Chris Rumans   1:50
+Hey, good morning.
+
+Eugene Semenyuk   2:00
+Alexander would or won't be able to join us today, so yeah, I will I will replace him today.
+So yeah, let's wait one or maybe 2 minutes.
+And let other folks join us.
+Yeah.
+Okay, 30 seconds, and we'll start.
+Yeah.
+Okay, I guess majority joined us. So hello, everyone. So thank you for joining us today on AI Champion Singh. So Alexander won't be able to join us today, so I will replace him for today. And yeah, glad to see you all here.
+Yeah, I'd like to structure this session in a few parts. So yeah, first let's discuss some news updates.
+Yeah, maybe we'll have some organizational questions. After that, we have, let's have an open up discussion. Yeah, let's go through our updates, tickets that we have. Yeah, we'd love to hear what you've been experimenting with, what use cases you're exploring.
+and where you might need support. Yeah, and finally, we will wrap up with the next steps and alignment. So, yeah, and again, so today's session is...
+Not just to present something, so it's it's to collaborate and block each other and accelerate adoption in a smart and structured way.
+So yeah, regarding updates and news, so yeah, I hope you joined our kickoff session for Champions Program last Friday.
+So yeah, we introduced some changes and a few new roles. So yeah, especially AI mentor and AI leaders. So AI leaders will help us to prioritize use cases and maybe elaborate some resources.
+And mentors, the guys who will who will help other folks to.
+Uh, to their with their use cases, yeah, especially with uh, like less experience in AI.
+People, yeah, we'll have about 20 new teams that will join us soon in Lighthouse, Lighthouse Group. So yeah, we definitely need some mentors from our audience that can help.
+newly onboarded, newly onboarded teams to onboard to AI practices.
+in an efficient way. So do you have any questions regarding this process, these new roles, or maybe?
+Other moments during kickoff.
+So, if...
+
+Jason Daggs   7:21
+So, I...
+
+Eugene Semenyuk   7:21
+So it.
+
+Joaquin Martinez Valdepenas   7:21
+And between that.
+I was out last week and I haven't had a chance to view any recordings, so I'm kind of off of everything you're saying.
+
+Eugene Semenyuk   7:36
+Yeah, so yeah, let me...
+Yeah, I'll find the recording and yes, send to you.
+So yeah, I guess it should help to be more in the context. Yeah.
+
+Joaquin Martinez Valdepenas   7:51
+Yeah, I will catch up.
+Okay.
+
+Eugene Semenyuk   7:55
+Okay.
+So, Jason.
+
+Jason Daggs   7:59
+Yeah, I just wanted to mention that.
+In the Guardians team, we've kind of started a team-wide rollout of AI. And so we've just been kind of, I've just been kind of following the curriculum that we started in phase two using the new tools, CodeMe and GitHub Copilot.
+
+Eugene Semenyuk   8:09
+Mhm.
+Mhm.
+
+Jason Daggs   8:25
+And we're in the process of getting everyone signed up on those platforms via ServiceNow requests, and we're just following the guides there. Maybe if you happen to know if there's any...
+
+Eugene Semenyuk   8:35
+Mhm.
+
+Jason Daggs   8:43
+Additional information that's coming that can help me as I roll these tools out to our team, and maybe there's some guidelines on how to best approach such things, or you know, other than just the getting started guides, I guess is...
+
+Eugene Semenyuk   8:56
+Mhm.
+
+Jason Daggs   9:06
+That's kind of what I'm asking for. Is there anything like that that you know of?
+
+Eugene Semenyuk   9:06
+Mhm.
+Mhm.
+So, yeah, we need we need to erase a little bit this information, so yeah, and we'll, yeah, we'll.
+Yeah, we'll catch up with you a bit later regarding this process, so yeah, and yeah, let's let's discuss it.
+
+Jason Daggs   9:24
+Okay.
+
+Eugene Semenyuk   9:30
+Yeah, and separate way, yeah, but this is really great to hear this. Thanks, thanks a lot.
+
+Jason Daggs   9:30
+Right.
+Yeah.
+
+Eugene Semenyuk   9:41
+Okay, any?
+Any other comments, questions before we go next?
+Yeah, while we're waiting, let me share my screen.
+
+Svetlana Stogni   10:16
+Yeah.
+
+Eugene Semenyuk   10:18
+Each other, so yeah, let's...
+So, yeah, let's firstly go through the tickets in progress state. So, do we have Gaia on the call?
+And...
+Unfortunately, I don't see her.
+And the same.
+Or Ashwin.
+Yeah, maybe they have.
+Jelly, stand up.
+At that time.
+Okay, we have 3 tickets on Patrick. So Patrick, are you with us?
+
+Patrick Behnke   11:09
+Yep, I'm here.
+
+Eugene Semenyuk   11:11
+Yeah. Could you please share your updates regarding your tickets in progress?
+
+Patrick Behnke   11:18
+Yes, actually, I have plenty more. I just haven't put them on the board yet. So let's see.
+Where is.
+Ah, there we go, okay.
+
+Eugene Semenyuk   11:33
+Mhm.
+
+Patrick Behnke   11:34
+See, yeah, so a couple of them are kind of like spread out throughout the team. We have a couple different basic JIRA ticket creation tools. Most of them are just basic like output and then copy in the ticket.
+
+Eugene Semenyuk   11:34
+These tickets.
+Uh-huh.
+
+Patrick Behnke   11:53
+basic stuff to get people familiarized with the tools. But we are looking at trying to get an intake process where we have like a proper somebody submits something, management approves it, or asks for refinement, the leads start implementing it, or at least architecting it.
+And we're using AI to do some portions of that.
+As for the AI assistant for Kubernetes OpenShift config generations, basically we have a set of like agent files that I've been putting into our Helm slash.
+
+Eugene Semenyuk   12:36
+Yeah.
+
+Patrick Behnke   12:39
+customize repositories for OpenShift that allows us to just ask for like, add a new deployment, update a secret, change a config, stuff like that. And it's basically just a one prompt and done, like,
+
+Eugene Semenyuk   12:43
+Mhm.
+Okay.
+
+Patrick Behnke   12:57
+to your change type deal. Still kind of playing around with it, but the fact that it's able to go through and encrypt and decrypt secrets as well as do basic validations with customize is pretty cool. And then the third one, which is the enable AI
+
+Eugene Semenyuk   13:11
+Mm-hmm.
+
+Patrick Behnke   13:16
+project for guidance and code generation in NTS2. Pretty much the entire project for NTS2, starting from last year, was basically written in AI. So it was pretty much a fully AI written application.
+And one of the things that I wanted to do was to make sure that whenever my other teammates come into the application, they would be able to automatically generate new plugins and such for the application so that they can quickly just get in, enable a new feature.
+
+Eugene Semenyuk   13:54
+You.
+
+Patrick Behnke   13:56
+just in a snap and then move on with their lives. Most of us, the application was written in Java, but majority of us aren't Java pros.
+So if we can just get in with the prompt and then maybe do some tweakages during the testing, then it's a quick, easy up and go type thing. It's also able to go through and automatically generate documentation in a specific format, as well as do a
+create a suite of tests for the new plugin that they implement. So that's pretty much all done.
+
+Eugene Semenyuk   14:34
+Mhm.
+
+Patrick Behnke   14:35
+for that last one. The other two are kind of like works in progress.
+
+Eugene Semenyuk   14:39
+Uh-huh.
+
+Patrick Behnke   14:40
+We also have other pieces that we're kind of playing with right now. And as we kind of get a little bit more into it, I'll add them to the board.
+
+Eugene Semenyuk   14:53
+Yeah, it would be awesome if you can add them to the board. Yeah, and thanks a lot for sharing your updates. Do you have any like blockers or like challenges? So do you need any help with something?
+
+Patrick Behnke   15:08
+Not really, it's mostly just time resources and.
+
+Eugene Semenyuk   15:12
+Mm-hmm.
+
+Patrick Behnke   15:17
+Like we could integrate with other teams and whatnot, but there hasn't really been any. We've also have various team members that aren't very big on AI. So it's not like we can go through and do like a full.
+
+Eugene Semenyuk   15:21
+Mm-hmm.
+
+Patrick Behnke   15:33
+team scale thing without possibly invading into various spaces without, you know, so.
+
+Eugene Semenyuk   15:40
+And.
+
+Patrick Behnke   15:42
+We're chugging with it at our speed and we're getting things done, so.
+
+Eugene Semenyuk   15:42
+Yeah.
+Yeah, I see. Would you like to demonstrate your use case number three, maybe this week or next week?
+
+Patrick Behnke   15:59
+I'm just give me one second, I'm losing the signal.
+
+   16:01
+Yeah.
+
+Eugene Semenyuk   16:03
+Yeah.
+
+Patrick Behnke   16:07
+Can you go over that? What you said again?
+
+Eugene Semenyuk   16:10
+Yeah, I mentioned that, yeah, you said that.
+Use case #3 is.
+Done, probably, yeah. And would you like to demonstrate it maybe this week or next week?
+
+Patrick Behnke   16:27
+Um...
+I'm not sure. I'll have to take a look at my schedule and see if I can prioritize that at all.
+
+Eugene Semenyuk   16:35
+Yeah.
+Yeah, OK, so yeah, but we can catch up with you a bit later, yeah, and discuss it.
+
+Patrick Behnke   16:43
+Yeah, yeah, yeah, just hit me up at any time during the week. I'll see if I can talk with management, get something together, because we got major projects rolling elsewhere, so.
+
+Eugene Semenyuk   16:45
+Mhm.
+Mhm.
+Mhm.
+Yeah, sounds good. Sounds good. Thank you. Thank you. Thanks, thanks a lot for for sharing your updates and insights. Yeah, really appreciate it.
+Okay, let's continue. So do we have Angela on the call? I guess no.
+Okay, and yeah, we have, yeah, we already have two demos planned for Wednesday. So yeah, let me remind you that on Wednesday we will have a lighthouse session where we will demonstrate some use cases. So yeah, one demo is confirmed.
+So yeah, it will be pull test data from indicator file by John. Yeah, and the second one. So yeah, I guess this demo about dummy data agent for Snowflake.
+As for table, so Amit.
+Could you please, uh...
+Could you please share your updates and would you be ready to demonstrate it this week?
+
+Amit Sharma   18:13
+Yeah, sure. Hi, hi, everyone. Yeah, so are you sharing your screen like?
+
+Eugene Semenyuk   18:19
+Oh, sorry.
+I lost screen sharing.
+
+Amit Sharma   18:22
+Yeah, please.
+
+Eugene Semenyuk   18:23
+Yeah, thanks a lot for mentioning this. Yeah, I guess it is this one.
+
+Amit Sharma   18:29
+Okay, yeah, you can see that.
+Yeah, so this is an agent which I created using Code Me. I use a Code Me for getting the prompt, and then from using the prompt, I used a GitHub Copilot and then created the agent. So that agent will help me in creating the dummy data for...
+
+Eugene Semenyuk   18:33
+OK.
+
+Amit Sharma   18:52
+the Iceberg table. So I need the dummy data for testing purpose. So when I go for like manual for each table, it was taking time. So then I thought of let's create an agent so that I can give inputs of table schema and then it will give me the dummy data. So that's what I'm planning to show.
+
+Eugene Semenyuk   18:54
+Mhm.
+
+Amit Sharma   19:13
+has a demo on Wednesday. Yeah.
+
+Eugene Semenyuk   19:16
+Awesome. So yeah, looking forward or for great dinner on the Wednesday. Yep.
+
+Amit Sharma   19:16
+Yeah, better.
+Yeah, thank you, thank you.
+
+Eugene Semenyuk   19:23
+Thanks, thanks a lot for your updates. So yeah, looks like we finished with in progress.
+So, yeah, and.
+So, again, do you have any any other like updates, ideas? Do you have any other volunteers who would like to share their experiments?
+challenges, so yeah feel free to raise a hand or just unmute and say something.
+
+Jason Daggs   20:02
+You know, I haven't been doing a lot of very specific.
+stuff related to OMF, but some of my experimentation has been around trying to set up local AI and using tools like Open Code to point at those locally set up LLMs or
+
+Eugene Semenyuk   20:18
+Mhm.
+
+Jason Daggs   20:28
+Also creating.
+containers like on with GPU containers on run pod, right? And getting open code to point at that. Those are just some of the experiments and have been trying to find a way to get around all these token limits that seem to be popping up left and right. So.
+
+Eugene Semenyuk   20:34
+Mhm.
+Mhm.
+
+Jason Daggs   20:53
+Yeah, that's really where my experimentation has been as of late.
+
+Eugene Semenyuk   20:53
+Mhm.
+Yeah, sounds impressive. And what kind of local LLM do you use in these experiments?
+
+Jason Daggs   21:03
+Yeah, so the one I was using yesterday, when, what is it, GWIN 3 coder next, and I used a AWQ 4 bit quantized version of it.
+
+Eugene Semenyuk   21:15
+Mhm.
+
+Jason Daggs   21:22
+And it still took about 90 gigs of VRAM to start up. So yeah, so I had to get like a, what it was, an RTX 6000 with enough RAM to load it, but it worked, you know, so I was impressed.
+
+Eugene Semenyuk   21:31
+Mhm.
+No.
+Mhm.
+Mhm.
+Yes, sounds, sounds good. Yeah, please, please let let us know. So, yeah, if you if you will have some some results, so yeah, I think yeah, we should be really excited.
+
+Jason Daggs   21:46
+Yep.
+Yeah, yeah, nothing yet, nothing yet. Just getting it all set up has been challenging for sure.
+
+Eugene Semenyuk   22:02
+Definitely. Yeah, thanks. Thanks a lot for your updates, Jason.
+
+Jason Daggs   22:05
+Yeah, yeah, no problem.
+
+Eugene Semenyuk   22:08
+Uh, okay, let's proceed. So, Deepti, would you like to share something with us?
+
+Deepti Pathak   22:15
+Sure, so I have a question and as well as I will just share a little bit of the requirements. And please let me know if anyone has already done this because I haven't attended like the previous session. I was on the maternity leave, so this is like my first time joining this session. So lots of people are already working on the document creation, right? And we are part of EDS team, so under Adnan and Sukalya is also there, so we are like from the same team.
+
+Eugene Semenyuk   22:17
+Mhm.
+Mhm.
+
+Deepti Pathak   22:37
+So we are from Enterprise Data Services and like from past six, seven years, we are working on creating the documentation. So in last two years, what happens is whenever a JR task gets created, right, we have to add 5 mandatory documents as part of the audit because those documents has been designed by the auditors, like you have to.
+Any JIRA is there, it's mandatory that you have to have your risk assessment, you have to have your project analysis, test cases, deployment, backup plan. And we are, we like when we have lots of tasks, right, we are not great with documentation. And then we have shared the templates with everyone, but still.
+
+Eugene Semenyuk   23:04
+Mm.
+Mhm.
+
+Deepti Pathak   23:16
+when you have five or six tasks every week you have to deploy, it cannot be like nicely be done, right? And neither the humans go every time and check like, oh, is this document is nicely been added or not? And then the audit happens yearly, and then there is a chance that we have missed that, like the post deployment or something. So.
+
+Eugene Semenyuk   23:23
+Mm-hmm.
+
+Deepti Pathak   23:35
+What I am, what we are working is I'm kind of working on creating those document automated, because right now we already, as you mentioned, right, like we have the code me API and all which can make your Jira beautifully nice with everything, all the details. So my workflow is like, let me, we can create a, so in the GitHub when the code has been added.
+
+Eugene Semenyuk   23:46
+Mhm.
+
+Deepti Pathak   23:56
+you go ahead and create that particular Jira folder number and add those five documentation automatically. No human intervention is required. So I am like in the progress. I haven't completed everything, but I use GitHub Copilot to automatically create the.
+
+Eugene Semenyuk   24:05
+Mhm.
+
+Deepti Pathak   24:15
+JIRA folder in the GitHub and then add those documentation inside that particular folder automatically. My question here is, and this is something, and I'm able to connect to the JIRA API and using Python script, it's like adding all those information. I would like, instead of I do it in this way, I want to use that.
+
+Eugene Semenyuk   24:23
+Uh-huh.
+
+Deepti Pathak   24:35
+Can I integrate the CodeMe API itself? That way, everything can be done using the CodeMe instead of, you know, I go through that workflow. So for that, I do need a couple of like API key authentication, all those things. So is that something I can get it and then I can try that as well? The first part is working. Second part is I would like to integrate with CodeMe.
+
+Eugene Semenyuk   24:43
+Mm-hmm.
+
+Deepti Pathak   24:56
+So that's where my task is, yep.
+
+Eugene Semenyuk   24:59
+Yeah, I see a really great use case, so yeah, definitely we can we can use code me for this for this purpose, yeah, and moreover, yeah, we can we can make it autonomous, like you move your...
+Your task to specific status, or just like create task, yeah, and yeah, in code me, we we've just added a web hooks, so yeah, and this web hooks allows allows us to trigger the agent by some event, yeah, for example.
+
+Deepti Pathak   25:32
+Yeah.
+
+Eugene Semenyuk   25:33
+ticket has been created or moved to some specific status. Yeah, and this event can trigger the agent that can analyze this Jira ticket, maybe analyze some...
+
+Deepti Pathak   25:35
+Okay.
+
+Eugene Semenyuk   25:48
+some repository and some other things, some other data sources, and based on this, create some documents, subtasks, and any kind of information. Yeah, so we are working on this webhooks configuration and user guides, like how to deal with them.
+So, yeah, and definitely, once we finish, we share these these guys with you, so yeah, I hope it should it should help with this process.
+
+Deepti Pathak   26:19
+Yep, that will help a lot, yep.
+That's all promising.
+
+Eugene Semenyuk   26:22
+Yeah, thanks a lot. Really, yeah, really great idea. Yeah, really excited to hear it in this case. Thank you.
+
+Deepti Pathak   26:29
+So with that integration it will be super quick as well. So yeah, I'm looking forward to that like.
+
+Eugene Semenyuk   26:32
+Mhm.
+Mhm.
+Awesome, thank you. Okay, now let's continue. So, Sukalya, would you like to share something with us?
+
+Sukalya Rajendran   26:46
+Okay, hi, good morning. Am I audible?
+
+Eugene Semenyuk   26:49
+Yeah.
+
+Sukalya Rajendran   26:49
+Yeah, alright, so we were working on setting up a Jira task creator for us, so I can quickly share and talk about that. So, last Friday, Mikhail had suggested that we create tasks in the AIPDLC, even though we had this agent created.
+
+Eugene Semenyuk   27:01
+Huh.
+
+Sukalya Rajendran   27:08
+Already, I had not tracked skin the AIPDLC board as such, so I created it last Friday using the AI intake agent from Robo.
+
+Eugene Semenyuk   27:20
+Yes.
+
+Sukalya Rajendran   27:21
+and I moved it to share status. So I don't know if you want me to share the details in this forum or if that's something that has to be done in a different forum.
+
+Eugene Semenyuk   27:24
+Okay.
+Uh, yeah, you, you, you can share.
+
+Sukalya Rajendran   27:30
+Yeah, you can share.
+
+Eugene Semenyuk   27:33
+Oh, I'm here. I'm here with myself. Okay, yeah, you can share like the concept and like the idea now, yeah, and probably maybe next Wednesday, like demonstrate in detail.
+
+Sukalya Rajendran   27:41
+Yeah.
+Okay.
+****.
+Okay, okay, sure. So the idea behind this use case is we from the EDS world are responsible for building data pipelines to bring data from different sources into Snowflake. And we are heavy partners in the catalyst stage to project that's going on in OMF today. And we are.
+
+Eugene Semenyuk   27:52
+Mhm.
+
+Sukalya Rajendran   28:10
+So for Catalyst Stage 2, every week they create tasks on their Jira board and Catalyst Stage 2 is spread across different teams. So you have multiple teams working on the UI features to add new data elements to the back end. And they create Jira tasks for their team. Every time they create a task for their team.
+there may or may not be an impact on the data pipeline, and we will be tasked to bring in that new data into Snowflake. So I wanted automatically follow up tasks to be created on our Jira board. And so we had requested the Catalyst team to use a specific label.
+on their Jira tasks and create tasks. So this AI assistant that I created is in the EPAM CodeMe tool with the Jira integration and Confluence integration. So what it does is it keeps track of those catalyst tasks with that specific label. Every time a task gets created, it will automatically create follow-up tasks for three different teams.
+within my org, like within the EDS team. So one for the domain model review, one for the Snowflake data model review that is being handled by another team, and the third task is for the Data Factory platform to build the data pipeline. So these tasks get created and get assigned to default.
+assignees. So we are already aware of the pipeline work that's coming our way. And in the instructions are given specific mandatory requirements saying these details have to be captured in the JIRA task in order for the developer to be able to work on it. So I've given it a template using the instructions that are there to build.
+the AI assistance and it's worked out pretty well for us so far.
+Yep, that's the use case.
+
+Eugene Semenyuk   30:06
+Yeah, sounds sounds good. So, yeah, let me let me connect with Oleksandr, yeah, and yeah, because we we we already have two two demos for.
+
+Sukalya Rajendran   30:08
+Two.
+Mhm.
+
+Eugene Semenyuk   30:19
+For this week, yeah, and I'm not sure about the search slot, yeah, but at least, yeah, we can, we can.
+
+Sukalya Rajendran   30:20
+Okay.
+
+Eugene Semenyuk   30:27
+Yeah, we can we can use the first slot for you for the next week.
+
+Sukalya Rajendran   30:32
+Ohh.
+
+Eugene Semenyuk   30:34
+So I think it should be really...
+
+Sukalya Rajendran   30:34
+Okay, sounds good.
+
+Eugene Semenyuk   30:37
+Yeah, really, really interesting and exciting to see your demo.
+
+Sukalya Rajendran   30:38
+Thanks.
+to see your day. Sure. Thank you.
+
+Eugene Semenyuk   30:43
+Yeah, thanks a lot.
+
+Sukalya Rajendran   30:44
+Excellent.
+
+Eugene Semenyuk   30:48
+Okay, any other volunteers to share some updates, challenges?
+Ideas.
+
+Heath Fest   31:05
+Hi, this is Heath. Hi, I'm working on a couple different things, but I'm not ready to do demos on them. But generally the ideas that I have is that there's two right now, which is...
+
+Eugene Semenyuk   31:08
+Hey.
+
+Heath Fest   31:22
+We don't, at least not that I know of. I don't think that we have a code discovery. We have a CMDB for here at OneMain through ServiceNow for infrastructure, for servers, things like that.
+But we don't have anything around code and objects for the inventory of what we have and where it sits on what servers. So I've got a project right now that needs it anyway because we're migrating from like one server group to another server group.
+I'm finding out that we have a lot of historical code that's in some and non-prod environments that shouldn't be there because of the discovery of what I'm working on. And so I'm using AI a lot for that to help write the code.
+and that goes out to do an inventory of what's on what servers. So that's one thing that I'm using AI a lot for right now is helping to write that process. The other one, the other idea that...
+that I have is I don't feel like we have a lot of documentation around how processes work, how data flows, how different applications interact. And so I was...
+We have a, we have, we have an automated testing tool that we use here at OneMain. Sorry.
+
+Eugene Semenyuk   33:08
+Yeah.
+
+Heath Fest   33:11
+But I'm not for sure, I don't believe that it really works that well for testing databases. And so I was kind of throwing around an idea of trying to marry 2 concepts, which is documentation and automated testing.
+
+Eugene Semenyuk   33:31
+I know.
+
+Heath Fest   33:31
+And so I'll be using AI a lot for that to help write the code and then possibly...
+Do other pieces with the application as well, so to me, if we could.
+If we can marry the two concepts of documentation and automated testing, then it will help allow new...
+new developers or engineers or testers coming into a certain application to understand how it works. And then also...
+
+Eugene Semenyuk   34:08
+Okay.
+
+Heath Fest   34:11
+refreshing our memory, doing planned maintenance, all that kind of stuff, having one place to go for how an application or process works would help A lot. And it's also not a dead end for, which a lot of times that's how process documentation works, right? It's kind of a dead end.
+
+Eugene Semenyuk   34:23
+Mhm.
+
+Heath Fest   34:32
+Right, if nobody updates it, then it's no good, right? So I don't know, that's just two things that I've been working on.
+
+Eugene Semenyuk   34:37
+Mhm.
+Yeah, sounds sounds really interesting. Yeah, and yeah, and I'm really interested in test automation part. So
+So, what, what like test automation do you have in scope? So, unit tests, some API, maybe UI tests.
+
+Heath Fest   35:04
+Um, so for rightness, so...
+My career, my focus here at OneMain is focused on database development and engineering. So at first, it's going to just include testing stored procedures. So chaining stored procedures together, building tests, things like that. Eventually, I
+
+Eugene Semenyuk   35:11
+Mhm.
+Mhm.
+Mm-hmm.
+
+Heath Fest   35:26
+I'd like to have the application branch out to be able to test endpoints as well. But I'll have to work with some of my fellow engineers to get that working. Because of course, there's the whole authentication piece, right? So we have to generate keys and stuff like that first.
+
+Eugene Semenyuk   35:43
+Uh-huh.
+Mhm.
+
+Heath Fest   35:46
+So, yeah, I want to make sure that...
+
+Eugene Semenyuk   36:01
+Mhm.
+Mm-hmm.
+
+Heath Fest   36:16
+Anyway, yeah, as I get further along, yep, I'll let you know.
+
+Eugene Semenyuk   36:21
+Uh-huh.
+
+Heath Fest   36:22
+Or if the idea doesn't pan out at all, I'll let you know that too.
+
+Eugene Semenyuk   36:25
+Yeah, yeah, look, look in the farmer for these. Yeah, thanks a lot.
+
+Heath Fest   36:29
+Yeah, sure.
+Yeah.
+
+Eugene Semenyuk   36:34
+Okay, any any other one to use? Sure.
+Interesting updates, challenges.
+Ideas.
+
+Patrick Behnke   36:52
+If you want more ideas, I mean, we can chug out as much as you want all day. That's no problem.
+
+Eugene Semenyuk   36:54
+Mmhm.
+
+Patrick Behnke   36:59
+I mean, I run through the other day and randomly came up with a couple, not just for our team, but for other teams.
+For example, whenever a PR is merged.
+
+Eugene Semenyuk   37:17
+Mhm.
+
+Patrick Behnke   37:17
+It basically could set up two different AIs, like either web hooks or events, trigger on. One of them is to automatically take a, basically like a change, what was it called?
+
+Eugene Semenyuk   37:23
+Mhm.
+
+Patrick Behnke   37:36
+Ohh.
+just basically a list of changes from the merge and be able to post it to a channel so that people can see what changes and updates are happening whenever new code is pushed. The other one is to take that information and back port it to the Onboarding documentation so that people can have
+
+Eugene Semenyuk   37:49
+Mhm.
+
+Patrick Behnke   37:57
+so that the Onboarding documentation isn't always out of date.
+And then the third one is to, whenever incident management wants, they can trigger a new problem in ServiceNow, and once that gets created, then it would automatically take the information that was put into the ticket and auto-generate a specific
+problem incident dashboard so that people can all follow the same exact dashboard because we have dashboards all over the place in Grafana. If we were to be able to take the chunks of various dashboards that are related to the incident and put it into one dashboard, people could follow automatically.
+That would be pretty helpful to keep everybody on the same page, looking at the same graphs on a single pane of glass rather than 50 different dashboards at the same time.
+So we've got ideas for days. It's just a matter of...
+
+Eugene Semenyuk   38:53
+Hmm.
+That's it.
+
+Patrick Behnke   38:57
+Prime resources and getting people, and yeah.
+
+Eugene Semenyuk   39:01
+That's that that's really interesting, and it will be awesome if you can document somehow these ideas. So, ideally, it will be like Jira ticket on our board. So, yeah, you can even just create them and not assign.
+So just, yeah, just to make sure that we don't forget about this idea.
+
+Patrick Behnke   39:22
+Ohh, so...
+Okay, so you don't care if it's assigned or not?
+
+Eugene Semenyuk   39:28
+Yeah, yeah, because yeah, we, yeah, they they they sounds really good. Yeah, they they they sound really good and it would be great to to not forget them. Yeah, and maybe in the future our AI leaders will, yeah, will see on these use cases and see
+
+Patrick Behnke   39:30
+Oh, okay.
+
+Mikhail Makarov   39:45
+Yeah.
+
+Eugene Semenyuk   39:47
+Such use cases can be applicable for some teams. Yeah, and let's allocate someone to these use cases.
+
+Mikhail Makarov   39:48
+Up.
+
+Patrick Behnke   39:48
+Oh.
+Yeah.
+
+Mikhail Makarov   39:55
+Can we try to...
+
+Patrick Behnke   39:55
+I didn't know if it would affect your records or something because I believe you're doing metrics based off of that that are highly visible in the project. I didn't know if that would like throw your numbers off or if we could like add a tag or some sort of like prefix to it in order to make sure it doesn't affect your numbers.
+
+Mikhail Makarov   40:14
+You can add a tag draft and that will work. We will see how many ideas are in draft. And by the way, have you tried to do it through the rover? I mean, create the ticket here. Just you can type in your idea and ask it to create a ticket.
+
+Eugene Semenyuk   40:19
+Mhm.
+Like, just to...
+
+Mikhail Makarov   40:38
+Yeah.
+
+Eugene Semenyuk   40:39
+Use regular ROA. Yeah, it should be capable to do this, like create ticket.
+
+Mikhail Makarov   40:41
+Yeah.
+
+Eugene Semenyuk   40:47
+Like, create.
+
+Mikhail Makarov   40:48
+Create user story something.
+
+Eugene Semenyuk   40:53
+Like, like create, uh, what, what kind of, yeah, we use user story, yeah, create story here in this project, yeah, and the with the.
+summary and blah blah blah.
+
+Mikhail Makarov   41:12
+You maybe even don't need to create, like, put all field names here. Just try something. Create user story is this project about, and then it will figure it out itself. Just as an idea.
+
+Eugene Semenyuk   41:20
+Mhm.
+
+Mikhail Makarov   41:25
+That will be a fun exercise to see is it going to work or not.
+
+Eugene Semenyuk   41:29
+Mm-hmm.
+So yeah, guys, if you have any ideas, even if they are crazy, so yeah, feel free to create ticket and put in intake. So yeah, you can.
+Yeah, you can put a draft tag, so you can leave it, you can leave them unassigned. So, yeah, but at least our AI leaders will be able to review them, prioritize, and maybe find someone who can implement this use case.
+Yeah, and uh...
+Yeah, we have we have some time. I'd like to I'd like to discuss, maybe not discuss, to describe some use case that we are working in in quality Engineering teams. So yeah, maybe maybe this use case will be.
+Interesting for you as well. So we are working on interesting pipeline for testing.
+Here is the idea. So the main idea is to analyze user story and
+pull requests with some changes, and come up with ideas like what you need to test, and then map these ideas to test library. So it can be your test cases,
+your unit tests, your API tests, or any kind of automated tests. Yeah, and then see what tests you need to use. Yeah, for unit tests, it may be not so applicable. Yeah, but for API, UI, and other stuff, yeah, it can be applicable.
+like what tests from existing test library we can reuse and what tests we need to add.
+Because we don't have such tests in our test library. Yeah, and then what tests we need to update? Yeah, because we changed in our pull request, we changed some logic. Yeah, and
+Yeah, and yeah, of course, sometimes it requires some updates in our tasks.
+Like in unit tests, you will see it probably immediately.
+Yeah, as you run this test, yeah, but for, like, for for for higher level of tests, it will be more complicated, yeah, and this workflow should be able to to catch this on Taylor stage.
+So yeah, and yeah, the main idea that we have some agent that analyze pull requests and requirements, analyze all the dependencies between components, and do some kind of risk analysis and impact analysis. Oh, I see, I'm not sharing.
+Turn screen.
+Yeah, and based on this information, come up with some ideas about testing. So yeah, if if you're interested in in some in such case, so yeah, feel free to reach out to me. So I'll add you in our working group. Yeah, we can work together.
+This is case, yeah, and the, yeah, make, yeah, and the, yeah, make sure.
+Yeah, keep in mind that this use case is not like straightforward. It can be modified by your...
+your particular team.
+Uh, team needs.
+Yeah, and yeah, things like that. So yeah, feel free to reach out to me or Oleksandr.
+So yeah, we will add you in the working group.
+Yes.
+Oh, awesome!
+OK, any any other questions, ideas?
+Oh.
+Use cases, challenges you would like to discuss with us.
+One, two, three. Okay, to wrap up, thank you for sharing your experiments and insights. So yeah, it was exciting. And yeah, if you need help or refining use case or preparing demo or any kind of help, yeah.
+Feel free to reach out to Oleksandr or me. So, yeah, I, yeah, I also can help you.
+Uh, video use cases, yeah, and uh.
+Yeah, thank you everyone. I'm looking forward to see what you what you're building next and see you see you tomorrow on our cross-functional collaboration session. Have a good day.
+
+Mikhail Makarov   46:40
+Yeah.
+Thank you, everyone. Bye.
+
+Eugene Semenyuk   46:53
+Bite.
+
+Iryna Pashko   46:55
+Thank you. Thank you.
+
+Sukalya Rajendran   46:55
+Thank you.
+
+Amit Sharma   46:56
+Thank you.
+
+Heath Fest   46:56
+Thanks, Bob.
+
+Rutuja Chaporkar   46:57
+You.
+
+Nicholas Crowley stopped transcription

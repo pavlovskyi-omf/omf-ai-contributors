@@ -1,0 +1,598 @@
+AI Enablement ENGINEERING Champion Sync-20260511_150017UTC-Meeting Recording
+May 11, 2026, 3:00PM
+30m 4s
+
+Oleksandr Pavlovskyi   0:29
+Good morning, guys.
+
+Jason Daggs   0:32
+Good morning.
+
+Oleksandr Pavlovskyi   1:04
+Fourth people.
+Not much.
+Yeah.
+
+Muhammad Adnan Farooq   1:21
+Hello, good morning, everyone.
+
+Oleksandr Pavlovskyi   1:23
+Good morning, Adnan.
+Alright, alright, let's give one more minute here, because...
+Not much people today, only seven people.
+
+Muhammad Adnan Farooq   1:58
+And Monday is very difficult in the morning, Alexander.
+
+Oleksandr Pavlovskyi   2:04
+But today, no, no events, no day offs, yeah, it's regularly.
+
+Muhammad Adnan Farooq   2:09
+Yep.
+
+Oleksandr Pavlovskyi   2:10
+Strange, strange.
+
+Muhammad Adnan Farooq   2:11
+Just ended the day in paradise, so...
+
+Oleksandr Pavlovskyi   2:14
+Yeah.
+
+Jason Daggs   2:15
+Yeah.
+
+Oleksandr Pavlovskyi   2:16
+If...
+Yeah, some people has call in the Borole seems like a...
+Mhm.
+Right, so let's start here, but...
+I hope more people will join us today. So, as usual, let me share our boards.
+Oh.
+So.
+On Wednesday, we're going to have our regular Lighthouse session. So we already have one candidate.
+With the showcase, yeah, it's gonna be that's from your team, Adnan. Yeah, I'm not sure if...
+Balanarasimha, yeah, is on a call, is in a group, yeah, probably we need to.
+Right, so yeah, I'm gonna connect with her.
+Is it, is it her? Yes, and or or...
+
+Muhammad Adnan Farooq   4:09
+Bala, yeah, yeah, yeah, yeah, Bala is my team, yep.
+
+Oleksandr Pavlovskyi   4:13
+Well, yeah, yeah, so we have one candidate. Yeah, I'm gonna align with with Bala regarding to the dates, and...
+
+Muhammad Adnan Farooq   4:25
+Yeah, I can follow up with that. Deepti, make a note, right? It might be we just need to follow up with Bala.
+
+Deepti Pathak   4:30
+Yep, I write a whipping them.
+
+Muhammad Adnan Farooq   4:30
+On this.
+Okay.
+
+Oleksandr Pavlovskyi   4:33
+All right, all right, cool. Thank you, Deepti. Okay, and let's see what we have.
+
+Deepti Pathak   4:35
+He.
+
+Oleksandr Pavlovskyi   4:41
+In the progress column.
+All right, so Deepti, let's continue with you. How to make Jira-based document generation in the GitHub workflow.
+
+Deepti Pathak   4:53
+Yeah, so this is something even like Sukalya already demoed it as part of I think first phase where when she's doing end-to-end flow, you can create the documentation as well. But this is something just to give a little bit of an update and please let me know, Adnan, you and Alex, like if we should demo this or not. So basically what's going to be.
+to happen is we under EDS team have multiple teams and we do the, we like two or three years ago, we had the audit happen, all right, and then our documentation, whenever we are deploying any codes, the documentation wasn't not up to date, not appropriate, and we used to sometime deploy the code and then we will be uploading the documentation, which is not right, right?
+
+Oleksandr Pavlovskyi   5:40
+Mhm.
+
+Deepti Pathak   5:40
+So we created a rule, we worked with the audit team, and we set up certain 5 mandatory documents. And that is not only our team, lots of different teams uses that template as well. So that's like a project analysis, test cases, risk assessment, and...
+
+Oleksandr Pavlovskyi   5:52
+Cool.
+
+Deepti Pathak   5:59
+back out document. So these are five templates. We already have it. We make sure before we deploy the code, those mandatory 5 documents, we always add it into our Jira. Then only we move it to like production or else like we consider our Jira as fail. So.
+It's like mandatory. So using this AI, what we are trying to do is like we are sending the template and the documentation will automatically get created and it will be attaching it to the GitHub specific folders so that we can move it to next phase. And this is something will be helpful within our EDS team, not only our DFP team, but also the other teams which.
+
+Muhammad Adnan Farooq   6:41
+Yeah.
+
+Deepti Pathak   6:43
+We all are under same, Adnan can like put more on more on it. So yeah, so it's already done, but at the same time we can show how the automation works, how it can be useful for other teams as well if they are still using these templates and instead of they put the documents mandatory, if your Jira is well groomed, you can create those documentation using the template.
+
+Muhammad Adnan Farooq   6:54
+Yeah.
+
+Deepti Pathak   7:06
+as part when your code is also moving. So that's what it's.
+
+Oleksandr Pavlovskyi   7:10
+What tools GitHub workflows, yes, understand, and what tools also present in this?
+
+Deepti Pathak   7:17
+GitHub agent, I'm using it to run, create the, so GitHub workflow will be going to get triggered. That is going to call the GitHub agent, which is going to check the templates, create the documentation, push it into the GitHub.
+
+Oleksandr Pavlovskyi   7:30
+It's absolutely automated process here, knowing your actions cool, and you know, this is candidate for our PDLC late hour sessions, I mean, for our cross-functional late hour sessions. OK, so...
+
+Deepti Pathak   7:33
+Yes, yes.
+
+Muhammad Adnan Farooq   7:35
+Yep.
+
+Deepti Pathak   7:48
+So people can call it out that, hey, this is already done. So that's why I'm just explaining like, yeah.
+
+Muhammad Adnan Farooq   7:50
+The.
+
+Oleksandr Pavlovskyi   7:53
+Not sure, not sure if it's done yet, because before it's not done with GitHub workflows, as I remember, it was partially manual.
+
+Deepti Pathak   8:04
+Okay.
+
+Oleksandr Pavlovskyi   8:05
+Yeah, so.
+
+Muhammad Adnan Farooq   8:05
+Yeah, some of the teams are using is manual, but we just automate this thing like Alexander, right? So, yeah, and I, as you said, right, it's going to be like, you know, for good candidate for our PDLC as well, right? So, so we...
+
+Oleksandr Pavlovskyi   8:10
+Yeah.
+So, yeah, yeah, yeah.
+
+Muhammad Adnan Farooq   8:22
+So, I'm saying, like, you know, Deepti, I might be, we just need to, like, you know, share it right, do the demo, because we already make it, like, it's already been in production, we just showcase what we what we achieved so far on that part.
+
+Deepti Pathak   8:34
+No, Adnan, I have only created the whole automation like the that now the difference is documentation is also getting created automatically. So I'm ready only with one template. Two more is required.
+
+Muhammad Adnan Farooq   8:36
+Yeah.
+The release.
+The whole bus.
+Just one time. Ohh, OK, so it means that two more is to go. OK, the one once we completed it, then we are going to present that all together.
+
+Deepti Pathak   8:52
+Yeah.
+Yeah, so I will be ready for 520 if that's okay, Adnan and Alex.
+
+Muhammad Adnan Farooq   8:59
+That's fine. I'm good with that.
+
+Oleksandr Pavlovskyi   9:00
+Cool, cool.
+Cool, so I'm leaving this ticket in the progress here, so when you complete here, cool, cool, great, great, thank you, great use case, Steve Tim. OK, let's move on.
+
+Deepti Pathak   9:05
+Yes.
+
+Muhammad Adnan Farooq   9:05
+Yep, yep.
+
+Oleksandr Pavlovskyi   9:19
+Um, Sam, Sam, did we have Ashley on the call? I don't see Sam, when you maybe you could add some details regarding to these.
+Oh, it's more, how is it going?
+
+Sam Jayavelan   9:35
+Um, Claude code, I didn't think he had access to Claude though.
+
+Oleksandr Pavlovskyi   9:36
+Great.
+Good.
+Um, but yeah.
+
+Sam Jayavelan   9:46
+What he was doing was he had taken, at least from what I had understood, is he had taken the web automation scripts and he wanted to convert them for mobile to WebDriver IO because the web ones we had used Test Cafe and Test Cafe we cannot use it for mobile and we tried Mable. Mable wasn't working well for mobile as well.
+So what he did is he took, he said he's going to use AI to take the script set up because our code base is the same, it's the same angular page. So he said other than the ones that revolves around the, you know, nav bar and specific to mobile, 80% of the test cases can be reused completely.
+So he was going to use AI and convert it into WebDriver IO so that we can start running it on mobile. And he had success. I don't know if he's completed it yet because he hasn't fully demoed it. He just showed me an initial demo portion of it. I think the cloud code tripped me up because I wasn't sure which framework he's using for conversion.
+And I didn't think we had access to it. I can follow up on this one with him. I know he was working on it. It's paused because he was pulled into something else to work on. We were short on resources. However, the main thing over here, and I'll ask him to change the title as well, is...
+
+Oleksandr Pavlovskyi   10:55
+Mhm.
+
+Sam Jayavelan   11:10
+reusing the web automation script to test mobile by converting it so the web driver framework can be used. That's what the ask was. Definitely, I can follow up on this one. Sorry, I did on guy three's, I must have missed this one.
+
+Oleksandr Pavlovskyi   11:20
+Mhm.
+Yeah, code code is a tricky case here because it's not allowed for organization, but
+
+Sam Jayavelan   11:34
+No, we didn't. We don't have access to Claude. Maybe he's talking about the.
+
+Oleksandr Pavlovskyi   11:36
+Mhm.
+
+Sam Jayavelan   11:43
+And.
+
+Oleksandr Pavlovskyi   11:44
+Yeah.
+
+Sam Jayavelan   11:44
+whatever he's using underneath, I'm not sure. Like, did he write it? Like, let me look through it. I'm not sure what he's talking about. Maybe the LLM. I'm not sure. I'm just thinking through.
+
+Oleksandr Pavlovskyi   11:49
+Yeah, yeah.
+Yeah, it's definitely possible to do with GitHub Copilot or Cursor, yeah, so...
+
+Sam Jayavelan   11:58
+Yeah, I was thinking he's either using Copilot or Cursor because Cloud, we have requested for access, but none of us have gotten it yet.
+
+Oleksandr Pavlovskyi   12:07
+Yeah, yeah. Cool, cool. Thank you, bots. Sounds interesting.
+
+Sam Jayavelan   12:12
+Okay.
+What was the number? Sorry, if you can show me, I'll just take it down. AP102. Got it. Thanks.
+
+Oleksandr Pavlovskyi   12:16
+Uh, 102.
+Yeah.
+Cool, thank you, Sam. Alright, Patrick, do we have Patrick?
+
+Sam Jayavelan   12:24
+Welcome.
+
+Oleksandr Pavlovskyi   12:29
+Not today, seems like.
+Okay, let's move to the next one. It's a quality assurance.
+Oh, another one ticket.
+Okay, Adnan, or maybe Sukalya, do we have Sukalya? Not today. Adnan, maybe you have some updates.
+Shanu is working on it.
+
+Muhammad Adnan Farooq   12:58
+Okta.
+
+Oleksandr Pavlovskyi   13:00
+Automate development validation for OMF and organization reports, a skill Python counts, plus AWS resource checks.
+
+Muhammad Adnan Farooq   13:13
+Ohh.
+
+Oleksandr Pavlovskyi   13:15
+It was.
+
+Deepti Pathak   13:16
+And then I can give a little bit of reminder to you. Remember we had the demo and then we were like not sure if this can be because through our Atlantis we already see all the details of the deployments happening. So do we really need this?
+
+Muhammad Adnan Farooq   13:16
+But.
+Okay.
+All right, so we need to internally discuss this thing, Deepti. So, Alexander, like, you know, we can update this ticket accordingly, right? Because there is something, like, you know, functionalities already exist, so I ask the team not to do any work, like, you know, just hold it for internal discussion before we can, like, you know, move forward. So we will let you know and we'll update the tickets accordingly.
+
+Deepti Pathak   13:34
+But...
+
+Oleksandr Pavlovskyi   13:41
+Oh.
+Okay, okay. Great. Thank you.
+Jason.
+Alright, Jason.
+Uh, Jira creation and evaluation use case defined, yeah.
+
+Jason Daggs   14:08
+Uh, yeah.
+See.
+Yeah, this is something that, excuse me, I'm working on with our team and it's actually...
+Part of our homework assignment is to create something like this or something similar to this as far as a use case. Haven't yet gotten to this yet, and I personally have only, you know, this is something that we I've done in training, but it's not something I've
+Completed to the point of satisfying this particular use case, so...
+Hopefully, that is something we can.
+Yeah, we can get to as a team.
+
+Oleksandr Pavlovskyi   15:08
+Okay, okay. Yeah, it's definitely called me use case.
+
+Jason Daggs   15:12
+Yes.
+
+Oleksandr Pavlovskyi   15:14
+Cool, alright, so yeah.
+Ohh.
+Yeah, so please update, yeah, this ticket, yeah.
+
+Jason Daggs   15:24
+Yeah.
+Yep, yep. I do need to do that, yep.
+
+Oleksandr Pavlovskyi   15:26
+Gonna decide.
+Mhm.
+Okay, onboarding assistant for your enablement. Yeah, it's in progress.
+Maybe you have any updates regarding to this admin also.
+
+Muhammad Adnan Farooq   15:49
+Yeah, so that is already working on it, so she will be returning back from her vacation tomorrow, so I'll follow up with her, right? Yeah, because this is something which Mikhail requested us, right, to build some kind of agent that can provide, like, you know, some kind of registry as well as, like, you know, onboarding stuff like that, how the team can onboard it.
+
+Oleksandr Pavlovskyi   15:56
+Oh, tomorrow, yeah.
+
+Muhammad Adnan Farooq   16:11
+to this AI program. So I'll get some more details like, you know, by tomorrow.
+
+Oleksandr Pavlovskyi   16:12
+You.
+Yeah, yeah, so yeah, waiting for Sukalya AM. It's worry, this worry, this initiative definitely makes sense, yeah, right now, yeah, when we are boarding new teams and yeah.
+
+Muhammad Adnan Farooq   16:21
+Yeah, yeah, so these are two things I...
+Hema.
+Yeah, we do have a conference page onboarding. Remember that I like build it like, you know, within Mikhail, we build it, but we just want to make sure that we can have some kind of custom agents where we can have people can come and just, if they have any questions about how to gain access to the tools, what roles they require to access those tools, right? Those kind of things that we just want to build something like that.
+
+Oleksandr Pavlovskyi   16:53
+Yeah, yeah.
+And we have a huge, huge amount of information about these tools. Yeah, we have confluence pages. So regarding to the context, there shouldn't be a problem, yeah? How to operate with the answers. Okay, let's move.
+Use case, but I'm not sure if looking here, yeah, so yeah, I already wrote to him, yeah, so waiting for the update regarding to this ticket. Okay, this Eugene and also similar to this one.
+
+Jason Daggs   17:28
+S.
+
+Oleksandr Pavlovskyi   17:36
+Yeah, this for showri.
+Okay, and we have some tickets. They are in a to do. Amit, Amit, good morning. How about this one? Enable automated code review and bug detection for selected repositories.
+
+Amit Kumar   17:58
+I think I'll have to create a new one. This is a very old ticket that I had created in the initial phase of our learning.
+
+Oleksandr Pavlovskyi   18:07
+Yeah, and uh...
+
+Amit Kumar   18:12
+And after that, we had been able to, you know, showcase a lot of code review agents, not just by our team, I think with different teams as well, and how they can be used within our code source repo, right?
+
+Oleksandr Pavlovskyi   18:26
+And you, and yes, and this case is definitely can be reused with GitHub workflows. If you want to automate it, this definitely can be delegated to this functionality.
+
+Amit Kumar   18:42
+Yeah, I mean, this has to be, I mean, the way I had initially written, I don't think it makes, I think we have made a lot of progress since then. It has to be rewritten in a different form so that whatever learning that has been made so far make more sense onto that new.
+
+Oleksandr Pavlovskyi   18:43
+Who?
+
+Amit Kumar   19:01
+New thought behind this task, right?
+
+Oleksandr Pavlovskyi   19:07
+Yeah, got it and.
+
+Amit Kumar   19:09
+So, I'll try to come up with a different use case, maybe you know, rewrite that or withdraw this one and create a new one.
+
+Oleksandr Pavlovskyi   19:17
+Yeah, yeah, you can rewrite this ticket, and I guess it's...
+It's gonna be make sense.
+Alright, cool. Then, uh, Jason, so remember this is, yes, this is initiative from Patrick. Yeah, do do do you have any updates on this?
+
+Jason Daggs   19:33
+Ahh.
+Yeah, no updates as of yet.
+I'm going to try to get some progress on it this week, but I'm also going to, yeah, there is, the person who's actually interested in doing this on our team is actually out this week. So I don't know if this one will make any progress this week, but I might be able to.
+
+Oleksandr Pavlovskyi   19:45
+Tools.
+
+Jason Daggs   20:01
+you know, put something together to try to move this forward, but I'm not sure yet, to be quite honest.
+
+Oleksandr Pavlovskyi   20:09
+To me to change log summary to Teams or Slack.
+Ohh...
+
+Jason Daggs   20:16
+So what essentially what they're wanting to do is when a release branch is made, that branch will have a set of commits associated with it. And so they just want to generate some, a change log, really, just kind of, you know, the list of things being changed.
+
+Oleksandr Pavlovskyi   20:17
+Two.
+
+Jason Daggs   20:36
+when they create the release branch and then have that information pushed to them in some way. Maybe Teams, Slack, maybe email, I don't know yet. But that's kind of where we're at with it.
+
+Oleksandr Pavlovskyi   20:50
+Yeah, but this is a case for hooks, for web hooks.
+Seems like you can.
+
+Jason Daggs   20:55
+Yeah, I think so. Yeah.
+
+Oleksandr Pavlovskyi   20:59
+You know, maybe the most tricky case is gonna be regarding to getting access to Teams and Slack, yeah, because somebody manages this. You need you need to to get approvals from channel administration, yeah. If you talk, for example, about Slack, I don't remember how it's how it's happening in Quiz Teams, yeah.
+
+Jason Daggs   21:05
+Yeah, yeah, that's...
+Yeah.
+
+Oleksandr Pavlovskyi   21:21
+There you also have the administrators, but you can create like a chat bot here, for example, it can be a shared resource. But for Slack, you're working in a workspace and you need to get access to add some hooks, you need to have this administration rights.
+
+Jason Daggs   21:24
+Mmh.
+Mm-hmm.
+Yeah.
+
+Oleksandr Pavlovskyi   21:42
+Credentials.
+
+Jason Daggs   21:43
+Yeah, and I don't know if I'll ever get that. So I don't know if team Slack updates will be liable.
+I think you know what I what I could do is, in each release that we make, we also create a release JIRA ticket.
+And so maybe we could just append the change log to the JR ticket that is created when the release branch is made. So, you know, that actually is a good idea. I think, yeah, that makes me think that might be a good idea or that might be a work around.
+So, yeah, yeah, I'll have to look at that.
+
+Oleksandr Pavlovskyi   22:26
+Yeah, it's up to you guys, yeah, but what the channels you're using here, for example, for somebody, yeah, maybe Slack going to be the most effective channel, yeah, so the team always communicating in Slack, yeah, and it's going to be useful to have another one channel when you have all these notifications regarding to releases.
+
+Jason Daggs   22:37
+Mhm.
+
+Oleksandr Pavlovskyi   22:47
+If your main channel for communication is Jira, yeah, so you regularly on a step 10 at meeting checking the status of all tickets and one of these tickets is going to be ticket related to your releases, yeah, that's going to be also effective way for your team. Oh, yeah.
+
+Jason Daggs   22:47
+Right.
+Yeah.
+Yeah, and I think I, and I think I do have access to GitHub and JIRA APIs, so hopefully, you know...
+
+Oleksandr Pavlovskyi   23:07
+But you?
+
+Muhammad Adnan Farooq   23:11
+Yeah.
+
+Oleksandr Pavlovskyi   23:17
+Yeah.
+
+Jason Daggs   23:17
+That'll be something I can get to work.
+
+Oleksandr Pavlovskyi   23:19
+For Jira and for GitHub, it's clear how to do this. Yeah, you have full access regarding to Teams and Slack, it's tricky. I mean, on this administration, so...
+
+Jason Daggs   23:22
+Yeah.
+Yeah.
+Yeah, yeah, it's a good point.
+
+Oleksandr Pavlovskyi   23:30
+OK, but yeah, looks also interesting.
+
+Deepti Pathak   23:36
+The Slack, I already did it, so if you need any help there, I can help you.
+
+Oleksandr Pavlovskyi   23:36
+Um...
+With luck, yeah, you did it.
+
+Deepti Pathak   23:41
+Yeah, we last time you remember I saw I showed the demo where we integrated and send all the information from GitHub to the Slack.
+
+Oleksandr Pavlovskyi   23:43
+Ohh.
+
+Jason Daggs   23:49
+Oh wow, yeah, yeah, send me, do you have a link?
+
+Deepti Pathak   23:52
+For the kiss.
+You just create a webhook. I'll show you the steps.
+
+Jason Daggs   24:00
+Yes, please. Thank you very much. That would be cool. Fantastic.
+
+Oleksandr Pavlovskyi   24:03
+Without any additional requests, yeah.
+So, Deepti, could you please?
+
+Deepti Pathak   24:09
+I we do have when you create a webhook, you do have to get that approval from admin and in Slack you just share the details and within like 5 minutes they will approve it.
+
+Oleksandr Pavlovskyi   24:15
+Yeah.
+Uh-huh.
+
+Jason Daggs   24:20
+Oh, okay. So yeah, if you could also maybe give me the kind of, you know, just the breakdown, the steps that you went through to do that, how you...
+how you requested it and stuff like that, that would be great as well. Thank you.
+
+Deepti Pathak   24:35
+Sure, I'll message it. I'll share the steps.
+
+Oleksandr Pavlovskyi   24:37
+Yeah, it's interesting for me also. So how fast this approval is going usually?
+
+Deepti Pathak   24:44
+I, you can request it directly from Slack, but to keep it like expedited, there is a Slack channel, a Slack admin group channel is there. So you put your request there saying like, this is the details, please let me know if you think this is right thing or not. And then they review everything and they approve it.
+
+Oleksandr Pavlovskyi   25:01
+Select admin channel.
+
+Deepti Pathak   25:03
+Yeah.
+So there you can see my chat also, like, yep, like Admins, yes, yes.
+
+Oleksandr Pavlovskyi   25:10
+Slick Admins, yeah.
+
+Jason Daggs   25:12
+Ohh.
+
+Oleksandr Pavlovskyi   25:13
+All Rhodes.
+
+Jason Daggs   25:16
+Ohh wow, OK. See, I had no idea, no idea. She knows the shortcut.
+
+Deepti Pathak   25:18
+I can.
+Yeah.
+
+Jason Daggs   25:23
+Yeah.
+
+Oleksandr Pavlovskyi   25:23
+Perfect.
+Cool, thank you. Thank you, Jude.
+
+Deepti Pathak   25:27
+Yeah, and Thomas call in his point of contact. Like, sorry, yeah, I can give you like, yeah, Joseph, there are a couple of people who can help you out there. You just put it there. They will help you out.
+
+Jason Daggs   25:38
+Okay, great.
+
+Oleksandr Pavlovskyi   25:41
+Okay, another one from Patrick, but here we don't have any updates. Auto update onboarding documentation from PR changes. It also looks interesting.
+The interface, yeah, alright, and one more ticket from Debamitra.
+Um...
+Alright, so let's, I don't, I don't think that's...
+Debamitra is on the call. Let me check.
+No, okay.
+Need to get update on these tickets. All right, guys, we have one free place in our Wednesday's agenda. So don't miss the opportunity to present your showcase this Wednesday. So guys, any ideas? Maybe someone would like to share something?
+
+Jason Daggs   26:51
+Yeah, I I don't know when you had your idea was about when to present some MPMCP stuff, but...
+
+Oleksandr Pavlovskyi   26:58
+Yeah.
+
+Jason Daggs   26:59
+I mean, I should, you know, Wednesday, I could, you know, certainly have something prepared and ready to go by then, I'm sure.
+
+Oleksandr Pavlovskyi   27:05
+Oh, cool, cool, Jason. Yeah, because on Thursday, we gonna have, we gonna discuss MCP servers in our PDL, in our cross-functional stream. Yeah, but if you're gonna have some initial investigation experimentation on this, yeah, there's gonna be.
+
+Jason Daggs   27:18
+Okay.
+
+Oleksandr Pavlovskyi   27:27
+It's going to definitely make sense yet to discuss during our cross-functional weekly sync, yeah, weekly session. And so probably you're going to have another one demo here. We can share the same demo. We can train in our audience, yeah, in our engineering audience.
+
+Jason Daggs   27:37
+Yeah.
+Yeah.
+
+Oleksandr Pavlovskyi   27:50
+Yeah, and maybe gonna extend your demo during the Thursday, yeah, but yeah, I'm gonna prepare the initial presentation, so we're gonna talk about MCP servers, yeah, I'm gonna show some basic examples, some configure MCP for GitHub Copilot for how to upload.
+
+Jason Daggs   27:55
+Oh yeah, that'd be great, yeah.
+
+Oleksandr Pavlovskyi   28:12
+how to download MCP servers and use it locally. For example, playwright MCP, yeah, it's possible to use locally for Corsor, yeah, because it's not whitelisted there. And also our guys from Code Me, yeah, now working on configuration that give us ability to use MCP for Code Me as well.
+So, that give us ability to use, for example, which is required for some of our teams in as well, so, and you guys.
+Also try MCPS, yeah, and that's going to be very important to hear your feedback regarding to MCPS, how we use it. I also wrote to someone of you, yeah, regarding to that use cases that you used copy paste from Jira, for example, yeah.
+and ask you guys to try MCP for your use cases. So for GitHub Copilot, now we, I guess, have the best support of MCP and all our wait-listed MCPs are available. I mean, Jira, Con, Fluence, GitHub.
+GitHub and Figma and so on.
+Alright, so guys, we have one minute. Any questions?
+Cool. So see you tomorrow. Tomorrow we're going to discuss and continue discussing webhooks in the scope of CodMe. And on Wednesday I will let our session. Have a great day and happy Monday.
+
+Jason Daggs   29:57
+Great, thank you.
+
+ stopped transcription

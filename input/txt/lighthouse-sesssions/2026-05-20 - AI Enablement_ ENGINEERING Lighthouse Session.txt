@@ -1,0 +1,369 @@
+AI Enablement ENGINEERING Lighthouse Session-20260520_150021UTC-Meeting Recording
+May 20, 2026, 3:00PM
+2h 4m 0s
+
+Muhammad Adnan Farooq   0:10
+Hello, good morning everyone.
+
+Oleksandr Pavlovskyi   0:12
+Good morning, guys.
+
+Muhammad Adnan Farooq   0:16
+Yeah.
+
+Sukalya Rajendran   0:16
+Hey, good morning.
+
+Heath Fest   0:19
+Mm.
+
+Muhammad Adnan Farooq   0:37
+Yeah.
+
+Oleksandr Pavlovskyi   0:37
+Right.
+
+Heath Fest   0:37
+Yeah.
+
+Oleksandr Pavlovskyi   0:39
+As usual, let's wait for a couple of minutes. Guys, any topics that you would like to discuss before we start, as usual?
+All right, so today we have two very interesting topics, yeah, 2 demos from Deepti and Bala. So let me check if Bala is here and Deepti.
+Also, yeah, I saw here, yeah, right, so let's give one more minute.
+Because I know some of you have meetings that...
+It can a bit overlap this one.
+Right.
+
+Muhammad Adnan Farooq   1:40
+Okay.
+
+Oleksandr Pavlovskyi   1:41
+Would you like, would you like to to to?
+Do you have something on the beginning?
+
+Muhammad Adnan Farooq   1:47
+No, no, I'm good. Sorry, I just unmuted. I'm just doing something. So, my bad.
+
+Oleksandr Pavlovskyi   1:48
+Oh.
+Oh, yeah.
+Rose.
+So, guys, feel free to unmute yourself here, and...
+Sure, you are.
+Ideas, comments, opinions.
+Proposals.
+Okay, 23 people on a call.
+Seems like, yeah, we can start. All right, so, Bala, how about you? Would you like to be the first today?
+
+Uda, Balanarasimha Rao   2:23
+Yeah, sure, no, yeah, I'm sharing my screen.
+
+Oleksandr Pavlovskyi   2:26
+Cool, cool.
+Okay.
+
+Uda, Balanarasimha Rao   2:36
+Yeah, this is the use case, and there is a powered L1 support pipeline failure alerts, actually.
+This use case shows an AI support solution designed to automate pipeline failure analysis and notification handling. Actually, the architecture leverages here AWS services, Azure AI, and automated collecting mechanism to reduce manual intervention and accurate root cause analysis and improve operational effort.
+efficiency across all environments. Actually, the main objective of this use case is automatically detect the pipeline failures and retrieve the execution and log details of the CloudWatch and analyze the failure using a generated root cause analysis and notify the
+Or notify to engineers team with the actionable insights and provide the consistent and instant reporting across all environments, and coming to our business problem is...
+Is the business problem?
+Yeah, uh, once again.
+Nowadays, the pipelines, data pipelines, and workflow archestrations frequently fails due to the application issue, where it may be configuration errors and dependency failures and timeout exceptions. So, support teams spend significant time.
+to manually investigation these failures by reviewing execution histories and scanning the logs and identifying the root cause and notifying to the engineering teams. So here the key challenges is a support team manually inspect the step function executions and CloudWatch logs and they need to troubleshoot
+time troubleshoot that from top to bottom. So it is time consuming and respective actually. It requires skill engineers actually. So, and also it find the root cause, finding the root cause identification also takes a long time and it will delay the impact on the downstream systems and the business process also.
+This is our business problem.
+And coming to the proposal solution is, see, to address these all operational challenges, we proposed an AI power element support automation framework that automatically detects, analyze, and reports pipeline failures using cloud native services and AI driven root cause.
+
+Heath Fest   5:08
+The.
+
+Uda, Balanarasimha Rao   5:15
+analysis generation actually. So, and the solution, the overview of the solution is detect pipelines failures in the real time and it requires execution and log details automatically and uses Hazari AI to generate the root cause analysis and it stored to reusable RCI patterns for faster.
+Future analysis and send the automated notifications to.
+In the next team.
+This is the architecture flow.
+Hello, this is the event bridge. For this purpose, I created the event bridge. Event bridge continuously monitored the step function failed events, actually. So when the event bridge identifies the failure events from the step function, then immediately our lambda will trigger. In the lambda only, I return the code and it will configure with Azure.
+Open AI, so once Lambda is triggered, right, it fetch the execution history from the step functions and the step function.
+Once of fetching the execution history from the step function, and it will identify the failed component, whether it may be EKS or ECS or Lambda or Glue Job. So, once they find the failed component, then it will...
+fetch the log from the CloudWatch and identify the exact error. Then this error will store it to the...
+Ahh.
+Parameter store, because to reduce the cost, we implemented here parameter store. Actually, the seller will store into the parameter store, and this events store the parameter store, and it will it will enter to here.
+This is.
+This is catchy actually. Here it will check whether it is an existing error or new error. Once this is the existing error, right, it will send to the directly to send to the SNS notification to the email recipients. Suppose if it is a new error, right, it will send it to the Azure Open AI. Then it will fetch the root call analysis and recommended solution and it send it to the SNS.
+So, incident report will include this.
+Pipeline name, and environment, and execution name, file components.
+Error summary, root cause analysis, and recommendation and actions taken. This will contain the this will contain the emails email.
+So, these are the sample emails.
+They are the sample elements. We will receive the alerts continuously. See, this is the AI support or just now I received 836. See, this is the pipeline execution report, execution status failed and failure details, failed component, execution error, and error message.
+This is the root cause analysis.
+The recommendation solution, it's given the step by step, and whatever the action we take it, the failure.
+Failure analyze and alert the trigger manual interaction required to validate the job creation or particular job naming or configuration like that, it will give you the solutions.
+This is my event bridge.
+Is the event bridge roll?
+It will monitor all step function, except this step function. It will monitor all step function failure events.
+Then this is my lambda code.
+These are, I took the safety instructions here, I given the safety instructions to my lambda, one second.
+Yeah.
+These are the safety security instructions I given to my lambda code. It should not request or assume any login credentials and it should not include or expose any sensitive data in the response. It should not include a credentials, password, tokens, API keys, or secrets. Like that I given the security instructions to.
+Lambda when it is sending to error message to Azure API.
+So, this instruction should follow the lambda code.
+Hello?
+Hello?
+
+Muhammad Adnan Farooq   9:43
+Yeah, we can hear you.
+
+Sukalya Rajendran   9:44
+Yeah, we can.
+
+Amit Sharma   9:45
+Yeah.
+
+Uda, Balanarasimha Rao   9:45
+Yeah.
+Yeah, this is the conference page.
+I mentioned all the details in the conference page here.
+
+Sukalya Rajendran   9:58
+Okay, I would like to add a couple of things. So this is like an incident root cause analysis accelerator. We already have an L2 support team that monitors our data pipelines for failures and then they act on it. But this is like an accelerator to help them identify the issue quickly and then...
+like Bala showcased, it'll also give you a recommended action to take, right? So they will be able to review that and if it's accurate, they will be able to take that action. So we're not replacing or doing any automated remediations, but this, I would like to call it as an accelerator to help the L1 L2 team act faster.
+And another thing that Bala mentioned is we are using the cache feature, because in a common data pipeline environment, we could have errors happen frequently for the same reason sometimes. It could be a connectivity failure or some data type mismatch or something of that sort. So for those...
+scenarios, if we've already had a failure and we went to the LLM and got a recommended solution from it, then we won't be making another API LLM call for the same failure. It'll be able to refer to the old history and pull that up as the recommended solution and send out the email. So we are not, we are avoiding unnecessary LLM costs as well.
+in this process that we've developed. And other thing that I would like to call out is the solution that Bala showcased here is monitoring for step function failures, right? Because we have the EventBridge rule configured to monitor step function failures, but that can be expanded to any AWS service like Airflow DAG failures.
+or just if you are using only glue jobs in your data pipelines, you can just configure it to look only for glue failures and things like that. We have used step function because that is our primary orchestrator for our data pipelines. That's another thing I wanted to call out. And yeah, this Lambda, like I said, is reusable. You would be able to deploy it in your own accounts.
+and configure the EventBridge rule to cater to your needs. Yep.
+Any questions?
+
+Oleksandr Pavlovskyi   12:07
+Yeah.
+Is there any questions?
+But could you could you please show once again the instruction for your assistant, yeah?
+Just.
+
+Uda, Balanarasimha Rao   12:25
+Uhh...
+
+Oleksandr Pavlovskyi   12:27
+You show the instructions here, so Justin to.
+
+Uda, Balanarasimha Rao   12:30
+Yeah, yeah, yeah, one sec.
+
+Sukalya Rajendran   12:30
+The lambda instructions, the prompt template for the lambda.
+
+Oleksandr Pavlovskyi   12:32
+Yeah.
+
+Uda, Balanarasimha Rao   12:34
+Yeah, these are the instructions.
+
+Oleksandr Pavlovskyi   12:38
+Let's put mine, OK.
+Okay, and then you, okay, then you describe the execution report.
+
+Uda, Balanarasimha Rao   12:50
+Yeah.
+
+Sukalya Rajendran   12:54
+So the primary input for this would be the CloudWatch log errors, right? That's the data that's going to actually get fed to the LLM because all of our processes write logs and that's captured in CloudWatch logs. So in the logs, we don't write any sensitive data or actual data as well. But
+
+Oleksandr Pavlovskyi   12:55
+Uh-huh.
+Mhm.
+
+Sukalya Rajendran   13:12
+Just to be cautious, he's called out explicitly saying if there are any sensitive data, don't pass that on to the LLM. And even the output that it's getting back from the LLM should also not be destructive. So that's why he's mentioned the last line saying it's safe for internal distribution. That's how we're controlling security aspect.
+of it.
+
+Oleksandr Pavlovskyi   13:33
+Yeah, but yes, understand this sensitive data is not shouldn't be present in your pipelines here, so you're just you're just double double checking this with this limitation. All right, right, cool, cool, great demo. Yeah, guys, any questions?
+
+Sukalya Rajendran   13:43
+That is correct.
+Yep.
+Yep.
+
+Oleksandr Pavlovskyi   13:58
+All right, thank you. Thank you, Bala. Thanks, Sukalya. Yeah, great showcase as usual. Let's move to the next. And then, then we're going to talk about MCPs. Yeah, and this time we're going to talk about Slack MCP because I know we have several.
+
+Sukalya Rajendran   14:03
+Thank you.
+
+Oleksandr Pavlovskyi   14:18
+ideas regarding to how to use NCP servers for your guys' use cases. And today, Deepti will explain details how to configure this NCP server, yeah, which steps we need to do, yeah, which approvals we need to get, yeah, to make it possible to use it.
+
+Uda, Balanarasimha Rao   14:40
+Thank you.
+
+Oleksandr Pavlovskyi   14:41
+Yeah, thank you. Thank you, Bob, once again.
+
+Deepti Pathak   14:44
+Thank you, Bala. Oleg, so I have done mostly in related to webhooks, not the MCP, but I did try yesterday a little bit on the MCP and it was working. It's just like if everyone has an expectation on that, I just wanted to correct that. All right, so let me share my screen. I documented all the steps.
+
+Oleksandr Pavlovskyi   14:53
+Ohh.
+All right.
+
+Deepti Pathak   15:04
+if anyone wants to integrate it with the Slack.
+Okay, let me know if everyone is able to see my screen.
+
+Oleksandr Pavlovskyi   15:17
+Yes, we can, we are able.
+
+Deepti Pathak   15:19
+Okay, so two weeks ago, we did a demo where we wanted to show like how it was just an operational alerting demo where we wanted to show some of the things which we are doing it as an operational. Can it go into the Slack as well and get the notification to different kinds of user, right? And then a couple of...
+teams wanted to know how the interactions happen. So this demo is mostly related to this. I'll just, so as part of this, as part of the POC, we did two part. One is Slack integration. Basically, we are trying to integrate the Slack with the incoming webhook because that's like the most easy and simple way to do it. And another is.
+When Alex called it out MCP, I wanted to check how it works for it. So yesterday I just did a very small POC on integrating the Slack MCP for it. So I will show that also. That was done in my local systems, by the way. So just for the quick context, what is Slack? Slack, we know it's a collaboration and messaging platform.
+used by different teams. We mostly use Slack for operational notification, alerts, communication, just like how we have it for teams. So I know most of the team people use Teams and then Slacks, but Slack is a has lots of way to, you know, integrate it easily for sending notifications and everything. So.
+This is just an example of the Slack channel I just put it here. So Slack, so you can integrate this Slack in different ways. The most easiest one for our, we did it was incoming webhook. So Slack incoming webhook is a secure URL. It is provided by Slack.
+that allows application to post messages directly into the Slack channel. So basically, whatever is your application, you just, we basically, I'll show you the demo, like we just create the webhook URL in Slack and then integrate that into the applications. Why we want to choose webhook? It's because webhook is like literally lightweight.
+It's simple to set up. It's and it's mostly for like fixed notification and when we know what's like our operational alert wanted to be. Always also make sure that you're when you are sending those alert information, it's not too noisy that we are like at after some time we stop, you know, looking at those alert because it's like too big to.
+Review and read it, so try to have it so concise that when the developer or a supporter wants to check it and debug it, it's like a little bit, it's it should be catchy in short. So, as I mentioned, the webhook is mostly for production monitoring and alert notification. Other is MCP Slack.
+bot integration. So this is, I just did it yesterday. So basically this is more like a webhook. When you are sending an alert, it's just notify you that, hey, there is a failure. But when you integrate with the MCP, it can tell you why it got failed, what are the remediation we can do, what are the recommendation, those AI assisted like.
+AI assistant features you can interact it, you can add it. So that's where your MCP can be very, very useful for us. So I'll show that as well. And then I'm just skipping this one. Now I'll just show step by step how I integrated this slack. But before I do, anyone has any questions?
+Okay, alright, so.
+Okay, okay, so first we have, so for the webhook integration, we have to go and create the Slack, we have to create the Slack app. So I am just copying this and I already have open, but I'll start it from the scratch. So these are the couple of apps which.
+Already I created it just for the demo purpose. I'm just showing, I'll not implement it, I'm just showing it as a demo. So you go to, go and create, go and click on to the create new app. Then from there you go to from scratch. And for now we just can give a name, maybe like test.
+demo slack.
+And then our workspace is one way. And then you just do create app.
+So these are all the information you get it. Now we wanted to have, if you have, you want to just send the details or the information so that lots of people can be aware of it, as I mentioned, you need to use the webhook. So for that, you go and on the left side, there is incoming webhook.
+webhook, you click on that. After this, it says activate incoming webhooks. So you enable this one. And then basically you are going to get the webhook URL. But since I am not a Slack admin, you have to go and request to get that particular webhook URL. So.
+what I'm not going to click on this, but just letting you all know when you want it, you just go and say request to add new web book and you share your details here and then submit request. Once you do this, my suggestion will be, and that's how I expedited it. Sometimes what happens is admins does have lots of requests and they may miss it or like it.
+It's better to like notify them that, hey, you want this and why you want it. So I went, there is a Slack channel, which is called a Slack admin, and you just post your message here as a requirement that you need the approval for Slack incoming webhook.
+why you want it because every like you want to know right why you want it then for which channel you want some just just explain the details why you want it and then like literally on Tuesday, May 5th, I did it at there and then I got the I got the approval like literally in.
+One minute. So it's super quick. Just post it there. But if I had just requested it through the Slack, it might have taken time. So just a suggestion there. And if you see here, I already had all those steps, including the screenshot, how to do that, so that if anyone wants to integrate.
+your Slack, you can just follow these steps and you can integrate it.
+Once you get that approval, basically in this Slack API, this will get enabled and you will have that particular webhook, you will get that particular URL, and then you just mention your channel name, just like this one, configure the webhook for Slack channel. So you just mention your Slack channel, so I wanted to have it for this Slack channel.
+I got that and then Slack will be generating this webhook. So basically it will be like this service and then the channel name.
+That's all. And then you copy paste, you copy it and you wherever you want to use it, whether you wanted to use it in your Python script or in your different different applications, you can just bring it. Also just a suggestion in mine, I used it in through the GitHub. So I put that webhook in our GitHub secrets and then I called that as a variable and integrated it to run the Python script.
+And this is how the Slack notifications looks like once we have the integration. I can just show it here as well.
+Too many, so let me scroll down. Yeah, so this is how the notification looks like.
+So this is how the webhook has been built. Any questions related to this?
+
+Oleksandr Pavlovskyi   23:11
+Yeah, oh yeah, Deepti, what what use case for this webhook? Yeah, where where where did you will you use it?
+
+Deepti Pathak   23:20
+Oh, right now I used it for our EKS alert notification. I basically wanted to say that, hey, you have this cluster failure. Or let's say when your pipelines are getting failed, right? So you can integrate it with Slack and you send all those details. You can also use that webhook as an information. So basically when you are.
+using the webhook, it's only statistical information you will get it. You cannot modify anything. So whatever you have integrated it, that's the thing you will get it in the webhook. But if you want to have like why it got failed, if you want like an AI feature built into it, that's where your MCP comes into the picture.
+
+Oleksandr Pavlovskyi   23:58
+Mhm.
+
+Deepti Pathak   23:58
+Yep, so this one is webhook. Since Alex mentioned yesterday that I'm planning to show the demo on MCP, I didn't know that, so I just tried to see like how that works. So yesterday, it's not like very detailed way, but just a small POC, we did it and anyone can try to do that. That's also super easy.
+
+Oleksandr Pavlovskyi   24:00
+Cool.
+Mhm.
+
+Deepti Pathak   24:19
+But couple of more configuration, we have to do it from the Slack side. Luckily, I already had the bot authentication was enabled. So for me, it was super quick to enable it. So let me go through the MCP part of it. So.
+So what I did as part of this MCP is like it was performed using this Slack bot API where basically your Slack bot can post whatever information you wanted using the Visual Studio. So from Visual Studio, I was posting the message into the Slack using the MCP. So.
+Couple of configurations you'll have to do it if you want to have the MCP is like this is my existing. I did not do much modification because again, I want if I'm creating a new app, I'll have to get the approval. So I already had existing app through the through the bot authentication. So let me show you that detail. So if you want to configure the MCP.
+In Slack, go to the...
+Wait is that OAuth and permissions. So basically in this MCP, I wanted the bot to post the messages, right? So I had to, I don't want to show you this authentication token, but these are the scopes you have to tell your bot when you are authenticating it. Like I want to have the.
+Channel read, I want the group read. So these are the bot token scopes. You have to enable it. Once you enable it, again, same like the webhook, you have to send the request to the Slack admin to approve it. Once you get that, your token will get enabled. And that's the token which starts with XOSXB. I'm just going to quickly do this.
+that's the token you will be basically going to use it in your Visual Studio. So any question on the Slack bot side and then I will switch to the Visual Studio side.
+OK, so yeah, go ahead. OK, so.
+
+Oleksandr Pavlovskyi   26:18
+Yeah, mhm.
+Yes, is it, is it, yeah, just so you're providing the permissions for your chat for your Slack bot, yeah, so for example, you can write messages, you can read messages, and so on, yeah, on this tab.
+
+Deepti Pathak   26:27
+Yes.
+Yes, yes, yes, exactly. And then you request the Admins that please approve whatever request I wanted to do it for the bot. So in this demo, I already did this, but those are the steps there. And then let me go to the Visual Studio.
+
+Oleksandr Pavlovskyi   26:38
+Mhm.
+
+Deepti Pathak   26:50
+So I did it locally. I did not use right now cursor or lambda. I just wanted to test it out locally whether this MCP works or not. So there in this, I just created this mcp.json. And I'm not going to, I'm just changing it right now so that.
+It's junky. But this is how my MCP server, I'm just calling this model context protocol server slack. This is the main part you have to add it as, and then you are trying to call which bot token. So the bot token which I created it in the slack, I'm giving that name and the slack.
+team ID. Once that is there, I just try to authenticate whether from Visual Studio, the locally, am I able to integrate and call the Slack or not. So that's the command I have pasted it here as well. I did a curl authentication and I'm authenticating my bot to call.
+the slack. And then, oh yeah, one more thing I did it. If with the MCP, once you have this.
+Once you create this bot, sorry, once you have this slack authentication created it for one channel, you can use it for the multiple channel. That's not the case when you do it for the webhook. In webhook, it can be specific to 1 channel. So every time you are building any new pipeline or notification you want to do it, you have to always create a new.
+You have to create a new app and then integrate it. So get the approval. But with this, you just have to do it one time, your bot authentication, and just invite the channel where you did all those integrations. So in my existing EKS, I invited that particular bot. So this is how it looks like.
+Where is it?
+Yeah, so you use the command slash invite, which is in this, and that's how I called this particular channel. In mine, another channel, DFP channel, dev alert slack integration. And after that, I just tested this message, which I'm again going to do it here.
+
+Oleksandr Pavlovskyi   28:44
+Okay.
+
+Deepti Pathak   29:04
+And if you see now.
+Just now at 1029 AM CST, I was able to interact from my Visual Studio using the MCP and it's like able to connect and integrate it. So this is just a small POC where we are trying to show that MCP can work. With this, we can utilize this for lots of things.
+whatever, like let's say the failure notification I'm sending it, right? I can ask why it got failed. Can I get the logs? Can I get the recommendation? You can use the MCP to have like a further future enhancements on top of that. But this demo was mostly to show how Slack MCP can be integrated locally to your Visual Studio.
+Or if you want to have the same, you just call this particular code anywhere in your infrastructure and it will work. This is the main line. Literally, this is one line which makes it work. That is all from my side. Open for any questions.
+
+Oleksandr Pavlovskyi   30:07
+Yeah, so you you have showed like you run the command, yeah, for your bot, yeah, but in the same time you can use your LLM in the way of mode or something like that to run this command, yeah, and MCP provides the okay to say internal usage.
+
+Deepti Pathak   30:17
+Mhm.
+Yeah, yeah.
+
+Oleksandr Pavlovskyi   30:26
+for these tools. Yeah, so I mean, the chart in a genetic mode can run some specific comments. So not these comments in your terminal, but under the hood is going to be similar. So yeah, yeah, so you can also.
+
+Deepti Pathak   30:34
+Yep.
+Yeah.
+Yeah, you can host that MCP anywhere you want it. You can host it in your Lambda, in your Docker, in your code me, in your cursor, wherever you want it. And then you can have your further logic on top of it. What would you like that MCP to do?
+
+Oleksandr Pavlovskyi   30:56
+Yeah, so now you have ability to do the notification to this channel with the webhooks, and at the same time you can get, for example, information from this notification automatically to your agent, yeah, and do, for example, some implementation based on this, I don't know.
+
+Deepti Pathak   31:10
+Yeah.
+
+Oleksandr Pavlovskyi   31:15
+For example, some bug has been reported here to your chart. So you can take this information and build some very, very, very simple, but workflow, yeah, this can be partially optimized, yeah, or just for your convenience. Cool, cool.
+
+Deepti Pathak   31:19
+Yep.
+Yeah.
+Yeah.
+
+Oleksandr Pavlovskyi   31:34
+Hey, guys, any questions?
+Right, so that's going to be great also to see similar demo with Figma. Yeah, but I think it's better to postpone. Yeah, maybe, maybe this is going to be great to show this example, not only in the way of usage of our ideas, yeah, maybe in Cody. So we need to wait.
+while CodeMe also going to be implemented to test it. Yeah, because in CodeMe, we have ability to implement our basic tools. Yeah, I mean, Confluence, Jira, GitHub Copilot. But as for Figma, yeah, we are waiting for this implementation also. So.
+Yeah, that's going to be a great topic for the next sequence of our meetings related to MCPs. Cool, cool. Thank you, thank you, Deepti. Great demo. Guys, any questions?
+
+Deepti Pathak   32:36
+Sure.
+
+Oleksandr Pavlovskyi   32:41
+All right, so once again, reminding you about your use case submission, use our board. And here, guys, Deepti and Bala, please post links to the conference pages that you shared.
+Yeah, and don't forget to add these links also to your tickets, yeah, that's that we have in the board now, just because these tickets, yeah, it's our like a center of excellence for now, yeah, we are using them to maybe to link this your use cases here to our future use cases, so you know we...
+
+Uda, Balanarasimha Rao   32:57
+Sure.
+
+Deepti Pathak   32:58
+Sure.
+
+Oleksandr Pavlovskyi   33:19
+Now we onboarding next 24 teams, yeah, and your use case is going to be great for them, like a guide, yeah, of existed workflows, use the existed use cases that they can reuse, yeah, watching your watching recordings of our demos.
+Alright, yeah, think you Deepti, uh, so guys.
+I guess that's all for today. If you're going to have any questions, use our charts. And see you tomorrow.
+
+Deepti Pathak   33:56
+Thank you all. Bye.
+
+Oleksandr Pavlovskyi   33:58
+Thank you, bye guys.
+
+Prachi Chati   33:59
+Thank you. Thank you.
+
+Swathy Lokula   33:59
+Here.
+
+ stopped transcription

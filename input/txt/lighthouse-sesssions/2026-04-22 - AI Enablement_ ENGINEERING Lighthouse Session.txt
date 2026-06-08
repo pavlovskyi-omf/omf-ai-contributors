@@ -1,0 +1,408 @@
+AI Enablement ENGINEERING Lighthouse Session-20260422_150023UTC-Meeting Recording
+April 22, 2026, 3:00PM
+34m 14s
+
+Oleksandr Pavlovskyi   0:11
+Hello, guys.
+Good morning.
+
+Jason Daggs   0:15
+Hello, good morning.
+
+Oleksandr Pavlovskyi   0:19
+How are you today?
+
+Jason Daggs   0:21
+Well, I'm hanging in there. How about you?
+
+Oleksandr Pavlovskyi   0:26
+Yeah, also so far so good. Yeah, some work, some interesting work. Yeah, so excited with your use cases that you submitted. Yeah, also for your Jason, we're gonna discuss it on the on the following session.
+
+Jason Daggs   0:28
+Oh, good.
+Great.
+
+Oleksandr Pavlovskyi   0:46
+And guys, as usual, today we're going to have two demos.
+So, let's give a minute to our participant to join us.
+And...
+And yeah, that's cool. That's I see this. I see many people who turn turn on the camera.
+It's always a pleasure to see you guys.
+Okay, so I see people still joining.
+Alright, let me check. Yeah, the recording is started.
+Okay.
+Very nice, also, here.
+Yes, do you hear me well, because...
+Yesterday I had some issues with Teams here. Okay, great. All right, so...
+Yeah, I see.
+Yeah, we can start. Today, we're going to have two demos. Yeah, one from Sukalya and the 2nd from Chantal. So, guys, are you ready?
+
+Sukalya Rajendran   2:19
+Yep.
+
+Oleksandr Pavlovskyi   2:21
+Okay, so let's not wasting the time. Sukalya, let's start from you.
+
+Sukalya Rajendran   2:28
+Okay.
+Right.
+Please let me know if you are able to see the screen share.
+And if I'm audible.
+
+Oleksandr Pavlovskyi   2:38
+Yeah, yeah, we see the, yeah, the confluence page. Cool.
+
+Sukalya Rajendran   2:42
+All right, OK. Thank you. So, good morning, everyone. So, we are, I'm from the Data Factory Platform team, and we are here to present on the use case that we worked on to build a data tracker or data system. This is particularly to help us with catalyst project.
+as such. So what gave us this idea of what the problem statement is that we're trying to solve is Catalyst project is in full swing. It has many teams involved in delivering this project. And so the UX team or the subgraph teams, every sprint come up with tasks.
+that they have to do to enhance the UI features. And that often triggers downstream system tasks that has to be handled by different teams. And we are one such team who's responsible for delivering the data engineering solutions to bring that data into Snowflake for analytics.
+So for that, every time they had a task on their end that impacted the data pipeline or they saw a need for the data team to be involved, they started enabling it with catalyst DTL update in their JITA tasks. So that helped us as a, it gave us a good starting point.
+to identify what tasks we need to collaborate on and get involved in. But then right after they create the tasks, there are a couple of other hops that we need to go through before we pick up the data engineering solution. So the next stop is the data operations team, where the data operations team have to review the domain model and give a sign off.
+saying the data model looks good, then it has to go to the Snowflake data model, Snowflake Foundation model review, that they build the data product layer that will be consumed by the users, and then they hand it over to us, the DataFactoryPlatform team, to build the engineering solution for it.
+So to track all of this flow for a single feature enhancement, we have to create multiple Jira tasks for across these teams. All of this was being done manually and with follow-ups and collaboration with across teams. So now we saw a scope to automate.
+this and use the CodeMe tool that already has integration with Atlassian for us. It is able to pull the Jira tasks and also additional information from Confluence. So we saw a scope there to improve this and automate the entire process and built an agent to do that.
+So what it basically does is it will detect all the cat, cat here it refers to the Jira project for catalyst, all the cat tissues that have this label attached to it. It will summarize and gather all the details that are needed for the downstream systems, like I called out the domain model data pipeline work and snowflake model work.
+and it will also create those follow up tasks as well. And the agent is built with instructions to avoid creating any duplicate tasks and also assign it to specific epics and assign it to specific owners for already identified tasks like for domain review.
+it goes to Richard Weiss, the data operations team. For Snowflake, it goes to DPG, the data productivity and product engineering team, head by Jeff Arcus. So we have assignments done in our system instructions itself. So all of it is.
+
+Jason Daggs   6:24
+Uh-oh.
+
+Muhammad Adnan Farooq   6:27
+We lost you as a good year.
+
+Oleksandr Pavlovskyi   6:28
+Yeah.
+
+Sukalya Rajendran   6:30
+Ohh, guys.
+
+Oleksandr Pavlovskyi   6:30
+Sukalya, yeah.
+
+Muhammad Adnan Farooq   6:35
+Yes, basically, you can stop your video. That can help.
+
+Sukalya Rajendran   6:41
+I am doing this from office, so not sure what's going on. Am I audible?
+
+Muhammad Adnan Farooq   6:45
+OK.
+Yes.
+
+Oleksandr Pavlovskyi   6:47
+Yeah, yeah, all seems like fixed.
+
+Sukalya Rajendran   6:48
+Okay.
+
+Muhammad Adnan Farooq   6:49
+Yeah.
+
+Sukalya Rajendran   6:50
+All right, I'll continue. So let me switch to the agent and I'll show the configurations of the agent.
+Okay, actually, it will be easier to edit it here. Okay, okay.
+So here I just gave it a role saying you're the catalyst DDL watcher AI assistant. You have to monitor and manage the JIRA work triggered by this label. And primary responsibility is to identify those tasks and then create supporting tasks for the different groups that I already talked about.
+I gave some conversation starters that are usually repeatable questions that we expect, like, show me all the open cat tasks and create follow up tasks and things like that. And then detailed instructions are given here. I did use the refine with AI option and refined it further. And I've given links to.
+epics that I want the sub, I mean downstream tasks to get linked to and also gave it requirements saying avoid duplicates, add the link back and details like that. So in this one thing I would do want to mention is for the domain review work, I did work with Richard Weiss, get his feedback first.
+I created a draft task and shared it with him and asked for feedback. He wanted more information added to his tasks, like the context, the domain being impacted, and what are the specifications to be included that needs to be reviewed by him. So I gave a catered task.
+template information for the DO task. Let me try to pull that up.
+Yeah, what follow up tasks need to be created. All of that is, you know, kind of embedded in this. Yeah, this is the details I got from the DO team saying include basic information like this in the JIRA task that gets created for them. So all of this will be inferred from the source catalyst task itself and it will try to put it. If it doesn't find it, it will give it as TBD.
+It will not invent its own values and put in there. So this was very helpful. And now this is about the agent and then the tools that I've given it are basically just the JIRA and Confluence access. Okay, JIRA access. And I've shared it with the team as well. So I can use this agent.
+
+Jason Daggs   9:05
+Yes.
+
+Sukalya Rajendran   9:11
+as an independent agent, and at the same time, I've also integrated it as a workflow. So earlier I had these tasks created, I mean, these assistants as multiple agents, one for DO, one for DPG, and one for DFP.
+Individually, because I was initially testing it out right, and later I learned about the workflow concept, and then I just kind of tied it together, so whenever I run this workflow, it will go and look for the cat tasks, and then create the domain model task, and then the snowflake.
+us calling those two agents. Later on, as a third step, I literally combined it into a single agent. So it is more of an iterative process that I went through for my own learning as well. As in when I got details and I got familiar with this CodeMe tool, I was able to enhance it and bring it into a single agent. And I don't know if folks on this call attended the session where EPAM folks taught us about the orchestra.
+So, this is slightly different from workflow is different from an orchestrator, and what the key difference is, if I were to do this as an orchestrator, I don't get to control the sequence in which these tasks get created; the LLM decides.
+Whereas in a workflow, I get to decide what is the option, and I get full control over the order of execution. That is the main difference. Otherwise, I could have gone for an orchestrator as well. So that's something I wanted to call out. Last, I shall share a chat.
+Yeah, OK.
+Unfortunately, yesterday's Sprint CAD team did not create any tasks that have this label. I am hooked up to the production system, so I'm just going to use one of my old chats and walk through how I used it. So this is one of my old chats where I said track any open Jira issues with this particular label.
+And at that time, there were two tasks that were open. The remaining were in the done status. So it pulled up those two tasks, and then it asked me for the options of what it should do next, whether create the follow-up tasks. So first, I asked it to check if there were follow-up tasks that already existed.
+for associated with these CAD tasks. I had already run this process earlier, so it had created those tasks for me. So it was able to associate and pull the correct follow-up tasks for each of these CAD tasks. So you see three, right? DO for domain model, DPG for snowflake model, and then the DFP one for the data pipeline work.
+So it was able to pull that information correctly and give me the correct status as well. So I'll quickly show one of the tasks that we created using this just to show the details, like how granular their information is. So this is the domain model task that automatically got created and it was assigned to.
+rich as expected. So like I said, whatever information he requested for, it was able to pull from the parent task, the cat task. What is the business concept being changed and the owning domain and if there are any specific mappings that it needs to be aware of and which he has to review and sign off.
+all of that column level details also was included. So it was easier for him to review and give his feedback, then it gets sent to the next team for snowflake model review. So that, so this is pretty much what I wanted to showcase. Any questions?
+
+Oleksandr Pavlovskyi   13:05
+Will come on.
+
+Sukalya Rajendran   13:06
+All right, thank you.
+
+Oleksandr Pavlovskyi   13:07
+Yeah, guys, any questions?
+
+Ravi Nachimuthu   13:14
+I think this is a great example. This is a great example. So we have always spoke about LLM being non-deterministic, meaning it'll make decisions that you may be trying to influence, but it's still the LLM making decision. What Sukalya has displayed here is like.
+
+Oleksandr Pavlovskyi   13:14
+Greg, yeah, good.
+
+Muhammad Adnan Farooq   13:16
+Yeah.
+
+Ravi Nachimuthu   13:33
+both LLM in conjunction with deterministic workflow. So we are forcing a certain level of process around, a flow around how certain things should occur. I think not just for this particular flow, I think many other flows that we have been trying, I think this is going to be a great.
+Example.
+
+Oleksandr Pavlovskyi   13:57
+Yeah, yeah.
+Yeah.
+
+Muhammad Adnan Farooq   14:00
+I just want to call it on one thing, right? So I think that what we are trying or I'm asking my team, right, that how we can just create like, you know, Gen AI workflow end to end, right? Start from creating these tickets, the coding part, deployment part is like, you know, is a question mark. I'm not a big fan of it.
+deploying, like making machine, make the deployment, but like you know, requirement gathering, all these things should be automated by using this workflow, right? So we are just working on different domains and then we are planning that, you know, by the end of this phase two, we just interconnected it, right? So that is going to be a one business use case as we can prove, prove it, right, that Gen AI is end to end.
+
+Oleksandr Pavlovskyi   14:40
+Yeah.
+
+Muhammad Adnan Farooq   14:41
+So that's the target goal that we are trying to achieve.
+
+Oleksandr Pavlovskyi   14:46
+The next step is to creating agents that gonna be creating agents to to optimize this workflows. Yeah, this.
+
+Muhammad Adnan Farooq   14:51
+Yeah.
+Agent by agent, yes.
+
+Oleksandr Pavlovskyi   14:55
+Yeah, because you know the approaches, and and I'm not joking, yeah, it's because you know the approach is the same, the idea is the same, only the approach, some project details, yeah, or project specific, especially if you have several projects, yeah, I mean...
+
+Jason Daggs   14:58
+Yes.
+
+Oleksandr Pavlovskyi   15:14
+just the difference may be in some repositories or some configurations, maybe some additional manual steps. And you can just update this workflow, yeah, with a specific agent just providing the project details. And yeah, this is the thing that we're trying to do, yeah, building this center of excellence, yeah.
+
+Muhammad Adnan Farooq   15:30
+Yeah.
+
+Oleksandr Pavlovskyi   15:35
+And I don't, I don't, I'm sure that it's not 100% is possible for every project, yeah, but the generic knowledge about these workflows and possibilities, yeah, maybe create the smart agent who gonna investigate the project and gonna give you advice.
+regarding how to set up this workflow, yeah, which agent can be possible to create this, for example, coordinate here, and which steps should be done with the manual, I don't know, interactions or maybe web hooks and so on, like we're going to have in the future, yeah, so you know, it's already announced and in a couple of weeks we're going to discuss them.
+Yeah, now we in our PDLC sessions investigating workflows, yeah, and the next step is gonna be webhooks, so this is gonna give even more abilities here to optimize your work.
+
+Jason Daggs   16:24
+S.
+
+Oleksandr Pavlovskyi   16:33
+So, Sukalya, great, great, great example. Guys, any questions?
+
+Muhammad Adnan Farooq   16:33
+Gupta.
+
+Oleksandr Pavlovskyi   16:40
+Yeah, would you would you also do the announcement regarding to the next session? Yeah, regarding to the next topic that we're going to have in a week?
+
+Sukalya Rajendran   16:51
+Sure. So that's kind of tied to this topic that I talked about, the development side of things. So the Prisma schema changes. So Prisma is an open source ORM that helps you track any schema level changes that happen in your database. So we have different subgraph teams that are close to 18 subgraphs today in production, and they
+
+Jason Daggs   16:52
+S.
+
+Sukalya Rajendran   17:12
+can make changes on the fly as and when they want to add or drop columns, and it could have an impact on the data pipeline. So we want a workflow, GitHub Actions workflow, to be triggered every time a person checks in a change to the Christmas schema files. And then that will trigger that workflow. And what that workflow does is.
+basically generate an ERD diagram with the current state of the Postgres DBs and giving the relationship between the tables. And it can highlight what really changed in that particular PR and also generate an equivalent snowflake raw table DDL for me. As a developer, I can use that too.
+
+Oleksandr Pavlovskyi   17:53
+Mhm.
+
+Sukalya Rajendran   17:55
+create the raw layer of the data load as is. So, but again, this is running in my local and we from the Data DataFactoryPlatform team don't own those subgraph code reports. Those are owned by the subgraph teams. So we are running it in our local, but doing the work.
+on the research of those subgraph teams repos. Now, next step is after this tests out good, we'd have to reach out to those subgraph repo owners, get their sign off, and then deploy this agent on their GitHub repositories. That's the plan.
+
+Oleksandr Pavlovskyi   18:32
+Cool, cool, yeah.
+
+Sukalya Rajendran   18:32
+Yeah.
+
+Oleksandr Pavlovskyi   18:35
+Great, great. So, looking forward to the next session. Thank you, Sukalya. OK, OK, Chantal, moving to you.
+
+Sukalya Rajendran   18:38
+Thank you.
+Thanks.
+
+Chantal Justamond   18:45
+Alright, let me share my screen one sec.
+Can you guys hear me okay?
+
+Oleksandr Pavlovskyi   18:51
+Yeah, yeah.
+
+Chantal Justamond   18:52
+All right. So I want to show a workflow I built to make dependency update decisions faster and more consistent regarding dependabot and co-pilot. So for example, here on the screen, you guys have, this is what I see, right, when we have
+a vulnerability by the Pendygraft. Like this is a denial of service, for example. And then on normal basis, the developer needs to figure out manually what's going on here. This is just an example, but for example, here,
+the developer needs to say or answer to himself, like, do we even accept file uploads? Are we using multi-part endpoints? Do we have a proxy limit here? Is Rack directly exposed and stuff like that, right? So let's say here we click the
+Make a PR, and on normal basis you will see this, because I have Copilot activated to make a code review. Now, as you can see, this doesn't have a lot of data, and then basically this is telling me...
+what changed. For example, like on normal basis, it will say like the gem file, it like updates from like 223 and it's do this right from 220 to 2223. But it's not really giving me context. Like, is this urgent? Are we actually vulnerable? Like, could this break anything? Like, if I...
+I push this to development, is this going to break, right? So this is lacking context. And more or less because Copilot was designed in order to review human changes, not like the gem or any like log files. That's not what it was meant to do.
+So with that in mind, I ask myself, what is it that I'm missing here? And that led me to create this flow, which we have over here.
+So after the flow is done, I'm going to go like step by step. But here you can see we have several steps that it goes through. And then the first one is, for example, like I mentioned before, it's like the decision gap. And here what it is going to answer is,
+what is this? So it goes through the code and now I'm pointing here on my left side. So whenever the Pendygraft is the logging user, the flow is going to do certain things. It's going to go through the code, it's going to extract a normalized.
+security metadata from multiple sources, like the dependable metadata API, is going to grab the PR title, the body is going to parse them, is going to grab the CVE, the GitHub Security Advisory Identifier, the security labels, and the version information.
+And this is what kind of makes it agentic because it's combining 4 plus data sources intelligently. And it also has a fallback strategy that adapts when the primary sources fail. And it also has pattern intelligence because you extract vulnerable code patterns from the advisory text.
+You know, and as soon as this is done, like it's going through it, here's the part where it's instructing the vulnerable patterns, it goes through, and then the second step is the analysis. Well, this is the output of the analysis, and here's where we have like the first step, it's using the second one and gather intelligence, and then it...
+goes through the analysis. Here, what it's doing is it's scanning our code base to answer the most important question in my book, which is, are we exposed? And then it's not just like, do you have a vulnerability like the normal Copilot review, but it's actually going to tell us.
+If this is using production, and then if anything is gonna show up here, and I've got a catalog the any production code as anything that is in the app, lib, config files, and anything that is in the test files, it's kind of like informational. If it is in production, that tells me that I need to...
+
+Jason Daggs   23:24
+Yes.
+
+Chantal Justamond   23:26
+kind of like deploy tomorrow and fix this vulnerability. If it is in the test, then okay, I can maybe like send this in the next release and be more mindful. And in this case, usage confidence was not like it didn't find anything, no direct evident found, no production code matches, meaning nothing in the app, config, lib, etc.
+
+Jason Daggs   23:40
+Just.
+
+Chantal Justamond   23:47
+It was not also in the test. And the risk level for now is like medium and merge priority normal. So then the third agent kicks in. And then what this is doing is basically telling me what should we do? This combines everything. Like it gives like the risk level.
+merge priority, the upgrade risk. So instead of interpreting raw data, I have the session ready summary on what I should do. And that is around, it's around here, over here. And here is gathering everything, the intelligent cutting, the code analysis from the previous steps.
+and it gives us the summary. In this case, so here you can see, is the secure advisory? Yes. Potentially affected, there's no evidence of that. Overall risk is medium, merge priority, normal, upgrade, the risk, low upgrade. So now you have in the recommended action, of course, like
+normal priority. So here you can like take a step back. It was like, okay, we're good. And then the fourth step, which is not here because it was not needed. Let me find it over here. The fourth step is basically like a PM. So here.
+like if something looks risky or it automatically creates a tracking issue, which will be showing up on this tab. So now, for example, it will go through and nothing falls through the cracks and it will read and it will try to assess if there's a ticket already, an issue already created for this alert.
+or simply it will do nothing like in this case. So now instead of guessing, I can answer in a few seconds what I should do. Are we vulnerable? No evidence found. Is it urgent? Normal priority. Will it break anything? Low upgrade risk. That's the difference between kind of like reading a PR like before
+and now having all the information to make a decision and feel safe to kind of like go through this. Because like dependable alerts can look scary, but now you have something intelligent telling you that you're good to go, or it will open an issue to upgrade at a later rate.
+Date.
+And that's pretty much it.
+
+Oleksandr Pavlovskyi   26:21
+Cool, cool. I didn't remember if we had topics regarding to the GitHub workflows. Yeah, probably you're the first one. Yeah. So guys, interesting to hear your opinions, yeah, your experience regarding to usage similar approach. And any questions? Yeah.
+
+Chantal Justamond   26:29
+Yeah.
+No? Okay. This is available right now in my payment service. And since this has been kind of like a work in motion, I'm merging this into all my repos because this is truly helping me go through these vulnerabilities faster and safer.
+
+Oleksandr Pavlovskyi   27:07
+Mhm.
+
+Chantal Justamond   27:09
+So yeah, I'm pretty happy with this. The next step will be once the MCP in GitHub, it's available to us, I will be able to, whenever an issue gets open, I'll be able to create an issue in Jira. And that will be super cool. So that will help me to kind of like close the loop.
+On these vulnerabilities.
+
+Oleksandr Pavlovskyi   27:32
+Yeah, yeah, we are working on it. Yeah, we're working on getting approvals, yeah, regarding to these MCP servers. Yeah, yeah, Deepti, please.
+Well, unfortunately, we can't hear you. You're muted, but we can't hear you.
+
+   27:59
+The.
+
+Oleksandr Pavlovskyi   28:01
+Just try to reconnect. Yeah, it's usual issue for teams.
+
+Chantal Justamond   28:06
+Or maybe drop your question in the chat and I'll try to answer the best I can.
+
+Oleksandr Pavlovskyi   28:08
+Yeah.
+
+Chantal Justamond   28:15
+And I hope you guys can find it useful.
+
+Oleksandr Pavlovskyi   28:18
+It's definitely useful, it's definitely useful, and I guess it's gonna inspire. We have in the previous sessions we have many use cases with agents, yeah, but how to build for this agent from the using this agent the workflow?
+
+Deepti Pathak   28:22
+Yeah.
+
+Oleksandr Pavlovskyi   28:38
+This is definitely the first use case, yeah, and demo, practical demo. So guys, it's going to be the next level for your agents. So now you're able to build a small team with your agents.
+Hey, Deepti, are you back?
+
+Deepti Pathak   28:56
+Yep, I let me know if you all are able to hear me.
+
+Oleksandr Pavlovskyi   28:57
+What?
+Yeah, we can hear you now.
+
+Deepti Pathak   29:00
+Yay, okay, so yeah, I think when I connected it to my system, it's not working. Sorry about it. It's happening a lot. Just a small question regarding the advisory, right? I really like that. So the vulnerabilities, are you just reviewing it using all the different sets of PRs or are you involving any LLMs as well over there?
+Question to Chantal, yes.
+
+Chantal Justamond   29:24
+Yeah. Can you repeat your question for a second?
+
+Deepti Pathak   29:27
+Regarding the vulnerability analysis, right? Are you like using it using all the different PRs or are you involving any of the like LLMs as well on that part of it when you are doing the analysis, when that workflow is getting triggered?
+
+Chantal Justamond   29:39
+Well, yeah, the analysis is using GitHub Copilot, but I can change it to Claude if I wish. That's what I was using in my first attempt. But then Copilot was working pretty, was being pretty good on this workflow, so I didn't see the need.
+
+Deepti Pathak   29:44
+Mhm.
+
+Chantal Justamond   29:59
+to do something a little more complicated. And like you can add it in the top of the file. That's where like everything, like you can like assess and like the logging for depend on what is this. And then I want to use this type of agent, you can, you can change your LLM.
+So yeah, you can, you can do, you can, you can design it to do what you want. And the cool thing about this workflow is like, for example, if I like, it's also like compartmentalized, so you, I can enhance a step, but not touch the rest.
+
+Deepti Pathak   30:32
+Mhm.
+
+Chantal Justamond   30:37
+or use these steps in another part if I wish to as well. So you can like, you know, mix and match.
+
+Deepti Pathak   30:47
+Thank you. Yeah, if you get chance, if you can share the link, that will be great. Reason is I, another question is like the multiple agents you are calling, right? Is that in the same GitHub workflow YAML file or are you creating multiple workflows that way like maybe like let's say I want to use one set of agent and I don't want to use another set of agent, right? So.
+
+Chantal Justamond   30:56
+In the same, yeah.
+
+Deepti Pathak   31:05
+I can have it in that way. I just wanted to check that.
+
+Chantal Justamond   31:08
+Yeah, no, this one is in the is working in the same one in the same workflow at all the agents. There is an alternative that you could like, but I'm gonna say this like with a grain of salt. We could, for example, have a moment where like you can use a piece and with the MC.
+and for example, call ChatGPT if that would be like your tool of choice for, let's say, step three. But right now we can't because we don't have access to the MCP server right now. But I think that's also that is in the works. Once that's enabled, you know, you could like call ChatGPT if you want to, and like with the API keys.
+
+Deepti Pathak   31:31
+Mm.
+Yeah.
+
+Chantal Justamond   31:51
+Or you could like set it up with Jira, like I mentioned. So then whenever my issues get open, it will like be posted on Jira as well. So then we can have, you know, it will be automated. So then I don't have to go in and create another one and have a conversation with the product manager, this and that.
+It's basically right there and it can be assigned to like myself or someone else. I think that once the NCP server is, it's ready for us, I think it's going to be great. And then at some point we could use like Snyk for vulnerabilities as well.
+Or send rep, you know.
+After the NCP, it's open, we can have, you know, better tools as well. But you know, this one for me was an eye-opener of the things that I can do. I didn't want to just say, co-pilot, you're now a security update expert. I wanted to actually make it.
+
+Deepti Pathak   32:46
+Yeah.
+
+Chantal Justamond   32:55
+to be a security expert, if that makes sense.
+
+Deepti Pathak   32:59
+Makes sense. Thank you so much.
+
+Chantal Justamond   33:00
+Yeah.
+
+Oleksandr Pavlovskyi   33:04
+Yeah, yeah. Thank you, Deepti, for questions. Yeah, uh, guys, any other questions to Chantal?
+Cool, cool.
+things for great demo. Sukalya, Chantal, great demos. Yes, so today we have like a sessions here related to these agents workflows, yeah, and which is the trend. It's not a trend, it's a, I think you should all think of this evolution, yeah, but this is definitely a trend for 2026.
+Yeah, and guys, that's great that we have these use cases here, and next sessions we're going to have more interesting demos, so join us. Don't forget to submit your use cases here in our board.
+Of, and guys, have a great day. Yeah, see you tomorrow.
+
+Muhammad Adnan Farooq   34:03
+Alright, thank you, Alexander.
+
+Sukalya Rajendran   34:04
+Thank you. Bye.
+
+Iryna Pashko   34:05
+Thank you. Thank you.
+
+Oleksandr Pavlovskyi   34:06
+Thank you. Bye, guys.
+
+Deepti Pathak   34:06
+Thank you.
+
+ stopped transcription

@@ -1,0 +1,607 @@
+AI Enablement ENGINEERING Lighthouse Session-20260603_145921UTC-Meeting Recording
+June 3, 2026, 2:59PM
+44m 1s
+
+Oleksandr Pavlovskyi   0:52
+Ohh.
+Hey, guys, good morning.
+
+Shoaib Naseem   0:57
+Hey, good morning, Team.
+
+Oleksandr Pavlovskyi   1:00
+Alright, so...
+Today, we have...
+Two very, very important, yeah, and very interesting use cases. So, let's wait while people will join us here, and meanwhile, guys, do you have any questions?
+Okay, so let's give one more minute.
+Amit or Shoaib are here, you guys, who gonna be the first?
+
+Shoaib Naseem   2:03
+I can go first.
+
+Oleksandr Pavlovskyi   2:04
+Right, right. So let's give one more minute here while people will join us here. So our session will be recorded here.
+And yeah, so meanwhile, yeah, I would like to announce, yeah, that tomorrow we're gonna have a retro session, yeah, so guys think about what you would like to improve here in the phase three, yeah, any ideas, any comments here regarding to...
+Previous two phases here, and so.
+Don't forget you need to join us, yeah. And next week we're gonna have two demos, yeah. Two of our teams working on L3 use cases, L3 level use cases, yeah, and we're gonna have great demos from sign team and from servicing team.
+team. That's about next week. All right, all right, I see 21 people, yeah, and probably we can start. So, Shoaib, you're gonna be, you can start, yeah, stage is yours.
+
+Shoaib Naseem   3:18
+All right, thanks, Alexander. Hey, team, this is Shoaib here from SIAM team. So, recently I was working on a use case, which is basically to generate the AI based, you know, the release notes. So, as of now, most of the teams are, you know, managing that stuff.
+
+Oleksandr Pavlovskyi   3:18
+Yeah.
+
+Heath Fest   3:25
+On.
+
+Shoaib Naseem   3:37
+you know, manually, like we have to rely heavily on JIRA or even the GitHub to see like what are the changes that we do have and you know, different fields and the JIRA as well to try like what are the changes that are going to be published or released in the upcoming releases.
+And along with that, you know, if there are any prereqs to the release, like if there are any environment variables, or if there are any, you know, bulk production like database update tasks after the release has been, you know, released. So we will be managing that all based on.
+you know, the AA use case that I'm currently working on. And I have used Call Me Agent to design that workflow. And it starts by taking, you know, the four parameters from us. Like it will take us the, yeah, let me share the screen meanwhile.
+Alright, so this is the complete workflow diagram, and we do have a couple of iterators that, you know, do the...
+Processing that we get to do on the iterator, and every node gets some input, process the information, and you know, we fed that data to the next node just to, you know, process the information. So, in the start, we are basically, you know, giving the four parameters, like which is the...
+repository like that that agent need to look into and what is the previous release tag like that has been released and what is the current release like it will you know contain the tag that is created for the release and then we have the JR board like.
+
+Heath Fest   5:35
+And.
+
+Shoaib Naseem   5:39
+if we are creating different Jira boards based on the prefixes, like that different teams are using to generate their tickets. So that's how it gets started. Like we can, you know, segregate or create those separately for the different teams.
+So, yeah.
+Yeah, so this is just to format the stuff. Like once we do have the data in the JSON, we do get the, you know, information from the GitHub API that we are calling to get, you know, all the commits that are available in the difference that we get in the current release.
+and the previous release that has been rolled out. So that does have a lot of information. Let me show you. So that's the information that we get once we call the GitHub API. And from there on, we need to, you know, collect the...
+You, you would say like the commits, the ticket links, and also the JR keys or the client IDs that would need to, you know, process the further information, and the next node.
+Yeah, so this is the node that I have used to format the stuff. Like it does have the different commit messages that are available and that you would say release differences.
+And yeah, we do have the file inventory as well, like in which file those changes have been made. So we do have all that information available at this stage.
+So this is the piece where we were, you know, getting stuck. Like this is a lot of information, so we need to do it. And you would say, you know, pagination or batch processing, you would say. So we did that and we get, you know, the PR numbers.
+the Jira keys and the messages that are available. Yeah. So this is the output that we can see on the right panel.
+Yeah.
+And once we do have like all of the information, we did, you know, aggregate or combine that output in this node.
+Like it does have all of the PR numbers that are available, all the ticket numbers that are associated with those pull requests, and you know, the file changes that have been identified, so we did get that, you know, information composed.
+In a single node.
+All right, so here is another iterator, which is basically now pulling those pull requests, you know, just to analyze like what are the changes or the code changes that have been made out during that release, like either these are the bug fixes or are there any new feature implementation and stuff like that.
+
+Heath Fest   9:06
+Hey.
+
+Shoaib Naseem   9:07
+So, we can, you know, get that all in that iterator.
+And then we finally, you know, aggregate the release notes.
+Like...
+Mhm.
+So now this panel does contain a summary, like the changes that have been made, whatever the case, like as I have mentioned, there can be multiple bug fixes, the new feature implementation and stuff like that. So it does contain all of the information in this JSON. So after that we does.
+you know, have to format the release notes so that we can publish it on the GitHub. Like manually, we need to create that release notes as of now in the GitHub. So once that information is there, we can, you know, format and publish that information on the GitHub, you know, once we create the release.
+Alright, so this is the one that you know gives us the body of the release tags, and we did use that, you know, node to update the information on the GitHub.
+And we pass on that information, you know, to the GitHub endpoint that basically publishes the GitHub release notes finally.
+So now I can, you know, walk you through the release notes that I have published for one of the workflow in, you know, our repository. Like I have done this for the previous release that we have rolled out in the SIAM team. And we can see like the release variant is there, what are the features that we have worked in that particular release.
+and if there are any bug fixes or enhancements. And also it will let us know like if there are any configuration changes, like introduction of any new environment variables or stuff like that. So we does have that information as well. And it also, you know, highlights the risks that are available.
+Like, if that's a large release, yeah, so it will, you know, let us know, like...
+If there are any...
+important information that the leads or you know the project managers need to review before they roll out the stuff. So yeah.
+And this is the list of all the, you know, tickets that have been rolled out in a particular release.
+Yeah, so it does have like the two boards as we are using two boards. So we can integrate those multiple, you know, boards of the Jira as well. And here is the list of the included PRs.
+Yeah, that's all that we have as of now. If anybody has any question, you are welcome to ask.
+
+Oleksandr Pavlovskyi   12:39
+Yeah, I would say that looks like a very huge release. So many tickets in one release, yeah. And how regular we have the, you have these releases? I mean, monthly, weekly, and so on.
+
+Shoaib Naseem   12:45
+Yeah.
+
+Praveen Lakshman   12:58
+Let's take it back there. There are something like you have anything ginger, something. So not quite as sweet as a ginger in, but it's a nice tag to it. It's the only place I've ever found that has just the ginger and family's live ginger. I think he thinks he has a ginger live.
+
+Shoaib Naseem   12:59
+Yeah, it's not that like, you know, hardlined. Like this release was a major one, maybe it's around 40 plus days. So that's why it does have a lot of tickets and you know, the changes in it. Like it goes from 7 point something to 9 point something, so that was a major.
+You know, big jump.
+
+Praveen Lakshman   13:19
+But it's.
+
+Oleksandr Pavlovskyi   13:20
+Mhm.
+Yeah, and I think it's pretty accurate information because you are using this iterative process, yes, so you're working with the separate chunks, yeah, and it's helped you to be sure that you got the accurate summary regarding to each increment of your product.
+
+Praveen Lakshman   13:24
+That's all.
+
+Shoaib Naseem   13:31
+Yeah, yeah.
+Yeah, correct.
+
+Oleksandr Pavlovskyi   13:44
+To each each pull request, yeah, that's pretty great.
+
+Shoaib Naseem   13:47
+Yeah, that was a problem that we were encountering, like when I was working on the agent, you know, design, because that release was, you know, a bulky one. So we were able to extract that information for the minor releases, but for this one, we...
+You know, it does have to do like the batch processing, and you know, do it in iterators, so yeah, the information is pretty much clean, and you know, relevant one, so yeah.
+
+Oleksandr Pavlovskyi   14:19
+Cool, cool. Guys, guys, any questions?
+
+Deepti Pathak   14:27
+I have a silly question. I joined late. So when this getting triggered and how does it get triggered?
+
+Shoaib Naseem   14:37
+All right, so as of now, we are doing it manually, but in the real time or production environment, we will use a webhook like the GitHub, a GitHub webhook. Whenever we are creating a release, let me show you.
+
+Deepti Pathak   14:50
+Mhm.
+I do.
+
+Shoaib Naseem   14:53
+So we do have multiple tags available, so we can select a tag for which we want to create a release. So whenever we will create a release, that workflow will be triggered, and you know, it based on the size or, you know, the information it has to process, it can publish those release notes.
+
+Deepti Pathak   14:56
+Mm.
+
+Shoaib Naseem   15:13
+you know, maybe in 25 to 35 minutes. So this is the button that we have to, you know, click.
+And once that button is clicked, we will trigger that workflow.
+
+Deepti Pathak   15:24
+Okay, and this is specifically for new release, right? So, let's say in our case we have like not the releases, but we both basically merge our code from, for example, stage to prod, and then I do want it all the details which you are fetching it right now, like, because we have a sequential branching strategy, so...
+
+Shoaib Naseem   15:39
+Mhm.
+
+Deepti Pathak   15:43
+I agree that let's say we have multiple developers who are creating the task in a feature branch, then it gets merged to dev end, right? Eventually it goes to dev, QA, and then prod. But when it goes to QA, prod, we don't know what other changes has been added. So let's say if I want to use your workflow, can that be implemented or we'll have to do the little bit of changes there.
+
+Shoaib Naseem   15:52
+Mm.
+
+Deepti Pathak   16:02
+So, if I want to use your workflow.
+
+Shoaib Naseem   16:05
+So ultimately, you know, every tag is a commit. So I think that's doable and there is no additional efforts that you have to make in your case.
+Because we are creating, you know, tags on every commit or merge to the main, and you can figure out that based on the branches that we need to do.
+
+Deepti Pathak   16:21
+Mm.
+
+Shoaib Naseem   16:25
+So you can say this is basically a commit hash.
+
+Deepti Pathak   16:26
+Oh.
+Okay.
+
+Shoaib Naseem   16:29
+And every commit hash is mapped to a tag or the number.
+
+Deepti Pathak   16:34
+Okay, but can we use this workflow for our like for just a sequential branching if we don't use tags or releases.
+
+Shoaib Naseem   16:45
+Yeah, in that case, there must be some tweaks that we need to make. So yeah, I can generalize that stuff, like if there is, you know, not any tag creation stuff. So how we can, you know, incorporate that on the releases or the commits directly. So yeah.
+
+Deepti Pathak   16:45
+Ohh.
+Okay, okay.
+Okay, thank you. And one last question, so sorry. So any reason we chose code me, why we can't do this with the GitHub agent? Was there like you were facing any issue? Because we have a similar thing. We have done it using the just normal GitHub action workflow where it fetches.
+
+Shoaib Naseem   17:05
+Hi.
+You're welcome.
+
+Deepti Pathak   17:22
+all the information of what Jiras we have deployed it and it puts those inside the PR description. So I would like to know was like code me was more good and you were able to like fetch this information for different Jiras, different PRs that was the reason or just you just chose it just for like, doesn't matter.
+
+Shoaib Naseem   17:43
+So it does have, like there is not a specific reason for that. So it's just that we does have, you know, a lot of integrations or connectors already available there. And all of the other team members were also using that. So I just choose that as well. Yeah.
+
+Deepti Pathak   17:47
+Mm.
+Okay.
+Okay.
+Thank you so much.
+
+Shoaib Naseem   18:01
+No worries.
+
+Sukalya Rajendran   18:03
+Hi Shoaib, I had a question about the input. So the release notes that you're talking about is what's getting published on GitHub, right? Not directly on JIRA. And do you use releases in JIRA, like the fixed version or anything? Because that's what we use. And like Deepti said, I wanted to understand if this can be expanded to publish the release notes on JIRA as well.
+
+Shoaib Naseem   18:04
+Azure.
+Yeah, as of now, like, we don't have that, but definitely, like, we can do it in the, you would say, enhancements or in the future. Like, as of now, it's only on the GitHub, like, expanding that.
+
+Praveen Lakshman   18:31
+Yeah.
+Chez.
+
+Sukalya Rajendran   18:36
+Okay.
+Okay.
+
+Praveen Lakshman   18:41
+We do, yeah, we do certain things using the MCP for a Jira, but right now we have only read access and we don't have any write access on Jira, so we tried exploring couple of things and because still we have not received any of the write access, so it is right now.
+
+Shoaib Naseem   18:43
+Yeah.
+
+Sukalya Rajendran   18:50
+Okay.
+
+Praveen Lakshman   19:00
+Just we are limited our work only for the reading the JR and those kind of things.
+
+Sukalya Rajendran   19:08
+Okay, so you mean from code me directly publishing to Jira is not an option now and that's why you're just reading it and using it as an input and not really writing output. Did I understand that right, Praveen?
+I.
+
+Praveen Lakshman   19:21
+Yeah, we were using MCP for a couple of Jira tasks. So I don't know, I'm not really explored, code me on that. But yeah, Alexander can talk about that. But yeah, right now what we have is only read-only access. We have not received any of the write access.
+
+Sukalya Rajendran   19:24
+Okay.
+Okay.
+
+Praveen Lakshman   19:39
+Because we do, we do create a backlog task, where, like, we have some of the AI agent which reads the confluence document, email, meeting notes, and all, and it spits out the user story, and only our, like, when we try to...
+
+Sukalya Rajendran   19:53
+Mhm.
+Mm-hmm.
+
+Praveen Lakshman   19:58
+Ask them to create a backlog, it comes back and tells it doesn't have sufficient access to create anything in the Jira story, so.
+
+Sukalya Rajendran   20:02
+Oh.
+Okay, got it. Thank you.
+
+Shoaib Naseem   20:13
+Okay.
+
+Oleksandr Pavlovskyi   20:14
+All right, guys. Any other questions?
+
+Praveen Lakshman   20:18
+And Alexander, do you know if code me? Yeah, it again depends on that, right? Is code me as access to write it to Jira?
+
+Oleksandr Pavlovskyi   20:19
+Wier.
+Seems like we limited in a in a case with integrations, yeah, but we looking forward when we gonna implement the MCP servers and in this case, yeah, we gonna have abilities more abilities, yeah, it's gonna be like on the level of API calls, and in this case, it's possible to do.
+
+Praveen Lakshman   20:32
+Okay.
+Of.
+
+Oleksandr Pavlovskyi   20:45
+So let me double check with our code meeting, yeah? You want to get it possible, because today with Deepti, we discuss similar, yeah, limitations. So Deepti, maybe this is the same, yeah, in your case, when we try to do to make changes.
+
+Praveen Lakshman   20:49
+Okay, thanks.
+
+Prachi Chati   20:50
+Up.
+
+Deepti Pathak   21:00
+Mm-hmm.
+
+Praveen Lakshman   21:00
+Yeah.
+Yeah, yeah, and then.
+
+Oleksandr Pavlovskyi   21:03
+Ohh.
+
+Deepti Pathak   21:03
+Yeah, so if I'm also using the similar workflow where I wanted to post whatever has been fetched from the assistant and post it without users permission into the JIRA, but I get like error. So yeah, I did ask this same question if we can do it. But normally from the assistant, we definitely have the access to post the comments.
+
+Oleksandr Pavlovskyi   21:24
+Yeah, yeah.
+
+Sukalya Rajendran   21:25
+Yeah, we actually had a workflow that actually created tasks on JIRA for us in the DFP board. Like we had catalyst tasks based on which it will get triggered and then it will create the downstream JIRA tasks for us. So that was working, but we had to give explicit instructions to publish the information either to confluence because we...
+
+Deepti Pathak   21:30
+Mmh.
+
+Sukalya Rajendran   21:46
+tried in the past to publish some status reports to Confluence and that worked as well. But I have not used MCP server, so I'm not sure about that.
+
+Oleksandr Pavlovskyi   21:58
+Yeah, let's clarify this, yeah, but I can suppose that's because of some security policy, yeah. So where are you working with the chart, yeah, you're giving your approval, yeah, you control this process. But when you would like to automize this, yeah, with workflows for examples, yeah.
+
+Deepti Pathak   22:13
+Yeah.
+
+Oleksandr Pavlovskyi   22:17
+This can be reasons of some.
+Not functional, yeah, things, yeah, that can be doing by this AI tool, yeah, without your notification. So maybe, but let me check here regarding to this.
+
+Shoaib Naseem   22:24
+The.
+
+Prachi Chati   22:28
+I.
+
+Oleksandr Pavlovskyi   22:38
+I saw similar issues, but in different tools, and that was because of the security policy. Probably we have the same in economy, but let's discuss it.
+Yes, it's going to be great to have like a service account, yeah, which going to have these permissions. Yeah, for example, like a bot. So all things that we're going to see in Jira, yeah, that's going to be permitted to these bot, yeah.
+and you gonna have ability to...
+Split, yeah, for example, some actions that you are doing by your account, yeah, when you're working in it, for example, in a code meeting in the chart, yeah, and this bot, yes, it's in this case, like we have similar, I think, in a GitHub, yeah, with our copilot code reviewer, for example.
+All right, guys, if you don't have any questions, let's move to the next demo. Shaib, thanks. Great, great use case, great demo. So looking forward to some more improvements in this case, more automation. And let's move to Amit. Amit.
+Are you ready?
+
+Shoaib Naseem   24:03
+All right.
+
+Amit Kumar   24:05
+Yes.
+Hey everyone, good morning.
+
+Oleksandr Pavlovskyi   24:08
+Right. Good morning.
+
+Amit Kumar   24:12
+So, yeah, my name is Amit Kumar and I am from regulatory compliance team.
+This is one of the use case that probably some of you might have already done it. I don't know, but we thought, you know, we can still give a try and show it to the group, you know, and I'm going to share my screen.
+And first explain the problem or you know what exactly they're trying to solve here.
+So then we are working on any changes and we are pushing in a GitHub, right? What we have been doing is engaging co-pilot. So considering, you know, this is one of my feature branch where I had, you know, worked on a lot of changes and then when I'm pushing it through higher branches, I obviously need to have it reviewed by somebody in my team or.
+or to my peer. So before I do that, I engage Copilot. So there is an option there, you know, in the reviewer option, you can request Copilot and it will do all the code review that you have done it. So let's say I have 6 files over there. If you engage Copilot there, it will start doing a.
+Copilot review and list down all the comments there. So I think I do have one PR that is already reviewed by GitHub Copilot in there. I can go there.
+Yeah.
+So if I look into this PR, I had engaged Copilot and it had already given you a bunch of comments.
+And if you look at each of those comments, you see a couple of options, right? Either you can, if it's a straightforward change for Copilot, it will prompt you to, you know, do a commit suggestion right there, and you can commit the changes. It will go to your feature branch or which whatever your source branch will be, it will go and commit that change into that.
+And if it's a complex change, it will give you an option to fix with Copilot. And if you had a pretty large change, right, you would end up seeing probably, you know, large comments and a lot of options with fix with Copilot. And with each click that you make here fix with Copilot, what Copilot is doing is it's creating another Copilot branch.
+And it will try to make changes into that specific change for this comment into that co-pilot branch, and will try to merge into feature branch, but again, everything that you are doing here is happening inside the GitHub. End of the day, you still have to bring all the code that.
+Copilot is doing in GitHub to your local to make sure the functionality is working intact, no matter how many, how much coverage you would have put, even if unit test is passing, you know, as pipeline, as you look through your pipeline, you still have to ensure the changes, the functionality, the use cases that is being.
+touched here as part of the code review fixes is working, right? So you do bring all the code in your local. So considering I had 10 fixed with co-pilot, right? I would be bringing each of those 10 codes or 10 PRs into my local, make sure the functionality is working, and then once it looks good, I go ahead, you know, merge those branches and push it through higher environment. So.
+So it takes, I think, a lot of time when we have to, you know, bring code from GitHub into our local and then we test it through, you know. So I think in order to save time for those fixes to be first created in GitHub and then bring it in local to test all of them.
+What we thought, you know, we can engage MCP server here, which can do a real-time integration with GitHub, generate all the PR comments that you would have seen with engaging Copilot over here.
+And when you do that, it's not only lists down those comments or reviews in the GitHub, it also lists down all the changes or review summary over here as well.
+And by looking at the review summary, so in my case, you know, I had this MCP server added here in the IntelliJ tool, and you can look at that, you know, obviously the authentication, then you add the details, and I think in the last meeting, Alexander did go over in the Visual Studio how you would have, you know, authenticated your MCP server with GitHub.
+Once you have successfully added those or authenticated your GitHub or IntelliJ or whatever ID you're working with GitHub, you will be able to see these options like running, stop, restart, and my server is already running. As you can see, it's ticked. And you can give this prompt to view the GitHub.
+Pull request with the pull request link over here, and it will do all the review summary, and as I mentioned before, it will go over the PR changes that you would have done, list down all those changes, not only in GitHub but also here, and looking at them, you can.
+Prompt, you can again put your prompt over here and ask GitHub to make changes. When, when, when you do that, it tries to make all the code review fixes here in the local itself, you know, so that you don't have to go back and you know, I mean, you can still ask Copilot to create a PR, you know, PR branch, you know.
+But I think the problem that we are tackling here is to make sure we are living close to the code, and that's why looking at this comment, you can prompt Copilot, or you can instruct Copilot here to, you know, make those fixes here in the local itself, so that you can test all of them at once, and once it looks good from your from your from your use case perspective.
+Then you can push all the changes from the from the commit that it had it had created for you.
+Am I making so and so far any question?
+
+Oleksandr Pavlovskyi   30:21
+Yeah, definitely one of the most popular use cases here, because we need to do this like a hands-on code review, yeah, on your local environment. Just review code, I mean, in a just review code in a GitHub, yeah, and understand what was changed, yeah, it's...
+
+Amit Kumar   30:33
+S.
+
+Oleksandr Pavlovskyi   30:40
+Not so easy. So, in addition to this, you can also use, for example, Atlassian MCP. You have to connect your JIRA and compare regarding to the requirements implementation here also. So, yeah, great use case, guys. Yeah, Amit, would you like that?
+
+Amit Kumar   30:42
+So...
+
+Oleksandr Pavlovskyi   30:59
+Yes, something new.
+
+Swathy Lokula   31:03
+Sorry, Amit, I have a question. So currently, how we get it done is GitHub does a code review for us before we push the PR ahead. So what you're suggesting is, instead of GitHub doing the code review, we do it locally in the brands that we are.
+
+Amit Kumar   31:03
+I do see some questions.
+
+Oleksandr Pavlovskyi   31:05
+Yeah, yeah, please.
+
+Swathy Lokula   31:22
+But what is the agent that, once you connect to MCP server via for GitHub, what is the underlying agent that is going to review? I missed that, I think.
+
+Amit Kumar   31:33
+So...
+You can have, you can configure your agent or you can have the default agent picked up from here to do the code review on the PR that was created in GitHub.
+
+Swathy Lokula   31:46
+Okay, so there is nothing specific. Yeah, just connecting via MCP, but you can still use any underlying agent for code review. Got it. Thank you.
+
+Amit Kumar   31:47
+OK.
+Correct. So, so let's say as a developer, you know, when I am reviewing my PR through GitHub and I see, you know, a bunch of these high comments, you know, prompted or or came up in doing the PR review, right? I can ask Copilot here to go ahead and you know, fix the...
+So instead of doing the, or instead of engaging the GitHub Copilot and GitHub tool and have them create the PR, bring the code in your local for doing the testing, you can get this comments, grab this comments here, put it in here, and let the Copilot make the changes here in the local itself so that you know what.
+What exactly been changed, and then, based on the changes, you can, I mean, if you feel, I mean, obviously you will do the testing, and once you feel comfortable, you can push in changes from here.
+
+Swathy Lokula   32:50
+Yeah, absolutely. That's a very good test case.
+
+Amit Kumar   32:54
+So, again, I would have probably, you know, taken this one short example here, but...
+The bigger the changes, the bigger the instructions are, and then you engage Copilot, you know, 10 times. And again, I'm just throwing a number there, but I think depending on the volume of PR, you will see a lot of a lot of engagement with Copilot, you know, so I think in order to reduce that friction and time, you can do all of this in the local.
+Any other questions?
+
+Oleksandr Pavlovskyi   33:34
+Guys, how about you? Yeah, do you use MCB servers for to do this local code review?
+which approaches are implemented in your teams.
+Yeah, and in this case, you can also use, so we should remember that we need to do, yeah, while we're using, for example, our code review agent on the GitHub level, I mean, in a web version, yeah, when it creates for your pull request, for example, if you need to validate this pull request as well, yeah, in this case,
+
+Swathy Lokula   33:52
+Yeah.
+
+Oleksandr Pavlovskyi   34:13
+I think it definitely makes sense to validate it locally.
+Ohh.
+For example, in case of Amit setup, yeah, I mean the project that is that they can see, so it's definitely gonna help helpful to validate the proposed changes, yeah, because with MCP server you have ability to read not only.
+The code, you can have ability, you're gonna have ability to read comments, read, I don't know, some things, yeah, that related to some specific task, yeah, or maybe some specific pull request.
+
+Praveen Lakshman   34:59
+So, basically, this helps right where I know now we do have a pull request agent where any customer when any of our team member raises a pull request, the first gate they need to go through is our agent which goes through looking to all the architecture workflow, whether they are.
+follow the same pattern, naming convention, everything. And it gives all the commands where the developer has to go there, close all the commands literally before assigning, asking some other developers to review. So basically this helps where you should be able to do it locally. And once you...
+then raise a PR, it should literally pass it, right? And every time because you have done it already the same workflow locally, it has been tested and you are just pushing that whatever the PR review comments you are supposed to get it was already fixed on the local, right?
+
+Oleksandr Pavlovskyi   35:55
+Yeah.
+
+Amit Kumar   35:55
+Yeah, yes, so, as you can see, you know, I just instructed, you know, Copilot here to do the changes, and it has started, you know, making those changes in the local itself.
+
+Sanjay Kumar Parui   35:57
+Ohh, what?
+
+Prachi Chati   35:58
+But then...
+
+Sanjay Kumar Parui   36:05
+One question here, sorry.
+
+Prachi Chati   36:05
+But Amit, you will be using the same agent. Are you going to be using the same agent like GitHub Copilot over here, or like the Copilot same agent, or would that change? If you change the agent, will it catch something else in the PR?
+
+Amit Kumar   36:16
+Yeah.
+For sure, you know, based on the agent that you, so I can, we have like agent instructions, right? You can definitely have your agent instructed to do something. You know, maybe I'm looking for a data source or connection pool that is open. So it will definitely be looking more into that area, but this is just a normal agent that I had tried.
+
+Prachi Chati   36:26
+Yeah.
+
+Amit Kumar   36:39
+Fit with with with Michael Pierre.
+
+Prachi Chati   36:39
+Okay.
+
+Praveen Lakshman   36:41
+Yeah, Prachi, for your question, yes, those review comments differs based on the agent you pick, so you do see the variations there.
+
+Prachi Chati   36:50
+Yeah.
+Yeah, okay. Because you have a comment over here, but then when you actually push it to GitHub and when you ask it for a co-pilot review, it could bring out something else, right?
+
+Praveen Lakshman   36:54
+Yeah, so I think, because I think Steve is going to be constrained since you have to go up to these contractors, I think, for saying things out of them.
+Yeah, it depends on, yeah, in your GitHub repo, it depends on which agent you have configured, so you should be able to test it with the same agent.
+
+Amit Kumar   37:05
+Right.
+
+Prachi Chati   37:10
+Got it. Yeah, yeah.
+
+Sanjay Kumar Parui   37:15
+One question, like I think we are talking about like having this review. One is at the after we commit and one is at the time of application development itself, right? Like in code. So in the code, like we normally won't have that agent come in. We manually probably have to add it right for that repo. So how are we going to handle that?
+The repo-based agent versus having that in the GitHub report itself, like...
+He.
+
+Amit Kumar   37:44
+Maybe I didn't get good questions, Sanjay. Can you come up again?
+
+Sanjay Kumar Parui   37:46
+So, so now, like now this agent runs in your in your local right now, you you're planning to do that set up for your Copilot agent in the GitHub report. So, there are two things like GitHub report configuration and your local configuration. So, if you want to run locally, so every developer must have that agent.
+
+Oleksandr Pavlovskyi   37:52
+Yeah.
+
+Sanjay Kumar Parui   38:07
+Bring it to your, you know, studio, right, and then have that run before it gets committed.
+
+Amit Kumar   38:16
+So I think what I'm trying to showcase here is to save the time that you would be spending for each of those fixes Copilot had done in the GitHub that you bring in your local and do the testing.
+
+Sanjay Kumar Parui   38:28
+Mhm.
+Mhm.
+
+Amit Kumar   38:32
+That is what I'm trying to showcase here. So once.
+
+Sanjay Kumar Parui   38:35
+Mm.
+
+Amit Kumar   38:37
+Once you have the PR ready, a developer can itself go ahead and you know generate the comments, and based on the comments Copilot is giving for you, you can engage those. I mean, you can have those Copilot, you can have those comments run through Copilot and get them fixed in the local.
+
+Sanjay Kumar Parui   38:56
+Okay.
+No, I yeah, I I can get that. I think that.
+
+Amit Kumar   39:02
+And as far as the agent is concerned, you can definitely configure the agent here. You can, if you would have already configured it, they will start popping up here itself as in the dropdown.
+
+Sanjay Kumar Parui   39:12
+Exactly, that agent configuration is what I wanted to ask. Right now, what I see is that agent configuration is at the application level. Like you have applications, e-dispute, management, right? So if you have a different application, you probably have to again configure it for that particular application.
+
+Amit Kumar   39:28
+So.
+So what we had done, like we had created this private, you know, GitHub repo where we have configured a lot of agents. Every developer can make sure that they are, again, this is again with our team, we can download this repo in our local and make sure we are running through this agent's instructions. If you feel like, you know, these instructions are not enough, go ahead and update that and make sure they are part of the GitHub.
+
+Sanjay Kumar Parui   39:33
+Mhm.
+Mm.
+Got it.
+Oh, I see.
+Mhm.
+
+Amit Kumar   39:54
+process or checked into the GitHub so that everybody can benefit out of it.
+
+Sanjay Kumar Parui   39:59
+Got it, got it. Okay, I get, and now I'm getting it. Listen, I think that that's a question of probably, I don't know if you can help us solve that. So basically, like everybody has, every team probably have like multiple agents, right? And they are keeping that in the common repo in the GitHub. But then in order to use this, they need to check out that and add that.
+The agent to the particular application? Is it something possible that you know you do one configuration in your studio which which now is available to to all the you know applications as the dropdown, so that you know they don't have to worry about it?
+
+Oleksandr Pavlovskyi   40:28
+View.
+I.
+You, yeah.
+Yeah, it's the same like we have in the Visual Studio Code, yeah, or in a Coursor. It's definitely the same, yeah. You know, you have your project GitHub folder, for example, if you're talking about GitHub, GitHub compilot agents, yeah, and you have global.
+GitHub folder, which is located inside your user. I can talk regarding only to Windows. Yeah, I don't remember how it's, where is it located in a Mac, yeah, but it's going to be the same. So you have your global workspace folder, yeah, where you have
+
+Sanjay Kumar Parui   40:57
+Okay, Global.
+Okay.
+Yeah.
+
+Oleksandr Pavlovskyi   41:16
+the same GitHub dot GitHub folder, yeah, and this folder going to be shared around all your projects. But if you're going to have only some specific instructions or agents that are related to your project, you can use your dot GitHub folder inside your project.
+
+Sanjay Kumar Parui   41:23
+Perfect, okay.
+Mhm.
+OK, would you mind sharing that some map sample so that I can configure it? Trying may not be in this call whenever here get it.
+
+Oleksandr Pavlovskyi   41:36
+Yeah.
+Yeah, yeah.
+Yeah, yeah, yeah, I will, I will give you the link to this guide here, or paste to this chart here, so everybody, yeah.
+
+Sanjay Kumar Parui   41:45
+Okay, sounds good. Thank you.
+Yeah, that sounds good to me. Yeah. Thank you.
+
+Oleksandr Pavlovskyi   41:58
+Right, guys, any other questions to Amit?
+Cool demo, yeah, and I think this is very, I think it's very popular use case, yeah, so guys feel free to use MCP servers, yeah, that's gonna give you ability to be more dynamic, yeah, and do the code review for your code or for your teammates, yeah, and of course.
+after the, for example, your agent's code review when they created a new pull request. Of course, you need to validate this pull request running on your local environment before code merge.
+All right, so guys, Amit, thanks for your demo. Yeah, Shoaib as well. Thank you. Great demos. Next time we gonna have two or even 3 demos. Yeah, I need to confirm with Loquen. Yeah, he gonna be available from Monday, yeah.
+
+Amit Kumar   42:46
+Thank you.
+
+Oleksandr Pavlovskyi   42:58
+And we continue talking about the workflows, yeah, and maybe, let's say, level 3 use cases. So don't miss this session that's going to be next Wednesday. And guys, if you're going to have any more ideas, yeah, and you would like to showcase,
+This, we're going to have only one session in a phase two. As for the phase three, we are aligning regarding to the plans here, so we can inform you about the next steps in our EA enablement program. So guys,
+Thank you all and have a great day. So see you tomorrow here on our retrospective session.
+
+Prachi Chati   43:48
+Thank you. Thank you.
+
+Amit Kumar   43:48
+Thank you.
+
+Sukalya Rajendran   43:48
+Thank you.
+
+Sujan Shrestha   43:49
+Sure, thanks.
+
+Oleksandr Pavlovskyi   43:50
+Yeah, bye, guys.
+
+Deepti Pathak   43:52
+Hai.
+
+Shoaib Naseem   43:54
+Alright, thanks everyone.
+
+ stopped transcription

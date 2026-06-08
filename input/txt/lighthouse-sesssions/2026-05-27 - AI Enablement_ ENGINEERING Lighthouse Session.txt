@@ -1,0 +1,561 @@
+AI Enablement ENGINEERING Lighthouse Session-20260527_145937UTC-Meeting Recording
+May 27, 2026, 2:59PM
+52m 19s
+
+ started transcription
+
+Oleksandr Pavlovskyi   0:51
+Progress.
+Nice, good, good. Can you hear me?
+
+Vazgen Ayrapetyan   1:05
+Yeah, I, I also.
+
+Oleksandr Pavlovskyi   1:07
+Okay, great. All right, so let's wait for a couple of minutes here. Today we're going to talk about...
+The members to be.
+Yeah, it's going to be especially interesting for those teams who work with designs, who use Figma as a source, yeah, of some additional requirements, web developers, product managers, and so on, but we're going to talk about Figma.
+server in the perspective of implementation, yeah, so I was again has prepared a showcase, yeah, how they use it, yeah, and also there's gonna be a chance to discuss some corner cases with this MCP server, yeah, and try to find a way how we can optimize the context, yeah, how to use.
+maybe more lightweight models, yeah, because for huge projects, we understand the context is huge, yeah, and here we need to use some approaches that give us ability to save the tokens. So, yeah, let's.
+Give one more minutes while I guess switching from their calls, yeah.
+And we're gonna start.
+Alright, let me check here, the recording started. Alright, so was again.
+Hello again, are you ready?
+
+Vazgen Ayrapetyan   2:50
+OK.
+Yeah, think so.
+
+Oleksandr Pavlovskyi   2:54
+Cool, cool. So, this dish is yours?
+
+Vazgen Ayrapetyan   2:55
+Let me share my screen.
+Okay.
+
+Praveen Lakshman   3:00
+This has been recorded, right?
+
+Oleksandr Pavlovskyi   3:02
+Yeah, yeah, yeah, sure.
+
+Praveen Lakshman   3:03
+Okay, thank you.
+
+Vazgen Ayrapetyan   3:06
+Yeah, okay, so I guess I'll just start off with if anyone is not yet set up.
+Uh, there, big MCP server, I can start off in cursor and in VS Code. Well, in cursor, you would go to the cursor settings, like, like your usual MCP servers.
+Mm.
+And here at the bottom, you would have, you'd have to install the extension if you don't have it already. And similar to the other ones, you would have to log in and go through that flow. On VS Code, it's usually, well, you have an MCP JSON, and you can technically start the service, start it right here by clicking it.
+Right, that's standard procedure, I guess, with MCP servers. So hopefully everyone's familiar with that. And I guess I will move on to, well, we prepared here.
+some designs. So the ticket that I'm going to address is this one right here. It's Auth1520, which basically says...
+There's going to be a bit of a redesign on the login page, so to implement the redesign of the login page.
+
+Oleksandr Pavlovskyi   4:20
+No.
+
+Vazgen Ayrapetyan   4:24
+Based on the attached Figma new design, those designs attached to reference, as you can see down here, we have the web links for the old and the new design, and this is basically coming from Figma, so you can...
+Right click on any screen and do copy as link. You can get that link for that screen. So here I've attached.
+the old and the new design. Norm, I mean, I'm not really sure if you really need the old design, especially if we get the Chrome DevTools MCP, which is not approved yet, but that would allow, you know, the AI to just run your app and take a screenshot of the current state. But since we don't have that yet, I've just included the old design for reference. I think usually the new design will.
+Suffice, but so we want to change a couple things here, mostly minor, like the alignment, the inputs changed a little bit, placeholders, toggle change, we have a new...
+and some links changed. So, of course I can, you know, if we had a Yury ticket to fully compare these, you can of course write this out, everything that needs to change, and you might get better results. But for the interest of testing this MCP server, I wanted to just have it.
+determine whatever the changes need to be. So the GRA ticket is not that detailed. It doesn't talk about all those different things. So it does say there's minor cosmetic changes alongside the entirely new design toggle switch. Also, we wanted to put the functionality behind the feature flag so that we can switch it back.
+The redesign should only be enabled for web, not for native apps, so it's going to have to put that flag in here. I just attached some links because we have two new links over here, and obviously we got to give it the URLs. So that's it. As you can see, there's nothing here that says exactly what to implement.
+The goal is for it to figure it out. I have a skill here, and I won't go too deep into it because I want to focus mainly on like the Figma aspects.
+But we do have to implement Jira scopes to be part of our PDLC, and basically the workflow is, well, the workflow will be.
+Simple as this, you know, and just give it your number 1520. That's about all you need to do. Part of the process will be, you know...
+
+Praveen Lakshman   6:48
+And...
+Yeah, just to add a context, what Waz is trying to show is basically we already have a one-screen login design, and he has integrated with the MCP Figma and Atlassian MCP basically to pull the Jira ticket and even go and capture what is the new screenshot.
+So, basically, we use this for A/B testing. We have one set of screen design and the UI designer come up with the second screen, and usually we create a future flag and we enable 50% of the traffic to the one screen and the new screen, and we see how the customer is doing, basically, which...
+screen the customer is pushing more traffic to and decide and finalize on that. So that's where Waz is trying to show more like we have already have one screen.
+This is a new screen design and that is we are trying to use the MCP Figma because the screen design is in MCP the Figma and generate the code and then show how you can implement that the code generation as a part of AI tool. And there is more than that.
+Is.
+Just talking very specific, and he's showing that multiple repository are a meta repository, but I think there is one more thing we can take it later in the third phase or something where there are guidelines, architecture, everything has been said when considering how we need to generate a code, what kind of workflow it is, what kind of framework we need to use.
+how to generate a unit test and all, but I think this is more about how do we use a MCP Figma and generate a new screen and make sure it uses both new and old screen with the optimized reflect.
+
+Vazgen Ayrapetyan   8:33
+Yeah, thanks, Brian. So I'll just pull up the app on localhost that we have right now, which is matching the old design, and we can kind of see what it's going to do in real time. And also, I want to, before I run this, I wanted to just go over a couple of the files that we have here. So there's a rules.
+Um...
+There is a rules XML file.
+Here.
+One second.
+Yeah.
+Yeah, so basically this file just tells.
+Um, so basically, it's gonna, we have a CX design system library, and so it's supposed to, um, so...
+The thing over here, we can see, and we have the C.
+Big design library organized into components, so accordion buttons, everything's here, right? So, the rules tell it to use this, prefer this design system and to use, you know, various, not not to make up things, to use the different variables that we have here defined, 'cause we we we do use like...
+the design system variables as well. So, and it says like, you know, to prefer certain components in the web UI, prefer other components, like the mobile UI. It's just general rules of how it should behave when it's parsing, when it's deciding, like, let's say it sees your design here, right? It needs to recognize like this is a toggle that already exists in the CX design system library, and not to.
+To just make a new one every time, right? So, it basically tells it these kinds of rules, and then these, and then there's another file called the CM. I mean, it's kind of a long name, but...
+Basically, it just all of those things that you see here on the left side, so that it knows where to find the accordion and knows where to find the buttons, it knows where to find the drop downs. So, basically, one file tells it to, you know, look for those things and prefer certain ways of doing things, and the other file is basically a collection of links to all those specific components that we saw here on the left side.
+Here, OK, and.
+So the skill file, the workflow is pretty simple. It's going to use the Atlassian MCP server as well to look up that ticket. And then it's going to, this is the important part in terms of Figma MCP, it's going to determine if it's a design change. So before implementing, decide whether the ticket constitute a design change and.
+It constitutes one if it does change any of these things. So like, you know, icon spacing, typography, anything design related. Yeah, do you hear me?
+
+Guru Pitty   11:13
+Hello?
+Hey, yeah, go ahead.
+
+Vazgen Ayrapetyan   11:18
+Yeah.
+So if it is a design change, check whether a Figma link is attached.
+
+Guru Pitty   11:24
+Ohh.
+
+Vazgen Ayrapetyan   11:28
+Check if a Figma link is attached or provided and if a Figma link doesn't exist to ask for one. In terms of this, we already have the Figma links attached in the Jira, so we can hopefully it will just...
+find it. So let's see what happens.
+But upset they sign.
+OK, so.
+I'm first going to look up the Jira ticket.
+So it's going to ask me for permission to look that up.
+Let that go.
+It'll ask me for permission again whether it can.
+It asks for permission a couple of times, I think, in order to read the web links that are found in the JIRA. So here it pulled up the ticket. You can see the description.
+Here, it's gonna ask again to get the remote issue links, so it's gonna try to find those Figma links.
+Okay, here it's reading those rules that I just told you about, CX design rules, and then it's going to try to get the design context from Figma. And here it's going to get the simple in the query for Figma. I'll let that run, and I'll let that run as well.
+the two links and we should see the design pop up at this point soon. Right, so there we go. That's the old design and then it sees the new, wait, here's the new design, right?
+You can see both of those.
+So, it's checking right now to see, like, if there's the various inputs that it sees, if there's an analog for the in the CX design system.
+Thanks, yeah, although the the JR did say.
+I mean, it said to change like the toggle and minor design things. It didn't say to recall. Well, yeah, I mean, I think it is going to check for the inputs, and I think it will update the inputs because the new design does have a different input. I just realized. It's very subtle, but it has a different placeholder, and a little bit of a bigger label.
+So it's probably looking for those inputs.
+And then it'll implement those, so...
+Give it a little more time. This skill also is going to ask some clarifying questions. Some, you know, I can't predict what those are going to be. Sometimes they're different.
+And so I might answer some things, but also it's gonna this skill also includes running unit tests, creating unit tests, so I'll tell it to skip that for the purpose of the Figma demo.
+So now it's doing optimizing considerations because like we said, we wanted to have it behind a feature flag. And also I can technically open up.
+So I have here an AI workspace where we're going to have different repositories all in one workspace. And since this change will be on the sign-in front-end workspace, I should be able to see it here, the changes. But you know, this skill could potentially implement changes across multiple repositories. So that's part of the workflow of this skill. So it's going to determine.
+the impact of submodules, and they're going to create a shared branch name between them.
+It's going to prepare each impacted repository. So let's say if I already had some changes, it'll basically stash them for me. It'll pull the latest from the main branch. And then here it'll ask me whether there's going to be tests. Certainly doing a lot of reading right now.
+Um...
+Yeah, I mean, because this skill is not for the Figment demonstration, so it might have a couple of extra steps, but you could also at any time just, you know, copy the link and just paste it directly into here, and it should be able to read it, because the link is consisting of essentially...
+a node ID. So if we look at the link here, you'll see that it's just a Figma. It has a project key.
+Bigger.
+The project key here and then the node ID. So that's that piece right here. OK, so.
+Okay, so I can ask me clarifying questions because it's part of the steps. Which test code should I include for implement? So skip test for this ticket. Should I proceed with implementation? Proceed with the plan? Yeah. So...
+Actually forgot to mark if we clicked a plan here, it would have opened up a separate window with the plan. But because I forgot to do that, it's just asking me if we should proceed with the plan. You know, the plan is basically written out here. This is what it's going to do. Component mapping from Figma. So you found the header, which is the web nav bar.
+in Figma. It's got the form, it found the CX inputs. Remember, device is going to be a new CX toggle, and the login button is going to be a CX button, and then a couple of links. We have CX text links. So those are all things that are part of the CX design system here.
+
+Praveen Lakshman   17:30
+And was you want to go through Optimizely and show them what it is going to do it, basically, because I know it is generating the code, right? So probably that's where you would.
+
+Vazgen Ayrapetyan   17:31
+So in the front, yeah.
+Mhm.
+Yeah, so.
+The optimizing flag is in the Jira ticket, so it will generate the code to put it. So currently the flag is enabled, I believe, so we should probably see the changes right away, but then we can try to flip it off to revert to the previous design.
+
+Praveen Lakshman   18:08
+So Optimizely is the tool we use it for AB testing. This is one of the service where you can show it once it gets implemented, right, the change code, where we get the instance of that service and whatever the name, the use case story has, it will implement it with the new design. So when we turn that Optimizely flag, we go there and tell turn it.
+It will go to the new design. When we turn it off, it will go to the whole design. That's how it works. So basically.
+
+Prachi Chati   18:41
+Praveen, is it already creating a flag for you in Optimizely? So you've integrated with Optimizely also from here?
+
+Praveen Lakshman   18:48
+No, no. Optimizedly, we created and kept it. See, if you look at that, Waz is testing to test it locally. When he run it locally, he is getting this whole design still. But once the code runs everything, it gets implemented, because that is enabled, he should be able to see a new screen. And he can go back there and turn
+
+Prachi Chati   18:51
+Oh, okay, okay.
+Mmh.
+Okta.
+Ohh.
+
+Praveen Lakshman   19:06
+turn off, turn on. So this right now, whatever he has created, it is generating a code only in our workspace. It's not touching the optimized AB testing flag.
+
+Prachi Chati   19:15
+Optimizing. OK, cool. Got it.
+
+Vazgen Ayrapetyan   19:24
+It looks like it's having some issues with Git. But yeah, like I said, there's a bunch of other steps that happened before it starts generating the code. So this is kind of where we're getting a little stuck. So here it's switching to the new branch feature.
+Yeah.
+
+Dhiraj Shrivastava   19:46
+Sorry, I'm just trying to get a context. So we are generating a new UI, right? This UI you have at the left with the code.
+
+Vazgen Ayrapetyan   19:56
+Yeah.
+
+Dhiraj Shrivastava   19:57
+Okay.
+Nice.
+
+Vazgen Ayrapetyan   20:24
+I'm not really sure what it's doing right now. It's going a little off the rails. Sometimes it's a little unpredictable.
+Since these systems are not deterministic.
+Yeah.
+
+Dhiraj Shrivastava   20:47
+He used the same kind of.
+Recall that prompt earlier to do this when you were doing on your own on your local.
+
+Vazgen Ayrapetyan   20:56
+Yeah, yeah, it's every time it's a little bit different, so, and, and, and, and obviously the models also, I'm like already at my, I have like $20 on my limit right now on my plan, so I didn't want to use 4.7, but...
+
+Dhiraj Shrivastava   20:59
+Yeah.
+Yeah.
+
+Vazgen Ayrapetyan   21:15
+Yeah, maybe we should use 4.7.
+
+Dhiraj Shrivastava   21:18
+Yeah, go ahead. I can get you more tokens if you need that.
+
+Vazgen Ayrapetyan   21:24
+Okay, so here it's reading the optimize. I think it's sort of back on track, hopefully. It's reading the optimize. Okay, foundry repo, optimize the service, right? Because we do have a optimize the service over here, so pick it up.
+Using that instead of adding a new flag service, right? Okay.
+So now it's reading the variable CSS. I'm assuming it's comparing to see which design system tokens that we had that match the ones in.
+So here we have a bunch of colors. It's probably comparing those to the...
+to the ones that it sees in Figma. Okay, so here it started generating the code in the login component.
+Should see that in a minute. OK, the refresh. Nothing yet, but I would say let it finish.
+So for now, okay, so for now, it added the imported the optimized service. Here's the name of the flag that we specified in the Jira ticket. Here's the flag in memory that's going to be false for now. But the URLs that were in the Jira.
+imported the optimize the service and initialize the one app login flag, right? So that's down here.
+So basically we said that this is only for web. So if it's native, it's going to go false. And if it's web, it's going to go look up that flag. And based on that flag, it'll flip that to.
+True or false. So I think it correctly implemented it in terms of the optimizely flag. So let's see. OK, so now it's generating the CSS. Hopefully that'll start to look a little better. We can already see that the placeholder is new. The old time. OK, so all right, there we go. So if we look here.
+Right, that does match the design, so you just compare those.
+
+Praveen Lakshman   23:36
+And even the link also changed. You look at that, that's a create online and find your application earlier. You had a subtract to different links there.
+Yeah.
+
+Vazgen Ayrapetyan   23:47
+Yeah, yeah, so you can see like the placeholder changed, the labels got a little bigger, it seemed it didn't seem to align that, that's a.
+Actually, it's very interesting. It always fails to align. Every time I run this, it has failed to align this login and the links down here. So I'm not really sure why we could investigate. Of course, if you put more details in the Jira ticket, obviously it'll be much easier. I was hoping you would.
+and for all the information. I mean, it did a pretty good job.
+
+Dhiraj Shrivastava   24:19
+Oh, those are easy tweaks to make though, right? I mean, the major work is already done, so this is a little bit tweaks you have to do.
+
+Vazgen Ayrapetyan   24:25
+Yeah.
+Yeah, yeah, I would say it's very close to what what we were we wanted, so yeah, you might have to do a couple of tweaks, but for the most part, and let me go into optimize the maybe we can see how.
+
+Dhiraj Shrivastava   24:31
+Yeah.
+
+Vazgen Ayrapetyan   24:45
+That would.
+Flip off.
+
+Praveen Lakshman   24:49
+So one good thing about this is, as was showed all the components, there is a one app standard where we have all the tokens and we have asked to exclusively not create one and try to use it. So in that way, at least we have a consistency.
+when we asked to do it, it would make sure it is going to reuse the design tokens, which is very specific to one app standard. So in that way, we don't need to worry about those implementation as well. Because I've seen where in my team, especially when we go and look into the Figma, right, and we try to implement it.
+Are we looking to the design token? Some of them are in the CSS, where we wanted to implement more like Angular component. We run into spacing issues and kind of there is a discrepancy in the sigma versus tokens where we run into a lot of issues, especially with the spacing and other things.
+and some of the color coding as well. So this is like right away, we have given, we have fed every token, so it just goes, make sure it uses the one which is already present there. So that makes our job really easy.
+
+Vazgen Ayrapetyan   26:02
+Yeah.
+Okay, so here's that one app login flag that we have here.
+So you can see it's currently running, which is why we saw the changes right away. But if I, let's say, pause that flag, and then I'll just go ahead and refresh that.
+And.
+and you're back to the old design.
+So.
+And then I'll just run on that flag again.
+It should be.
+Just refresh a couple times without cache.
+Probably getting cached.
+Running, K.
+Okay, not sure what's up. Maybe I don't think it's a... Oh, there it is. Okay, it's getting me nervous already. So there you have it. You have it behind the feature flag and.
+And everything is implemented more or less correctly. So, I mean, this...
+Is.
+The skill would have actually created a pull request all the way. I'll have to investigate why it didn't. It seems to have stopped, but I'll actually, oh no, it didn't stop. There you go. So it's a...
+Stopped update the early branch setup was aborted because, okay, I see. So it it's it aborted creating the pull request because git fetch was hanging for some reason. Yeah, I think I can probably just tell it to continue and it'll go ahead and make the pull request as long as git doesn't hang again. But yeah, as far as the Figma.
+Demo, I think that that would probably conclude it. I think the pull request is not part of it.
+Questions?
+
+Oleksandr Pavlovskyi   28:39
+Guys, who also use the Figma for your projects? Interesting to hear.
+
+Rohit Sehdev   28:48
+Yeah, I use it.
+
+Praveen Lakshman   28:50
+I think every team uses the Figma, Oleksandr. And right now, our main, especially in the SIAM space, we are going through a lot of screen changes where they wanted to convert to one app design. So this is the first one we picked up where, but every
+
+Oleksandr Pavlovskyi   28:53
+Mhm.
+
+Praveen Lakshman   29:09
+Team every lanes when they put those new screen design changes, or if there is anything, usually they use Figma.
+
+Oleksandr Pavlovskyi   29:17
+Yeah, guys, it's interesting to hear your feedback regarding to Figma, and if you use Figma MCP, yeah, it's interesting to hear what maybe limitations, yeah, or maybe some advices like hacks you would recommend.
+
+Rohit Sehdev   29:34
+Yeah, I've used it a few times and I've seen, I've seen the same thing that Vaz is seeing where like, and what Praveen said, where like, it's a huge time save in getting those tokens or the CSS to match up what they intended. But you do see like little quirks that you need to like.
+Picks up a little like the.
+You know, there will be like text wrapping or there'll be like misalignment stuff. It's not bad. It does save a lot of time because, you know, when you when you see a design and then you see all the CSS and all the tokens they use and whatever, it's like you have to go like 1 by 1 and make sure it matches whatever they intended, but then.
+
+Vazgen Ayrapetyan   30:02
+But...
+
+Rohit Sehdev   30:17
+This kind of just imports it up. It gets you a huge.
+A head start, basically.
+
+Vazgen Ayrapetyan   30:25
+Yeah, I think I think some of these issues can also be solved, like if we really get the Chrome DevOps Tools MCP, because that allows the AI to open a browser directly inside of the editor. So all of the editors, they come with a browser built in, so you can literally have, you know, the app loading in like a window.
+
+Oleksandr Pavlovskyi   30:26
+Mm.
+
+Vazgen Ayrapetyan   30:46
+In VS Code, it would like load right here in the middle, and then when it does that, it can actually inspect it. It has access to the DOM, it has access to, you know, how it looks. It can take a screenshot, and so you can actually tell the skill to sort of check its work, right? Open app in the DevOps MCP.
+look at the DOM, make sure things are aligned, take a screenshot, make sure it matches the Figma. So, you know, that'll burn a little more tokens, but you can't have it sort of iteratively check its work until it's perfect. That's definitely something that's possible, I think.
+
+Oleksandr Pavlovskyi   31:22
+As an alternative, you can use Playwright MCP. That's give is gonna give you access to UI, yeah, not regarding to the tools, yeah, but you can take screenshots, you can do some actions, click buttons, I don't know.
+
+Vazgen Ayrapetyan   31:25
+Yes, right.
+
+Oleksandr Pavlovskyi   31:40
+toggle some active elements and so on. So alternatively, you can use the playwright SCP for this.
+
+Vazgen Ayrapetyan   31:49
+Yeah, that's true. That's usually what it'll fall back to if you ask it to, you know, run the app and take a screenshot. It'll, you know, if it'll first check if if you have that do have DevOps Tools MCP for the integrated browser, but if not, it'll propose to write some playwright scripts, but I think probably those burn even more tokens, I think, because it's gonna it has to write the code and then actually run the code, and then...
+
+Praveen Lakshman   31:50
+A-I.
+
+Vazgen Ayrapetyan   32:13
+Depending on whether your environment is set up to run that code, you may have to do installations and deal with various issues of running playwright in general. But yeah, that's usually what it falls back to if it's not able to run the browser in the editor.
+
+Oleksandr Pavlovskyi   32:24
+Mhm.
+Yeah, yeah, in this case, yeah, yeah.
+
+Praveen Lakshman   32:27
+And.
+Yeah, and also see if you use a MCP Figma, it knows what the coloring looks like, what the style shed, right? It inspects that, and it knows. But if we take a screenshot of something, that's where we might get undesirable results sometimes because of the screenshot and how...
+accurate it is going to be. But yeah, as Was said, if we try to do that with a screenshot, it may end up burning even many tokens.
+
+Oleksandr Pavlovskyi   33:01
+Yeah, yeah, I agree, yeah, because each image is much huger than some lines of text, yeah, so yeah, yeah, that's why maybe we need to think about how to decompose tasks, yeah, because, for example, for processing images, yeah, it's better to use more cheaper models, I mean, to recognize them and so on.
+So, guys, have you thoughts regarding to use maybe a combination of some, I don't know, spec-driven development yet and using this MCP yet to use to have ability to do like a step-by-step?
+workflows, yeah, that give you ability to operate with this contextual windows. And for more routine tasks, yeah, where you don't need thinking, process, reasoning, and so on, use, for example, cheapest models, yeah, and for that, that steps where you need to...
+Be more creative, yeah, let's say you can use more faster, yeah, and model with a higher with a bigger contextual window like Sonet or Opus and so on, so guys here.
+
+Praveen Lakshman   34:18
+And yeah, and also the Visual Studio, I think, was used a cursor because Visual Studio you cannot upload any images there. So there is a restriction on the Visual Studio. That's one of the reason we are running this in the cursor.
+
+Vazgen Ayrapetyan   34:25
+Yep.
+
+Oleksandr Pavlovskyi   34:29
+Yeah.
+Yeah, this is really the problem, yeah, because it's under security policies, yeah, but I don't know why it's more than, I guess, I don't remember where this feature was released, yeah, but for me it's like more than a year.
+we are waiting here while this feature going into production. Now it's in a preview mode, yeah, and that's why it's blocked for us because GitHub don't give guarantees regarding to some security aspects here. So that's why we have this limitation. I really hope that's going to be a...
+Available in the nearest time, yeah, because it's a huge difference, yeah, that give more benefits to use cursor in this case, yeah, because with cursors we don't have this limitation, yeah.
+
+Sanjay Kumar Parui   35:30
+Yeah.
+
+Oleksandr Pavlovskyi   35:31
+Cool.
+
+Praveen Lakshman   35:31
+And was did he use GH tool or even I know we were talking about GitHub MCP, right?
+
+Sanjay Kumar Parui   35:32
+Yeah.
+
+Vazgen Ayrapetyan   35:39
+It actually, it actually git fetch was like hanging, so it's it it stopped here, it said it stopped because git was hanging, but I I think I I can tell it to continue, let's say.
+
+Praveen Lakshman   35:51
+No, no, no, yeah, no, I was asking whether, I know we were using either GH tool or we were thinking of switching back to GitHub MCP if it works right. I know right now only your configured 2 MCP server, right? One for Atlassian and one for Figma.
+
+Rohit Sehdev   36:05
+Did you guys get access to the GitHub MCP? It's a block for me.
+
+Vazgen Ayrapetyan   36:06
+So.
+So, actually, in cursor, in cursor, it's blocked, but in VS Code it works, so...
+
+Rohit Sehdev   36:13
+Okay.
+
+Praveen Lakshman   36:13
+Okay, because, yeah, got it, got it, so that, got it, got it, because I...
+
+Rohit Sehdev   36:16
+Yeah, that's what I'm saying too.
+
+Vazgen Ayrapetyan   36:19
+So, yeah, uh, it appears the blocked in cursor, but I mean, in VS Code, it's not blocked, so we should probably get that figured out, I think.
+
+Rohit Sehdev   36:27
+Yeah.
+
+Praveen Lakshman   36:27
+Got it, got it.
+
+Vazgen Ayrapetyan   36:29
+Um...
+
+Oleksandr Pavlovskyi   36:29
+Yeah, but you can use common Claire.
+
+Vazgen Ayrapetyan   36:30
+So, yeah.
+Yeah, yeah, the scale, the scale says, for each impacted repository, create a pull request using the GitHub MCP server. If the MCP server is not available, use the GitHub CLI. Yeah, so basically, I think it would have figured it out. It just seems like GitHub was hanging and decided to abort.
+Right.
+
+Oleksandr Pavlovskyi   36:57
+Sanjay, would you like to add something?
+Seems like you, yeah.
+
+Sanjay Kumar Parui   37:02
+No, I was just thinking, uh, there's a visual code insiders, there's another tool, like, I think it does allow image pasting, what's trying.
+
+Oleksandr Pavlovskyi   37:14
+It's allowed, yeah, but I'm not sure if the Visual Studio Code Insider is approved by our security team. We use this year. Yeah, it's allowed there, yeah. We have many features here that are not presented in the Visual Studio Code here for now, but
+
+Sanjay Kumar Parui   37:21
+Oh, okay. Got it. Okay.
+
+Vazgen Ayrapetyan   37:24
+But.
+
+Oleksandr Pavlovskyi   37:32
+There, on some experimentation level, it's available, and yeah, technically we can use CIA, but I'm not sure if it we can install, for example, for our VMs or VGIs here, because it's not standard.
+
+Sanjay Kumar Parui   37:47
+Yeah, yeah.
+
+Oleksandr Pavlovskyi   37:51
+Uh, software, yeah, so it's not available in the marketplace, yeah, for this application for virtual machines.
+
+Sanjay Kumar Parui   37:59
+Mhm.
+
+Vazgen Ayrapetyan   38:04
+Yeah, I mean, out of curiosity, I mean, I just want to see how many tokens that burned. I think it's probably not pretty. Let me see, usage.
+Message, so...
+Yeah, that's a, that was a $80 call. That's kind of a lot.
+
+Oleksandr Pavlovskyi   38:24
+A TJ.
+
+Vazgen Ayrapetyan   38:26
+Yeah, I mean, we have a GPT 5.5 right now, 7X tokens, right? So I guess normally it would have cost $1.00, but that did cost quite a bit, say $8.00.
+
+Oleksandr Pavlovskyi   38:36
+Sorry, I it's blue for me 18, yeah.
+
+Vazgen Ayrapetyan   38:39
+No, 8.
+
+Oleksandr Pavlovskyi   38:41
+Eight, yeah, if you if you have only $20, yeah, it's.
+
+Vazgen Ayrapetyan   38:42
+Yeah.
+I mean, it's quite, it's quite a lot. I mean, I would say it's quite a bit, and there, there, I did find, I don't know if you guys, so there's a there's a new tool called context mode, which is, which I mean, I think we should investigate and hopefully request this, because it's supposed to reduce token usage by like ninety-nine percent.
+It has, so like, just like, you know, how it, like, for example, if you wanted to, you know, to run the browser and take a screenshot, so what is it gonna do if it doesn't have access to the DevOps tools MCP? It's gonna create a playwright script, and then it's gonna, and then it's gonna run that script, and there's a whole bunch of processes that happen, so because you're essentially letting the LLM be the executor of code.
+And so what this does is it makes tools available to allow to offload the execution of code to sort of tools that are in your computer instead of having the LLM do that execution. And also there's it does some nice stuff with the code.
+
+Oleksandr Pavlovskyi   39:29
+Mm-hmm.
+
+Vazgen Ayrapetyan   39:50
+session continuity and like saving context. So this is supposed to really reduce token usage by like 99 percent. So I suggest maybe we should look into that.
+
+Oleksandr Pavlovskyi   40:01
+Yeah, yeah, it sounds very, very interesting, yeah.
+And maybe it's better, I don't know, yeah, regarding to working, it's a huge amount of tokens, yeah, spending for Figma specifications, yeah, we we working with the main dependencies, yeah, maybe.
+
+Vazgen Ayrapetyan   40:20
+Well...
+No, I don't think it's necessarily just Figma alone. I think the skill, you know, this is a pretty hefty skill. There's a lot of steps here before it even got to the Figma stuff, before it generated the code. So this is intended for a multi-repository. So it's supposed to determine like which repositories are affected. It's supposed to make the feature, the branches the same way.
+And there's a lot more steps here. So I mean, it wasn't just the Figma, I would say, that burned 8 million tokens.
+
+Oleksandr Pavlovskyi   40:54
+Mhm, mhm.
+Yeah, yeah.
+
+Vazgen Ayrapetyan   40:57
+I mean, also, for some reason, GitHub was hanging, right? And then it kept trying over and over. We had like a couple of minutes where it was just, you know, turning its gears. I think that probably contributed to a couple dollars as well, because...
+
+Rohit Sehdev   41:11
+Yeah, I've seen that happen before. I was like at one point.
+Cursor got in like a death loop making.
+some test file and it burned like 50 bucks. I had to stop it.
+
+Vazgen Ayrapetyan   41:25
+Yeah.
+Yeah, my previous runs weren't that bad, honestly. I've had like $2, $1.76, things like that. So the $8 is a bit of an anomaly. I think it's because of that loop that it went into.
+
+Oleksandr Pavlovskyi   41:44
+Yeah, so remembering this here, we need to think about some preparation work here to be ready to start this workflow, yeah, or to start this job, yeah, so we need to prepare these skills files, yeah, to needed artifacts and so on.
+that you're going to use and think about which work can be done manually, yeah? I mean, some complex work for LLM, yeah. Could you please share the link to this solution, yeah, that you show from GitHub?
+
+Vazgen Ayrapetyan   42:21
+Yeah, sure.
+
+Oleksandr Pavlovskyi   42:22
+In the in the chart, yeah.
+I'm gonna also.
+
+Vazgen Ayrapetyan   42:26
+Oh, you took the context window? Yeah, Gatch.
+
+Oleksandr Pavlovskyi   42:29
+Investigate these.
+Mhm.
+Yeah, yeah, uh, guys, uh, any other questions?
+To us.
+Yeah.
+Yeah.
+Yeah, thank you. Thank you. All right, guys.
+Would, if you would like to add something more, yeah, to some comments, yeah, you can use our chat and so, Vazgen, thank you, thank you a lot for a great demo, yeah, Figma, as we can see, yeah, this is like one main one of the main tool, yeah, that we are using, can we give...
+us ability to build this connection. But we should remember about the context engineering and looking for approaches how to save these tokens.
+Meanwhile, would say thank you. Yeah, great job. Yeah, great investigation of these topics. Yeah, interesting. I don't know, guys, do you have ability to share these skills files? Yeah, because it's going to be definitely interesting.
+Go for.
+
+Vazgen Ayrapetyan   44:08
+Yeah, I shared it. That's the second, the second link. Um, yeah, workspaces and demos, yeah.
+
+Oleksandr Pavlovskyi   44:11
+Ohh.
+Oh yeah, yeah, now I see. Yeah, yeah, thank you. So guys, please pay attention.
+
+Vazgen Ayrapetyan   44:16
+Yeah, there's actually an interesting part about this is, let me just actually go quick just to go over that. Basically, if you look at this repository, let me share my screen, can you see it?
+
+Oleksandr Pavlovskyi   44:31
+Mhm.
+
+Vazgen Ayrapetyan   44:32
+So, so this is a workspace repository. This is just a parent repository that's gonna hold, you know, a lot of the different things that are outside of the scope of the individual repositories. So, the individual repositories you see here, there are some modules, so these are just links to, you know, the code is not contained in this repository, it's just it's just a link to the actual repository, so...
+When you clone it, it'll clone everything if you want it to. But the point is, like, this repository is just a workspace. It's supposed to be a multi-repository workspace, and you can add the individual repositories as submodules. Yeah.
+
+Oleksandr Pavlovskyi   45:06
+Mhm, mhm.
+Cool, cool. Yeah, looks great. So you have for course or for GitHub instructions, right? Great.
+
+Vazgen Ayrapetyan   45:19
+No.
+
+Oleksandr Pavlovskyi   45:20
+Okay, great. Thank you. Thank you, guys. Thank you, Vazgen. Thank you, Praveen. Yeah, great demo. Yeah, so we are in time. Thank you all, and see you tomorrow. Yeah, tomorrow we're going to have another one, cross-functional session. So, guys.
+
+Vazgen Ayrapetyan   45:20
+Okay.
+
+Oleksandr Pavlovskyi   45:39
+See you.
+
+Vazgen Ayrapetyan   45:40
+Thanks, thanks.
+
+Prachi Chati   45:42
+Thank you.
+
+ stopped transcription

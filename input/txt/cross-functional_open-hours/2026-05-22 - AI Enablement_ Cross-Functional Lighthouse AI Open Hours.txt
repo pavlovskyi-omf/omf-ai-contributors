@@ -1,0 +1,804 @@
+AI Enablement Cross-Functional Lighthouse AI Open Hours-20260522_140026UTC-Meeting Recording
+May 22, 2026, 2:00PM
+43m 25s
+
+ started transcription
+
+Rajib Ganguly   0:17
+What?
+
+Vlad Grubman   0:22
+Hello, everybody. Let's give everybody a minute to join.
+
+Eugene Semenyuk   0:27
+Good morning.
+
+Oleksandr Pavlovskyi   0:30
+Yes.
+
+Rajib Ganguly   0:35
+Hey, good morning, everyone.
+
+Eugene Semenyuk   0:39
+Tony.
+
+Oleksandr Pavlovskyi   1:31
+Gish.
+Yeah, since people still joining us here, this is open hours meeting. Yeah, so maybe you have questions. You have something regarding to our previous topics here, or maybe just you would like to share something interesting.
+
+Eugene Semenyuk   1:55
+Play.
+
+Oleksandr Pavlovskyi   1:56
+from your lost experimentation with AI experimentations.
+
+Eugene Semenyuk   2:05
+Yeah, any questions connected with the AI?
+
+Oleksandr Pavlovskyi   2:14
+Oh.
+No, not with AI, we can talk.
+
+Eugene Semenyuk   2:18
+Yes, you can ask, yeah, how we are doing.
+
+Oleksandr Pavlovskyi   2:19
+Hold the line.
+
+Allen Truban   2:21
+Yeah.
+
+Oleksandr Pavlovskyi   2:21
+And...
+
+Vlad Grubman   2:22
+Sports, hunting, swimming.
+
+Oleksandr Pavlovskyi   2:24
+Yeah.
+
+Vlad Grubman   2:26
+Golf lessons online. Eugene is amazing at giving golf lessons online. I can, I can, I can attest to that.
+
+Oleksandr Pavlovskyi   2:34
+Yes.
+
+Eugene Semenyuk   2:34
+Thanks.
+
+Vlad Grubman   2:41
+Since everybody's silent, I'm going to ask everybody a question. What have you built with AI recently?
+
+Allen Truban   2:42
+That one.
+
+Vlad Grubman   2:48
+Just one or two sentences, folks, would be nice.
+Ohh, it doesn't have to, it doesn't have to be surely related to OMF, but just to keep the conversation going, you can share what you build.
+
+Allen Truban   2:56
+Yeah.
+
+Vlad Grubman   3:08
+What? Nobody builds anything.
+
+Allen Truban   3:09
+But.
+
+Eugene Semenyuk   3:10
+You, you, you, you, you can start.
+
+Allen Truban   3:11
+Book.
+
+Oleksandr Pavlovskyi   3:11
+Good.
+
+Vlad Grubman   3:12
+Okay, sure. I'll start. I built the mini brain and we did the hackathon for digital team on Wednesday. So it's kind of become like a little bit of a hobby of mine. I stand up multiple mini brains, which is like next step from, which is the next step from.
+
+Oleksandr Pavlovskyi   3:13
+Yeah.
+
+Allen Truban   3:14
+So...
+
+Vlad Grubman   3:31
+just keeping notes on stuff, like think your regular Obsidian vault, but it has more structure to it. It has sort of agentic instructions. So whichever agents, whichever agentic harness you use, whether you use Codex, Cursor, or Cloud Code or anything, it's going to function the same way.
+And I'm setting up these mini brains in different knowledge domains. So for example, I have one for OMF project. I have one for my vitamins and supplements that I keep track of. So I, you know, don't do bad stuff to myself. I have one on my hiking locations of hiking.
+Hiking.
+
+Eugene Semenyuk   4:12
+Okay.
+
+Vlad Grubman   4:14
+stuff that I wear, like which boots should I wear to which region, because, you know, hiking in upstate New York is different from hiking in Virginia. For whatever reason, the ground is different. So it really helps, really kind of saves me from having to remember things or having to
+write down and then control F them somehow. I just can't, I can just ask questions and talk to them. So, and we just did the hackathon on Wednesday with digital teams, so they now know how to do the same thing. That's what I built this week. What have you done?
+
+Eugene Semenyuk   4:49
+Heath.
+Guys, would you like to share your...
+
+Oleksandr Pavlovskyi   4:54
+But who was the winner in the hackathon?
+
+Vlad Grubman   4:58
+Sorry, say it again.
+
+Oleksandr Pavlovskyi   4:58
+Yeah, which team? Yeah, I mean, which team participated this?
+
+Vlad Grubman   5:01
+Digital.
+It was our digital lighthouse sync on Wednesdays.
+
+Oleksandr Pavlovskyi   5:08
+OK, and could you could you please share some interesting ideas from this?
+
+Vlad Grubman   5:12
+That's the idea. We built this mini brain. It's portable, so it doesn't require any SQL running anything. It's just all flat files. And because digital team doesn't really have access to a lot of engineering tools, not everyone has access to GitHub, but since it's all flat files, they can use it to.
+
+Oleksandr Pavlovskyi   5:16
+No.
+
+Vlad Grubman   5:32
+Like I said, the project that they're working on or initiative that they're working on, it absolutely will fit into this mini-brain and...
+They can, they can, the idea, the idea behind it specifically for digital team is they they have access to all this conference in JIRA, but they never know which document is stale or which which document is up to date, so it's kind of very useful to maintain stuff.
+
+Eugene Semenyuk   5:42
+Yeah.
+
+Vlad Grubman   6:00
+optimized, meeting knowledge optimized. We collected 33 use cases for digital team alone, and the first five of them are effectively, we need to solve the knowledge management. We need to find relevant knowledge. We need to keep knowledge updated. We have
+let's say we have a bunch of transcripts discussing a feature or an epic and we need to make sure it's updated, all the relevant documents are updated. So having this sort of mini brain or open brain, however you want to call it, actually helps maintaining the structure of a project because now you have an expert librarian who
+
+Eugene Semenyuk   6:38
+Yeah.
+
+Vlad Grubman   6:40
+which, sorry, who, is personalizing AI a little. You have like personal library, AI enabled librarian that can answer your questions. And you can teach that brain, unlike ChatGPT, you can't really train the model, right? Unless you're doing fine tuning work.
+truly training, but you can change context using this brain. So every time you talk to AI within the context of your project, this is how we get to context engineering, right? You can go and have a conversation with AI that uses that specific instance of a brain for your specific project.
+project. So it's super focused, super informed, it's not biased, you're not cross-pollinating information from other projects that may contaminate the knowledge. So it has a lot of benefits, it has a lot of interesting use cases around it. We have in Confluence, we have a whole page with study.
+
+Eugene Semenyuk   7:28
+The.
+
+Vlad Grubman   7:40
+33 new phase two use cases, like I said, first five of them are effectively knowledge management problem, which is why we...
+which is why we decided to make this a first hackathon. Folks really liked the idea of it. I had some follow-ups, people coming back and saying, hey, can you show me again? Can we do it on my machine so I wouldn't know how to send them up and so on. So it seemed like it really hit the spot in terms of being useful.
+For, uh, for a digital team.
+
+Oleksandr Pavlovskyi   8:13
+Cool, cool.
+
+Eugene Semenyuk   8:14
+Yeah, yeah, and I...
+
+Denis Platonov   8:15
+Sorry, I missed the beginning. What was the tooling behind it?
+
+Vlad Grubman   8:19
+It's not a tool, it's we did this build. I call it lazy brain because I like to be lazy. I don't want to think about maintaining the structure. Like for example, it all started with obsidian nodes and you have to be really, really scribbulous too.
+
+Denis Platonov   8:32
+Yeah, I was I was gonna say like sounds like obsidian
+
+Eugene Semenyuk   8:34
+Yeah.
+
+Vlad Grubman   8:35
+It was half a year ago. Then I started thinking, okay, I have AI that can basically read through these notes and tell me what I need to know, but I have so much of information there that it wouldn't fit the context window of any AI at the time. And I started exploring these alternative.
+
+Denis Platonov   8:39
+Yeah.
+
+Eugene Semenyuk   8:48
+Yeah.
+
+Vlad Grubman   8:57
+alternative things. And there's like thousands of implementations of these like second brains. There's like you go to GitHub, type second brain or just AI brain and endless list of things. So what I did, I started with Andre Karpathy's flat file.
+implementation. He posted it, I think, back in March or April-ish. And I started from that concept and I pulled in. So basically, I had Codex build the structure, fill it in with the information I have, and then once a week or a couple of times a week, I would go find another.
+popular repo of the brain implementation, I would ask Codex to download it, inspect the repo, see how it works, see the concept behind it, structure the algorithm effectively behind it, and say, hey, is it worth applying to my implementation, given my goals, given what I want to do?
+
+Eugene Semenyuk   9:37
+I.
+No.
+
+Vlad Grubman   9:58
+and just basically go and steal ideas from other brains to make yours better. Technically speaking, I should be even more lazy than this. I should probably automate this and have Codex do this like twice a week. I don't know, Monday, Tuesday, Tuesday and Friday. Go search for new or updated repos.
+See if there's anything to steal. If you think it's worthy, steal it, update the brain. So I don't have to think about maintaining it. Again, being lazy is good, right? Lazy people and lazy people invented invented cars because they didn't want to carry goods in their hands.
+So that's kind of the philosophy there. Build a brain that you can have conversations with because you don't, you know, sometimes.
+Maintaining the notes is the job by itself, and Brain not only takes care of that, it also takes care of giving you the answer instead of a resulting pages that you search for.
+
+Denis Platonov   10:59
+So is it like a file base or like a vector database kind of thing?
+
+Vlad Grubman   10:59
+Does that make sense?
+So for the, again, originally my idea was I don't want to be reliant on any software. Again, that I wanted to walk away from Obsidian away eventually. I wanted to, I wanted to be, I wanted to be used, I wanted to be able to use Cloud Code, Codex, Cursor.
+Literally any harness, any AI harness that I that I could think of, because I don't want I want I want it to be tool agnostic, so this is all flat files and this is all the structure, the rules, agents, everything is based on flat files, so obviously it's really cool.
+because I am too agnostic, I can use anything. The downside of that is not using vector storage, not using RAG, limits me at about a couple of 1000 original source documents because they produce so much more like meta and chunks and everything in text.
+in text format that it becomes unwieldy. Like I said, probably about a couple of 1000 original documents. So I'm thinking about how to implement vector storage, but still stay tool agnostic. I don't think it's possible yet, but we'll see.
+
+Denis Platonov   12:20
+So, but at least it's an open source tool now.
+
+Vlad Grubman   12:23
+It's not even open source. You can build it like the algorithm itself. It's just one prompt. And this is what we did in the hackathon. You can watch the recording if you want. This is what we did in hackathon. It's one prompt that says, write me a spec.
+that covers these requirements. If the AI writes a spec, then you in this, you can, we did this in cursor, so you can do the same thing. Then you in the same window, in the same agent, the same thing, you ask, okay, now use this spec to build the AMT brain to build the scaffolding and don't populate it with anything because we're going to populate it later. Just build the scaffolding, make sure that.
+Everything is there, make sure agents agents MD is there, make sure indexes are there, make sure you have all the rules and regulations around the brains there. It does that, it takes like 5 minutes end to end, maybe 10 if you're reading, if you're reading your own prompts. And then, and then what.
+
+Denis Platonov   13:18
+Interesting.
+
+Vlad Grubman   13:21
+And then the last stop is, there's a folder. In my case, it's called raw. In case on our hackathon, the prompt that we used created sources or source. You just dump the information that you want the brain populated with in that folder. It reads it. It's a hack.
+In a way, it's a workaround because you folks don't have direct access to the model, to any model, really. So the hack is we're using the harnesses access to AI. So cursor has AI models in there. So effectively, you have cursor use its internal models to read the information you're dumping in.
+and sort of populate the brain with that information. That's kind of, that's kind of, that was the point, right? I don't have access to the bottom. It works. Yeah, it works. It answers the question. The best part is, obviously, it's not ideal. Obviously, it may not, it can make mistakes.
+
+Denis Platonov   14:08
+But it still builds some sort of index, right?
+
+Vlad Grubman   14:20
+So one of the things, one of the things is that you can do, you can just go ahead and say, hey, this is wrong, this fact is wrong. Update your brain, update the information that you're storing with this because this is a fact. And it would log it. And the best part of it is it's going to remember that it believed something else.
+then you told it to change things and now it believes something else is true. So if you, six months later, you go back and ask, why is this true? It's going to tell you, oh, because I thought it was this. Then on May 22nd, 2026, you told me,
+No, this is no longer true. This is true. And now I believe this fact. So not only it preserves.
+sort of the final, the currently known good information, it preserves the chain, like decision chain, the audit trail. So in, let's say, in OMF environment, it translates to you guys building something, leaving it alone for six months, coming back six months later.
+and you're looking at a decision and you're asking yourself, why did we build it this way? And nobody remembers because it's been six months and half of the people are working for a different team, so you can't really ask them because they remember even less. Now, with this brain, you can ask exactly this question, why have we built it this way?
+And if you've uploaded your transcripts or if you've uploaded the discussions, then it would tell you, oh, the discussion on such and such date, we decided that, you know, we're going to go this route because of these and these constraints. So again, you preserve this decision making, decision making chain.
+So you don't, not only you know what is true, but why is it true and what other options you have considered so you don't have to.
+kind of rethink what you've already thought of. You know, you save time on like re-making the same decisions over and over again because you don't remember how you arrived at them.
+That make sense?
+
+Denis Platonov   16:35
+Yeah, that sounds cool. Thanks for sharing.
+
+Vlad Grubman   16:37
+Try it, try it. It's all on conference. Actually, no, it's not yet on conference. I have to post it today, but it's recorded, so you can you can do the same thing. Just I'll upload the.
+So for the hackathon, we used Lenny's newsletters and podcast transcripts because it's so open source data. We didn't want to use any proprietary OMF stuff because it's, you know, I didn't know who was going to be using what.
+So we used something openly sourced and available. He, Elaine himself said, yeah, go ahead, use this. I wonder what people will build with it. So it kind of looked cool. It answers the questions correctly. It has interesting, it has interesting angles on it.
+Yeah, by all means, I'll set it up in the confluence in the next couple of hours, if if you want, if you want to have a funny project for a weekend, this might be one of those.
+
+Oleksandr Pavlovskyi   17:53
+Ohh.
+Right, guys, any opinions on this? Yeah.
+Because, you know, it's going to be very relative to your task because you guys, most of you are using the conference pages here and building of this second brain. Yeah, for your projects, it definitely makes sense.
+Right, seems like everybody has Friday move mood.
+And...
+Eugene, do you have a headache here, something like this here?
+
+Eugene Semenyuk   18:44
+Yeah, I did.
+
+Oleksandr Pavlovskyi   18:47
+Too much information, yeah, so...
+Yeah.
+
+Eugene Semenyuk   18:52
+Yeah, I need some peel.
+
+Oleksandr Pavlovskyi   18:59
+Right, Kayce, so if we don't have any topics, yeah, this is...
+Free format meeting here, we can use this time for coffee for yeah, Jurijs, yeah.
+
+Eugene Semenyuk   19:14
+Yeah, we have.
+
+Oleksandr Pavlovskyi   19:15
+Ears.
+
+Jurijs Markelovs   19:17
+Yeah, maybe it's early for calling, but I am joined a little later, so maybe I'll be off the topic slightly. I have tried to work yesterday with the Jenkins API. So basically, idea here is...
+
+Eugene Semenyuk   19:29
+Mm-hmm.
+
+Jurijs Markelovs   19:33
+There are two ways to implement something what I'm thinking of, right? I need to trigger deployment to certain WebWX box of the PR.
+which is mentioned on the Jira ticket, right? So idea is pretty straightforward, right? Ticket came to the testing, it says certain label.
+It's it should be should be a trigger, some kind of a configure, well, not necessarily configure, so trigger to deploy the code to a certain web box, a testing environment for the Jenkins. So, when I have tried that, I I actually used Jira automation.
+
+Eugene Semenyuk   19:58
+Yeah.
+
+Jurijs Markelovs   20:16
+Webhook failed, and then I tried CodeMe Assistant. I think it also failed, so...
+Do we know if that we have thought about that use case?
+or integration.
+or any other level, or what would be the best way to...
+To approach this task.
+
+Eugene Semenyuk   20:43
+Can can turn on me?
+
+Denis Platonov   20:45
+Did you have a Jenkins rest token?
+I think you could use just to the REST API.
+
+Jurijs Markelovs   20:49
+Yes, I...
+That is correct. I have done that. But I believe if we use JR automation, we need to have.
+And the Jira automation is reliant on us on the user, the Jira user, I believe, right? And it might not necessarily gonna have the same the same rights, so I was getting the 408.
+
+Eugene Semenyuk   21:16
+No, no, no.
+
+Jurijs Markelovs   21:25
+Right, and um, couldn't really overcome it.
+
+Eugene Semenyuk   21:28
+Mmhmm.
+So, yeah, let me double check if if chair automation has, yeah, it has some Jenkins.
+Actions.
+So yeah, and you used these available Jenkins actions from JR automation, like not.
+
+Jurijs Markelovs   21:50
+Is there something available I couldn't find? Do you mind to share?
+
+Eugene Semenyuk   21:50
+Keep it close.
+Yeah, yeah, let me let me share my screen.
+I see.
+Here is, so yeah, I just click a new action, yeah, type Jenkins.
+
+Jurijs Markelovs   22:08
+I.
+
+Eugene Semenyuk   22:11
+And looks like it has some.
+Some available actions.
+
+Jurijs Markelovs   22:19
+You.
+
+Eugene Semenyuk   22:19
+Kettle jobs.
+Connect to...
+Train cans.
+Yeah, but before that, you need to provide such.
+such things. You need username, Jenkins, API token, and domain.
+
+Denis Platonov   22:39
+Yeah.
+
+Jurijs Markelovs   22:41
+Good God, how did you get to this point, man? Let me look.
+
+Eugene Semenyuk   22:44
+Yeah, just just click and step action, yeah, and you can find Jenkins.
+
+Jurijs Markelovs   22:48
+And.
+Mm.
+
+Eugene Semenyuk   22:54
+Yeah, one, one more, one more.
+
+Denis Platonov   22:56
+Yeah, trigger Jenkins built right there. It's a very last one.
+
+Eugene Semenyuk   23:00
+Yeah, and...
+
+Denis Platonov   23:01
+But I mean, apparently it's just a wrapper around the rest.
+
+Eugene Semenyuk   23:04
+Yeah, you can use just send web request, use URL method, and maybe some, yeah, an authorization header.
+
+Jurijs Markelovs   23:12
+Yeah, I try that, really.
+Yeah, I've tried that really, and it's just...
+Returning 404 for me. Yeah, 408.
+This way.
+We can take this offline, but that was wondering.
+
+Eugene Semenyuk   23:29
+Yeah, I think the best way is to choose native integration.
+
+Jurijs Markelovs   23:37
+So, I use the web requests, right? So, you're saying there's a different way to do so, so basically click on the next step, then adding action, and under action you just look for Jenkins, right?
+
+Eugene Semenyuk   23:39
+Mhm.
+Yeah, let's stop.
+Yeah, yeah.
+
+Jurijs Markelovs   23:52
+Of course, it's there.
+
+Eugene Semenyuk   23:54
+Cat, cat, cat, yeah, and trigger Jenkins build, the last one, yeah, as Dennis mentioned.
+
+Jurijs Markelovs   24:00
+Of course, you made it make me look like I have spent meaningless 3 hours yesterday.
+
+Eugene Semenyuk   24:06
+Hmm.
+
+Jurijs Markelovs   24:08
+Thank you. I'll take a look.
+
+Eugene Semenyuk   24:11
+You're welcome.
+
+Jurijs Markelovs   24:12
+But how ethical is, not ethical, all right, word to keep the token API Jenkins token here.
+I mean, do we think?
+
+Eugene Semenyuk   24:22
+I have.
+
+Jurijs Markelovs   24:25
+I don't know, it's always like when it's coming to the point when, all right, I need to store the token or credentials or something.
+
+Eugene Semenyuk   24:33
+Friendly speaking, this, yeah, this native integration should be safe. Yeah, at least it is safer than putting token into send web request action. Because in send web request, you have an option to hide and unhide.
+
+Jurijs Markelovs   24:33
+Something that.
+Right.
+
+Eugene Semenyuk   24:53
+The value of some header.
+
+Jurijs Markelovs   24:55
+Perfect. Anyway, this is perfect. Thank you, Eugene.
+
+Denis Platonov   24:58
+And then there will be plain text. I think if you do it through connection, then it's just some connection that you will never see anywhere. No one else. But also I think if your automation is set to private, no one will see it, right?
+
+Eugene Semenyuk   24:58
+Yeah.
+Mhm.
+Yeah, yeah.
+
+Jurijs Markelovs   25:08
+Right, but...
+
+Eugene Semenyuk   25:09
+Yeah.
+Yeah.
+That's also, but...
+
+Denis Platonov   25:16
+If you, if you don't need to share it with anyone.
+
+Eugene Semenyuk   25:19
+Hmm, that's a good question, so...
+Do admin admins see private things? I mean, private flows or not?
+
+Jurijs Markelovs   25:35
+Right, so also I need to pass certain parameters to the Jenkins execution.
+
+Eugene Semenyuk   25:39
+Actually.
+Mm.
+
+Jurijs Markelovs   25:48
+But I'm sure it should be.
+
+Eugene Semenyuk   25:50
+I think it should be available.
+
+Jurijs Markelovs   25:51
+Phish.
+
+Denis Platonov   25:51
+Yeah, probably parameterized build, yeah, it should be there.
+
+Eugene Semenyuk   25:54
+Yeah.
+Mhm.
+
+Jurijs Markelovs   25:55
+Yeah, but...
+
+Denis Platonov   25:56
+Unless you use some fancy plugin in Jenkins.
+
+Jurijs Markelovs   25:59
+Nothing fancy about me.
+
+Denis Platonov   26:02
+And no, Jenkins has like thousands of plugins and some of them may not be compatible with the default stuff.
+
+Jurijs Markelovs   26:06
+Yeah.
+
+Eugene Semenyuk   26:07
+Mhm.
+
+Denis Platonov   26:15
+Like, for example, I...
+What was that? I think I used Jenkins last time I had like this multi-choice plugin or something.
+So on UI you can have like, you can select multiple items. And this is not standard thing, so I don't think you can kind of, well, probably there is a way, but it's going to be a little bit tricky.
+
+Eugene Semenyuk   26:49
+Yeah.
+Okay, any any other questions?
+
+Jurijs Markelovs   27:17
+So how would you connect?
+All right, again, going back to my case, of course, how would you get, how would you pass certain variables between the steps in the Jira automation? For example, for example,
+I am getting the.
+PRIGPR link.
+for all the story, what is coming into the testing example, right? How do I grab that? I mean, I know how to grab the, probably know how to grab the URL, find the URL if it exists. How do I pass it in between the steps as a variable and utilize it for?
+
+Eugene Semenyuk   28:00
+Chez.
+
+Jurijs Markelovs   28:03
+consecutive.
+
+Eugene Semenyuk   28:06
+Yeah, let's try to see.
+
+Jurijs Markelovs   28:08
+Oops.
+
+Eugene Semenyuk   28:09
+Yeah.
+
+Jurijs Markelovs   28:09
+I'm sure it's been discussed before 7 million times, but here I am.
+
+Eugene Semenyuk   28:15
+That's absolutely normal.
+
+Denis Platonov   28:17
+Yeah, I think previous session, actually Evgeniya showed that.
+
+Eugene Semenyuk   28:22
+Yeah, so there is create action, create variable.
+It's close.
+So, yeah, we we can provide some some variable name, yeah, for example.
+For example, if we need to store response of this agent and use it somewhere else, because yeah, look, we use agent response variable, and each agent overrides this variable. So yeah, but if we need to use this response for some
+Some some other agent we can use.
+Create variable.
+Yeah, and uh...
+Yeah, provide some variable, for example, digital review.
+And use agent response.
+As a well, you.
+So, yeah, and uh, yeah, later we can use this variable for for other steps, and...
+And even as I remember, we can do something like this.
+make a dot, yeah, especially if we have Jason format in response.
+I believe you, yeah, you should be able to use dot and...
+And reference to some object.
+
+Denis Platonov   29:56
+Hey.
+Jason path.
+
+Eugene Semenyuk   30:00
+Yeah, yeah.
+Uh, I'm not 100% sure about this.
+
+Jurijs Markelovs   30:07
+Okay.
+
+Eugene Semenyuk   30:08
+Yeah, but so...
+But I believe there is should be.
+Yeah, there, there should be some some opportunity to do this, because...
+Yeah, I remember that I...
+I did something like this.
+Yeah, or, or, or if you have multiple objects inside these variables, so yeah, you can also.
+Use some index.
+To get the specific.
+
+Jurijs Markelovs   30:51
+So specifically, how could you get Jira's?
+Development section PR link pulled.
+
+Eugene Semenyuk   31:06
+Um, could you please repeat?
+
+Jurijs Markelovs   31:09
+All right, so each each Jira, or hopefully all of the tickets, Jira tickets are have the section dedicated to development, and it somehow connects to the GitHub, right? And development story contains once.
+
+Eugene Semenyuk   31:10
+Tim Gupta.
+Okay.
+
+Jurijs Markelovs   31:28
+It's done with the development. The URL to the branch or the PR is added.
+To the MS.
+
+Eugene Semenyuk   31:38
+Yeah, let's see. Let's see what we have here. Same project issue.
+Attachment, change your look.
+You should type issue links.
+Your little watchers.
+No.
+No, it's just...
+
+Jurijs Markelovs   32:05
+This is not there.
+
+Eugene Semenyuk   32:09
+Signing Commentation Labels Priority Project Porter Reservation Status URL version of Whitledge.
+
+Jurijs Markelovs   32:17
+Yeah, it's not available in the sandbox, probably, but there is, in like a normal JIRA ticket, there is a development block which contains branches, pull requests, builds, and all that good stuff.
+
+Eugene Semenyuk   32:20
+Cool.
+
+Jurijs Markelovs   32:32
+Mhm.
+
+Eugene Semenyuk   32:34
+Bing.
+Uhh...
+Yeah, I guess you can you can reference to some field like this, yeah, if if it is custom field.
+Ingraffia.
+This.
+For the sake of my sandbox.
+For example, this.
+I see that we don't have.
+We didn't have development section here.
+Let's maybe open some.
+My favorite project.
+GPT.
+Yeah.
+Let's use backlog.
+Yeah, let's use something in testing status.
+Yeah, development.
+Yeah, but nothing.
+So, yeah, I guess you can reference to any to any field, so yeah, you just need to know the ID.
+And the...
+The good question, how to get ID of some custom field? I guess there should be multiple ways to get it.
+Yeah, one of them just open.
+Inspector and Network Tap.
+Load the page, yeah, and somewhere.
+Somewhere in Jason.
+Response.
+Backlog.
+This is HTML.
+Success, true.
+Ohh.
+Boy.
+
+Oleksandr Tsyganok   35:17
+Yeah, the simple stop solutions that I usually use on is just expert in issue to XML format. In XML format, we have description of all custom field identifiers.
+
+Eugene Semenyuk   35:27
+Mm.
+Yeah, yeah.
+That can be a good idea.
+
+Oleksandr Tsyganok   35:34
+Or, or you can use like CodeMe or any other agent and just ask about project-specific fields and there is like internal Jira APIs that can reveal all this project-specific configurations.
+
+Eugene Semenyuk   36:01
+Yeah.
+Yeah, here.
+Here's the...
+Like custom fields.
+With their IDs.
+So, yeah, I guess you can reference to to any any field on JIRA.
+Yeah, but you need to know the ID.
+Yeah, that's it.
+Jason, do you have something?
+
+Jason Daggs   36:58
+Yeah, I had a question just unrelated to this. So if you all are, when you all are finished, just let me know.
+
+Eugene Semenyuk   37:00
+Mmh.
+Okay.
+Yeah, I guess.
+
+Jason Daggs   37:07
+Thank you.
+
+Eugene Semenyuk   37:08
+Yeah, let's proceed.
+Yeah.
+Yeah, let's let's discuss your question.
+
+Jason Daggs   37:22
+Oh, great.
+So I started like doing some work on the mentoring side of things, where I was setting up meetings with the teams that are in my list of teams and scheduling some time with them to kind of go over
+you know, what their Jurijs are and to find out what kind of assistance they might need in order to implement those. And so I did that. And then I think Divya also did that. And she actually set up several meetings today. And that's okay. I'm just trying to understand what the appropriate
+The procedure for me should be, what should I do next time around?
+Does that question make any sense at all?
+
+Eugene Semenyuk   38:17
+Alexander, could you please?
+Help us with this.
+
+Oleksandr Tsyganok   38:24
+Yeah, I'm not sure. Maybe you can provide like some kind of practical example for this setup.
+
+Eugene Semenyuk   38:27
+But...
+
+Jason Daggs   38:29
+Yeah.
+Yeah, she, so, you know, I had, it's really kind of a procedure thing related to the Champions Program.
+So, we have these teams set up, right? Like, I have five teams, and you know our mission is to engage with them to get them to kick off their pilot and to make sure they know that they have resources available, like a dev mentor, QA mentor, etc., so that they so that we can assist them in.
+
+Eugene Semenyuk   38:39
+Show.
+
+Jason Daggs   38:59
+In getting these this pilot implemented.
+So, and so I went about and I started setting up some meetings to do that, but I but then I think Divya went ahead and went ahead and created some as well for the same thing. I I don't think she saw mine on my on my calendar, but so I'm just...
+Curious, what is, you know, what is the right thing to do, you know, just in the future? If I should just let her schedule that kind of meeting, or is it okay if I do it, or, you know what I'm saying?
+
+Oleksandr Pavlovskyi   39:42
+Yeah, that's that's guys free to you for you. It's just feel free to to schedule this meeting in the most convenient time, yeah, for you and for your teams, yeah, so we recommend to have.
+
+Jason Daggs   39:51
+Okay.
+Okay.
+Okay.
+
+Oleksandr Pavlovskyi   39:59
+at least one session, yeah, at least one hour session a week. Yeah, to track the status of this use case funding and so on, and have ability to have the regular meeting to give your team ask questions for you, yeah. But the experimentation on their side, yeah, we have proposed several use cases. Yes, it was
+
+Jason Daggs   40:14
+Right, right.
+Mm.
+Mhm.
+
+Eugene Semenyuk   40:26
+Yeah.
+
+Oleksandr Pavlovskyi   40:27
+And you and the teams should decide if this use cases are applicable. It'll just like example, yeah? They can start working on it or maybe propose something more relevant to their tasks. Yeah.
+
+Jason Daggs   40:35
+Oh, okay.
+Okay.
+Okay. Yeah, I just wasn't sure what the, at first, or now that you've explained it, I think I have a much better understanding of what we're trying to do here. So I think maybe just Divya just didn't see, I'd already scheduled something, so she just was helping me out there. So I think that's good. Thank you.
+
+Oleksandr Pavlovskyi   41:02
+Okay, no problem. But if you're going to have questions, you can ask me, yeah. Or asking that chat, yeah, that in our slot group or our teams chat, yeah, this is going to be more useful to use our group chat, yeah, because maybe somebody have similar question, yeah, and we can ask for at one time, yeah, to the two questions, yeah.
+
+Jason Daggs   41:06
+Okay.
+Okay.
+Yeah, oh yeah, that's a good point. Yeah.
+
+Oleksandr Pavlovskyi   41:43
+Good guys, we have 18 minutes.
+Hey, Eugene, Vlad, Vira, Alexander, guys, do you have something more to share today to discuss?
+
+Eugene Semenyuk   42:09
+Probably not.
+
+Vlad Grubman   42:10
+I'm good. I just posted the artifacts that we've shared because if you're not on Slack, you may not have gotten these artifacts. So if you're interested in this brain thing that I spent so much time talking about today, feel free to peek over the digital.
+digital team conference pages and all the artifacts are there.
+
+Oleksandr Pavlovskyi   42:35
+So, you sure thing is like here?
+
+Vlad Grubman   42:39
+I was sharing it in the Slack with the digital team during the call, but I understand that everybody's on this on in that in that Slack team, so I shared them in the conference where it should be.
+
+Oleksandr Pavlovskyi   42:42
+Mhm.
+Okay, okay, yeah.
+Cool, cool. Thank you. Thank you a lot.
+Alright guys, so thank you all and have a great day. Happy Friday.
+
+Eugene Semenyuk   43:16
+Thank you.
+
+Vlad Grubman   43:19
+Thank you. Take care, folks.
+
+Eugene Semenyuk   43:20
+Yeah.
+
+Sujan Shrestha   43:21
+Thanks.
+
+Eugene Semenyuk   43:22
+Thank you. See you. Bye.
+
+ stopped transcription

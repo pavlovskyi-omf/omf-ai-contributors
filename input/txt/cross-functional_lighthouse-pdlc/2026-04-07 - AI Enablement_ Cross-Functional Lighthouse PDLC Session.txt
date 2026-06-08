@@ -1,0 +1,559 @@
+AI Enablement Cross-Functional Lighthouse PDLC Session-20260407_100748-Meeting Recording
+April 7, 2026, 2:07PM
+59m 21s
+
+Eugene Semenyuk   0:05
+So if the problem is disconnected steps, the question becomes, what does connected actually look like? So this is where we introduce the idea of an agentic flow. So at a high level, it's simple, from intake to requirements to development to testing.
+One continuous connected flow. And this is not an individual activity. This is a team activity. So the expectation is that digital QA and engineering work on this together end to end. And now the important thing. So the goal is
+The same for all team, but how you implement it.
+it will be different, like in team specific. Different teams have different context systems and constraints. So each workflow will be slightly different. And also, this is important. The goal here is not to build yet another standalone agent. So we already have enough
+point solutions. And the goal is to connect what you already have, and maybe add some missing points to these workflows. Yeah, and connect everything to real practical flows that works in your day-to-day delivery. Yeah, and to make this more concrete, let's look at
+couple of simple examples. Next slide, please. Here are two simple examples, like first workflow from requirements to implementation. It starts the way you already work, like digital drafts, story, but instead of passing it forward immediately, AI helps harden.
+the story, improving clarity and completeness, then QA steps in earlier, not at the end. So to identify the stability gaps based on that product, guys like from digital team refines the story again, and only then engineering creates an implementation.
+plan, but now based on a much clearer shared understanding. So the result is simple. So we start development with aligned context, not assumptions. And the second workflow from requirements to validation. Here the story is already finalized.
+QA generates task conditions and risks, engineering reviews, technical implementation, and some some details, and the team aligns on what actually needs to be validated and created. So, instead of discovering...
+issues late, we build a shared understanding up front. So, and that directly reduce reworks and defects. So, and the result in both cases is the same, less back and forth, less rework, fewer defects, and much clearer shared.
+contacts across the teams. So next slide, please.
+So now the question is, how do we actually enable this kind of connected workflow? So because the reality is, we already have multiple tools, multiple assistants, multiple use cases across different tracks, but most of them are still operating in isolation.
+So, and what we need is something that can connect systems and use cases and orchestrate agents across the entire flow. And this is exactly where Cody comes in. So, the key idea is not for
+just use isolated agents, but orchestrate multiple agents and like make them work together. And under the hood, what's important is, so AI agent operate in each stage, but more important, they outputs, their outputs are connected.
+So, the context...
+flows from one step to another step without being lost between tools or teams. And all of these happens inside your existing ecosystem like Jira, GitHub, Confluence, yeah, even with help of some robo agents. So yeah, call me.
+can orchestrate existing robot agents, and of course, with human control at each step.
+So instead of talking about the abstract things, so let's look at how this works in the real scenario and see how it moves from requirements to implementation to testing as one connected flow. And with that,
+I'll hand it over to Oleksandr, who will walk you through this end-to-end demo.
+
+Oleksandr Tsyganok   5:17
+Yeah, thank you, Eugene. Yeah, so we will have like a full end to end like flow where we start in like from the first stage where we have just like row requirements. It will for now we can assume that will be captured as a Jira story.
+And we need to make sure that we actually working on like meaningful like requirements because if we like have some like assumption, everybody will treat it like in a different way. And we will have like this disconnect that mentioned like UA will.
+focus on like one part for testing, like developers will treat like this requirements in like their way. So that's why we have for like a first stage, this like requirement hardening agent. It acts as a quality gate, it makes sure that all requirements are correctly described, that we have like all acceptance criteria, non-functional requirements.
+And we have like highlighting like areas that needs like additional work. So ideally we shouldn't like move forward to the next stage if we don't yet clarify like all missing details. Yeah, once it's ready, we have like another part of this flow, but we testing it from like a different.
+different perspective, we need to make sure that we have like all technical details that are important for QAs. So here we will have first of all another like validation for testability. And if we see that this user story has like decent quality, all necessary details are captured, we can move.
+Forward to like next step to convert like actual acceptance criteria to specific like test cases that should be captured in like test case management systems. So Code Me also has like a native integration with X-Ray and yeah, that's like our goal to pass it through security review and.
+enable it as a like native like allowed tool. Yeah, the next part, we will look through the user story from engineering perspective. We need to know like really low level details, how this like new feature impacts existing solution.
+You may have like your system distributed in like multiple repositories. You might have like front end, back end part. You can have even more complex setup. So that's like an important step to actually know what kind of.
+Code you already have, like, what like the main patterns, what is the feature that is implemented, and here this like agent that should help us, so it will know like all details about code base and will not produce this like implementation plan just based on like row acceptance creative assumption, but will.
+also includes this like knowledge for existing code. Yeah, and once we will have this like plan, it will be easier for like developer, like prepare this changes, use AI assisted tools like for local development in the favorite IDE, and after that we will produce some.
+Pull request, and again, that's like another like potential risk that if like continue like developing like user stories that was created like in a previous like setup where we didn't have like all this like strict requirements or even like with this like agentic flow.
+It's still like potentially like some miss like dependency on external teams as that are outside of this like analyze like repositories on the step #3, so we need to see like an impact of our changes, so that's where we will.
+Have another like quality gate, but on a pull request level where we check like potential risks, have a detailed suggestion which components are affected, potentially like external dependencies, and the next step we need to like test like our.
+deliverable items, we might have a huge test suite and so the last part will help us to identify the right test to execute it in a timely manner and not like overload like our CI system with like running full.
+A set of regression tests.
+Yeah, so we will start with like first part of the flow with three agents and we will start with requirement hardening. So as I mentioned, we will have Jira story as an input and we want to.
+make sure to verify that like all necessary details are captured. Yeah, so how it will look like.
+In order to showcase this specific scenario, we pre-selected like a real user story that was like actually like reported by clients. We have like an issue that we have like a clear message about.
+Next, like payment that actually is like not relevant because it's like was already paid but was confusing like a client and that was a potential like risk or for the like double payment and required like next refund, so we wanted to like address this issue.
+And yeah, so we have like exactly the same story captured here in like our sandbox Jira for testing purposes. And yeah, so that's where we have like our first agent, this Jira story.
+Read in this checker, so, as I mentioned, like the main goal for this assistant to capture, like, all missing details and access a quality gate, so code may have this built-in feature that currently is like enabled, like, with a network team, and soon we will have like this.
+fully like not autonomous but event driven execution when you can change your Jira ticket status from like created to like ready for like initial like review like for this like readiness for definition of ready state.
+And it can run this like agent automatically on this transition and verify it from like a different perspective, and we will have like this standardized output that's basically already a solution that one of team implemented with like robo agent and successfully applying it in production, so that's like...
+For example, how it can be like also transferred in Cody and how we can connect like all this dots together. Yeah, so we have like a report that like some areas are not covered. For example, we have like no estimates. We have like pretty good high level business requirement that describes the problem overall. We.
+potentially like missing some like engineering parts. So let's track all this changes in our agent and capture each step that we received like using AI. So that's the beauty like of this whole idea that we are not just locally talking to like agent, have like some decision for ourself.
+But we want to track everything as kind of like artifacts. So we just saying that let's post like results.
+Ask Jira comment.
+And that's like an idea that for the all step of the journey of this user story, CodeMe will help us to connect like all these pieces together. So as you can see, we have this like Jira connected, so agent have access to all these tools. CodeMe is already approved and.
+connected with like most used like core tools is Jira, Confluence and it and it can like interconnect all the systems. So as a result of this action, we will see that actually the same.
+Like result is captured here as a command, like, yeah, 38 seconds ago, like, and like these details are not lost. It can be picked up by the next agent, like used for analysis and like so on. Yeah, so let's move to the next.
+part, we will have as part of this journey, like checking the user story from QA perspective and make sure that it's have like decent acceptance criteria and all like NFRs and all details available. Okay.
+So, let's switch to our like next agent. This one is specialized in like validating quality of a user story, like know like this best practices which for like format for like NFR should be reported like acceptance criteria and so on. So, let's run this like disability.
+Analysis for our user story, and yeah, see see the results.
+So, additionally, while it's like analyzing user story, it's also interconnects like all other like parts of a system. So, as you can see, it identified like some links in Jira story, like loaded context for from this like epic.
+found like some cloned items. It performed like even like confluence search to try to find like potential like relevant details for this user story. Yeah, and it's like have this like testability analysis, like list of test issues.
+that potentially, that's like at that stage, it looks like requires like some improvement. Yeah, for the demo purpose, we will ignore it. But additionally, like ideally, you should like interact with AI so you have like a full control of what is happening here. If needed, you can.
+even like edit like in line like all this like output and change what was like produced by AI agent, but you can use just a chat and say that, yeah, here I have like some decision, like some uncertainties need to be like resolved in specific way and then you will have like more solid.
+Plan for this like use cases that are covered, and yeah, you will have like higher quality user story, so it should be like iterative like process for demo purposes, we just skip it, let's again like track like all this like artifacts and evidences in.
+Our system, so it will be again for this example, a Jira command.
+And yeah, while we create this comment, so that's another like option that we have in the code me. It's easily to orchestrate like different agents in this platform. So we can connect in this specific chat, but we already have a context about our plan.
+You know, Jira story, like all identified the stability issues, we can connect another agent and ask about creating specific like test conditions from like original acceptance criteria and like all these details, yeah. So, meanwhile, we see that.
+comment was created. Let's quickly check it.
+I think it's just directly providing comments to a regional like access through API. Let's check it in more user-friendly way here. Yeah, where we have this discovered context, like some like results of.
+Confluence search, like summary, all this like concerns, like in recommendation, capture it again here, and let's return back and see how we can connect this like another agent. Yeah, so we have this the case, it should be.
+Test case engineer, yeah, we have like too many agents. Let me quickly double check, like from a previous run.
+What was?
+The original name, because, yeah, it's important that I'm using the correct one.
+It's should be.
+We have like test case composer and test condition agents. Yeah, that should be a correct name. So let's use a correct one. It's not test case, but test conditions agent. Yeah, so that agent again, slight have slightly different knowledge and slightly different role. So it's specialized.
+on generating like low level test conditions that later on can be easily converted to test case. Okay, so let's ask it to create this like text condition.
+And then, so since it's like same chat, it have like access to like all contexts, there is no need to specify like this Jira ID again, so it already like knows all these details that we we see previously, but it works with this like data from a slightly different perspective, like...
+Again, it knows that it needs to like potentially check some details in Jira, check additional data from user stories that are required for this specific context. Yeah, so we see that we have like all this like test conditions generated. That's like a next like step. We have a really...
+Low-level agents for now, we can create a test.
+Um...
+This case is using this like test case composer. This agent will know all specific details for test case format. What is your test case management system? Yeah, for this demo, since we don't have this like yet approved X-ray integration, we will show how it will work like in the Jira, but...
+But it will be the same experience that you can directly post it in X-ray. Yeah, so let's ask it to create a specific test case for demo. I will create like A1 test case, but again, we can iterate like over like each specific use case.
+Convert it to test cases, and yeah, work on them with one, one, one, ask additional questions if needed, and so on, create.
+Fest case or.
+Condition and let's select like first condition from this list, something related to this like new past date. Yeah, so we will have already generated test case, so we can review like this details, like steps that needs to be executed, like log into application, like locate the specific like tile, like observe some results.
+We see that, like, since we ignored like this fact that the user story is not fully like testable, we have this like placeholders that something needs to be like clarified, and yeah, we already like highlighting this like gaps, and again, for we can like track it in Jira, but like, ideally, when we have this integration.
+In X-ray, that's where we will keep like all test cases created. Yeah, the next part, yeah, let me quickly switch to it, so we so like how we can verify quality.
+of a user story, how we can analyze the stability of this user story, another quality gate, we designed some test conditions and converted them to low-level test cases. The next part that we would like to check that, like engineering related activities.
+that we might have like potentially risk that even if we like follow the susceptance criteria like sorely, we might have a situation that like some technical details that we later on found in our systems like it preventing us from implementing it.
+In a regional way, so we need to have like some kind of trade-off, like a deal with this like technical constraints and slightly change this implementation. Yeah, usually we often like skipping like this report and back all these changes, so it might lead to this like disconnect, so it...
+This agent will solve this problem. It will analyze it before implementation, actually check like existing code base and only then create this like plan. So if we will have like some reasons for this deviation, we can capture it immediately, change like our original acceptance criteria.
+or just document a reason why we change this implementation. Yeah, so let's take a look from practical perspective, how it might look like.
+Yeah, so here we have our implementation plan architect agent. Again, it works with the same user story. It takes this as an input. We can ask it to create an implementation plan for us. So this agent have like all knowledge.
+of like all repositories that is specific to this like team. So that's like important to add additional like context that relevant is specific to your team. So we can have like this common templates, common set of agents, but like each agent should be connected with like different knowledge and it's easier to do it in a code me. We can.
+Easily connect this additional data sources, so basically that's like index repositories, yeah, so.
+As output, we have like details that we found in our code base, like some evidences for specific places where it needs to be changed. So, AI automatically identified for us that.
+We have like 3 repositories connected here, this like backend for front end, mobile, and some front end part. So it's already found that this changes that we want to address the style specifically belongs to backend for front end. So it will plan this implementation.
+detailed specification in the single repositories. If you will have a situation that your changes affected like multiple repositories, the specific agent can produce separate specifications that are described in changes required in front end and back end respectively. So two different developers.
+can potentially work on implementing this feature later on. Yeah, so we have like all this like proofs, like how it's like already implemented, identified like feasibility of introducing this like changes. Yeah, so.
+Like, we don't have like some like uncertainty here, but if we will like miss some like details, this agent can like interact with the user, suggest like options for implementation, we can select like for like option A.
+We select an option like one, and so on, if it needs like to clarify some details, we can like polish this specification to like our need, and yeah, for now, for now it looks like, yeah, so we using this like back end for pro front end, and let's...
+Correct, so for now we we are good to go, yeah.
+Form only the FF.
+Mhm.
+Yes, so it will be able like to create a draft of the specification as output. We will receive actual pull request, separate branch created with a specification. So what is specification? It will be just a single like.
+Pretty long mark down document that describes all details about this specific task, like original acceptance criteria, low level tasks, how like developer can follow this implementation or connect AI agent to execute like specific set of changes in specified like files.
+and some recommendation how this feature can be like tested locally. Yeah, so while we're waiting like for this results and yeah, we finalize and like creating this branch and changes, we can look at like previous run and check.
+how it might look like. So yeah, that's the created pull request.
+It's like this.
+The authorized.
+Yeah, so we will have like next pull request with like high level description of the changes. We will have everything interlinked and interconnected. We will have linked to our original Jira ticket. So I hope that in parallel this like previous agent.
+continue this like execution and we will see this link here. It looks like it's still running. And we will have this like file that I mentioned.
+Yeah, so it's just like a markdown with high level overview about the specific change, like high level details of a user story, like all proofs and like previous findings, like about requirements to be like applied for a specific source code files.
+like some list of high level technical like plan for that. If we will have like, I don't know, like database changes or like external changes, it will be like also listed here, like some security concerns and like so on. And as I mentioned, like we will have low level plan for specific.
+Task that needs to be like implemented, and it's like really easy to low-level agent to consume this information, and yes, since it's detected that it's some like Ruby-based source code, it's suggesting like some tools that need to be executed as a quality gates.
+Yes, so...
+See that it's still running here, but yeah, we can return back to it, but we should like expect the same specification output, because it's exactly the same agent, and the idea is that a next step, like a developer can just switch to...
+like his favorite IDE. So for example, here I have example of just regular copilot and where we have this specification. So we can just select our feature branch and continue like working from that.
+point. So as the next step, we will have another agent and another part of our flow. Yeah, so here we just want to review the quality of produced source code.
+We need to make sure that like all regional like acceptance criteria like a fully covered and we want to estimate potential like risks. So that's how it like will look like. So we have another workflow.
+In the code me, so that's not a simple agent as we saw before, but a whole set of orchestrated agents, so yeah, that's will be like our input of a pull request and like set of changes that we like applying here in code me.
+Yeah, you will see like slightly different interface. That interface is not intended like to direct user interaction. So we plan that you create a pull request in GitHub. It's automatically triggering this workflow using the webhook. So you are not like.
+interacting with the code me and as output you will get like result of pull request analysis and recommendation directly in your tool, specifically in the GitHub web interface. Yeah, so, but that's just some part of.
+Magic that happens behind the scenes, so we can track and see like each specific execution, like what was like the original like prompt that we started and some results. So, here we have just this PR ID and the Jira task, as I mentioned, like once we will get like this web hook, which will be just the same information extracted from.
+This web hook, so the main difference of this like workflow is that we combine in like smaller specialized agents. So like one agent can like work with GitHub, extracts this like divs, analyze this specific details, another agent works with Jira.
+You know, like task summary, like this acceptance criteria, and this low level details, another agent can like analyze all these inputs together, find potential like gaps in implementation, and like send like all this like risk and like analysis results to another agent to.
+Publish it as a final like output of this agent, so you should expect just like standardized format for this like command, so you will have a full control over this like outputted format, so we know that like different teams might have like a different needs, so that's like fully under your control.
+how it might look like, like which system it should like connect to and which specific like analysis like rules this agent should have. But yeah, so that's an idea that without basically 0 interaction, we like just create a pull request and in several minutes you have like this like full report of.
+potential risk of this like changes, some high level summary, impacted like low level components, some user journeys, and yeah, some deployment recommendations. So here that we should ideally have like cover this functionality by a feature total. Yeah.
+So, that's was like covered this two use cases that we identified and actively working with OMF teams, so with like implementing it, like one that we saw this like was risk analysis.
+And another one is the smart test selection that currently is in active development. So it will be converted again to full like autonomous workflow. But at that moment, we have like set of agents connected that can collaborate with each other. So.
+Let me just show this like idea what we will have here.
+Yeah, so it's like a similar setup where we have like three different agents just connected in the chat. So basically, an end user currently like accomplishes this like functionality of like workflow mechanisms that we have in Cody and like manually connects like all the steps. But yeah, once it will be like fully ready, it will be connected.
+to this like workflow. Yes, here is input we have just a user story, like a pull request, and we have like agent that can analyze.
+Like all potential changes in like components. So it have like again, some high level information about source code, like main like core components that might be like affected by specific change. It like have information about.
+Test suite, so it can plan like on a different test level which test should be executed, like their priority. So, yes, you can see we have like this different test levels, unit integration, end to end, like, and regression tests that.
+needs to be like executed. We have like another agent that can check like specific low level test cases that once we will have again, X-ray available, it will be just a search in a.
+Test cases for now, with just like a knowledge base, we just export it as an Excel file, but yeah, basically it have like still same knowledge about all available and already implemented test cases that like covered in this like functionality, so it can say that, yeah, for this specific change, it makes sense to.
+Run the specific test case, because we have like a reason that it's like already covering this like part of like UI. We also have this like option to find a coverage gap, so if we see that we have like some set of changes, but we didn't found like corresponding.
+test cases in our test management system. This agent can recommend to cover this potential like gaps and create like necessary test cases. It can like also suggest like some modification of existing test case because original like requirement was changed or we have like some impact on existing tests.
+And yeah, that's again the way that this like test case composer that I showcased on like on previous steps where we were generating test conditions and converting this like test condition to specific test case, you can like reuse this.
+Agent like directly in a different scenario, so we identified like some gap, and yeah, so we just asking that we need to define this new test case to cover this gap, so that's that's the beauty of like this like reusability of this agent, so you can build like this kind of modular system, and when once you have like set of agents.
+that's just a question of correctly coordinating them and orchestrating this set of agents in like this manual charts or like autonomous workflow that we have. Yeah, so that's that was like this journey from like high level like requirements through.
+Like set of like quality gates from a business perspective, and...
+checking like this engineering plan and reviewing potential changes, risks, and set of recommendations for our test cases. Yeah, so that's what we like accomplished. Yeah.
+we have like covered like all this like parts. So definitely you might have like additional steps that you have in your like daily work. So that's like not a like plan that we need to strictly follow. You can extend it with like additional agents, have like additional checks, some like.
+Recommendation or traces during this like journey, you can for each like agent you have like add some intermediate step where you have like human in the middle, like full control over like agents like outputs, you can add like always in the critical areas like human confirmation where we get a chance to like review this like outputs and like have full.
+Control over the system.
+Mom.
+Yeah, so that's the whole like idea for this flow. Yes, thank you for attention.
+
+Eugene Semenyuk   40:41
+Show song play song.
+Okay.
+Yeah, thanks a lot, Alexander, for a great demo. So, all right. Now that you've seen the end-to-end flow in action, let's quickly look at what comes next. Over the next few weeks, we'll continue building on what you saw today, step by step. So we start with assistance, orchestration, data and integrations.
+and then moving to more advanced workflows, like you've seen before. So each topic is split into learn and apply, and we introduce the concept, and then you apply it in your team's real work. So this plan is flexible, so we'll adapt based on your feedback, priorities, and so on.
+and where your teams see the more value. So think of this not as a fixed training, but as a working program we shape together. Okay, with that, let's open it up. So what questions do you have? Anything from the demo, the workflow, or how?
+This can apply to your teams.
+So yeah, feel free to unmute and ask if we have some time for.
+Yeah, Jurijs.
+Hello?
+
+Jurijs Markelovs   42:01
+Yes, this is great and very promising, but the first thing what comes to my mind is their ability to integrate code with other.
+
+Eugene Semenyuk   42:11
+Read for integration.
+
+Jurijs Markelovs   42:13
+components or other tools that we are using in the OMF and like Slack or Teams.
+
+Eugene Semenyuk   42:14
+You.
+
+Jurijs Markelovs   42:21
+Um...
+
+Eugene Semenyuk   42:22
+Market.
+Pause.
+
+Jurijs Markelovs   42:24
+And, in this case, how do we do that? Yeah.
+
+Mikhail Makarov   42:25
+Um...
+Yeah, for Slack, I already responded to you. We need to install approved MCP connector. It is available directly from Slack, but it has to be approved with an organization to be used for integration. Similar situation with...
+
+Eugene Semenyuk   42:41
+I see.
+
+Mikhail Makarov   42:46
+Teams, it's a little bit more complicated because you have to create a custom type of integration with Teams, but it's still possible. Same way, basically MCP server.
+
+Eugene Semenyuk   42:49
+Mhm.
+Yes.
+
+Jurijs Markelovs   42:57
+All right, the reason I'm asking is really we touched base a little bit on that in Fusion last week or so. Slack contains Slack contains Slack bot, which lets you trigger different commands, like like deploy.
+to certain environments by branch. And so this is would be like the simplest way to go with. And Mikhail, you use, what does it take to get this approved? Who are the key person to get this approved?
+
+Eugene Semenyuk   43:31
+And.
+
+Jurijs Markelovs   43:35
+And what's the dresses?
+
+Mikhail Makarov   43:36
+Um, that's a tricky question. Uh, we don't have a stable process as of now. Um, when MF is still working on this one.
+
+Eugene Semenyuk   43:37
+Yeah.
+
+Jurijs Markelovs   43:45
+Yeah.
+
+Mikhail Makarov   43:54
+Yeah, still, yeah.
+
+Eugene Semenyuk   43:56
+First approval.
+
+Mikhail Makarov   43:56
+No.
+
+Oleksandr Tsyganok   43:59
+Yeah, so I just wanted to show that Cody itself will have a support for pretty big list of tools and integration, but yeah, for now we should use only set of like already approved tools and we have like an option to connect MCP servers once they will be like approved.
+
+Mikhail Makarov   44:00
+Yup.
+
+Eugene Semenyuk   44:03
+Mm.
+Bhushi.
+Yeah.
+
+Oleksandr Tsyganok   44:22
+Plus, technically, we have like an extensibility points where we can introduce like customly developed tools. It's have like this like mechanism when you can develop not only like platform tools, but create a completely separate one.
+
+Eugene Semenyuk   44:26
+Play the song.
+Thank you.
+No.
+No.
+Bing.
+Ohh.
+Okay.
+
+Oleksandr Tsyganok   44:42
+that are specific to your needs. And yeah, as Eugene mentioned, we have this like built in open API tool. So if a system provides like a REST API and have an open API specifications that already pretty well described usually and have like some documentation there that.
+
+Eugene Semenyuk   44:51
+I love you.
+
+Oleksandr Tsyganok   45:01
+AI can use to correctly like build this request. That's like another option how it can be easily integrated.
+
+Jurijs Markelovs   45:09
+Yeah, but I saw that the API key still requires an approval, right?
+
+Eugene Semenyuk   45:11
+Yeah.
+
+Oleksandr Tsyganok   45:15
+Yeah, yeah, sure.
+
+Jurijs Markelovs   45:16
+What's the name?
+
+Mikhail Makarov   45:17
+API key itself, not sure if it's available for you in Slack. Let's say you can get API key from Slack, then key itself is not a problem because it works the same way as your personal authentication.
+
+Eugene Semenyuk   45:20
+No.
+Yes.
+Yeah, I was just...
+Play song, song, song.
+
+Oleksandr Tsyganok   45:33
+Yeah, but the integration itself, like, in using this like connection from Code Me to Slack, requires formal approval.
+
+Mikhail Makarov   45:35
+Integration itself, yes.
+
+Svetlana Stogni   45:49
+And, as Filippo mentioned, in the chat, MCP approval approach is in progress, so most probably this is something that will be available for us in the nearest future.
+
+Jurijs Markelovs   46:00
+Yeah, yeah, I see this as being a major blocker. The fact that we are not approved for certain things, certain whistles and bells in our progress, but this is just me saying that.
+
+Vlad Grubman   46:17
+We have two more hands up and six more minutes.
+
+Sukalya Rajendran   46:19
+Yep.
+
+Svetlana Stogni   46:20
+OK.
+
+Sukalya Rajendran   46:21
+Okay, hi, this is Sukalya. So my question is with regard to the LLMs that are allowed to use. So I did see an integration with GitHub Copilot, right? But in the drop down list of LLMs, I don't see clouds on it available. In my experience, I found that to be more useful for the data pipelines.
+than the GPT versions. So I wanted to check if that will be onboarded. Do you have any plans on that?
+
+Mikhail Makarov   46:51
+Yes, there are some plans. Well, there are plans to have it enabled. It's again in the process of approval. The whole family of anthropic models, it's not approved yet.
+
+Sukalya Rajendran   46:58
+Okay.
+OK, and.
+
+Mikhail Makarov   47:02
+Technically, as a result, hold on.
+
+Sukalya Rajendran   47:04
+All right, thank you. Just one other question again related to the LLMs here. So it says EPAM GPT 5.2. It's same as the regular GPT 5.2. Is it? Because when I try the same prompts using the ChatGPT Enterprise version versus through a workflow that uses this EPAM GPT 5.2, sometimes I get.
+different results where the enterprise version of ChatGPT, you know, is what the results are what I'm looking for. So I wanted some clarity on that.
+
+Oleksandr Tsyganok   47:35
+Yeah, under the code, it's exactly the same models, so if you talk into ChatGPT itself, like this application, it might have like additional prompts and like rules, how to like provide this like output, you can achieve it by building specific like agent in code me just to add this like extra layer like of logic, because...
+
+Mikhail Makarov   47:36
+Um...
+
+Sukalya Rajendran   47:44
+Mm-hmm.
+
+Oleksandr Tsyganok   47:58
+For now, from CodeMe, if you just use an agent, it just have direct access to API. And if you're using like ChatGPT, you can assume that it's like not just an inferior like API from LM model, you have like some extra rules on top of that. So that's like a reason where you might have this difference.
+
+Mikhail Makarov   48:16
+Yeah, and in...
+
+Svetlana Stogni   48:19
+Yeah.
+
+Mikhail Makarov   48:20
+In recent versions of ChatGPT, they enabled some sort of a memory from your previous conversation. So maybe in your case, it just have more ground in context that belongs to you. That's why you get the results that you're looking for.
+
+Sukalya Rajendran   48:33
+Okay.
+Okay, thank you.
+
+Ramakrishnan Varadhan   48:40
+This is Ram. Actually, I have a question. Why do I need to use a code me for orchestration? Instead of like, I can go and use my Power Automate, which is an Microsoft product. It has like 365 integration and Azure Fabrics, everything. So why I need to go for a code me?
+
+Mikhail Makarov   49:02
+You're right, Power Automation providing similar functionality, just with slightly different context. It depends on your task. For, let's say, office-related tasks or for things that you need to do in Microsoft ecosystem, Power Automation maybe is a better choice.
+For engineering related tasks, most likely you will have a better chance for success with coding.
+
+Ramakrishnan Varadhan   49:29
+No, actually Power Automate not only supports the Office products, but it can be used for other things also. I can implement in my fabrics where I can go and do my ADFs and I can do all my orchestrations over there. So what is the difference if I want to use a code me?
+in Power Automate.
+
+Mikhail Makarov   49:54
+It's hard to tell right away, right? We need to look at your particular implementation and cases. CodeMe is local. It's deployed within OMF infrastructure, so it looks into external environment from inside, which means that with CodeMe you have a slightly different security context.
+
+Ramakrishnan Varadhan   50:00
+Mhm.
+
+Mikhail Makarov   50:13
+For example, you can access tools that will not be accessible with Microsoft environment, probably, or some other cases. We just need to compare apple to apple. Like basically, we should try to implement the same scenario within Cody and within Power Automate and to see what's going to happen.
+
+Ramakrishnan Varadhan   50:33
+Okay, and if you can have any use case, what the differentiates, if anything, why I need to use it, that also will help you, help me in future.
+
+Mikhail Makarov   50:47
+And.
+Differentiation is a very tricky topic, right? So it really depends on your use case and like everybody will have their own situation and circumstances. Like as I said, mostly it will be related to security approvals and availability of certain connectors. Orchestration tool is an orchestration tool.
+
+Ramakrishnan Varadhan   51:11
+Okay.
+
+Mikhail Makarov   51:12
+There are a few other things here that are specific for code me. For example, we storing code base to not retrieve it every single time. And there are other things that will more work like.
+Code code or cursor, yeah, from engine perspective within Code.
+
+Ramakrishnan Varadhan   51:33
+Okay. Thank you.
+
+Monika Burnham   51:37
+One more minute and a couple more questions, so I think...
+What's next?
+Bamitri, I think meet Mitra.
+
+Svetlana Stogni   51:45
+You.
+
+Eugene Semenyuk   51:47
+Yeah, hi, Deb.
+
+Debamitra Bhattacharjee   51:50
+Yeah, so one question is like the code me looks to be very promising for testing validations, but one thing here is like when I was trying looking, I don't see there is an option to integrate code me with Snowflake.
+
+Monika Burnham   51:51
+Love you.
+
+Debamitra Bhattacharjee   52:09
+And most of our application uses Snowflake, so that would be a roadblocker. So is there any future plans to have option to integrate with the Snowflake?
+
+Eugene Semenyuk   52:28
+Guys, do you know about such integrations?
+Mm.
+
+Mikhail Makarov   52:33
+Nothing that I'm aware of. So maybe we can answer this question later. We probably need to check with our code meeting. Do we have anything?
+
+Eugene Semenyuk   52:35
+Okay.
+If.
+Mhm.
+
+Debamitra Bhattacharjee   52:45
+Okay.
+So, OK, so that that could be like a roadblocker for us, our team, if if we cannot.
+
+Eugene Semenyuk   52:48
+Ms.
+
+Oleksandr Tsyganok   52:53
+Yes.
+So we identified that most of the teams using X-ray or Speraw or moving from Spira to X-ray. Yeah, we understand that like different teams might have like a different tools. So if we see that we have like wide audience and we don't plan to move to a different tool set, so maybe that's a good idea to.
+
+Debamitra Bhattacharjee   53:09
+Mm.
+
+Oleksandr Tsyganok   53:18
+add this like tool for this approval process. Yeah, technically, you're right that there is no native integration in CodeMI, but yeah, the main idea is that we have like pretty much like flexibility for accessibility points. So I assume that this tool have like.
+
+Debamitra Bhattacharjee   53:22
+Okay.
+
+Oleksandr Tsyganok   53:38
+publicly available API. I mean, not like public, but just documented APIs that you can generate like some token. We can connect it with open API specification, or we can check maybe they have like some MCP server like delivered by this specific team that can like.
+
+Eugene Semenyuk   53:39
+Yeah.
+The.
+Yeah.
+Yeah.
+
+Debamitra Bhattacharjee   53:48
+Mhm.
+
+Eugene Semenyuk   53:48
+Yeah.
+I will update.
+
+Oleksandr Tsyganok   53:58
+security review, not just some written by some random guy in the internet, but yeah, as part of this like specific product.
+
+Debamitra Bhattacharjee   54:07
+Okay.
+
+Svetlana Stogni   54:08
+I have one more question from Sam.
+
+Eugene Semenyuk   54:12
+Mhm.
+On the way to work.
+
+Sam Jayavelan   54:15
+Hey, hi. Mine's pretty quick. Like for cursor, cloud, and everything else, right, that we had gotten, we have a token allocation. So for code me to, at least documentation portion I know is free, but the rest of it is like as we move into phase two, is there going to be some allocation or is everything going to remain free?
+
+Eugene Semenyuk   54:21
+Who's?
+Yeah.
+
+Mikhail Makarov   54:40
+Um...
+You mean from Tokian spent perception?
+
+Sam Jayavelan   54:50
+Yep.
+
+Mikhail Makarov   54:51
+Eads.
+Up to OMF, how is it, how will you allocate budgets for that? It's still less expensive for them than many other. I mean, tokens are tokens, it's separate from platform itself.
+
+Eugene Semenyuk   54:57
+News.
+Please stop.
+Yes.
+Big.
+Yes.
+
+Mikhail Makarov   55:08
+He like.
+
+Sam Jayavelan   55:09
+I understand. I'm just asking because sometimes what happens is we run into those limitations, right, with the other tools as well. Here we are looking at using not just one agent, we are looking at like chaining multiple agents and using all of them. It'll definitely make a lot of things efficient. However, there's a cost to it.
+
+Mikhail Makarov   55:16
+Mm.
+
+Eugene Semenyuk   55:22
+The the.
+This.
+
+Sam Jayavelan   55:28
+And I'm looking at like for the initial at least POC2, if we get an approximation of what's per person allocated, then we can start running a little more on it.
+
+Mikhail Makarov   55:29
+Yeah.
+
+Eugene Semenyuk   55:36
+Gina.
+Play.
+Little from.
+
+Oleksandr Tsyganok   55:40
+Yeah, I can answer on this like specific question. So that's like one more like benefit that CodeMe like deployed in like internal infrastructure and you have full control over your spending. So CodeMe doesn't have like built-in LLM capabilities, so we reuse them as this like all models.
+Currently, it's connected to like Azure subscriptions, so they have basically like limitless capability for like AI generation, so it's like depends on the on your budget, so you shouldn't see like any like hard limits. We, as you can see, like just to some kind of restriction, so...
+we don't have like some overspending, we put like some like budget, I think it's maybe $200 or something like this, like a monthly budget for a single user, just to not like some make some mistake and like overspend, I don't know, thousands of dollars. But that's like fully under your control.
+Basically, Microsoft infrastructure gives you like limitless like spending that depends on your budget, and CodeMe provides you a tool set over like spending controls. You can select like for each individual model's budget, you can set budgets for like different users, different teams, different roles, and so on.
+For now, we have just this like common like set up, but yeah, if you will have like specific plan for this like budgeting, we can like set it up and apply it in a Cody platform. It has like really detailed like this like spending details, like specific statistics, so you can see in your.
+Profile, like just a high level description and like the spending limits, but we also have this like analytic stops that you can check like some spending for like overall like platform for like different periods, like 24 hours, like different project users and so on, so we can check like all this like details and yeah.
+
+Sam Jayavelan   57:31
+Mhm.
+
+Oleksandr Tsyganok   57:42
+if somebody will have hit like this like limits, it's just a question of like connecting for like the teams that for now it's like us, but somebody should be responsible for support and code me and they can just adjust this budget if we have like a reason to increase it.
+
+Sam Jayavelan   58:01
+Got it. As we expand, I just wanted to make sure we know how we are limiting it and, you know, so that we don't have surprises later and how, like, if we manage teams, how can we view them so that we know, right, we stay within our limits. Yep. Thanks.
+
+Oleksandr Tsyganok   58:17
+Yeah, that's the main difference that if you like buying some subscriptions, so usually you have like less control, like basically they just dictate in like as part of the product that they given for the specific license, some like limits, and yeah, if you spend it, you cannot like like change it easily, but here everything under you can your control, we have like this internal proxy light LLM tool.
+That basically controls, like, all this like budget and spending, and like tracks this token usage for users.
+
+Sam Jayavelan   58:52
+Got it. Thank you.
+
+Eugene Semenyuk   58:58
+All right. I think we can wrap up. So yes, thank you, everyone. So really appreciate your time and engagement today. Looking forward to working with you in the next sessions. And have a great rest of your day and see you soon.
+
+Mikhail Makarov   59:13
+Yep, take care, everyone.
+
+Svetlana Stogni   59:14
+Thank you.
+
+Sukalya Rajendran   59:14
+Thank you.
+
+Jeanine White   59:15
+Thank you. Thank you all.
+
+Oleksandr Pavlovskyi   59:16
+Thank you, guys.
+
+Oleksandr Tsyganok   59:16
+Yeah, good work.
+
+Svetlana Stogni   59:16
+Like.
+
+Nicholas Crowley stopped transcription

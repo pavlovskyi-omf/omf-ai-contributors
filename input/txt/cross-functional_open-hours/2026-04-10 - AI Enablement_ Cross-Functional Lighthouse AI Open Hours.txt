@@ -1,0 +1,773 @@
+AI Enablement Cross-Functional Lighthouse AI Open Hours-20260410_110058-Meeting Recording
+April 10, 2026, 3:00PM
+47m 16s
+
+Nikita Kumar   0:14
+Thanks, Vlad. OK, I guess we can kick it off. We've got Alex on the call here who can help with code meet questions as well. So if whoever wants to start, if you want to raise your hand, if you have any questions. Again, these these conversations are optional. They're here for you and to help you with anything that we've learned throughout the week. So if you have questions.
+Feel free to raise your hand and we'll go around the room to call you.
+
+Sukalya Rajendran   0:38
+Hi, good morning. Happy Friday. Sorry, I did miss out on the session yesterday, but I did go back and look at the recording. I tried out few things I with EPM code to me and I also posted my question on Slack about scheduling. So let me share my screen and ask my question.
+So we uh, are you able to see the screen share?
+
+Vlad Grubman   1:07
+Not yet. I'm seeing. Yes, now I can, yeah.
+
+Sukalya Rajendran   1:09
+Yeah.
+OK, all right. So I did create a project related assistance that have integration with Jira Confluent.
+And then with a way to is to run on a a separate frequency. For example, I have this DDL watcher assistant. This basically does a filter on the catalyst Jira project and looks for specific labels on tasks.
+That have an impact on my data pipelines and it will produce a result. And so I have been running this manually every day to keep track of you know what tasks have been created on the source.
+But I wanted to know if there is any way to schedule it to run every day. And also, is there a way to notify things on, I know Slack and Teams integration is not there, but any other way or suggestions on how I can get those notifications? This was my question.
+
+Oleksandr Tsyganok   2:22
+Yeah, I already provided answer in this like support channel, but let me repeat it one more time. We have a scheduler component in a code me, so like every user with administrator permission can create a scheduler integration.
+
+Sukalya Rajendran   2:28
+Oh, you did?
+Okay.
+Okay.
+
+Oleksandr Tsyganok   2:42
+So it just a configurable cron job that can run daily as you need it. I think you will need to exclude weekend.
+
+Sukalya Rajendran   2:42
+Okay.
+
+Oleksandr Tsyganok   2:52
+I think that's potentially not the best option to use the setup when you like doing this like polling. It's better to have like some kind of event-driven workflows. Why you need to wait for like the next day to get this task if you can get an immediate like notification or like some processing for this task.
+
+Sukalya Rajendran   3:02
+No.
+Okay.
+
+Oleksandr Tsyganok   3:14
+Once it created, so recommended approach to use web hooks in a Jira and react immediately once something happened, potentially, if you see that, like, I don't know, like 100 tasks created daily, that definitely it's better to have like some kind of daily digest like processed.
+
+Sukalya Rajendran   3:17
+Thanks.
+Okay.
+
+Oleksandr Tsyganok   3:36
+on a daily basis, but yeah, if like you rarely get in like this new task created, so we can get this like more interactive flow. Currently, the scheduler might be disabled, so I've checked like this functionality a couple days before.
+
+Sukalya Rajendran   3:43
+Mhm.
+Okay.
+
+Oleksandr Tsyganok   3:55
+By default, it's like not enabled, but yes, it was a plan to enable it in like next like deployment. I believe in one week it's definitely will be functional in our platform.
+
+Sukalya Rajendran   3:55
+Mhm.
+Okay.
+Okay, got it. So right now it's not available, but in a week's time we should have it. Got it. And you did mention about event based every time it gets created. How can I schedule that? Sorry, how can I set that up? Can you help me with that? Every time a Jira task gets created, I want to be able to.
+
+Oleksandr Tsyganok   4:25
+Yeah, COE.
+
+Sukalya Rajendran   4:28
+pull it up here automatically.
+
+Oleksandr Tsyganok   4:31
+Yeah, so code me supports like a webhook mechanism, so it can trigger like different things in a code me when something happens, like externally. First, it can execute assistant, it can run workflow.
+
+Sukalya Rajendran   4:44
+Mhm.
+Mhm.
+
+Oleksandr Tsyganok   4:50
+It can re-index data source, and what else we have here? So, but basically, like all this like interactive part that you like triggering from a chat can be like run programmatically. Yeah, Eugene, do you have like any comments?
+
+Sukalya Rajendran   4:50
+Yeah.
+Mhm.
+
+Oleksandr Tsyganok   5:10
+I saw that I have a hand. Yeah, I'm not, I'm not sure like about like how is it to set up like webhooks at that moment in Jira. By default, it requires admin permission to enable it cross project, but potentially with Jira automation, even without admin permission.
+
+Sukalya Rajendran   5:22
+Okay.
+
+Oleksandr Tsyganok   5:30
+you can set it up. Yeah, so I think we will test it and one of like our session will be focused on like this web hooks functionality to have a practical like scenario how to set it up in code me. Yeah, and last part of your question you were asking about how to deliver this notification. So code me by default supports.
+
+Sukalya Rajendran   5:36
+Okay.
+Okay.
+Uh-huh.
+
+Oleksandr Tsyganok   5:51
+email notifications, maybe like Telegram bots and like some other tools we have like this notification section. We can connect like some MCP or we can use.
+REST API with our open API specification tool. The main issue here is that we need like formal approval from security teams and like all other parts. I'm not sure that email tool was this in this like initial list for approvals, but I believe teams potentially was included.
+So, if you're using Teams and once it will passes like approval, like MCP will be like whitelisted, so that's like an option how we can connect it. So, technically, you can connect even now like Slack, we are like open API specification or email, but yeah, it's not like formally approved, so we we don't have like technical limitation, but we have like...
+
+Sukalya Rajendran   6:28
+Okay.
+Okay.
+
+Oleksandr Tsyganok   6:49
+security-related constraints at the point.
+
+Sukalya Rajendran   6:53
+Okay, got it. So for both, pretty much, I'd have to wait, I guess, one for approval and the other for the scheduling feature to be available. Got it. I'll let others go. I have another question that I'll circle back at the end. Thank you.
+
+Oleksandr Tsyganok   7:02
+Mhm.
+
+Nikita Kumar   7:21
+Patrick, I think you have your hand up as well.
+
+Patrick Behnke   7:24
+Yeah, I was checking to make sure it was anything else.
+So I had posted in chat for a question from Oleksandr from the demo previously on the Jira ticket creation. There was a ADF JSON that he included in his sys prompt. I did wonder if he could post that again in chat because I ran across a similar issue whenever I was.
+Running mine, so...
+
+Oleksandr Tsyganok   7:56
+Yeah, I will share my conversation with agent. I think like it was kind of some part of troubleshooting session.
+
+Patrick Behnke   8:06
+Yeah.
+
+Oleksandr Tsyganok   8:07
+that we try and use AI to find out what actually happens.
+
+Patrick Behnke   8:12
+Yeah, yeah, it eventually worked, but yeah, because it auto-corrected itself after a couple of tries, but along with some extra information, but if if I included it in the sys prompt, it would probably do it on the first try, rather than attempting like 5 to 10 times to get it right.
+
+Oleksandr Tsyganok   8:14
+Yeah, so it's.
+
+Akash Gupta   8:26
+Yeah.
+
+Oleksandr Tsyganok   8:34
+Yeah, so it depends on LLM model itself, like on this like documents that was provided for like during like learning the stage, so it looks like that they have like some different like version for this Jira API, so and this GPT models are not like.
+Very knowledgeable on this details of Jira API, so usually based on my experience, it's like struggles a bit, but yeah, if you like given this like hints, it's work better. Yeah, give me one second, I will share just a call chat.
+
+Patrick Behnke   9:04
+Yeah.
+
+Oleksandr Tsyganok   9:15
+with my agent and you can just check.
+
+Patrick Behnke   9:20
+Perfect.
+
+Oleksandr Tsyganok   9:20
+In this part.
+
+Patrick Behnke   9:22
+Yeah, thank you.
+You should be good, Ben.
+
+Vin Underwood   9:41
+Hello?
+
+Patrick Behnke   9:47
+Hey there.
+
+Vin Underwood   9:52
+Is it my turn?
+
+Patrick Behnke   9:54
+Yeah, yeah. That's why I called on you. My question got answered.
+
+Vin Underwood   9:55
+Okay, I'm sorry.
+Yeah, I didn't hear, sorry about that. Okay, so my question involves code generation. I have to write a fairly complex Java program, and previously I've used natural language prompts to do it, and I want to do it in a more sophisticated manner now, sort of like a spec driven development.
+So I went to GitHub. Can you see my screen or is it too small? I can make things bigger.
+So I went to GitHub Copilot and asked for an MD file. I gave it some preliminary information about the program and it gave me this template. And I don't know how to improve the template so it can actually write the program. The program, I think what I'll do is I'll provide the two inputs. It transforms 2 Excel files into a different format. So
+Here's one of the Excel files, and it's very complicated because it has a user-definable number of variables, and then the output over here is in these columns, and it must be combined with...
+This, let's see, this program that has formula, this spreadsheet has formulas. So if you go back to this one, every time the output is a number from 1 to 40, it's actually a pointer to another program. I'm getting into too many details here, but I thought what I would do is give it examples of the input and output. So here,
+Is an example of the output, and these are the two inputs I've already showed you, and I don't know how to...
+improve this prompt without giving a lot of actual detailed processing, like some commentary that to navigate the main input file, I have to go through the dropdown list to navigate the implied decision tree to find the leaf nodes and
+need to push and pop pointers off of stacks to be able to do that navigation. So I'm just looking, this is my first attempt to do true spec driven development without giving these natural language prompts and iteratively improving the program because I've heard some commentary, the way I've been doing it is the wrong way to do it. So
+If anybody could comment on that and perhaps, you know, give me a program specification template that they've used that they like, this is the one I've I got from GitHub Copilot that I'm starting to flesh out now.
+Does that make any sense?
+
+Oleksandr Pavlovskyi   12:44
+Okay.
+Yeah, yeah, yeah.
+
+Jason Daggs   12:46
+Hey, Vin.
+
+Oleksandr Pavlovskyi   12:48
+Yeah.
+
+Jason Daggs   12:48
+Why don't you send that to me and let me take, let me take a look at that, if you would, please.
+
+Vin Underwood   12:53
+Sure. Is that Jason?
+
+Jason Daggs   12:55
+Yes, it is.
+
+Vin Underwood   12:56
+Okay.
+Yeah, I'll do that. Should I send it right now or... Because I was going to do another iteration to add input and output files and see and let it regenerate the markdown file to see if it gives better...
+
+Jason Daggs   12:59
+OK. Thank you.
+Whenever you'd like.
+
+Vin Underwood   13:19
+I don't know, to see if it asks for more information or how it reacts to providing the input and output files.
+But I'll do that and then send it to you.
+
+Jason Daggs   13:25
+Okay.
+Okay, great. Thank you.
+
+Oleksandr Pavlovskyi   13:28
+Yeah, nice. And I would give maybe a very, it's very important suggestion, yeah, because you know, regarding to LLM, where we working with LLM, it doesn't matter working with this approach of when we use specs or this just a prompting, you know,
+the LLM is always random. And when you want to achieve some manual operations, yeah, with the files like you're showing, it's better to ask Copilot, for example, yeah, to generate script. Then you're going to be sure that the logic of some calculations or some, I don't know, operations, getting data from one source to another, so comparing,
+something like this, going to be delegated to this script. And you're going to be sure so that the procedure is going to be always valid. And that helps you to manage the, of course, the amount of tokens that you are spending, because all these manual procedures are going to be done by this.
+scripts. So I propose to split some logical things. I mean, the things when we need to delegate some decision to EI and operation things. Operation things is better to do with some scripts.
+So when it's going to be more effective to split your approach here that you are doing here by these two ways. And this is because LLM is always random and you can get the hallucination mistakes on this part. So you got.
+
+Vin Underwood   15:09
+Yeah. So, Alexander, I sent you an email about a very interesting conversation I had where somebody pointed out that it's better to do spec driven because if you're just doing prompt versus prompt versus prompt, it is random and you're not really...
+
+Oleksandr Pavlovskyi   15:14
+Yeah.
+Biniam.
+
+Vin Underwood   15:28
+It might be breaking things that were previously correct, and I really took that to heart. So I want to improve the way I do things. And so that's what I really want to do here in writing this program. The program is rather complex, but I want to see if I can do true spec driven development. So after the first iteration of creating the code and I test it,
+
+Oleksandr Pavlovskyi   15:34
+Mhm.
+
+Vin Underwood   15:49
+If it's wrong, then I can go back to the spec instead of doing an incremental update to the program. Okay.
+
+Oleksandr Pavlovskyi   15:54
+Yeah, yeah, yeah, that's right.
+
+Ravi Nachimuthu   15:57
+So, Vin, I thought...
+I was going to say, yeah, I was going to say, you know, double down on what Vin said. So I follow a similar approach where create the specification before you even write single line of code. But as you are creating the specifications, asking open-ended questions to these agents.
+
+Vin Underwood   16:00
+Yo, Ravi.
+
+Ravi Nachimuthu   16:19
+through GitHub Copilot, but giving it clear guardrails to say, do not assume or make up something on the way, rather you ask explicit questions, so that you can provide it the answers, and then it can ask more questions based on the input that you provide, so it keep improvising that specification.
+
+Oleksandr Pavlovskyi   16:20
+Okay.
+
+Ravi Nachimuthu   16:39
+and then take that markdown file. So I always take the markdown file and review each and every line and ensure that it meets my expectation. If there are anything that is still that needs to be refined, I go back to the plan mode and ask those to be revised until it meets my expectation and then get down writing code.
+So that way, the output meets.
+if not exactly to your expectation, but at least it comes closer to your expectations, removing the noise, removing the hallucination impacts. And then also it uses less tokens. Otherwise, if you went prompt by prompt, then we are sending all the prior history over to the model and we end up consuming more.
+
+Vin Underwood   17:09
+Yeah.
+Mm-hmm.
+
+Oleksandr Pavlovskyi   17:17
+Mhm.
+
+Vin Underwood   17:22
+Yeah.
+
+Ravi Nachimuthu   17:25
+more tokens and maybe towards the end of the month we may not have enough token to use.
+
+Vin Underwood   17:31
+Yeah, I totally understand what you're saying. For those of you who saw my demo on writing code and debugging code in obscure languages, I demonstrated the wrong way to do it. I was doing natural language prompts that I iterated, used a lot of tokens. I had some hallucinations. I had the context window open too long. I did all the wrong things. So it was sort of like a counter example of how to write a program.
+got it to work, but I want to get out of that mode. And it seems, Ravi, that modifying the MD markdown file is going to take a long time and some effort, but maybe that's because I'm not familiar with the process. I think it will take less time and effort than what I did previously.
+
+Ravi Nachimuthu   18:05
+Mhm.
+
+Vin Underwood   18:15
+where I got real frustrated, where I went through 10 or 15 or 20 iterations and the program got real confused. I mean, it just was a horrible experience to try to iterate to a correct program. So...
+
+Ravi Nachimuthu   18:15
+Yeah.
+Yeah, that'll cut down your time in debugging an incorrect module that was created so that you have to, you know, keep improvising. So number of back and forth that you would have. And then also, you know, when you said when you demoed it, it's the wrong way of doing, I wouldn't call it this wrong way. That's the vibe coding.
+
+Oleksandr Pavlovskyi   18:27
+Mhm.
+
+Vin Underwood   18:37
+Yeah.
+
+Oleksandr Pavlovskyi   18:47
+Hmm.
+
+Vin Underwood   18:47
+Yeah.
+
+Ravi Nachimuthu   18:48
+enough, right? So that's what most people do. So we are trying to move away from vibe coding to spec driven, and that's exactly what you are explaining now. So that's from you are doing a hobby project to a production ready product.
+
+Vin Underwood   18:58
+Yeah.
+Yeah. Well, it's still, it's a standalone program that will never make it to our main production branch. This is a utility program, which makes it much simpler in some regards. It's just the algorithms are complicated to do all the training. I'm trying to create Drew's decision tables from a set of other tables that are totally different format.
+and it's going to generate hundreds to thousands of lines in a Joules decision table. So it's complex decision logic, but it's not web-facing, it doesn't have security considerations, all that kind of stuff.
+
+Oleksandr Pavlovskyi   19:40
+Yeah, in addition to what Ravi said and you win, yeah, how to improve the spec driven approach, use spec kit because it's ready to use framework, yeah, that's going to give you these stages and ready to use agents that going to help you to clarify, then to specify, and then to implement it.
+Yeah, so you're gonna have these toolkit, yeah, all these agents that you're gonna that gonna help you to specify your future MD files, yeah, that you're gonna gonna reuse for the future tasks, so recommend to use or open spec is which is the same, yeah, which is very similar.
+
+Vin Underwood   20:14
+Yeah.
+
+Jason Daggs   20:15
+Yeah.
+Yeah, I was just about, I was going to actually discuss that with Vin about using kind of some of the spec tools that exist. I've been using open spec lately, so I, you know, and I've, you know, it's got its quirks, but I
+
+Oleksandr Pavlovskyi   20:34
+Mhm.
+
+Jason Daggs   20:41
+I think we do need to try spec kit. I need to start using that and see if that's any better. But yeah, I 100% agree, and that's what I think Vin needs to look into, is a spec-driven toolkit. Go ahead.
+
+Vin Underwood   20:49
+Jason, I, Jason, I would really...
+I was going to say that's fantastic. Thanks for the offer. I would really look forward to having that conversation with you. Because I feel like I'm not making much progress right now. So a little, if you could push me in the right direction, that'd be good.
+
+Jason Daggs   21:01
+Okay.
+Of course, yes, of course.
+
+Vin Underwood   21:10
+That's all I had. Thank you all.
+
+Oleksandr Pavlovskyi   21:13
+Thank you. Thank you, guys. Thank you, Vin.
+
+Mauezatur Khan   21:19
+Hey buddy, quick question from my end. I'm just trying to get my code me stuff set up. I haven't gotten an email or anything yet. What's the flow to get that process started? Just wanted to make sure I have access.
+
+Dzmitry Aryka   21:39
+I believe you have to try to access the code name and see whether you have access. So if you do.
+
+Joshua Smith   21:47
+I think I can help with this since I just went through the same thing. So I had to go to, now I'm blanking on the name of the site, but it's that site where you go to, yes, thank you. It's Friday. So yeah, go to ServiceNow. And the tricky part is there's a bunch of different groups.
+
+Nikita Kumar   21:48
+Yeah, yeah, yeah.
+
+Mauezatur Khan   21:51
+Okay, perfect.
+
+Nikita Kumar   21:58
+Service now.
+You're welcome.
+
+Mauezatur Khan   22:00
+Okay.
+
+Joshua Smith   22:07
+to request for code me, like for example, I requested group specific to wellness, the product area that I lead. There was like a user and an admin, and I think I just requested the user. And so I think that request went to Kamal, and Kamal approved it like later that day, and then it showed up in my October.
+To tiles.
+
+Mauezatur Khan   22:28
+Okay.
+
+Joshua Smith   22:28
+So I think you're, yeah, you're, I think what the unknown for you is you got to figure out what the right group is. I don't know if it's called, it'll be called like growth or account management or something.
+
+Mauezatur Khan   22:29
+Gotcha. Okay, that makes sense.
+But they all have like code code me somewhere in their permission name.
+
+Joshua Smith   22:44
+That's right. Exactly.
+
+Mauezatur Khan   22:46
+Okay, got it. Thank you. Okay, well, that's helpful. And then that makes sense why I didn't see anything about it. So the link you used to access code me is in our Okta chiclets.
+
+Joshua Smith   22:57
+Yeah, once I got approved for the security group, it showed up on my Okta Chiclet and I was able to get right in.
+
+Mauezatur Khan   22:58
+Okay.
+Okay, cool. That is helpful. Thank you, Josh.
+
+Joshua Smith   23:04
+You got it.
+
+Nikita Kumar   23:07
+I also included the guide on here as well for code me in the chat to make it a little easier.
+
+Mauezatur Khan   23:14
+Awesome. Appreciate it.
+
+Nikita Kumar   23:15
+Voice.
+
+Vin Underwood   23:16
+And I put, and I put some links in there as well.
+
+Joshua Smith   23:20
+Thanks. And actually, while we're on the topic, like I'm in the process of configuring my assistant. I've already generated it using AI and I'm doing the integrations now. And I'm assuming, I'm just making some assumptions here, but I'm assuming we'll want to put like our URL, our Confluence URL if I want to integrate it with Confluence and Jira.
+We'll want to put in those specific URLs in the configuration.
+
+Oleksandr Tsyganok   23:46
+Yes, since you're using like cloud setup, actually Jira and Confluence URL, it's exactly the same URL. You just need to select a different integration type. That's pretty much it.
+
+Joshua Smith   24:01
+Right, exactly. So this, I'm sharing my screen if you can see that. So here.
+I would put in.
+our own, like one main specific confluence URL, and then my credentials for that, including the API key.
+
+Oleksandr Tsyganok   24:20
+Yes, we will have a separate session where we will actually enhance previously created agent and add this like confluence integration, but if you want to check now, yeah, you should follow exactly the same setup as you have for Jira. You need to enable this is confluence cloud check box.
+provide like some alias and the only difference you just need to select a different credentials type for Jira we selected Jira for confluence you selecting confluence all other fields should have exactly the same values as for Jira.
+
+Joshua Smith   24:58
+Okay, that's helpful. I didn't realize we were going to do this in a subsequent session. I thought it was the homework from yesterday. I had to miss the 1st 20 minutes, so my apologies. But that's helpful. And then last question, where do we get the API key or token? Is there like, is there instructions somewhere to retrieve that?
+Then I can pop in here.
+
+Oleksandr Tsyganok   25:19
+Yeah, you can check.
+
+Eric Trenz   25:19
+Hey, Josh, I'm gonna... Oh, go ahead, I'm sorry.
+
+Oleksandr Tsyganok   25:23
+Yeah, you can check this recording, Nikita. Do we have it attached to like our page in confluence? Or you can just check a meeting in your calendar where like this recording is available for you. Yeah, and we have like this section where we have step-by-step details.
+
+Svetlana Stogni   25:42
+Right.
+
+Oleksandr Tsyganok   25:43
+how to get this token. But yeah, it's like standard setup. Yeah, somebody already shared this link. So you can navigate your profile security page and you can create token.
+
+Svetlana Stogni   25:47
+No.
+No.
+
+Joshua Smith   25:52
+Thanks, Erik. I see it.
+
+Svetlana Stogni   25:53
+Yes.
+
+Eric Trenz   25:55
+Yeah.
+
+Svetlana Stogni   25:58
+And we have the link to our recording from the previous session and attached to this page, so everything is set.
+
+Eric Trenz   25:58
+I also.
+
+Oleksandr Tsyganok   26:04
+Yes.
+
+Svetlana Stogni   26:06
+Yes.
+
+Oleksandr Tsyganok   26:06
+Always better to check, like just to have it like step by step, so you can open it on the second screen and just follow what you will see in this recorded demo.
+
+Joshua Smith   26:20
+Yep, thanks. I appreciate it. I'm already on the page to get my token, so I think that's all I need for now.
+
+Eric Trenz   26:31
+I'm not sure if I'm good.
+
+Jatin Bagga   26:31
+Hey, Nikita, sorry, I was out the first day and I just was catching up yesterday. So I'm like a little behind, I suppose. I'll circle back with you folks on this, but I think I do have access to code me based on the previous things that we were attempting. So just want to call that out.
+As a heads up.
+
+Nikita Kumar   26:52
+Yeah, I think you should already have access from our last session. Basically what we did on Tuesday and Thursday was go over a quick intro. And then on Thursday, forgetting my dates yesterday, we showed everyone how to create their first assistant. And that's also all in the video as well.
+So it has a step by step on how people are creating assistance similar to what we had done already for GPT and Robo as well. Yeah, yeah. So yeah, and then the homework for yesterday is basically creating your own assistant with Jira integrations and we can help you with that if you need any additional help with that.
+
+Jatin Bagga   27:16
+Got it. Got it. Okay.
+Okay, perfect. Thank you. Yeah, I think I'm familiar with the assistant part, so the homework piece I can probably follow through. Thank you.
+
+Nikita Kumar   27:31
+Awesome.
+Yeah, that's that. Yeah, you didn't miss out on much. That was the first thing that we'd done yesterday.
+
+Jatin Bagga   27:39
+Cool, thank you.
+
+Nikita Kumar   27:40
+Yep, of course.
+
+Eric Trenz   27:48
+If I am having trouble with my first integration, should I hold off until we cover them in a broader session?
+
+Oleksandr Tsyganok   28:07
+Sorry, what was the specific issue? Could you please repeat it one more time?
+
+Eric Trenz   28:11
+Just whenever I create the integration and test it, it fails.
+I'm not sure.
+What I'm doing wrong could be something very silly.
+
+Oleksandr Tsyganok   28:22
+Yep, you can quickly show your screen.
+
+Eric Trenz   28:25
+Yeah.
+I wasn't.
+Oh, I have...
+our URL. I went the whole way to my project, but I wasn't sure if we want to go that deep.
+
+Oleksandr Tsyganok   28:39
+Yes, it doesn't work like that. You should remove this part. If you want to work with a specific project, you just need to provide it in instructions for your agent that it should be like limited to, yeah. Now, can you click this test integration button?
+
+Eric Trenz   28:58
+Yeah, I think it lost the token for some reason, I mean.
+
+Oleksandr Tsyganok   29:03
+But if like you didn't modify it, it was like saved.
+
+Dzmitry Aryka   29:03
+Thank you.
+
+Eric Trenz   29:10
+Okay, so now it's working. So it was just that URL. Okay, sorry about that.
+
+Oleksandr Tsyganok   29:14
+Mhm.
+
+Dzmitry Aryka   29:15
+Could you then select Global Integration?
+In the top of the page, you selected the global integration, which means you are going to share this secret with everybody in the Quinby platform across different projects.
+Which most probably you have done selected.
+
+Eric Trenz   29:37
+Oh, okay, that's not across my own projects. Okay.
+
+Oleksandr Tsyganok   29:41
+Dzmitry, I think it have like slightly different functionality, so it just makes it available for all other projects that you assigned to, but you are not sharing it with other users if we create an user integration. So you're talking about project integration types, but for this like demo.
+We were specifically creating like a user integrations that are by default not shared with everybody.
+So, it's only like for this like project accessibility, and as far as I understand, like most guys have access to this like training project, and they like regular one, so if we enable this like global, it just means that it's available automatically across project, but yeah, in like my sessions that I...
+presented yesterday, I was saying that, yeah, you can create it for for training project specific integration that you will be fully isolated.
+Yeah, and I think we will go like in deeper details of like this permission setup on our sessions, where we will cover integrations in like more details, because for now we just created like this example how we can stop this integration, but we didn't talk in details about this like.
+or permissions mechanist.
+
+Eric Trenz   31:52
+Sorry, so I could be missing this and tell me if I'm...
+if it was part of yesterday, because I also have to catch up on yesterday's session, but is it that you're part of a project and your setup is, everyone set up within that project is the same, or is there some level of personalization we have in this? Because like I see.
+like integrations and then I can choose.
+The projects.
+Yeah, I guess I'm just not clear on that.
+
+Jason Daggs   32:38
+And.
+Okay.
+
+Oleksandr Tsyganok   32:40
+Yeah, if you have like specific questions on this like integration and project setup, maybe just easier to share screen and.
+
+Mikhail Makarov   32:49
+Yes, that was my suggestion as well. Maybe you can just share a screen and show us what you...
+
+Oleksandr Tsyganok   32:49
+Provides details.
+
+Mikhail Makarov   32:55
+OK, hold on this.
+
+Eric Trenz   32:58
+Okay, so like for example, like I see this and whenever I created it, I gave it to this access. So is it basically that like if I toggle on a project?
+I can.
+Find stuff and then put it into my flow, right? So, like, hold on, I don't know why.
+
+Oleksandr Tsyganok   33:28
+So this panel on the left is just a filter to filter content. Like you have like different resources. Now we're talking about integrations. So this integration is linked to a specific project. If you like edit this integration, you will see a first drop down, it will say project.
+
+Eric Trenz   33:42
+Yeah.
+
+Oleksandr Tsyganok   33:47
+to which this integration belongs to. When you filtering, you just like narrowing down this like returned like results.
+
+Eric Trenz   33:58
+Yeah, I guess I understand that. Like, and whenever I see like all workflows, like if I were to utilize...
+one of these like how would I use stuff from like the broader.
+Um...
+like everything available and I guess kind of like personalized my setup.
+Like I see this is shared with project and I guess that if I'm in that.
+project I can utilize it, but if I want it in my...
+Just for like a personal setup.
+
+Oleksandr Tsyganok   34:36
+Yeah, I understand your question. First of all, as you can see, this agent was shared with the project. By default, we have like developer role. Like developers have access to their like private assistant.
+or if it was shared, like everybody will be able to see it. Also, we have administrators of the project. Administrators will see all assistants, even it was not shared. I think you have like developer permission. So as you can see, like all assistants that currently on the screen.
+share it with the project. So you don't see like this like private private assistance. So for example, this first assistance was created by me. If we will try to use this assistant, you will reuse everything except integration because I didn't specify.
+like my integration, so it will not use like kind of like my credentials. So if you run this like analysis and post the comment to Jira, it will be posted with your credentials. It's like kind of like more advanced and complicated topic with this like permissions we intentionally.
+Started with like very basic stuff, and I think it's better to plan it for like next session to have it like more like advanced like permission mechanisms. Maybe you can explain what you're trying to achieve if you want to have like your...
+
+Eric Trenz   36:08
+Okay.
+Starting.
+
+Oleksandr Tsyganok   36:17
+like isolated users that you are not sharing with everybody, just select this, don't select this share with project checkbox. That's pretty much it.
+
+Eric Trenz   36:27
+Okay, and if I want to take from a project that was shared into my own setup, or I guess maybe there's not even a reason to do that.
+
+Oleksandr Tsyganok   36:34
+You can, you can just clone, you can just clone, you can clone the existing assistant and you can change it. So, yeah, we can, you can navigate to like assistance page. Let me quickly show you this functionality. Again, it's like for our next sessions, but yeah, so you interested in this stuff? Yeah, yeah, just let's just see it now.
+
+Eric Trenz   36:50
+Okay, yeah, yeah, no worries. I can.
+
+Oleksandr Tsyganok   36:55
+So you can click this, yeah, clone, click it.
+And yeah, you can provide your name, select like project where it should be assigned, and you see this like checkbox shared with project. So if you think that it's like not ready to be like published and share it and make it like visible for everybody, just uncheck this checkbox on the top.
+Yeah, it's on the very top under project here.
+
+Eric Trenz   37:20
+Yeah.
+
+Oleksandr Tsyganok   37:23
+And now you can save it and it will be your kind of private assistance you can configure.
+
+Eric Trenz   37:29
+Gotcha, gotcha. Okay, perfect. Thank you. Because I just, yeah, that's kind of...
+This is perfect. Thank you.
+
+Oleksandr Tsyganok   37:38
+Yeah, it might it might be a bit of a confusing because we we didn't discuss this part yet.
+
+Eric Trenz   37:43
+Yeah, yeah, sorry. And I can hold off on that because of that. Sorry. Thank you for the help there.
+
+Nikita Kumar   38:32
+Do we have any more questions from yesterday or anything else that you guys would like to know on Code Me?
+
+Vlad Grubman   38:42
+Yeah, and I would say don't worry about asking questions that are too advanced or potentially go further, like something we haven't touched. At least you will know we're going to touch on them and you get some basic idea where to look. So please don't hold back on this.
+
+Jurijs Markelovs   39:21
+Do we have any kind of updates on the on the destiny of the cloud code? I think it already has that, and the ability to to get generate the API token for the different for other platforms and tools, like, for example, Jenkins Teams?
+Slack.
+Is there a way to track it down, the progress on that, if it's happening somewhere in the background?
+
+Mikhail Makarov   40:00
+I believe we don't have any specific updates. We are still working on the process how to approve integrations with such tools. Mostly we are stuck with the general approval of the...
+Or I would not say not approval, but definition of the approval process for MCP servers. So everything will be integrated for MCP and that's a bottleneck that we have at the moment. So we need to finalize that review and approval process for MCP servers that can be installed, let's say, on your local machine or that can be utilized through CloudNet.
+
+Jurijs Markelovs   40:36
+All right, just my follow up on that would be, do we have anyone on the call who could escalate this appropriately? I'm not sure if it's the right audience in the conversation, but at some point or I think this will become a bottleneck because we are playing around right now in the sandbox, but once we'll get.
+
+Mikhail Makarov   40:39
+Yeah.
+And you?
+
+Jurijs Markelovs   40:56
+to the real world to test it, right? This is like a primary blocker, I believe, not just for me.
+
+Mikhail Makarov   41:05
+Yeah.
+We will discuss it later today on the steering committee. So maybe we will get some, a little bit more definitive answer on that question.
+
+Eric Trenz   41:20
+Yury, in the past, Erin May has asked me to, like, if you have a, if I have a use case for an MCP to provide that. And she'll, I believe she's one of the folks that.
+
+Mikhail Makarov   41:22
+Mm mm.
+
+Eric Trenz   41:40
+is trying to push forth us like getting MCPs approved and just kind of having like some evidence of why we want a specific one approved. She has said it has been helpful.
+
+Mikhail Makarov   41:40
+MM.
+
+Vlad Grubman   42:00
+Yeah, we actually do want you guys to create some upward pressure, like creating it, generate the demand, if you will, for specific tools and integrations that helps us in turn to advocate for them.
+
+Oleksandr Tsyganok   42:00
+Yeah, maybe.
+
+Mikhail Makarov   42:37
+Mhm.
+
+Oleksandr Tsyganok   42:37
+I didn't plan to include this tool, as I understand the main goal just to establish this process for approval. Do we need to collect this like extra tool right now? Is it critical to provide this list or we can we can be flexible and add additional tools later on?
+
+Mikhail Makarov   42:44
+Yes.
+Actually, it will help if you will have more tools in the list, so we can, and at least we should have links to actual MCP servers, not just the request for integration. Another side of the thing is that we need to have that integration available for us.
+Yeah, Cloud Code is a tool and I believe it's in discussion.
+We're still waiting for approval for anthropic models to have them available for CodeMe. As soon as you will get anthropic models available for CodeMe, we already have code integration with CodeMe, so it can be indirectly used with CodeMe.
+
+Debamitra Bhattacharjee   44:38
+So any updates regarding the cursor ID? The one we got access, the browser access, but...
+Just can't do anything with that.
+So any.
+
+Mikhail Makarov   44:50
+Mm.
+You can apply for cursor ID. We have, I believe, OMF have number of licenses available, but it should be done through your team lead and
+
+Sujan Shrestha   45:00
+Yeah.
+
+Mikhail Makarov   45:05
+requested and approved by a VP level.
+Like, yeah, because there is a limited set of licenses for.
+Limited amount.
+
+Debamitra Bhattacharjee   45:15
+Okay, so what about the web browser access I got? Like I got the access, but I don't actually, I can't actually do anything with that.
+
+Mikhail Makarov   45:25
+Probably another problem there is network connectivity to core source servers and that's on IT. Maybe you want to file, if you got the license, I mean the license is enabled for your account, then it should be usable. If it still doesn't, then it's probably network connectivity issues that need to be addressed by IT.
+And you can file a ticket in the Service now.
+
+Debamitra Bhattacharjee   45:50
+Okay.
+Okay, thank you.
+
+Nikita Kumar   46:36
+Cool.
+
+Mikhail Makarov   46:37
+Vlad, Nikita.
+
+Nikita Kumar   46:39
+Yep, I was just gonna...
+
+Mikhail Makarov   46:40
+What do you want to do next year?
+
+Nikita Kumar   46:42
+I guess if there's no other questions, we can end the call a little bit earlier. I'm sure more questions will come up next week. Or if you have anything ad hoc that might come up, feel free to reach out to any of us so we can help. But yeah, there's this session is for you guys, for you to ask questions. If you have questions that you might not want to ask a pop in chat, that's also fine. But
+We're going to give you guys time back and we'll see you next week.
+Thanks, everyone.
+
+Jason Daggs   47:08
+Thanks.
+
+Svetlana Stogni   47:08
+Yeah.
+
+Sujan Shrestha   47:08
+Thanks, Alice.
+
+Nikita Kumar   47:09
+Have a great weekend!
+
+Svetlana Stogni   47:11
+Bye.
+
+Mikhail Makarov   47:11
+Yeah, thank you everyone. Have a great weekend.
+
+Nikita Kumar   47:12
+It's.
+
+Iryna Pashko   47:12
+Thank you.
+
+ stopped transcription

@@ -1,0 +1,553 @@
+AI Enablement Cross-Functional Lighthouse PDLC Session-20260521_140009UTC-Meeting Recording
+May 21, 2026, 2:00PM
+1h 3m 10s
+
+Jatin Bagga   0:13
+Hey, Vlad.
+
+Eugene Semenyuk   0:13
+Mhm.
+True.
+
+Vlad Grubman   0:15
+Well, hello, morning.
+
+Jatin Bagga   0:15
+Morning. Vlad I have a conflict, man. So let me, I'm going to get into the other meeting, come back here. I feel like I'm always catching up with videos. So just a heads up. Oh, I know. All right, I'll talk to you later. I know. I need to get my brain like parallel movement. That's what I need to do. All right, I'll talk to you later.
+
+Vlad Grubman   0:23
+You're juggling, you're juggling so many meetings. You should start cloning yourself.
+Yes, do that.
+
+Jatin Bagga   0:34
+But...
+
+Vlad Grubman   0:37
+Hi, Eugene. Hi, folks. Uh, let's give everybody a couple of minutes before you can take over and start doing cool stuff with you.
+
+Eugene Semenyuk   0:37
+No.
+No.
+Yeah, sure.
+
+Oleksandr Pavlovskyi   0:51
+Oh, guys.
+
+Eugene Semenyuk   0:54
+Hello!
+Yeah, let's give folks maybe one more minute to train, yeah, and then we'll start.
+What?
+Okay, I guess we can start. So yeah, today we'll continue our cross-functional AI enablement track. So yeah, we'll do basically two things today. So yeah, first,
+The.
+Yeah, first, before we jump into today's topic, I want to quickly recap where we stopped last time with the previous use case, MCPs and autonomous agents. So yeah, then, yeah, Alexander will show one more example of how we can trigger an agent
+But this time from from GitHub, yeah, using some GitHub events like creating pull requests and so on.
+So, yeah, and then, yeah, then we will come back to our today's main topic. So, this is the use case we discussed on the previous champions call, like multi-repa system intelligence and root cause triage.
+So I walk through the.
+the use case briefly, then I'll show some demo. Yeah, and in the next session, the goal will be to try to build something similar, but for your team. So yeah, before we start,
+The new use case, so yeah, let me spend one minute connecting things to our previous sessions. So yeah, in the previous use case, we build the requirements, readiness.
+Optonomous requirements readiness workflow. The idea was to take a Jira. Yeah, let me share my screen.
+Briefly.
+Mmh.
+Yeah, the idea was to take a Jira user story and review it from several perspectives before team starts development. So we had a digital or business review, a QA or testability analysis, and engineering feasibility.
+review at this step. So yeah, then we added a cross-functional summary step that collected those reviews and produced a recommendation. So is this story ready for development, ready with some risk, or not ready and needs additional refinement?
+So yeah, the important point was not only the agents themselves, but the pattern. So we had some event, then automation, then agents, and then a structured decision, and then some action. Yeah, for example, yeah, if the agent decides that the user story is not ready,
+the workflow could move the item to blocked state and assign it to somebody for clarification. So we can buy deterministic automation, like Jira automation rules, on some conditions with the non-deterministic agents.
+and analysis. So this is a very powerful pattern because it means agents are not just chat tools anymore. So we can, they can become part of some delivery workflow, a part of
+So yeah, and we also discussed MCP servers last Thursday. So the way I think about MCP is it is a way to give AI tools controlled access to systems and context. So it can be Jira, Confluence, GitHub.
+Slack, Mabel, yeah, and yeah, any and some other systems. So, yeah, but we should always remember that MCP is not magic, so yeah, it does not remove the need for access control, data governance, yeah, and other.
+other things.
+So, yeah, I...
+Yeah, I guess you already started some experiments around automation, autonomous agents, and SAP integrations into your current.
+Current use cases, so yeah, if not, feel free to connect with us, so yeah, we can we can help you to to think about such things, brainstorm, and yeah, give you advices where where you can where you can utilize MCPs or automation.
+To make your use cases to be more powerful, so, OK, so when we...
+So, okay, yeah.
+Yeah, before we fully close the autonomous agent topic, so yeah, I'd like briefly describe one more opportunity. So, yeah, so far most of our hands-on examples were triggered from Jira.
+Yeah, for example, when work item move from to do to in progress state, our flow started automatically. So, but is not the only one place where an agent can be triggered. So, another very natural place is GitHub. So, for example, an agent can be triggered when a pull request is open.
+when a commit is pushed, when a reviewer adds a comment, when a label is added, when a GitHub action fails, or when someone creates an issue in GitHub. So, and based on that event, the agent can review
+code, summarize changes, check test impacts, adjust computation updates, or roll the issue to the right team. So this is the same pattern again. So event context, agent recommendation, and maybe some action. So the only difference is that the...
+Event comes from GitHub instead of JIRA, so...
+Yeah.
+Actually, we have we have some small demo regarding these webhooks, yeah, but I think, yeah, we will, we'll do it a bit later today, so yeah, Alexander is.
+On another call, he will join us a bit later, and yeah, he will he will show us the exact demo, how we can utilize webhooks in GitHub to trigger.
+to trigger some agents to do some magic. So yeah, let's spark this topic.
+For for the second part of this meeting, so yeah, let's move to our let's move to our today today's topic. So yeah, today we'll switch from previous requirements readiness use case to a new use case.
+So, we will discuss, so we discussed this use case during previous champions call. So, yeah, several people raised similar problems around troubleshooting, logs, environment issues, data pipelines, yeah, and so and so on. So, the common...
+Point main point is that when something fails, the information is usually...
+usually distributed. So part of the answer is in the code, part is in logs, part is in Jira, part is in Confluence, part is in Teams conversations. Yeah, and the part is just tribal knowledge from subject matter experts. So yeah, today's
+Use case is...
+Can we use AI to create some system intelligence across multiple repositories and then use that system understanding to help with the root cause triage and with many, many other cross-functional requests?
+So, yeah, let me...
+Start the presentation. So yeah, today we will have small presentation about this use case and then we will play around the demo.
+and the exact use case.
+Yeah, next Tuesday we can build something similar together.
+So yeah, here is the topic, the main topic for today. AI-powered multi-repo system intelligence and root cause triage. So the main idea is that we don't want the agent to understand on the one file or one repository. So for real troubleshooting,
+It usually needs to understand the system itself, or many, many systems. So it needs to know which repositories are involved, how services communicate, and where APIs are implemented, where configuration lives, where logs are produced.
+and which tests validate the flow. So this is cross-functional.
+And yeah, it can help digital teams to understand feature behavior and customer impact. It can help QA teams validate logs and fail tests. And of course, it can help engineering teams debug faster and onboard faster.
+
+Saeyed Shamlou   13:19
+Mm.
+
+Eugene Semenyuk   13:23
+So yeah, let's start with the current state. So today's system knowledge is fragmented. So we have repositories, logs, subject matter experts, Jira, Confluence, Teams, dashboards, and sometimes historical incident nodes. But when an issue happens,
+we usually need to manually connect all these pieces together. So for digital, the question may be what customer journey is impacted? Which capability is affected? For QA, the question may be which logs should I validate?
+Why did the test fail? What evidence should I attach to the defect? For engineering, the question may be where is the code? So which service owns this endpoint? So is it a front-end issue, backend issue, infrastructure issue, data issue, or...
+downstream dependency issue. So the opportunity is to use AI agents to turn this distributed system knowledge into faster answers and better triage.
+Bing.
+So, this slide shows the same.
+The same capability, but from a different perspective. Yeah, for digital, the agent can answer questions like, how does this feature work end to end? What customer journey is impacted? What business capability does this service support? For QA, the agent can help to identify which logs should appear for a flow.
+connect failed tests to service and repositories, and generate better fact evidence. For engineering, the agent can help navigate larger multi-repo systems, find owners, configs, APIs, error handlers, and diagnose incidents or environment failures. So we
+should not think about this as only an engineering tool. So the same foundation can support different questions depending on who is using it.
+So yeah, and the...
+I'd like to break down this use case into two steps. There and two phases. The step number one is multi-repo system intelligence and questions and answers. So this is a foundation. The agent reads and understands multiple related repositories.
+and explains features and flows end to end. It maps APIs, configurations, logging points, tests, and dependencies. Step #2 is a AI root cause and log triage. So this is where the agent takes logs, alerts,
+fail tests or error messages and correlates them with the system knowledge from step one. So the key principle is that step 2 is much stronger if step one exists first. And yeah, if we only give the agent log snippet, it can summarize the log.
+But if the agent also understands the system, so then it can say this error probably comes from this servers, this endpoint is implemented in this repository, and this config may be involved, and this downstream dependency should be checked first.
+So for today, we'll mostly focus on step one as a foundation, and then connect it to step 2 later.
+So step one is about understanding a team-owned ecosystem, not just one repository. So for example, in many teams, we have a front-end repo, back-end repo, BFF repo, some API contracts, infrastructure, desk automation repo, maybe data pipeline code.
+and configuration files. So the agent should understand the role of each repo. It should know API and service relationships, environment configs, feature flags, logging patterns, error handling, task coverage, and so on.
+So then we can ask questions like, how does this specific feature works? So which repositories are involved? Where is the business logic? What systems are impacted? Where is the error?
+generated. So, and the output can be a system intelligence map, feature flow explanation, dependency hints, ownership hints, and file or wrapper pointers. So, this is available even before we talk about logs, so it can help
+onboarding, knowledge sharing, analysis, and impact assessments.
+So yeah, this slide makes the use case more tangible. So yeah, it shows some examples of questions that different audience can ask. Yeah, for example, digital may ask,
+How does customer onboarding work end to end in this application? So which services are involved in account creation? So what downstream systems are impacted by this feature? QA may ask which logs should be validated for this flow? Which repo generates this error?
+What environments or conflicts affect this test scenario? Engineering may ask.
+Similar questions like, where are these?
+endpoint? Where is this endpoint implemented? Which Webber owns this integration? What services depend on this API? Where are retries and error handlers configured? So I'd like you to think about your own teams.
+while we go through this. So what are the questions that you or your team ask again and again? So those questions are a good starting point for defining your own.
+Agent use case.
+And now let's talk about tools. For this use case, we should be careful with tool selection. So we can use GitHub Copilot, Cursor, and CodeMe, but they are not exactly the same and they are thrown in different situations. So yeah, if you have if you have just one.
+repository or few.
+few small repositories. So yeah, you can, in these cases, you can use GitHub Copilot or Cursor plus some MCP servers that can gather information from different systems. So yeah, it can be a good choice. So it works very naturally inside the developer workflow, especially when the developer is already working in ID.
+and needs help with code understanding, implementation, tests, or small changes. So yeah, but if you have multiple repositories, like in our example today, so yeah, today we will work with self-service repositories. So they have...
+Five or six repositories, so yeah, and yeah, for such cases we have, but we would like to build.
+a multi-repo or multi-system knowledge. So, yeah, in this in this case, Code Me can be a good choice. So, the reason is that it can work with multiple repositories more easily and as index data sources and can provide a more
+team level or system level view. So instead of asking only about one repo, we can ask about ecosystem itself. So for initial sources, we should start with
+three or five GitHub repositories, API definition, contracts, configuration infrastructure, test repositories, or some QA scenarios. So yeah, and later we can think about integrating Jira, Confluence, Teams, conversations, and some logs.
+An historical incident.
+Yeah, and our step 2 will be about troubleshooting and triage. So the input can be some logs, failed tests, validation evidence, environment alerts, incident descriptions or screenshots. So agent actions,
+to parse.
+Parse these errors, find some anomalies, clear failures across services, map logs back to repo and components context, classify the likely failure area, and recommend next steps and next checks. So, the output should be practical.
+Yeah, for example, like probable.
+root cause, impacted system, impacted customer flow, evidence from logs, suggested recovery or validation steps, and a Jira ready or teams ready summary.
+So yeah, but I want to highlight one thing. So for MVP, this is not autonomous.
+workflow so that the agent should recommend and wrote. Humans should validate and act. So later when we...
+When we have confidence, we can discuss more automation. Yeah, but the first...
+Safe step is analysis, summary, and triage. Yeah, and here is some example of the flow.
+So like imagine QA is testing in station and the application returns some error. The agent should first read the logs or error snippets, then it should identify the impacted service and endpoint, then it should map the service back to
+or in rep of files, configs, and so on. So then it should check dependencies and downstream failures, then it should suggest the most likely causing with evidence. Finally, it should prepare JIRA or team summary. So the answer should be like there is a
+500 error and a user answer is mostly like this error originated from the accounts API, but the first meaningful failure appears in downstream timeout logs. So recommended next step.
+Ahh.
+to check service health, resident deployments, or config changes and retry settings before escalating to the integration owner. So that is much more useful because it gives some kind of direction.
+So yeah, and again.
+We can see.
+Three different perspectives for this flow.
+for this triage flow. So digital may ask, is this outage impacting customer flows? Which capabilities are affected? Is this front end, back end data or infrastructure related? QA may ask, why did this test fail? Which logs prove the failure?
+What additional validation should be performed?
+Engineering may ask which service generated this exception, which deployment or config likely caused this, and what should be checked first. So again, the same system intelligence foundation supports multiple audience.
+Okay, that was the deck part. Now let me show a small demo for this use case. So yeah, for the demo, I'll use a multi-repo example.
+So, yeah, I took.
+Self Service team with five or six repositories. Yeah, the goal is to not only show final production ready solution today. So the goal is to show the pattern and the value. So I'll show how agent can work across multiple repositories, answer system questions, identify
+relevant services or files and help us to prepare.
+Prepare some knowledge for future root cause triage. So yeah, and in the next sessions, we can try to build this for your teams. So while I'm demoing, please think about which is, yeah, which
+Uh.
+Yeah, which, yeah, which part of this?
+This, this workflow, this agent make make sense for for your area, what questions your team repeatedly ask, and and what?
+What are non-sensitive samples of log or scenarios we can use later?
+Okay, with that, let's...
+Let me finish the dock.
+Hello!
+Okay, as I said before, we will work with self-service in repository.
+Repositories.
+Yeah, as usual, yeah, we took to the user story from this team, so yeah, that's why.
+I'd like to continue with this example.
+OK, for this demo, I created a code agent and index at all the required repositories, and now we can we can overview the agent.
+I see that. Yeah, I've created multi-repo system intelligence agent. I see that it's not shared. Yeah, let me share it with Roger.
+Yeah, this agent CA.
+This agent has some instructions.
+And connected repositories. How many we have? One, two, three, 4, 5, 6. Yeah, we have 7 repositories. Yes, 6 repositories are product related and one repository is test automation framework.
+So, okay.
+Let's try to play with this.
+with this agent. Yeah, let's start with something business related.
+For example, we can ask, we can ask something about.
+Business behavior in our products, for example.
+How do we determine whether a loan is active?
+So, yeah, now it...
+Yeah, yeah, now it's going through the multiple repositories.
+And yeah, preparing, preparing summary of...
+All the behavior.
+Like how it works and how do we determine whether a loan is active based on the current implementation?
+Yeah, in some cases it can even help with testing because you can you can ask a question.
+Like, how does this work? Yeah, and compare the answer with your test cases.
+Yeah, it can be some kind of static testing.
+When do you?
+When you do not execute system, yeah, and just test the code.
+Okay, let's see. Short answer is the current loans BFF alone is effectively treated as active current unless it's classified as one of these non-active statuses.
+If none of those conditions match, this service returns current.
+Okay, yeah, we even have some evidence from code repository.
+So, yeah, the rule is where this is used.
+Yeah, we can even see.
+Like, where were this logic specified?
+Yeah, and yeah, even we have some evidence from tests.
+OK, sounds sounds interesting. Looks like we we've got the answer for for this question, so yeah, and it can be.
+It can be any.
+Any question related to the behavior?
+For example, what happens if origination date is missing? Yeah, it is some kind of edge case.
+It's searching through different repositories.
+Yeah, let's see what we have.
+So yeah, if origination date, open data is missing in dashboard API, there is no defensive fallback in the account value object. So if the code attempts to parse it anyway, which would fail. So yeah, we see exact behaviour.
+And what's its impact?
+Yeah, it even highlighted some gaps.
+Yeah, Luke. Interesting. Look, it looks like, looks like I...
+Erased some interesting question.
+Yeah, we can even maybe ask some question regarding regarding tests.
+Let's clear the chat.
+Like other tests for active loans.
+Okay.
+Yeah, we expect...
+Some unit integration and end-to-end tests.
+Yeah, let's scroll up.
+So, yeah, it looks like we have...
+Yeah, we have tests for active loans in BFF and front-end wrapper. Yeah, but in our, but we don't have end-to-end tests, looks like.
+Yeah, or probably we need to adjust.
+The search mechanism.
+If we have them, if we have them.
+So, yeah, and yeah, everything is proved with the evidence.
+Yeah, we can ask some some engineering questions, like, what?
+What APIs?
+I used by.
+Mobile application.
+So yeah, here we have mobile.
+Application repository, and it should be able to.
+Yeah, to to see what exact what exact endpoints.
+We have, we we call from mobile, yeah, and even it can it can go to.
+Ohh.
+Some BFF repository, and yeah, provide some provide us some description of these endpoints.
+Like, yeah, confirmed API directly referencing mobile code.
+This, this, this.
+Yeah, we can even see, like, what?
+From what projects are these APIs?
+So, yeah, I guess it can be good knowledge base for for servicing team to.
+to talk with the, to talk with the code, to talk with the, not only with code, to talk with the system and the whole ecosystem.
+Like to, because yeah, we have not.
+Not only one repository, we have all repositories connected, yeah, and yeah, our agent can can talk with different repositories and connect the.
+Connect the dots between them.
+So, yeah, basically that's it for.
+for the demo part. So yeah, do you have any questions regarding?
+Is for.
+
+Alfredo Achecar   39:16
+Hey, Eugene, quick question, so...
+
+Eugene Semenyuk   39:18
+So, yeah.
+
+Alfredo Achecar   39:21
+So, so right now, the the scope of what this agent is looking at is just a self-service report, right? Like the OK.
+
+Eugene Semenyuk   39:27
+Mhm.
+
+Alfredo Achecar   39:31
+And, like, what's the what's the limitation? Like, how big can the...
+
+Eugene Semenyuk   39:35
+The.
+
+Alfredo Achecar   39:35
+Can can that repo get, or or or those files get?
+
+Eugene Semenyuk   39:42
+Yeah, that's that that that's pretty good question, so yeah.
+The ambitious goal will be to connect.
+Yeah, to connect many, many repositories. Yeah, but yeah, unfortunately, we are limited with the context. Yeah, and it depends on the model context.
+Yeah, and fortunately, it fortunately we use retrieval augmented generation.
+So yeah, and it can go to...
+only some specific repositories. So in theory, so we can connect.
+As many repetitories as you need.
+So yeah, but uh, yeah, it it requires some.
+Some testing, because, yeah, in some cases, if...
+Yeah, if sequence of repositories will be really, really huge. So yeah, it can cause some.
+context issues.
+Yeah, but for self-service, yeah, it looks good.
+Yeah, it contains, so yeah, it contains 7 repositories.
+Yeah, thank you for your for your question. Any other questions?
+
+Jatin Bagga   41:26
+So, Eugene, if there are any other questions, if there are none, I would love the last five or seven minutes for you to do just a quick walk through again, because I missed it since we have an hour block. But if folks have questions, of course, please answer those first.
+
+Eugene Semenyuk   41:35
+Yeah.
+Yeah, if no questions, I can briefly describe this this use case. So, yeah, this is the goal, the goal of this use case to build some kind of universal multi-multi system intelligence, so it can read through.
+multiple repositories and connect all the dots between them. We can also connect some Confluence, JIVA, and other things.
+To build like the common, the common knowledge, yeah, and...
+Yeah, it can help us with with different.
+with different requests and questions. Yeah, for example, for digital folks, it can help to understand the...
+to understand the current behavior of the application.
+or the system itself. Yeah, for example, yeah, and maybe, yeah, if if you would like to onboard into the new system, yeah, to understand how how it works, how it how it exactly works in the current implementation.
+Yeah, it can also be a good tool for static testing. Yeah, for example,
+Yeah, you know, and you expect some behavior.
+Yeah, and you can you can talk with this agent to.
+to identify the current implementation and compare your expected result and your expectations with current implementation.
+Yeah, and uh, for yeah.
+
+Jatin Bagga   43:52
+I got that.
+So this is very interesting, very intriguing. So let me just ask this question. So you're saying like there are disparate sources. You can with this just connect all of them and can I actually get insights out of them? So for instance, if I took OneDrive, SharePoint, Confluence, JIRA, and said, I just want a specific topic.
+
+Eugene Semenyuk   44:03
+Mhm.
+
+Jatin Bagga   44:15
+I could extrapolate insights or whatever the heck is in those repositories from there. Really? Okay, I got the build this. And the, could you, I'm sure there's some documentation already published, but I was looking at the notes, I don't see the document.
+
+Eugene Semenyuk   44:17
+Yes.
+Yeah.
+
+Jatin Bagga   44:34
+Is there something you've already built or?
+
+Eugene Semenyuk   44:37
+No, this is a brand new thing.
+
+Ernest Linzey   44:38
+Yeah.
+
+Jatin Bagga   44:40
+Oh wow. So I guess after the session, will you then publish the document or just should we just listen to the transcript to follow through on this?
+
+Eugene Semenyuk   44:51
+Oh yeah, frankly speaking, you don't need this, so yeah, next Tuesday we will try to build something together.
+
+Jatin Bagga   44:58
+Oh, this was just a demo.
+
+Eugene Semenyuk   44:59
+So, yeah, and...
+Yeah, yeah, it was just demo.
+
+Jatin Bagga   45:02
+Oh, got it. Oh, wow.
+
+Eugene Semenyuk   45:04
+Yeah.
+
+Jatin Bagga   45:05
+It's like I didn't miss anything, then that's good. If you just send us the link, then we'll just play around with it and be ready for Tuesday.
+
+Eugene Semenyuk   45:10
+Okay.
+
+Jatin Bagga   45:12
+Thank you.
+
+Eugene Semenyuk   45:12
+So, yeah.
+Yeah, yeah, so, so yeah, next Tuesday we will we will start to build something like this. So, yeah, you you you can build to similar similar agent, similar flow for your team, including your repositories, yeah, and play around it.
+
+Sanjay Kumar Parui   45:33
+Yeah, usually I have a question.
+
+Eugene Semenyuk   45:33
+Yeah, thank you. Yeah, sure.
+
+Sanjay Kumar Parui   45:36
+So basically, like, if I understand, like, you know, you mentioned like this multi-repository, right? Like MuleSoft is the microservices repository. So general questions always I get is like, you know, what's the downstream API or endpoint or stored procedure that is calling?
+
+Eugene Semenyuk   45:43
+Mm.
+
+Sanjay Kumar Parui   45:57
+I believe, like earlier, there is a limitation in Copilot that they cannot cross code the inner cascade or check the other repo Git repo, so now you're saying that with this we have option to have like multiple repo.
+Talk to get info from there, and maybe that's a good use case for me.
+
+Eugene Semenyuk   46:16
+Mhm.
+Mhm.
+
+Sanjay Kumar Parui   46:22
+Yeah, but I don't know what changed that enabled this, but yeah, this is love to know.
+
+Eugene Semenyuk   46:29
+So, yeah, in this case, yeah, in code me, this is quite, quite, quite easy task to work with multiple repositories. So, yeah, we could create data sources, so we index.
+all the required data sources, then we...
+Yeah, the main theme, so we need to provide some kind of guidance, like how to talk with these repositories.
+
+Sanjay Kumar Parui   46:52
+Mm.
+
+Eugene Semenyuk   46:56
+Yeah, and yeah, that's the main question.
+
+Sanjay Kumar Parui   46:56
+Go on.
+Yeah, yeah, that's interesting.
+
+Jatin Bagga   47:02
+And Sanjay, what I was thinking is, I think you probably kind of maybe think the same line, like for the work that we're doing. Like, can we get insights into these disparate, so even just tickets within Jurijs itself, like an easy way for us to pull information between Confluence and Jira itself?
+
+Sanjay Kumar Parui   47:09
+Mmh.
+
+Eugene Semenyuk   47:10
+Yeah.
+
+Sanjay Kumar Parui   47:20
+You.
+
+Jatin Bagga   47:23
+And the various PowerPoint that have been produced, I feel like that would be super helpful. You know what I mean, Sanjay? Like, and if we make this like truly like a genetic flow where, like, if there's an update, we just all we need to do is just run it and get the insight.
+
+Sanjay Kumar Parui   47:28
+Yeah, mhm.
+
+Eugene Semenyuk   47:36
+Yeah.
+
+Jatin Bagga   47:39
+and maybe update out of the story and then just review it. I don't know, something to really chew on, Sanjay. Maybe you and I can partner in that real quick.
+
+Sanjay Kumar Parui   47:39
+Yeah.
+For sure, yeah.
+
+Eugene Semenyuk   47:54
+Okay, thank you guys. Any other questions? Yeah, Prenta speaking, we have one more small demo for today.
+
+Jatin Bagga   48:02
+But can you send this link, please, if you haven't already? I don't see it.
+
+Eugene Semenyuk   48:05
+Yeah, yeah.
+Link to to what? Sorry, yeah, yeah, yeah, yeah, sure, sure.
+
+Jatin Bagga   48:12
+Like this agent, like, can you can you share this link across the project, like the the yeah, the agent?
+Or the assistant, I should say.
+
+Eugene Semenyuk   48:19
+Sure, sure, sure. Yeah, yeah, I guess I shared it.
+
+Debamitra Bhattacharjee   48:25
+Yeah, I can see it on my so I think it should.
+
+Jatin Bagga   48:27
+Ohh, you can? OK. Thank you.
+
+Eugene Semenyuk   48:32
+Okay, thank you.
+Okay, any other questions before we move to the next demo?
+
+Jurijs Markelovs   48:44
+But the Eugene, could you share the link?
+
+Eugene Semenyuk   48:48
+I shut.
+
+Jatin Bagga   48:50
+Maybe I don't see it in the multi-repo. Maybe I'm not looking at it correctly.
+
+Eugene Semenyuk   48:52
+Ohh.
+Yeah, let me.
+Yeah, let me double-check.
+Kiss.
+This should be the correct URL.
+So, yeah, here it is.
+Okay, and one more time, like any other questions before we move to the next demo?
+Yeah.
+Okay, so yeah, our next demo will be about one more opportunity to trigger agents. Yeah, but previously we built autonomous agents based on JIRA actions, based on some JIRA events.
+Yeah, but there is one more, one more opportunity, like to use some GitHub events instead of Jira. So, Oleksandr, I'll pass the word to you. So, could you please show us how to trigger an agent from GitHub and walk us through the example?
+
+Oleksandr Tsyganok   50:15
+Yeah, thanks. Let me know if you can see my screen. Yeah, so the idea that basically this like web hooks, it's not only like Jira specific like tool and mechanism like most modern platform supports such feature.
+
+Eugene Semenyuk   50:19
+Yeah.
+
+Oleksandr Tsyganok   50:35
+So basically the idea that you can like easily connect like different platform, build like some unified flow and make everything kind of event driven, like not to check like whether something happened, but just to react on some specific events. So in GitHub, you should be an administrator to have.
+access to this web hooks. Web hooks are configured on a repository level, so we have this like demo repository. If you administrator, you will have access to this like settings, and that's a place where you can configure web hooks. Here on this like left panel, you have this like code and automation.
+Yeah, the idea is exactly the same as you already build it in the Jira. When something happens in the system, you can trigger your agent or workflow in Cody. So same stuff as in Jira, you have this like special like.
+URL, special domain name, then you have this webhook unique ID that you created in the code me. Here you can just select this JSON format just for a nice output. Also, it has same like security, kind of slightly different security mechanism, but...
+But still, you can configure a pair of passwords here on the GitHub site in the code me, and here, as you can see, that's like a bunch of individual events, so you can control when like specific workflow can be executed, basically anything that you can do.
+in GitHub is covered by specific event. For that scenario, we will focus on a simple like pull request scenario. So once the new pull request is created, modified, labeled, or like edited, we will.
+Trigger this workflow and send event. So, what we have on the Codme side on the Codme, I just created this very simple Git PR reviewer assistant that will just try to.
+review our code in the GitHub and it will be automatically executing when we create a new pull request. You can extend it and allow this like direct publishing to GitHub so you don't need like to open CodeMe.
+to see this like results. Yeah, so you should expect some like output, like just a standard code review from this assistant. So you will see something like that just.
+The.
+Some like summary, like details and some suggestions, some action items related to the changes. Again, it depends on your agent. Nothing stops you for like continue post like this and all this results back to GitHub to Jira, create based on it like I know some.
+documents or new user story. Again, it's up to you, like how we want to automate your flow. And yeah, the same stuff that you saw for Jira. So we have this integration created in training. So we selected integration.
+type webhook, so we provided like this like alias for this integration.
+We configure it like a secret. Yeah, we should also enable this like signature verification and the main part that we select in just like assistant and providing this like assistant ID. So if we will check.
+in the list of our assistants and navigate to specific assistant details page. Here we will have this assistant ID so we can copy it. It's like 44C and it should be
+The same value is like 44 C in our webhook. Yeah, then our webhook saved, ready to receive some new events. And in GitHub, I already have like a pull request just for demo purpose. We will trigger it by changing a label.
+So, you can configure a set of filters when specific changes should be like ignored. You should do it in the code me like assistant level, because yeah, that's a single like event, but it contains like...
+Multiple possible changes, so this like pull request event can be triggered by modifying this name, pushing new commits, assigning labels, changing assignees, changing status for like ready for review. For demo purpose, we will just assign like one more label. We will assign this label.
+duplicate and here we can check in our webhooks screen. We can navigate to webhooks, edit our webhook in GitHub and in recent deliveries we should see this event. Yeah, so just several seconds ago we have this like.
+pull request labeled event. So we have like very detailed information how this request was sent, like all information from GitHub that might be like, well, yeah, we have some questions.
+
+Debamitra Bhattacharjee   56:48
+Yeah, so what if we don't have admin access? Because I don't see the setting option in any of the repo I have access to. So is there any other alternate way?
+
+Oleksandr Tsyganok   57:00
+You can.
+No, there is no alternative way you can create, I know, for like testing purposes, maybe you have like some different repository in your organization where you assigned as administrator, or you can talk to your team, maybe somebody has like access.
+to this settings so you can work together with like some leads to set it up. You can, I don't know, like...
+how you can within like organization. So if you have like some any test like organization kind of like playground within like OMF enterprise, that's also an option. I'm not sure like you can ask my colleagues, I believe that it should be like some kind of playground organization where you can be, you can create like a separate repository and.
+
+Debamitra Bhattacharjee   57:43
+Mhm.
+
+Oleksandr Tsyganok   57:57
+can be granted admin permission. If you like talking about like production setup, you can connect to your like team leads and figure out with them, like somebody should have this like permissions, like to manage repositories. Yeah, so as you can see, we have like this like specific actions that pull request was labeled. We have like...
+
+Debamitra Bhattacharjee   58:14
+Okay.
+
+Oleksandr Tsyganok   58:22
+many details about the specific pull request state, like currently it's like open, like title and like bunch of details user who created it and some reviewers, if somebody was like already requested assigned labels, so you can.
+get this information and use CodeME assistant, provide like some prompt to like pull all this like details and have like some processing based on your needs. So in the CodeME, you can check like results of this execution. You should have.
+in the chat, this separate folder, let me refresh to make sure that we have like most recent information here. So you should have this like drop folder in the chat. So all webhook triggers should be here. And yeah, we should see exactly on the top like.
+is this huge JSON that we saw in GitHub. It will be just resent to a code. So this like action labeled and like all details that we just checked will be here. And our agent has like some simple system prompt that it's like responsible for.
+Pod review, so it will just provide some like information about these changes, so it says that pull request appears to add some sample PNG image, so like checking some like readiness, it's like kind of demo demo scenario, so for this like pull request actually.
+Doesn't mean like anything, so we just like committed an image, a single file change, just to show like this full, but once you will have like real pull request, you can like agent will know this pull request ID, you can configure like this.
+Tools for accessing GitHub, so we can it can check like all these files are one by one, have like detailed analysis and provide like this summary, but it still have like bunch of metadata, have access to this like labels, it shows that it has like labels back and duplicate, so look all this information that we received like immediately available.
+For the CA.
+Yeah, any questions about this setup?
+
+Jurijs Markelovs   1:00:57
+Alexander, is there any way you can share this assistant with the audience?
+for usability purposes.
+
+Oleksandr Tsyganok   1:01:07
+I'm sure that it's like really useful one. I just created it with single click to generate a system with PR review. So don't expect that it has like some nice system problem. It's after generated by share code me. I didn't.
+
+Jurijs Markelovs   1:01:10
+S.
+Okay.
+Okay.
+Ohh, that that that feature is back, so now we're able to create if the AI. Ohh, perfect. It wasn't working for a while.
+
+Oleksandr Tsyganok   1:01:26
+But, like...
+Yeah, yeah.
+
+Eugene Semenyuk   1:01:29
+Mhm.
+
+Oleksandr Tsyganok   1:01:31
+It was some issue with Azure content filtering. I don't know why it was like triggering this content filter for like some.
+Risky, like risky topics and something like that. Actually, I, I, I'm not sure, like, what was the actual fix? Maybe it was just some issue on Microsoft side, but yeah, we we we stopped on this like analysis that it was like on the platform issue, but I'm not sure, maybe.
+Some DevOps team on OMF also like provided some fixes, but yeah, for last weeks or so, I think it works stable. I don't see like any issues anymore, so you can definitely use this functionality.
+Yeah, and this agent was sharing this project, it's in training. If, I don't know, like, why it might be useful for somebody, but I will share this link.
+
+Eugene Semenyuk   1:02:36
+Yeah, but the main idea is that, yeah, you can...
+You can execute any agent from Cody based on.
+Any event from from guitar?
+So yeah, guys, looks like we are running out of time. So yeah, thank you for joining this session today. So and thanks again, Alexander, for the GitHub demo. Have a great rest of the day and see you soon.
+Bye.
+
+Nicholas Crowley stopped transcription

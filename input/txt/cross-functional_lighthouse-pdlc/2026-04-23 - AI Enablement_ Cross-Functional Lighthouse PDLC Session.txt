@@ -1,0 +1,699 @@
+AI Enablement Cross-Functional Lighthouse PDLC Session-20260423_135520UTC-Meeting Recording
+April 23, 2026, 1:55PM
+1h 5m 27s
+
+Nikita Kumar   3:02
+Hello, we're just going to give everyone some time to hop on.
+And we all got started on this a little bit earlier, so we're just going to give everyone some time to hop in.
+
+Svetlana Stogni   5:05
+Hi, everyone.
+
+Nikita Kumar   5:09
+Hello, I just said I figured everyone kind of hopped in a little earlier, so I'm going to give everyone a minute or two to hop in and then we can get started for today.
+
+Vlad Grubman   5:27
+Hello, hello, hello, everyone.
+
+Nicholas Crowley   5:31
+Morning.
+
+Filippo Morelli   5:38
+Let's see if we can turn on some cameras and see some faces.
+
+Vlad Grubman   5:43
+Ohh, I thought it just two of us on the call.
+Thanks, Filippo.
+
+Filippo Morelli   5:48
+It's the two of us and a bunch of bots.
+
+Ramakrishnan Varadhan   5:49
+Okay.
+
+Vlad Grubman   5:54
+Everybody's sending their open claw to the meetings.
+
+Filippo Morelli   5:58
+Well, you know, after being in Irving, Texas last week, face to face with people, I'm reminded as...
+
+Vlad Grubman   6:04
+It was actually very, very, yeah, very enlightening.
+
+Filippo Morelli   6:05
+Why wish?
+I know it makes me miss being at work.
+so to speak.
+
+Nikita Kumar   6:12
+Yeah.
+I wonder if we can make our own synthetic users with our faces and pop a line. Just, this is me. Please facilitate.
+
+Filippo Morelli   6:20
+Totally.
+Do you remember, okay, you know the comic Dilbert?
+
+Nikita Kumar   6:28
+I think so, yeah.
+
+Filippo Morelli   6:35
+like a puppet of himself or something. And it's like dressed up, it looks like him, and he's got it in front of the camera while he's in like his jammies or something. I don't know.
+
+Ramakrishnan Varadhan   6:42
+Yeah.
+
+Nikita Kumar   6:45
+Oh, that's funny.
+
+Filippo Morelli   6:47
+Yeah, free AI.
+
+Vlad Grubman   6:47
+It was a video, it reminds me, reminds me of a video of a guy who took a picture of him very carefully listening, like very intently, and set up in front of a camera. And at some point, the piece of paper that the picture is printed on falls and he's like sleeping at the desk. It's a bit more modern, but I think...
+
+Filippo Morelli   7:04
+There you go.
+
+Vlad Grubman   7:06
+And you think Dilbert is probably drawn from life.
+
+Nikita Kumar   7:08
+It.
+They actually sell the Dilbert plush toy on eBay. I just found it. Like the doll itself.
+
+Filippo Morelli   7:10
+Yeah, exactly.
+
+Ramakrishnan Varadhan   7:13
+Okay.
+
+Filippo Morelli   7:17
+That's good. That's funny.
+All right, let's try and get cameras turned on so we got everyone on here and then you guys are going to take off, I guess, and get this rolling.
+
+Nikita Kumar   7:21
+Yes.
+Yes.
+Alrighty, welcome back. Happy Thursday, everybody. Our session today, I think last week we finished up orchestration and we did homework sessions on Tuesday, which was really great to see from everybody. For today, we're going to be finishing up our CodeMe basics because I think there are still a couple of things we wanted to wrap up around there.
+But we're changing the plan a little bit going forward, and Vlad and team, you guys can add to this. But I know we've kind of heard from people who want to make it a lot more hands-on, which is the plan. So what we're going to try to do for the following weeks moving forward is we're going to ask each of the teams that you guys are in, your respective Lighthouse teams, to come up with use cases that are going to benefit you and your team.
+
+Ramakrishnan Varadhan   8:06
+Hello!
+
+Nikita Kumar   8:09
+and then bring those to us so we can actually start implementing use cases and showing you code me as we're building the use cases. So it's not just code me, code me, code me. It's more, hey, what's a practical way for you to build this use case, whether we're using code me, Vovo, et cetera, whatever tools we have handy for you that are going to work best. So our ask for next week is as we're changing things up, we will send out a bigger agenda as well. Our ask would be that you guys are working within your list.
+Lighthouse Teams itself and giving us use cases that you want to work out from your Lighthouse team throughout the PDLC. So it's going to be all, you know, you're going to have digital, you're going to have devs and QA, similar to how we did in our very first demo of everyone across the board. But this can be just use cases that are going to be handy for your specific team.
+And then once you bring them in, we'll work with you to help implement, integrate, get that stuff going, depending on the tools that are available and what's going to work best for each of these teams. So that's going to be kind of our plan going forward. We're going to take a little step back from just CodeMe training, but we wanted you guys to understand the basics before we went into actual implementation first, because if you are going to have to use CodeMe for some of it.
+We did want you to have the basic knowledge and the background on it. Did I miss anything, Vlad or Svetlana?
+
+Vlad Grubman   9:22
+I think this is good. Yeah, I think you covered pretty much everything. Yeah, the think about this. I'm sorry, I keep using this term. Keep about, think about this as a reverse learning. So instead of just telling you, here's called me use it, we want to sort of reverse.
+
+Svetlana Stogni   9:23
+It says perfectly.
+
+Nikita Kumar   9:23
+Cool.
+
+Vlad Grubman   9:39
+For those of you who understand, reverse the polarity. And we want you to give us the use case and we'll show you how to solve it with AI, with agentic flows. If it's called me, it's called me. If it's something else, if it can be solved with something simpler, easier, that's fine too. But let's start from the use cases and
+
+Nikita Kumar   9:41
+F.
+
+Vlad Grubman   9:58
+drill down.
+
+Nikita Kumar   10:04
+Great. Without further ado, I will pass it to Oleg and he can finish off part of what he was finishing for Code Me and then we can dive into a little bit more questions and answers that you guys might have for next week.
+
+Oleksandr Tsyganok   10:20
+Yeah, today we will have another hands-on session. Like, let's start with this like practical part, and then I will cover some small additional details about the Cody platform. So, for today, our goal is to continue this work that we started on one of...
+Previous sessions, so, by the way, I think this link was shared before, but I will paste it again.
+your convenience. So we will find here like again.
+All practical, like all links, and it will help you just to follow me and not.
+We like to like multiple tabs according to the material section and starting from this link, we will use like all, yeah, so the goal for the session is add like additional.
+Jira Story of Readiness Checker, so we will build today another integration. It will be a conflict.
+
+Ramakrishnan Varadhan   11:32
+But...
+
+Jason Daggs   11:39
+You're cutting in and out pretty bad.
+
+Eugene Semenyuk   11:46
+Yeah, Alexander, we don't hear you.
+
+Jason Daggs   11:49
+Yeah, you're gone.
+
+Svetlana Stogni   11:50
+Alexandra, yes, you are breaking up. Probably you can turn your camera over for, I don't know, but what did. OK, it looks like we lost Alexander.
+
+Nikita Kumar   12:03
+Yeah, he's frozen.
+
+Svetlana Stogni   12:05
+Yes.
+
+Oleksandr Tsyganok   12:12
+Yeah.
+
+Jason Daggs   12:14
+Anybody have any good jokes to tell?
+
+Vlad Grubman   12:20
+Yeah, guys, can you hear me? Because it looks like I got some temporary connection issue. Yeah, we're thinking if you have limited bandwidth, you maybe want to turn off the camera, so you're coming in loud and clear.
+We can now.
+
+Oleksandr Tsyganok   12:27
+Okay, great.
+It was just complete disconnect. Yeah, let me know if like connection quality is not good enough. I just will switch to mobile.
+Okay, yeah, let me turn off camera. I hope that it will help. Yeah, so...
+
+Svetlana Stogni   12:49
+And.
+
+Oleksandr Tsyganok   12:51
+The idea is that we will add additional confluence integration, and for that specific example, we will use this definition of ready and definition of done that we already have in our system. But if you have like any ideas, like any useful documentation,
+You can also like in parallel extend your original like agents that you created. You can add like any documents that you seem like useful. And yeah, we will have a simple practical result from this simple agents that we had before that simply.
+providing this like strict readiness criteria for a user story, we will have like an option to like connect to this like knowledge base and provide us with.
+Additional like insights about.
+Uh, details for um.
+like compliance for the definition of ready and definition of done that we have in a specific team space. Currently, it's like a cross-team like document, but if you have like something like more grounded to like your specific scenario, you can also like add this link. So, and as a result, when we run in this agent, we will get something like this.
+Let me show this agent run.
+Yeah, it should be there.
+Yeah, so we will have like some kind of capabilities where we can have a citation like from our original like document, like have like some explanation and like reference to like original source where we got this information and each time when it's like dynamically.
+Changes, like in the original source, so if you modify these details here in the confluence, like automatically, like all this like new knowledge will be picked up by Agent when you like have a next interaction with this assistant. OK, so if like...
+
+Ben Van Sickle   14:59
+Ohh.
+
+Oleksandr Tsyganok   15:14
+no specific question for this like scenario. Let's like try to implement it practically. So guys, make sure that you open this like link and yeah, ready to use your original assistant.
+If maybe you missed like previous sessions or like, I don't know, for some reason want to like create a completely isolated and new assistant, you have an option. You can start with like my version. You can like use this link.
+Just make sure that you will clone it and add like some your name and.
+Just please not share it with the whole project. So we don't have like huge amount of agents. Yeah, so if you have like your personal agents created before, I would recommend you to try and extend it because yeah, it will be like same same set of.
+changes that we will apply here, but it's up to you. For me, I will clone my assistant.
+And provide, yeah, I think I need first of all copy this like name.
+
+Swathy Lokula   16:45
+So which one did you click to go there? So can you go back please quickly?
+
+Oleksandr Tsyganok   16:49
+Yeah, sure, sure. Yeah, so I assume that like everybody opens this link that we have in the confluence can see this assistant and we can click this three dots here and we have like clone functionality. I see Jira story readiness by Swetha. Is that the one?
+
+Swathy Lokula   17:11
+in the conference.
+
+Oleksandr Tsyganok   17:14
+Yeah, so if you like see confluence, that's like my like original agent that we created in the previous session. If you want to use this one, navigate to this link. Can you see like this agent description?
+
+Swathy Lokula   17:15
+Station.
+
+Oleksandr Tsyganok   17:31
+In call me?
+
+Swathy Lokula   17:34
+Cheetah story readiness, yeah.
+
+Oleksandr Tsyganok   17:38
+So please, Kuehnlenz.
+Uh, provide your name. Was that was that link posted to the chat?
+
+Sanjay Kumar Parui   17:41
+Oh, yeah, I don't see.
+
+Oleksandr Tsyganok   17:47
+Yeah, it was like announced before. Yeah, we have like this plan for this session. So, and I also like posted it here. So just open this like confluence page and scroll down to the very bottom.
+
+Jason Daggs   18:00
+Oh, okay, I see.
+
+Oleksandr Tsyganok   18:09
+Yeah, let's wait a second because it's a pretty huge page for our session. And yes, so we have this like recording and material section.
+And that's where we have this like link to our assistant.
+Hey guys, let me know if we need to slow down and somebody else need to find this agent.
+
+Jason Daggs   18:28
+Rohan.
+
+Oleksandr Tsyganok   18:40
+OK, looks looks like we we are good, so again.
+You need to clone, copy like ID with this like original name, clone this assistant.
+List name here, I will add my name.
+Yes, sorry, I like if somebody can paste like this bunch of links from...
+
+Svetlana Stogni   19:09
+I will, I will do it. No word is, Suresh. I will do it, yeah.
+
+Oleksandr Tsyganok   19:12
+From confluence, yeah, please do it in parallel.
+
+Svetlana Stogni   19:16
+Okay.
+
+Oleksandr Tsyganok   19:21
+Yeah, so I'm checking this checkbox just to not create like ton of assistance in our shared training project. Please do so as well. So no changes required. If you like do any
+For like your existing assistant, just we keep in everything that we had before. Yeah, and Svetlana, I think you can copy whole section with like all these links that we have here. Basically, this part of recording and materials and like.
+
+Svetlana Stogni   19:53
+St.
+
+Oleksandr Tsyganok   19:59
+all this like steps with all links and these tails because we will need it during the next steps.
+
+Svetlana Stogni   20:07
+Okay.
+
+Oleksandr Tsyganok   20:10
+Yes, so.
+You don't need like to have like some extra configuration, so whatever you had like before should be still like available here. So previously we configured it in the list of like our tools, so we selected this like project management and enabled generic JIRA.
+So, and we will connect this like Confluence tool. For that, we will need to create like another integration, but before that, make sure that you saved your cloned assistant. Yeah, I'm having some problems with that when I say the assistant.
+
+Jason Daggs   20:52
+Where should I look to find it, actually?
+
+Oleksandr Tsyganok   20:55
+Maybe have like some filter. Make sure that you click in this like clear all and you click in this created by me and you can like filter it by project. So yeah, that's like the first one that was edited recently. So you should see it somewhere on top.
+
+Jason Daggs   21:01
+Yeah?
+Okay.
+Ohh.
+Ah, okay.
+I found it now. Thank you.
+
+Swathy Lokula   21:17
+The Jira and the confluence, do we use the default integration or our integration?
+
+Oleksandr Tsyganok   21:19
+Okay, great.
+We will return back to like this specific assistant setup. For now, let's make sure that everybody cloned assistant and we will need to create this integration. So if you have already set it up, that's great. We will use it all like on one of the like next steps.
+But for now, let's like reiterate this integration setup step for guys who don't have this integration created yet. So we will have exactly the same steps as we did for our Jira integration setup.
+So you will need to navigate to this like integrations page. You might see like a different menu. So you might see like only icon here on the very bottom. You can just expand this menu to see the like the names for this like feature. So you can navigate to integrations and you will need to select user integrations.
+Yeah, while everybody like navigating to this page, I will provide some comments about permissions mechanism. So by default, user integrations, it's basically user credentials. So you work with a system on your behalf. So like all AI agents are posting comments in Jira or Confluence.
+Will do it with like your name and your permissions. You might have like a need to create a project integrations that perfectly fits for a scenario when you're not starting the chat with assistant, but it's running automatically. For example, when you create an...
+new pull request, it starts in this like pull request analysis and posting comment. For that case, it's better to create like some kind of bot account so we can see that like nobody is specifically like triggered this flow. We just created a pull request.
+Nobody like initiated this like PR check, but we need to like post comment from like some specific user. So that's a perfect example where we might have like this project shared integration and create this like shared like bot accounts.
+and connected some automated workflows. For now, please make sure that you select in user integrations so it's like not visible for everybody else because by default, like projects integration, I kind of share it between all users. And for now, we like.
+working with like our personal integrations. I want to mention that additionally, we have like a concept, as you can see here, like this like global integration, it says like no. So we can edit existing integration and select this checkbox and enable it as a global integration.
+how it will work. By default, we have like multiple projects in the system. So each project you can consider like a security boundary, like no resources from one project can talk and connect to like other projects. So they are designed.
+to be fully isolated. So if you create an integration in a specific project and assistant in another project, it will not work because assistant don't have access to those integrations. And that's like usually applicable to like all resources like workflow, data sources, assistance, and so on.
+So you can sync it's about like fully isolated.
+secure environment, this projects. So if you like working on like specific resources, make sure that like they always belongs to the same projects. Yeah, we have like 1 exception. It's like for integration. You can say that, I don't know, you assign to 10 different projects and you don't want to like.
+recreate this integrations like many times, you can say that this is a global integration and it will be available cross project. So for example, if you're creating it for like this training, you can enable your Jira integration as global and automatically this integration will be also
+reused in a project where you currently assigned. Okay, we have like some comment and we see the user integration on my top bar. There is no project integration option. Yeah, we might have like a different roles. So I believe like this project.
+Integration only available for project administrators by default for this like training, like everybody assigned, like most of like users assigned this with developer roles, so they cannot create this like project integration type, but it might you might have like a different roles in your.
+original team project where you assigned it at the moment. Okay, so let's move forward with like our practical part. Let's create a new integration. Again, it should be a user integration. For now, like I'm not selecting this like global integration. By default, it's selecting like your.
+main project, make sure that you're not missing to assign it to a training, to not have this issue that I mentioned that we will not have this like cross project access. For credentials type, it should be confluence. And again, here.
+on our page, we have like all resources, like all links where we can create this integration here, link for a new integration. We have like this confluence URL, like suggested integration name, it's up to you, you can use a different name. But yeah, for.
+From just the easy setup, you can.
+and simply copy it from that place.
+So, I will just copy.
+this like URL as we did it for Jira and yeah I will copy this like name.
+Here in username, it should be your email, same as in Jira. You can copy it from Jira profile. I will show it in a minute.
+And as the last part, we will need to get this API token. Again, same like setup as we did it for Jira. So if you have like this token stored securely somewhere in the password manager, you can just use it from this like storage. If you save it, if not.
+Yeah, it's fine. We will create now a new one. Make sure that you also select this checkbox because you have Confluence Cloud instance. It's like have slightly different setup than like on-premises setup.
+Okay, can we move forward?
+No questions so far, greatest.
+
+Jatin Bagga   29:02
+Sorry, I have a question, Oleksandr. Sulik, this is both ways. Is it inbound? Maybe addresses inbound and outbound, like receiving the input and then also pushing information? Or is it just one way? It depends on the nature of API. So you can think about this like tool as like.
+
+Oleksandr Tsyganok   29:04
+Yes.
+Yay.
+Intellectual like wrapper for Jira API. So whatever like permissions your user have and whatever functionality this API provides, AI know like all the details for all small endpoints and can perform these actions. So Jira API have like rich capabilities. It have like tons of like reading points. Basically you can get.
+Everything that you have in the Jira, like project releases, and also user permissions, or sprints, like comments, that's like a read direction, and you can also like write everything to Jira, because it's again like API to post a comment to Jira.
+
+Jatin Bagga   29:58
+And.
+Yeah, might as well.
+
+Oleksandr Tsyganok   30:08
+API to modify content of a JIRA user story. API to create a new sprint and assign some tasks. So short answer, like 2 directions communication. Got it. That's great. And if you've covered this in a previous session, that's fine. I can look at the recording.
+
+Jatin Bagga   30:08
+Alexa.
+Got it, and...
+But have you, did you like, did you walk us through a scenario? Let's say I have like a really bad story that I'm like, I'm not feeling good and I wanted to sort of come into CodeMe to sort of, you know, directly point, read the story and then once I agree on sort of whatever the output is, publish it back into JIRA itself.
+That workflow that I just talked about, like have we walked through that scenario, like as part of this geo story readiness itself? Because I joined a little late for this session and I missed a couple of sessions last week. You have not, okay.
+
+Oleksandr Tsyganok   30:55
+No.
+No, we read from a JIRA and post it to comment. We have like a specific instruction for an agent, never modify like original JIRA content because you know it might be risky because that's like a role of this agent. So it's only like performs this like review.
+But there is no like technical limitation. We can create another agent, I don't know, some Jira story like improver, and you can like talk to this like agent, like clarify all the details what needs to be changed, and you can change a Jira story, or maybe you want to change existing comments.
+
+Jatin Bagga   31:29
+That would change.
+Yeah.
+whatever you need to modify, it can like easily change contents of like existing resources. Yeah, to me, it's low risk, right? Like even if let's say I was to do it and I don't want to belabor it too much, let's say I do make it read my story and then CodeMe does the magic, cleans it up, I like it, and I wanted to push it directly, being lazy, and I wanted to just update the story, it can. If I don't like it, I can always go back to history and revert back, right? Like there's zero.
+Yeah.
+Heath.
+
+Oleksandr Tsyganok   32:01
+Zero risk there, yeah, yeah, yeah.
+
+Jatin Bagga   32:02
+Correct. Okay, that's good. So maybe I need to play with that, I think, to see if that works. So that would be really cool, I think. All right, good stuff. Thank you. That's it. Yeah, just create a separate agents, provides us instructions that you want to improve existing user story, like expected format.
+
+Jason Daggs   32:13
+Yeah.
+
+Jatin Bagga   32:15
+Yeah.
+
+Oleksandr Tsyganok   32:20
+And so on, and yeah, it should like easily publish new content.
+
+Jason Daggs   32:24
+Yeah, mine. Okay, cool. My integration test keeps failing.
+
+Sukalya Rajendran   32:26
+But.
+
+Oleksandr Tsyganok   32:31
+Sir, anything I can check? Yeah, let's like have the same pace as like whole audience, so when we will reach to this like testing step, we will return back to you to try to troubleshoot. We have another question.
+Uhh...
+
+Jason Daggs   32:40
+Yeah, sure.
+Yeah, no problem.
+
+Sukalya Rajendran   32:46
+That's not a question. I just wanted to comment there to Jatin about his question. So if he has a chance to watch the recording from yesterday's Lighthouse session, we did a demo of an AI assistant that was created in CodeMe to do exactly what he was looking for, to update the JIRA story and also create follow-up JITA tasks for different downstream teams.
+if needed. So you'd be able to find that information in the recording from yesterday. And also you can reach out to me if you have any questions, Jatin. I think I can help there. Thanks.
+
+Oleksandr Tsyganok   33:21
+Yeah, again, short answer, whatever you can do with Jira API, you can do from CodeMe and in Jira you can do almost everything if you have unnecessary permissions. Yeah, so where we stopped, we have like correct project assigned. We uncheck global integration, we selected confluence type, we provided the name.
+We have a link. Please make sure that this link is like for training environment, not a production one. It's like should be like cloud instance, your username, sorry, email, and we will need to get a token. Yeah, you might, if you like using like all token.
+It potentially might be already expired, so please be careful with that part. Yes, so.
+Another question. Yes, it was a comment from Skyler. We will need to navigate to our confluence or Jira and then we need to click on this like user icon and create the access token.
+So, I think most of you already know that it should be like in this like account settings, security, we have again another link in Confluence, so you can use Confluence to get access to this page, so security.
+API tokens and we will create a new token.
+Sorry, maybe I'm too fast here. So again, security.
+Section with API tokens. I will link create and manage API tokens.
+And this button create API token. You can create also a token with specific scopes. I don't know, maybe you want to only delete comments with your agents. So you can set it up with like limited permissions and that's the best production ready setup. So we just like following this list.
+privileged principal. So you just need to provide a name, any names that will let you know how you're using it. So it's.
+Confluence.
+What's me training?
+So I can make sure that you selected this expiration time. It's like limited, I believe, for one year. You can select it for several months, but at least select it because by default it's, I believe, one week or something like that.
+And you can create this token.
+So let's copy it and navigate back to like our integration setup. And just paste this token. And now let's test it. Yeah, now let's try to troubleshoot this token issue.
+Like, make sure that you don't have like correct URL here, your email, and you have like a freshly generated token or a valid token if you store it somewhere in the password management.
+Somebody mentioned about this issue with testing. Is it like still relevant? Do we have like some error message?
+
+Jason Daggs   36:54
+Yeah, I'm still getting a integration test failed error.
+
+Oleksandr Tsyganok   37:00
+Mhm.
+
+Jason Daggs   37:01
+Trying to figure out what, why?
+
+Oleksandr Tsyganok   37:05
+Yeah, do we have like any any details about this error? You can you can maybe, I don't know, should we try quickly share screen? Well, let me do this. I'm going to try to use that integration and then get back the information in the
+
+Jason Daggs   37:24
+JSON response. Maybe that will give me some additional information. What do you think?
+
+Oleksandr Tsyganok   37:32
+Yeah, you will not be able to use it and yeah, maybe Agent will be able to help you troubleshoot it if it have access, but I doubt that. Have you enabled this checkbox? Yeah, great suggestion.
+
+Jason Daggs   37:42
+Mhm.
+
+Oleksandr Tsyganok   37:48
+Okay.
+Can you enable this like conference conference cloud?
+
+Jason Daggs   37:50
+Which check box? Yes, confluence, cloud, yeah.
+
+Oleksandr Tsyganok   37:54
+Have you generated a new token on this session? Yes, twice.
+
+Jason Daggs   37:54
+Yeah.
+Okay. Let me try one other thing. You're using not the you're I see. Let me let me do this other thing. Let me shorten this URL. I think I might see what the difference is now.
+
+Oleksandr Tsyganok   38:14
+Maybe have something like else in this like URL. Yeah, you shouldn't have anything.
+
+Jason Daggs   38:16
+I have.
+I have, yeah, I have the whole URL to the...
+to the wiki page instead of just the... Yes, that's a problem.
+
+Oleksandr Tsyganok   38:27
+Domain name. So that might be. Make sure that you have exactly the same URL as here in our materials. Set confluence URL. Just copy this letter. OK, cool. Cool that we fixes this issue.
+Yeah, my.
+
+Jason Daggs   38:31
+That might be something. Let me try that.
+Yeah.
+That was this. Yeah, that was it. Thank you.
+
+Oleksandr Tsyganok   38:45
+Guys, anybody have like any issues with that part or can we move forward?
+Where are my tops in here?
+Okay, so you should see this green light, integration test successful. You can save it and you should have like 2 integrations, one for Jira, another for Confluence. And that's like where we can return back to our assistant and actually connect it with this newly.
+Created integration, yeah, how I managed to paste it in.
+URL.
+Ohh.
+Ohh, that was it from previous attempts.
+So, let me open my previously cloned assistant that I saved, and you should have, yeah, already like a new assistant that you like used from your previous session or you cloned like mine. Let's navigate to the very bottom, so...
+You have like this like assistant and yeah, we should see here tools and capabilities like generic Jira. Yeah, sorry, we need to click this edit button first.
+And then we scroll down.
+to the very bottom to this like tools and configuration section and as previous time we configured our confluence instance, we, sorry, Jira instance, we can configure confluence and we got a question, should we use like this default integration?
+or we should select a specific integration for which you have access to. If you will keep like this default integration, it will simply pick up first suitable one. So it will apply this like rules that I mentioned about like this global integration setup, like project level and user level. So first of all, it will try to use this user integration.
+Then if no user integration like project integration, if no project integration, then it will try to search it from a global level. Yeah, for this specific.
+
+Svetlana Stogni   41:08
+Sash, we have a question for from the sorry for interrupting you, yeah.
+
+Oleksandr Tsyganok   41:10
+Yes.
+Yeah, yeah, sure.
+
+Debamitra Bhattacharjee   41:13
+Yeah, definitely. Yeah. So my question is, so I already did the integration with Confluence for our project. So now when I'm trying to integrate the training one, can I use the same API token? Like I tried and I'm getting some error.
+
+Svetlana Stogni   41:15
+Huynh.
+
+Oleksandr Tsyganok   41:22
+Mhm.
+
+Debamitra Bhattacharjee   41:34
+while testing the connection.
+
+Oleksandr Tsyganok   41:38
+Yes, so if you create in a new integration, but we use a token, yeah, it should work.
+
+Debamitra Bhattacharjee   41:43
+Oh.
+
+Oleksandr Tsyganok   41:46
+So, you can like reuse same same token for like multiple integration.
+
+Debamitra Bhattacharjee   41:46
+Okay.
+Multiple projects, correct?
+
+Oleksandr Tsyganok   41:56
+Multiple integrations in multiple projects, let's say it that way.
+Okay, okay, okay, I'm getting some errors, so let me try again. Maybe I'm doing something wrong then. Yeah, make sure that you have again this like cloud checkbox. If you have like some errors, maybe that's simply, I don't know, maybe incorrect token. Maybe you've just saved like only part of this token. You can always generate a new one if you have like any.
+Issues, yeah, for for for that specific case, I recommend just to select this explicit integration, yeah, even if you have like one, you will know that this agent like always use this integration and this like defaulting mechanism that I described.
+is not like applicable here. Yeah, and for your scenario, you can also select this kind of training setup. I will like remove it because potentially this agent will be like shared and somebody will clone it so I don't have like this.
+integration assigned. One important point, once you connect in this like your personal integrations, that means that this agents have kind of access to your password. Let's say in that way, in that scenario, you will not be able to share it with project.
+Because, technically, anybody can use assistance on your behalf, and I know post comment in Vira using this lecture of the system to solve this issue that we have, like this like mechanism of like default integration, so we have a single assistant that...
+Share it across all project, everybody creates their personal user integration, and when, like, new person like opens this assistant, system simply pickups this user integration, and it works when you keep in this like option with like default integration and this.
+Where it's empty, but for that specific training, let's select this integration. Yeah, so now we will need to return back to our system instructions. If you check that, like on like a previous session, you will see...
+that we have like strong requirements to follow like this rules that it should always based like the specific markdown table, no other comments, and you will see that like always and everybody has like very consistent behavior.
+Like, no additional like messages from the CA agent, yeah, like all agents that we created before, like based on this summary in like very specific format, yeah, so it's like a great from one perspective, so you have like kind of full control over it, and...
+Here, we will like slightly change this rules and explain which steps to follow. So, we identified that we have this like definition of done and definition of ready, and we want this agent to use this information. How we can achieve it? We already connect.
+Confluence. So technically, you can use this assistant to work with any Confluence documents, like loaded, modified, create new documents. For that specific session, we will focus only on reading additional knowledge part.
+And as I mentioned, we want to make sure that it's always using most recent data. So we will just add this like instructions to a system that each time when you like performing these steps, you need to go to confluence and load this like very specific.
+article about our definition of ready and definition of done. Yeah, again, this link, this specific link is available.
+Here in our like materials here.
+definition of ready and definition of done. So you can just copy this URL and we will tell assistant.
+that each time when we...
+Um...
+Like run in this flow, we need to like load this information with definition of ready definition of done.
+So, it's just saying that always loads definition.
+Definition of radio.
+Documents.
+Yeah, you can reuse.
+This part I already provided here, this like section with updated enumeration, and yeah, just copy it for your assistant, or you can navigate to the updated.
+version of this assistant, so we prepared it like beforehand. We have already set it up. Assistant, you should have access to it. It was like shared. So in this like system instruction, you will have like this message that says like.
+Always lower this like actual definition of done definition of ready documents.
+For now, I would recommend you to try it yourself, just to like try to update it like manually. I will not update this like enumeration for now. I'm like too lazy, but yeah, let's make it.
+correctly, not confuse like our AI with incorrect steps order. I will simply copy the steps from here.
+Yes, sorry, that's the wrong one.
+Okay.
+So let's save it and you can try to use it, but you will have like strange behavior. So it again will not be like so useful. It will just provide this same table with like all details.
+You can use any Jira user story that you already have, or yeah, I can share one with you. Let me find this link quickly.
+This one.
+Yeah, let me copy it from here.
+Yeah, we have some question.
+You're on, on shop should be here.
+
+Vira Melnyk   49:45
+You should use another chat.
+
+Oleksandr Tsyganok   49:48
+Mhm.
+Yes, so if we will try to run, let me return back to like my assistant.
+Well, if you will try to run it.
+You will not see like some significant changes. You will see exactly the same table and looks like nothing changed.
+Yeah, you can try it together with me just to make sure that we have correct Confluence integration. And then I will show you that we have actually full control over this assistant, and we can add some useful summary, like this information that we extracted from our Confluence pages.
+But actually we have like some evidence here that we have like working integration and you should see exactly the same. So we have this generic confluence tool and again you should see.
+Like all these details that we have like here in this like space plus information about like actual like content. Yeah, so we should have like this like guides and.
+We should have this like information with our definition of done and definition of ready here.
+Yeah, we have like some comments.
+No.
+Yeah, from Kyle Lee.
+
+Swathy Lokula   51:30
+So.
+
+Svetlana Stogni   51:32
+It was addressed, no worries.
+
+Oleksandr Tsyganok   51:35
+Okay, cool, cool.
+Yeah.
+
+Swathy Lokula   51:40
+So where exactly is the so each each team has or each lane has got its own definition of done. So I just edit and give the in the prompt the link to our definition of done and it should compare with that.
+
+Oleksandr Tsyganok   51:56
+Yes, it should. It should be able like to load this your specific team specific definition of done and definition of ready. Got it. Thank you.
+Yeah, we have still generic Jira tool failed. Was it working with like regular assistant? I don't know, maybe your token expired.
+
+Swathy Lokula   52:19
+Could you edit your prompt one more time, please?
+Where you get the recognition of done?
+
+Oleksandr Tsyganok   52:25
+Oh.
+
+Swathy Lokula   52:28
+Link.
+
+Oleksandr Tsyganok   52:31
+Yeah, definition of done link, like all links and all materials available here on this like page. I will copy it in.
+
+Swathy Lokula   52:31
+I was.
+Okay.
+
+Oleksandr Tsyganok   52:47
+Yeah, that's like a link with materials and that's a link for definition of ready and definition of done.
+
+Svetlana Stogni   53:06
+I have shared the restaurant, like, yeah, then you, yeah.
+
+Oleksandr Tsyganok   53:07
+Yes, it would.
+Is that is that just a like high level like explanation why it matters? Like we have like some information about like this like in West like principles, like what what need to be present and like all other details, yeah, so.
+The next part that I was planning to show, yeah, where is my original assistant?
+Let me return back to it and edit. Yeah, so we see this like problems that it's like not clear. Do we have like some actual effect of like adding this like additional like documents that we loaded? We should see like some kind of evidences that it's actually applied during this like.
+assessment and generating like this feedback. So I just want to modify it and add couple additional like instructions. So basically I want to say that I want to have like a full like summary at the end of.
+Um...
+like this like table with some citations about like original like document. So what I need to do, as we see, we have like list of constraints. That's how we set up this like agent like previous time.
+And it has like this specific like rule that do not add anything except this like table. That's actually how we achieved that we have only like markdown table generated and consistent output for all agents that we created on this session.
+For now, I want to like slightly change this rule. I want to have like this like summary with the references to definition of ready and definition of done from confluence page. Yeah, so we don't have like much time left, so I will just.
+Copy this updated prompt, and we will get, we will see the specific parts where I added this changes. Yeah, let me share it with you.
+Please share, yeah, that's like some troubleshooting that we have right now. So you can just update this like whole prompt or like modify your agent separately. So that's like a first part that we modified. We enabled like loading of this like extra page.
+Next part, we modified our constraints. Now we're saying that do not include like additional like text, except this like final summary that we want to output. Plus we have this like output format modified. We're saying that like it's mandatory to provide this like table.
+And we have this like extra requirement to add summary for like compliance with our definition of done and definition of ready. And we want to see like some.
+details, how it's like was violated, like what needs to be done accordingly to not like general knowledge of AI agent, but what specifically like mentioned in this like document. So if you will change it and say that, I don't know, you should always.
+list, I don't know, top 10 risks. Yeah, it will like try to find this like top 10 risks in the user story and if it's not present, it will like complain that it's not compatible with definition of them. Yeah, and...
+That's pretty much enough, like, to to achieve like this like functionality, so when we like chatting with this updated agents, we should... I'm sorry, I need to copy my Sridhar.
+Game.
+Let me copy it from previous charts.
+I'm not sure how I shared it here.
+Um...
+Yeah, let me just open the previous run.
+Yeah, so again, we should see like this like calls for confluence tool, and yeah, that's like effect of like this modification. We see that we have like this like compliance summary specifically, so like modified format.
+We saying that, yeah, we have like some page with this like ID and it have like some specific.
+specific requirements, dependencies identified and managed, and it says that it's not compliant with the specific details. Let's try to find this like original, like mentioned here, yeah, as you can see, it's available here on that page.
+Yeah, guys, any results like have you managed to achieve to this like stage? By the way, I can share. Yeah, it works. Yeah, cool.
+
+Jason Daggs   58:58
+Yeah.
+
+Oleksandr Tsyganok   59:04
+OK, so let me share this like link and who managed to set up this assistant can like have last step and just post.
+Results as Jira command.
+And we will see.
+I don't get the same output. OK.
+But that's expected because you will never have like same output. So AI is like not a deterministic tool. So we just generates like some text that logically should be the next next like word after like.
+already like produced the text. So it have like this like kind of random component. It should be like reasonable, kind of move to the same direction. You might not have like very detailed and exactly the same like scores here.
+Because we don't have like detailed score and mechanism, yeah, particularly this part.
+I see that we have call to generic confluence content.
+Uhh.
+But hi, does it like return like, I don't know, some mentions about this definition of red and definition of done from original confluence or?
+Or it's simply like not loading this document. You can always, you can always check what happened like on individual steps. So that's like a benefit of a code me. I would say that you simply have like low level API calls. So like for like developers, it will be like really easy to like to troubleshoot like what's going on.
+So you have like this like response and this like response simply interpreted by LLM model. So you should see like something with specific like content load. Yeah, where we have like contents of a page added here. Jira comment step doesn't seem to be working for me.
+Yeah, let me open this shot because I cannot see screenshots.
+Mhm.
+
+Hai Le   1:01:42
+Yes, Alexander, I see that you have three different generic generic confluence tools calls, but I don't I only have one. Is that is that expected?
+
+Oleksandr Tsyganok   1:01:44
+Yep.
+Mhm.
+Ah, yes, because we like provided like very simplified like instruction. We didn't say like which API to use, like how to load it. We just say that like you need to find this like content using this like link. So LLM like have like different ways how to extract this information. So it.
+might decide that for my case, it decides that it need to search like some space content first to make sure that we have like this page. Then it's decided to run this like extra like search for this like parent content and found this specific page. For you, it may be that just decided to load this.
+specific page. That's like things that you need to always use with AI agent. You need to test the behavior. So if you see that this behavior is inconsistent, you need to like narrow down like free view for this AI. You need to provide this like very specific instruction. Yeah, I don't know, use a specific API to execute something or.
+
+Hai Le   1:02:50
+Hello.
+
+Oleksandr Tsyganok   1:02:55
+Have like more details, like what extra steps need to be provided. For now, we just have like kind of a demo example how we can achieve it, but for production scenarios, it's better to have like really detailed description which like API calls need to be executed and in which.
+order. It's not always should be like kind of like low level coding, but if we see that the LLM model is struggles with like completing this task and we see some inconsistencies, that's like a great option to improve quality of the prompt.
+Okay, do we have like any other questions? I see again.
+Yeah, we have like some token issues. Let's check what do we have here.
+in this item.
+Have anybody managed to publish this updated comments?
+Okay, great. Yeah, we have, we have this.
+Yes, this one doesn't have this like updated summary, so Mia, I think you will need to update and specifically instruct your AI agent to follow this like rules that it can step back from this like requirement to always provide.
+only this table and allow to publish this like summary, but yeah, that's great. And yeah, I hope that everybody else used the, yeah, we have like also some comment, yeah, link for page. So you might.
+
+Nikita Kumar   1:04:57
+Thanks so much.
+
+Swathy Lokula   1:04:59
+Behnke.
+
+Nikita Kumar   1:04:59
+Appreciate this. I know we have to drop because we have our next call, but no homework for tonight. So I think the only homework is thinking about use cases that you might want to be working on as a team from digital down to QA for next week. But no homework yet, and we'll send out a new plan as well.
+Thanks, Oleksandr. Thanks, everyone.
+
+Svetlana Stogni   1:05:20
+Thank you. Thank you. Thanks, Ho.
+
+Oleksandr Pavlovskyi   1:05:21
+Thank you, guys.
+
+Svetlana Stogni   1:05:22
+Bye.
+
+Debamitra Bhattacharjee   1:05:22
+But.
+
+Sujan Shrestha   1:05:23
+Thanks, though.
+
+Simanta Thapa   1:05:25
+Thank you.
+
+Nicholas Crowley stopped transcription

@@ -1,0 +1,462 @@
+AI Enablement ENGINEERING Lighthouse Session-20260429_145949UTC-Meeting Recording
+April 29, 2026, 2:59PM
+41m 4s
+
+Oleksandr Pavlovskyi   0:07
+Alright, good morning, guys.
+Mhm.
+Guys, can you hear me?
+
+Vin Underwood   0:32
+Yes.
+
+Oleksandr Pavlovskyi   0:33
+Ohh yeah, alright.
+
+Patrick Behnke   0:33
+Yeah.
+
+Oleksandr Pavlovskyi   0:35
+All right, so...
+As usual.
+Let our people join us.
+So, let's give one more minute, and we're gonna start. So, today, today we have the following sessions. Yeah, Sukalya will present the practical part of her last of her last week demo, yeah.
+And today we're going to talk about automation ERDs and slow flakes DDLs, yeah, generation for Prisma. And also we're going to have showcase from Patrick here, how to enable AI system for Kubernetes, yeah, and config.
+Generation in Visual Studio Code and cursor, yeah.
+Alright, yeah, yeah.
+
+Sukalya Rajendran   2:01
+So Alex, can I go second because Adnan will be joining 10 minutes late, so he wanted us to wait.
+
+Oleksandr Pavlovskyi   2:04
+Yeah!
+Ah, you, you, you would like, yeah, so Patrick.
+
+Sukalya Rajendran   2:09
+Yep, yep.
+
+Oleksandr Pavlovskyi   2:12
+Ohh, how about you? Would you, would you be ready to start today's session?
+
+Patrick Behnke   2:18
+Sure. I'll be probably a little bit janky, but I mean, who isn't?
+
+Oleksandr Pavlovskyi   2:25
+Yeah.
+No worries, everything's gonna be fine. Alright, so, uh, yeah.
+
+Patrick Behnke   2:27
+Right.
+
+Oleksandr Pavlovskyi   2:33
+The recording is started, so Patrick, yeah, stage is yours.
+
+Patrick Behnke   2:38
+Yeah, so we have a new guy coming into the department, one of the interns from the intern program last time around. In addition, we have a new application that's currently in the repo that has been gaining some popularity called NTS2.
+
+Oleksandr Pavlovskyi   2:58
+Thanks.
+
+Patrick Behnke   2:58
+As a response to kind of like everything that's been going on, I've just been making a whole bunch of instructions and prompts, as you can see, to try to lighten the load of new person coming in and making modifications, creating new applications. So
+so on and so forth to our Kubernetes configurations in our apps directory. These get deployed to OpenShift and are primarily customized, but we are shifting to Helm. Once we start moving more towards Helm, I'll adjust these to
+
+Oleksandr Pavlovskyi   3:19
+Yeah.
+
+Patrick Behnke   3:36
+be Helm based, but we have a wide variety of different prompts that a new person can use. Anything from adding just a single component to creating a whole new application in the repo. One of the additional thing, two of the additional things that we have is the Nut TS2 piece, which is basically a
+ETL application that allows you to pull information from wherever and put it wherever. We use this to collect metrics primarily and put them into elastic.
+Oh.
+In addition, these OpenShift...
+repos and whatnot use a custom encryption scheme using OpenSSL. We wanted to have a more.
+less dependent, external dependent way of being able to encrypt and decrypt secrets so that we didn't have external dependencies whenever deploying a cluster. So as a result of those, I've made a custom pipeline generator prompt as well as the ability to manage secrets.
+So anybody can easily come in and say, hey, I need a new secret, or hey, I need to update a secret. It'll decrypt the file, modify the secret, and then re-encrypt the file.
+And with it being as part of the repo instructions on how to implement these, we even have reviews and validations for these configs. So it'll actually go through to the application, decrypt the secrets.
+run the customized validation and then re-encrypt that items. Now, of course, that's according to your permissions. Not everybody has access to all the different configuration types. So production secrets are encrypted and only we manage those. So this is mainly a
+quick way of being able to manage these repos.
+That allow for new users to come in and do it, so.
+Let's assume a new user comes in and they need to deploy a new application that they wrote as kind of a...
+getting used to the environment type deal. There is a prompt in here and in VS Code. Prompts are over here. You can list them out using the forward slash command.
+in order to get to them. And then each one of these are kind of dictated by these instructions, which are loaded all around. So these are pretty much your standards.
+standards and so forth.
+So you would just mainly focus on the prompts. And one of them that I have is to create a new application plan and then a new application. So the method to start this would be new application plan.
+Creates a new application called iWork.
+And then it'll proceed to go through, I won't go through the entire thing, but it'll actually go through and has a set list of questions needed in order to create.
+said application. It'll take you through one by one.
+I don't know why it's doing that. That's new. It's probably a new model trying to do things.
+So I probably need to specify a model.
+For stuff, but.
+Essentially, they go through, they plan. It will use our current standards to make one of these directories according to our instructions, our base archetypes and whatnot.
+And then.
+After it gets added, then you can go through and do other tidbits, like being able to manage secrets, do a review. One example that we could do is...
+Add components.
+create new secrets.
+And month is to dev.
+That's cool.
+I don't know, test.
+The secrets.
+Test, test.
+And then over here in the TS2 application and the dev overlay.
+Take a second.
+One of the things that we like to do is part of the Kubernetes secrets. There's actually two different ways you can specify. It's either data or data stream.
+A data stream allows you to put it into clear text as opposed to base 64 encryption. With our open SSL encryption though, you don't have to worry about
+It being in clear text because it'll the whole file will be encrypted afterwards anyways, so.
+As you can see, it went ahead and created the item. As you can see here as well, it used the proper namespace, string data.
+and use the name that was specified as well as the secrets.
+Now is currently going through and encrypting the file using our GitCrypt system.
+And ****, it is now encrypted.
+Let it finish up here first.
+Is it done? There we go.
+Yeah, then now that we've added that secret, you'll also notice that in addition to encrypting it, it also automatically added it to the...
+Customization file.
+right here. This is one of the big things that people forget to do. So the AI will do it for you to where it'll add it to the resources list. If you add a file in here and it's not in the resources, it'll actually customize will give you an error saying a file has not been properly allocated. So
+Now that we have that set, we can go through and say...
+Um...
+Review to dev.
+And it will actually go through.
+And of course the models are being a little bit slow today, but I think that's probably normal for this time of morning.
+Plus it seems like the new models don't really like my prompts anymore. It's new.
+
+Oleksandr Pavlovskyi   12:01
+Do you use auto mode, yeah? So which model do you usually use?
+
+Patrick Behnke   12:08
+Usually a sonnet for six.
+
+Oleksandr Pavlovskyi   12:12
+Mhm.
+
+Patrick Behnke   12:13
+Yeah.
+But it will actually go through and do a full review of the application in that environment.
+And while it's doing it, it'll start.
+
+Muhammad Adnan Farooq   12:30
+Yeah.
+
+Patrick Behnke   12:31
+Yeah, it the model, the model is not liking the way it's set up, so all my stuff is busted right now.
+Fun.
+
+Oleksandr Pavlovskyi   12:44
+That's because of demo.
+
+Patrick Behnke   12:44
+Ohh.
+
+Oleksandr Pavlovskyi   12:46
+Okay.
+
+Patrick Behnke   12:46
+Yeah, exactly. Let's try this validates application.
+
+Oleksandr Pavlovskyi   12:48
+Yeah.
+
+Patrick Behnke   12:54
+And TS2 dev environment overlay.
+Let's see if validate application does it better.
+Yeah.
+This was one of the things that was working previously, was it's supposed to have a set process on how to do the validations by decrypting all the secrets, running the customize, and then re-encrypting the secrets.
+That doesn't seem to be working now.
+No.
+I guess demo bugs.
+I mean, I could probably rerun it using a specific one.
+
+Oleksandr Pavlovskyi   14:19
+Yeah, yeah, use, yeah.
+Model that you get used to already, so you, you know what to expect from them from it.
+
+Patrick Behnke   14:26
+Yeah.
+I need this to.
+Yeah, overly.
+Remember to decrypt the and see that my mouth files before validating, and then we...
+
+Muhammad Adnan Farooq   14:43
+Pam.
+
+Patrick Behnke   14:53
+Search the files.
+Let's see if I add a little bit extra to it. Normally I don't have to do this. Normally it's just blop, blop, blop, and it works, but.
+It'll check for the ENC files, which is the files that encrypt slash decrypts. It'll then decrypt the files from the customized build to test the overlay to make sure it's working, inspect the various resources, check the Argo CD registration.
+I can see it did decrypt the file as well as all the other encrypted secrets in here. Obviously, I won't go to those and expose those.
+
+Oleksandr Pavlovskyi   15:59
+Mmh.
+
+Patrick Behnke   16:01
+But then it'll go through, run, as you can see, the customized build.
+And.
+I mean, I guess.
+Looks like it's hanging up on something.
+No.
+One.
+Okay.
+One.
+For the track.
+Oh.
+One of the things that's also going through is validating that everything is properly added to the customization file. That includes all of the pipeline configurations, as you can see here, for the application.
+Again, if any of the file, if there are any files in configs that aren't listening here, the customized build will fail. It'll go through, identify the file that's missing and add it to the customization.
+
+Oleksandr Pavlovskyi   17:46
+Mhm.
+
+Patrick Behnke   17:48
+And after it's done double checking all the pieces, it'll actually go through and re-encrypt. So if we go back to here.
+It'll identify the files, re-encrypt them.
+And you can see it provides a little fancy out overlay afterwards to go through and explain anything that it may find.
+Once it's done.
+And then it's done. And then you're able to go in and...
+Put your commits.
+
+Oleksandr Pavlovskyi   18:48
+Mhm.
+Cool.
+
+Patrick Behnke   18:50
+Yeah.
+Yeah.
+The...
+And that's pretty much it.
+
+Oleksandr Pavlovskyi   19:01
+Patrick, yeah, as I unmuted, yeah, I'm going to ask the first question. Yeah, how do you think, is it going to be possible to automate this? Yeah, because you use like a more hands-on approach, yeah, it's a genetic approach, yeah, but you're switching between these.
+prompts, yeah, like tasks, yeah, for your agent, yeah, manually. Have you thought regarding to automize this? Yeah, maybe to build agent, yeah, and connect, or maybe, I don't know, build the workflow?
+and automize all these processes that you showed. How do you think if, or you need to do this manually, you always validate the results. So it's not possible without human in the loop.
+
+Patrick Behnke   19:55
+So I primarily followed a best practices guide by a Microsoft employee. So I don't know if I would want to go through any further because if you go through and not...
+
+Oleksandr Pavlovskyi   20:04
+Mmh.
+
+Patrick Behnke   20:13
+add yourself to the loop here, then you could end up with various issues that it may not see.
+So I don't want to get too far into the weeds of automating using AI. Plus we have a credence to do more.
+
+Oleksandr Pavlovskyi   20:22
+Yeah.
+
+Patrick Behnke   20:30
+How is it called?
+Anything that can be done strictly is better than using the AI. So if you can code something to do something exactly, that's more preferred than letting the AI do whatever.
+
+Oleksandr Pavlovskyi   20:35
+True.
+
+Patrick Behnke   20:46
+Dau.
+Deterministic over approximation.
+
+Oleksandr Pavlovskyi   20:52
+Yeah, yeah, understood, understood, yeah. But, you know, yeah, we can optimize these steps when we are 100% sure that we're going to get the expected result, yeah? It's possible when you decompose enough task, yeah, I mean, the abilities of our LLM, yeah, and that quality of that.
+It's gonna provide us, yeah, like a final result, and you just validate, for example, the final code, yeah, so yeah.
+
+Patrick Behnke   21:23
+Well, there's also prompts to like add a new file and whatnot. So.
+Part of it was previously in a, like in the add component prompt and whatnot, was to, after making the change, it was supposed to do validations.
+
+Oleksandr Pavlovskyi   21:41
+Mhm.
+
+Patrick Behnke   21:45
+Yeah, as you can see, add component, customize builds, validate, but it didn't seem to do that, so...
+Um...
+Yeah.
+
+Oleksandr Pavlovskyi   21:57
+Cool, cool. Correct. All right, guys. Any questions to Patrick?
+Interesting to hear your your ideas regarding to the to the similar approach, yeah, because honestly I am using very similar, yeah, I don't have absolutely automated workflows in my production tasks, yeah, because...
+I'm responsible for the quality of the code, yeah, and that pull requires that they're providing, yeah, that should be fixed by me, yeah, so I use semi, yeah, yeah.
+
+Patrick Behnke   22:43
+Yeah, exactly.
+
+Oleksandr Pavlovskyi   22:48
+So, I guess somebody is saying something.
+Yeah, so I'm use semi-automatic approach, similar like Patrick use, yeah, but some routine tasks, yeah, for example, getting, I don't know, when I when I need to connect, for example, my JIRA to my IDE, yeah.
+and I need to get requirements from all these requirements in that format that's gonna be applicable for my agent. I definitely can automize this. Yeah, of course, I'm read what I'm providing, like a first prompt to the agent, yeah. But this sync is definitely like this copy paste task here is definitely can be delegated.
+Yeah, and honestly, it saves, I don't know, maybe half of an hour a day, definitely every day, yeah, using these workflows. So interesting to hear your opinions.
+Nice.
+All right, all right. Yeah, and one more question from my side. So, yeah, I understand regarding this is like operational agents, yeah, but how are you working with external services, yeah?
+For example.
+
+Patrick Behnke   24:34
+There's no external services needed.
+
+Oleksandr Pavlovskyi   24:37
+You don't need it, yeah?
+
+Patrick Behnke   24:39
+No external services needed.
+
+Oleksandr Pavlovskyi   24:41
+Okay, okay.
+
+Patrick Behnke   24:42
+Yeah, these are just configurations. We're not going through and like making websites or anything with this.
+
+Oleksandr Pavlovskyi   24:48
+Ohh, ohh, got it, got it, cool.
+
+Patrick Behnke   24:51
+Yeah, it's not code, it's configs. It's a completely different setup.
+
+Oleksandr Pavlovskyi   24:56
+Yeah, so yeah, I got it. All right, Patrick, thank you. Great demo.
+Okay, moving to Sukalya.
+
+Sukalya Rajendran   25:07
+All right. Hi, good morning, everyone. Let me share my screen.
+Are you able to see the screen share the conference page?
+
+Muhammad Adnan Farooq   25:18
+Yep, MIKE.
+
+Oleksandr Pavlovskyi   25:19
+Yeah, yeah, yes we can.
+
+Sukalya Rajendran   25:20
+All right, okay, so I'm Sukalya Rajendran from Data Factory Platform in Adnan. The use case that we'll be presenting today is about automated Prisma schema governance. So, I we've created this confluence page with the focus of highlighting the cross-functional impacts because of this custom agent that we've.
+What this custom agent will do is help us identify any schema level changes that happen on different databases. So we have multiple teams on this that work with subgraphs for the Catalyst project, and that's on the domain gateway side of things.
+whatever code changes they do for the subgraphs in order to cater to the UX features that they have to build for Catalyst, that gets written to the back end database. So that's another team, data operations team that manages the databases as such. And then from the Postgres database, we...
+meaning the Data Factory Platform team is responsible for bringing the data into Snowflake for analytics. So there are various teams involved in this process. And so, and various teams own different pieces of the code, but we have to work together in order to deliver the data to Snowflake for analytics purposes, right? And.
+I think we have close to 18 subgraphs in production today. So, and many schema changes keep happening by different teams. It's hard to keep track of those changes and translate that into engineering effort as such. So we thought there is scope for automation there, and that's why we built this custom agent. This will run on GitHub.
+action workflows, that's our goal, to help us identify any changes. And it will also produce some artifacts such as the, yeah.
+
+Muhammad Adnan Farooq   27:06
+Secondly, I just want to set the right context, right? So, whatever the information you provided, which is good, right? So, Alexander and the team, right? So, understand that this is going to be, we are going to do this agents in our production environment, so this is a really a painful for us to track these changes from.
+
+Sukalya Rajendran   27:11
+Mm-hmm.
+
+Oleksandr Pavlovskyi   27:25
+Mm.
+
+Muhammad Adnan Farooq   27:26
+All these 18 and 19 teams, which is working together and creating these new sub graphs, the new UX to make make changes, because whenever they make changes, if nobody in like notify us, it will our break our like downstream process that the data is going to be the pipelines will be break, and then like you know that our data warehouse, the analytical data is not being available for there, so some of the times.
+This is what happened in the past, right? They make the changes without notifying us that they are making these changes, adding new tables over there, and then that break our process. And then we need to go, like, you know, become more reactive, go back, ask the team what are the changes, implemented those changes in our pipeline, and then resolve this problem. So this is.
+where we want to build something which is AI powered, which is monitor the changes, modify the pipelines, and then like, you know, do end-to-end automatically, right? So it's just like, you know, manual reviews, like, you know, once the code has been ready for us, we can review as an engineer, review the.
+
+Oleksandr Pavlovskyi   28:12
+Mhm.
+
+Muhammad Adnan Farooq   28:30
+Code, and then like, you know, deploy it into production.
+So I just want to set this right stage. Go ahead, Sanjith.
+
+Oleksandr Pavlovskyi   28:34
+Cool.
+Call Greg.
+
+Sukalya Rajendran   28:36
+Yeah.
+Yep, thanks, Adnan. So let me go through this workflow. OK.
+So here, if you see, this is the workflow of as to how this agent will operate. Whenever a PR, we start from the left hand side, whenever the PR is merged into the develop branch, which means they are subgraph, this is on the subgraph owned repos, this agent will run. It will trigger a GitHub action workflow.
+And then this agent kicks off to identify what are the schema changes that actually happened in that specific PR. And it will generate an ERD diagram listing out only the changes. And it will write it to an output folder for us. It will also generate a draft version of the Snowflake raw table DDL corresponding to those.
+schema changes. And that will also get written to the output directory inside the same repository. Then you have a human in the loop to review those artifacts, the ERD diagram, as well as the Snowflake DDLs. If everything looks good, then we can configure it to kick off the next agent, which is the DBT developer assistant agent, which we built in.
+phase one of this AI program that will do the actual development of the data pipeline and also do the testing and generate audit related documents for us and create a PR. So end to end all of the developers tasks is automated right from identifying and doing the impact analysis to completing the development.
+This is the workflow. Any questions about the workflow?
+Okay, all right, then let me then move. I explained as to when this runs and we've added this custom agent to the Git Management Copilot repo. And this is the details about the agent itself. Like I said, it generates ERD diagram and a Snowflake DDL.
+for the Prisma changes that it identifies. And you can run it in three capacities. Okay, sorry, let me go through slowly. This is a set of instructions for it to ignore or handle the mermaid files that get created because to generate the snowflake DDL, the mermaid file or the ERD diagram has to be generated in certain format without hyphens and things like that. So those
+of rules are mentioned here. The core responsibility for this agent is to read the schema changes, identify what has been modified or added newly, and then also identify the map relationships, like one to many or many to many, et cetera, and highlight those changes and generate the output artifacts in the form of ERD and Snowflake DDL.
+And this explains the details of the workflow that I just talked about, and then gives you an example of the diagram that it can generate. And the way you invoke this agent is using different options. One is you can generate the ERD for specific.
+JIRA tasks that the Catalyst team owns. This is an example of a prompt that you can give, where Cat 5215 is actually a JIRA task that has the details. And another is you can give it a PR and then you can invoke this agent. And then in that case, it's just going to review the.
+Prisma schema changes associated with that particular PR. Or if you want to generate the full schema ERD, you can use it that way too and generate it fully. The 4th use case is if you know which table you want, you are looking for the relationships for, then you can give the specific table name and ask it to generate the.
+ERD and Snowflake DDL for a specific table. So there are multiple ways in which you can use this agent. I'll just walk through one of the sessions that I ran this morning, invoking this agent. So you on my left hand side in the workspace, you can see multiple folders. The top three are different repositories.
+So the credit app processing subgraph is owned by the domain gateway team where the subgraph code resides and the Prisma changes are there. Then infrastructure and the DBT foundation is where the data pipeline code resides. So I have all of this in my workspace as input and inside the credit app.
+processing subgraph on my local, I have given my agent MD file that I just showcased. And so it's now available here for me to invoke in my custom agents. So I choose my agent and then I had given it instructions to rebase my local repo and run this agent to identify any Prisca.
+Prisma changes and I wanted to explain which repos it used for the comparison, whether it did against developer or the main main repo, sorry, main branch. So if you see it ran and it was not able to see any recent Prisma changes because I had already synced up my local repo.
+So then I'd asked it to pull the Prisma changes that happened in the recent three weeks. So for that, it went through the repo, and then it was able to pull all the details by comparing it against my local branch with what was merged into the original developed branch.
+So it calls out the branches here and then gives the summary of the changes. So a bunch of catalyst tasks were actually merged into develop. So you can see the summary here for cat 9168. They modified a table called loan code group and what new fields were added and details like that.
+So for each task, it gave me a summary and it also generated the artifacts in the output folder, which I'll open up. So one, okay, let me open up the output file. This is the ERD diagram. I think I have it open here. Yeah.
+This is the ERD diagram for the Prisma changes. So for the asset table, they added a new table called asset non-obligor, and then these are the columns that got added. And you also have other changes here. Loan offers we talked about. Oops.
+Yeah, yeah, the zoom doesn't work properly when I use my hand. Okay, so this is the loan office decisioning office. So multiple tables got created as part of the various cat tasks. So it gives me the relationship between these tasks and the column level details as to what happened inside those tables. This is the ERD diagram that it generated.
+And the other artifact that it that it generated was the Snowflake DDL, raw DDL for those tables as such. I think, yeah, the decisioning of this gives you the DDL for Snowflake. I know in Snowflake we don't today define primary key and use it.
+But by default, it generates it with that. So when we do the execution, we can remove the parts that we don't want. And any columns that got added, all the details are there, like the loan code group that you saw, the new columns that got added with the comments as to which task added it.
+So this gives a head start to the developer with the raw DDL readily available for them. This is one of the outputs. And one thing I did want to show was initially, even though I had it in my instructions, it did not generate the Snowflick DDL automatically. So I had to refine my prompt.
+and get it to generate. That's when I discovered the formatting errors in the MMD files that it was generating. I had to handle the hyphens and quotes and all that. So I asked it to correct that and regenerated it. And then I've also updated my custom agent MD file with a correct set of.
+prompts now that it can generate everything in one go. So this is the custom agent. And like I said, we have to get the buy-in from different subgraph teams who own their repositories, and then we'll be able to add it to their agent. So I've also listed out the commands that people have to use in order to add this custom agent into their.
+repositories and then we can use it. And it is definitely scalable at the enterprise level. Like I said, 18 different teams today build subgraphs. So we see the scope for this agent to be running on those repositories and give us this automated output results which we can use.
+Yeah, that's pretty much it.
+Any questions?
+
+Oleksandr Pavlovskyi   37:29
+Cool, impressive.
+
+Sukalya Rajendran   37:31
+Thanks.
+
+Oleksandr Pavlovskyi   37:32
+If you guys, any questions?
+
+Guru Pitty   37:36
+Hey, this is Guru. A couple of questions. First of all, thanks. Thanks for the great demo and the great use case you guys picked up and solving the current problem. One thing I want to understand is, is this in use and are you guys using it in a day to day and?
+generating the DDLs.
+Okay.
+
+Sukalya Rajendran   38:00
+Literally, this was built this last week. So we've started using it and testing it out to see the results and it is proving to be useful. And like I said, we've not integrated it on the subgraph repos because we don't own that repo. We are consumers of that. So we've been running it locally and using it effectively to generate raw DDLCS.
+
+Guru Pitty   38:03
+Okay.
+Okay.
+Okay, okay, thanks for sharing that. So just curious to know how are you validating the end results, right? I know you, so we're building the AI agents, it's producing the output, and it's a production ready script which you will be executing it in the manually, right? So how do you ensure that the script is looking good?
+
+Sukalya Rajendran   38:31
+Mm-hmm.
+So the thing is, this will go through the SDLC cycle. Whatever artifacts it produces, it will be run in development environment, tested out, and only then rolled out to production. And also there is another part where, so what you saw was the raw table DDL generation, right? There is another part to it where we have to actually build the final data products.
+
+Guru Pitty   38:58
+Mhm.
+
+Sukalya Rajendran   39:02
+and build the staging and Matt layers for the consumers to come and use from Snowflake. Raw tables usually are not opened up to the users for consumption. So that is another part of the exercise that I talked about, the DBT developer assistant. So data modeling exercise has to happen, and only then the whole thing can be shipped to production. So all of these activities are useful in development, which will.
+
+Guru Pitty   39:18
+Mm.
+Mhm.
+
+Sukalya Rajendran   39:26
+speed up our market, I mean delivery to market.
+
+Guru Pitty   39:30
+Sounds good. Thanks for sharing.
+
+Sukalya Rajendran   39:32
+Welcome.
+
+Oleksandr Pavlovskyi   39:36
+Cool, cool. Yeah, I think Chantal, she was the one, yeah, who impressed, who motivate you to try this agentic workflows, I mean, GitHub workflows, yeah. So, guys, interesting to hear if you have similar implementations for your projects.
+
+Sukalya Rajendran   39:50
+Uh-huh.
+
+Oleksandr Pavlovskyi   39:57
+Or maybe you see the use cases when the GitHub actions also going to be helpful for you.
+
+Muhammad Adnan Farooq   40:09
+Sukalya, can you add the conference page link in the chat for everybody?
+
+Sukalya Rajendran   40:12
+Sure, yep, will do.
+
+Oleksandr Pavlovskyi   40:14
+Yeah.
+Cool, cool. Sukalya Adnan, thanks again for your demo. Yeah, Patrick, also great demo. So next week, we're going to have the following sessions. We're going to update the agenda on Monday. So regards into the topics that we would like to discuss.
+
+Sukalya Rajendran   40:22
+Welcome.
+
+Oleksandr Pavlovskyi   40:39
+So guys, as usual, we have the chat. So if you would like to share something or ask questions to our today's speakers, feel free to do this and have a great day.
+
+Sukalya Rajendran   40:55
+Have a nice day. Bye.
+
+Oleksandr Pavlovskyi   40:56
+Thank you guys, bye.
+
+Nicholas Crowley stopped transcription

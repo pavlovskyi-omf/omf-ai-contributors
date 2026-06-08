@@ -1,0 +1,779 @@
+AI Enablement Cross-Functional Lighthouse PDLC Session-20260428_100047-Meeting Recording
+April 28, 2026, 2:00PM
+56m 2s
+
+Vlad Grubman   0:04
+Yep, all good. The recording started.
+
+Nikita Kumar   0:07
+Awesome. I think we're just going to give everyone a couple of minutes to hop in. I think we're still waiting for a few people.
+All right, we'll give everyone a few minutes and then we can get started.
+
+Iryna Pashko   0:32
+Yeah.
+
+Svetlana Stogni   0:40
+Hello, hello. Hi everyone.
+
+Nikita Kumar   0:42
+Hi, we're just giving everyone some time to hop in here, giving everyone another minute.
+Okay, I think we can get started as people are coming in. We're also recording. Happy Tuesday. Welcome back. So for today's session, we've heard everyone that there's a lot happening and we want to figure out how to actually do cross-functional use cases across the board with Teams. So last week we did speak with all the cross-functional champions and...
+to be valuable cross-functionally across your team. And we're going to take note of all of those cross-functional use cases as well. So then we can build out these sessions based on those specific use cases. So if we have, for example, small use case, including stories, testing, and something with dev, great, we can, and it's a simpler use case, we're going to align that for the following weeks. So we're going to kind of align all these use cases from simple to complex.
+depending on what the use cases are coming in from you guys yourselves. So you're learning how to build them for yourself and for your team and any other team that can benefit from these are also going to be learning to building them with you. Any questions on this so far?
+If not, I'm going to give you guys the floor. So if you have a use case for your specific team, we'd love to hear from you and talk us through your use case, why it's important and how it's going to help your team cross-functionally. Or I will start picking on people because that has been your homework since last week.
+
+Joshua Smith   2:57
+Hey, Nikita, I have one. We were actually just chatting about it. So it is a use case for leveraging this concept of like the second brain or whatever you want to call it, where we take signals, and this is where the cross-functional part comes in. We take signals from, you know, our analytics sources, customer research.
+
+Nikita Kumar   3:00
+Ngoh.
+
+Joshua Smith   3:17
+perhaps customer reviews and so on. And we synthesize that to figure out what to build or what to prioritize in terms of features. So to me, like in product, that's one of the most challenging things is figuring out like what we should build. I mean, there's no shortage of things to build. It's like what to prioritize.
+And I think leveraging AI to help us like sort through all the data and noise would be very valuable.
+
+Vlad Grubman   3:47
+That will be, I, I think, sorry, sorry, I apologize. Let me just jump in real quick. I think I already responded to that. Um, it is, it is very...
+
+Nikita Kumar   3:47
+So, can.
+Go ahead.
+
+Vlad Grubman   3:58
+Like it's a dream come true for almost every product manager that I am aware of. There are a couple of people who don't dream about that. Yes, and that's what I was going to say. Let's get there.
+
+Joshua Smith   4:04
+Yeah, but the baby steps though, right?
+But baby steps, I'm talking, we don't have to boil the ocean. I'm thinking, yeah, more in terms of like crawl, walk around like we've been talking about. Like what is the next best thing we can do to help work towards that? Is it like connect our tools to the different sources, like the top three sources we think are going to be most meaningful? Because we have like,
+
+Vlad Grubman   4:12
+Yeah, let's get there.
+Yep.
+S.
+
+Joshua Smith   4:27
+lots of data and customer research repositories and things like that.
+
+Vlad Grubman   4:32
+So, so let me, let me, let me, let me react to that. Sorry, let me react to that. So, so there are two components to what you're asking to do: one is connecting to the data and and and and absorbing the data, and two actually understanding how to process the data and how to build.
+
+Joshua Smith   4:32
+Already.
+
+Vlad Grubman   4:48
+So AI infrastructure for the data to be usable, right? What we're trying to focus on in these calls for now is help you understand how to build this AI infrastructure or in more common parlance, how to build all these agents and orchestrate them and navigate them.
+So that they can do what you want them to do, right? We can't, like you said, we can't boil the ocean and...
+We need to start somewhere, but what we're trying to get you guys to in these calls is help you understand how to build this agentic close, agentic sort of harnesses around the data, because these agents are useless without data. I completely agree with that, but we need to we need to get you guys to that point.
+
+Joshua Smith   5:15
+Right, so let's like...
+Right.
+Yeah. So to me, a logical place to start would be to like build an agent that can scan those data sources.
+
+Vlad Grubman   5:35
+It's not even that. You can't have a single agent scan 10 different data sources, 10 different formats. So again, we need to get there.
+
+Joshua Smith   5:42
+I just say 10. I'm just trying to break it down into small pieces, that's all. Yeah, just smaller pieces, and that's where...
+
+Vlad Grubman   5:46
+Yeah, yeah, you're right, you're right. We what I'm saying, we need to break it down even smaller. That's what I guess that's what I'm trying to say.
+
+Joshua Smith   5:51
+That's, and that's...
+No, I agree. And that's what I'm looking to you for guidance on is like, what is the next smallest piece that we can break down? I'm not expecting to solve the entire use case, you know, in one shot or one prompt or anything like that. It's like, what's the next thing we can do to chip away at it? And if that doesn't make sense, then just tell me. But it's just, to me, that's where my head's up.
+
+Vlad Grubman   6:11
+It does, it does, it does. We just want to make sure that all you folks, as a general, as Lighthouse teams and OMF in general, can understand how to build these agents. So we're trying to get you to the point when you understand how the agents work, because a lot of these data points, as ZPAM, we don't have access to it because it has PII or financial information, so we can't really help you navigate there.
+but we can give you the tools so you can go and do it by yourself. Does that make sense?
+
+Joshua Smith   6:40
+Yeah, yeah, it does. Absolutely. Yeah, we can.
+You know, have further conversations offline, but I think, like...
+building agents for the sake of building them isn't really doing anything for us. So I want to make sure we're getting some actual value from it and sort of like a...
+in a product approach where we figure out what that value is 1st and then go after that versus just building the flow. Because I think we've built several flows, but I don't think, at least on our team, we're necessarily realizing the value yet.
+
+Vlad Grubman   7:13
+Yeah, I hear you. And that's the reason why we asked you folks to bring in the use cases, and we wanted to start with smaller use cases. Maybe, maybe I don't remember if we gave that example, but something really small, again, crawl walk around, we're trying to give you the way to build these. It's really easy to get.
+I don't know, maybe it's the wrong term, but I'm just going to use it anyway. It's really easy to get confused with how the agents operate and how they do things and how to make them work together. So we're trying to walk you folks all through that through simple examples. Once you clear that, once you start operating at the more advanced level with.
+A JT close and orchestration, it you will figure out how to do it again, since we don't have access to the data or to those things, and that's the reason why we ask every team to bring in their specific use cases. Like, maybe it's a smaller scale, but that that way you guys can realize the value even at the lower level without solving the, you know, the largest use case of your lives.
+something, maybe start with something more, yeah, something simpler, kind of get your feet wet, and then you'll be able to move into the space where you really want it to be.
+
+Joshua Smith   8:16
+Got it.
+Got it. Yeah, going back to the original point.
+
+Vlad Grubman   8:27
+Like, I, I wanted to, I wanted to learn how to play a guitar. Yeah, go ahead, Lisa.
+
+Lisa Ruby   8:27
+Hey, when do we, when?
+
+Joshua Smith   8:30
+Bob.
+
+Lisa Ruby   8:30
+When you were prior to...
+When you refer to use cases, what are you exactly are you referring to? Because use cases, what exactly are those? Because I refer to test cases, not use cases. So what exactly are you referring to?
+
+Nikita Kumar   8:49
+So when we're saying use cases, we're saying what is a scenario that works across the board for your team, right? So if you work at test cases, that's something that can work for your team, but.
+
+Lisa Ruby   9:00
+They change every day so that that's where I have a problem because they change every day when we're testing something. They're never the same.
+
+Nikita Kumar   9:09
+Yes, but your process remains the same, correct? Right? Like the process of like how you work with devs, how you work with product if you have product, that process across the board is going to remain pretty similar. So the use case we're referring to is kind of like what process can we automate throughout for you that's going to make it easier for your day-to-day to run your test cases.
+or just to make your day-to-day roll.
+
+Lisa Ruby   9:32
+Not when the product's different every day. Not when the product's different every day.
+
+Nikita Kumar   9:35
+But, but process is similar, no? Like, or is that does the process change with every product that you have?
+
+Lisa Ruby   9:44
+as the product, the process changes with the product that you, that we're using.
+I use different products. I'm in different, I'm using different products. Depending on what product I'm using, it's different.
+
+Nikita Kumar   10:01
+Can you give me like...
+
+Lisa Ruby   10:02
+So, it's hard to...
+
+Nikita Kumar   10:03
+Yeah, I all.
+
+Lisa Ruby   10:04
+So, right.
+
+Nikita Kumar   10:06
+Go ahead.
+
+Lisa Ruby   10:08
+No.
+So that's what I'm struggling with. I have set up a QA test analysis.
+Assist that I've got set up right now.
+To help assist define.
+To pull information for me to help set up like my test cases, so that I can define those.
+which I have been using co-pilot to help define my test cases whenever I'm doing my functional testing, which has been great.
+But each time I'm doing my functional testing.
+The the the projects that I'm testing, they're never the same.
+I've tested insurance products.
+
+Vlad Grubman   10:58
+Lisa, if you don't mind me asking, Lisa, if you don't mind me asking.
+
+Lisa Ruby   11:01
+Tested at.
+Sure.
+
+Vlad Grubman   11:06
+When you, sorry, sorry to interrupt. I think I understand where you're going with this. I just wanted to ask for clarification. When you are, when you say, use Copilot to build my test cases, what information are you giving Copilot? Where's this information coming from?
+
+Lisa Ruby   11:23
+Well, I've actually pulled stuff in from Robo, from Jira.
+with the information that's provided in JIRA. Actually, Heath and Allen that are on this call are in my lane. So I work with both of those guys that are particularly in my lane. So
+And I worked with Allen one on one with one of the products, actually with a couple of different products that we've been testing. And Heath does a lot of back in stuff that I've been working on.
+in the background.
+But the CodeMe stuff, I've not done much with the CodeMe stuff. I've done more with Jira, with the Rovo, and Copilot. So CodeMe is completely new for me.
+
+Vlad Grubman   12:15
+Don't worry about the code me right now. We're trying to understand, like, what is the process? And again, the use cases we're referring to, let's settle on the terminology first. The use cases we're referring to are what are the scenarios in your daily lives as a team, right? Not individual, just one.
+I don't know, delivery engineer, QA or product manager or UX, as a team, what are the things that you're spending your time on that could and should be automated away? Like for example, again, this is just an example, you don't have to do this, just an example. For example, you're looking at the user story and you want to see like,
+Can you build test test cases based on that user story or like is it testable? You wanted to, you're looking at the PR and you wanted to analyze it or you want to, or you're looking at the user story, you want to check against the PRD, see if there are any discrepancies, whatever the case may be, right? That is what we define as a use case.
+It's a part of the process that your team goes through as you build things that we potentially can take on and delegate to AI some of it. Does it make sense? Svetlana, I think your hand up and I think somebody was trying to speak up. I'm sorry, I didn't notice who that was.
+
+Heath Fest   13:18
+Shai.
+
+Svetlana Stogni   13:33
+Just an idea. I have a question. Lisa, do you have any problems with the quality of the requirements you're dealing with? And how often do you need to clarify your questions before creating the list of test cases you're referring to? Like, is it always
+All all this for you is everything clear? How would you characterize the quality of your requirements as this?
+State of the requirements.
+Lisa, are you satisfied with the requirements and like with the quality of user stories you are dealing with and based on this requirements you usually create the test cases, right? Am I thinking like that?
+
+Lisa Ruby   14:30
+Based on the requirements that are in JIRA is how I determine what we're testing. So if we have a story in JIRA and I have an acceptance criteria and a description, I take that information, I plug it into
+
+Svetlana Stogni   14:34
+Mhm.
+Mm-hmm.
+
+Lisa Ruby   14:51
+the Robo, if I have that information or I put it into Copilot, I ask Copilot to run an analysis on it to create my test cases. From there, that's how I do my testing. Prior to that, I would create my own test cases.
+from scratch, from...
+very beginning where it would take me a couple days to come up with all my test cases, which I've cut that down in half.
+to come up with, you know, the full test cases, including negative test cases, to test them. So that has helped cutting those test cases down. But
+
+Svetlana Stogni   15:32
+Ohh.
+
+Lisa Ruby   15:41
+You know, I'm taking that, like I said, I'm taking that information from JIRA.
+
+Svetlana Stogni   15:45
+Okay, yeah, I got you. And it looks like the quality of requirements in Jurijs that you usually get is very high and you don't need to clarify some of the questions. Everything is there and all you need just to start creating your test cases, you need
+You don't need to waste your time on requirements hardening, some additional conversations with the digital team, because everything is clear, aligned, all the information is there, all the attachments, right? And the best scenario we can ever imagine, right?
+
+Nikita Kumar   16:26
+So, Lisa.
+
+Lisa Ruby   16:27
+Yeah, so I'm able to take the information that's provided in JIRA, providing that the information's all clear in JIRA to create my test cases or my test plans to have that information that's documented in JIRA because I've been able to create test cases
+
+Nikita Kumar   16:29
+That is it.
+
+Svetlana Stogni   16:36
+Mhm.
+Okay, I see. I see.
+
+Lisa Ruby   16:48
+my test plan and test cases that we've now started utilizing x-ray.
+That's another source of truth there that's in attached to JIRA. So we just started using X-ray.
+
+Svetlana Stogni   16:56
+Mhm, Okay.
+Play.
+
+Lisa Ruby   17:09
+For our test case, our test in JIRA.
+I haven't executed any yet because my projects that I have for those have not been completed yet, but I do have projects that have tests attached.
+
+Svetlana Stogni   17:21
+Mhm.
+
+Lisa Ruby   17:28
+Bar X-Ray to execute.
+
+Nikita Kumar   17:28
+So.
+Lisa, what you're describing, you're already doing the use case. So like you're already cross-functionally doing use cases. So like your use case works, right? Like so you're you are first looking at your agent is looking at what's coming in in JIRA and that's what's digital part of it is. And then you're building you're building your test cases based off of that. That's QA. So.
+That's 2 different workflows, like working together. So you already built your use case, so it's already working for you. So that's what we mean by use case. So now you've built, you have an assistant that goes through and checks the story and makes sure everything is in there that you need, and then build your test case. So that's already cross-functionally working together. So that's your use case.
+So you're already doing that stuff.
+
+Svetlana Stogni   18:11
+And sometimes you need to clarify some of the questions, because...
+
+Lisa Ruby   18:12
+Well, yeah, but I don't, yeah, but I don't have anything particularly set up, you know, to define it per se. It's just questions that I keep asking to redefine different questions that I have if I don't understand.
+saying something, you know, because sometimes the stories aren't always clear.
+
+Nikita Kumar   18:34
+Okay.
+Yeah.
+
+Lisa Ruby   18:39
+on the task that we get. And sorry, Alan, if I'm calling anybody out on my lane. Sorry, Alan or Keith.
+
+Nikita Kumar   18:42
+Absolutely.
+But I think...
+
+Jason Daggs   18:48
+Okay.
+
+Svetlana Stogni   18:48
+Nothing to be sorry about this. That's a working process. That's fine. It's totally fine because like most of the teams need to clarify some of the requirements and that's why we have QA, like, you know, to...
+
+Nikita Kumar   18:49
+That's where, that's where the.
+
+Lisa Ruby   18:50
+Yes.
+
+Nikita Kumar   18:53
+Yeah.
+
+Lisa Ruby   19:03
+Right.
+
+Nikita Kumar   19:06
+But that works, right? That's the flow for you. Like for you, it's required, like you need to understand that the requirements that are there and the acceptance criteria that's there is valid and passes your criteria to build the test cases. So right, so for you, something that can be done is a requirements hardening agent.
+
+Svetlana Stogni   19:07
+The way.
+
+Lisa Ruby   19:07
+I guess my quit.
+
+Nikita Kumar   19:25
+like we had already done from end to end. And that first checks all the stories before even coming to you to say, hey, these stories are off to build a test case. And it'll tell you like, okay, I went through three stories. These 2 are correct. They have everything you need, build test cases. This one is missing X, Y, and Z. So then you can always go back and say, okay, this is missing. I can't build it yet. But that's your end-to-end flow. Like you're already building the connector with product, with QA.
+and then you can help like pass it to Dev if needed as well. So you're already steps ahead on your build here.
+
+Lisa Ruby   19:58
+Oh, what I'm I'm trying to work on now, and...
+What I'm trying to work on is trying to create something that...
+
+Joshua Smith   20:08
+Matt.
+
+Lisa Ruby   20:09
+you know, like an assist with code me for a story readiness checker, and then, you know, one for the.
+definition of done and for the testing analysis through the code me because I'm not like I think I've heard several people say they're not exactly sure which platform we're actually going to work on. So I'm trying to get something kind of creative for this. So we kind of have a standard moving
+Forward, because I am.
+I am one that, if there's...
+I like a standard because I feel like if there's not a standard, things can get messy, especially when you're trying to test.
+I think there needs to be a standard far testing kind of moving forward, and I think there needs to be a clear path. And I know everything's not the same for every lane, but I do think there needs to be some
+some standards. So that's what I'm trying to work on, which I'm kind of struggling with a little bit. So I probably, I need to touch.
+
+Nikita Kumar   21:26
+Huynh.
+Yeah.
+
+Vlad Grubman   21:32
+I think, sorry, sorry, Lisa, yes, let's take this offline.
+
+Nikita Kumar   21:34
+I think we can take this offline with, oh yeah, we can, yeah, I think there's a way to standardize where we can help you and we can capture this as a use case, but we can take it offline with Svetlana and team and figure out how to best work it for you and your team as well.
+
+Lisa Ruby   21:36
+Yeah.
+Yeah.
+
+Nikita Kumar   21:52
+Thank you. OK, anyone else have any additional other use cases that there? OK, Sukalya, I see your hand up.
+
+Sukalya Rajendran   21:59
+Hi, good morning, everyone. So we've created a bunch of use cases related tasks on the AIPDLC board, and I just wanted to give a brief overview. This is for the entire Data Factory platform team as such, and we did it in phase one of the training. So we thought we can automate a few things on our end.
+So, these are the different use cases that we're planning to work on. I do wanna mention one thing: we don't have a dedicated Scrum Master, and we do limited cross-functional work as such. Our primary responsibility is in delivering data to Snowflake for analytics. The requirement can come from any...
+source team as such. So the first one we have is to create an agent to perform data validations after a pipeline is executed. We have a lot of generic data pipelines built today, so we want to build a custom agent that we can fire off.
+to do data validations depending on the requirements for that particular task. That's one that we're working on. Another thing is more like an L1 support agent, where if a data pipeline fails, I want this agent to review the logs and give me the root cause for the failure, and if possible, also give me
+an action item, but I want a human in the loop. I don't want it to act automatically. Nikita, did you have a question?
+
+Joshua Smith   23:27
+Okay, how'd it go?
+
+Nikita Kumar   23:28
+Yeah. Oh.
+Sorry, I was just going to ask, these are great because you're building them for yours. Oh, there's someone who's not on mute.
+
+Joshua Smith   23:33
+How's it feel?
+
+Nikita Kumar   23:39
+These are great for what you're building for your team and I think they're super helpful because you guys have been like iterating on these. But I guess I want to, maybe I missed what you said earlier, but I'm just trying to understand how these would work cross-functionally with if you have devs involved, if you have QA involved, and if you have product involved. And even if it's someone who's like acting as product, but not really product.
+
+Sukalya Rajendran   23:59
+So in our case, like I said, we don't have a separate, we don't really have cross-functional work as such. We work, I don't want to say we work in silos, but our primary responsibility is data delivery into Snowflake for analytics. The requirement can come from any team.
+
+Nikita Kumar   24:03
+Okay.
+
+Sukalya Rajendran   24:18
+It can be catalyst or it can be class, it can be anything. But we do the end-to-end development work as well as the unit testing to deliver the data to Snowflake. So we've kind of focused on that and then come up with use cases to help ease our day-to-day tasks. Does that make sense?
+
+Nikita Kumar   24:36
+Okay, okay. Yeah, that makes sense.
+
+Sukalya Rajendran   24:37
+Yeah. All right.
+And we did build a DVD developer assistant in phase one, right? So we are kind of building on top of that and trying to make an end-to-end automated flow. I wanted feedback on whether, you know, we can use CodeMeet to do that. Like we all, let me bring up a page and.
+Maybe you can talk through that.
+Yeah.
+All right, so this is kind of the flow we are envisioning. Already we have a Jira creator agent that we've built on CodeMe for catalyst related data pipeline work. After the Jira gets created, we have, I want to use CodeMe orchestrator to act.
+
+Joshua Smith   25:15
+Okay.
+They're on.
+It's on. You gotta keep them in. They don't come off. They eat. They come off to eat.
+
+Nikita Kumar   25:25
+Sorry, whoever's not on mute, can you please mute yourselves?
+
+Joshua Smith   25:26
+Any.
+
+Nicholas Crowley   25:29
+I think I found him and got him.
+
+Nikita Kumar   25:31
+Thank you.
+
+Sukalya Rajendran   25:32
+Thank you. So after the Jira task gets created using CodeMe, the workflow should then kick off the DBT Developer Assistant, which is a custom agent on GitHub Copilot repo, and it should be able to read the requirements and then invoke that DBT Developer Assistant custom agent and do the development for you.
+and do basic checks like the DBT compilation to see for SQL syntax errors and things like that, that level of testing, and then create the PR for us. And that's the flow that I want to build. I was not sure if that's achievable through CodeMe, but this is what we've documented and we're going to try out and reach out to you folks for help.
+if we get stuck. This is one.
+And apart from that, we did have a bunch of other things that the team is working on. We're just...
+For any code optimization, we have GitHub Copilot that can connect to our repos. So if we give the script name, we want to ask it to give us optimization recommendations based on, you know, the standards that we follow within OMF. So that's a custom agent that we're trying to build.
+And apart from that, yeah, I have two tasks in intake. I did want to follow up with you, Nikita, if there's something that you want me to work on, the AI use case registry. I know we've discussed this in a different meeting. And also an AI mentor assistant, basically, that will read all the pages that is there in Confluence on the AIPDLC space.
+and you can use that like a chat bot to answer any questions. This might be helpful for new Lighthouse teams onboarding in phase two. They can use that. So yeah, these are the various use cases that the Data Factory platform team is working through.
+
+Nikita Kumar   27:27
+Awesome, thank you. These are really great and I think they're going to be super helpful for your team. And maybe there is a way that they can even be used cross-functionally across other teams if they ever have to like tweak it or clone it or use it. Certainly the ones that you're working on for chatbot or anything like that can be helpful. So thank you.
+
+Sukalya Rajendran   27:43
+Mhm.
+Thank you.
+
+Nikita Kumar   27:45
+We'd love to hear from other people, any more cross-functional use cases that go across the team for you guys, whether it's going from dev to QA, from product to dev to QA, vice versa. So anyone else, if we can get some hands up here for use cases. And again, the goal for us getting these use cases so we can help you live build them.
+in the following cross-functional session. So you guys are getting hands-on view of how to build these use cases, but also getting, helping other teams that might be working on a similar problem together as well.
+or I'll start picking names out of a hat. So please raise your hand.
+Again, like this cross-functional program only works if you guys participate as well. What you put in is what you're going to get out. If we don't get use cases from you guys, it's really hard for us to figure out what you guys need as a team. So we want to be able to help you. So it would be really great if people can actually do the homework that we're passing along.
+
+Jason Daggs   28:44
+Mm.
+
+Nikita Kumar   28:52
+Jason.
+
+Jason Daggs   28:52
+You know, I, yeah, I have something I can share that we kind of discussed in one of our meetings yesterday, but this might be a different audience and might be helpful. So let me share my screen real quick. So
+
+Nikita Kumar   28:54
+Yes.
+
+Jason Daggs   29:09
+This is not a specific business casing use use case, but it is a use case that is, I think, extremely important for enabling the entire team to be able to take advantage of these of these tools, and so...
+In that spirit, what I've done is created a kind of a code me training program that, as I go through it, I hope to...
+To make it more specific for our team needs, to show them how to use the Code Me tool to create new systems and workflows that they can that each team member can apply.
+to their daily tasks. So basically, I created just a kind of a curriculum for seven sessions that go over each of the kind of major pieces of functionality that CodeMe provides. And it just gives us some
+some structure to providing information or disseminating this information that we learn in our AI enablement sessions and giving that to the rest of the team. That would include those that are not, you know, coders or, you know, maybe they work more on the
+business analyst side of things, and you have people who are QA testers that don't do that much coding, but maybe they touch some code here and there. So by starting with the CodeMe system, I'm hoping that we can learn this tool in a way that will allow us to...
+To better automate the tasks that we have in front of us, and as I'm demonstrating these different features of the tool, I keep in mind towards us, you know, to discuss what those use cases might be for each member of the team.
+and kind of use this opportunity to further solidify what those use cases should actually be when using this tool. So I'm hoping to get some additional use cases out of this. So, and yeah, I think that if we're going to...
+use these tools, I think it's really important to have a plan for how we're going to disseminate this information to everybody in our teams, rather than just rather than just, you know, the AI champion or the or the AI, you know, in leader, etc. But that we give everyone a chance to
+to learn these tools and use them to their fullest extent. So that's, so in that, yeah, I've got a Guardians AI enablement page. That's my team, Guardians. And you know, we have a whole bunch of other things on here too, that we just, you know, again, I just kind of started this just kind of
+I threw some stuff on there real quick. Not too much time and effort spent on it, but just some things that I hope that as we move forward will be useful for the team. And so I'll post this link to my page in the chat. And you know, feel free to, you know, in fact, I definitely appreciate.
+any critical criticisms or any feedback and stuff like that. So yeah, reach out if you think I'm on the right track or not. So thank you.
+
+Nikita Kumar   32:57
+Thank you, Jason.
+
+Jason Daggs   32:58
+Mmh.
+
+Nikita Kumar   33:00
+Awesome. Anyone else with anything? Oh, oh, I see a hand up.
+
+Bandana Sriramka   33:04
+Yeah.
+Hey, good morning everyone. So I have a use case where, you know, we are currently during a sprint cycle. We run the full regression suite for the testing purpose. But if we come up with a workflow where, you know, an agent can predict which component or the features are most likely to fail.
+So, you know, teams can, it will help us to prioritize the testing. Maybe the input can be the code reviews, like the codes which is being pushed to kids and can be the historical defects.
+Alicia.
+
+Vlad Grubman   33:49
+If you're sharing the screen, then...
+
+Bandana Sriramka   33:50
+Sorry, that's not me. It's Jason is sharing.
+
+Jason Daggs   33:54
+No, sorry. Sorry. There we go.
+
+Bandana Sriramka   34:00
+Okay, so if we can create such an workflow that will help us prioritize the testing, it will be good.
+So it is kind of a workflow from development to testing.
+So...
+
+Nikita Kumar   34:20
+Sorry, are you sharing your screen?
+
+Bandana Sriramka   34:22
+No, I, I just, I was just speaking to the use case.
+
+Nikita Kumar   34:24
+Okay, okay.
+Okay, so helping prioritize from development to QA in terms of like what to start working on 1st or just a priority level. Okay.
+
+Bandana Sriramka   34:36
+Yes, just priority level, yeah.
+
+Nikita Kumar   34:39
+Yeah, yeah, I mean, that's pretty, you know, it goes across two different work streams. It's part of the PDLC cycle itself. So that's something that that can work as well. We can we can jot that down as one of our use cases because it'll go from the dev team figuring out, okay, what's what do they want to prioritize to have QA look at first instead of you guys having to get.
+a million different things all at once and figuring out what priority is. But at least that way you have more of a handle on what to work on 1st and what can be put on the back burner as well. Or not back burner, but just a little further down the line.
+
+Bandana Sriramka   35:02
+Correct.
+Yeah, got it. Yes.
+Yes, thank you.
+
+Nikita Kumar   35:14
+Awesome. Thank you. Yeah, we'll have notes of all of these, so we're taking that, keeping account of everything as well. Oh, yep, another hand up.
+
+Debamitra Bhattacharjee   35:25
+Yeah, so I have a couple of use cases. So one of them would be to automate. Let me share my screen. So I have created the.
+Um...
+The data to track them, so, and...
+But.
+Let me know if you can see my screen.
+Yeah.
+So...
+Yeah, with the help of CodeMe, so there is a set of application which are like mostly middleware services. So why you want to make them automated with the help of CodeMe and to reduce the regression.
+time and it should be part of the CICD pipeline so it will help both the QA team and the development team as well.
+So that is one of them. And we also have a set of a ETL pipeline. So I think already some of some of the team, they have a story like this to create some agent to.
+help them with the data validation in the Snowflake pipeline. So yeah, I want to create an agent or a overflow with the help of CodeMe. I'm not sure CodeMe would be able to help us in this case or not, because there is no option to integrate CodeMe with Snowflake. So.
+could be like any other tools to know, like the automate the process to validate data in Snowflake pipelines. So these are the one and this one is still in a kind of.
+like a development phase, so we haven't started working on this one. So, but yeah, this would be also another use case for our team.
+
+Nikita Kumar   37:46
+Yeah, I think at the moment there is no code me Snowflake, but we do have Playwright in our, not we don't have it yet, but it is on our list of things to push to get you guys integration for. So that could be something that can be helpful in the meantime, or once it's ready in there, but we do have Playwright in there. And I think, do we have Snowflake on our list? Vlad, I'm not.
+
+Debamitra Bhattacharjee   37:55
+Yeah.
+Yeah.
+
+Nikita Kumar   38:06
+Sure, or I mean, I think we probably have it also on our list of things to request.
+
+Vlad Grubman   38:10
+I think not not in the top priority list, but yeah, we can we can always verify and add it, but it's not it wasn't the top priority list. I think top priority was GitHub, Figma, and I forgot something else at last hand, I think.
+
+Nikita Kumar   38:14
+Okay.
+Okay.
+
+Nicholas Crowley   38:23
+Atlassian.
+
+Nikita Kumar   38:23
+Okay, yeah.
+
+Debamitra Bhattacharjee   38:24
+Okay.
+
+Nikita Kumar   38:26
+Thank you. Thank you. Yeah, we'd love to hear from some other people. If you guys, if someone has something that's touching all across the board with digital, dev, and QA, we'd love to hear a use case around that because those are going to be the more complex ones that we're going to get into as we go into these sessions further on to do more hands-on work. So if someone has something across the board that way, we'd love to hear from you or if you have anything from like a digital standpoint.
+I'd love to hear from the digital team as well. What's a digital use case that can be helpful for you guys to go from digital to dev or digital to testing, whatever makes sense. We'd love to hear from that as well.
+
+Debamitra Bhattacharjee   39:04
+So it's me again. I just want to give one more input here. Like with the documentation, I have like seen we are getting a lot of success with the use of AI, but when it comes to execution, like that's where we are struggling A lot. So that just wanted to like.
+
+Nikita Kumar   39:06
+Yes.
+
+Debamitra Bhattacharjee   39:24
+So that's where my team, I mean, with the documentation, like with the help of Lisa, with the creating test documentation or like the BRDs or the requirements are coming more way better than before. And we are like, the time is also like very less creating this test documentation, but.
+when it comes to execution or automating, like that's where at least our team, we are as a team is struggling A lot. So that's something I would be, you know, seeking help, looking for help.
+
+Nikita Kumar   39:58
+Sure. Yeah, that's good to know because that's something that like if our team is able to help, we're going to be able to help execute and make sure we implement it properly for you. So we'll keep a note of that on our side as well. There's a transcript of this so we can pull all this information at the end. So we have a list of all the use cases coming through. Thank you.
+
+Debamitra Bhattacharjee   40:09
+Thank you.
+OK, cool, cool. Thank you.
+
+Nikita Kumar   40:18
+Anyone else? We'd love to hear more from you guys as well in terms of what other use cases you guys are working on or thinking of working on that would help solve your day-to-day problem across the board at least.
+
+Vlad Grubman   40:42
+Yes, Heath, go ahead.
+
+Heath Fest   40:46
+Hello, everyone. So I think a good use case that could be useful across the board for all teams would be if we came up with a standard way to document processes, systems.
+And and data, data meaning.
+Like data lake, maybe so, maybe not so much data lake, but...
+backs, dimensions, measurements in a standardized way, processes. I think that we have.
+A lot of information documented at OneMain, and then I also sometimes think that we don't have.
+the right information easily available sometimes. I think a lot of times processes are kind of, some processes are just kind of in our minds a little bit and scattered throughout the organization. And then.
+how systems interact with each other, what's inside of each system.
+But.
+Came up with what?
+
+Vlad Grubman   42:15
+Is it is it me or is it or everyone? Is he breaking up?
+
+Nikita Kumar   42:17
+No, it's.
+Yeah.
+
+Jatin Bagga   42:19
+No, he's on the moon right now, so...
+
+Guru Pitty   42:20
+Stogni.
+Yeah.
+
+Nikita Kumar   42:23
+Ohh.
+Thank you for those.
+
+Nicholas Crowley   42:30
+Yeah, Heath, we lost you.
+
+Heath Fest   42:46
+Up.
+
+Nikita Kumar   42:57
+Hopefully, you can see the chat.
+
+Jatin Bagga   43:14
+Yeah, I think he got the Tesla iPhone, you know that hoax thing? And that's not working, I think so.
+
+Nikita Kumar   43:16
+No.
+
+Nicholas Crowley   43:18
+Ha ha ha.
+
+Nikita Kumar   43:20
+Okay.
+OK, hopefully it can.
+come back and then finish what he was saying, but anyone else in the meantime can give us use case. Also in this chat, I am also popping in a page of how to identify cross-functional use cases. And it goes from across the different teams and it's got multiple other pages. So if you guys can take a look at that as well to identify some others.
+that would be great as well. But in the meantime, while we get Heath back, can I get another volunteer for their use case?
+I know you guys like work across your teams every day, so that's why we're trying to figure out a way to make it easy for you.
+
+Heath Fest   44:01
+I'm back if you guys can hear me.
+
+Jatin Bagga   44:01
+And Nikita, I have a question. Sorry, go ahead.
+
+Nikita Kumar   44:03
+Oh, yeah, he's, I think you're back.
+
+Heath Fest   44:08
+I had too many things open on my computer and I guess sharing my video and my audio just made everything stop. So I'm not for sure how much you heard, but so I could just start from the beginning. So
+I'll try and summarize it so I don't have to talk as long. But to me, I feel like something, an idea that could help across all organizations or all parts of our organization would be a standardized way to document data,
+processes and systems. For data, it would be a standardized way for us to create facts, dimensions, and measurements. For processes, I feel like we have some processes or...
+of processes, some of the history, but not all of it, documented. I don't want to speak for everyone in the organization, but I think that documenting of processes and continuing
+But...
+documenting processes as they live. I think that that's kind of a struggle. And then for systems, how systems interact with each other, what each system is. I feel like if we were to come up with a standardized way
+To document these, then, as an entire organization, then we could take that standardized documentation process back to our own teams and start using that and building it as we go, then adding that.
+those standardized way of documenting those three to the collective. And then as that grows, then of course that could, we could use that for, somebody said earlier, second brain or some type of artificial intelligence that could
+that has the information and the context that it needs to help us as like creating test cases, like what Lisa was talking about earlier, or creating an agent that allows people to type in questions like,
+If I change this table or change this feature, how does that affect this system, other systems? There's so many things that could come out of standardized documentation. So that's my thought.
+
+Nikita Kumar   47:07
+Thank you. Yeah, we did have a lot or actually around like standardizing documentation, knowledge, kind of like a second brain to put everything all in one place so people have like access to everything. They can move things quicker, like see what's being built or whatnot built, but just keeping like a idea generation of things that are already across the board happening for everybody.
+So we'll keep a note of that as well. Thank you.
+Um, Jonathan, I know you were saying something earlier.
+
+Heath Fest   47:35
+Okay.
+
+Jatin Bagga   47:39
+Yeah, yeah, I'm just ignoring something very simple, which is like using like ChatGPT to dump stuff directly in Jira. And I was struggling with that. So I have one question, because I feel like, you know, I feel like some of the design I'm getting out of ChatGPT are better than some of the other tools I can cursor for that matter. So I wanted to know that with this whole company knowledge piece.
+that we have enabled.
+Can you just import information and not export?
+
+Nikita Kumar   48:03
+Yeah.
+
+Jatin Bagga   48:07
+to JIRA, to Atlassian and Confluence and GPT, would you know?
+
+Nikita Kumar   48:14
+Like import from Atlassian from GPT and Atlassian.
+
+Jatin Bagga   48:17
+So, like, you know how you have that company knowledge and GPT configuration down at the bottom?
+
+Nikita Kumar   48:22
+Sir, are you sharing something?
+
+Jatin Bagga   48:22
+Do you know what I'm talking about or is it fabulous? Oh, let me share.
+
+Vlad Grubman   48:24
+Yes, yes, when, yeah, yeah, I know what you're talking about. Um, yeah, please share, share it, please share it. Um, yeah, I think there was a, there's a connector, yeah, there's a connector built to SharePoint.
+
+Nikita Kumar   48:27
+Okay.
+Oh, I see. You mean like in a GBT? Okay.
+
+Jatin Bagga   48:30
+Okay.
+Yeah, and I know it's not related to CodeMe, but I feel like it's important enough. So like for instance, like I was playing with it in cursor. I played a little bit in CodeMe, but I ran into some challenges, you know, so it's on me. I have not been able to solve that. But I came back to GPT and it's been like, it's been an interesting experience because I was able to get a design which I need to send back to the design team, but I at least have a wireframe.
+What I was hoping is that I can actually get like, you know, this story, let's say, just dropped directly from ChatGPT through the integration directly into Jira. So there's less of a like manual copy paste, right? So I know I couldn't do that in cursor at all, because I don't think that integration exists.
+I could get the design from there. Try and code me, but I failed because of my lack of familiarity. So trying in ChatGPT and I wanted to know from you folks if that's a possibility. And for more clarity, let me just show you this. So when you come here, of course, it's going to load. Come on, chop, chop. This. Yes.
+
+Vlad Grubman   49:31
+All right, Jatin, let me answer the first part of your question. It will be a possibility once we have MCP servers enabled on the Atlassian side. That's exactly what it is. The Atlassian MCP should give you the interface to go back and forth, again, depending on the way it would be set up.
+
+Jatin Bagga   49:36
+Tips.
+Got it.
+Okay, got it. So.
+
+Vlad Grubman   49:50
+I can't promise you it will work 100% of the time, but depending on the way it's set up, it should give you that ability. In CodeMe, it's absolutely a possibility. Yes, you can. And we actually had a bunch of demos doing that. In cursor, again, same answer. It's not possible because there's no MCP server allowing you to talk back to.
+
+Jatin Bagga   49:54
+Got it.
+Got it.
+Yeah, yeah.
+Yeah.
+
+Vlad Grubman   50:09
+The conference in zero.
+
+Jatin Bagga   50:11
+Okay, so thanks, Vlad. Just real quick, so in code, again, maybe I just need to do a little bit more. I sort of chickened out, so I have to go back into CodeMe and try it again. But today, anything that I see in GPT, for instance, if I'm trying to push, it's not going to work. It's all input, not output, correct? For any of the apps.
+Yes.
+
+Vlad Grubman   50:35
+That sort of seems to be right now. I'm not, again, it depends on how the interface is set up, because since we don't have visibility into the admin side of things, I can't really, I can't answer it with certainty. So if the experimentation tells you that, if the experimentation tells you that you can't pause back, then that's probably true because that's the experimentation, right?
+
+Jatin Bagga   50:35
+You might be on mute, Vlad.
+Okay.
+Okay.
+Okay, got it, got it.
+
+Vlad Grubman   50:57
+Empirical, yeah, experimentation trumps empirical data.
+
+Jatin Bagga   51:01
+Okay, got it. No, that's helpful. And then for code me, I think, again, I have to solve that issue myself. I think Nikita already told me what needs to be done, but just for modification, you can pass, meaning you can export your story or your epic or whatever you want to do directly to Atlassian.
+The other part I want to see is, will it automatically create a new epic number for you or a story number for you? Or can you specify that it needs to be part of this epic? That's a part where I haven't, like I said, I haven't tested and code me. Just trying to get clarity.
+So like I've created a story, right? Let's assume there's an epic that exists. Can I be that specific within code me to say go there?
+
+Vlad Grubman   51:41
+Sorry, Jatin, can can we can we take this? Sorry, can we take this offline because we only have like 8 minutes left and I don't want to do troubleshooting on this, if you don't mind.
+
+Jatin Bagga   51:47
+Okay, no problem. That's fine.
+Okay, that sounds good. Thank you. That's it.
+
+Nikita Kumar   51:52
+Thank you. I see a hand raised from Ashwin.
+
+Ashwin Jain   51:58
+Yeah, Nikita, I mean, this use case is like a core use case, but I never worked on it. It's just an idea. Basically, we should create a loan approval agent, which basically takes like customer income, customer salary, and like what is his credit score.
+what are the debt to income ratio and try to create a model which will say like whether loan should be approved or not kind of. That's like a core model you have to build like from scratch.
+
+Nikita Kumar   52:28
+So more like front-facing for like the user itself, like when they get on the website, they can play around with it and see or...
+
+Ashwin Jain   52:35
+No, not what basically one main does, right? It approves the loan. So it takes credit score, everything in all the parameters, right? So right now I'm not sure what engine is being used. We should try like build a model which basically builds this credit approval engine, like whether a loan should be approved or not.
+
+Nikita Kumar   52:39
+Yeah.
+
+Ashwin Jain   52:54
+We should be, we should it should be trained on based on bad data, like suppose the customer was taking this loan, was he able to repay or not? And you had to read all those models, train the model on based on that, and then create a model which takes the new fresh input and gives output, like whether loan is approved or not. Like, it's just a thought and it's like...
+Basically, yeah, I should do those things, right?
+
+Nikita Kumar   53:18
+Yeah, I mean, I think eventually it'll probably get to that point when you are building these features. But yeah, I think like it's a good one to have for, I guess, for you guys to like when someone's applying, it could take all that information in and give you like preliminary answer, yes or no, depending on whatever data they have. But it would require a lot of back-end data that we might not have access to.
+Beautiful.
+
+Ashwin Jain   53:40
+I mean, yeah, we can just create like assumption data and like just create a model which does that, like which can be trained and then which can do like, basically, basically what we are doing is we are just building some, take some random data and generate it, generate a model and try to use that model.
+But once we are able to do that, then we can use that for production data kind of.
+
+Nikita Kumar   54:04
+Sure, yeah, we'll keep, we'll put a note on this for ourselves too, and add it to our use case list as well.
+
+Ashwin Jain   54:10
+Yeah.
+
+Nikita Kumar   54:11
+Cool. Thank you. I know we only have like 6 minutes left. In the meantime, I have sent a link across for how to identify cross-functional use cases. We would love to hear more from you guys, whether it's this week or if you want to ping us more. Our goal now is to kind of go through these use cases and at least try to identify which ones are a little bit more.
+simple to complex to build a schedule on how to run these cross-functional sessions. But I think ideally we would still need some more from you guys because like a lot of people are still working in silos within their teams and the goal is to think more broader term and that includes working with your QA counterparts and your product counterparts if you have them.
+So we would love for you guys to think about more use cases and bring some more in on Thursday as well. In the meantime, we'll try to at least identify the ones that you guys have already sent us to see how we can break them down into sessions. So as each session is happening, people can see what session we're running, what use case we're going over, and if that's of interest of you, you can come in.
+look at it, watch us build it, watch us help you guys build it, basically make it very hands-on so people are learning and doing as they go. And as you guys are building these use cases, other people can watch as well and can either copy or clone and watch you guys build as well. So that's going to be the goal for the upcoming sessions, but would love to hear.
+more on Thursday, like, and more cross-functional, not just silo for your team, but what's going to be working across the board. So instead of going column, let's go rows. So if we can get a few more on Thursday, that would be wonderful as well.
+Any questions?
+Comments, concerns.
+Cool. If not, we'll give everyone time back. Thanks, everyone.
+
+Nicholas Crowley   55:58
+Thanks, Aditya. Thanks, all.
+
+Nicholas Crowley stopped transcription

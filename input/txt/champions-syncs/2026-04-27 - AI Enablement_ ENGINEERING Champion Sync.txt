@@ -1,0 +1,328 @@
+AI Enablement ENGINEERING Champion Sync-20260427_145946UTC-Meeting Recording
+April 27, 2026, 2:59PM
+31m 32s
+
+Oleksandr Pavlovskyi   0:12
+Happy Monday, guys!
+
+Jason Daggs   0:14
+Oh.
+
+Sukalya Rajendran   0:27
+Good morning.
+
+Oleksandr Pavlovskyi   0:29
+Happy Monday.
+Right, so let's wait for one more minute, as usual. More, and we're gonna start. Okay.
+Hmm.
+Let's see if Eugene will join us today.
+OK, it's nice to see you.
+All right, so yes, so well is here also. All right, guys, so let's start. Yeah, as usual, before we start, guys, do you have any topics to discuss?
+Before we move to our regular agenda.
+Any ideas, any use cases?
+Okay, I've got you everything on the board. So let's stick to our agenda for this Wednesday for lighthouse session.
+And yeah, so I'm sharing the screen. Guys, do you see the screen?
+All right, so let's align Sukalya and Patrick. So, as we discussed with you last session, yeah, so you're gonna have showcases this Wednesday. Sukalya, would you like to add maybe to to do some?
+Introduction, yeah, of your that's gonna be like a second part of your of your topic, yes, that we we started here last week, yeah, but...
+
+Sukalya Rajendran   2:49
+Yeah.
+So last week we talked about how to create the Jira tickets automatically whenever there is a downstream follow-up tasks for related to catalyst pipeline, data pipeline work and domain model review and snowflake model review. So now we're getting into the actual development side of things.
+So whenever there is a change in the schema, we want this custom agent to detect it automatically and then generate an ERD diagram that's helpful for the developers to understand.
+table layout and also generate a Snowflake rough table DDL that can be used in the data pipeline. So we have a broader vision of automating the entire data pipeline development completely once you give it a JIRA task. So this is just a part of that broader use case.
+We will be creating multiple tasks, you know, breaking it down into smaller tasks and putting that out to showcase. So this is one piece of that big, broad data pipeline development automation use case. Yeah.
+
+Oleksandr Pavlovskyi   3:48
+Mhm.
+Cool, cool. Great, great. Yeah, yeah, yeah, Guru.
+
+Guru Pitty   4:03
+Hey, one general question. So the use cases we see here, maybe the question to Alex, you or Sukalya. So just to understand, are we going, are we using only code me tool or are we also using cursor and other tools?
+
+Oleksandr Pavlovskyi   4:17
+Any any of tools we are not here, so any tools, yeah, even if this tools not in the list of our regular tools, yeah, so you remember we had demos regarding open open spec, yeah, regarding to some specific tools for class team, so we have also examples.
+
+Guru Pitty   4:18
+Anything.
+
+Oleksandr Pavlovskyi   4:38
+This quote quote, yeah, so any tools and use cases that you have, and you see that you getting the good results of this use case, and I would like to share across your team and other team, yeah, that participate our conversation. So, anything to discuss?
+
+Muhammad Adnan Farooq   4:54
+Yeah, so Alexander, I just want to call out one thing, right? Not every tool, the tool which is being approved by the enterprise. So, so just want to make sure that, you know, like, you know, we are following that, like, you know, the guidelines, whatever the tools is available for the enterprise, you can only allow to use that.
+
+Oleksandr Pavlovskyi   5:02
+Yeah, yeah.
+Yeah, yeah, but yeah, of course it is the one, yeah, yeah, I know that some some specific teams has some other list of licenses, yes, some additional tools, and for them approval, we have approval, yeah, but you know.
+
+Muhammad Adnan Farooq   5:13
+And Chris is one of them.
+
+Guru Pitty   5:15
+Sounds good.
+
+Sukalya Rajendran   5:15
+Yep.
+
+Oleksandr Pavlovskyi   5:32
+As I say, sometimes talk, yeah, say that, yeah, we are talking more about the approaches, yeah, tools is just some wrap some wrap tool that use LLMs, yeah, the approach is almost the same, so that's mostly we are talking about the approaches, yeah, about the understanding how it's.
+possible to use all these AI, yeah, in a way of LLMs or maybe in the way of some ready to use solutions, yeah. But yeah, yeah, Adnan, good point. Thank you.
+Guru, but do you have some specific use case here? So, this is why you're asking me, yeah?
+
+Guru Pitty   6:17
+No, no, just one, no, we are thinking about use cases, but also the tools what we need to focus on is what I want to make sure. So CodeMe, yes, and Cursor team has access. So that's why I asked the question, so which tools others are using, yeah.
+
+Oleksandr Pavlovskyi   6:32
+Yeah, you know, maybe that's we're talking about code me, maybe maybe more focused on coding because code me give us ability to build these multi-agent workflows, which is the main topic here for the phase two. We are.
+Looking forward, when we gonna get MCP servers, yeah, approval that give us ability to use, for example, GitHub Copilot, yeah, with our regular sources, I mean, our regular tools, yeah, also tools, yeah, from a license, for example, Jira Conference, and so on, yeah.
+
+Guru Pitty   6:52
+Chez.
+
+Oleksandr Pavlovskyi   7:11
+But unfortunately, now we can use GitHub Copilot with some manual steps. Yeah, it could be paste, and yeah, build, and maybe some extracting some information from, for example, from Jira, yeah, using regular tools, or maybe...
+A role, and so on, so this is gonna be a great year when we're gonna have this T.P. server, so that's definitely extend abilities to use our approved tools, yeah, like orchestrators and so on.
+But, Kayce.
+Feel free to use anything that is approved by the organization. Yeah, you know, yeah, it's because of some security reasons.
+Alright, Sukalya, would you like to add something more?
+
+Sukalya Rajendran   8:03
+No, maybe just that last week, whatever we demoed was with EPAM CodeMe tool, the workflow orchestration, and next week it'll be GitHub Copilot, like it said, with switching tools or it makes sense for that particular use case.
+
+Oleksandr Pavlovskyi   8:17
+Yeah, yeah, yeah, yeah, GitHub Copilot is more, like I say, natural, yeah, for development. It's more useful, yeah, when you have ability to use LLM inside your ID. All right, all right.
+
+Sukalya Rajendran   8:18
+Yep.
+Yeah, yeah, the way we're doing it is we're building it, testing it in our local, and then we'll publish it in the Git management repo that is there under the Copilot org, but we're keeping it as a separate branch for now. We've not merged it into main because we thoroughly want to test it out for multiple scenarios, and then we'll merge it into the main.
+And that's what we'll showcase, yeah.
+
+Oleksandr Pavlovskyi   8:51
+Mhm.
+Okay, okay, okay. So yeah, excited, excited. All right, thank you. And the next topic from Patrick. Let me check, Patrick. Yeah, I saw Patrick today. Patrick, could you please make an introduction?
+
+Sukalya Rajendran   8:55
+Thank you.
+
+Patrick Behnke   9:10
+Yep.
+Yeah, sure. So one of the things that we're looking at is adding some custom prompts inside. Right now we're just working on our repo mainly, but being able to automate most of the Kubernetes.
+configuration within the OMFOCP type system that we have for configs for OpenShift. We currently have a suite of different prompts, instructions, however you want to say it, standards, and so on and so forth that we've.
+made. So if you need to do pretty much anything with the Kubernetes configurations and whatnot, you can just go through and prompt, hey, I need to add a secret to X, and it'll go through it, decrypt the file using our custom encryption system.
+update the secret and then re-encrypt it. Normally that's a bit annoying to do every single time, having them like find the key and do this and do that. So there's the being able to automatically add secrets. Another is to create new applications.
+You could easily just say, hey, based on our standards, create this application with this name, 3 environments, dev and prod. And ****, you have a brand new setup with everything that you need. So it goes a little bit beyond templates because you can also go through and say, well, this project has this customization that's required.
+In addition, it has some standards built in for automatically adding in required tags for deployments, auto filling those, so forth, so essentially.
+Trying to automate the full configuration stack there, so that...
+You don't have to worry about configs. You just ask, you just tell it what you want and it just does it. And it takes 5 seconds as opposed to a day to figure out configurations. And how do you look up APIs for deployment, for deployment types and config map.
+and how to customize works or how Helm works. You don't have to worry about any of that. Plus it has a automatic.
+Yeah.
+Review of the configs, so Helm and Customize both have ways to verify your configurations after an update, so before you push, you could have it do a manual review of the configuration stack that you modified, so...
+
+Oleksandr Pavlovskyi   12:07
+So, and regarding to this instruction, are you sharing this across your team as I understand, yeah?
+Or this.
+
+Patrick Behnke   12:16
+Well, it's just in our setup right now.
+
+Oleksandr Pavlovskyi   12:18
+Mhm.
+
+Patrick Behnke   12:20
+Once, once I talked with Stuart and whatnot, we could add them to any of the OCP repos that anybody would like to use. There's some customization in there that you'd have to do per repo, like being able to inject a name and so on and so forth, so...
+
+Oleksandr Pavlovskyi   12:41
+You know why I'm asking? Because now I'm working on this guide, yeah. So the idea, yeah, is to collect the best practices. This is only for engineering for now, yeah, but we're going to have the same for all tracks. Maybe regarding to some PDLC also best practices.
+Practices now, it's only initial best practices, yeah, that's regarding to what we already know, yeah, use structure prompts, keep humans in the loop, yeah, use development, and so on, but...
+That's going to be great to extend these best practices with some specific cases regarding to sharing instructions, again, to how to build the structure of your repositories. Yeah, I know you guys already do this, yeah.
+In some teams, it's more related to your project, yeah? Maybe not 100% is going to be applicable for all projects here, but some best practices regarding how to share, how to structure this, maybe to build some templates for these instructions. This is going to be great to discuss.
+So this document is just a starting point here. Tomorrow we're going to have a meeting with our EA leadership and mentors, yeah. So, and then I expect that you guys are going to work with our EA mentors, maybe.
+We're gonna use this time slot here to discard this, but it's gonna be great here to start sharing our guidelines regarding to these instructions files. Maybe somebody use skills, yeah, you know, skills, it's also very part of.
+powerful approach, yeah, that give us ability to reuse the some skills, yeah, and then build your custom agents, yeah.
+just design these agents, yeah, based on the task that you're gonna do with this agent. So, that's the thing that we're gonna discuss here in the nearest time. Right, Patrick, and regarding to your next ticket, yeah, so that's gonna be.
+be the following use case here. How do you think this is going to be good to share it in a week?
+
+Patrick Behnke   15:22
+No, I don't know if you read the chats, but this one probably won't be ready for a while.
+
+Oleksandr Pavlovskyi   15:27
+Ohh, it's not ready, yeah, so should I move to in progress?
+
+Patrick Behnke   15:32
+Sure, there's still some tweakages that are needed. It's mostly done, but I, due to current project load and whatnot, I won't be able to get back to this within the next couple of sprints.
+
+Oleksandr Pavlovskyi   15:43
+Alright, let me beer.
+Maybe is it talk about, it's 100, what when is, ohh yeah, this is the one, yeah, and alright, so I move this ticket to to in progress, yeah.
+All right.
+Okay.
+Yeah, and today we had discussion with Jason here. Jason, regarding to this curriculum, yeah, for coordinate. Could you, could you, could you please give more details regarding to this?
+
+Jason Daggs   16:19
+Mhm.
+Yeah, yeah. So what I did is, well, we started an initiative in the Guardians team to get all the team members up to speed on the AI tools that we're currently using. So I've kind of divided things into two parts.
+We're going to have a CodeMe curriculum, which is just a set, and I'll pull that up and share it with you in just a moment. But we'll have a CodeMe curriculum that we will use to, that everyone will go through, and we'll show them how to use the tool, what the different parts are, and try to
+
+Oleksandr Pavlovskyi   16:50
+Blue.
+
+Jason Daggs   17:06
+also instill some basics about how these kinds of tools work and what they can be used for. And I've also tried to encourage the team to also come up with their own use cases and to bring them up in the meetings we have so that we can discuss them together. Haven't gotten
+that far. We've only had one session, so we've got several to go. If you give me just a moment, I can pull up my curriculum.
+And I will share that with us. Just give me just one moment, please.
+
+Oleksandr Pavlovskyi   17:37
+Yeah, yeah.
+
+Jason Daggs   17:43
+Where did that go?
+S.
+Ah, here it is. Okay. And I will share this with you.
+Okay, so I created, can you see this, the Guardians AI Enablement page? Great, great. So I created this kind of just like a location where all of our team members could post topics that they think are important.
+
+Oleksandr Pavlovskyi   18:08
+Yeah, yeah.
+Yes.
+
+Jason Daggs   18:20
+Post links, and specifically, I've also posted our CodeMe training program, and essentially I've got 7 thirty-minute sessions that may change in the future. We may, you know, double up, or, you know, it may be...
+do it instead of once a week, we might do it twice a week, just to, I'm still trying to work with the team to kind of figure out what's best for everybody.
+
+Oleksandr Pavlovskyi   18:48
+Mhm.
+
+Jason Daggs   18:49
+But essentially, what we have is for each session, we have a breakdown of what we're going to go over and how much time to allot for each of those. There's a combination of just me showing them what the AI or what the UI looks like and what it does.
+And then there's also some time for them to actually explore some of the some of the things that we're looking at.
+And it also, yeah, just some, you know, basically simple exercises. And then we have the recap part. And so, and I'm not going to go over the entire curriculum. There's 7 sessions and each of these follow this basic format where we go over a particular subset of the features.
+Like the first session, we kind of went through the whole thing and clicked on every link on the left and kind of showed them, you know, and had a brief discussion about why each of those work. And then now we're going to get really deep into creating assistance, right? So we'll start.
+with things like, you know, what is an assistant and how is it related to an agent and what kinds of things it can do. And we'll actually walk through having everyone create an assistant, similar to what we've done before.
+And then, yeah, and then essentially the idea is just to go through each of the basic, each of the functions in turn in each session.
+
+Oleksandr Pavlovskyi   20:21
+Mhm.
+
+Jason Daggs   20:34
+Right, and see, for instance, I'm thinking integrations might need to be moved up a little bit rather than later, just because of its integration, just because of its need for creating assistance that can access Jira and Confluence and all of that.
+And yeah, so, and we'll eventually, you know, if you look at the multi-agent orchestration functionality and the workflow page that we have there, which I think is, I think that's really going to be a great tool for the team, especially maybe some of the members that don't code full time.
+And then, you know, again, skills, prompt engineering.
+And then finally, advanced features.
+We'll look at analytics, command line integration, AI katas.
+Um...
+Let's see, I don't think we have any JetBrains integration, so we might change that or just get rid of that section. But yeah, this gives me just kind of an idea.
+Quick reference of what we're going to be covering.
+And then I've started collecting some helpful links.
+Most of these are, I think, links that we've seen before. I also added a section for some AI related demos that either myself or others are going to be doing in future sessions.
+I kept just a list of the tickets that I currently have open. I do plan on adding some more and moving those through as well as we as we as a team discuss additional use cases. I hope that to bring those use cases to our AI enablement JIRA ticket system so that we can
+Share those with the rest of the of the company in our meetings.
+And then of course, my wish list of getting Miro access and Slack integration are there at the bottom. And again, this is for not just myself, but for our whole team in order to get us, yeah, get us.
+
+Oleksandr Pavlovskyi   23:02
+Mhm.
+
+Jason Daggs   23:12
+Get us going on the on the right path for AI.
+And yeah, that's pretty much it. I can paste this link to the chat and you know, you guys can take a look whenever you, if you think it's useful.
+
+Oleksandr Pavlovskyi   23:29
+Mhm.
+
+Jason Daggs   23:31
+And that, and I think that's pretty much it. That's what I've that's what I've done, and that's my current plan.
+
+Oleksandr Pavlovskyi   23:40
+Cool, cool. Yeah, but as I understand, yeah, this curriculum is going to be more related to your project priorities. So, for example, if you talk about some examples, yeah, that's going to be more about the Guardians team.
+Uh, scope of work, yeah, yeah.
+
+Jason Daggs   24:01
+Very, yes, very Guardians team specific, yes, yes.
+
+Oleksandr Pavlovskyi   24:05
+That's cool. That's cool, yeah. Because, yeah, it's gonna be a good workflow here in the scope of our PDLC. I mean, cross-functional PDLC. So that's gonna help you to start building these.
+
+Jason Daggs   24:06
+Yep.
+Mhm.
+
+Oleksandr Pavlovskyi   24:23
+agents workflows, yeah, and resolve some cross-functional tasks, yeah, with EI. Cool, cool.
+
+Jason Daggs   24:32
+Yeah, yeah, the idea is that we would have, like, you know, the people who work on creating Jira tickets have their kind of system that then feeds into the developers' workflow, and then finally, you know, there would be the QA team, they would get the results of that, and they would have a workflow that they would go through. That's kind of what I'm thinking.
+you know, right now, but I, you know, that's yet to be completely implemented. I want to make sure it's a team effort that we all understand what we're doing and everyone has an opportunity to give input into the process. I don't want it to just be something where I'm, you know, doing all of the, you know, setup and configuration and no one, and I'm the only one who knows.
+
+Oleksandr Pavlovskyi   24:56
+Mhm.
+
+Jason Daggs   25:19
+how it works or something. I don't want to do get that kind of situation. So yeah, definitely, definitely think it's very important to get everyone on board and educated on these tools.
+
+Oleksandr Pavlovskyi   25:30
+All right, all right, cool. So let me
+
+Jason Daggs   25:31
+Yeah, thank you.
+
+Oleksandr Pavlovskyi   25:36
+Take this screen, you're sharing. All right, so...
+Yeah, we need, we have similar, that's going to be great to combine your topic, yeah, and topic from Ravi's team, yeah, regarding to the structure of their repositories, yeah, because it's more about these guidelines, yeah, inside your team.
+some, I don't know, some focused TI adoption inside your team. And it's going to be great, yeah, great topic, yeah, to discuss these guidelines that can be shared like a best practices across all organization. So.
+Let's, let me, let me think about, yeah, I'm gonna take this offline, yeah, so I'm gonna align with Ravi's team regarding to their topic, yeah, and we gonna talk about the date, yeah, but this is gonna be great to present, maybe in a week, yeah, maybe next week, so.
+I'm going to turn back to you in the private messages. Right? Cool. Thank you, Jason.
+Yeah, and we have a topic from Deepti.
+Yeah, good morning.
+
+Deepti Pathak   27:00
+Hey, good morning. Okay, so I'll just give a small gist of my task. So basically this use case is mostly on focusing on automating the EKS upgrade governance. So mostly in the AWS area. What happens is whenever, like today when we are managing the EKS clusters, right, it's mostly manual. We have to go in, log in into the AWS console, and sometimes we have to check the add-ons and the clusters and
+the notes whether it's been upgraded or not. And then based on that, we create the Jira task and then we will be like checking, okay, this needs to be upgraded now. So this automation is mostly, we use the GitHub Copilot and this is basically solving that. So what will happen is we created a Python script that is basically dynamically going to discover all the EKS cluster which is inside our region. Then it's.
+going to check the cluster version against the AWS supported version. So you can actually, when you are upgrading it, there are two kinds of version upgrades happen. One is which AWS is suggesting you, and one is which is like totally latest. When you go for the very, very latest version of the upgrade, what happens is there could be a chance that it's not compatible, right? Or AWS hasn't suggested you to upgrade.
+
+Oleksandr Pavlovskyi   28:08
+Mhm.
+
+Deepti Pathak   28:10
+to that particular version. So there are two types of versions happen. So that this automation will also provide you that, hey, your version is like a little bit higher than what AWS has suggested. So can you just check the compatibility, whether it's working or not? And then it also evaluates like the node groups and the multiple add-ons, which is part of the EKS.
+and then it identifies whether the upgrades are required or not. If our current version is very lower than the AWS, not very, as soon as it's lower than the AWS supported version, it will create a Jira ticket and assign it to a person. So that's this task. And trying to create it in such a way that it can be used at the enterprise level because everyone.
+has AWS and they have the EKS in most of the place. So this will help them to check on it and do the mandatory action instead of like a day before, but we'll get a good amount of time to do that. So, and I also need to integrate Slack and team, which I haven't done it yet. So I'll do that.
+this one. So this is something me and Sukalya, when we are in our team, sometimes we are like working and manually we are saying, hey, Sukalya comes like, Deepti, did you do the upgrade? Did it happen? So it came into her, it was her idea that like we can we like, you know, do the upgrades or something like this using the AI since now we are working on it. So it's part of that and.
+Yeah, that that's what the demo I will be planning. I'm planning to show it.
+
+Oleksandr Pavlovskyi   29:38
+Cool, cool. Yeah, and we have a question from Chantal, and probably I know what she would like to ask, right, Chantal?
+
+Deepti Pathak   29:46
+Sure.
+
+Chantal Justamond   29:46
+Yeah. Is this going to be owned by microservices teams as well? Or is this going to give them sort of like an assessment into saying like, this is safe to upgrade?
+
+Deepti Pathak   30:02
+It, yeah, it is.
+
+Chantal Justamond   30:03
+Or is it gonna actually do it for them?
+
+Deepti Pathak   30:05
+No. So that I would love to have. So my goal will be in such a way that it should first say that these are the things, this is the version, this is the app, this is the right version, you should upgrade it. And then in idle scenario, it can go ahead and create a PR as well, right? We shouldn't deploy it, but in the lower environment, it can go and go to the fetch the GitHub and do that. But right now, our automation is just going to.
+give you the assessment, not change the code.
+
+Chantal Justamond   30:34
+Cool, cool. I think this could be super useful, especially maybe should be shared also with like Marcos and their microservices team. I think it could be super helpful for them as well.
+
+Deepti Pathak   30:50
+Joe.
+
+Oleksandr Pavlovskyi   30:51
+Yeah.
+
+Sukalya Rajendran   30:51
+Yep, that's the goal. We want this to be like in a scalable enterprise level solution, but we'll implement it on EDS and then showcase in the demos and put the code in our co-pilot repo where it's accessible for everybody.
+
+Oleksandr Pavlovskyi   31:07
+Cool, cool. Great. All right, guys, we're almost in time. So, Deepti, I'm going to also follow up to you in the chat here, regarding to the date here. So, guys, thank you all and have a great day. Happy Monday.
+
+Deepti Pathak   31:18
+Absolutely.
+Thank you.
+
+ stopped transcription

@@ -1,0 +1,536 @@
+AI Enablement ENGINEERING Lighthouse Session-20260513_145944UTC-Meeting Recording
+May 13, 2026, 2:59PM
+48m 30s
+
+Filippo Morelli   0:25
+Yes.
+
+Sukalya Rajendran   0:31
+Hey, good morning.
+
+Oleksandr Pavlovskyi   0:32
+Yeah, good morning.
+
+Filippo Morelli   0:39
+Who?
+
+Oleksandr Pavlovskyi   0:39
+Yeah.
+Alright, guys, so let's...
+Let's wait for a...
+For a couple of minutes.
+So, today we have a small change in our agenda, yeah? The use case from Bala, we gonna we will see next Wednesday, but today Sanjay prepared.
+Another one use case, yeah, regards into using the glue jobs, yeah, working with SQLs, so...
+Yeah, and Jason, how about your experiments with MCPs?
+
+Jason Daggs   1:54
+Yeah, I think I've got some code that I can show, and I think I've got a working example in Clark Code that I can show as well.
+
+Oleksandr Pavlovskyi   2:04
+Cool, cool. That's gonna be great preparation before tomorrow's late house session. I mean, PDLC session, when we're gonna talk about MCP servers. Great. So, Jason, you're gonna continue our session, but let's start probably from Sanjay.
+
+Jason Daggs   2:13
+Ohh.
+Okay, great.
+
+Oleksandr Pavlovskyi   2:24
+Yeah, Sanjay, good morning.
+
+Sanjay Parsi   2:27
+Hello, Alexander. Good morning.
+
+Oleksandr Pavlovskyi   2:30
+All right, so let me check because I see that people still joining us, yeah, so let's give one more minute and we're going to start with your demo, if you don't mind. Okay? Okay, great.
+And the second part will be about MCP servers.
+In Jason's demo.
+All right, 2 minutes, people still joining.
+All right, seems everybody is here. All right, so let's start. Sanjay, let's start from you.
+
+Sanjay Parsi   3:18
+Sure, OK, Alexander, let me share my screen.
+
+Oleksandr Pavlovskyi   3:22
+Yeah, yeah, sure.
+
+Sanjay Parsi   3:34
+US.
+I hope my screen is visible.
+
+Muhammad Adnan Farooq   3:39
+Yep, we can.
+
+Oleksandr Pavlovskyi   3:41
+Yeah.
+
+Sanjay Parsi   3:41
+Sh.
+
+Muhammad Adnan Farooq   3:42
+The.
+
+Sanjay Parsi   3:43
+Thanks, so let me just walk you through a few key points of my A task, and then we can go through the instructions part of the task.
+So this is an agent for the PR reviewer and code optimizer, mainly focused for the logics on Python, Spark, and SQL. SQL that to on the PostgreSQL and the Snowflake SQL. And so I'll just go through the business problem 1st and I'll explain why we need this.
+
+Vin Underwood   4:05
+OK.
+
+Sanjay Parsi   4:12
+So whenever we are having any pull request or PF data engineering or an ETL load process, we would be having a number of files, many number of files to review through. It might be from a focus on the syntax point of view, from code logic or on the optimizations. So when we are having, so there might be scenarios when we.
+want to focus on the performance optimizations and we might miss out on the cost part of the changes that we've done. So keeping all this in the points, we have developed this AI agent. So where it would be focusing on performance cost and also on the basic peer reviewing where it would be checking out the logic and the syntaxes that
+It will be doing, so we are already having a peer reviewer agent in the code me, so there is what's different from that is that so that code me peer reviewer agent depends on the GitHub security tokens which they we need to pass and.
+It would be based on that, it would be reviewing the PR. So the security token, as we are aware, it would be expiring in close to 45 to 60 days. So we need to update that security token. And on top of that, the existing PR reviewer in the code me has the output format. It is giving an output format in a very elaborated way.
+So it might be confusing for some of the people to go through each and every point, and they might miss out on that. So keeping these pin points in the existing peer reviewer, and also we want to optimize code when a peer reviewer is reviewing an.
+Agent.
+So, keeping all of this in mind, we have developed this agent so it can review the PR, focusing on optimization, and if I notice the PR, if you want to review any code or any existing code, it will be doing that.
+So let me just say what are all the points that this new agent would be covering. So it would be mainly focusing on these categories or these points, the logics and the security, logic and bugs, that is the general peer review that which it would be doing. So apart from that, these are all the four points that which we.
+It gave us instructions to this new PR agent, so it will be focusing on these two.
+So this is what this new agent that which we developed, it will be doing. So apart from that, we as mentioned, the output formatting of the existing PR reviewer agent that we have modified to in this agent, but since this is an GitHub data agent, we would be getting the format in the VS code.
+I'll be showing that too, so these are all the various interaction modes that it can take, the chatbot can take. So, in one agent, we can ask, we can say this, it can do this various modes if you want any PR to be reviewed, just a normal review, you can pass a command saying that review this PR.
+If not, we want a review for performance or cost, we can say that optimize for PR for performance and optimize for cost, but if in case if you want to do the both review at the entire PR and do it do a complete optimization, keeping performance and cost as priority, we can do that by passing this review and optimize and sharing that particular PR review link.
+So, as mentioned, so here is the output format that which we tested it out and it is very efficient and it keeps the points in concise about two to three lines for each and each and every issue, so it would be for each and every issue it would be saying that pointing out these things, the location category.
+What is the root cause? These things it will be pointing out, and we'll be finally having a summary too. So, since the the PR will be having many number of files and it will it need to go through each and every file, there will be many many sessions that it would be it would be giving out, so if we don't want to go through this, so we are having a summary table too, where it would be showing what what is the major.
+File that you want to look out for, so it would be it would be reviewing based on the severity, the critical, high, medium, and low, and it would be saying the what category does this particular change fall into, what is the issue, and what type of file, and what impact does it be having if this particular pull request goes like?
+
+Filippo Morelli   8:58
+Help you!
+
+Sanjay Parsi   8:58
+So, we can go through the this summary, too.
+
+Filippo Morelli   9:01
+Excuse me.
+
+Sanjay Parsi   9:05
+And apart from that, there are some instructions for the initial setup and examples to what this agent can do. So if anyone wants to try it out, please go through this conference page. This is a detailed conference page of what it will be doing. So yeah.
+Uh, let's just go into...
+So there are this constraints that which we put constraints or limitation that which we put for this agent, keeping all of our testing based on the testing that which we got. So we excluded requests for the terminals for this agent. So initially this agent was reviewing using the terminal commands. So what it was doing is that it is taking.
+
+Filippo Morelli   10:04
+Some figures.
+
+Sanjay Parsi   10:05
+Process, so because of this reason, we removed the terminal permission for this agent, and apart from that, there are some other setbacks too, so the instructions that which it was giving in the testing phases, we kept that in mind, and we have optimized more and more this agent.
+
+Jason Daggs   10:11
+Okay.
+
+Sanjay Parsi   10:25
+So, as mentioned, if anyone wants to go through the, this is a detailed conference they can go through. We can go to the agent code now.
+So yeah, this is the agent code we are having.
+So this is the basically same. I'll just walk you through.
+An audio.
+So, these are all the list of permissions, as mentioned, that it can do based on the testing that it should have done. So, we are having a terminal permission as well, but it will not be using terminal, so whatever scenarios this agent was using terminal to, we restricted that here.
+Mike.
+Show that here, so here we have mentioned a no terminal policy saying that what it cannot do for terminal access. So, apart from this, if there are there is a scenario where sometimes it need terminal access, so keeping all of this in the PR in the mind.
+So for the pull request, it will not be accessing terminal. Apart from that, if there is any change that you want, terminal access to. So for that purpose, we have kept the terminal permission. And these are the general interaction guidelines. So if in case someone is new to this agent and they don't know.
+How does this agent work? So they can just have a greeting saying that hi, or what can you do? What are the instructions that I can pass? So it will be giving examples so whenever someone has this, we can check that out too.
+So, yeah, as mentioned, this is a no terminal reviewer; it will not be doing that, and sometimes when it will be asking permissions for to execute for commands whenever it whenever it is accessing the execute command execute permission.
+So at that time, what we are doing is that instead of allowing permission for each and every command that it is executing, we are asking it to batch all of the commands that it wants to execute, so that there will be no manual needed. So once we can allow, and it would be doing the rest of the things.
+
+Filippo Morelli   12:43
+But.
+
+Sanjay Parsi   12:43
+So this is a detailed review process on each and every step.
+for a PR review. And here, this is for the performance and what it can do from a performance point of view and from the cost point of view, what this agent can do.
+And, as mentioned, the output format and the summary table that I mentioned in the conference page that we have added here, and finally it will be also giving a recommendation on the review that it done, and it will be saying what files that it that need to be changed as a mandatory action before merging or...
+What, what performance tuning that we need to do, and whether we can merge this PR or not, so these kind of recommendations it would be given based on the review, so.
+Yeah.
+So let me just ask it what?
+Can you do?
+No.
+So it will be saying this, what are its capabilities, what are the tasks that this particular agent can do, and what are the commands that which we can pass, and what is the action item that it will be doing when we pass this particular command. If I say review this sphere, the action item that it will be doing is that quality focused reviews, focusing on the bug, security logic, syntax, etc.
+So, as mentioned, if you want a PR to be reviewed from a complete end-to-end point of view, we can pass as the review and optimize; it would be doing a full comprehension review, so I'm having a PR handy. Let me just pass this.
+Maybe this, yeah.
+
+Guru Pitty   15:02
+Two.
+
+Sanjay Parsi   15:05
+So for the initial run, it would be asking permission to be run in the browser. So if by default, it would be trying to open in the browser. If from browser it is not able to access, then it would be going through the GitHub pull request extension. So if we are not having GitHub pull request extension available in the VS Code, it would be asking permission to
+Install that too.
+So, it will be doing that. So, by default, since I've been testing it out, it already choose the GitHub pull request extension tool, and it is reviewing each and every file that is present as part of the PR. So, while reviewing the PR, it initially reviews.
+the changed files or the file differences that we would be having from the preview from the existing and the new change. So it would be doing that, but if in case it is unable to understand the logic or why is this change required, so it would be going through the complete code. So for that it will be going it will be checking that complete code from the local that is from our from the VS code. So since we are.
+having that, I'm having this particular repo clone here. So it is, I think it is doing that. Yeah, it is checking whether a file is a new file. So if that file is a new file or if there is an existing file and what changes are there. And on the new changes, it is still not unable to understand why this logic is required.
+it will be going through that local files so that it will be able to understand the complete logic there.
+
+Swathy Lokula   16:47
+So, Sanjay, are we feeding the JIRA information as well? How does it know what is the exact requirement?
+
+Filippo Morelli   16:47
+Of.
+
+Sanjay Parsi   16:54
+So we are not feeding any Jira information, so we are just passing the PR. So it will be only reviewing the pull request. So what changes have we done? And if it needs any information, why this particular change is required. So for that purpose, it will be reviewing the entire.
+Code, uh, instead of the only the change, change the part.
+
+Swathy Lokula   17:21
+Okay.
+
+Sukalya Rajendran   17:22
+It's not really validating against a specific requirement, right? It's just basically comparing what was modified like a git diff and then giving a summary based on that. Is that right, Sanjay? Okay.
+
+Sanjay Parsi   17:32
+Yes, yes.
+
+Muhammad Adnan Farooq   17:32
+Yep.
+
+Swathy Lokula   17:34
+Got it, okay.
+
+Sam Jayavelan   17:34
+Um...
+If you've tried the Git Copilot right for the code reviews, for at least the first portion of the code and then the Git different stuff, how different is this?
+
+Sanjay Parsi   17:38
+Yeah.
+Yeah.
+So, the co-pilot it, so if you pass it on to the co-pilot, if you can say review this pair, it would be only reviewing the PR, and on top of that, it will not be by default, it will not be having access to login of the sign to access the gate itself. So, here what we are doing is that, since we already...
+logged into the particular repo that which we want. So because of that, it can log in with the for the GitHub extensions to it will be taking the same login.
+So, based on that, it will be able to get whatever the code changes, and top of that, as mentioned, the normal Copilot chat, it will be only reviewing from a syntax or a logic point of view, but here what we have added is that, based on the testing use case scenarios, we have said that...
+It will.
+Yeah, let me just say, yeah.
+So, yeah. So, if you say, if I want only a performance PR review, it would be doing that. But from our testing, what it is doing is that it will be, as mentioned, it will be running out a few commands, keeping the data in the local, and it would be doing that change. And on top of that,
+Not the performance change that it will do, it will be doing that which we need. First of all, I mentioned here specifically what the performance analysis that we need to do. Either it's a memory, IO, and for the technology that which we are using here. So we have given it an example saying that if there is any...
+scenario where this particular job is using this.
+Loop, and instead of that loop, you can use a join; it can do that, so these kind of examples we have been filtered out as an instructions to this agent, so based on their based on that, it would be doing.
+
+Muhammad Adnan Farooq   19:54
+So, Sam, I just want to add right that you know the difference is just the performance and the cost category. Those are the not being done in the co-pilot, and this is what we really needed. So, anything which has been deployed by my team, I just want to make sure that you know it's performance-wise the process is optimized before we deploy things.
+
+Sam Jayavelan   20:13
+Got it. So even though you're saying it's a code review, you're actually looking at some benchmarking along with it right before the release. Okay. The reason for asking is like the EPAM team did something very similar for Arlene. They created what is called the PR block radius and risk analysis for us.
+
+Muhammad Adnan Farooq   20:20
+Yes.
+
+Sanjay Parsi   20:22
+Yes.
+
+Filippo Morelli   20:22
+Quickly.
+
+Muhammad Adnan Farooq   20:22
+Yep.
+
+Sam Jayavelan   20:35
+So it analyzes the PR and it provides like the blast radius, the dependencies, and then it gives it a complexity score. So it felt like very similar synergy, but different kind of tool usage. So I was just trying to see.
+
+Filippo Morelli   20:51
+Mm.
+
+Sam Jayavelan   20:54
+Um...
+if you are recreating different things or is it just more customized for your lean? That's all.
+
+Muhammad Adnan Farooq   20:56
+Pfeil.
+Yeah, I think that the peer review is the same thing, right? But we just add additional, like an enhancement to this custom agent, so that can cover these performance and cost part as well, right? So, yeah, that's the difference, right? Does that...
+
+Sam Jayavelan   21:12
+Got it.
+
+Sanjay Parsi   21:15
+Yes, yes.
+
+Sam Jayavelan   21:15
+Got it. Yeah, thanks.
+
+Muhammad Adnan Farooq   21:17
+Go ahead, Sanjay.
+
+Sanjay Parsi   21:20
+So, yeah.
+The.
+here that I would shared with this agent. So these are all the changes that it noticed and it is asking. So if you see, it is saying it is giving the location, the category, and the problem, the size state fix that it wanted to do, and the impact that it will be having if this particular change goes like.
+So, similarly, it pointed out all of the issues. So, as mentioned, this is only keeping security logic and syntax in part of it since I gave it as only to review this PR, so not to optimize it.
+And here, as mentioned.
+So, it also gave this particular saying that there is no security or performance or cost analysis that is required here, and it has the summary table that which I mentioned if we don't want to go through each and every issue that we are having, so it will be saying here what are all the issues that which is pointed out, and.
+Here in the recommendation it would be saying, so the issue one and two should be attached before the merge.
+So, if the if you want only the critical or the priority issue that need to be looked up to, so we can directly point out to the we can directly check out these particular issues.
+And also.
+It would be giving suggestion on the Snowflake credits that it can be saved to for any Snowflake security query. I'm having a query handy. Let me just give it.
+Set, optimize this query.
+So since I mentioned to optimize this query, it will be taking priority, first priority as the performance and the second priority as the cost that we have already mentioned as an instructions to this agent. So if keeping both of them as in.
+Uh, it's loop, it will be doing that.
+So, here it gave analysis.
+So here it gave this analysis what are the changes that are required and it is saying only the performance or a cost change is only required for this. So here it is roughly giving an credit saving for any Snowflake query range that we can reduce warehouse seconds by 50 to 90 percent seconds.
+So, the warehouse for any, if there is any particular warehouse, so it would be shutting down very fast if we make these changes, so...
+Yeah, and.
+As mentioned, if I want...
+Having this glue code.
+Say it.
+Review, and.
+Nice.
+So specifically for the glue use cases, since for the glue we would be externally setting out the DB use based on the volume of the data. So keeping that also in mind, we have gave it as an instruction for this glue too. So based on the.
+logic, it would be just giving what amount of DB should be used, but if we are having the exact flow of how much amount of data that which we are getting the volume of data in higher environments or in the current environment that which you are using, if we give out the volume, then it would be suggesting what is the...
+DPUs that we can set and.
+All the external changes, like we if we need to turn on the auto resume for this tip used to.
+Yeah.
+Yeah.
+So.
+Yeah, so it has analyzed what this job is doing, and this is the best part job, and what it will be doing, what is the complete flow of the job. It writes that, it writes a single CSV to an S3, so it is just analyzing each and every line, and it will be giving out all of the changes finally, so here is the optimized file, so it changed the one.
+One, two, 3 changes.
+and what changes it has done in the summary of what are the changes.
+Yeah.
+So, since this is the same job that takes SQL query and it extracts that SQL data from the SQL query and loads it as an S3 file, so it is giving an estimated credit setting job run, but as mentioned, so I haven't fed it.
+Any instruction saying that this is the volume volume of data that I will be having, so if I give it the volume of data, so this this amount of rows and I'll be getting this one lakh amount of rows or 1 GB of data, so based on that it can change change it solution.
+
+Filippo Morelli   27:16
+Hello!
+
+Sanjay Parsi   27:28
+So, yes, that's all.
+
+Filippo Morelli   27:35
+By system.
+
+Sanjay Parsi   27:36
+Any questions?
+
+Filippo Morelli   27:38
+I think the epoxy did a pretty good.
+
+Oleksandr Pavlovskyi   27:40
+Guys, any questions?
+
+Filippo Morelli   27:43
+Mine is such a *****.
+
+Biniam Wubyeshaw   27:45
+Biniam, I just want to know, I may have missed it for, but when the PR review, right, will it write in a comment, the comment that it has in the PR review comment side or just give you here the details, what needs to be updated?
+
+Sanjay Parsi   27:56
+Yeah.
+
+Filippo Morelli   28:02
+Yeah.
+So.
+So, I think.
+
+Sanjay Parsi   28:06
+It will be checking the difference, the different section of the PR review, not the comments part.
+
+Biniam Wubyeshaw   28:12
+Okay.
+It just give you all the details in here, but it will not update in the peer review.
+
+Sam Jayavelan   28:15
+Yeah.
+
+Sanjay Parsi   28:19
+Yes, it will. It will not update. It will just give us a session as in here.
+
+Biniam Wubyeshaw   28:21
+Yep.
+
+Filippo Morelli   28:24
+Build these kinds of.
+Yeah, I'm doing.
+
+Oleksandr Pavlovskyi   28:33
+Cool, cool. Great use case, Sanjay. Could you please also post links to your conference page here?
+
+Filippo Morelli   28:38
+Issue.
+
+Sanjay Parsi   28:41
+Sure, I'll do that, yeah.
+
+Filippo Morelli   28:42
+Support.
+
+Oleksandr Pavlovskyi   28:42
+And, as for this agent, is it is it also this is I mean this instructions are they available somewhere in the public repository maybe or something like that?
+If somebody.
+
+Filippo Morelli   28:57
+The certain.
+
+Sanjay Parsi   28:57
+Yes, it is it is available in one of the repo I can share that link to here.
+
+Filippo Morelli   29:02
+Couple of instruments that I had built.
+
+Oleksandr Pavlovskyi   29:03
+All right, great, great. So thank you guys. If you're going to have any questions to Sanjay, yeah, you can use our chat or maybe reach him directly in the charts. And let's move on. Jason, how about MCP servers? How about...
+
+Filippo Morelli   29:16
+Play.
+Develop.
+Yeah.
+
+Jason Daggs   29:22
+Oh, okay. Yeah, great, great. Thank you. Let me share my screen.
+
+Oleksandr Pavlovskyi   29:22
+This topic.
+
+Filippo Morelli   29:24
+What?
+Have awareness.
+But I'm still figuring some things out as I go.
+
+Jason Daggs   29:37
+Hello, are you?
+
+Oleksandr Pavlovskyi   29:38
+See.
+
+Jason Daggs   29:40
+Filippo, I think he's, I think he...
+
+Oleksandr Pavlovskyi   29:44
+It was not for us. Yeah, let me.
+
+Jason Daggs   29:44
+Ohh.
+Yeah, okay.
+Let's see. Okay. Well, thank you. And let me kind of give you a brief overview of what we're going to talk about today. The model context protocol.
+And essentially, it's really the easiest way to think about it is that this is a tool to use when you want your agent to communicate with an already existing external system. As we've seen with CodeMe, there are...
+A variety of tools you can use to accomplish that, but sometimes you need something a little bit different to handle more complex cases or interactions with more complex systems or, you know, custom systems that...
+for which there's not already an existing tool to use. And so Model Context Protocol was invented as a, or developed, I should say, as a way to, a standard way for agents to interface with those internal, external systems.
+And so, real quick, let me see if I...
+Yeah, let me just, okay, I'm posting a link to model context protocol homepage, and here you'll find all of the documentation.
+that goes over what MCP is in great detail, gives you some examples of clients and servers. And so yeah, it's kind of the site for model context protocol data information. And so
+What I'm going to do is kind of go over how MCP servers get integrated into something like, let's just say, clod code. And then we'll actually look at some source code, and then we'll actually use
+Arya.
+The MCP server.
+So...
+C code, that's alias for Cloud Code for me. MCP help, and this is going to spit out how Cloud Code allows you to integrate various MCP services. Give you some example. Can everyone see this?
+Thought all right, or yeah, if anyone needs to increase it, just let me know.
+S.
+
+Oleksandr Pavlovskyi   32:43
+Yes, yeah.
+
+Jason Daggs   32:43
+And.
+
+Oleksandr Pavlovskyi   32:45
+For me, it looks good, yeah, but I have white screen, yeah, so if...
+
+Jason Daggs   32:49
+Yeah, yeah, yeah, yeah. If anyone has trouble seeing it, let me know.
+All right, so.
+So yeah, adding a model context protocol server is pretty simple because, well, because Claude knows how to communicate with those servers. It knows what to do to get information about those servers, which we'll go into shortly.
+But there's a variety, there's a couple of different ways that Clark can interact with these servers. They can be just a standard IO server, and what that means is that it can treat the
+MCP server like it's just another command line program and call it passing in the data it needs to interact with that server. So, and that's kind of a, that's a little bit different than just having a, like a standalone HTTP server.
+But Clarke can also communicate with those MCP HTTP servers as well.
+And so, Clark Code has, you know, built in a set of tools.
+for interacting with these MPC servers. And so I've already set one up for us, and this is the one we're going to go into more in depth today, called Jira Tracker.
+And really, it's just a simple shortcut for authenticating with JIRA and getting information about issues, and
+And yeah, we'll go into that in more depth now. So just real quick, to maybe try to tie this in to from the client to the server side.
+Here is an implementation of an MCP server.
+Using Python and a library called Fast MC.
+And just a word about how you go about developing. It's actually pretty easy to tell your coding agent to build you an MCP server for a particular purpose. And then, you know, if you use something like spec-driven development, you can then easily control what
+You want it to do and how you want it to do it, and things like that. And so, yeah, it's actually pretty simple when you look at developing one of these from that point of view, but in this case, we're using the Fast MCP library, and then we expose just a...
+A set of tools, which, in this case, are just...
+The methods that the MCP server exposes to the client, that the client can then call and get a response and display that response. So like, for instance, we have this MCP.tool decoration, and that's decorating the get JIRA tool.
+Ticket method, and so the MCP client, any MCP capable client, will be able to see, "Oh, here's a tool I can use on this MCP server to accomplish a task," and so that's how you set it up. It's pretty simple, really.
+And same with these other.
+pools that we see here. Get active spring issues. You know, that's one that I specifically asked it to build in order to just, you know, always check to see what's on my to-do list in Jira, more or less.
+Sprint info.
+search Jira issues where you can pass in the JQL query and get back a list of issues. And then we have the get my open issues. Slight difference between the active, but yeah, nevertheless,
+There, and then we have this MCP resource, which is another part of the model context protocol. I won't go into it too much, but suffice it to say, you can see really all it does is give you some basic information about a particular.
+Project key.
+And then the standard kind of, you know, startup routine for any Java or any Python application. My goodness, I'm mixing up my language just now.
+Very simple. And again, you choose one of HTTP or STDIO, standard input output, and boom, simple as that. These aren't too, the actual structure of the MCP server doesn't have to be that complex.
+You know, using these kinds of tools, it's just so simple to create one, and one of the another thing I just wanted to show.
+Is the.
+class that implements the actual calls to Jira. And just to kind of complete the implementation side of things, here we're just getting the authentication board information and project key.
+We're just getting it from the environment.
+And that's how we're authenticating with JIRA, and then we just have a set of methods that just make those REST calls using the JIRA API. And I know that in previous sessions we demonstrated, or it was demonstrated, how to...
+Acquire an API key for accessing the JIRA API, and so that's what I've done for this application, and you just see again this is the implementation of the actual REST calls itself, so again, not.
+too complex, but you can see there's a clear separation between the scaffolding for the MCP server and the actual logic for the task that you want to create.
+Okay.
+So...
+I don't want to get too much in depth on the code side. Now let's go and see if we can see if we can actually run a live demo.
+So, when you start Cloud Code, there's going to be a command for managing your MPC servers inside of Cloud Code. Here, it gives you a list of the MCP servers you're using.
+And you can select one.
+And then you can, you know, disable it, reconnect, and then view tools. So, we're going to view the tools.
+And as you can see, it is found those tools that we decorated in our Python MCP server. Get Jira ticket, get active Sprint issues, get my open issues, etcetera, etcetera. Now, how do we, you know, how do we how do we use these things?
+It's actually.
+Pretty simple. Oops, hang on a second. Get my open issues. All right.
+Yet, I open issues.
+Alright, it's figuring it out.
+Here are your 35 open JIRA issues group by status.
+There it is. It just kind of, you know, it just knows how to, it knows how to use this stuff.
+And so now it knows, yeah, now it knows JIRA. And let's see, what was the other one get? Was it my active issues?
+I think so.
+Let's see. Okay, yeah, it does ask for permission here. Interesting.
+Great, great. In progress, issues and issues that are in the backlog.
+A and.
+Yeah, it will give you a little bit of information about what about this sprint, right? And that's just something that is done just magically by Claude Code itself.
+All right, oh, look at this. Yep, see, gives to the sprint information. Yeah, just everything you need to know about your GIRI issues are here.
+So really, that's, I mean, that's all there is to MCP servers. They're just a really neat way of interacting with other systems. And yeah, I think that it's just, you know, it's just really simple to implement one.
+Yourself, so...
+Are there any questions?
+
+Haris Khan   43:16
+Yeah, I do have a question. Yes. So the tools that you showed us like a while back, so you use Cloud to create those tools like individual tools?
+
+Oleksandr Pavlovskyi   43:16
+Yes, yeah.
+
+Jason Daggs   43:16
+Perfect. Oh, yes, go ahead.
+Uh...
+
+Haris Khan   43:28
+Plots help.
+
+Jason Daggs   43:30
+Yeah, yeah, of course. I just went in and said, hey, build me an MCP server.
+
+Guru Pitty   43:34
+Yeah.
+
+Jason Daggs   43:36
+that can interface with Jira that will let me see all my open issues. And then I just told it to build this, and this is what I built.
+And then after, you know.
+Looking through it, making sure it's not deleting all the all the issues in the JIRA database. Yeah, started it up, hooked it up to clod code using one of the, let's see, clod code commands. Let's see.
+Oh, here we go. Yeah, like something like, uh, like this.
+Actually, yeah.
+Yeah, one, you know, and that's, and then there's, you know, commands for removing. Oh, you can also.
+Yeah, you know, I think I already showed you this, but yeah, you can list.
+Yeah, you can list the list of MCP servers that the cloud code knows about.
+Yeah.
+
+Haris Khan   44:56
+Yeah, I think that's really cool. I mean, it's important to do the right tools, you know, because it stops your AI agent to run wandering around, you know, and you could pinpoint it to the right direction using the correct tools. So that's really cool.
+
+Jason Daggs   45:10
+Yeah, exactly, exactly. And I know we here have a lot of different...
+different services that are exposed using a variety of different technologies, some of which may be difficult to interface with using something like a skill or, you know, or a plugin. So yeah, this MCP kind of kind of provides that
+that glue, if you will, between Cloud Code and these other services. And it doesn't have to be another service, it could just be some tool that you need to run that you want the Cloud Code to know about. Now.
+One other thing I just wanted to say, I'm sure that MTP MCP servers are supported by Copilot. I haven't actually installed this MCP server in Copilot yet, but that will be, you know, maybe something I can do in the future.
+But it should be simple, a trivial operation if you've used GitHub Copilot anyway.
+All right. Any other questions?
+
+Haris Khan   46:26
+Oh.
+
+Jason Daggs   46:31
+All right, guys, well.
+
+Oleksandr Pavlovskyi   46:33
+Yeah, yeah, thank you, Jason. Yeah, and I would like you to join us tomorrow. Yeah, so if you're going to have ability also to do a short demo tomorrow for our PDS audience, yeah, and tomorrow we're going to talk more about how to configure more MCP servers with GitHub compiler.
+
+Jason Daggs   46:34
+Thank you very much. Yeah.
+
+Oleksandr Pavlovskyi   46:55
+Yeah, so I'm going to prepare similar demo like Jason did today, yeah, and we're going to have ability in a more wider audience once again to talk about MCP servers. So guys, feel free to share your experiences, yeah, and great example, Jason, once again, and don't forget that you can wipe code your MCP server.
+So if you have some third party service that you want to use with your LLM, you can wipe code your MCP server. So if you have ability to use API, that means that you can develop MCP server. I have tried when the MCP servers was restricted for us. Yeah, I have tried to.
+A web code and CP server for Atlassian tools, and for me, it was taken I guess 15 minutes, not more. Yeah, so don't forget about the web coding. Yeah, it's today it's more easier to develop.
+to web code your application instead of waiting, I don't know, from the solution of some third-party service. Cool, great demos, guys, once again, and see you tomorrow. Have a great day.
+Bye, guys.
+
+Amit Sharma   48:29
+Thank you.
+
+ stopped transcription

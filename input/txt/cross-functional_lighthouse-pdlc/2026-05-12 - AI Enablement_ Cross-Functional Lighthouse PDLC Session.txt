@@ -1,0 +1,754 @@
+AI Enablement Cross-Functional Lighthouse PDLC Session-20260512_140019UTC-Meeting Recording
+May 12, 2026, 2:00PM
+1h 0m 11s
+
+Akash Gupta   0:04
+The link is pretty good, only one or it's.
+
+Eugene Semenyuk   0:14
+Hello!
+Good morning.
+
+Svetlana Stogni   0:25
+Hello, everyone.
+Okay.
+
+Eugene Semenyuk   0:35
+Let's wait a couple of minutes.
+For more folks?
+To join us.
+He.
+Okay, let's wait one more minute.
+And we'll start.
+
+Oleksandr Pavlovskyi   2:43
+Morning guys.
+
+Eugene Semenyuk   2:45
+Good morning.
+So, I think we can start.
+
+Oleksandr Pavlovskyi   2:50
+It.
+
+Eugene Semenyuk   2:54
+So, hi everyone, good morning and welcome back. Before we jump in, let me quickly connect us to where we left off last time. So, in the previous session, we started building the foundation for an automated requirements review flow in Jira.
+So, we created the trigger condition, so the flow only runs for the right story, connected the first agent in this flow, and confirmed that the agent response can be posted back in the Jira as a comment.
+So, let me share my screen.
+So, here it is, here it is.
+
+Nayeem Annavaram   3:48
+Thank you.
+
+Eugene Semenyuk   3:50
+Our flow that we have built, so yeah, here is our trigger agent and comment that we.
+Uh...
+that we added for this particular flow. So today we are going to continue from that point and make the flow more cross-functional. So the goal is not just to run one agent, the goal is to simulate a real requirements hunting process where the story is reviewed from
+multiple perspectives before it considered ready for development. So we will expand the flow with QA and engineering agents, collect their feedback, and then use a final summarization step to produce a consolidated recommendation. And yeah,
+By the end of today's session, the flow should be closer to something we could actually use in delivery process. So a story moves forward, agent reviews, review it, agents, yeah, multiple of agents review. This user story commands either automatically and
+Yeah, and even based on the decision, item can be moved to some state or send a message to specific people. Yeah, and the team gets a clearer answer on whether the story is ready, needs refinement, or has a risk.
+That should be addressed. So yeah, as before, this is a hands-on session, so please follow along if you have access. So don't worry if something does not work perfectly. So these sessions are meant for learning, debugging, and experimenting together.
+So if you get stuck, raise your hand or drop a note in the chat. So we'll try help as we go. So yeah.
+If you lost previous session and did implement such flow, so you can.
+You can clone existing existing automation rule.
+Yeah, and continue with us, and later you can rewatch previous previous recording with details like how to build this workflow. Yeah, so you can find
+Yeah, you can just open Jira Automation. So yeah, let me send a link.
+So yeah, in the chat you have a link to Jira automation for our sandbox project. So you can just click copy for my requirements review flow. Yeah, and it should create
+A clone for this automation, yeah, and you just need to change.
+This condition.
+Like, change my name to your name.
+So, yeah, but I, I suppose the majority of you...
+Have have your own flows.
+So, we can continue.
+So, we can continue expanding this flow with the...
+with other agents.
+So, yeah, let's start by quickly, yeah, reviewing the flow we already created, and then we'll add the QA review.
+Stop.
+So, let me open.
+Let me open my...
+Agent.
+In flow.
+So yeah, let's revise what we have. So we have a trigger. So if work item.
+Moved from to do to in progress state, so this even triggers this this flow, yeah, and if...
+And one more condition, if reporter, a specific user. So in this case, it is me.
+So yeah, if user story and even match these conditions.
+It proceeds next with agent execution. So we started with a digital story review.
+And.
+After that...
+So, we we store.
+The agent response in the particular variable, and add these.
+Response from the agent as a comment to Jira item.
+So, then we can...
+We can do the same for QA part.
+So yeah, the next step is QA review. So this is important because even if a story looks good from business perspective, QA may still find some gaps in testability, acceptance criteria, data conditions, edge cases, or some validation rules.
+So, we'll add a QA agent to review the same story, capture QA perspective, and then post that response back as another comment for work item. So, how to do this? So, let's click add step button.
+Select Action.
+Use agent.
+Yeah.
+So, yeah, and the...
+I have already prepared.
+Agent.
+Yeah, this one.
+test analysis without context. So yeah, for this use case, yeah, let's don't overcomplicate. So yeah, we'll use this particular agent, yeah, but for your production flows, so you can use this agent as a baseline or you can clone this agent and
+Adopt this agent for your needs, or yeah, if you already have your own.
+testability analysis agent, you can use your own agent. Yeah, but for this learning session, I recommend you to use.
+This, this agent.
+So yeah, we need to provide a simple prompt, like review this user story.
+And then we can click on Next.
+Yeah, next we need to select.
+One more action, yeah, and ohh, no, no, no, we don't need, we don't need agent.
+Yeah, we need one more command and work item node.
+Action.
+Comment on work item.
+Yeah, and use.
+The swearable.
+Agent response, and just do this.
+OK, we can update.
+And now we have, now we have a simple flow.
+
+Swathy Lokula   12:14
+So, sorry, Eugene, add comment on work item and then can we go back to that step? It was a bit fast.
+
+Eugene Semenyuk   12:20
+Yeah, yeah, sure, sure. Yeah, we need to, in the comment section, we need to add an agent response variable.
+
+Swathy Lokula   12:30
+from the previous one.
+
+Eugene Semenyuk   12:30
+So you can, yeah, from the previous one. Yeah, actually, actually, it used the same, the same variable, like agent response, agent response. Yeah, but looks like it overrides this variable. So like this agent overrides this variable.
+So, yeah, and yeah, in this.
+on this tab, so we use the latest agent response.
+
+Swathy Lokula   13:01
+Thank you.
+
+Eugene Semenyuk   13:03
+Two.
+Okay, we can...
+We can update our flow and we can open our work.
+
+Jurijs Markelovs   13:10
+So, is there?
+I'm sorry, is there a need to rename the variable names based on the step? Is it?
+Or we all, because we always all write, and or for this straightforward, we don't need that.
+
+Eugene Semenyuk   13:23
+Ahh.
+Mm-hmm.
+Yeah, for this straightforward follow, we don't need that. Yeah, but this is a good point. So if you need to reuse agent response in some other nodes, so we can utilize
+Stop, like, create variable.
+So, and we can please...
+We can add a variable and place this agent response here. So for example, yeah, we can use
+We can move.
+It here, and...
+Do something like this.
+So yeah, using this step, we create variable with name digital review.
+and add the agent response.
+from this agent. So yeah, important note that yeah, if you would like to store agent response, so you should execute this create variable right after the agent.
+So, because if you if you execute this create variable after after task analyst, so it will remember only task analyst value, because this agent will override.
+Agent response.
+So yeah, but in our flow, we don't need this complex stuff because we, yeah, we leave all the responses as a comments. Yeah, and then in the end, we will analyze all the comments.
+So yeah, but for more complex flows, so yeah, you can use create variable and...
+And use this value in this variable.
+Ohh.
+Yeah, in any scenario that we would like to implement here, and many, many times in different, I mean, in different flows, in different stages of your...
+of your workflow.
+
+Jurijs Markelovs   16:15
+Eugene, could you quickly repeat how did you add the step create variable to existing?
+
+Eugene Semenyuk   16:15
+Sumi.
+Yeah.
+So this is just regular step, regular action. So yeah, add step.
+
+Jurijs Markelovs   16:25
+Yeah, yeah, I understand, but how did you add it between use agent and add comment?
+
+Eugene Semenyuk   16:30
+Oh, it's druggable.
+
+Jurijs Markelovs   16:33
+Or you can just drag it. Okay. Thank you.
+
+Eugene Semenyuk   16:33
+So, yeah, yeah, yeah, each each node for draggable, so you can drag it between.
+Something like that, so yeah, but for this particular workflow, we don't need this.
+So, we just need a...
+Use agent, then add a comment to work item with agent response, then use agent. Use another agent and add comment to work item. Actually, you can just duplicate this node and drag it after.
+after this agent.
+So, okay, I guess we are ready for testing.
+Mhm.
+So, yeah, I see a question, yeah, regarding documents with these instructions. So, yeah, I prepared some instructions and for some of the steps. I will post it a bit later. Yeah, but after the session,
+I will create a detailed guide.
+how to create this flow from scratch.
+
+Jatin Bagga   18:11
+That sounds good. Thank you.
+
+Eugene Semenyuk   18:14
+Awesome.
+So, okay.
+Let's come back to our JIRA item. So yeah, for testing your flow, yeah, please.
+Keep in mind that reporter should be you. So you can use my item.
+So, I can share it with you.
+But please do not change it.
+So, you can just use it as a reference, and oh, I clicked the Rozo.
+I don't need robot, so you can just clone this work item.
+And please make sure that reporter is you, not me.
+OK, and one more step.
+Let's remove all the comments.
+To make everything smooth.
+Have some test cases here.
+Yeah, for now we don't need those cases.
+Mmh.
+Okay, to trigger our workflow, we need to move our work item from to do to in progress state. So let's move it to in to do, then to in progress.
+Then we can open audit log.
+So yeah, I recommend you to have two tabs opened. So the first tab with your flow and the second one more automation tab.
+So, you can just right-click and open in new tab and open.
+I want you talk.
+Yeah, and in search, you can...
+Type your name.
+Or name of your.
+Of your workflow.
+Yeah, and here in the progress you can see your workflow status.
+So, for my is waiting.
+Okay, let's wait a bit.
+Yeah, I see a bunch of no actions performed. Yeah, that's okay because you executed.
+I mean, you changed status for your items, so my workflow triggered, but...
+As I am not a reporter for your item, so it.
+Didn't perform.
+Any actions?
+for your work items.
+It's still waiting.
+Ohh.
+Oh.
+They are last week. So yeah, we can remove them.
+Too many test cases.
+Yeah.
+I can see.
+I can see two new comments.
+So yeah, the first one, testability analysis. So yeah, it says that this user story is not testable. Yeah, and some testability issues.
+Yeah, from from Business and Digital Review.
+It's approved with recommendations.
+Okay, we have...
+We have the business and digital review and the QA review captured in the ticket. So now will be maybe the most interesting part, because we will
+We will integrate engineering.
+Review.
+Yeah, but first let me remove all the comments because...
+We don't need them.
+Too many test cases from last week.
+
+Sanjay Kumar Parui   24:26
+Yeah.
+So I got an error, some error, it says.
+Lauded log and it tells me that error adding the comments the enter text too long.
+
+Eugene Semenyuk   24:49
+Mm-hmm.
+
+Sanjay Kumar Parui   24:56
+It's exceed the allowed commit.
+
+Eugene Semenyuk   24:56
+Whoa.
+
+Sanjay Kumar Parui   25:00
+The 30,000, 32,767 characters.
+
+Eugene Semenyuk   25:05
+That's interesting. So yeah, it looks like.
+They have some limits.
+On this.
+Oh yeah. And as usual, I recommend you to uncheck this.
+
+Sanjay Kumar Parui   25:21
+Oh yeah, probably missed that.
+
+Eugene Semenyuk   25:22
+Prevent duplicates.
+Yeah, but...
+Yeah, this is quite interesting behavior, yeah, and frankly speaking, we can, yeah, if if we will.
+have such error on regular base, we can create some kind of error handling. So we can split a comment, like we can split big comment into few comments.
+
+Sanjay Kumar Parui   25:53
+Mhm.
+
+Eugene Semenyuk   25:53
+Yeah, but yeah, I guess.
+Yeah, that's interesting.
+OK, let's test it a few times, so yeah, if you will have such error, so yeah, we can we can think about error handling.
+Yeah, but this, that's a good point.
+
+Sanjay Kumar Parui   26:14
+Mhm.
+
+Eugene Semenyuk   26:14
+Because, actually, actually, I haven't faced faced such such issue before. My comments are not so so big, looks like.
+
+Sanjay Kumar Parui   26:22
+In.
+
+Eugene Semenyuk   26:28
+Okay.
+So the next perspective we want to add is engineering. So yeah, this review should help us understand whether the story is technically feasible, so what areas of system may be impacted, and whether there are implementation risks
+or missing technical details. So this is where the flow becomes more useful for delivery teams because we are no longer.
+Any asking is the requirements clear? We are also asking, can we build it? What might it affect? And what should engineering know before development start?
+So, and yeah, let me explain what we will have next. So yeah, for.
+For engineering review, we need some agent that will have access to your repositories, code bases, and so on.
+So, for this purpose, we will use called me agent.
+And I've already created the agent, so, and it should be available.
+It should be available in.
+Training project.
+So, you can open...
+You can open CodeMe. Let me share the link.
+to music.
+And.
+And.
+Here is a link to the agent.
+So you can open code me, go to assistance, select.
+Training project and find technical feasibility agent.
+So yeah, or you can just follow the last link. So it should open this particular agent.
+So yeah, let's see what we have in this agent. So we have a system instruction that tells us what repository we have, how we should treat with this repository, and so on.
+So yeah, and let me remind you about our user story.
+So we have a user story cloned from.
+Service, self-service in touch point project, so yeah, it is the account user story, so I already prepared.
+I've already prepared a data source.
+to with this.
+with this GitHub repository that belongs to this project. So, yeah, and we have...
+JIRA connection. So yeah, for this particular workshop, so let's use.
+this particular agent with this data source for this user story. So later we can dive deeper to things like how to configure data sources with your particular repositories,
+how to index them, how to...
+how to re-index, what strategies. So yeah, but let's keep it for later topics. So yeah, we have this agent that can review technical feasibility for implementation user stories for this particular BFF.
+Current loans project.
+So, yeah, this this agent works with this code base and also can do some can does some operations in in Jira.
+So yeah, and...
+
+Svetlana Stogni   31:00
+You do have some questions.
+
+Eugene Semenyuk   31:03
+Yeah, sure.
+
+Jurijs Markelovs   31:05
+Yeah, yeah, maybe it's going too fast, but do we need for this particular agent to be able to be to be able to be integrated?
+into the automation. Does it require some kind of a conversation starters? Or it can be used without it as well.
+
+Eugene Semenyuk   31:22
+Oh.
+It can be used without, yeah, but yeah, we would like to dive deeper into this topic right now, because yeah, now our goal will be to add this particular assistant into our Jira automation flow.
+Because, yeah, it is not role agent, so it is agent from some.
+Of the system.
+Like, called me, and uh, yeah, now we will set up.
+the integration between these systems.
+So...
+Yeah, and now we will create a web hook in Code Me and allow Jira automation.
+To send the request to our Cognit agent, so...
+Here is a link to the instruction.
+So yeah, you don't need to open it right now. So yeah, but it can help. It can help you a bit later. Yeah, if you will have some.
+Yes, some issues with configurations and so on. So, OK.
+Let's create the integration between Jira and CodeMe.
+Not Jira, Jira automation and code me. So we need to create a new integration, new webhook.
+So yeah, for web hooks, we should use project integration type. So yeah, I've already created some web hook that we can reuse. Yeah, but now I'm going to create it from
+
+Saeyed Shamlou   33:25
+Yeah.
+
+Eugene Semenyuk   33:30
+from scratch. Yeah, and to create a new webhook, you need to have admin permissions. So let me find a message.
+Like how to request admin permissions.
+Okay, I see it.
+Yeah.
+Here is.
+How to get admin?
+Access.
+In training.
+Project.
+For code.
+Mhm.
+So, yeah, for those who don't have who don't have right now the integration, I mean the the project integration in in this list, so yeah, don't worry, you can use you can use my webhook that I will create.
+So, yeah, but later, once you get once you get admin permissions for this project, you can do it by yourself and create your own your own webhook by this instruction that I've sent above, or the full end-to-end instruction that I will prepare.
+Really soon.
+So yeah, if you don't have permissions right now, so yeah, please use the instruction that Nikita provided a bit earlier. So yeah, I've quoted her message. So yeah, you can just click on your message and
+request.
+admin access for this project. So yeah, but for now, don't worry, you can reuse my webhook and after the session, once you get the admin permissions, you can do your own webhook. And in case of any issues, so yeah, you can connect with me or use our office hours slot.
+on Friday.
+So yeah, let's do it. Let's click Create Project Integration.
+
+Sanjay Kumar Parui   36:14
+So.
+
+Eugene Semenyuk   36:22
+Let's select our training.
+project. In credentials type we should select webhook.
+In alias link.
+Review.
+What a beer, something like this.
+
+Swathy Lokula   36:48
+Can we try this under user integration? Does it have to be in project integration?
+
+Eugene Semenyuk   36:49
+Mhm.
+Not sure if it will work under the user integration.
+Because.
+Dee.
+I suppose this webhook works with the...
+particular project agents.
+So, yeah, and if you create a user integration, so it won't be able to see to see your agents.
+
+Gayathri Venkataraman   37:23
+But I don't see project integration. All I'm saying is just the user integration.
+
+Eugene Semenyuk   37:23
+Sudhir.
+Yeah, that's okay for now because yeah, you don't have admin permissions. So yeah, please follow the last message and request admin permissions.
+Yeah, and yeah, for now you can just wait for my webhook. I will create, and you can use my webhook in your GR automation flow. Yeah, and once you get your admin permissions for this project, you can create your own webhook and replace.
+Uh, replace my webhook with your with yours, yeah.
+So yeah, for those who have...
+So, yeah, let's use it like this.
+And let's let's add names for alias. Yeah, for example, for my, I will add.
+Direct review, Eugene.
+Yeah, and uh, yeah, I will use the same, yeah, then we need to set up webhook ID.
+Mhm.
+It should be like this.
+Yeah, then let's select.
+Is enabled, yeah, and now important step we need to, we need to.
+We need to specify secure header name and secure header value to check. It will prevent unsecured access to these agents. So yeah, because we will provide some header like
+Uh, like password and the value for this password.
+Yeah, for example.
+We can use some custom header, like...
+It's secure, yeah, and use some some password.
+So yeah, for our training purpose, we can use something simple.
+Password 123, yeah, but for production, so yeah, please use.
+something more strong.
+Okay, then.
+We need to select what particular?
+Uh, resource type, what particular?
+Assistant or workflow or data source will be triggered by this webhook.
+So in our case, it will be our requirements visibility assistant.
+So, we select this.
+And, ohh, sorry, too fast.
+Yeah, system, and then we need to provide resource ID. So this is ID of our assistant. So yeah, let me show you how to find this ID.
+Do, do, do, let's go to Assistance.
+Technical.
+This be, let's see, assistant.
+And here is.
+our assistant IT.
+So you can just click copy.
+Or copy from URL, and then...
+Paste your ID here.
+So, yeah.
+With this settings, so yeah, the webhook, so if we send Paul sent, if we send some HTTP request to this webhook, it will trigger this.
+Agent.
+So, let's let's save it.
+Mmh.
+Yeah, and here.
+Here we can see my Betsworth created.
+Yeah, one more important important thing, like how to how to get the URL for your webhook, so you can see.
+You can see this full URL, yeah, but unfortunately.
+Unfortunately, it is not correct.
+So, let me...
+Let me show you the...
+Right pattern and the right URL.
+Yeah, here is the guides that I've sent recently.
+Dun, Dunn, Dunn.
+Yeah, here is the pattern.
+Like, let me send in the chat.
+So yeah, look.
+Yeah, the URL, a bit different, I mean.
+The domain.
+So yeah, and now let me send you.
+my particular webhook that I've just created.
+No.
+Review.
+Ohh.
+Yeah, you already remember. Yeah, but...
+Looks like you have user access.
+So, yeah, it's regarding your message. Yes, see, you have prod acquisition growth user.
+But you should request something like training and admin.
+Permissions.
+Okay, let's go back to our flow.
+
+Swathy Lokula   44:40
+Eugene, mine comes as verifying link and doesn't show the webhook.
+
+Eugene Semenyuk   44:42
+Mhm.
+
+Swathy Lokula   44:49
+I don't know if everyone else can open it.
+
+Eugene Semenyuk   44:50
+Ohh.
+
+Sanjay Kumar Parui   44:52
+You, you admin something?
+
+Eugene Semenyuk   44:54
+Yeah, you don't need to do you need to open it, so yeah, you just need to copy, copy and paste it a bit later.
+
+Swathy Lokula   44:54
+I am not.
+
+Eugene Semenyuk   45:05
+Yeah, let me, so yeah, for now you don't need to open these webhooks, so I will.
+
+Swathy Lokula   45:05
+And.
+
+Eugene Semenyuk   45:11
+I will show you how to configure it. So yeah, but for now, let me double check.
+
+Swathy Lokula   45:16
+Hurt.
+
+Eugene Semenyuk   45:19
+The right way, how I've created it. Yeah, I see.
+So yeah, next step will be adding one more node for our workflow. So yeah, let's come back to our workflow.
+And add new action.
+It will be web sent web request.
+And here we need our URL.
+
+Saeyed Shamlou   45:54
+And.
+
+Eugene Semenyuk   45:56
+Our URL for the webhook.
+Here it is.
+with your ID. So yeah, if you created your own webhook, so yeah, please.
+Yeah, make sure that this ID is correct.
+
+Saeyed Shamlou   46:21
+Help me.
+
+Eugene Semenyuk   46:23
+So yeah, or you can just use my webhook.
+That should be fine.
+
+Sanjay Kumar Parui   46:29
+Yeah.
+You sent 2 webbooks there.
+
+Eugene Semenyuk   46:34
+Yeah, the first one is just pattern, like, yeah, like webhook ID. Yeah, and the second one is actual webhook that I've just created.
+
+Sanjay Kumar Parui   46:37
+Oh, I see. Okay.
+Kai.
+
+Eugene Semenyuk   46:47
+Yeah.
+Yeah, let's select.
+
+Swathy Lokula   46:52
+So after the add comment, send webhook request that comes in the action.
+
+Eugene Semenyuk   46:53
+Is your data?
+Yeah, yeah, send that request. It should be inside actions.
+
+Swathy Lokula   47:00
+Okay.
+Send web request, OK.
+
+Eugene Semenyuk   47:03
+Like gliss black.
+Action.
+And send that request.
+
+Swathy Lokula   47:13
+Thank you.
+
+Eugene Semenyuk   47:14
+Yeah, then in URL you can add my webhook or your webhook.
+
+Swathy Lokula   47:33
+What should be the web request body?
+
+Eugene Semenyuk   47:37
+Yeah, in body, let's select issue data automation format.
+Yeah, and in here, in the header, we should set up our credentials.
+like X secure and our password.
+So, for my web home, we have such credentials.
+
+Jurijs Markelovs   48:11
+Eugene, could you share the ID of the web request URL, if you don't mind, for the copy-paste purposes?
+
+Eugene Semenyuk   48:18
+Yeah, sure.
+Yeah, I've sent in chat, so yeah, it should be above your message.
+
+Jurijs Markelovs   48:24
+Oh, I'm sorry. Thank you.
+
+Eugene Semenyuk   48:28
+Oh, sorry, I see it. It's incorrect. Sorry, I've spelled few few letters. Let me.
+Let me fix it.
+Yeah, let me just copy from this, because I I've noticed that.
+I mixed a few letters.
+So yeah, let me fix it.
+Ohh.
+Okay, I fixed it. So...
+Yeah, please keep in mind that.
+I've mixed few few letters like I&V.
+So, yeah, let's...
+Let's fix it and make make sure that we have a wreck.
+Review Eugene.
+So yeah, and now we can validate. We can validate it. And yeah, and here you can provide your...
+
+Akash Gupta   49:36
+The.
+Okay.
+
+Eugene Semenyuk   49:39
+Your key, I mean your issue key. For my, it will be CS184.
+
+Akash Gupta   49:43
+I see.
+I just wanted.
+Hey, Eugene, how did you generate that URL? Can you show up one more time?
+
+Eugene Semenyuk   49:52
+But.
+Oh.
+So yeah, for now you can just copy it. And we can, yeah, I've sent a detailed instruction like how to set up this integration. So yeah, and you can follow to create your own integration. So yeah, but for now, let's.
+Yeah, you can use my integration that I've sent in chat.
+Let me send it again. Like, you can use just this URL.
+
+Sanjay Kumar Parui   50:33
+You.
+
+Eugene Semenyuk   50:34
+Yeah, and why it's not enabled should be enabled.
+Yeah, I see a few integrations. Awesome.
+So yeah, OK, it's enabled.
+Okay, the moment of truth. Let's test it. So yeah.
+Yeah, you can use my webhook, so yeah, but please, yeah, use your...
+I lost some data.
+X secure.
+Password, one, two, three. Yeah, and now let's expand, validate your lab request configuration.
+and type your issue key. For me, it is CS184.
+Let's click validate.
+Yeah, and it should send a request.
+to quote me and inside chats.
+There should be that hook.
+Message.
+It's May 7.
+Ohh.
+Ohh.
+Something is wrong.
+
+Bandana Sriramka   52:27
+I also got the same.
+
+Eugene Semenyuk   52:30
+Yeah.
+
+Swathy Lokula   52:36
+Oh, I got a 200 response, okay.
+
+Eugene Semenyuk   52:39
+Oh yeah, looks like if something is wrong with my particular webhook.
+So, yeah, let's don't pause on this, yeah, and let's reuse already working.
+
+Sanjay Kumar Parui   53:00
+Yeah, I also got 200.
+
+Eugene Semenyuk   53:00
+Web hook.
+Yeah, awesome.
+So, yeah, let's...
+
+Biniam Wubyeshaw   53:06
+I used your webhook and I got successful 200.
+
+Eugene Semenyuk   53:10
+Oh, that's interesting.
+That's what date answer again. Oh, yeah, 200.
+Yeah, and uh, under the...
+Chats.
+Let's refresh.
+Yeah, I see a bunch of...
+Bunch of conversations created.
+Yeah, but to where?
+Go around the party.
+Ohh, yeah.
+To issue.
+Yeah, maybe it's still thinking.
+So, yeah, at least let's open my...
+To your item and see, so yeah, it should left a comment.
+Regarding.
+Technical feasibility.
+
+Swathy Lokula   54:46
+So we still need to update and change from to do to in progress, isn't it? In order for this agent to work as well.
+
+Eugene Semenyuk   54:47
+No.
+No, no, no, no, no, no, no. This agent should automatically update, I mean, automatically create a comment.
+
+Swathy Lokula   54:59
+Mhm.
+
+Eugene Semenyuk   55:00
+with a technical review.
+Yeah, because...
+
+Sanjay Kumar Parui   55:04
+So, one more time, how how it gets invoked?
+
+Eugene Semenyuk   55:07
+Yeah, yeah. So we clicked validate and it sent a request to this webhook and it should trigger our agent and our agent should leave a message.
+with technical review in our work item.
+So yeah, let's wait a bit.
+Yeah, one minute to go.
+So yeah, from technical point of view, it's feasible. So it highlighted impacted modules and files that we need to update.
+In our user story, required changes.
+Even some estimation from development point of view, some risks, and the references.
+and references for some files in our repository. Yeah, it also added a label, AI reviewed.
+So.
+Yeah, and uh...
+That's it.
+Looks like engineering review works, yeah, and if we update our workflow.
+Yeah, now it will.
+It will create 3 comments. So yeah, if we move JIRA item from to do to in progress, it will review it from digital.
+point of view from QA. So it will use two robot agents. Yeah, and for engineering, it will send request to CodeMe and CodeMe will review.
+Review this user story from technical perspective and leave a comment.
+With the technical review.
+So yeah, it looks like we've created some kind of three Amiga session, but we still need to combine these three.
+point of views into some decision and maybe operate with this decision somehow. For example, if our cross-functional review shows that it is not ready,
+for development for.
+for work, so we can move this user story to blocked status. Yeah, and assign it to some person to clarify some details.
+Yeah, but yeah, I think it will be.
+It will be the topic for additional session.
+So, yeah.
+Let's pause here. So yeah, we have a few minutes left.
+So yeah, let's continue next time. So yeah, but on this Thursday, we will have a really whole session about MCP servers. So yeah, and after MCP servers, we will continue with our cross-functional use cases. Yeah, and maybe during our
+cross-functional champions call, we can also discuss like the next direction.
+like what other use cases we can implement together. So where we can leverage MCP servers.
+To improve, improve other workflows, yeah, so on and so forth.
+So yeah, if you have any questions, so yeah, feel free to connect with me offline or join our Fridays office hours.
+So yeah, I will send a small follow-up for this session with detailed guide how to implement this workflow step by step.
+So...
+That's it, guys. Thank you for.
+for joining us today. So have a great rest of the day.
+See you soon.
+
+Sanjay Kumar Parui   59:59
+Thank you. Thank you, you too.
+
+Swathy Lokula   1:00:00
+Thank you.
+
+Alfredo Achecar   1:00:00
+Thank you.
+
+Svetlana Stogni   1:00:00
+Thank you. Thank you.
+
+Eugene Semenyuk   1:00:02
+Thank you.
+
+ stopped transcription

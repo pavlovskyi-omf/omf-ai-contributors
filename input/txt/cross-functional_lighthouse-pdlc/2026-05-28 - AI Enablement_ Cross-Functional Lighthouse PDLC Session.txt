@@ -1,0 +1,872 @@
+AI Enablement Cross-Functional Lighthouse PDLC Session-20260528_140022UTC-Meeting Recording
+May 28, 2026, 2:00PM
+1h 3m 26s
+
+Eugene Semenyuk   0:12
+Do do do do do.
+You do.
+
+Vlad Grubman   0:17
+Good song.
+
+Eugene Semenyuk   0:20
+Good morning!
+Hello!
+
+Vira Melnyk   0:48
+No.
+
+Eugene Semenyuk   0:50
+Hello. Yeah, let's give maybe one more minute to join us. We have a really hot topic today.
+
+Jatin Bagga   0:59
+Ooh, hot topic. So exciting.
+
+Eugene Semenyuk   0:59
+Yeah.
+Yeah.
+
+Vlad Grubman   1:04
+Good start, by the way.
+
+Jatin Bagga   1:06
+Wait, what?
+
+Vlad Grubman   1:06
+For teenagers, it's a good story for teenagers.
+
+Eugene Semenyuk   1:07
+Yeah.
+
+Jatin Bagga   1:10
+Yeah.
+
+Eugene Semenyuk   1:15
+So yeah, especially for those guys who...
+like ChatGPT.
+
+Jatin Bagga   1:25
+I think until we get Claude, ChatGPT is our friend, so we're actively waiting to get Claude.
+
+Eugene Semenyuk   1:29
+Yeah.
+Yeah.
+
+Vlad Grubman   1:34
+Wait till you get codecs, you'll forget about the cloud.
+
+Jatin Bagga   1:37
+Oh man, can we, I'll be happy just getting Claude, man, I'm serious.
+
+Eugene Semenyuk   1:42
+He.
+Do, do, do.
+Okay, 30 seconds to go.
+What?
+Yes.
+Which menu?
+
+Denis Platonov   2:15
+But you're saying Codex is better than the cloud code?
+
+Vlad Grubman   2:21
+I am, indeed.
+
+Jatin Bagga   2:24
+Well, let's have an arm wrestling contest with the tail end. Let's see Vlad doing with the dentist. Like, you know, let's figure out which is better. I don't care. Just give me Claude. That's all that I want right now.
+
+Denis Platonov   2:27
+Yeah.
+
+Eugene Semenyuk   2:32
+Yeah.
+
+Denis Platonov   2:34
+I'm just putting some gasoline on the fire, nothing else.
+
+Jatin Bagga   2:37
+Nice. Go ahead. Go out there.
+
+Eugene Semenyuk   2:37
+Yeah, sounds like provocation.
+
+Vlad Grubman   2:42
+Make sure it's high octane, 'cause I like, I like my models, like I like my gasoline extra high.
+
+Eugene Semenyuk   2:45
+You.
+Okay guys, let's...
+Let's start. So yeah. Hi everyone. So yeah, welcome to our cross-functional PDLC session. And today we have a little bit of breaking new topic. So we'll shift focus from CodeMe for a moment and move into agents in ChatGPT. So this is brand new.
+and very promising capability for us. So I can keep silent about this today. So yeah, yeah, in the previous sessions, we spent a lot of time on Cody, Jira automation, MCPs, key repositories, data sources, and multi-repo system intelligence that we built.
+last time. So yeah, we built workflows where agents could review user stories, analyze requirements from different point of views. Yeah, and even support within the decisions. So yeah, today we'll keep the same practical approach, but we'll use a new tool. So yeah, ChatGPT agents. So this feature,
+It was just enabled for us. So the goal for today is not become experts in one session. So the goal is to understand what is now possible, see how agents in ChatGPT are different from a normal chat and build one or maybe 2 practical examples that can help us across
+our functional and cross-functional work. So yeah, we'll start with something simple, just to review capabilities, and then we'll try to move to something.
+Um, cross-functional, so...
+Yeah, short agenda for today. So yeah.
+Yeah, first we quickly explain what ChatGPT agents are and why this is important for us. So then I'll show what...
+Yeah, how to open, connect, all the necessary stuff. Yeah, and after that, we'll try to build something. And yeah, and finally, yeah, we'll leave time for discussion, ideas, and next steps. So, okay.
+Let's quickly clarify.
+Yeah, what we mean by agents in ChatGPT? So yeah, let me share my screen.
+Do do do do do.
+Yeah, you probably.
+You probably so knew.
+new feature added in the ChatGPT. So yeah, if you open ChatGPT.com and log in with your OneMain credentials. So yeah, if you don't have a ChatGPT account, so yeah, please reach out to us. Yeah, we'll help you to get the license.
+So yeah, and here you should be able to see a new menu item here. It should be agents with the new placeholder. So yeah, I've already played with this feature and created multiple of multiple agents. So yeah, in my case, I see browse, browse agents.
+So, yeah, and here is the here, here is beautiful interface. So, yeah, I can see recently used, built by me, and one main directory. So, yeah, we we, yeah, I can see that someone already created some some agents.
+Yes, some agent conference already designed docs from requirements and analysis.
+So yeah, but today we will build something, something brand new from scratch. So yeah, and yeah, as you, as you know, in normal chat GPT, so we can open chat, ask some questions, get answers. So with custom GPTs, we can create some, some small agents that can
+do like use some prompt to do some repetitive tasks. Yeah, but with agents, we can create a more repeatable assistant for a specific workflow. So yeah, the agent can have name, instructions,
+connected tools or applications and yeah.
+some output format and skills. Yeah, for example.
+Yeah, let's probably try to build something. So yeah, let's click create agent. And yeah, we.
+We have some templates here, so yeah, we can click and see what templates we have, yeah, defined by open AI. So, yeah, it each template has some some tools.
+
+Heath Fest   7:54
+Yeah.
+
+Eugene Semenyuk   8:04
+No.
+Yeah, and uh...
+Yeah, there are a bunch of templates.
+So yeah, you can try to look at them and see like what is applicable for you. So yeah, but for now we are, let's move on with something else. So yeah.
+
+Jatin Bagga   8:24
+Eugene, sorry, before you proceed, I just need to understand one thing. Can you help, and we don't want to spend too much time, but can you just explain the difference between agent versus GPT configuration, right? Because people use it loosely, and GPT configuration is not an agent, right? So very crisp, if you could just give a definition, please.
+
+Eugene Semenyuk   8:25
+Ohh.
+Mm.
+Yeah.
+Yeah.
+Yeah.
+Yeah, maybe let's try to build some agent and it will be crystal clear. Yeah.
+
+Jatin Bagga   8:51
+Okay.
+
+Eugene Semenyuk   8:55
+In, yeah, for example, here in the...
+
+Heath Fest   8:58
+This isn't a neighbor.
+
+Eugene Semenyuk   8:59
+Yeah, in this list of some proposed agents, I really like this one. So I try to play with these agents, yeah, and I've created morning planner so it can play my day from calendar tasks and
+some open threads. So yeah, it can click.
+We can click to some placeholder and yeah, it will prepare.
+some conversation starter. Yeah, or you can type your task like you would like to automate. Yeah, and proceed. Yeah, but in this case, we can just select morning planner and see what it will generate for us.
+
+Amit Kumar   9:43
+So.
+Eugene, if these are the only three options that we can select here, or can we type something else as well, and...
+
+Eugene Semenyuk   9:53
+Yeah, yeah, yeah, you can type like your own task. Yeah, for example, as a task engineer, I can...
+
+Amit Kumar   9:57
+Okay.
+Used, okay.
+
+Eugene Semenyuk   10:10
+Do testability and generate test cases, so yeah, and it will add all the necessary applications that it has, yeah, and create all the instructions how to do this, so yeah.
+Yeah, let's use some placeholder just to see how it works. So yeah, let's start.
+
+Heath Fest   10:37
+You.
+
+Eugene Semenyuk   10:44
+Yeah, let's wait a couple of minutes.
+
+Sanjay Kumar Parui   10:52
+Does he have access to all of our Outlook email and everything?
+
+Eugene Semenyuk   10:53
+Yeah.
+Mm-hmm.
+
+Sanjay Kumar Parui   10:58
+But it does already the chat GPT agent.
+
+Eugene Semenyuk   11:00
+Yeah.
+Yeah.
+
+Praveen Lakshman   11:03
+I think you need to go add and give a permission.
+
+Eugene Semenyuk   11:07
+Yeah, for all application, it will require, it will ask, it will ask like permissions to connect. So you need to authorize in this specific application. Yeah, for example, for this one, yeah.
+It will use out the calendar, teams, memory.
+Yeah, let's maybe...
+I'd like also to connect to Atlassian. So yeah, yeah, but let's start building, then we will ask it to add.
+at Jira Connection and get tasks from Jira.
+So, yeah, look.
+It's automatically adding.
+Applications.
+And now it should write instructions.
+Yeah, and what what I really like, so yeah, we have chat interface here, so yeah, we we can we can make any, yeah, we we can we can do any change manually, like add some app, add skill, schedule, write instructions, yeah, but also we have chat interface.
+So yeah, we can ask ChatGPT.
+To set up something.
+Yeah, and to be honest, AI.
+is more effective in writing instructions for AI.
+Comparing with the people.
+So, yeah, yeah, so we we can see some tasks, so, OK, it created.
+Instruction.
+for this agent.
+
+Heath Fest   13:23
+Disaster coming.
+Yeah.
+
+Eugene Semenyuk   13:27
+Yeah, and here you can see the main difference between like regular custom GPT and agent. So, yeah, here we can connect different applications, we can add skills, yeah, and we can, yeah, and
+Yeah, we can use memory, yeah, but in custom GPT, we can also add some files. Yeah, but here we can add.
+some applications, skills, and even schedule them.
+Okay, it asks some connections. So yeah, let's connect to Outlook Calendar and Teams. So yeah, for me,
+It doesn't require a certification because I already done it, so yeah, for you.
+Yeah, it will require.
+Some, some, some steps to.
+To login in such tools.
+Okay, it's still thinking.
+So yeah, I already know what I'd like to add.
+So, yeah.
+Let's also...
+Get tasks from.
+Tasks.
+Assigned to me from Jira.
+And come see them.
+Erin.
+Daily planning.
+Okay, I can see that it even added a daily morning schedule. So yeah, this agent will be executed H.
+Yeah, every day at 8 A.m.
+Yeah, but also, yeah, let's let's ask it to to add some, yes, to to add Jira integration.
+Yeah, and it also should update instructions.
+like use JIRA for this, this and this. Yeah, and while we are waiting, so we can explore, we can explore applications that we have here.
+So yeah, Google services are disabled for us. Notion also disabled.
+
+Jatin Bagga   16:03
+Wait, how did you get that? Sorry, can you go back? How did you enable?
+
+Eugene Semenyuk   16:05
+Yeah.
+Yeah, yeah, just click browse apps from from apps section.
+Yeah, and here are the list of available applications for us, approved by our Admins.
+Like, we can use GitHub, Teams, SharePoint, Outlook, Email, and Calendar, some Adobe things, Atlassian things.
+By Atlassian Robo, yeah, it it may, yeah, it it means robot agents.
+
+Sanjay Kumar Parui   16:37
+Yeah.
+
+Eugene Semenyuk   16:41
+Not, not friendly speaking, not sure about the robot agents, yeah, but it means confluence and Jira.
+
+Jatin Bagga   16:49
+Sorry, Eugene, maybe I'm not looking at it correctly. Can you point out one more time how did you get that? Maybe I'm just not looking at the right place.
+
+Eugene Semenyuk   16:50
+I haven't tried.
+Yeah, yeah, here is apps.
+
+Jatin Bagga   16:59
+Oh, just at the apps. Oh my god, user error, my bad.
+
+Eugene Semenyuk   17:01
+Yeah, and browse. Yeah.
+
+Sanjay Kumar Parui   17:03
+So, so.
+
+Eugene Semenyuk   17:04
+Oh yeah, and I see that agent, that the ChatGPT had Atlassian a row for me, and updated instruction automatically. And you can see, I really like this pointer.
+
+Sanjay Kumar Parui   17:11
+So.
+
+Eugene Semenyuk   17:18
+Well, it, it, it looks like...
+
+Sanjay Kumar Parui   17:18
+So if they add Atlassian, they will also have Jira and conference space both, if I understand correctly.
+
+Eugene Semenyuk   17:26
+So yeah, Atlassian, yeah, Atlassian Robo application works with both Jira and Confluence.
+
+Sanjay Kumar Parui   17:34
+Yeah. Perfect. Okay.
+
+Eugene Semenyuk   17:38
+Mhm.
+So, we are, well, yeah, while you logging in to Atlas Center Rover, you can specify what exact application, what exact exact host.
+should be available for this application. Yeah, and also you can click to the application and see what permissions it has. Yeah, for example, for this agent, yeah, we will need write access.
+So we need to create comments. So yeah, but we need read access, like to read tasks, to get some issues.
+Okay, let's go back.
+Ten, 10, 10.
+Yeah, it looks good. Yeah, in the next example, connected with PDLC, we'll try to utilize some skills. Yeah, but now we don't need it. So yeah, we will come back.
+
+Jatin Bagga   18:41
+Sorry, just one thing, Eugene. Sorry, sorry, sorry. This developer mode under custom MCP, like when you're trying to add it, yeah, if you can you enable it, just...
+
+Eugene Semenyuk   18:43
+Mhm.
+
+Jatin Bagga   18:53
+So this is disabled for us because it's not available. Is that correct?
+
+Eugene Semenyuk   18:57
+Uh...
+Probably because, yeah.
+
+Jatin Bagga   19:03
+This would have been sweet if it was available.
+
+Eugene Semenyuk   19:07
+But.
+Yeah, at least at least approved approved MCP servers.
+
+Jatin Bagga   19:09
+Okay.
+Got it. So this is just a teaser for us that there is something called custom MC. We can't do anything with it. Okay, got it. Thanks.
+
+Eugene Semenyuk   19:17
+Yeah.
+Yeah, for for now, yes.
+Yeah, but I was really surprised to see Teams, SharePoint, and other applications, so yeah, it.
+It's really, really promising. Okay, so let's update our agent.
+And let's try in ChatGPT.
+But.
+Yeah, we also have some topic starters. So yeah, let's use Plan My Day.
+So now we should review.
+My calendar, my my.
+tasks assigned to me in Jira and recent conversations in Teams.
+Yeah, and uh, yeah, I I know that I have uh, like some...
+Unread messages, yeah, and it should mention it here.
+
+Sanjay Kumar Parui   20:38
+This will be nice to see because people got like 8 hours meeting entire day with they don't know like we should prioritize. I would be interested to see how the chat GP thinks like we should do plan.
+
+Eugene Semenyuk   20:38
+Not now.
+Mhm.
+
+Sanjay Kumar Parui   20:52
+Is awesome.
+
+Eugene Semenyuk   20:55
+Yeah, and I really like that it works. So, yeah, we can set up a schedule. So, yeah, and each morning you can have such such daily brief. Yeah, also we can add to Slack channel. So, it can post the result in Slack.
+So, yeah, but it looks like it requires some configuration on on on slack site.
+by Admins.
+So yeah, let's see. We have some tasks to do.
+So, yeah, and it's working.
+Yeah.
+Yeah, this morning I I created such such agent and tried, yeah, and I was really surprised.
+Yeah, it, yeah, it, it got all the, yeah, all the tasks, conversations, my meetings for today, prioritize them.
+Like this, this task you should do first, so yeah, and these tasks, yeah, if you have if you have some time by the end of the day.
+Yeah, it's a bit slow, yeah, because for, yeah, this is really a huge, huge task.
+MMM.
+To use today's calendar. OK, awesome. Now it reviews recent Teams threads and results follow-ups.
+Okay.
+Yeah, while we're waiting, we can probably discuss scales.
+So yeah, let's see what is skills.
+Yeah, and yeah, skills are a usable task that our agents can perform, like summarizing emails, creating tickets, prepare a meeting notes. So yeah, here you can add some some things like...
+like review requirements, like create test ideas, create test cases, summarize some things. So, yeah, you can you can create skills for these tasks. Yeah, and
+Yeah, and we can reuse these skills in different agents.
+Yeah, and also it will save save some contacts and prevent hallucinations.
+Because yeah, if Adrien need to do some task, it will reach out to scale.
+
+Jatin Bagga   24:39
+So, is skill working like a sub-agent? Like, is that the purpose of skill?
+
+Eugene Semenyuk   24:39
+So yeah, and you can create.
+Yeah, it's...
+Yeah, it looks like sub sub agent that can be easily reused for.
+So yeah, but actually today, fast face, maybe this is some kind of bug or not. So I tried to generate some scales from from this.
+From these.
+dialog box and yeah, it throws error each time.
+So yeah, I hope it will be fixed soon. Yeah, and as an alternative, you can upload some existing skills. Yeah, for example, if you have skills for GitHub Copilot, Cursor, or Cloud Code. So yeah, you can reuse them here.
+And I've prepared some skills for today's session, so we will we will try them a bit later.
+So yeah, you just need to to put your skill MD to zip.
+Uh, to, to, to, and then drag it here.
+Okay, let's... Oh, yeah. Four minutes in my plan.
+Is ready.
+Yeah, looks, yeah, your day looks very open aside from one life priority.
+Okay.
+Yeah, top priority is get aligned for the demo.
+
+Sanjay Kumar Parui   26:21
+Yeah.
+
+Eugene Semenyuk   26:23
+Yeah.
+Answer some some questions.
+Yeah, key commitments.
+
+Sujan Shrestha   26:30
+So, using...
+Quick question. So, you're saying we can connect to different apps? Is it through that apps there in the left?
+
+Eugene Semenyuk   26:42
+Uh, yeah, it used these apps.
+
+Sujan Shrestha   26:44
+Ohh.
+
+Eugene Semenyuk   26:47
+Yeah, and previously, they also were not available for us. And now they are available. And we can not only use them in just regular chats, yeah, but also use them in agents. Yeah, and this is like really powerful.
+
+Sujan Shrestha   26:52
+Mhm.
+Got it. Thanks.
+
+Eugene Semenyuk   27:12
+Yeah, okay. Top priorities, key commitments, yeah, and the...
+Yeah, it also fetched some tasks.
+that assigned to me.
+In Jira, yeah, it's just a plan.
+Like first block, next, after, and so on, yeah, and some risks.
+So, yeah, looks looks good, yeah, and friendly speaking, you can you can adjust this output format, maybe create some table, yeah, so...
+You can, you can, you can ask her.
+Of these.
+Chat GPT.
+Chat to to adjust output format for something, some purpose.
+
+Jatin Bagga   28:06
+And, Eugene, this is really cool, but going back to what Sanjay had asked earlier, right? So, it's really there is no...
+like big logic in here of how it would prioritize. It's just like looking at for instance, your meetings and based on I guess the timing or something, it's just saying like this is what you need to focus on. If the word's been used like critical or something, it's giving that higher priority. Is that correct?
+
+Eugene Semenyuk   28:14
+Yeah.
+Yeah.
+Oh.
+Not sure.
+
+Jatin Bagga   28:34
+Okay.
+
+Eugene Semenyuk   28:37
+So yeah, under as I see it also look through, look at my time zone and like.
+It can understand that some events already happened today.
+So, yeah, and and for now, yeah, it it highlighted, yeah, it.
+Yeah, it it gets all the like meetings, chats, and tasks from from Jira, from Teams, and from my calendar, yeah, and tries to analyze all these tasks, yeah, and then prioritize that, so yeah, and you can you can adjust this logic here.
+instruction.
+Like, how to, how to prioritize, like, what, what activities are like the most important, like, what, what kind of activities?
+So, yeah, you, you can, you can, yeah, well, like, like, prioritization rules.
+Like time-sensitive commitments happening today.
+Like work that is blocked by meetings, deadlines, or pending replies.
+and something like that. The items of that unblock other people.
+Yeah, for example, if some if some someone requested something from me.
+So yeah, and I haven't seen it yet, so yeah, it can also highlight.
+But look, this person is waiting for.
+Yeah, for some guidance.
+Yeah, and the...
+Yeah, to be to be honest, yeah, for my personal usage, I'd like to adjust output format, because yeah, now it looks like just plain text.
+So yeah, but maybe a table format will be more.
+More convenient.
+
+Svetlana Stogni   30:42
+Eugene, is there any way to adjust the agent so that it could automatically upload all the transcripts from all the meetings, like to take and gather action items assigned to me from there?
+
+Eugene Semenyuk   30:58
+It can.
+Yeah, good point. So probably we can do this with the...
+SharePoint, if they stored.
+in in SharePoint.
+
+Jatin Bagga   31:12
+Sorry, could you repeat the question again? I didn't quite catch that.
+
+Eugene Semenyuk   31:20
+Svetlana, could you please repeat your question?
+
+Svetlana Stogni   31:20
+Yeah.
+I would like to adjust the agent so that it could automatically upload all the transcripts from the meetings where I participated. And if there is an action item assigned to me, it should consider it and include into my daily planning activities.
+
+Eugene Semenyuk   31:37
+Thank you.
+
+Svetlana Stogni   31:43
+If needed.
+
+Eugene Semenyuk   31:44
+Two.
+
+Jatin Bagga   31:44
+Amazing, amazing. That's so good. And so, Eugene, but why are you going to SharePoint then? Shouldn't you be looking at like Teams and like Slack and Outlook?
+
+Eugene Semenyuk   31:51
+Yeah.
+Yeah, if if if you if you are using facilitator that creates action items, so teams teams integration should be feasible to to get these action items, because yeah, because yeah, it it reads like recent chats.
+Like recent, yeah, meetings, recent personal communications, so yeah, it should be feasible to for for for this agent to get this, yeah, but if you don't use...
+So yeah, but you know that transcripts for your meetings are stored somewhere in SharePoint. So yeah, we can use SharePoint.
+
+Jatin Bagga   32:29
+The.
+
+Eugene Semenyuk   32:37
+Integration.
+Continue to SharePoint.
+
+Jatin Bagga   32:41
+Got it. I see what you're saying though. I see what you're saying. This is interesting because I've been talking to Vlad about this as well. So
+Just going back to Svetlana's question, right? So let's say if I do have meetings where they're transcript, but I don't own the transcript, somebody else's meeting, right? So they own the transcript, I can't download it. If I enable SharePoint, will that be a hack that I can actually see the transcript on SharePoint, even if I can't technically download it in?
+In teams, do you know what I'm talking about or am I confusing you?
+
+Eugene Semenyuk   33:14
+That's, yeah, yeah, yeah, I, I see a point, yeah, and yeah, to be honest, I don't know right now how it, how it works, but yeah.
+
+Vlad Grubman   33:23
+Actually, so I tried it. I tried it. It didn't work, but I tried it on...
+
+Eugene Semenyuk   33:27
+Mm.
+
+Vlad Grubman   33:30
+I think I will.
+I don't remember. I think I tried it on EPAM instances. So it depends on permissions. If permissions are...
+
+Eugene Semenyuk   33:37
+Mhm.
+
+Vlad Grubman   33:39
+Set up differently, then you might be able to grab the transcript. It's really like how you how the meeting is set up.
+and how your permissions are set up. It didn't work for me, but it doesn't mean it wouldn't work for everybody. I believe there is a way to set up meetings where everybody has access to everything. And then in that case, people will have access to transcripts, which is, I think, how we should start setting up meetings moving forward so that everybody has access to the transcripts.
+
+Jatin Bagga   33:49
+It.
+
+Eugene Semenyuk   34:06
+Mhm.
+
+Vlad Grubman   34:06
+so we can get that AI analysis.
+
+Jatin Bagga   34:09
+Yeah, and Vlad, if you don't mind confirming, and I don't want to spend too much time on this, but like for instance, Sanjay is meeting, Sanjay and aren't meeting, and like if Sanjay owns the meeting, his transcript reports to him and he has no problem sharing it with us, but until he gets the time, I have to wait. So my question is what you're saying, there may be a way that for the meeting, let's say that Sanjay is scheduling,
+He could just say that make this transcript be available to everyone.
+
+Vlad Grubman   34:34
+I believe I've seen this before. I have to talk to people who did this to understand how they did it. I know that in phase one, we all had access to the transcripts.
+
+Eugene Semenyuk   34:40
+Mhm.
+
+Vlad Grubman   34:47
+So, somehow, there was a way to do it.
+
+Jatin Bagga   34:49
+Exactly. It used to be available. Now it's like, go talk to, sorry, Sanjay, putting you on a spot, but you know what I'm talking about. Okay, so somebody's actually disabled that feature and that's why this intentional friction. Got it. Okay.
+
+Eugene Semenyuk   34:51
+Mhm.
+
+Sanjay Kumar Parui   34:57
+So good.
+
+Vlad Grubman   35:04
+It either, it's three possibilities, somebody disabled it, somebody didn't enable it because the default is off, or three, somebody at Microsoft decided it would be a good idea to disable this and got promoted over it.
+
+Jatin Bagga   35:19
+So internally, if we need to confirm if we want this enabled, like who do we, is it Weston?
+
+Vlad Grubman   35:26
+I have no idea right now. Yeah, we can talk about it just fine.
+
+Jatin Bagga   35:27
+Or we can talk offline. We can figure it out. We have. All right. Thank you.
+
+Eugene Semenyuk   35:34
+So, yeah, a bit.
+In some cases, you probably don't need full transcripts. Yeah, for example, in this particular meeting, we have a facilitator that creates meeting nodes, action items, and so on. So I believe that Teams integration should be able to get all the meeting nodes or action items from this meeting.
+So yeah, but if you need to get access to a full transcript, so yeah, yeah, it requires some additional investigation.
+Ha ha ha, how to do this?
+Let's remove it from.
+From this.
+Okay, let's try to build something connected to PDLC.
+Let's.
+I said, let's move on.
+OK, let's probably let's probably go to the route.
+ChatGPTU.
+
+Jatin Bagga   36:50
+And Eugene, while you're doing that, the bottom line being for agent, you're getting this automated input into the agent. You may manually decide to trigger it, but the input is automated versus requiring someone to upload files and all that fun stuff that we have to do with GPT configuration. Is that correct?
+
+Eugene Semenyuk   36:52
+Hey Cortana.
+I told you.
+Oh
+Mhm.
+Mm.
+You, you?
+Not sure that I can get the question. Could you please repeat it?
+
+Jatin Bagga   37:16
+So remember top of the call I was asking about GPT configuration versus agent, what the difference is. So the key difference I see here with agent, like once you let's say enable the app, it's automatically pulling in the information and then you can trigger it again at your time of choice, right, with an agent, but with GPT configuration.
+
+Eugene Semenyuk   37:18
+Yeah.
+Mmh.
+Mhm.
+Mhm.
+
+Jatin Bagga   37:35
+You have to manually upload the files and stuff so as to make it work. Is that the key stark difference?
+
+Eugene Semenyuk   37:38
+Yeah.
+Yeah, so yeah, let's to compare it, let's open.
+Let's open the GTP. Yeah, custom GPT. Oh, I cannot create.
+So yeah, as I remember in custom GPTS, yeah, we...
+We have ability only add some files, not sure about apps, so yeah, and we can just add some upload some files as a context, yeah, and use it, yeah, but here in agents, yeah, we can we can we can also add some files, we can use apps to get some data.
+It looks like something is wrong with ChatGPT. Yeah, oh, it works.
+So, okay, let's create something new.
+Let's go create agent. So yeah, now I'd like to create something connected with PDLC. Yeah, and let's think about some.
+Some initial stage connected with requirements, and...
+Yeah, as a, yeah, for example, as a QA engineer, I would like to...
+Uh, review user story, review its stability, yeah, and then...
+And if user story is okay, yeah, generate some ideas for testing. So yeah, let's.
+Yes.
+Let's create some description.
+Let's create a chain that...
+Well, review.
+Oh.
+that will use a link to the user story.
+And review testability of this story, and if it's...
+OK, create test ideas.
+For testability and test ideas creation. Yeah, let's use like I have skills created.
+And I'll add them.
+Later. So yeah, I have skills for these tasks. So yeah, later we will add these skills. Yeah, for now, we'll let's create.
+Yeah, let's create some.
+Some background for this agent.
+Okay, let's start building.
+Mhm.
+Yeah, I really like this.
+This cursor.
+Mhm.
+Yeah, it's like real, real pilot.
+Yeah, and a real big buddy that works with you.
+and some agent.
+
+Vlad Grubman   41:36
+As long as it doesn't make any snarky comments, we're good.
+
+Eugene Semenyuk   41:39
+Okay.
+
+Jatin Bagga   41:42
+As an A is gonna rule the world, let them make snarky comments. Vlad, you just have to suck it up, man. That's okay, you know?
+
+Eugene Semenyuk   41:45
+No.
+
+Vlad Grubman   41:48
+Fine, fine, be that way. Hurt my feelings.
+
+Eugene Semenyuk   41:48
+True.
+
+Jatin Bagga   41:51
+Ha ha ha!
+
+Sanjay Kumar Parui   41:55
+Just to create this, which one did we select? Our team chat, morning planner, like, what did you do that? Sorry, I missed that last.
+
+Eugene Semenyuk   42:02
+For for for what part for plan or?
+
+Sanjay Kumar Parui   42:04
+So, like, you're going to use a story.
+Testability reader, right? How are you building this unit? I missed that stuff.
+
+Eugene Semenyuk   42:11
+So, yeah.
+So, yeah, for this, I just I just provided instruction like, yeah, we we need agent that will get lead to the user story and review test ability for this user story, and if user story is okay, generate some some test ideas, like what we need to test for this user story.
+
+Sanjay Kumar Parui   42:21
+Okay.
+
+Eugene Semenyuk   42:31
+Okay.
+
+Jatin Bagga   42:33
+Can you paste that real quick, please?
+
+Eugene Semenyuk   42:35
+Hmm.
+
+Jatin Bagga   42:35
+Is that prompt?
+
+Eugene Semenyuk   42:37
+This.
+
+Jatin Bagga   42:37
+Been raising here.
+
+Eugene Semenyuk   42:41
+Uh...
+Good question, looks like...
+
+Jatin Bagga   42:47
+Well, it's not a big deal. It's fine. I was just asking if it's easy copy paste.
+
+Eugene Semenyuk   42:48
+Here we are.
+Yeah, yeah, because I'm not working on VDI right now. So yeah, it's a bit challenging.
+So yeah, it's thinking, yeah, while it's thinking, we can add some skills. So yeah, in skills, you can describe like what you want from the skill and click generate. Yeah, but.
+Today's morning, so yeah, I tried to do this. Yeah, it saw some errors, so yeah, and now I will just upload.
+my skills that I've created in Cursor.
+So...
+Let me find it.
+Show.
+So, just to be with you, let's start from just to be with you.
+So, yeah, this is, yeah, and then we will review the IBMi file with this skill.
+So, yeah, we added one skill.
+Mhm.
+Let's add.
+First, I need to click upload scales.
+Mhm.
+Yeah, okay, it's ready. Yeah, now I'd like to adjust.
+Yes, yeah, I've just added skills.
+Use skills that I've just added.
+Or...
+Test them, be with you, and I test.
+Ideas generation.
+Oh, I also don't see...
+I don't see Atlassian application here.
+And also, that...
+At the last hand, not sure, yeah, maybe.
+At the last, Shen.
+Application here.
+So, we will use it for.
+I'll use it to cat user.
+Story.
+Details.
+Did you, did you?
+Mmh.
+Okay, while we're waiting, I need to answer urgent phone call. So yeah, please, I'll be right back in one minute.
+Okay, I'm here.
+Hey.
+I apologize for the inconvenience. So, yeah, let's see. Let's see what we have. OK, our ChatGPT edits last in a row up. Looks good. Yeah, let's confirm that we don't have right actions. I don't like to.
+To break something in our JIRA, so yeah, we have.
+Skill directory, like, use this for this, use this for this.
+Yeah, and source retrieval, like use Atlassian robot to retrieve user storage details.
+And blah blah blah.
+Okay, let's...
+To update our agent, yeah.
+I like this icon.
+It's really fancy.
+And also reacting.
+Oh, looks like it's dancing.
+Okay, let's try to test some user story. So I found a user story from...
+From service and team, so yeah, this is like a like a current user story.
+Well, I see that. That AI said that it's not ready for development.
+That's interesting.
+So, not sure if our agent will provide the same result, because...
+Uhh...
+Because of the agent from server same team can be trained. Yeah, it was definitely trained for for the project needs. So yeah, but at least, yeah, let's see what we will have here. So yeah, let's, oh, yeah, let's use something like this. Review this user story.
+And send the link.
+Ohh, we can.
+We can even change icons for characters.
+Oh no, I don't like these icons. I like these characters.
+They are so nice.
+Okay, our agent is thinking in the moment.
+Yeah, for now we are doing everything we use to just read access and read permissions. Yeah, but also we can leave it, we can leave comments.
+Like this.
+using our ChatGPT agents.
+So, yeah, we just need to...
+to provide.
+Permissions.
+And I, I'm sure if you, if you ask, if you ask it, it will adjust permissions for you.
+You.
+Okay, so our agent decided that...
+This user story is testable, but with assumptions. Yeah, and here are KK assumptions.
+Yeah, and define some issues.
+So, why it matters what to clarify?
+So yeah, and it's not fully ready for clean test idea generation, but it's close enough for provisional test ideas if we mark assumptions clearly.
+Okay, let's ask it to, let's do the next step.
+So next step should be about test ideas generation. So yeah, and while we're waiting, let's explore our skills.
+So, yeah, here is our skill.
+description and skill instruction.
+Like what this skill should do.
+Yeah, my suggestion is, like, use, yeah, to to use these skills for for like any tasks.
+Yeah, and utilize skills here in.
+In instructions, it will be easier to review the instructions.
+And the whole flow.
+Yeah, and also it will be...
+It will be more effective from a cost perspective, because if we put all these instructions to the agents, so yeah, each execution will use.
+these instructions at all, all instructions for each execution. And then we'll decide what part of this instruction is applicable for us. So yeah, it is a bit expensive. Yeah, but in this approach,
+So yeah, we have small instruction. Yeah, and by our request.
+Agent decide that, okay, we need to tell, we need to verify testability.
+that we need to open this particular skill. And we don't need this skill for now.
+So, yeah, and in this case, it will be a bit more.
+effective from cost and from tokens usage perspective.
+So, okay, and here we got some, it generated the clarification questions. Okay, let's.
+Let's generate test ideas.
+So, yeah, and now it should it should execute our.
+Test ideas from user story skill.
+And it should not perform unnecessary steps and use unnecessary context. Yeah, for example, for this exercise, now we don't need these instructions.
+
+Alfredo Achecar   56:25
+So.
+
+Eugene Semenyuk   56:27
+Mhm.
+
+Alfredo Achecar   56:29
+Excuse me, so you're adding the scope of when to use a scale within the scale itself or within the agent?
+
+Eugene Semenyuk   56:37
+Within the agent, so we should specify, like, what skill and, like...
+
+Alfredo Achecar   56:38
+Mm.
+
+Eugene Semenyuk   56:45
+How, when to use these skills?
+
+Alfredo Achecar   56:50
+Yep, makes sense to see it there.
+
+Eugene Semenyuk   56:54
+Yeah.
+I think it should be like similar to cursor or copied experience, where we can also.
+Where we can also specify.
+I believe it's it should be specified in skills, like when to execute it, like only on explicit call to this.
+A skill or.
+or each time when user asks some similar task.
+Yeah, for example.
+Yeah, if user asks, like, to review requirements, and we don't mention it here explicitly, so yeah, in this case, yeah, it will use this skill.
+So okay, let's see. Okay, yeah, now it...
+I, I'd like to see worked, yeah, and we can see even smaller look like what it executed.
+Mhm.
+Let's see.
+Oh, we don't have it here.
+Okay, here we have list of assumptions and test ID, prioritized test ideas that we should verify for this user story.
+Yeah, something like that. So yeah, I...
+Yeah, I'd like to.
+and engage you to try these agents and see, like, for, yeah, and think about for what tasks can be applicable for you. Yeah, we can also discuss it on the upcoming champions call.
+Like capabilities, yeah, and for what tasks we can apply, yeah, but from my perspective, it looks really promising.
+Yeah, and very user-friendly.
+That's this is really easy.
+Easy task to build something here.
+
+Jatin Bagga   59:15
+Hey, Eugene, thank you. I posted something in the chat because we're running out of time, but maybe we can speak about this in the next meeting, I suppose.
+
+Eugene Semenyuk   59:16
+Mhm.
+Yeah, yeah, let's do it.
+
+Jatin Bagga   59:23
+Okay, thank you.
+
+Eugene Semenyuk   59:25
+Yeah.
+Okay.
+So we have one minute left. So yeah, let's probably stop here for today. So yeah
+Today we started a brand new topic, yeah, and I think hot topic, agency in ChatGPT. So yeah, thank you for your questions, ideas, and active participation. So yeah, let's.
+Let's think about applicability for these features. Yeah, and thank you everyone for joining us today. Yeah, have a great rest of the day and see you soon. Bye.
+
+Oleksandr Pavlovskyi   1:00:11
+Conclusion.

@@ -1,0 +1,552 @@
+AI Enablement Cross-Functional Lighthouse PDLC Session-20260602_135658UTC-Meeting Recording
+June 2, 2026, 1:56PM
+1h 3m 48s
+
+Vlad Grubman   4:19
+Hello, everybody. Is it me or is it just very, very quiet?
+
+Nicholas Crowley   4:25
+Very quiet this morning.
+
+Vlad Grubman   4:29
+Alright, as long as it's not me, as long as it's not a hardware failure.
+
+Jatin Bagga   4:34
+Hello.
+
+Vlad Grubman   4:35
+Everybody another minute or two to keep joining, then.
+Hopefully, we'll get started.
+
+Jatin Bagga   4:47
+Hey, Vlad, good morning.
+
+Vlad Grubman   4:52
+Morning, how are you?
+
+Jatin Bagga   4:53
+Good, Vlad, I have a question for you and Nicholas. Again, I feel like I ask all the tricky questions, but like, can we access S3 bucket through one of our agents or is that not a thing that's been approved yet? Like our own S3 bucket to pull data from.
+Or Snowflake, either.
+Hello, can you hear me?
+
+Vlad Grubman   5:18
+Hold on.
+Yes, I'm trying to remember if I've heard anybody, anybody trying that. I think someone on the engineering side might have. I just...
+
+Jatin Bagga   5:28
+Can they be my friend for the week? Whoever is trying.
+
+Vlad Grubman   5:31
+I just, yeah, this is a good, this is a good forum to ask if anybody, if anybody tried it and have a result to report, that'd be, that'd be great.
+
+Nicholas Crowley   5:31
+Yes.
+
+Jatin Bagga   5:39
+Okay, I'm going to post it in the chat then. Looking for a friend, anyone who has used an agent to pull data from S3 and or Snowflake, there will be a prize for that. So I'll post in the chat. But if you hear anything jokes about Vlad, please let me know, Nicholas.
+Because that would be super cool. I've got a couple of important things to do, so that would be really helpful. Like real business value.
+
+Vlad Grubman   5:57
+Hold up.
+
+Jurijs Markelovs   6:11
+I try, I try to.
+
+Vlad Grubman   6:11
+Of course.
+
+Jurijs Markelovs   6:15
+To access AWS resources using a code using a cursor.
+With some level of success.
+And I would assume, so I was, I think I was using the CloudWatch logs.
+So, what I've done, I have created, which I already had, local AWS profile and pulling a token and all the credentials were required for the to establish the connection using that particular file.
+I was able to get to the AWS resources, so...
+
+Jatin Bagga   6:58
+Amazing. You're just, you are my best friend of the week. Is it okay if I reach out to you directly just to kind of like brainstorm?
+
+Jurijs Markelovs   7:07
+Yeah, we can try.
+
+Jatin Bagga   7:09
+OK, thank you.
+
+Eugene Semenyuk   7:13
+So yeah, hi everyone. So yes, sorry, I had some problems with Teams. So yeah, you said that you used a cursor and had access to S3.
+
+Jurijs Markelovs   7:26
+Yes, at some point I was trying to distinguish, we have about, I don't know, 10, 20 test environments, and I was identifying the traffic in each one of them environments, just trying to identify which one of their...
+
+Eugene Semenyuk   7:27
+Alert.
+No.
+
+Jurijs Markelovs   7:45
+like a least used basically. And I provided the account where these instances were residing.
+And I was able to basically analyze the logs.
+Based on the usage, so...
+
+Eugene Semenyuk   8:02
+Mmhmm.
+
+Jurijs Markelovs   8:04
+Yeah, it was a while ago.
+
+Eugene Semenyuk   8:07
+Yeah, that's interesting.
+Okay, so yeah, let's move on to our today's topic. So yeah, hi everyone again, good morning and welcome back to our cross-functional PDS session. Yeah, over the last several weeks, we've been exploring different AI capabilities,
+Chat GPT agents. Last week, some code me stuff, 0 automation, MCP servers, GitHub integrations, and a variety of other AI tools as we used in our phase one initial program.
+So yeah, as more capabilities become available, one question keeps coming up, like which tool should I use for which scenario? And honestly, that's a good problem to have. So today is not about declaring the winner. So this is not a beauty contest between vendors and tools.
+and it's not a product comparison session. So the goal is much simpler. So we want to create a practical decision framework that helps digital QA Engineering teams choose the right tool for the right job. So yeah, and by the end of today's discussion, I hope we'll have a shared understanding of
+where each tool fits, where it doesn't fit, and what our recommended operating model should look like. So yeah, and let's start with a big picture. So yeah, today we'll discuss six major tools. Rova, Microsoft Copilot, ChatGPT Agents, Cursor, GitHub Copilot, and CodMe.
+Yeah, and now when people compare tools, the conversation often becomes like, which one is better of them? But that's usually the wrong question. So the better question is, what problem are we trying to solve? Yeah, and because most of these tools were designed for different purposes,
+Like, some of some of them are optimized for knowledge discovery, some optimized for productivity, some optimized for software development, some optimized for some workloads creation and orchestration, and maybe some automation. So, yeah, and so instead of...
+comparing tools directly, let's let's first organize the work into into categories, so yeah, and then we can we can discuss like what what tools with which capabilities with which what limits we have, yeah, and probably together we will.
+come up with some frameworks, some recommendations, like what tool, where and why we should use for which scenarios.
+So yeah, let's probably start with the...
+with a practical taxonomy. So yeah, before we discuss products, let's discuss work. So I like to think about AI use usage in five lanes, like first lane, knowledge discovery and project context. So this is when somebody asks questions like where
+Can I find information? What decision we made? What is the current status? Which JIRA ticket or conference page contains the answer? Yeah, and for first lane, the row is usually the default starting point because it leaves naturally in Atlassian ecosystem. Yeah, and based on
+such information from Atlas and ecosystem, we can create JIRA items, user stories, tasks, and task cases. So yeah, for this,
+For this layer, for this lane.
+Default tool is default tool is robot.
+So yeah, a bit later, we will discuss integrations and capabilities, yeah, for this and other tools. Yeah, but let's move on to lane #2. So it is productivity and collaboration. So this is our day-to-day work. So meeting summaries, email summaries, documents, drafting, Teams conversation, Outlook, SharePoint.
+Yeah, from this lane, Microsoft compiler is usually strongest because it lives directly inside the Microsoft ecosystem. Yeah, right now you can see meeting notes in our chat and facilitator, yeah, that works based on.
+Microsoft Copilot, yeah, and yeah, and artifacts from this lane also are reusable, can be reused by other lanes, yeah, for example, yeah, as we discussed last week, so we can reuse some meeting notes, transcripts.
+follow-up tasks, action items, agendas that generated by facilitator in our meetings to provide some insights, maybe create some...
+Based on action items, create Jira tasks in our Jira.
+So, yeah.
+something like that. So let's move on to link #3. So this is.
+Cross-tool reasoning and automation. This is where Chat GPT agents become interesting. So, instead of answering one question, so we can we want to combine information from from cellular systems, like maybe read calendar events, do your tasks, check teams discussion, create and create some plan.
+So, yeah, we we've created these.
+We've created this planner on our last session, like use case and agent that can read.
+read all these things, like calendar, due tasks, recent team discussions, and create a plan for a day, like with assigning priorities for the tasks and so on and so forth. So yeah, with generating recommendations and draft follow up.
+For actions and and so on, so yeah, and uh, yeah, we definitely can utilize uh.
+This cross-reasoning automation in many other use cases, like generating.
+generating user stories based on some discussions and conference pages, generate tests, yeah, and so on. So, yeah, #4, lane #4, this is our developer in the loop coding. So, this is
+coding work, understanding repositories, writing code, refactoring, debugging, reviewing pull requests. So this is where Cursor and GitHub Copilot are strongest. Yeah, they are default default default tools.
+for this lane. Yeah, and the last but not least, lane #5 is still see orchestration and quality. So, this is where we move beyond the coding, like requirement readiness, some business analysis workflow, QA workflow, testing, implementation, yeah, even even some implementation.
+modernization and cross-functional delivery process. So this is where it called me because it becomes very interesting, especially for structured SDLC workflows. Yeah, because...
+It has it has it has capabilities to create a really, really strong workflow of agents with and even make it autonomous, like you using some triggers from other systems to trigger.
+these workflows based on some based on some events. So yeah, and we also can build something similar in GitHub pilot. Yeah, and we will discuss it a bit later in some integrations and trade-offs comparison.
+So, yeah, but now the important key, the important takeaway is this: so, yeah, choose the lane first, yeah, and then...
+choose the tool. So yeah, because yeah, we can do.
+Yeah, to be, to be honest, we can, we can do, we can do everything with...
+For example, code me or maybe GitHub Copilot with MCPs. Yeah, but probably it won't be the most effective way. So yeah, but let's move on to some specifics like integrations.
+So yeah, now let's talk.
+At this.
+At this stage, so one of the biggest factor in the effectiveness.
+This context, yeah, and the best model in the world is not helpful if if it cannot access the information that you need, and the...
+and do some things in systems that you need. So yeah, so let's look at the landscape. So what we see immediately is that coverage is broad, but it's not identical. So some tools have stronger Atlassian connectivity.
+Yeah, for example, like, like Kovar, so yeah, they have native integrations with the Atlassian. So, yeah, and GitHub compiler, we have MCPs that can be.
+That can be utilized, yeah, and...
+Yeah, Microsoft, yeah, Microsoft Compiler and ChatGPT also have.
+have some connectors to Atlassian. So yeah, and some of them have stronger Microsoft connectivity, like Microsoft Copilot. Yeah, some of them optimize for GitHub, some of them primarily will work primarily with the local repositories.
+Some rely heavily on MCP integrations. So yeah, and the important lesson here is the tool with the most integrations is not automatically the best tool. So yeah, the real question is, does it have access to the systems required for your workflow?
+Yeah, and the...
+And one more point beyond the axis is like...
+Mm.
+I would say like user, use user friendly tool and convenient tool for for your purpose. Yeah, for example, for example, for guys who are not working with the code. So yeah, probably some ID or ID.
+AI tools, so yeah, they they won't they won't be like the best choices because this is not a not not convenient experience.
+So, yeah, for this purpose, maybe tools with with more user-friendly user experience can be can be better.
+So yeah, for example, if your workflow lives mostly in Jira and Confluence, Rover may be a very natural choice. So.
+If your workflow, you've seen all Outlook, Teams, SharePoint, Office documents, so Microsoft Copilot or maybe ChatGPT that has all the connections to this system. So yeah, they provide more flexibilities.
+So, yeah, if your workflow is quote-centric, so then Cursor or GitHub Copilot or CodeMe may provide stronger value, so...
+When a relating tool always start with the context availability, yeah, and...
+About the cursor, so here is interesting.
+interesting situation. So yeah, SUSUMAC, so in integrations, so we have.
+Yeah, we have just like just Atlassian.
+Yeah, and...
+local GitHub connectivity. So yeah, for now we don't have a...
+We don't have MCPs.
+Uh...
+Accept plus MCP for cursor, so yeah, but for GitHub Copilot, so yeah, we have we have more MCPs, so we can we can use.
+We can use GitHub MCP, Figma MCP, Mabel MCP, yeah, and the...
+And other approved, approved MCPs.
+So yeah, in this case...
+If you are building some...
+PDLC workflows. So yeah, probably.
+Probably GitHub Copilot will be.
+bit more stronger than cursor. Because yeah, unfortunately for now we have just.
+Just of last time, MCP approved for for for cursor and available in cursor.
+I.
+Yeah, that's it for integration part. Let's move on to capabilities. So yeah, I see a hand, Patrick.
+
+Patrick Behnke   23:09
+Yeah.
+
+Eugene Semenyuk   23:09
+Go ahead, please.
+
+Patrick Behnke   23:11
+I was wondering if there was, I see the list of current toolings. I didn't know if there was any updates on the clock code type CLI.
+Type items, if there's been any updates with those.
+Or VS Code CLI, Copilot CLI, and stuff like that, too.
+
+Eugene Semenyuk   23:28
+Oh.
+Yeah, actual good question. And I say no, we have discussions about this. So yeah, probably, Vlad, do you know any, do we have any news regarding, quote, quote?
+Have you heard something?
+
+Nicholas Crowley   23:51
+This is Nick. It's in progress. We're making good progress there. I think it's just a matter of enabling it. So the access for everyone. So I'm continuing to follow up, but we are getting there. No ETA yet.
+
+Eugene Semenyuk   23:52
+Or Nicholas.
+Okay.
+Uh-huh.
+
+Patrick Behnke   24:09
+Awesome, okay, yeah, I have a couple of workflows and whatnot I've been playing with and excited, look forward to start using it.
+
+Nicholas Crowley   24:18
+Yeah, and I'll put I'll put a chat or a link in the chat to the Epic.
+with the tooling that we're working on, so you can see it's starting to get updated better and have a little better visibility.
+
+Patrick Behnke   24:31
+Thank you.
+
+Nicholas Crowley   24:32
+Sure.
+
+Eugene Semenyuk   24:34
+So, yeah, and regarding code, so yeah, it will be really awesome if we have it, so yeah, and definitely, as we have it, so we'll conduct.
+Yeah, we will conduct some workshop regarding code code, like how to how to utilize it for for PDLC tasks, like, and and yeah, and we hope that we...
+We will not have problems with limits, yeah, like with Cursor, because, yeah, for now, unfortunately, Cursor, they've been more limited than GitHub Copilot, so, yeah, and I hope we won't have such such issues with closed code, but, yeah, from my perspective, closed code is...
+Like.
+Uhh...
+one step and one level above.
+the cursor and GitHub Copilot.
+Okay, let's...
+Yeah, and definitely, we will update this metrics once we gather, uh, got caught.
+Okay, let's move on to capabilities. So maybe the most interesting part. Yeah, I want to stress one thing before we discuss this slide. So yeah, this is not a benchmark. So this is not saying like tool A is smarter than tool B.
+This is simply showing where each tool appears to fit best today. Yeah, for example, robot scores very strong for all knowledge discovery. That makes sense because it's deeply connected to Atlassian context, like Microsoft Copilot scores very strongly for Microsoft productivity scenarios.
+So, it's pretty good with the...
+and analogy in meeting transcripts and doing stuff like that. So yeah, and again, that is expected because it operates directly within the Microsoft ecosystem. So yeah, ChatGPT agents score strongly for course tool reasoning and workflows.
+Orchestrations, yeah, but they have some limits, yeah, and we'll discuss it a bit a bit later.
+So, yeah, and...
+This is obvious, yeah, but cursor and GitHub compiled natural dominating coding scenarios, yeah, and code me becomes.
+Like.
+Yeah, it becomes available when we move into structured PDLC workflows. Yeah, because we have opportunities to connect agents to some strong workflows.
+Yeah, to make some quality focused process. So yeah, when people ask, can can tool X do this? Yeah, so the answer often is yes. Yeah, but the better question is which tool was designed to do this effectively. So, and this is what this slide helps us.
+Understand.
+So, yeah, if so, for example, if we if we are thinking about some some small assistant for like for one task, so yeah, in this case, yeah, probably the best choice will be some.
+some small agent in Rovo, Microsoft Copilot, ChatGPT. So yeah, if it's connected with code, so yeah, it will be better to use Cursor or GitHub Copilot. So yeah, but
+Yeah, I see a hand from Jurijs.
+
+Jurijs Markelovs   28:39
+Yeah, you could have finished, but, but what's the factors behind that? I understand that native connectivity, like a robot to Atlassian products, co-pilot to Microsoft products, but if we're using the same, if they're using the same LLM models and versions specifically.
+
+Eugene Semenyuk   28:49
+Oh.
+
+Jurijs Markelovs   28:59
+What is the key factor affecting effectivity, or I don't know, performance of each one of these tools? Basically, the question is like, why if we're using the same LLM models?
+
+Eugene Semenyuk   29:03
+Yeah.
+So, yeah, models can be the same, but settings for these models, so they can be different, yeah, and the limits for these models.
+And some retrieval augmented generation mechanisms for these models. So, yeah, and this is this is a pretty good question because, for example, Cursor and GitHub Copilot, so yeah, they they use the same models.
+Like, yeah, so they can use the same, for example, opus opus module model, and yeah, but...
+The behavior like the way high.
+
+Vlad Grubman   29:59
+Eugene, do you mind if I take a stab at this?
+
+Eugene Semenyuk   30:02
+Yeah, sure.
+
+Vlad Grubman   30:03
+Thank you. So you're right, models are the same. I usually use the word harness. You can use anything else. It's really everything around the model is different in different environments. That's why I use the word harness. So you may be using the same.
+Let's say we're talking about Claude models, or you're talking about GPT models, you're using the same GPT 5.5 model, you're using the same Opus 4.8 model, but the way you're using it from the chat interface, so ChatGPT or Claude chat window.
+is going to be different than if you're going to use it from Cloud Code, because the harness will be different, the system prompt will be different. The context that is sent along with your prompts will be different. The way that your prompts and the way the history of conversation is treated is different. I don't know if you've heard about perplexity.
+It's a company that built sort of sort of a discovery slash knowledge thing. They don't have their own model. They use existing models. They use Claude models, they use GPT models, they use.
+I think some open source and some Chinese models. And the way they build harness around it, the way they build system prompts, and the way they interact with this model is very, very different from the standard GPT or anthropic experience. So think about it this way. Every model by itself is an engine, but you can build a completely different car around the same engine.
+And it will perform differently for different tasks. That's why it's really why this kind of conversation that Eugene is bringing is really important to understand, because even though the models are models are similar or same in terms of capabilities, the way the harness is built around it is completely different.
+give you a practical example that is really relevant to the world you live in. Microsoft Copilot, the Copilot, the 365 Copilot, whatever they call it these days, I don't know, every week is a new name. They use the same GPT and Opus models or Cloud models rather.
+
+Eugene Semenyuk   32:16
+Thank you.
+
+Vlad Grubman   32:22
+than everything else. But the way they harness them is very different. The so-called thinking juice or how hard model thinks about your ask is different between Copilot and a regular model. This is why you may ask the same question from Microsoft Copilot.
+Let's say you have a Word document, a large Word document, something like a PRD or something like, I don't know, a document, something. You ask Microsoft Copilot a question about this document, you ask ChatGPT and you ask Claude, you're gonna get similar answers from ChatGPT and Claude, but very different from Copilot because the...
+Level of thinking is different from where you are with the other two models, and it and it and it's just it's not just a single variable, just it's not just the level of thinking. There's, like I said, there's system prompts, there's other things that go into play, that's why it's it's convoluted.
+We have a hand up, Byron, please go ahead.
+
+Eugene Semenyuk   33:23
+Mhm.
+
+Byron Purdy   33:24
+Yes, just to piggyback on yours question a little bit, more of a question around balancing the like pay frontier models with open source models. I was reading a little bit about that Nemo Tron 3 Super that Nvidia released as open source. Are we getting an opportunity to look at any of the open source?
+offerings.
+
+Vlad Grubman   33:56
+Not sure who can answer it. I'll try. Feel free to stop me. So which whatever is whatever is approved is available. It's either in.
+
+Eugene Semenyuk   33:58
+Yeah.
+
+Vlad Grubman   34:08
+Code me or whatever other tools you have. I know cursor has some models which you can.
+sort of trick cursor to interact with those models in a different way. So I think these are your only options. Everything else, I don't think anything else has been approved.
+
+Byron Purdy   34:29
+Thank you.
+
+Vlad Grubman   34:29
+But I am open to stand corrected if somebody knows more than this. I know some people have access to bedrock models, some more models than others. I can't speak to that. I just don't know enough.
+
+Eugene Semenyuk   34:46
+So, yeah, and in this way, so yeah, please use like enterprise licenses, like enterprise models, like not, not, not, not personal open source tools.
+So, yeah, yeah, especially for project work. So, yeah, for personal experiments, yeah, you can use anything, yeah, but project work, yeah, please use enterprise licenses.
+Like, for these tools, or if you have some other tools, yeah, for example, I know that guys from from class or they have project Bob, so yeah, but as I know, this is also enterprise tool with enterprise license.
+So, yeah, and yeah, in this way, so yeah, if we use Enterprise license, so yeah, we can, yeah, we can be sure that our information, our code won't leak into.
+Into, yeah, into...
+Well, then, to other users.
+So, yeah, but uh, yeah, this question, like...
+Yeah, I mean, the question about the tools and models, so yeah, this is really, really important, yeah, and I...
+I guess, yeah, that answered it, and I...
+Yeah, that's probably it. Move on. So yeah, now I'd like to speak or maybe talk with you about the limits. So this is quite an important topic because, yeah, basically all of these tools use the same
+The same models, yeah, but the harness, as what mentioned, is different. So, some features, some settings for these models, some mechanisms like with real augmented generation. So, yeah, in
+In each tool is implemented in different way, so yeah, and let's...
+Let's speak about the limits. So yeah, we probably can go one by one.
+So, like a robot, Microsoft compiler, ChatGPT, and so on. So, yeah, speaking about the robot, so yeah, we already mentioned, like, where is...
+So, for what task it is, it can be a good choice, yeah, but it also will be good to know the limits.
+So yeah.
+Yeah, as you may know, we can, we can, we can use multiple agents together, so yeah, in the role we can create sub-agents and...
+create, for example, one orchestrator agent and some small simple sub agents. So yeah, in this case, Robo allows us to do some small SDLC, PDLC orchestration.
+So yeah, we can also utilize.
+Jira automation for this purpose, yeah, and we can make this this agent to be autonomous using.
+Using this.
+And your automation, so we can set up some triggers.
+And yeah, if some condition met, so we can we can start.
+Some workflow of agents, so yeah, but we limited with the integrations, so yeah, we...
+Yeah, for example.
+In A Robo, we cannot, we cannot, we cannot work with code, so we we can just read some.
+pull requests, data. So yeah, and I don't think that.
+It will be really efficient in this in this task.
+Ahh.
+Yeah, let's move on to.
+So, yeah, in the in the Rover, so yeah, the main limit is integrations.
+And maybe MCPs. So yeah, for now they are not available for us, for for for for robot.
+So yeah, let's move on to Microsoft Copilot. So yeah, if already is, yeah.
+
+Jatin Bagga   39:31
+Sorry, sorry, just just one thing. I, Eugene, I, and I feel like Brian also asked that, Byron, sorry, also asked that question, but like a knowledge search here, you are strictly restricting it to just like Teams, SharePoint, Slack, Outlook, or are you talking about other knowledge searches as well? Like, what can you just one more time just double click on the knowledge search part itself?
+
+Eugene Semenyuk   39:45
+Yes.
+
+Jatin Bagga   39:54
+Like, can I take Main Street content and sort of like put it on some agent or something if I wanted to, and like scrape data and then use that, let's say for ChatGPT, is that something that's available to us? Is that constrained today? That's a part that I just want to understand when you say knowledge search.
+
+Eugene Semenyuk   39:55
+Uh-huh.
+Yeah.
+Uh...
+So, yeah, could, could you, could you please, like, elaborate a bit your your your question?
+
+Jatin Bagga   40:23
+Yeah, so like for instance, like when you say knowledge search, right? So like you're showing a fitness fitment between let's say ChatGPT or let's say Robo and knowledge search and it's a three. That's amazing. So like, are you saying that maybe just we've not explored it, but like can I scrape data? Can I get the data, let's say not just out of like Team Slack, Outlook, which you know, like the common.
+
+Eugene Semenyuk   40:24
+Not sure.
+Mhm.
+Uh-huh.
+I.
+
+Jatin Bagga   40:44
+or JIRA common contenders. Like, let's say one main has something called Main Street, right? Like, that's our main page. It's an intranet portal. I don't know if you've seen it or not, but can I scrape data off of that to build an agent itself, right, using these tools? You know, there are a bunch of other sources within that. I'm just giving one example.
+
+Eugene Semenyuk   40:51
+Okay.
+Uh-huh.
+
+Jatin Bagga   41:04
+I know externally we are constrained because of security and other reasons, but what about internal assets where there's knowledge stored internally? Does that help at all?
+
+Eugene Semenyuk   41:04
+Mhm.
+Play.
+
+Nicholas Crowley   41:15
+Jatin, can I help with that specific use case? Just for some context, we're in the process of moving our Main Street to SharePoint as the underlying system. So that will enable a lot of that data out there. Should be a good use case.
+
+Eugene Semenyuk   41:15
+Yeah, that's.
+
+Jatin Bagga   41:16
+Yes.
+Oh.
+Yeah.
+Okay, great. So if everything does go to SharePoint, and SharePoint we do have access, then the world is a nice place then. Okay, cool. I think that answered that part of the question. Thank you.
+
+Eugene Semenyuk   41:30
+Uh-huh.
+
+Nicholas Crowley   41:35
+That's right.
+
+Eugene Semenyuk   41:41
+Yeah, thank you, Nicholas.
+Yeah, and thanks for further question.
+Uhh...
+Yeah, I forgot where I where I stopped.
+Yes, so let's probably move on to Microsoft Copilot.
+So yeah, as you may know, so in Microsoft compiled, you can also create some agents. So yeah, and frankly speaking, they are not like true agents. So yeah, they usually act like custom GPTs.
+So, you can you can connect some some tools as data sources, so yeah, they they can retrieve data even from even from confluence and JIRA. So, yeah, but
+Yeah, but they they won't be able to to write something.
+Like, maybe create items, update them, so yeah, but they can read information like from from Confluence, Jira, from Microsoft Services, yeah, and then then provide some.
+some information and guidance for you. So, yeah.
+Let's move on to ChatGPC agents, so probably the most interesting part for us.
+today. So yeah, I've explored a bit these agents and capabilities. So yeah, this is really powerful tool. Yeah, it integrates with various of systems that we have at the moment. Yeah, but let's talk about the
+limits that we have. So yeah, unfortunately for now, we don't have opportunities to integrate multiple agents into some workflows. So we can use, we can create multiple agents and then create a conversation.
+And call each agent like 1 by one.
+Yeah, but in this case, we lost, we lost autonomy. So yeah, this is quite manual process when you need to call the first agent, then the second one, and the third.
+See about this.
+That, in this approach, you can create some kind of orchestration, but manual orchestration.
+Yeah, this is like the first, the first limit, so you cannot create integration. So, the second limit is...
+Trigger, so we cannot, we cannot trigger ChatGPT agents.
+Yeah, we cannot, we cannot trigger them like from from some other systems, like using some backhooks.
+And so on, like, like we have.
+Like, we can do in a robot or in code me, like trigger agent by some some request, so yeah, but we have some work around, so yeah, on our on our office hours, so yeah, we tried.
+We try to create a workaround using schedule feature, so you can you can schedule your agent.
+for example, to run it every hour. And as a first step of this agent, you can check some condition. For example, you can...
+you can search items that were updated from one status to the another status within last hour. So yeah, and in this case, yeah, if we have such items, so we will move next and
+all instructions will be executed. If not, so yeah, the agent will stop and won't do anything. So, and in this case, our agent will be executed every hour. And yeah, it can be workaround for such, for triggers.
+Yeah, but.
+Not sure how it will work with other systems, yeah, but with chat with with with Jira, so it can be good.
+good solution, like as a workaround, because you cannot, you cannot trigger ChatGPT agent from other systems, but you can use this schedule. So yeah, also,
+One more limit that we have here is GitHub. So unfortunately, we don't have opportunity to integrate.
+Organizational repositories.
+You can all, you can all on the Connect.
+Your personal repositories, so yeah, probably it will be fixed in next releases.
+So, yeah, but yeah, unfortunately, we don't have we don't have GitHub full GitHub integration here, so I know this is kind of bad news for for engineers.
+Yeah, but yeah, for other, so if you don't work with code, so your ChatGPT can be, ChatGPT agents can be good, good choice.
+And.
+Boom, boom, boom, boom.
+Yeah, and as I said, like orchestrations and workflows. So yeah, for now, for now we didn't have Agent Builder. Agent Builder, this is like one more feature from OpenAI. So yeah, they released it maybe one year ago or something like that.
+So yeah, this is a workflow editor, where and where you can.
+where you can connect some agents, create conditions, use MCPs, and so on. So yeah, but for now, this feature is not available. And I'm not sure about availability for us.
+So yeah, in our case, so yeah, we can't use ChatGPT agents to create some structured workflows, some deterministic workflows with some loops, if-else statements, which operators.
+Like using some variables to store something, yeah, to.
+To create, really.
+Complex, long workflows.
+
+Jatin Bagga   49:01
+We can or we cannot create that with the ChatGPT. I'm sorry I missed that.
+
+Eugene Semenyuk   49:02
+Yeah, and make.
+We, we, we, yeah, yeah, we, we cannot use it.
+
+Jatin Bagga   49:08
+And not, okay.
+
+Eugene Semenyuk   49:10
+Yeah, so we can we can we can create some some agents with with skills, so and.
+It can act as a like small workflow like this agent with scales. Yeah, but unfortunately, yeah, especially if you would like to.
+to build some end-to-end PDLC use case from requirements to implementation testing. So yeah, in this case, yeah, ChatGPT won't be able to provide us such opportunities because we cannot connect multiple agents.
+and organize these agents, like using some loops for them, some if else, if else statements. So if condition is this. So yeah, let's go to this branch. If not, go to this branch. So yeah, we have such option in the robot.
+Code me, yeah, and also can build something something in in IDs, like Cursor, GitHub, Copilot, and so on. So, yeah, but in ChatGPT, this is a limitation. So, yeah, but for some small assistant,
+This is a really good choice. So, ChatGPT Adrien has a really good user experience. Yeah, and it was a really exciting task for me to play with them and create some small assistance with different integrations. So, yeah, two.
+for some maybe functional tasks, so ChatGPT is very, very, very good. So yeah, but if you are thinking about building some cross-functional workflows, so yeah, ChatGPT can be can be bottleneck because because you cannot.
+execute this agent outside the ChatGPT. So, for example, in in in code me, so we can we can combine the agents. So, yes, some of agents can be in Robo, some of agents can be in code me, so and they can work together.
+Yeah, for ChatGPT and Microsoft Copilot, yeah, we don't have such such opportunity.
+To integrate with other systems.
+Yeah, and let's move on to our IDs.
+So, yeah, and yeah, I will I will speak about both of them. So, the main limitation for Cursor and GitHub Copilot is level of autonomy. So, yeah, you can you can create some complex workflows, build skills, agents.
+And even some orchestration for these pieces, but the main...
+Main challenge is, like, how to...
+How to execute it based on some event? Yeah, unfortunately, we cannot execute agents in Cursor and Copilot.
+remotely or based on some events because they live in our IDs, they live in our repositories.
+So, yeah, this is like the main, the main limitation, so yeah, but if you are building some...
+some workflows that you would like to run manually, and especially if they are strongly engineering workflows. So yeah, Cursor, GitHub, Koppula, so yeah, they will be the best choice.
+Yeah, and uh, yeah, for.
+For called me.
+Ohh.
+So, yeah, for code me, yeah, the main the main limitations are.
+integration. So yeah, it doesn't have all the required integrations, like, and all the integration that we have in other tools. Yeah, but I hope in the nearest releases, so we will have
+MCPs, yeah, and they will they will solve.
+Some of integrations issues, yeah, and from my personal, from my personal experience to...
+The main.
+The main limitation and maybe challenge in CodeMe is...
+The.
+Mm.
+Is complexity because, yeah, this tool designed as a...
+cross-functional agent orchestration, so where we can create really, really complex workflows with conditions, loops, branches.
+Oh.
+Like, use combine some deterministic logic like these conditions, loops, branches with the agents.
+Yeah, and...
+It provides.
+really good flexibility. Yeah, but at the same time...
+It's quite complex, so yeah, it requires some learning and...
+And, yeah, this is this is the main challenge. So, speaking about, yeah, we already spoke about integration, integrations, so we can trigger agents outside code me, yeah, for example, from Jira automation, as we did in our some some of our previous workshop.
+So we can trigger agents from GitHub, the agents and workflows.
+Yeah, and uh...
+So, yeah, they they can be fully fully autonomous. You can build some workflow and yeah, and forget about for forget about the tool, because yeah, it will execute it. It will be executed automatically and like provide you some some results in your systems.
+In GitHub, Jira, and so on, so on, yeah, you, you, you just need to.
+You just need to fix something, yeah, if...
+If something, if something breaks, so yeah, but yeah, complexity is is the main challenge and and limitation, yeah, and yeah, as you may see.
+The Microsoft integration, yeah, is also limited for now. Here, so yeah, if you would like to like analyze meeting transcripts, SharePoint files, so yeah, for now, it's limited in CodeMe. Yeah, but yeah, we hope it will be improved.
+in the future.
+So...
+Yeah, let's move on to our use case routing matrix. So this is probably the most practical slide into the presentation. Maybe not. Yeah, because now we are translating like
+List into some, some, some examples. Yeah, let's walk through some of them.
+So yeah, again, like some use cases and some primary default tool, yeah, and some secondary tool that can be used for.
+for such use case. Yeah, for example, for project status across Jira Confluence, yeah, if someone wants project status, decision tickets, project contacts, yeah, you can start with the robo. If broader synthesis is needed across additional systems, so then ChatGPT agents
+Can help, so if you need some...
+More complex logic, so yeah, you can you can go to CodeMe or GitHub Copilot or Coursor. So, yeah, if you, yeah, if you work with meeting emails, chat, document summaries, you can start with Microsoft Copilot, because that's that content lives inside Microsoft.
+365. So yeah, it works effectively with the Microsoft infrastructure and ecosystem. So if you need additional synthesis across systems, so yet again, ChatGPT agents can become the secondary option. So your weekly cross-functional
+Reports, so this is great, ChatGPT agents.
+use case. So because now we're collecting information from multiple places and creating narrative. So this is where reasoning and synthesis becomes become become more important than simply finding information, like for creating or refining Jira user stories.
+and creating some complex workflows that can be scalable, like starting from this and going to implementation, testing, and so on. So this is where Cody becomes very interesting, especially where requirements, testing, engineering, and
+other PLC workflows are involved. Yeah, and for implementing code from Jira tickets, so this is where Cursor and GitHub pilots should typically be default choice, because they operate directly within development workflow.
+So some pull requests and GitHub automation. So yeah, GitHub native work should generally stay GitHub native. So this is where GitHub Copilot and CodeMe often provide the strongest context. And design handles and test automation when
+Figma, testing assets and engineering workflows, need to connect some GitHub pilot and CodeMe become more stronger candidates. So yeah, the key message from this slide is simple. So we stop asking which AI tool should the companies standardize.
+on and instead ask which tools should be default for this particular task or workflow or problem or pain point. So yeah, those are very different questions. So yeah, that's
+That's pretty much it for me for today, so yeah, we have some some minutes left, so yeah, if you have questions, we can we can discuss.
+
+Jatin Bagga   1:00:54
+I just have one question, so nobody's asking, just we have 3 minutes. Vlad and Eugene, we can create sub-agents using like this ChatGPT, and you said Rovo, correct? Is skilled sort of under the agent that skilled part? Is that what we should consider as a sub-agent, or we just create like independent agents and then have one agent that's like an umbrella agent?
+
+Eugene Semenyuk   1:01:00
+Bye.
+Yeah.
+
+Jatin Bagga   1:01:16
+running the other agents as applicable. I think Vlad would know what use case I'm referring to, so just need to confirm, please.
+
+Eugene Semenyuk   1:01:26
+So, yeah, in a robot, we can use sub agents, so yeah, it's available for us, and skills in the robot, so they mostly look like integrations.
+
+Jatin Bagga   1:01:38
+Okay.
+
+Eugene Semenyuk   1:01:39
+Yeah, but for ChatGPT, we cannot use, we cannot use sub agents. So yeah, we cannot use one agent as a sub agent for another agent. So yeah, but in, yeah, but but in ChatGPT, we have skills. So they can act as a like some instructions. Yeah.
+
+Jatin Bagga   1:01:49
+Okay, got it. Got it.
+Sub-agent.
+
+Eugene Semenyuk   1:02:00
+Yeah, as an as a sub-agent.
+
+Jatin Bagga   1:02:02
+Okay.
+Okay, perfect. Thank you. That's it. This is great. By the way, guys, this is really awesome. Actually, synthesizing this in a concise way is really very helpful. So appreciate if you could just, I'm sure you posted it somewhere, but this would be really helpful to go back and look into. Thank you.
+
+Eugene Semenyuk   1:02:18
+So, yeah, I will I will convert this presentation to some some conference page and then share it with you.
+like to collect all the insights and thoughts.
+and so on. Yeah, and we have one minute left. So yeah, next Thursday, we will have retrospective session. So yeah, please. Yeah, yeah. Welcome, welcome to share. You're welcome to share your
+your ideas, your impressions, thoughts, and so on. So yeah, please join us on Thursday. So yeah, we will be glad to discuss with you some next steps and so on. And next week, next week, we will have a couple of
+demos from our AI native L3 teams. So yeah, they will demo their cross-functional PDLC workflows. So I guess, yeah, it should be inspiring.
+So yeah, let's pause here for today. Yeah, thanks a lot for joining us today, for active participation, for your questions. Yeah, and see you soon. Have a great rest of the day.
+Pai.
+
+Sujan Shrestha   1:03:44
+Thank you.
+
+Nicholas Crowley stopped transcription

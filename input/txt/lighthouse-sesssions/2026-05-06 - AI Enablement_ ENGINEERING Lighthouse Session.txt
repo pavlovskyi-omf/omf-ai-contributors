@@ -1,0 +1,723 @@
+AI Enablement ENGINEERING Lighthouse Session-20260506_145939UTC-Meeting Recording
+May 6, 2026, 2:59PM
+52m 53s
+
+Oleksandr Pavlovskyi   1:11
+Hello, guys, good morning.
+
+Jason Daggs   1:15
+Oop.
+
+Deepti Pathak   1:16
+Good morning.
+
+Oleksandr Pavlovskyi   1:21
+Right, how are you today, guys?
+
+Jason Daggs   1:26
+Super.
+
+Oleksandr Pavlovskyi   1:29
+Super, super, super good, right?
+And.
+Yeah, so today, as usual, we have two demos here from our EA champions. And also I have a good news for you guys, but let's leave it like a surprise till the end of this meeting. Yeah, so I'm going to take 5 minutes to share this with you.
+So let's give one more minute and before we start, guys, as usual, do you have any questions? Maybe you need some help? Have you tried to use webhooks?
+
+Jason Daggs   2:08
+EA.
+Yeah. No, I do have a question. I thought in one of the previous meetings you had mentioned me presenting something and I wasn't sure if I recalled exactly what that topic was you wanted me to present on. And so I haven't really prepared anything, but
+
+Oleksandr Pavlovskyi   2:21
+Yeah.
+
+Jason Daggs   2:31
+Maybe you can just let me know what I am signed up for and maybe I can just wing it.
+
+Oleksandr Pavlovskyi   2:36
+We talk about your curriculum.
+
+Jason Daggs   2:39
+Oh, right, right, right, right, right, right, yeah.
+
+Oleksandr Pavlovskyi   2:40
+Yeah, yeah.
+
+Jason Daggs   2:42
+Yeah, so I, yeah, so I do have that. I've got a confluence page.
+And so, if if you wish, I can just go ahead and go through that.
+
+Oleksandr Pavlovskyi   2:52
+We can start from your from your demo, yeah, and then move to Deepti. Deepti, are you OK?
+
+Jason Daggs   2:57
+Yeah.
+
+Deepti Pathak   2:59
+Yeah, I'm absolutely good with it.
+
+Jason Daggs   3:00
+Mute.
+
+Oleksandr Pavlovskyi   3:01
+All right.
+
+Jason Daggs   3:01
+Okay, yeah, yeah, yeah, either order for me as well. I don't. I'll be happy to.
+
+Muhammad Adnan Farooq   3:09
+Yeah.
+
+Jason Daggs   3:09
+I'm just glad to be here. How about that?
+
+Oleksandr Pavlovskyi   3:13
+It's, it's a big pleasure to hear that. All right, let's give one more minute. Yeah, let me check if the session is recording. Yeah, everything OK.
+
+Jason Daggs   3:18
+Yeah.
+
+Oleksandr Pavlovskyi   3:28
+Okay.
+Ohh.
+Since yes, we we we are ready to start, so Jason.
+
+Jason Daggs   3:36
+Yeah.
+
+Oleksandr Pavlovskyi   3:37
+Stitch is yours.
+
+Jason Daggs   3:38
+All right, give me just a second.
+I think, I think I need to change this. I don't know if I...
+Okay, well, let me just go to it.
+Rick.
+And...
+C.
+Share there.
+And there.
+And I think that, yeah, can everyone see my Guardians AI enablement page?
+Right.
+
+Muhammad Adnan Farooq   4:27
+Yep, we can.
+
+Jason Daggs   4:27
+Alright, so...
+What I wanted to do is just kind of go over briefly a curriculum that I developed for training our team on how to use CodeMe. And I know, you know, and we've been getting a lot of good ideas from the people who are teaching us CodeMe.
+And so I hope that this curriculum reflects that and also provides a useful resource for others to just kind of guide them through maybe transferring this code knowledge to their teams. One of the first things we had to do
+Was get everyone's permissions set up and updated, so...
+The first thing we did in week zero of our training is we did that right. I sent them to the sign-up page for CodeMe. Every one of them went there, filled out the ServiceNow request, and so yeah, we all were, and everyone got signed up in a week, so it was a...
+It was good in that regard.
+And so that's really the first thing I did. And then the next week we started with one of seven sessions.
+And the first session.
+And again, I'm not going to go into complete detail on each one of these, just maybe give an overview of each one, each session. But we have a session for overview, where we just click on all the icons on the left and say, well, this is, you know, this is for this, this is for that.
+And there's, you know, some hands-on exercises as well, where we kind of walk them through looking at some of the templates, right? And even starting a conversation with some of those assistants. So basic stuff just to get their feet wet.
+And again, the audience here are going to be people who are not developers, those who have, or more, let's see, what's the right word, either QA focused or more business requirements focused. So this is something that I think you have to keep in mind
+when presenting this curriculum, because they may not know a lot of the terms that we all know, because we're, you know, just so much more familiar. We've gone through a lot more training and hands-on than the others. So I always try to keep that in mind that they, and that the purpose of these sessions is knowledge transfer, so that they get
+The exposure to that, and so second session, so after we've done the overview, we, you know, go over the basics of using the app.
+We start creating assistance.
+And in addition to that, I also have started soliciting for use cases from everyone in our team. I don't have that here, but it kind of follows hand in hand with them creating an assistant on their own. And so
+That's something that, you know, that they're that the curriculum kind of allows them to do, I think.
+And then there's another point to this that we might want to make some changes depending on your experience. But data sources and knowledge base are important and can be very useful for creating agents, for example, that can be used to
+Teach a user how to use CodeMe, so...
+But I think it might be better to do integrations and tools first. So that's maybe one of the things I might, you know, I might change on the curriculum. Instead of doing data sources and knowledge bases as a third session, just do integration and tools.
+and then just switch those out. And then after, you know, after we're comfortable with that, with understanding what tools can be created and how to access those API keys that are absolutely necessary to integrate,
+That's, you know, that's something that I think that we might see some stumbling, just because, you know, it's kind of involved to set up a tool, to be quite honest.
+And then we go over the workflow system.
+And that's session 5. And I wanted to stop here and maybe solicit for some information, maybe if someone wants to, you know, just offline or something, send me some answer to this. But it seems like
+At this point, it might be a good idea to start introducing your team to agentic design patterns, the kind of repeating patterns that seem to pop up from different teams. For example...
+The workflow allows you to implement many of the basics, so it's not just sequential, right? You can do conditional and parallel and things of that nature. So, it seems like not just how to click the buttons, but maybe a more theoretical understanding of...
+of what kind of patterns this workflow can be used to create. I think that would also be a good addendum to this, but you know that's your mileage may vary.
+And then finally, we talk about, or session six, we talk about skills and the marketplace and
+And it does talk about, the curriculum does provide some tips for prompt engineering, but you know, I don't know, I might want to add more tips or again, kind of maybe replace this section with more, with a deeper understanding of how.
+to really create multi-agents, multiple agents, and get them to communicate with each other.
+And then advanced features, don't even know if we will get to this or if we will actually implement, have this session, but you know, it's just the final follow-up with some of the tools, the additional tools that are available, just kind of.
+rounding out the last bit of major functionality in the application.
+And yeah, you know, the idea is that by the end of this, they should be able to, on their own, create, you know, complete workflow, right, that accomplishes their task, whatever that that might be, depending on, you know, what the what their job function is. So,
+Um...
+This is, as far as I know, this is shared with everybody. Please copy and paste it. Feel free to ask questions or post comments. I'm always looking for constructive feedback on these things. So whatever you might find,
+That would be great. So let me just post this.
+
+Oleksandr Pavlovskyi   12:27
+Yeah, please post, yeah.
+
+Jason Daggs   12:29
+Alright, any questions?
+
+Oleksandr Pavlovskyi   12:32
+Yeah, Adnan, please.
+
+Muhammad Adnan Farooq   12:33
+Hey Jason, I think this is very good information Jason over here, right? So I'm just curious, Jason, right? Because we do also like, you know, EPAM already conducted some like, you know, code me like working session as well, right? So that's just like my advice, right? That should we need to include those sessions as well in the conference page just for their reference as well?
+
+Jason Daggs   12:34
+Yeah.
+
+Muhammad Adnan Farooq   12:55
+If they want to see it, like, you know, if they need to understand it, they can go through with that working session.
+
+Jason Daggs   13:00
+That is a very good question. Thank you for mentioning that because yeah, that makes perfect sense that that should be added. I'm not sure I know the link for that. If someone wants to post that in there and I'll add it to our guardians AI neighborhood, that would be, that would be great. That'd be great.
+
+Muhammad Adnan Farooq   13:19
+Yeah, because why I'm saying again, just in the Sukalya is already working on it, right? Creating these kind of a catalog for all the use cases and working sites, right? Like, you know, but I just wanted to, you know, if you already created a conference page and specifically for that code me, like, you know, maybe we just need to add all the reference pages that can help the team to go through with this curriculum, right?
+
+Jason Daggs   13:26
+Yeah, yeah.
+Yeah.
+
+Muhammad Adnan Farooq   13:39
+Cool.
+
+Jason Daggs   13:39
+Yeah, I think, yeah, I think that's right. Yeah, I think that's a very good point. Thank you. Thank you for that.
+
+Muhammad Adnan Farooq   13:44
+Thank you.
+
+Jason Daggs   13:45
+Um, any any other last questions?
+
+Oleksandr Pavlovskyi   13:52
+Yeah, as Edmund also joined into this discussion, yeah, you remember, yeah, on Monday we I mentioned that Sukalya is working on this important agent, yeah, so that's going to be great to build communication between you and her, yeah, and maybe to use your curriculum.
+Like a template, yeah, for future adoption, yeah, not only about the not only about your team, yeah, maybe just to add some context regarding to some other team and just tweak your program, yeah, based on the on the team specifics.
+
+Jason Daggs   14:14
+Yeah, yeah, yeah.
+Yeah, yeah.
+Right. And when we're walking through these, I always keep in mind that, okay, this, you know, I need to try to include references to Guardian stuff, but at the same time, some other team might want to keep in their heads that as they go through it, they want to
+
+Oleksandr Pavlovskyi   14:41
+Yeah.
+
+Jason Daggs   14:51
+include thoughts and ideas that reflect their team. So I, you know, I think it's generic enough so that anyone could mold it into that. But yeah, I don't think there's any guardian specific stuff in the curriculum itself. It's just how I present it. I think that that is that is that might be a
+A difference.
+
+Oleksandr Pavlovskyi   15:14
+Mhm.
+
+Jason Daggs   15:15
+Yeah.
+
+Oleksandr Pavlovskyi   15:16
+Cool, cool.
+
+Jason Daggs   15:17
+Yes.
+Okay, and that's it for me. So yeah, unless there's any other questions, thank you.
+
+Oleksandr Pavlovskyi   15:24
+Yeah, thank you, Jason. Yeah, great job.
+
+Jason Daggs   15:25
+Mhm.
+Oh, thank you.
+
+Oleksandr Pavlovskyi   15:29
+Okay, let's move on. Deepti.
+
+Deepti Pathak   15:35
+Sure, let me share my screen.
+
+Oleksandr Pavlovskyi   15:36
+Yeah, yes.
+
+Deepti Pathak   15:41
+Let me know if you all are able to see my screen.
+
+Muhammad Adnan Farooq   15:44
+Yep, we can.
+
+Oleksandr Pavlovskyi   15:45
+Yep.
+
+Deepti Pathak   15:45
+Okay, all right. So before I dig in into it, let me give a quick introduction and then I'll go through the details. So I'm Deepti Pathak and part of Data Factory Platform team in Adnan Group. So today I will be demonstrating an automation we built for EKS upgrade governance. So quick context before I dive into it.
+into the actual automation. So what is EKS, right? EKS is an elastic Kubernetes services and it's an AWS managed Kubernetes platform which is used to run containerized workloads, right? So basically AWS regularly releases new Kubernetes versions.
+and it deprecates the older versions. So within the Kubernetes, we have different clusters, add-ons, and the node groups that needs to be continuously supported. And it also needs to be like secure, right? So we have to continuously monitor the upgrades so that it can be supported and have it like secure. So.
+When we have multiple AWS environments, multiple AWS accounts, tracking each of these upgrades for the clusters, add-ons becomes like more manual effort and it difficult and it becomes more reactive. We are like, okay, we have to go to each account and we will be saying, oh, we have the upgrade. Then we kind of keep a note of it and then we forget. So.
+It's more reactive, right?
+So what we are trying to resolve here is that the problem statement is basically is whatever is the manual efforts in identifying those upgrade requirements, we are trying to resolve that. Then we are also the lack of centralized visibility. When you have multiple accounts or multiple environments, you don't know all the details. So we are kind of trying to centralize those details.
+of different version trips. One more thing I wanted to let know is like when AWS also suggests like, hey, we are going to be out of date of this, we would like you to upgrade it to this specific version. So sometimes blindly without even seeing whatever is AWS is suggesting us, we kind of upgrade it. Okay, let's when we are upgrading, let's go and upgrade it to the latest version. So.
+That's like too much of A drift from whatever is AWS is suggesting it. So we kind of check that part as well. And we also do not have any consistency of way to track or assign actions. So with this automation, what we are trying to achieve is instead of manually tracking this, we have built an automated governance.
+solution that continuously scans the EKS environments, identify the upgrades gap, and creates the actionable insight for the entire team. This is very scalable and reusable as well. So before I jump in into the actual demo, do you all have any questions?
+All right, so this is the high level flow. So let's say we are like the engineers, we, so this is basically totally built on the GitHub action workflow. Why I haven't used the agent here is because it's not, we are not making the decision, we are just like, it's more of more of in a schedule base.
+
+Oleksandr Pavlovskyi   18:35
+Mhm.
+
+Deepti Pathak   18:53
+And it's like it's a governance task, not like we are making a decision and we are asking it, but I definitely later on, I would definitely will share share my further enhancement towards it. But for now, just to let you all know that it's just a GitHub action workflow. So it's a schedule base, so every morning it can.
+run on its own or we can manually trigger the GitHub action flow. It fetches the GitHub secrets. Basically all the secrets we have put it inside the GitHub and we have built a Python code which is going to go and log in into the AWS, fetch the EKS environments, whatever the clusters we have it and then.
+On top of that, it creates the Jira ticket. If it sees that, okay, that specific EKS cluster needs to be upgraded or the add-ons needs to be upgraded. And it also notifies the Slack. And that's how we will be able to track the details. So just to, here is the cluster, for example. So see, this is my AWS environment and my EDS dev. And similar to this, we have like a.
+lots of accounts, right? Like we have hundreds of accounts. So tracking each of these will be so much difficult. So right now, we just took an example of our account in which we work and this is how it looks like right now. So it says like currently our version is 1.3. It needs to be upgraded and the support from the AWS is going to get.
+ended by March 22. And the upgrade policy is extended support. So this is how it looks like. Similarly, if we go inside the CKS, we have other things as well, like node groups and add-ons. And it also tells you what are the add-ons we need to be upgrade and all those details. So.
+think it like when we have multiple work and then we are again going and manually checking all those things. So that's what we are trying to upgrade it. So coming back to my conference page.
+Any questions, by the way, for the flow? If not, I'll just directly go into the demo.
+
+Chantal Justamond   20:53
+Ohh.
+I do have one question. Is the workflow going to do the upgrade as well or just going to create the Jira ticket and then a human is going to oversee the change?
+
+Deepti Pathak   20:57
+Sure.
+We want it to be like not, definitely it can do it, but I just kept it just to like be as an awareness and for the tracking because we do not want to, you know, just go ahead and do the action towards it. But definitely that's doable. Ideally in ideal scenario, if you know your account, you can go ahead and create your PR. We don't have to deploy the details, but at least PR can be created with the code.
+
+Chantal Justamond   21:17
+I'll help you.
+Yeah.
+
+Deepti Pathak   21:31
+and human can just review it if everything looks good or not. But right now, it's only till JIRA has been created, and then it goes into the backlog for you to track it.
+
+Chantal Justamond   21:39
+Okay.
+No, no, perfect. I was just getting a little bit scared. My spider senses were going off.
+
+Deepti Pathak   21:43
+Oh no, I did want it to do that, but I was like, okay, let's hold on till there. But yeah, I am with you on that.
+
+Muhammad Adnan Farooq   21:45
+You know.
+
+Chantal Justamond   21:51
+Ask me.
+Yeah.
+
+Muhammad Adnan Farooq   21:53
+Yeah, yeah, so there's there's a lot of critical jobs are happening, and I cannot afford that, right? That machine can make the decision. Yeah, so we just need to scan and, you know, somebody needs to review it before we can automate that, putting the code into production, but like somebody needs to review it before.
+
+Deepti Pathak   21:59
+Yeah, Adnan will be like, Deepti, stop it. So yeah.
+
+Muhammad Adnan Farooq   22:12
+So, that's the check, and then that's the...
+
+Chantal Justamond   22:14
+Yeah, yeah, totally agree. Awesome.
+
+Deepti Pathak   22:17
+OK, perfect.
+
+Sam Jayavelan   22:17
+And is also DevOps involved in this?
+
+Deepti Pathak   22:22
+So, I'm part of DevOps, but mostly under Adnan's team. Adnan, please go ahead.
+
+Muhammad Adnan Farooq   22:24
+So.
+So, so, like you know, Sam, this is a this Deepti is part of the DevOps team, right, for my team, so, so we, so whatever she, but you know our setup is a little bit different that we have, like, you know, I have a dedicated support, like, as a DevOps in my team built in, so, but we we we normally share this information with Bhavani Seem as well to keep.
+
+Sam Jayavelan   22:29
+OK.
+Okay, okay.
+Got it.
+
+Muhammad Adnan Farooq   22:48
+them in the loop as well.
+
+Sam Jayavelan   22:50
+Yeah, just then it helps, that's all, because these are like much more large-scale changes. Thanks.
+
+Muhammad Adnan Farooq   22:57
+Yep, yep, yep.
+
+Deepti Pathak   22:59
+Okay, so let me do a quick demo. I am inside the action since we have the workflow. Let me go to this.
+So I just have to do run workflow. So basically here, this can be very dynamic and literally we can, everything is, nothing has been hard coded so we can add as and as whatever the variables we have to pass it. Right now I just am passing my Jira project key. So in case if you want to create the ticket in your project key, you can.
+False right now, I do, I do want to create the Jira ticket, so let me just change it, run with right, sorry, run.
+So I want to make it to false and then I do want to send a slack notification as well. So let me trigger this workflow.
+During the demo things, I literally ran this a few minutes ago, so if it does not run, I do have the history of the logs to show, but yeah, I think it's running. All right.
+All right, so let me walk you through what are the details we see. So right now, I ran this particular Python script for our ER dev environments. So in that dev environment, we have two clusters. One is EKS DL infra, and also we have QA cluster.
+It does say that this is the reason what is the cluster and current Kubernetes version and what is active now. It says cluster version assistant. So basically it says that this is my current version. The recommended version is 1.35 and the latest support we have it is 1.3 as well.
+It also gives all the detail like support status is in the extended support. Giving us a node that it needs to be upgraded from 1.3 to 1.35 and Jira required as well. Then a node group is all active, so hence it's not creating any Jira. Then this is part of a...
+add-ons which we are using it inside the cluster. So we have these are the add-ons we are using. It also tells you what is the current version and what is recommended. So it looks like see if you see current and when the recommended is all same, we are not creating any Jira. But if you see it for the second one, which is EBS CSI driver, this is getting changed, right? One.
+changing it to 1.5 minutes. So this needs to be upgraded. So we are going to create a Jira ticket for this. So we have two action item for the dev cluster. One is to cluster upgrade and one is the add-on upgrade. So action required is 2 and rest is like all good. So this is how it also created the Jira as well. And if I can go here.
+to the Jira, it created my Jira with the details of what is the NY, sorry, what is the cluster name, whether it's dev or not, it's creating the labels. It is also telling us a developer, what is the action item and the task is going into the backlog just for the tracking purpose here.
+Similarly for the other cluster as well, I have another detail and this creates another ticket with a DFB 361. This is for the QA cluster. And then I do get the Slack notification as well. I didn't want it to have the Slack too noisy to share all the details, so it just tells us that, hey,
+The governance scan is completed and these are the details. Basically, it tells you that there are top field, these are the two things, two action items we have to do it. And if you want to further see the details, please go ahead into this, open the link and review all the details here. If anyone is interested in going further to get the details. So the same information, you can again go and fetch it from the GitHub as well.
+What else I should see? Yeah, I think that is all. Any questions? Yeah, and one more thing. Sorry, go ahead.
+
+Chantal Justamond   27:28
+Yeah, come on. How were you able? How were you able to add the the JIRA? I thought the MCP server was off in GitHub.
+Were you able to like get that activated or?
+
+Deepti Pathak   27:42
+I already have Jira integration for my other part, so I, yeah, for me it was, and I did it through my production. I don't know if like for the sandbox it's not enabled or what I already had that enabled.
+
+Chantal Justamond   27:46
+Yeah.
+I see.
+Lucky you.
+
+Mikhail Makarov   28:01
+Alexander, I believe we have both, right? We have Jira Conference APIs enabled for everyone, and we also have GitHub MCP available as well.
+
+Oleksandr Pavlovskyi   28:16
+Yes, but we need to investigate this, as you, as you saw here, the white list is pretty strange here, so need need need need to double check. Yeah, it's definitely available for GitHub Copilot, yeah. I think we don't have any limitations there, but...
+
+Mikhail Makarov   28:27
+Oh.
+Mhm.
+
+Oleksandr Pavlovskyi   28:34
+As for other services, yeah, we need to check.
+
+Mikhail Makarov   28:38
+It's also, it's just for Cursor only. They have separate set of controls inside Cursor Enterprise panel, so someone need to go there and enable additional MCPs.
+
+Oleksandr Pavlovskyi   28:42
+Yeah.
+So in this case, yeah, in this case, you spoiled my news. Yeah, so these MCPs are already available for us.
+
+Mikhail Makarov   28:52
+White list themselves.
+
+Oleksandr Pavlovskyi   29:04
+So, we can use them.
+
+Jason Daggs   29:06
+Oh, for which services?
+
+Mikhail Makarov   29:08
+Not all of them, yes. We have a list. Alexander, you may post a list in the chat, I think. Again, your mileage may vary because depends on the tool, it will or will not work. For example, it should work for VS Code, it should work as a standalone MCP or
+
+Oleksandr Pavlovskyi   29:16
+You?
+
+Mikhail Makarov   29:28
+I don't know, let's say in ChatGPT probably, but then for course there is a separate set of controls that need to be adjusted.
+
+Oleksandr Pavlovskyi   29:32
+No, no.
+As for ChatGPT, the workspaces are not available and kind of we can configure, yeah.
+
+Mikhail Makarov   29:40
+I see. OK, makes sense. Then, that's a separate conversation that we need to have, like, because some tools they should have certain features enabled to allow them to use MCP servers, but MCPs are generally available.
+
+Oleksandr Pavlovskyi   29:56
+Yeah, yeah.
+Yeah, and turning back to Deepti topic, so...
+
+Deepti Pathak   30:00
+Alright.
+Okay, all right. So one more question you can ask, which I'm already by default asking the question and answering it is like, you can ask, like, let's say I again ran it, or like tomorrow again, the same same EKS is going to run, right? So what if it creates that duplicate JIRAs, right? I don't want to create another JIRA for the same thing. So it does check that if the JIRA is already created, it goes and it checks for it, and if it's already there, it just skipped that.
+that part as well. So it does not create a duplicate JIRAs as well. What else? I do want this to be as a further enhancements to be connected to the code me. So basically, so since that's, I'm very much eager to learn on the webhook part of it. So what I would like is like.
+This is right now scheduled and it run and it manually can run as well. But we can connect this using the CodeMe assistant. And let's say any user or DevOps person or the platform engineer wants to search or like, hey, what is the condition for this AWS account? Can you please check if there is any upgrades needs to be happen? So it can trigger this workflow.
+and it can share all the details about that as well. So that will make it like more from like a user intuitive as well. So this is the other enhancement I would like to do it once I get to know about the CodeMe webhook part of it. That is all from my side. I'm open for any questions.
+
+Oleksandr Pavlovskyi   31:24
+Mhm.
+Deepti, could you please tell more about the steps where you do this governance assessment? Yeah.
+
+Deepti Pathak   31:36
+Like.
+Steps like how, what, what code I have put it in.
+
+Oleksandr Pavlovskyi   31:41
+Yeah, yeah, what do you put in here to Jira to Slack?
+
+Deepti Pathak   31:42
+Okay.
+Yep, so...
+
+Oleksandr Pavlovskyi   31:46
+What is happening on the foot?
+
+Deepti Pathak   31:48
+Yes, yes. So this code is totally built using the GitHub copilot. I literally shared the idea, the vision, and it would have take it would have took me like couple of days to just build it if I'm building it by myself. But using the copilot, I just shared the vision and it shared all the all the codes. I did couple of validation, but this is where my code is.
+I have a EKS scan dot PY and it's my Python script.
+
+Oleksandr Pavlovskyi   32:14
+Mhm.
+
+Deepti Pathak   32:16
+And this is where all the details I have it. I have put all my secrets inside this. And again, this is right now just doing an AWS session token. I would like that to be changed to OIDC, but not now, later point of it. Other than that.
+Yep.
+
+Oleksandr Pavlovskyi   32:39
+So, it's...
+
+Deepti Pathak   32:42
+You want me to go through each line of code? I can. I'm just like, yeah, yep.
+
+Oleksandr Pavlovskyi   32:42
+All right.
+No, no, no, no, no, no, no, I'm just just interesting here regarding to the part, yeah, so you use this script, yeah, and then you analyze the output, yes, I understand, yeah.
+
+Deepti Pathak   32:50
+Yeah.
+Yes, yes, and the whole thing was done using the GitHub Copilot chat. I asked for it. It even created all the files for me. I just wanted to be lazy to ask and check if everything is being done by that or not. So created the repository, asked like I would like to create this file.
+It needs this YAML file. This is my all the details. Please build it. So it took couple of runs, but I finally it was able to deliver. I also use the chat GPT as well to compare whatever the output we have it inside this particular EKS as a screenshot so that it analyzes the image and then I was verifying whether the output which is coming from.
+From the from the Python script, is it running fine or not? So all those validations was also done using with the help of the tools I'm using it so.
+
+Oleksandr Pavlovskyi   33:47
+So, sorry, once again, so did you optimize this step or you doing this manually?
+
+Deepti Pathak   33:54
+Nothing manually. I did everything using the co-pilot chat and the chat GPT.
+
+Oleksandr Pavlovskyi   34:00
+Copilot agent, you mean, yeah?
+
+Deepti Pathak   34:02
+Yes, yes, co-pilot agent, yes, yes.
+
+Oleksandr Pavlovskyi   34:03
+Yeah, yeah, OK, because if, if, ohh, OK, JT.
+
+Deepti Pathak   34:06
+And the ChatGPT as well.
+
+Chantal Justamond   34:06
+Yeah.
+
+Oleksandr Pavlovskyi   34:11
+Cool, cool. Yeah, Chantal, please.
+
+Chantal Justamond   34:14
+Deepti, when it runs, are you creating like, like how many infrastructures is scanning? Like for example, let's say there are like 5 orgs that need a Kubernetes upgrade. Is it going to overwhelm?
+the DevOps team with like 5 to 10 Jira tickets or is it gonna, or are you limiting to like, I don't know, three or something like that? Does it add it to the sprint or goes to the backlog?
+
+Deepti Pathak   34:47
+Good question, and that can be literally modified. So if I give this to DevOps, it should be their decision how they want it, right? Whether they want it each Jira ticket per account, or does it they want it at like region level, they want to put it at sprint level. Those are the modifications I would like them to decide, and then that can be passed as the variables.
+
+Oleksandr Pavlovskyi   34:56
+Yeah.
+
+Deepti Pathak   35:08
+Maybe like what we can do is like in the workflow itself in the dynamically we can pass that account number and then it can create the create all those details. But yeah, this is something needs to be checked. Yeah, so but now it's just for one account and it's super quick like yes, because that's that I didn't want it to touch any other account. So.
+
+Chantal Justamond   35:19
+Yeah.
+Okay, just one.
+Yeah.
+
+Deepti Pathak   35:28
+We work on EDS, so I just used EDS as the experiment. I do, we do have service hub accounts, so I can definitely check if for two accounts, how does it work? But right now, it just takes 30 to 40 seconds, so it does, like, yeah, there is no issue so far, which I see it. We can also scale it not only to EKS, it can be done for RDS, it can be done for EC2 as well, so we can pass that as variable as well.
+It can tell you all those details, create the Jira tickets.
+
+Chantal Justamond   35:56
+Nice, very cool.
+
+Deepti Pathak   35:57
+Just thinking it out loud. Yep.
+
+Chantal Justamond   35:59
+Yeah, I just shared that with Marcos for for microservices for payments to kind of like leverage this. I think it's pretty cool, really good job. Because like sometimes we're behind and I think this is going to help. And I was asking about like if it's going to, you know, create like 10 JIA tickets because like I was building something and.
+
+Oleksandr Pavlovskyi   36:07
+The.
+
+Deepti Pathak   36:08
+Thank you so much.
+Yeah.
+
+Chantal Justamond   36:20
+And for like specs, and I had to limit for like tokens and time out, so kind of like 5 files, so I'm glad it's just like one really cool.
+
+Deepti Pathak   36:30
+You definitely, so in the beginning when the agent gave me the output, it was creating 5 giras. I did not want it to have the five giras, right? Basically 5 add-ons it was there, then it was giving 5. I did not want, I want for one cluster give all the details or just for per account. So that's how it has been modified, but definitely it's like very scalable.
+
+Chantal Justamond   36:37
+Yeah.
+Love it. Cool.
+
+Deepti Pathak   36:51
+Yep, thank you.
+Any other questions?
+
+Oleksandr Pavlovskyi   36:54
+Cool, cool.
+Yeah, yeah, great, great, great use case. Yeah, looks very, very, very pretty. Yeah, so thank you, thank you, Deepti. And yeah, in case of ability to use MCP servers, guys.
+
+Deepti Pathak   37:11
+Yeah.
+
+Oleksandr Pavlovskyi   37:18
+You have ability to extend your use cases, your existing use cases, so...
+Let me do a quick.
+Just very, very general. It's not a demo, yeah, just share that it's already available. Yeah, if you talk about GitHub Copilot, yeah, we already have abilities to use MCP server. So how to add MCP server?
+Yeah, it's pretty easy. So you can go to all this configuration settings option here, and you can see all servers that I already added to my GitHub Copilot. As you can see, they display right, GitHub Copilot, Atlassian, Figma also here.
+Don't pay attention on SuperBase, I just tested this. It's not allowed yet for us. If you need to do some changes here, you can open our JSON file and you can see all settings regarding to our MCP servers. So let's try to use some sync.
+Let's ask to use, for example, use...
+And ask, find a page about...
+For M.C.P.
+Gates.
+Yeah.
+Yeah.
+This is one of the examples. So, our agent gonna understand that he need to use MCP server. Yeah, of course he gonna find, he gonna understand if I mention Confluence, Bashor, Jira ticket or something like that. Yes, for example, I can ask to find or do some changes in the Jira tickets. We understand. So MCP server provides us.
+abilities to do almost anything that we can do manually. Yeah, so you can find all abilities of our tools if you press this settings configuration icon. And for example, let's see what can do our...
+MCP, as you can see, it can add comments to Jira, create tickets, fetch some data, get Confluent pages, and so on. Oh, and as you can see, we found the link. Okay, let's open this link.
+Yeah, so guys, I have prepared yesterday this document, but probably we need to do some updates here because, for example, for course or we gonna have maybe a specific flows to configure our MCP servers. Not all MCP servers are allowed for course or.
+Ohh.
+Using HTTP access, yeah, so probably that's gonna be I needed to install them locally, yeah, it's pretty simple, yeah, for all MCP of all these MCP servers we have GitHub repository, so you you can just download these MCP servers source code and use them.
+Just using the local host connection, and here you can find all details regarding the configuration for GitHub Copilot course or code me.
+And the MCP servers. So I need to get some details regarding to Slack MCP server because that's why I didn't mention it's in this document. Yeah, but you're free to use GitHub.
+Atlassian, MCP, Figma, MCP, Playwright, and so on. So more MCP servers are going to be added here, so I will update you guys also, but this document is available to use.
+Yep, butts.
+As you can see, it's not hard to do it by yourself. Yeah, so when you're going to configure your first MCP server, you're going to understand that this is very simple. Yeah, all links to official documentation is here. Yeah, and also I pasted the configuration in these code blocks. All right, let me...
+
+Sanjay Kumar Parui   41:59
+One question, Alexander, sorry. How this agent is different than MCPs? Like, I probably asking some dummy questions, but just was trying to understand how it is different than AI agent and MCPs beneficiary.
+
+Oleksandr Pavlovskyi   42:00
+Please.
+Oh, MCP, it's a protocol, yes, that give us give our agents ability to use third party tools, for example, like Jira or GitHub or Figma. So, we using the same agents, but extend them with new abilities, yeah, so you can see.
+
+Sanjay Kumar Parui   42:31
+Okay.
+
+Oleksandr Pavlovskyi   42:37
+all additional abilities that I already turned on in a configuration, yeah, and that give ability my agent to use, for example, Figma, yeah. So I can get the information regarding to some design, to some properties of these designs, with some specific block and so on. So, and also you don't need to copy paste.
+
+Sanjay Kumar Parui   42:38
+I see.
+Understood.
+Oh.
+
+Oleksandr Pavlovskyi   42:58
+As we usual do with our agents, you don't need to copy paste, for example, your requirements from 0 for Chrome Confluence. So you can get to your agent steps, yeah, when you're going to ask him to it to use the Jira, for example, yeah, and get to your requirements.
+
+Sanjay Kumar Parui   43:00
+Mhm.
+Exactly, yeah.
+Okay.
+Shoot.
+Excellent.
+
+Oleksandr Pavlovskyi   43:18
+So you can automize this step, for example. As for example, in case of Deepti, yeah, where she used the integration with Jira and Slack, yeah, to build this communication between GitHub actions, yeah, and make notification to, for example, Slack.
+
+Sanjay Kumar Parui   43:19
+Excellent.
+So.
+Mhm.
+
+Oleksandr Pavlovskyi   43:38
+and automate this.
+Yeah.
+
+Sanjay Kumar Parui   43:55
+Good, and this on that conference that you are sharing right now is is use how I can configure my local studio to to connect, right? Perfect. Sounds good. Thank you. That's excellent.
+
+Oleksandr Pavlovskyi   43:56
+You.
+Yeah, that's right, that's right. Yeah, we have some initial information regarding how to do this.
+Ohh, so yeah, if you're gonna have any questions, you can ask me or in the chat, yeah, and also regarding to MCP servers that are all are allowed for us, yeah, so we have this MCP servers registry, yeah, and.
+
+Sanjay Kumar Parui   44:13
+Excellent.
+Ohh, perfect. Thank you, Alice.
+
+Oleksandr Pavlovskyi   44:31
+We have all MCP servers that are already whitelisted here. So, Mikhail, please correct me if I missed something here. But all these MCP servers are available and approved for our usage.
+
+Mikhail Makarov   44:49
+Yeah, if you can scroll it up a little bit, there is a page, action items and assignments, where you can see, just scroll it up.
+
+Sanjay Kumar Parui   44:50
+Okay.
+
+Oleksandr Pavlovskyi   45:01
+Status, yeah.
+
+Mikhail Makarov   45:03
+Yes. So let's go to subtasks. Approval is still in progress. We have a blanket approval for all MCs that are vendor hosted. Basically, it's not different than any other API for you from that perspective. What it means is that if it's supporting OAuth,
+It's transparent for you. You can just, and you already have that tool approved for general use. Then MCP from that tool should be available for you. Just scroll it up a little bit.
+No, down, down, sorry to.
+
+Oleksandr Pavlovskyi   45:37
+Mhm.
+Yeah.
+
+Mikhail Makarov   45:41
+Yeah, here. Basically, what's happening now, we will define every MCP server one by one to be sure that it's enabled and communication is possible to that MCP server from an internal environment. However, there are a few things that we need to consider. Some tools, like for example, cursor. They have separate controls over
+
+Oleksandr Pavlovskyi   45:42
+Mhm.
+
+Mikhail Makarov   46:02
+available or allowed MCP service, and this still needs to be resolved.
+For them, if you take a look on this list, we have a couple of servers there, like, for example, Playwright and Chrome Dev Tools. That process is still unclear how to allow that because those are local MCPs. Basically, things that's working on your local machine, and they're not going anywhere.
+
+Oleksandr Pavlovskyi   46:16
+Mhm.
+
+Mikhail Makarov   46:28
+We will figure it out, how to allow them for you, I mean, officially. I believe nothing can stop you to use them anyway.
+
+Oleksandr Pavlovskyi   46:39
+Mhm.
+Yeah, yeah, this MCP service doesn't need any APIs, access, any credentials, and so on, yeah.
+
+Sanjay Kumar Parui   46:43
+Yeah.
+
+Oleksandr Pavlovskyi   46:51
+And use, for example, if you talk about some security leaks, yeah, it use the same model that you use in a GitHub Copilot, so all responsibility under GitHub, yeah, so it's just it's just a tool, yeah, so yeah, thank you, Mikhail.
+
+Mikhail Makarov   47:06
+Mm.
+For example, guys, in VS Code, you can try to connect to Mabel and Contact 7 again if you have a subscription and general permission to use the Contact 7 internally, right? So let's separate two things.
+
+Oleksandr Pavlovskyi   47:10
+Mm.
+
+Mikhail Makarov   47:25
+It should just work. There is no firewall rules that's blocking this particular MCP server.
+
+Oleksandr Pavlovskyi   47:33
+Yeah, yeah.
+Cool, guys. I have posted the link to the chat, so you already know where you can find the information regarding to the OMCP servers and also, yeah, MCP server for Slack. I need to play it this visit, yeah.
+
+Mikhail Makarov   47:51
+Ah, that one is, yes, that one is slightly tricky. To have it working, you need to create a map in Slack and then enable MCP in that app.
+
+Oleksandr Pavlovskyi   48:03
+Ohh yeah, thank you, because I just stopped it here today.
+
+Mikhail Makarov   48:07
+It's not, yeah, yeah, it's not, it's not that straightforward. Then you have to have this app approved, so that's a whole other kind of forms. Let's not go there yet.
+
+Oleksandr Pavlovskyi   48:16
+Cool, cool, great. You, you definitely helped me.
+
+Mikhail Makarov   48:21
+I, I've been there.
+
+Oleksandr Pavlovskyi   48:23
+Hey.
+
+Mikhail Makarov   48:24
+Specifically, it was like, no.
+
+Oleksandr Pavlovskyi   48:25
+Yeah.
+Okay, so guys, this is another one good news for today, yeah, except 2 great use cases that showcase it. So guys, try, yeah, so your AI agents now are more powerful, yeah, and get access to.
+that manual things that you're regularly doing, so you're ready to optimize this. And yeah, don't forget to post more use cases, yeah, regarding to not only MCP and webhooks, yes, that are available in this week.
+Also, regarding great use cases, like we show, like, like we seen today.
+All right, guys. Thank you all. We are a bit out of time. See you tomorrow.
+
+Chantal Justamond   49:25
+Thank you.
+
+Deepti Pathak   49:26
+Thank you all. Bye.
+
+Sanjay Kumar Parui   49:27
+Good.
+
+Oleksandr Pavlovskyi   49:27
+Bye, guys.
+
+Mikhail Makarov   49:27
+Thank you, bye.
+
+Sujan Shrestha   49:28
+Thank you.
+
+ stopped transcription

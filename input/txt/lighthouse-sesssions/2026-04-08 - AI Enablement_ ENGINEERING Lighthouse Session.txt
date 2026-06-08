@@ -1,0 +1,689 @@
+AI Enablement ENGINEERING Lighthouse Session-20260408_144836UTC-Meeting Recording
+April 8, 2026, 2:48PM
+2h 3m 7s
+
+Oleksandr Pavlovskyi   11:04
+Hello guys.
+Good morning, good day, good afternoon.
+
+Simanta Thapa   11:13
+Hey, good morning. How's it going?
+
+Swetha Koppula   11:15
+Good morning.
+
+Oleksandr Pavlovskyi   11:16
+Oh, it's great to to see you again, guys. So everything is great. And how about you?
+
+Mikhail Makarov   11:17
+OK.
+
+Simanta Thapa   11:25
+That sounds good. Same doing pretty good. It's passing.
+
+Oleksandr Pavlovskyi   11:28
+Cool, cool, cool.
+OK, so yeah, we we in time, yes. So, but let's wait for everybody seems like.
+Oh.
+Yeah, we have the same list of people here. So yeah, let's give one more minute here to everybody join us.
+
+Mikhail Makarov   11:54
+It may take a couple of sessions, right? So we're restoring our sessions after a couple of weeks of downtime.
+
+Oleksandr Pavlovskyi   12:01
+Yeah, that was two weeks. Yeah. So remember 2 weeks to rest. Holidays. You know, holidays for practice.
+OK.
+All right. I looking for Anjali. Yeah. Do we have Anjali on a call?
+Because she has interesting demo for us today. Yeah, but.
+Right. So the recording has started and guys. So hello everyone. Yeah, welcome back guys. I have to admit I missed you and our sessions. Yeah, over the past.
+Two or three weeks, I don't remember. Yeah, what was the rest for us? Yeah, I'd also like would like to congratulate you with the start of phase two. Yeah. So in this phase, we will continue our well-established late.
+Our session format where we will have opportunity to demonstrate our experience and share AI use cases. So these sessions are also open mic sessions, yes, so we have ability to raise any questions.
+Ask for help or suggest ideas on how to use AI even more effectively. So our main tool remains the same. Yeah, first of all is going to be our confluence space.
+Conference page. So let me share the screen. Yeah, it's gonna be easier to remind you about our tools. Yeah.
+One second. Yeah, this is the one. Yeah. So you should see a confluence page. Yeah. So guys, here we can find all recordings, all details regarding our previous session.
+Sessions. Here we have our workshop session, our showcase sessions and also like how sessions which we're gonna have in a phase two as well. So you can find link to our recording details about this session. Yeah, which topic was raised here and.
+Who who was present this use case and also our tool that we use to collect use cases. Yeah this is our Jira board, so here you can add the use cases.
+You're working on on or later share results during our Lighthouse sessions. So we already have several several use cases here in the pipeline and this currently in demo column, yeah.
+Will be scheduled for upcoming session. I also will share the link in the chat here. Also don't forget that we have very useful EA intake agent here. Here are the instruction. I'm gonna also post it to the chat.
+So this agent can be helpful when you need to create new tickets. So this agent will ask about all fields, about all details and LLM will generate effective description and also.
+At all needed text, so please feel free to use this agent. Yeah, and yesterday we have also introducted a new cross-functional track. Yeah, where we will work together to develop.
+Multi-agent workflows that can be helpful automate process at PDLC level and we will start with the Cordmere. This is tool that is very effective for organising workflow. Yes, some of you already have experience with Cordmere.
+Yeah, so we go, we're gonna go deeper into all features of this tool. Yeah, yeah. And at the same time, some of these tasks can be solved also with GitHub Copilot here, for example, as we saw.
+In the previous session, a great example from Sakshi building workflows with GitHub Copilot agents. So just feel free to share your experience with other tools, any other approaches and so on. So that's why we have this like our session.
+
+Svetlana Stogni   17:15
+OK.
+
+Oleksandr Pavlovskyi   17:26
+To build this communication, yeah, to build this EA community.
+Yeah. And today we have a demo from Anjali. Anjali, are you with us? Good morning.
+Yeah, hello. So please correct me if I'm right. Yeah, it will be use case focusing on helping to reduce time for user. Yeah, yeah.
+
+Anjali Pabbareddy   17:42
+Hey, yeah. Good morning. OK. Um.
+Yes.
+
+Swetha Koppula   17:53
+2.
+
+Anjali Pabbareddy   17:57
+Yes.
+
+Oleksandr Pavlovskyi   17:59
+Yeah, in personation task, yeah. And so yeah, if you would like to give a short intro, yeah, before we move to the demo, you can you can add some details.
+
+Anjali Pabbareddy   17:59
+So.
+Yeah. So to give a preface on the use case that I'm going to show today. So our team mostly works on web applications for various teams, so multiple teams to improve their productivity or for better usability.
+
+Oleksandr Pavlovskyi   18:31
+Mhm.
+
+Anjali Pabbareddy   18:31
+So when using those applications so we work on like more than like 20 plus applications. So when using that we whenever we are testing in non production we use a functionality called impersonate to mimic the users using their employee ID.
+
+Oleksandr Pavlovskyi   18:44
+Mhm.
+
+Anjali Pabbareddy   18:51
+To check the level of access that they have in that particular web application. When using this, it just takes some time for us to get the employee ID for each and every role and based on their role group and such.
+So to enhance this, I've used AI to develop a functionality where it can be easier for us to impersonate a user in non prod and test out the features that we are building.
+
+Oleksandr Pavlovskyi   19:25
+Cool.
+
+Anjali Pabbareddy   19:25
+Um.
+Yeah.
+
+Oleksandr Pavlovskyi   19:28
+And that's that's not only related to testing. Yes, understand developers can also use yet to test some scenarios before development.
+
+Anjali Pabbareddy   19:39
+Mm-hmm. Yes, it can be used for both by developers and testers as well. Yeah, this this feature is not gonna be available in production just for just to improve or like for the development and testing.
+
+Oleksandr Pavlovskyi   19:40
+Please.
+
+Anjali Pabbareddy   19:57
+So I can share my screen and.
+
+Oleksandr Pavlovskyi   19:57
+Mhm.
+Yeah, but before we start, yeah, Anjali, before we start, maybe you guys have any questions regarding to my introduction part regarding to our PDLC process, regarding to some accesses and so on. Maybe you would like to share something interesting for today.
+
+Anjali Pabbareddy   20:04
+Mhm, mhm.
+
+Oleksandr Pavlovskyi   20:19
+Day. So guys, do you have any questions?
+OK, so let's begin the demo. Yeah. So, Anjali, the stage is yours.
+
+   20:28
+Oh.
+
+Anjali Pabbareddy   20:31
+Yeah, it should. It should be pretty quick. So to start with what I did was we have a template application which we base off all of our applications are based on this template application.
+So here I'm using the GitHub agent. I've given it some commands on what this feature is going to be and how it's going to implement. So I just listed down all the steps and then it went ahead and made all the changes for me.
+
+Oleksandr Pavlovskyi   20:58
+Mhm.
+
+Anjali Pabbareddy   21:04
+So it created the pull request as you can see with all the changes needed. So before I merged the pull request, I got the changes into my local setup to test them out to make sure they're working fine.
+And when I checked it out I had a couple of errors, compilation errors when running the code. So I just asked it to fix the issue and once the features were once the errors all were resolved.
+The functionality was not quite what I expected it to be, so I just gave a few few more prompts and then it fixed all of it for me and let me show the final product that it did.
+So this is our template application. So it added a button here for the impersonate user and now it fetches all the users based on the role group that are provided in the code.
+
+Yury Yastrabtsou   22:05
+OK.
+
+Anjali Pabbareddy   22:06
+So once I click on this, it's gonna impersonate that particular user.
+
+Oleksandr Pavlovskyi   22:12
+Mhm.
+
+Anjali Pabbareddy   22:13
+Yeah, so the this is like a high level use case. So we we have been using AI in a similar pattern for all of our other features as well which we're building for different applications.
+Um.
+Yep, that's all I have here. So normally if I were to code this manually, it would take me like two to three days. But yeah, this this took like 1 1/2 hour or so for me to build the whole thing up, up and running.
+And then once done, I asked it to generate some documentation as well to integrate for the other applications and then it it did generate me a readme file here which had all the instructions and everything for other other team members to follow through.
+
+Svetlana Stogni   22:50
+OK.
+
+Anjali Pabbareddy   23:07
+If they want to add it to their app.
+
+Oleksandr Pavlovskyi   23:07
+Yes. And when you're talking, sorry, when you're talking about another application, yeah, I can assume that's gonna be different requirements, yeah, for this agent. So do you use?
+
+Anjali Pabbareddy   23:17
+Yeah, yeah.
+
+Iryna Pashko   23:19
+So.
+
+Ravi Nachimuthu   23:21
+Yeah, So what I see here is Anjali had done the work on the template application and she created the markdown file, meaning it's a trusted recreatable flow that she can go and use this markdown file on the application that we're creating.
+
+Oleksandr Pavlovskyi   23:26
+Mhm.
+
+Anjali Pabbareddy   23:28
+Mhm.
+
+Yury Yastrabtsou   23:41
+OK.
+
+Ravi Nachimuthu   23:41
+Created using this template so that she has a proven solution that she can apply to all of her rest of her portfolio of applications.
+
+Oleksandr Pavlovskyi   23:43
+Mhm.
+Mhm.
+
+Anjali Pabbareddy   23:55
+Yes.
+
+Oleksandr Pavlovskyi   23:57
+OK, OK, so portfolio applications is gonna be like additional requirements. Yeah, for this we have the main instruction here and.
+
+Ravi Nachimuthu   24:03
+Yeah.
+
+Anjali Pabbareddy   24:06
+Yeah.
+So yeah, other applications do have their own requirements, but this is like the common functionality among all of our applications. So if we are touching, if you're working on a certain application, if you want this feature added, then I I can just give them give this guidelines and it would add that feature there.
+
+Oleksandr Pavlovskyi   24:28
+Cool.
+
+Anjali Pabbareddy   24:28
+So um, so this is at.
+
+Ravi Nachimuthu   24:30
+So application authentication including the impersonate is a cross cutting concern.
+
+Anjali Pabbareddy   24:35
+Yeah, it's a it's a common thing across of a lot of applications. So this is the template application. We have other application.
+
+Ravi Nachimuthu   24:38
+Mhm.
+
+Anjali Pabbareddy   24:49
+Something like this for various teams. They each team has their own set of requirements on what their application should look like.
+So the content of it is different, but the authentication, authorization and the structure of code it's it's it's same across all of our apps.
+Yeah, so once if I work on this application and if I'm planning to add the impersonate here, it it's gonna add here and then.
+
+Oleksandr Pavlovskyi   25:25
+Mhm.
+
+Anjali Pabbareddy   25:26
+It's gonna make our testing and development easier for us.
+
+Oleksandr Pavlovskyi   25:32
+Cool, cool. Guard. Yeah. Yeah. Great future. Great. I don't know how to say improvement. Yeah, for test. Mm-hmm.
+
+Anjali Pabbareddy   25:37
+Yeah.
+Mhm, yeah.
+
+Oleksandr Pavlovskyi   25:43
+Right, right. Yes. Does anyone use similar approaches for your application? Yeah, I know that you have absolutely different projects. Yeah. But yeah, this is great, great, great example. Yeah. How we can also use AI. Yeah.
+
+Anjali Pabbareddy   25:52
+Mhm.
+
+Ravi Nachimuthu   25:59
+Maybe, maybe it's a pattern. It's a pattern that we can speak about, right? So where Anjali had started, even though when she began demoing it, she had, you know, one prompt at a time trying to get this fine-tuned. Once she fine-tuned this end to end, once it met her expectations.
+
+Oleksandr Pavlovskyi   26:00
+So, yeah.
+Mhm.
+
+Ravi Nachimuthu   26:19
+We created specifications out of it, so prompting to create the specification. Now she has a specification to apply to other applications. So now we are moving from prompt based development to specification.
+
+Oleksandr Pavlovskyi   26:21
+Mhm, mhm.
+
+Ravi Nachimuthu   26:34
+Driven development.
+It's a model that we can all, you know, try to learn and we'll see, you know how we can use them across the board.
+
+Oleksandr Pavlovskyi   26:37
+You.
+
+Anjali Pabbareddy   26:43
+Mhm.
+Yes.
+
+Mikhail Makarov   26:45
+Mhm.
+Yeah, that makes sense. Ravi, how do you think it can be organized in some sort of a repository of blueprints or specification repository that can be consumed by other teams?
+
+Ravi Nachimuthu   27:02
+So currently the agents that we create these markdown files and agent files, we have a private GitHub repository within our account and that are available for anyone who has access to the account.
+
+Mikhail Makarov   27:06
+Mhm.
+Mhm.
+
+Ravi Nachimuthu   27:18
+And we intentionally made it private because we don't want to be available across the board on all the other accounts because it could be a specific specification returns for Java based or node based application that meets a certain standard for.
+
+Mikhail Makarov   27:19
+I see.
+Mhm.
+
+Ravi Nachimuthu   27:35
+A particular particular back office related operations. It may not be applicable for others, so that's why we made it as private. But if others have recently use, we can.
+
+Mikhail Makarov   27:46
+Mhm.
+
+Ravi Nachimuthu   27:51
+We can see how we can democratize it, either make that repository internal so that everyone can have access to it, or create a dedicated space for collaborating these agents.
+
+Mikhail Makarov   28:08
+Mm-hmm. Yeah, that makes sense. I'm more thinking about it like.
+That it can be a great example of an attempt how we can create a blueprint from a very specific solution. Let's say you have it attached to a specific language, but then you can distill it in a way that it can be as an approach used with various languages, let's say in various libraries.
+
+Ravi Nachimuthu   28:33
+Mhm.
+
+Mikhail Makarov   28:34
+Or let's say version for one language and for another and so on. It's more about the process rather than the fine final result.
+
+Oleksandr Pavlovskyi   28:43
+3.
+
+Ravi Nachimuthu   28:45
+Agreed. It's like taking that learning. Yeah, taking that learning and then make that learning shared with others so that the others can follow rather than the product itself. Anjali, if you don't mind, if you can share your screen and show them on the private GitHub repository that we got.
+
+Mikhail Makarov   28:46
+Yeah, like, maybe we can do something like that. Mm-hmm.
+Yeah, because we.
+
+Ravi Nachimuthu   29:13
+That dot the one that start with dot GitHub.
+
+Anjali Pabbareddy   29:17
+Yeah, we have a template repository that we use normally. Um.
+
+Oleksandr Pavlovskyi   29:20
+I.
+
+Anjali Pabbareddy   29:25
+So whenever we want to create a new application, we use this template and directly you know we create it.
+
+Ravi Nachimuthu   29:37
+And Anjali, I'm I'm sending you another link there and if you can pull it up on the screen.
+
+Anjali Pabbareddy   29:38
+But yeah, it.
+
+Mikhail Makarov   29:40
+Mhm.
+
+Anjali Pabbareddy   29:44
+Mhm.
+
+Ravi Nachimuthu   30:04
+This is our private repository within the OMFES Java organization. It has all of our custom agents.
+
+Mikhail Makarov   30:11
+Mhm.
+
+Ravi Nachimuthu   30:16
+How it helps is Angela, if you go scroll up a little bit, let's open the copilot and show them that you are able to pick one of these agents that we got here.
+
+Anjali Pabbareddy   30:21
+8.
+
+Ravi Nachimuthu   30:33
+The next icon, I guess, yeah, click on that. So you you could see the agents that we have created that is available for you to pick. You don't necessarily have to bring the code to your local in order to work on whether these agents are available.
+
+Mikhail Makarov   30:39
+Mhm.
+
+Ravi Nachimuthu   30:48
+But you can use it directly on on the Cloud GitHub Copilot.
+
+Mikhail Makarov   31:05
+But you still have to specify the prompt, right? So you're picking one of the agents and then you kind of telling it what to do.
+Or how?
+
+Ravi Nachimuthu   31:16
+Well these agents, these agents are specialized in doing something like if you see the the let's click on that one more time Anjali. So I understand the first few of them are you need to prompt but in case if you're looking at not the the.
+
+Mikhail Makarov   31:18
+Yeah.
+
+Anjali Pabbareddy   31:26
+Oh.
+
+Ravi Nachimuthu   31:34
+The one from the bottom, the spring boot angler angler.
+
+Mikhail Makarov   31:37
+Mhm.
+
+Ravi Nachimuthu   31:42
+New app builder so that'll not this one. There is an upgrade upgrade agent, meaning you don't have to prompt anything. It already knows what it has to do. All it does is take the legacy application that could be built on Java 8, Angular 10, then it'll bring it'll upgrade everything to bring them to the standard.
+
+Mikhail Makarov   31:44
+Mhm.
+Mhm.
+
+Ravi Nachimuthu   32:02
+It.
+
+Mikhail Makarov   32:03
+Mhm.
+
+Ravi Nachimuthu   32:04
+So there are few agents that you have to prompt, but there are there are agents that knows that they are predefined on what they are supposed to do.
+
+Oleksandr Pavlovskyi   32:06
+OK.
+
+Mikhail Makarov   32:12
+I see, but you still can modify the behavior of the agents with the pumpkin or it will.
+
+Ravi Nachimuthu   32:18
+Oh, yeah, yes.
+Yes, absolutely. They there are. There are specific. Well, they explicitly ask questions. The way these agents are created, they don't assume anything. So meaning you will have an opportunity to revise and provide additional feedback before the agent does what it's supposed to do.
+
+Oleksandr Pavlovskyi   32:31
+Mhm.
+
+Ravi Nachimuthu   32:40
+Probably we can have a separate demo on that, just that we need to put together something that'll be meaningful for everyone to understand.
+
+Mikhail Makarov   32:43
+Mhm.
+
+Oleksandr Pavlovskyi   32:47
+Yeah, yeah. That's gonna be very interesting too. Yeah. And you have a great example. Yeah. All these center of excellence. Yeah. That we are, that we, we, we have plans to build. Yeah. Yeah.
+
+Ravi Nachimuthu   32:49
+Mhm.
+
+Mikhail Makarov   33:00
+Yeah, that's why I'm asking all those questions.
+
+Oleksandr Pavlovskyi   33:04
+So Ravi, it's going to be interesting to hear more detail, maybe to to to see some examples how you use this agents because this is structures that is useful for your projects. Yeah. And so it's going to be interesting to hear in other opinions. Yeah, because the.
+This structure of these repositories of agents, how you use and which agents you're using, that's very specific for each organization, yeah. And we can give some recommendation, yeah, some generic recommendation, but you guys already started doing this, yeah, so.
+And demonstrate how it's better to organize and it's going to be a great start for this center of excellence. I mean this like here, let's say practical part here where we have these tools, yeah, in a way of agents or skills and so on and something something like this.
+Yeah, it's very, very, very inspiring.
+
+Mikhail Makarov   34:10
+Yeah.
+
+Oleksandr Pavlovskyi   34:12
+And could you tell me if you have this spring boot experts what what's what exactly this agent do for example node GS plus Angular expert?
+For for what actions do you use these agents guys?
+
+Ravi Nachimuthu   34:32
+Yeah, I think, I think we can. We can take each of them and go in greater detail, maybe in a separate call once we have a real good, you know, showcase application. I don't want to like, you know, try to try to explain on the go, you know, put Angelina Hart seat there.
+
+Mikhail Makarov   34:36
+Yeah.
+
+Oleksandr Pavlovskyi   34:38
+No, it's.
+Mhm.
+Mhm.
+
+Ravi Nachimuthu   34:49
+And and I can show one more real quick thing before we move on to any other topic. I hope you all can see my screen.
+
+Oleksandr Pavlovskyi   34:55
+Mhm.
+Yes, we have only this topic today. This is the main topic here guys. And if you have any questions, yeah, feel free to to raise your hands, yeah and ask or maybe add some more ideas to this to to this.
+To this demo.
+
+Ravi Nachimuthu   35:15
+Yeah, the the other thing that we have also created is these agents. So we are moving away from our integration pattern from Mule Salt being the integrator to Graph QL.
+So there is a overhaul effort to migrate all of our MuleSoft APA to or most of our MuleSoft APA to graph. So these agents are created. They are specialized in converting the existing MuleSoft.
+
+Oleksandr Pavlovskyi   35:42
+OK.
+
+Ravi Nachimuthu   35:47
+To our expected GraphQL standard.
+These are still working a work in progress agents, but I think.
+If it's useful, we can pick and choose some of these agents and we can explore further in one of the future calls.
+
+Mikhail Makarov   36:06
+Yes, this is a very excellent example of the agencies, especially for migration. Uh.
+Work, because that's what usually takes a lot of time and that's and it's not really fun to do.
+
+Oleksandr Pavlovskyi   36:19
+Mhm.
+
+Jason Daggs   36:19
+Yeah, I had a question about that MuleSoft to Graph QL integration. How have you been able to solve the problem of accessing the on premise systems from?
+A Graph QL front end.
+
+Ravi Nachimuthu   36:40
+So what do you mean by that, Jason? So uh.
+
+Jason Daggs   36:41
+So in order to replace Mulesoft, it's running currently. What is it on Openshift? Now when you create your Graph QL instance, is that being created in Openshift or in a WS?
+
+Ravi Nachimuthu   36:44
+Mhm.
+Mhm.
+They are in AWS and the same service hub, yes.
+
+Jason Daggs   36:59
+Uh, OK. And how are they? How is for instance access to a caps or or some of the other on premise systems? How is that being done right now?
+
+Ravi Nachimuthu   37:12
+So you will have to open up this specific integration through firewall. So they are they are being handled separately, not part of the development itself.
+
+Jason Daggs   37:18
+Right. How?
+OK, OK. And how are you handling that yourself when trying to migrate from Mule to Graph QL?
+
+Ravi Nachimuthu   37:31
+So currently they are not automated, they are still being manually handled through service no tickets.
+
+Jason Daggs   37:38
+I see. OK. Gotcha. Gotcha. OK. Yeah, I think that's it. Thank you very much.
+
+Ravi Nachimuthu   37:40
+Mhm.
+There are there are some challenges with respect to how do you automatically create these tickets is because you need IP address, the source and target IP address which you cannot guess right? You know that's why they are still manual.
+
+Jason Daggs   37:50
+Yes.
+Yes, yes, yeah, yeah, yeah. Unfortunately, fortunately or unfortunately, one of my tasks is going to be to migrate my MuleSoft endpoints off of off of its current location. So yeah, I I'm definitely trying to get more information.
+On how we can simplify that process. And so that's a very good, very good idea you've got there I think.
+
+Ravi Nachimuthu   38:20
+Mhm.
+
+Jason Daggs   38:22
+Thank you.
+
+Oleksandr Pavlovskyi   38:24
+Cool, cool. Yeah. So Ravi, it's gonna be a great year to talk more details about your agency. Yeah. And one more question. Yeah. Regarding to how do you brainstorm the ideas? Yeah, of these agents. Yeah. Do you have some specific process in your team where where you define for?
+Which routine task here you need to create agents?
+
+Ravi Nachimuthu   38:48
+Well, it's more around, I think the situation's demand.
+Like what Anjali had demonstrated moments ago.
+
+Oleksandr Pavlovskyi   39:01
+Mhm.
+
+Ravi Nachimuthu   39:02
+It's something that we go through every day.
+
+Oleksandr Pavlovskyi   39:06
+Mhm.
+
+Ravi Nachimuthu   39:06
+And we see a very manual process that we go through and not only do we go through, but also the functional testing, our regression testing and even sometimes the end users, there are questions that we are answering over and over again. Those are all the, you know.
+
+Oleksandr Pavlovskyi   39:22
+Mhm.
+
+Ravi Nachimuthu   39:23
+Kind of starting point when we feel like something that we are repeating it more than a handful of times, then there must be a real reason for automation. That's where some of these ideas were where Anjali had come up with that idea where.
+Um.
+It completely eliminates the manual manual way of searching for agent IDs to simulate, rather the system already knows who do we need to simulate for a particular purpose.
+
+Oleksandr Pavlovskyi   39:58
+Mm-hmm.
+
+Ravi Nachimuthu   40:00
+So our thought is when it comes to reusability when we go for tooling is if you are trying to if you are handling something.
+In a manually beyond handful of times, meaning there is a real reason you will have even more than that, so more so in the future. It's better to find a efficiency there.
+
+Oleksandr Pavlovskyi   40:23
+Mm-hmm. Yeah. Yeah. Well, this is gonna this is great. Yeah. Because when you know abilities of EA tools. Yeah. Which we we have. Yeah. You can think about, you know. Yeah. So I'm everyday doing this and this and this. Yeah.
+Yeah, so, but I can automate. I know that Copilot here or maybe Codmi or some other tool can do this. Yeah, for example, beneficial thing that we have in Codmi that we can use different.
+Data sets some other third party tools here to connect for example our EA LLM here with Jira, Confluence or any other tools here which have access where we have access with API and for example when you doing some routine work for.
+Example, you need to take some data from Jira, compare this with Confluence and then to summarize this, yeah, you can think about if you're doing this exercise every day, yeah, you can try to write your agent here and just get.
+The result of this comparison here in the chart here and save, I don't know, 1015 minutes of reading this story, finding these materials in a confluence, comparing these requirements there and as a result, for example, building the implementation plan.
+Yeah, somebody use planning meetings here to define these tasks. Yeah, maybe tagging this task. Yeah, that's that are always repeating here with some specific, I don't know.
+Some specific tagging or something like this, yeah, and have the group of AI mentors, yeah, who is defining where we which agents we can develop yet to automate this routine.
+Procedures. So that's a great example. Guys, would you like to add something? Maybe you would like to share your experience from your project? Do you have some similar knowledge bases? Not the knowledge bases, you know agent bases.
+Repositories.
+I I don't see Sam on the call. I definitely know that they use something similar in Edna.
+
+Chantal Justamond   43:05
+I'm I'm working on a agentic ish flow. Basically it's an integration for the bot and copilot.
+
+Oleksandr Pavlovskyi   43:05
+K Yeah, yeah.
+
+Chantal Justamond   43:21
+I don't know if we wanna I can like showcase this. I'm not like fully prepared to do that like this minute, but I think it's it's cool because like Copilot when you have it on GitHub to like automatically, you know start your review, your code review.
+
+Oleksandr Pavlovskyi   43:28
+Mhm.
+
+Chantal Justamond   43:41
+And you have a dependabot PR for example. The code review, it's pretty, let's say it's simple. It doesn't give you much and they're like and agreed like dependabot has like.
+
+Oleksandr Pavlovskyi   43:41
+Mhm.
+
+Chantal Justamond   43:57
+Some alerts that are more noisy than others. Some of them is just like a like a small bump in in this case like a gem version, but other ones it says for example oh you have a like like there's this alert CVE and then.
+Is like you might be like there's like a code snippet and say for example Jason pars a log duplicate key and then you have to start looking for in your code if you actually have that. So then becomes you know more time consuming and you have to go in and like start doing things right.
+Which so like basically what I'm doing is kind of like doing a code review where where this integration will say hey is this risky? Is this low risk? Do you actually have this code like this thing allow duplicate key or whatever is saying?
+Do you have this in your code? Yes or no? So then it will. It's helping me actually have a better sense of security when I need to merge this alert. So then I can go through them quicker because like you know you can have them like weekly or monthly and then you have.
+I don't know, you can have like 10 to 15 alerts and then you have to go through them and that becomes noisy and it becomes time consuming. Whereas now I feel kind of like as I'm going through my repos and improving in this script.
+Uh.
+This is making me feel better and more secure on like what I'm doing, if that makes sense.
+
+Oleksandr Pavlovskyi   45:36
+Yeah, yeah. It's like one one more code reviewer. Yeah. Who can advise you something. But Chantal, do you use some specific rules for the security review? Yeah. I mean some instructions or some standards that are. Yeah, yeah.
+
+Chantal Justamond   45:53
+Yeah.
+Yeah, it's a script basically. So like for example, it goes in, the agent goes in and reads the PR title, the PR body and says OK, what is the CVE? And then after it reads this information from the PR body of the dependable alert.
+
+Oleksandr Pavlovskyi   45:55
+Mhm.
+
+Chantal Justamond   46:15
+It goes in into the code base and it starts looking for whatever this PR body is saying. Let's say a low duplicate key. It goes in. If like it's then in the comment it will say yes you have this or no you don't have this. So basically.
+At the end it says feel free to merge this at your own convenience if it is low or medium or high. Like there's like, I don't know, we'll say like 3 or 4.
+Findings and also I'm trying to divide the comment because in the beginning I think it was like the comment that I put in it was kind of like too like emergency where like for example I'm trying to divide when the agent goes in and looks in the code base.
+Trying to separate from let's call it production code from if it is in the specs. If it is the spec for me it's less emergent or less level environment emergency than if it is on my app folder or if it is Angular it will be in the source.
+
+Oleksandr Pavlovskyi   47:12
+Mhm.
+
+Chantal Justamond   47:25
+Folder and say how big of an emergency this is that I need to fix and ship to roduction if that makes sense.
+
+Oleksandr Pavlovskyi   47:35
+Cool, cool. So you have specs? Yeah, understand regarding the code review As for. So you have generated specs around all your project. Yeah, code base.
+
+Chantal Justamond   47:47
+Yeah, that already exists. Yeah. So it's it's going through it and they and for me it's kind of like giving me a better sense of how urgent this is and how fast do we need to move and like ship it to to to production.
+
+Oleksandr Pavlovskyi   47:57
+You know.
+Cool, cool. And As for implementation, do you use spec spec driven approach for this? I mean for the implementation stage?
+
+Chantal Justamond   48:13
+Uh.
+On normal basis for tickets, yeah.
+
+Oleksandr Pavlovskyi   48:19
+Mhm.
+Cool. Yeah. You know, we have now we have discussion regarding to MCP servers. Yeah, that's gonna be great when we're gonna have this ability to use MCP and you will be will will be available to connect Jira to.
+GitHub Copilot or Cursor, for example. Yeah, it's gonna speed up also the process of updating these paths. OK, cool. So Chantal, if you don't mind here, please add your tickets to the board. It's gonna be interesting to hear more about your information.
+
+Chantal Justamond   48:45
+M.
+
+Ernest Linzey   48:48
+Thank you.
+
+Oleksandr Pavlovskyi   48:56
+Structure. I'm into specs and how you're doing. So if you want you can start for the code review. Yeah, it's sounds very, very impressive also.
+
+Chantal Justamond   49:07
+Yeah, I'll add that.
+
+Oleksandr Pavlovskyi   49:08
+Cool, cool. Thank you. Thank you. Right guys. Any any other?
+Experiences regarding to to using the specs or similar approaches.
+Cool, cool. So we had very interesting and productive first session today for today. Yeah. So this meeting we're going to have on a regular basis. So guys, feel free to use this chart. Also, we're going to create separate charts in the in the Slack here for maybe.
+More convenient communication. Yeah, I'm going to share the link with you. We built the next session on the next meeting here or in the chat. It is going to be available earlier.
+But for now, let's use this chart. So guys, if you're going to have any ideas, share or reach me directly, yeah, if you're going to need my advice or any proposals. So guys.
+I'm happy to see you again. Yeah, we continue our development. Yeah. And this phase will move us to the next level. So the next stage, yeah, now we know how to build specifications, how to build spec driven development, how to build agent.
+How to build agent, how to orchestrate these agents. In the next phase it's gonna be more about our cross functional task. You see we already have cross functional demos here. Today we talk about testing but these.
+Use case is definitely useful not only for testing stage. Yeah during the development sometimes you need to to to to test your functionality also. And now thanks for Njali. Yeah we have great template here for building these custom behaviours for users.
+So this is like example of this cross functional use cases and so so that's gonna be a time when we're gonna have all needed knowledge to start building these.
+PDLC processes, yeah. And automate them with this agents. Yeah. And so this is the next level of development. Yeah, which gonna be already started to change the main approach. Yeah. So now we like.
+I don't know managers for these today with this, with this instruction files. Yeah, in agents in a way of instruction file. Maybe tomorrow there's gonna be real robots. Yeah. And we gonna just give them task. Yeah. So you do this, you do this. Yeah. And you just gonna be.
+Validate the results of they are doing, yeah, but we all understand that we need to be even more expert than we was before. And thanks for EA, it's also possible to do this because learning is also will be more faster, yeah, with all these abilities.
+So guys, thank you all and have a great day. So tomorrow we're going to have another one session regarding to cross-functional lighthouse teams. Yeah, yeah, so sorry I had.
+I saw the hands. Yeah, this was.
+
+Deepti Pathak   52:48
+That was by mistake. I'm sorry about it.
+
+Oleksandr Pavlovskyi   52:50
+No problem. Yeah. Tomorrow we're going to have the next session for our cross-functional teams here, cross-functional like our session and we're going to start doing start creating the first assistant in a coordinate. It's going to be very.
+Important session because we're going to talk about basics, so don't miss the session and guys, please be sure that everybody have access. Yeah, in the chat we shared the link to the coordinate. Please check the access.
+And it's going to be more practical session. Yes, it's going to give you basics how to create assistance and then we're going to develop and develop more your skills of these multi agent orchestration. Yeah and.
+In a couple of sessions you're going to have ability all needed knowledge here how to build workflows to be like a level 2 experts in AI.
+Cool. So guys, see you tomorrow.
+
+Deepti Pathak   54:02
+Alright, thanks.
+
+Heath Fest   54:03
+Thanks.
+
+Oleksandr Pavlovskyi   54:04
+Bye guys.
+
+Sharma, Amit   54:04
+Thank you.
+
+Sujan Shrestha   54:04
+Thanks, Alexander.
+
+Chris Rumans   54:05
+Have a good day.
+
+Deepti Pathak   54:06
+Thank you all.
+
+Nicholas Crowley stopped transcription

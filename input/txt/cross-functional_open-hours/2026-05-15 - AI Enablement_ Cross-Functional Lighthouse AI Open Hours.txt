@@ -1,0 +1,1545 @@
+AI Enablement Cross-Functional Lighthouse AI Open Hours-20260515_140024UTC-Meeting Recording
+May 15, 2026, 2:00PM
+1h 0m 53s
+
+Eugene Semenyuk   0:04
+Yeah.
+Yes.
+Mm.
+No.
+The.
+Okay.
+Yeah.
+Hello, good morning.
+
+Oleksandr Pavlovskyi   0:32
+Good.
+
+Jurijs Markelovs   0:36
+Good morning.
+
+Eugene Semenyuk   0:36
+F.
+
+Rishabh Gupta   0:40
+No.
+
+Eugene Semenyuk   0:41
+And happy Friday!
+Yeah.
+Yeah.
+Okay.
+Can't this week was?
+Too quick and fast.
+
+Oleksandr Pavlovskyi   0:57
+No, it's more happy Friday for you, Eugene, because it's the end of your working day, yeah? But for somebody, it's all, it's all, it just started, yeah, so...
+
+Eugene Semenyuk   1:04
+Yeah.
+No.
+
+Oleksandr Pavlovskyi   1:10
+It's almost Happy Friday.
+
+Eugene Semenyuk   1:10
+Yeah.
+Yeah, but like finishes close.
+
+Oleksandr Pavlovskyi   1:14
+Yeah.
+Yeah.
+
+Eugene Semenyuk   1:21
+Yes.
+Yeah, let's wait.
+one or maybe a couple of minutes.
+
+Oleksandr Pavlovskyi   1:34
+Cool.
+
+Jatin Bagga   1:43
+Hello.
+
+Vlad Grubman   1:44
+All right, Eugene having coffee. I think we're good.
+
+Eugene Semenyuk   1:44
+Hello!
+Sure.
+
+Vlad Grubman   1:53
+Is it coffee though? I know it's Friday afternoon.
+
+Eugene Semenyuk   1:58
+Yeah.
+
+Jatin Bagga   2:01
+Um...
+I posted a couple of things that I want to review that because of the conflict sessions that I had. If that's okay, can we fit that into the office hours? I'm sorry, I called it happy hour. I think that sounds much better, Vlad, anyway. I should call it office hours, sorry.
+
+Eugene Semenyuk   2:04
+Yeah.
+Mhm.
+Yeah.
+Okay.
+I like this.
+
+Vlad Grubman   2:18
+We'll rename it, absolutely. I'm all for it. I think we can.
+
+Eugene Semenyuk   2:19
+Yeah, yeah.
+Yeah, me too.
+
+Jatin Bagga   2:25
+Dry happy hours, no alcohol. Anyway, I'm ready whenever you are, Eugene, if you want to just give a walkthrough of the second aspect, right? Like what you did on Tuesday, basically. And then the MCP part, which Oleg, if you can share, that would be perfect.
+
+Vlad Grubman   2:25
+Or pull with AI Happy Hour.
+
+Eugene Semenyuk   2:32
+Mhm.
+Mhm.
+Yeah, sure.
+Um, yeah, let me, let me open my user guide and...
+The workflow.
+Yeah.
+Yeah.
+Yeah.
+Yeah, I also can share my screen.
+Kiss this one.
+Okay.
+Yeah, and uh, yeah, let's make sure that...
+My true connection is.
+Come on.
+Yeah.
+Okay, here it is. So yeah, on to the session, we finished here. So yeah, we've built a workflow with three agents. Yeah, and this workflow triggers on status transition from
+To do to in progress.
+Yeah, we added a few robot agents.
+to analyze user story from business and digital point of view from QA. Yeah, and edit technical visibility agent from CodeMe.
+Yeah, and speaking, we need one more thing here. So we need a cross-functional summarization agent that will analyze all the outputs from these agents and provide some meaningful decision.
+So, yeah, and uh, yeah, um...
+Yeah, I proposed to use.
+
+Jatin Bagga   5:30
+Can you share this link, Eugene, one more time, please? Can you share the link and maybe just go through just real quick, just clicking on each option so I can just actually do it while you're displaying, please?
+
+Eugene Semenyuk   5:34
+Mm-hmm.
+Ah.
+Yeah, yeah, yeah, sure, definitely.
+Um...
+Okay.
+Ohh.
+That's, yeah, let me make sure that my second.
+Yes, I need to do full screen.
+
+Jurijs Markelovs   6:10
+Do you mind Eugene going through that step once again, setting up the connection bridge with the?
+
+Eugene Semenyuk   6:16
+Mhm.
+Okay, yeah, we can.
+
+Jurijs Markelovs   6:20
+The code me runner, because some of us, I'm sure, weren't able to do that. Code me didn't have like admin code me rights and.
+
+Eugene Semenyuk   6:27
+Mhm.
+
+Jurijs Markelovs   6:31
+At least me.
+
+Eugene Semenyuk   6:32
+Okay.
+
+Jurijs Markelovs   6:33
+Stranded a couple days ago, so if you mind.
+
+Eugene Semenyuk   6:37
+Yeah, sure. So, yeah, here is, here is my...
+My workflow, and also, yeah, I've built...
+User guide.
+Hey, sir.
+
+Jatin Bagga   7:02
+So I'm just going to go ahead and like create from scratch while you get to it, okay?
+
+Eugene Semenyuk   7:06
+Mm-hmm.
+Yeah, so yeah, here is here is detailed step-by-step guide, like how to create this workflow.
+
+Jatin Bagga   7:16
+Okay.
+
+Eugene Semenyuk   7:17
+Yeah, even with screenshots.
+Like how to access JIRA automation, how to create rule, so like the trigger.
+Configure status from the for this trigger.
+Like, add user condition.
+Yeah, then add the first step.
+Digital Story Review Reviewer.
+
+Jatin Bagga   7:58
+Sorry, this.
+
+Eugene Semenyuk   7:58
+Add a comment.
+So I guess for each step I've added.
+A screenshot.
+
+Jatin Bagga   8:05
+Yes.
+
+Eugene Semenyuk   8:08
+Like the same for QA part.
+So we added agent, added a comment.
+Yeah, and then yeah, here is configuration for for webhook for.
+for technical feasibility agent.
+Here is a screenshot.
+
+Jatin Bagga   8:35
+Sorry, Eugene, I just want to make sure, sorry, the automation part is where we were sort of some of us were not able to do it right. So like I'm just on your very first step. So I clicked on create a new flow so I can add triggers, but in your document it says go to the Kanban board. So code me sandbox Kanban board.
+
+Eugene Semenyuk   8:38
+Uh-huh.
+Mhm.
+
+Jatin Bagga   8:56
+When you go there, it says, look for this training sandbox, use the project automation settings, project space settings, automation.
+
+Eugene Semenyuk   9:06
+Mhm.
+
+Jatin Bagga   9:06
+Like, that's where, like...
+Am I missing something? I don't see that.
+Plus, I'm really completely off. I go to general settings and stuff. I don't see any of that.
+
+Eugene Semenyuk   9:16
+Uh, yeah, let me...
+So, so yeah, let me repeat it.
+From scratch, so yeah, here is our project, and we have...
+Yeah, we can click this more action. Space. Do you have space settings here, by the way?
+
+Jatin Bagga   9:38
+I do now see space settings, which wasn't there on Tuesday. Or was that the automation part that wasn't there? Something was missing, but I do see now space settings, so I clicked on that. Oh, I see. Now you click on the automation. Okay, got it. Got it.
+
+Eugene Semenyuk   9:43
+Uh-huh, yeah.
+Yeah, and and here.
+Should be automation, so yeah, probably, yeah, last time you, you, you, you, you wasn't for administrators for this.
+
+Jatin Bagga   10:05
+Okay, got it.
+
+Eugene Semenyuk   10:06
+Kai.
+
+Jatin Bagga   10:08
+Got it. No, that makes sense. Okay, so now I'm in here. I can add, so I've created the workflow. I can add the trigger, which is work item transitioned. Wait, this is from this Tuesday. This is from last week. I thought this was last week, right?
+
+Eugene Semenyuk   10:17
+Mm-hmm.
+Yeah, we started this last week.
+
+Jatin Bagga   10:27
+I want to know specifically what we did this Tuesday, right? We spent, we had a lot more stuff like comments and a bunch of other things.
+
+Eugene Semenyuk   10:28
+Yeah.
+And.
+Mm-hmm.
+
+Jatin Bagga   10:35
+Is this the right page for that?
+
+Eugene Semenyuk   10:37
+Yeah.
+Yeah.
+
+Jatin Bagga   10:40
+But we just build on top of it is what you're saying basically.
+
+Eugene Semenyuk   10:43
+Yeah, yeah, but we, yeah, we built it on top of that. So, so yeah, and we we expanded this into the workflow with three agents.
+
+Jatin Bagga   10:44
+Okay.
+OK, Gautham.
+
+Eugene Semenyuk   11:00
+Like A wiring.
+
+Jatin Bagga   11:01
+To do to in Prabhash, okay?
+
+Eugene Semenyuk   11:04
+Find my name.
+
+Jatin Bagga   11:06
+Always remind this thing with the alternate production.
+
+Eugene Semenyuk   11:16
+Yeah, and...
+As a reference, you can use my workflow, like requirements review flow, Eugene, or...
+Yeah, this flow is.
+Incomplete yet. So yeah, we will complete it next Tuesday.
+
+Jatin Bagga   11:39
+Okay, got it. So I just need to go through this and complete it. So thank you for that. I have a question on the document itself. It says alternative production triggers right at the top. It says for real-time usage, consider one of these instead. Can you clarify why use one of these instead versus just a simple work item transition from to-do to in progress?
+
+Eugene Semenyuk   11:49
+Mhm.
+Yeah, it depends on your, uh, like...
+On your like workflow, for some cases, probably it would be better to use like work item created trigger, for example, yeah, you, you, you created you create the ticket and automation will automatically pick up this ticket and like...
+walk this ticket through these stages. So yeah, you don't need to move items from statuses.
+
+Jatin Bagga   12:26
+I see what you're saying.
+
+Eugene Semenyuk   12:31
+Yeah, you can just create.
+In case if, for example, if first of all you create a placeholders for some user stories, so yeah, probably it is better to use status transition.
+But if you create like meaningful user stories, like...
+By one shot, I would say.
+So yeah, in this case, yeah, you can utilize.
+Work item created.
+For some cases, yeah, for example, in servicing team, guys created a work created multiple multiple workflows with different triggers. For example, they utilized work item created, work item updated.
+
+Jatin Bagga   13:07
+Okay.
+
+Eugene Semenyuk   13:26
+Yeah, for example, if someone update updates the work item.
+These will triggers to verify that this story is good enough after updates.
+
+Jatin Bagga   13:44
+Got it. And Eugene, like in the document, for instance, when you're doing in production, you might want to just now make it limited to one row.
+
+Eugene Semenyuk   13:51
+I.
+
+Jatin Bagga   13:52
+Reporter, it might be generic. This is replaceable condition such as issue type equal story and project equal this and status equal this. So this is like not using the condition user condition, but actually like a JQL or whatever that is not a JQL. It's just like saying issue type equal story. Like where do you place that? Is that just like delete this?
+
+Eugene Semenyuk   13:54
+Ohh.
+I.
+Mhm.
+
+Jatin Bagga   14:13
+The.
+Connect it.
+
+Eugene Semenyuk   14:15
+So.
+So yeah, in production, so yeah, we usually usually don't need to, and yeah, in some cases, we probably need some user conditions. Yeah, but usually we need to apply this rule for all tickets or for all.
+Tickets are with specific type, so in this case we can add.
+Let's see what we have here. Yeah, probably JQL condition will be the most configurable.
+
+Jatin Bagga   14:47
+Appropriate one, right? Okay, got it. So...
+
+Eugene Semenyuk   14:49
+Yeah, yeah, you, you, you can specify, like...
+Any condition?
+
+Jatin Bagga   14:55
+Okay, so that I need to then go back and when I'm adding a condition, use JQL condition and then when it's saying JQL priority medium and whatever, do I place what you have?
+
+Eugene Semenyuk   15:06
+Mhm.
+
+Jatin Bagga   15:07
+Like, if should I be go to?
+
+Eugene Semenyuk   15:08
+Yeah.
+
+Jatin Bagga   15:09
+Story and project the product name is in status equal ready for review as an example that you said so that I just placed in that JQL star basically.
+
+Eugene Semenyuk   15:14
+Mhm.
+Yeah.
+
+Jatin Bagga   15:20
+Got it, got it.
+
+Eugene Semenyuk   15:20
+Yeah, here.
+
+Jatin Bagga   15:23
+Okay.
+
+Eugene Semenyuk   15:24
+Like.
+
+Jatin Bagga   15:25
+All right, sorry, I know it's a very simplistic question, but I just want to make sure I'm doing it the right way. So, okay, so.
+
+Eugene Semenyuk   15:29
+Yeah, yeah, that's awesome.
+Keep.
+
+Jatin Bagga   15:33
+Okay, so we got this and then added this. Okay, so now I need to hit next. Okay.
+So it will take the project that into the project name. Yikes. I don't know what project name, but is there a dummy project that I can use?
+
+Eugene Semenyuk   15:39
+Yeah.
+Yeah, look, all the rules work inside specific project. So yeah, this rule will work inside.
+
+Jatin Bagga   15:51
+Mhm.
+
+Eugene Semenyuk   15:54
+For the project, so it won't it won't take items from other projects, so only like within this specific, so yeah, if you if you move item work item from to do to in progress state inside this project.
+
+Jatin Bagga   16:07
+And the project here is Code Me Sandbox.
+
+Eugene Semenyuk   16:10
+Mhm.
+
+Jatin Bagga   16:11
+So, that's what I put there, Cody.
+
+Eugene Semenyuk   16:16
+Yeah, frankly speaking, you don't need to specify a project here.
+Because it automatically works within a specific project and picks.
+
+Jatin Bagga   16:25
+Okay, so if I remove the AND clause for...
+The.
+The end status, if that's enough, you're saying? OK, got it. I got that. OK, I see.
+
+Eugene Semenyuk   16:32
+Yeah, you can you can just type like status.
+
+Jatin Bagga   16:38
+I see, okay. And then add a digital agent. Sorry, I think Jurijs has his hand up. Sorry, I know I thought 5 minutes is taking a little longer, but I'll be quick. Otherwise, folks.
+
+Eugene Semenyuk   16:38
+Equals something.
+
+Jatin Bagga   16:48
+And go in and I can circle back.
+
+Eugene Semenyuk   16:51
+Yeah, sure. Thank you.
+
+Jurijs Markelovs   16:53
+Yeah, when I'm creating the webhook right for the project integration, and it's obviously project type, right? I'm not able to select project type besides the one that I have, which is acquisition growth.
+
+Eugene Semenyuk   17:09
+Mhm.
+
+Jurijs Markelovs   17:09
+And belief is that is that a problem, because we are working on the...
+Call me sandbox.
+
+Eugene Semenyuk   17:14
+Yeah.
+Yeah, look, so there should not be a problem. So yeah.
+One thing that you need to keep in mind, so...
+In this case, so yeah, if you work inside acquisitions project, so your agent that you would like to trigger should be in this project, because our technical feasibility agent, so...
+Yeah, as I remember.
+Please take John.
+Is under frame, so...
+Simple, you can, you can just clone.
+this agent into your project.
+
+Jurijs Markelovs   18:08
+So basically bottom line is all of the assistants and all of the hooks and all integrations got to be in the same.
+We see on this in the project, but otherwise the integration won't work.
+
+Eugene Semenyuk   18:16
+Yeah.
+
+Jurijs Markelovs   18:20
+In the sandbox.
+
+Eugene Semenyuk   18:20
+Yeah, yeah, but...
+Uhh...
+So, yeah.
+Um...
+
+Jatin Bagga   18:30
+I mean, I just, you're sorry, one question, sorry. I just have one question. You're just like, if it's not in the same project, how would you share then? I guess my question is, can you share the use case that you're trying to do, like if it's outside? That's very interesting, what you're asking.
+
+Eugene Semenyuk   18:31
+Yeah, in simple words.
+Mm.
+
+Jurijs Markelovs   18:43
+No, I'm just trying to just trying to repeat the steps with the engineers.
+
+Jatin Bagga   18:48
+Ohh, got it, got it, got it.
+
+Eugene Semenyuk   18:48
+Yeah.
+Yeah, and, and...
+Simple words, so your agent and your webhook, so they...
+could be inside one project, inside one Cody project. So regardless JIRA projects, so yeah, but they should be inside one Cody project.
+
+Jurijs Markelovs   19:09
+Right, but there is no acquisitions project in the in the automation in a CodeMe sandbox, right?
+
+Eugene Semenyuk   19:16
+That's okay.
+
+Jurijs Markelovs   19:19
+Ohh, okay, okay, that makes sense.
+
+Eugene Semenyuk   19:21
+Yeah, yeah, that's.
+Yeah, because, uh...
+Yeah.
+Jira Automation will send a request to webhook.
+So, yeah, and you, yeah, during that pool creation, we we set up some credentials.
+Like, like some header with some secure value, so yeah, we provide these values to our automation, automation sends request to code me, so yeah, and like code me.
+And call me execute some agent, so yeah, but...
+Yeah, the agent should be inside.
+Inside the project.
+Uh, we have a poke.
+Being configured.
+Yeah, for example, yeah, you have webhook in the position girls. So yeah, you need to have an agent in this project.
+And what system executed this webhook? So yeah, we can.
+Yeah, we can never mind this part.
+So it can be Jira automation, it can be any other tool.
+Because, yeah, it's just post request to this URL.
+So yeah, that's why we don't care about Jira projects here. Sorry.
+Can be a call me project, it can be a servicing project, or...
+or data factory platform or any other project.
+
+Jurijs Markelovs   21:19
+And the assistant needs to be in a shared state, right?
+or not necessarily.
+
+Eugene Semenyuk   21:27
+Ohh.
+Good question.
+Probably not.
+
+Oleksandr Tsyganok   21:37
+I think, yeah, there is no limitation.
+
+Eugene Semenyuk   21:41
+Mmh.
+
+Oleksandr Tsyganok   21:42
+Give me a second.
+
+Eugene Semenyuk   21:45
+They can be your private.
+Very Trenz.
+There is my.
+We had a big amount of...
+That hooks.
+Yeah, here is my...
+
+Jurijs Markelovs   22:20
+And also, I understand right now we're working under the sandbox, but how do I test the created workflow automation on the live production JIRA project?
+
+Eugene Semenyuk   22:32
+Mhm.
+Yeah, you need any admin permissions for for your project, for your project.
+
+Jurijs Markelovs   22:41
+Okay. All right. Once I'll get the permission, I should be able to.
+
+Eugene Semenyuk   22:42
+Yeah, or or or find a person with admin permissions.
+
+Jurijs Markelovs   22:47
+Right, I should be able to uh, create exactly the same um, I mean something.
+
+Eugene Semenyuk   22:50
+Yeah, yeah, yeah, yeah, you can create it for any project.
+And even, even you can export.
+This rule.
+and import it again and select some project. Yeah, it requires some adjustments.
+Yeah, but the simplest way, so yeah, if you need to migrate some complex workflow from from one project or from training here to production, so yeah, you can try expert import.
+
+Jurijs Markelovs   23:37
+Yeah, it seems like there's no...
+
+Eugene Semenyuk   23:37
+Yeah, but it requires agents of updates for some agents.
+Because, yeah, under the hood, it it use unique IDs for specific agents, yeah, and on different environments, there can be different IDs.
+
+Jurijs Markelovs   23:58
+Right, I see the...
+
+Eugene Semenyuk   23:59
+So, yeah, but it's...
+
+Jurijs Markelovs   24:01
+I see export, but I see import is like disabled by default or something.
+
+Eugene Semenyuk   24:08
+Um...
+Well, let's see.
+Return to Flows.
+Okay.
+Be somewhere, somewhere here, create.
+Template.
+Wait, no.
+Yeah, that good question. It should be somewhere.
+So, yeah, let me investigate this.
+Oh.
+Okay.
+Yeah, and I will come back with the solution. There should be an option.
+To import.
+
+Jatin Bagga   25:19
+Yep, and if I can ask, sorry, so I'm in step 8, which is create a code me webhook, and that's where I am also unclear.
+
+Eugene Semenyuk   25:31
+Yeah.
+
+Jatin Bagga   25:32
+So, it says, "Open code me and go to something to what you use last time."
+Question was a little more specific, and is more basic.
+So I'm in code me.
+
+Eugene Semenyuk   25:47
+Yeah.
+
+Jatin Bagga   25:48
+I see what's going on here. One second.
+
+Eugene Semenyuk   25:54
+Yeah, the most important question, like, do you have...
+Create project integration, Barton.
+
+Jatin Bagga   26:04
+Um...
+No, I'm trying to see if this works out. One second, I'm just trying to see if it even pulls up and it's not. So the code me EPAM.
+
+Eugene Semenyuk   26:13
+Link.
+
+Jatin Bagga   26:17
+prod, but this is talking about code me, go to integrations and create project integration. Is this still in the code me sandbox or the code me EPAM prod?
+
+Eugene Semenyuk   26:29
+Yeah, let me share the link.
+
+Jatin Bagga   26:40
+So it is the prod.
+
+Eugene Semenyuk   26:40
+Called me a pomper rot.
+
+Jatin Bagga   26:42
+Okay, so it is prod. Okay, and then here, this is where I got Ruby Watson. So I'm going to integrations, integrations today, not tomorrow. Wait, where are you? Okay, I'm in integration, and then it's saying.
+
+Eugene Semenyuk   26:47
+Under Integrations.
+Yes.
+
+Jatin Bagga   27:03
+Create project integration.
+
+Eugene Semenyuk   27:07
+Yeah.
+
+Jatin Bagga   27:07
+Create your first integration, I guess, is what it's saying.
+Later, I just want to create. OK, so I got this. OK, so this is the same integration I created before, but different style now.
+Keep project, I'm only seeing seeing and training, so let's do training.
+Prudential types.
+
+Eugene Semenyuk   27:37
+Credentials type, we should select webhook.
+Yeah.
+
+Jatin Bagga   27:46
+Yeah, I don't see webhook, so that's the indication that I don't have it, right?
+
+Eugene Semenyuk   27:51
+It should be, so yeah, probably you need to scroll down a bit.
+
+Jatin Bagga   27:56
+Um, yeah, I don't see webhook. I just see MCP.
+
+Eugene Semenyuk   27:58
+Hurt.
+Or just.
+
+Jatin Bagga   28:01
+But I don't see webhook. I see A2A, Jira, Gate, Conference, Kubernetes, AWS, GCP, key cloak, blah, blah, blah, blah, blah, but no webhook.
+
+Eugene Semenyuk   28:13
+So, um, let's maybe try to type like web.
+
+Jatin Bagga   28:18
+Yeah, I did try type. It didn't give anything. It said no results found.
+
+Eugene Semenyuk   28:19
+Like this, yeah, ohh.
+That's.
+That's strange. Could you please share your screen? Yeah, yeah, yeah. It will be the most easy.
+
+Jatin Bagga   28:26
+Can I share my screen real quick?
+Can you see this?
+
+Eugene Semenyuk   28:33
+This way, yeah.
+
+Jatin Bagga   28:35
+So like if I drop down here.
+Nothing for webhook.
+
+Oleksandr Tsyganok   28:44
+Jatin, do you have access to create project integration button?
+
+Eugene Semenyuk   28:45
+S.
+
+Oleksandr Tsyganok   28:49
+on the previous screen.
+
+Eugene Semenyuk   28:50
+Ah, yeah, this is new user integration. Yeah. Would you please go, yeah, click go back.
+
+Jatin Bagga   28:54
+OK, so sorry, I think that anything go back.
+
+Oleksandr Tsyganok   28:54
+I think, I think you don't have admin permissions for this project.
+
+Eugene Semenyuk   28:59
+Yeah.
+
+Jatin Bagga   29:00
+Okay.
+
+Eugene Semenyuk   29:02
+Um...
+
+Jatin Bagga   29:02
+So, that's the old service request, a ServiceNow request that needs to get approved. Ohh, no.
+
+Eugene Semenyuk   29:06
+Mm-hmm, yeah.
+
+Oleksandr Tsyganok   29:07
+Yes.
+
+Eugene Semenyuk   29:09
+So, yeah, but but frankly speaking, if you if you don't need, yeah, it is not required to create your own webhook for this exercise. So, yeah, you can you can you can use already created webhook that I created.
+
+Jatin Bagga   29:10
+Okay.
+
+Eugene Semenyuk   29:25
+Yeah, and use it for your workflow right now. Yeah. And later, once you get your access, your admin access, so yeah, you can follow this step to create your own webhook.
+
+Jatin Bagga   29:27
+So like.
+This one.
+
+Eugene Semenyuk   29:38
+So, in this case, we can use...
+
+Jatin Bagga   29:38
+Look at me right now.
+Bye, see what we see.
+
+Eugene Semenyuk   29:40
+Yeah, the webhook that specified above.
+Yeah.
+
+Jatin Bagga   29:44
+So, like, like, for instance, in this particular case, you're saying I should just leverage it, like, add another action, I guess.
+
+Eugene Semenyuk   29:50
+Mhm.
+
+Jatin Bagga   29:52
+And here, use your webhook.
+
+Eugene Semenyuk   29:58
+Uh, it is web request.
+Yeah, you can just type web, send web request.
+
+Jatin Bagga   30:02
+Sent.
+
+Eugene Semenyuk   30:08
+Yeah, and you can copy-paste.
+Uh...
+A webhook from...
+Scroll on.
+
+Jatin Bagga   30:19
+This one?
+
+Eugene Semenyuk   30:21
+Yeah, this one.
+
+Jatin Bagga   30:28
+Okay.
+
+Eugene Semenyuk   30:29
+Yeah, and then yeah, request body we should select.
+Jira.
+Yeah.
+Yeah, it it should not be method post. Yeah, that's okay. Yeah, and web request body, so we should we should select issue issue data. Let's select automation format.
+
+Jatin Bagga   30:39
+Mean, here.
+
+Eugene Semenyuk   30:55
+Yeah, and in header options, yeah, in header, we should specify our header, this X.
+
+Jatin Bagga   31:09
+Okay, got it, exsecure.
+I was just copying that you got it. Okay.
+
+Eugene Semenyuk   31:12
+X secured.
+Yeah, under that.
+
+Jatin Bagga   31:16
+And then.
+
+Eugene Semenyuk   31:18
+Oh yeah, probably I need to.
+Yeah, there should be password one, two, three.
+
+Jatin Bagga   31:29
+In the value or?
+
+Eugene Semenyuk   31:31
+Yeah, yeah.
+
+Jatin Bagga   31:33
+Just password 123.
+
+Eugene Semenyuk   31:35
+Yeah, yeah, just simple password. Yeah, lower, lowercase. Yeah, like this, one, two, three.
+
+Jatin Bagga   31:37
+A lowercase.
+And that's it.
+
+Eugene Semenyuk   31:44
+Yeah, yeah, you can even validate your request, so...
+Uh...
+Yeah, you can use my work item. So like CS184.
+Ty.
+Mhm.
+A date.
+
+Jatin Bagga   32:07
+Okay.
+
+Eugene Semenyuk   32:08
+Okay, it works.
+So, yeah, in a few minutes, this could be agent should add a new comment.
+
+Jatin Bagga   32:10
+Oh, that's good.
+Okay.
+
+Eugene Semenyuk   32:20
+was technical feasibility analysis.
+
+Jatin Bagga   32:22
+Okay, this is good, Eugene. Thank you so much. I think I hogged 30 minutes of your time, so I'll let other people ask a question and I'll come back.
+for NCP. Thank you so much.
+
+Eugene Semenyuk   32:29
+That's OK. Yeah. Thank you.
+
+Jurijs Markelovs   32:33
+Can we maybe?
+
+Eugene Semenyuk   32:34
+So.
+
+Jurijs Markelovs   32:35
+Talk a little bit about other conditions besides the simple one we used. They are like a JQL user conditions. Not sure with anyone else, but the JQL could be very interesting to.
+
+Eugene Semenyuk   32:47
+Yeah.
+
+Jurijs Markelovs   32:53
+To look into, it has some some fields with unclear.
+
+Eugene Semenyuk   32:59
+Yeah, Jake, well...
+
+Jurijs Markelovs   33:02
+Maybe.
+Anyone else interested?
+
+Eugene Semenyuk   33:11
+JKL condition is like.
+most flexible.
+Yeah, let's also see what we have. Smart will use condition.
+So we can use some variable and check this variable condition.
+That's been interesting because I'm curious about what labels can we have at this stage, at the initial stage.
+
+Jurijs Markelovs   33:45
+You're not sharing anything.
+
+Eugene Semenyuk   33:45
+Yeah, but... Oh, sorry, sorry. Thank you.
+Yeah, here is my screen.
+Yeah, the first one is...
+Smart values, so it means some variable, so yeah, and we can even.
+Try to see, like, what variables do we have?
+Ohh.
+That's interesting.
+So yeah, it can check.
+Yeah, for.
+Select work item transition, so it means our item that we received in this condition.
+Yeah, if some are to moved from to do to in progress, so we can check assignee comment creator.
+Maybe some fields from issue.
+So yeah, it can be a good alternative for JQL.
+Like we can, for example.
+Use labels.
+issue labels.
+And use, for example, contains.
+Contains AI.
+No.
+So, yeah, fantastic, and we can use GQL for this purpose.
+Yeah, but...
+Yeah, you can use...
+You can try both of them and see what is.
+The most.
+Convenient way for you.
+Because for JQL.
+Yeah, you need to specify some JQL here.
+And.
+
+Jurijs Markelovs   36:03
+Yeah, probably needs to be tied up to a certain project. This one can be.
+To current project, right?
+
+Eugene Semenyuk   36:11
+Yeah, it is. It is current project by default.
+And, uh, yeah, under the hood.
+This JQL, yeah, it has a project, this current project code.
+And and this JQL that you will write, yeah, for example, if you if you try to do something like this, like project equals, for example, this one, sign teamed, it won't work because it will find.
+items that belong to Codney project and Alves project.
+But yeah, as we know, one JIRA item belongs only to one project.
+So yeah, let's imagine that before this condition we have.
+equals CS and.
+and next conditions.
+So we can mark something like...
+Reporter.
+Equals.
+Can I do something like this?
+And.
+
+Jurijs Markelovs   37:42
+Why the the the very first step transition from to do to in integration and condition are kind of like in the same block and they supposed to be like a separate blocks or?
+
+Eugene Semenyuk   37:57
+Uh...
+
+Jurijs Markelovs   37:57
+One module, the one in in in the in the blue right now on the left.
+Like...
+You know, two actions sort of two logics are combined under the same.
+They just, just...
+
+Eugene Semenyuk   38:12
+What?
+
+Jurijs Markelovs   38:14
+making sense? Why they are on the same block? Because other ones are step by step by step, everything is step by step, but the work items in transition from todo and progress.
+
+Eugene Semenyuk   38:24
+Yeah, because it it it belongs it belongs to trigger.
+Yeah, that's why it inside these.
+
+Jurijs Markelovs   38:31
+All this is just one block of trigger. All the conditions need to be met. Okay.
+
+Eugene Semenyuk   38:32
+Did it?
+Yeah, yeah.
+We have the main trigger, yeah, and the conditions for for this trigger.
+Yeah, and uh...
+Yeah, as they see, there is only, yeah, we...
+It is only an condition.
+So, we can't use or.
+Yeah.
+But it makes them something like this current.
+User.
+Yeah, let's see what we have.
+Work item attachments.
+Work item fields conditions.
+Oh yeah, great. One more opportunity to check some fields.
+I.
+So, yeah, basically you have multiple, multiple ways to interact with the.
+With some fields of this issue.
+So you can use Smart.
+Smart labels.
+You can use JQL.
+Or you can use work item fields condition.
+So yeah, it's really powerful.
+Okay, let's probably move on. So yeah, we have 20.
+20 minutes left. Do you have any other questions?
+
+Oleksandr Pavlovskyi   41:11
+Yes, have anyone tried to install MSP servers, your IDs?
+Do we have any issues here? Yeah, some help, so we can, we have 20 minutes.
+
+Jurijs Markelovs   41:27
+I have, I have tried to install the VS code, like MCP, Playwright, MCP, you know, the three of them, but to be honest, even when I was executing my the prompt, I haven't seen much of a difference with or without MCP for the Playwright, for example.
+On.
+
+Oleksandr Pavlovskyi   41:47
+So you, are you sure if they are wrong? You can share your screen, we can try together, yeah, right now, so yeah.
+
+Jurijs Markelovs   41:53
+Yeah, I confirm.
+Oh.
+All right, sure. Give me a minute.
+
+Eugene Semenyuk   42:00
+So, yeah.
+
+Jurijs Markelovs   42:03
+To.
+
+Eugene Semenyuk   42:05
+And you should be able to see, yeah, if they run, so yeah, they should be able, yeah, you should be able to see the methods of this MCB. Yeah, for example, I have Atlassian in Mabel MCB.
+
+Jurijs Markelovs   42:19
+All right, here we go. I'm sharing, hopefully.
+
+Eugene Semenyuk   42:21
+So, yeah, there are some some metals.
+
+Jurijs Markelovs   42:24
+Something, something legal.
+
+Oleksandr Pavlovskyi   42:28
+So just press this setting icon, yeah, in the top corner. Yeah, I mean, yeah, that's right. Okay, okay, everything is running, yeah. So, okay, let's try to get some information from Jira, for example, yeah.
+
+Jurijs Markelovs   42:29
+No.
+Yeah.
+
+Eugene Semenyuk   42:41
+Uh-huh.
+
+Oleksandr Pavlovskyi   42:48
+So, start your chat, yeah, ask you just to check, for example.
+
+Jurijs Markelovs   42:49
+Ohh.
+
+Eugene Semenyuk   42:50
+Yeah, I guess.
+
+Jurijs Markelovs   42:51
+God.
+
+Eugene Semenyuk   42:52
+Yeah, yeah, I know, I know, I, I know the reason. Yeah, it is, yeah, player with MCP, it can be some kind of, so yeah, because if you...
+
+Jurijs Markelovs   43:06
+I...
+
+Eugene Semenyuk   43:08
+Yeah, if you just message to Copilot things like use playwright to open the browser and get something, most likely it will it most likely it will create playwright scripts for you instead, instead use a show of.
+
+Jurijs Markelovs   43:15
+Uhh.
+Yes, exactly. Yes, sir.
+
+Eugene Semenyuk   43:27
+Play right MCP, so yeah, we should, we should.
+We should exact, we should say exactly like, use Playwright MCP server tools to do this, this, and this.
+
+Oleksandr Pavlovskyi   43:33
+Mhm.
+Yeah.
+Yeah, yeah, so yeah, ask, ask, ask M.C.P. to run the application here.
+And describe what it's gonna see in the browser, for example, yeah.
+To execute the application, open the application in browser, and so, or execute test.
+
+Eugene Semenyuk   43:58
+Thanks.
+See ya.
+
+Oleksandr Pavlovskyi   44:07
+Need to ask something, yeah, that we can see in the browser, yeah, because Playwright tool is for browser automation.
+
+Eugene Semenyuk   44:07
+Yeah, in my experience.
+
+Oleksandr Pavlovskyi   44:23
+Yeah.
+
+Eugene Semenyuk   44:24
+Um...
+Yeah, there can be tricky, tricky, tricky moments, so yeah, you, you ask it to execute tests.
+
+Jurijs Markelovs   44:27
+Something like that.
+
+Eugene Semenyuk   44:35
+Uh, not sure if it will, if it will be capable to...
+So yeah, probably we'll just...
+
+Oleksandr Pavlovskyi   44:45
+Run test run test in a in a terminal, yeah.
+
+Eugene Semenyuk   44:47
+Just execute your playwright test without playwright MCP.
+So yeah, probably we need to say something direct, like, open this page and verify this, this, and this.
+
+Jurijs Markelovs   45:04
+Should I specify some kind of data, some kind of a step, a test?
+Maybe.
+
+Oleksandr Pavlovskyi   45:12
+Blue.
+
+Eugene Semenyuk   45:13
+Um...
+Yeah.
+Yeah, in this case, it can work.
+Because, in my experience, if I, if I say just use playwright MCP to do this, this, and this.
+
+Jurijs Markelovs   45:38
+Right, see that's exactly.
+
+Eugene Semenyuk   45:38
+Oh, yeah, oh, Luke.
+What's wrong? I can't directly invoke your player at MCP server from here.
+That's interesting.
+
+Jurijs Markelovs   45:50
+Yeah.
+Right, then I have configured, I believe I configured this local globally for all the projects and.
+
+Eugene Semenyuk   45:56
+Mhm.
+
+Jurijs Markelovs   46:05
+Ohh.
+Bye.
+Do.
+Because what I would expect is sort of like a code code type of interaction, right?
+
+Eugene Semenyuk   46:24
+Mm-hmm.
+Yeah, yeah, it it it should invoke MCP, yeah, and maybe ask for for approval for some actions.
+
+Jurijs Markelovs   46:35
+Right, that's.
+It's not the case at all.
+
+Eugene Semenyuk   46:40
+Um...
+
+Jurijs Markelovs   46:48
+Yeah.
+Ten percent discount.
+Haha.
+Yeah, it's not invoke in the browser.
+In a traditional like UI mode.
+
+Eugene Semenyuk   47:13
+Hmm.
+That's interesting.
+Yeah, but at least it tried to execute. Yeah, it tries to...
+
+Jurijs Markelovs   47:27
+Yeah.
+
+Eugene Semenyuk   47:28
+Yeah, and it understands, like...
+It should execute player at MCP server, yeah, but...
+Yeah, he he says like it.
+Doesn't have an access.
+Yeah.
+So yeah, in Playwright MCP usage, so this Playwright MCP server tool, so this is a key phrase that can differentiate your request from just regular Playwright usage.
+
+Oleksandr Pavlovskyi   48:05
+Two.
+
+Jurijs Markelovs   48:12
+Okay, so does anyone know how to properly?
+
+Eugene Semenyuk   48:17
+Yeah, I'm going to connect to player item CPU because yeah, friends speaking. I haven't installed yield.
+
+Jurijs Markelovs   48:18
+Yeah.
+
+Eugene Semenyuk   48:29
+So yeah, let me do it. So yeah, and I'll come back to you.
+Yeah, because it it looks like some technical issue, so maybe maybe player MCP is blocked by some some policies.
+And yeah.
+
+Jatin Bagga   48:55
+Eugene, can I share my screen when you?
+
+Eugene Semenyuk   48:55
+And we cannot execute it.
+Yeah, yeah, sure.
+
+Jatin Bagga   49:04
+I know this is cursor, sorry, this one, the Visual Studio, so like...
+
+Eugene Semenyuk   49:07
+Mhm.
+
+Jatin Bagga   49:10
+This is where I didn't see the GitHub yesterday when we were talking about it.
+
+Eugene Semenyuk   49:19
+Yeah, could you please start with at and then then type MCP. Like this.
+
+Jatin Bagga   49:28
+Add here, you mean add?
+
+Eugene Semenyuk   49:30
+Yeah, I mean, add character like this. I'll send.
+
+Jatin Bagga   49:36
+Like MCP?
+Just here.
+
+Eugene Semenyuk   49:41
+Uh...
+No, yeah, yeah, but but but before MCP, so could you please type up add character like that that character that we usually use in in in ML, yeah, yeah, yeah, like this, yeah, awesome.
+
+Jatin Bagga   49:50
+Oh, at, I see. Oh, I'm sorry. At, yes, yes, sure.
+Okay.
+Van.
+
+Eugene Semenyuk   49:59
+Uh.
+
+Jatin Bagga   50:01
+When it does show up, when I just do at MCP, I get this.
+
+Eugene Semenyuk   50:02
+Mm.
+Yeah, that's.
+
+Jatin Bagga   50:09
+I get this everything failed to fetch.
+
+Eugene Semenyuk   50:12
+That's strange.
+Alexander, have you faced?
+Such error before.
+So, but we tried to explore, yeah.
+
+Jatin Bagga   50:22
+I'm sorry, say that one more time, Eugene.
+
+Oleksandr Pavlovskyi   50:24
+Well, to fetch.
+
+Eugene Semenyuk   50:26
+Yeah, yeah, I'm trying to speak with Alexander.
+
+Oleksandr Pavlovskyi   50:31
+Yeah.
+
+Jatin Bagga   50:31
+Oh, okay.
+
+Eugene Semenyuk   50:35
+Yeah, click.
+
+Oleksandr Pavlovskyi   50:35
+Could you, could you, could you please turn back and show this auto model?
+
+Jatin Bagga   50:44
+I'm sorry, say that one more time, Oleg.
+
+Oleksandr Pavlovskyi   50:44
+No, you mean, so sorry, you're trying to find these MCP servers in a marketplace here? Yeah, it seems like it blocked. Yeah, I was trying this also, yeah, and seems like it blocked here by our security security.
+
+Eugene Semenyuk   50:51
+In extensions, yeah, yeah.
+Mm.
+
+Oleksandr Pavlovskyi   51:05
+Yeah, yeah, scale or something like that, so that's why I'm recommending to do this configuration directly in the MCP JSON file. So, yeah, let me let me share again the in the our guides here, how you can configure.
+
+Jatin Bagga   51:05
+I see.
+
+Oleksandr Pavlovskyi   51:25
+And then.
+
+Eugene Semenyuk   51:27
+Yeah, and let me share my screen. So yeah, probably I can do it.
+
+Oleksandr Pavlovskyi   51:32
+It.
+
+Eugene Semenyuk   51:33
+Yeah, you using your guide because yeah, I have just few MCP servers, so yeah, and I can show you how to.
+How to do it?
+
+Oleksandr Pavlovskyi   51:41
+But plugins from VS Code insiders are available, and it's strange, it's but I'm using this PVM, yeah, but for example, I don't remember who was mentioned this year, Sanjay, yeah, if I'm if I'm right, yeah, for him, it's not available.
+So, seems like we have different security policies.
+Yeah.
+
+Eugene Semenyuk   52:05
+So yeah, in VS Code, you can just type like this, this character, then MCP. Yeah, and yeah, there are several options.
+So, yeah, at the server.
+Let's probably use add server.
+
+Oleksandr Pavlovskyi   52:24
+I think it's going to be more easier to open user configuration, yeah, and get the, yeah, directly get the MCP.
+
+Eugene Semenyuk   52:28
+Yeah.
+
+Oleksandr Pavlovskyi   52:36
+No, no, Control should, it's different.
+
+Eugene Semenyuk   52:38
+Yeah.
+Right, yeah, it's still, yeah, MCP, yeah, and yeah, we can open open using configuration.
+
+Jatin Bagga   52:45
+Sorry, I...
+
+Oleksandr Pavlovskyi   52:48
+Yeah.
+
+Jatin Bagga   52:49
+When I'm trying to add that ad, it's not really working for me, but maybe I'm in a different project itself.
+So I see autoplay again as for me.
+
+Oleksandr Pavlovskyi   52:57
+You're judging, maybe, maybe show your screen. Let's try to do it.
+
+Eugene Semenyuk   53:01
+Yeah.
+
+Jatin Bagga   53:01
+Okay, one second.
+
+Eugene Semenyuk   53:07
+The.
+
+Jatin Bagga   53:07
+Can you see this?
+
+Eugene Semenyuk   53:09
+Mhm.
+
+Oleksandr Pavlovskyi   53:09
+Yeah.
+
+Jatin Bagga   53:10
+Okay, so this is auto-pay, so this is wrong, but let's go here. Let's go back, maybe.
+
+Oleksandr Pavlovskyi   53:21
+No, just it doesn't matter, yeah. Could you please press this settings icon here in the in the compiler chart? I mean, in the right top corner, yeah, this one, yeah. Choose MCP servers on the left, in the left part.
+
+Jatin Bagga   53:31
+Yeah.
+Okay.
+Okay.
+
+Oleksandr Pavlovskyi   53:39
+Yeah, press right, right, right button of your mouse, yeah, and choose show configuration JSON.
+
+Eugene Semenyuk   53:45
+Mhm, mhm.
+
+Oleksandr Pavlovskyi   53:51
+Right, this is the MCP GSON, and so what is it? It's some it's Atlassian MCP. Press start.
+
+Eugene Semenyuk   53:59
+Just lost an MCP.
+
+Oleksandr Pavlovskyi   54:03
+You see, if you have configuration from, it seems like this is the right configuration. Press start above above these lines. You see, start that you want tools. Yeah, OK. Error, we have the error. All right.
+
+Eugene Semenyuk   54:12
+Yeah, it's gray. Yeah, this one.
+
+Jatin Bagga   54:16
+At Erin.
+
+Oleksandr Pavlovskyi   54:21
+Yeah, not sure if it's could you, could you please open the output? Let's see what happened here. Output on the below below, I mean in the terminal. No, you need to probably press this error.
+All right, let's keep it. Yeah, let's try to use the lines that I provided to you in valid token.
+Are you need to authorize?
+Only talking, let's use the clients that they provided, but let me double check.
+
+Jatin Bagga   54:55
+Thanks.
+
+Oleksandr Pavlovskyi   55:04
+MCP call.
+We on MCP seems like this right here.
+
+Jatin Bagga   55:11
+Uh, you talking about this?
+
+Oleksandr Pavlovskyi   55:11
+I wish to be here.
+Yeah, I mean, you can just copy paste for a license, for example. Yeah, let's take.
+
+Jatin Bagga   55:21
+Uh, this JSON message is what you're saying, or...
+
+Oleksandr Pavlovskyi   55:21
+Yeah.
+I mean, I mean only the lines that related to Atlassian, so let's try to resolve the only the one MCP server and then move to there, yeah, so copy paste starting from Atlassian Ward and to the final bracket, I mean, for this for this section.
+
+Jatin Bagga   55:42
+OK, so I got, I then we can delete the one that's not needed.
+and I can change it later. So, okay, so I got this, so this already exists, so I can, I don't need that. I need.
+
+Oleksandr Pavlovskyi   55:52
+Yeah, yeah, and remove, and remove, yeah, the old section, I mean, the old server section, yeah, because you have duplication of your configuration, yeah, right, okay, yeah.
+Alright, so you can you can save it. Yeah, we we were gonna start only at license server, so press save this file.
+Control plus S.
+
+Jatin Bagga   56:24
+Okay.
+
+Oleksandr Pavlovskyi   56:26
+Right now, click on the Atlassian word.
+You gonna, it's gonna show for you the start button.
+Oh yeah, yeah. And now click start for Atlassian. Yeah, yeah. You see, yeah, we have these actions, action lines. Press start above the Atlassian world.
+
+Jatin Bagga   56:51
+Uh...
+The word Adelais, just above that, okay.
+
+Eugene Semenyuk   56:58
+Right.
+
+Jatin Bagga   56:58
+So, right here, OK.
+
+Oleksandr Pavlovskyi   57:02
+It was not Atlassian, it was GitHub, but it's okay. Let's try to configure GitHub in this. Okay, it's going to open GitHub. You need to log in.
+
+Jatin Bagga   57:13
+Okay.
+Okay.
+You can choose to skip.
+
+Oleksandr Pavlovskyi   57:34
+Dave.
+No.
+
+Jatin Bagga   57:39
+skip at the moment. Okay. Continue.
+
+Oleksandr Pavlovskyi   57:41
+Mhm.
+Continue.
+
+Jatin Bagga   57:46
+That's right.
+Continue, OK.
+
+Oleksandr Pavlovskyi   57:58
+Visual Studio, yeah, permission is requesting. Yeah, could you could you could you scroll down? Yeah, authorize in the Visual Studio, okay.
+Right, we see the running. Yeah, so the first MCP server is available. I mean, GitHub. So now with GitHub MCP server, you can work with your repositories. Yeah. Let's try to start the class in the same way. Yeah.
+
+Jatin Bagga   58:24
+Got it.
+Error.
+
+Oleksandr Pavlovskyi   58:32
+All right, error.
+Yeah, render or missing or invalid access. Probably we need you have already tried to log in here, so seems like we need to reset the.
+
+Jatin Bagga   58:45
+Yeah.
+
+Oleksandr Pavlovskyi   58:51
+Reset the authorization, check VS code.
+Both reset.
+The.
+CP.
+Should be.
+Right, what we should do, Control Shift P.
+
+Jatin Bagga   59:18
+Did you say control shift what, sorry?
+
+Oleksandr Pavlovskyi   59:24
+No, no, it's I'm trying to find the answer to this. I don't remember how to reset the configuration. Could you try to press this restart button? Yeah.
+
+Jatin Bagga   59:38
+There.
+
+Oleksandr Pavlovskyi   59:38
+Gabe.
+Get an error from several metadata cancelled.
+Stage.
+A little.
+
+Jatin Bagga   59:55
+And I know we're up against time, so it should be, do we have an office hour Monday as well or something or no?
+
+Eugene Semenyuk   1:00:03
+I.
+
+Oleksandr Pavlovskyi   1:00:04
+We have champions call on Tuesday, we have on Tuesday our cross-functional meeting.
+
+Jatin Bagga   1:00:04
+Have a good.
+Okay, maybe I'll just ping you all like offline and see if you know we can get 5 or 7 minutes just to look into this.
+
+Oleksandr Pavlovskyi   1:00:09
+Yeah, but, but I will...
+
+Jatin Bagga   1:00:33
+Yeah.
+
+Oleksandr Pavlovskyi   1:00:33
+is not available to get the token. Yeah, it's not provided.
+
+Jatin Bagga   1:00:36
+Yeah, yeah, yeah. Okay.
+Okay.
+
+Eugene Semenyuk   1:00:40
+You.
+
+Oleksandr Pavlovskyi   1:00:40
+Rangers.
+
+Jatin Bagga   1:00:40
+Perfect. Thank you so much. Appreciate your time. Thank you.
+
+Eugene Semenyuk   1:00:44
+Thank you.
+
+Oleksandr Pavlovskyi   1:00:44
+Thank you guys. Happy Friday.
+
+Eugene Semenyuk   1:00:48
+Yeah. See you soon. Bye.
+
+ stopped transcription

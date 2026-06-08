@@ -1,0 +1,409 @@
+AI Enablement ENGINEERING Lighthouse Session-20260415_145928UTC-Meeting Recording
+April 15, 2026, 2:59PM
+37m 10s
+
+Oleksandr Pavlovskyi   1:34
+Oh yeah, hello guys.
+I have some troubles with connection.
+Yes, can you hear me?
+
+John Zimmerman   1:45
+Yeah.
+
+Oleksandr Pavlovskyi   1:45
+Yeah, so guys, how are you today?
+
+John Zimmerman   1:49
+Good.
+
+Oleksandr Pavlovskyi   1:53
+So, as usual, today we're going to have our two showcases, yeah, from John and Amit. So, guys, if you don't have any questions, yeah, I propose to start.
+So, John, how about you? Would you gonna be this the first stay?
+
+John Zimmerman   2:17
+Hurt.
+
+Oleksandr Pavlovskyi   2:18
+First presenter. All right, so the stage is yours.
+
+John Zimmerman   2:23
+All right.
+
+Oleksandr Pavlovskyi   2:23
+Yeah.
+
+John Zimmerman   2:29
+Hey, can everybody see my screen?
+
+Oleksandr Pavlovskyi   2:31
+Yeah.
+
+John Zimmerman   2:33
+Okay.
+So...
+This is the indicator file and this gets created after every data refresh. A lot of people on this call are.
+Very familiar with this file. For those that aren't familiar, it has all the accounts that are in the integration environment.
+And UAT environments, so...
+There are tons of fields, as you can see, for an account.
+And not everybody knows what every field, you know, if you're looking for bankruptcy, you may not know it's BK-07 or BK-CH07 for chapter 7 and 13. I took the approach of
+Being very green towards this file is like, I know the file exists. I really don't know the field names. And I ran it through Copilot to give me, to read through this file and spit out two individual files based on the types of accounts.
+that I wanted.
+So I will bring.
+So what I did, this indicator file has multiple tabs. I deleted the other tabs because I had to get it down under 50 megabytes for co-pilot. But once I uploaded it, and I don't know if everybody can read this, but this is the
+or what I prompted it to do.
+So I wanted it to give me a file of accounts where the co-borrower or borrower are in Chapter 7 or Chapter 13 bankruptcy. And then I wanted a second file created that only created if you are not enrolled in direct pay, also known as auto pay, and you have a balance greater than 0.
+And this took a while for it to generate, probably a good 15 minutes. But you can see here.
+All of its thinking.
+And it did a lot. So I don't know how many tokens I burned up, but...
+
+Oleksandr Pavlovskyi   4:54
+Mhm.
+
+John Zimmerman   4:59
+So here we go. Towards the end, it did spit out two files. It was accurate. I was impressed.
+So it ended up, it assumed BKCH 07 or BKCH 13 for bankruptcy, which was true.
+And for direct pay.
+It did find a field called Balance.
+It also assumed DP was for direct pay, which is correct, and I was really impressed by that.
+So...
+It ended up and they gave me all the statistics of how many were in each file. The files it gave me initially just had a few columns on the output, which was fine for what I was doing. It also asked me if I wanted the whole thing or just the columns, but I just chose, you know, the smaller output type because...
+Honestly, I just wanted the accounts. If I need to see any more on them, I can always do a search in the indicator file to get more detail about the account, but...
+That was the approach I took. Just somebody who's very unfamiliar with the column names and kind of going about this is what I want and this is what I found. I won't say it will.
+you know, work 100% of the time of which you're going to find. However, you know, it's a good start and can get somebody who's new or unfamiliar with the file.
+Uhh.
+at least a head start and could always validate with somebody who's more seasoned into the system to assist.
+Yeah, Praveen.
+
+Praveen Lakshman   6:48
+Yeah, John, sorry I joined late. So these were like a test data, right? Not the real customer data.
+
+John Zimmerman   6:56
+Correct, did scrambled test data.
+
+Praveen Lakshman   6:58
+Okay, okay. Yeah, just wanted to make sure because it might become public right once we run these kind of tests with the co-pilot or anything.
+
+John Zimmerman   7:02
+Yeah.
+Yeah, I wouldn't have run real data through Copilot. I don't trust it. But yeah, it's Tommy Payne's team creates these files every refresh.
+
+Praveen Lakshman   7:10
+Add.
+Got it.
+Thank you.
+Got it.
+
+Oleksandr Pavlovskyi   7:28
+Yeah, cool, cool. Yeah, as for this use case, yeah, you see, yeah, he's use approach, yeah, he's generating the script, yeah, and then running the script. So technically, yeah, when we have the script and we see the logic, what is, what is.
+present here in the script, you can rely on the final result. But we all understand that if that happens, how to say, we're getting the result after the script, and then we have the stage when our LLM can hallucinate.
+So, as I understand, you are regularly working with similar files with this format with the same columns, yeah? Am I right?
+
+John Zimmerman   8:20
+Yeah, I mean, really from for each lane, you're going to look for similar test data from release to release. So
+
+Oleksandr Pavlovskyi   8:21
+Mhm.
+
+John Zimmerman   8:32
+You know, to really make this run faster, I would have given the specific column names, but I really wanted to challenge it, the LLM, to see how good it would be if I had no idea what the column names were. So, you know, I would foresee it.
+
+Oleksandr Pavlovskyi   8:38
+Mhm.
+
+John Zimmerman   8:50
+Everybody's going to have some common test cases they're going to want to use from release to release. You can create an agent and then be more specific about the column names you want and the data you're looking for as you know.
+Things would mature, but...
+You know, for somebody who's very unfamiliar with the column names, but they know the values, it's a good start.
+Especially, you know.
+
+Oleksandr Pavlovskyi   9:17
+Mhm.
+
+John Zimmerman   9:20
+Quick training exercise.
+
+Oleksandr Pavlovskyi   9:24
+Yeah, so for this use cases, yeah, a good solution to use AI to generate for you script that you can reuse for the similar tasks. Yeah, from the one side, you're going to definitely save tokens. Also, when you're going to run these scripts.
+
+John Zimmerman   9:36
+Yep.
+
+Oleksandr Pavlovskyi   9:43
+Locally, yeah, without interaction with LLMs, you're gonna be sure regarding to the security, so you're gonna use the day is some.
+some secure data, yeah, for these scripts, because here you're just running some logic, yeah. And yeah, you can ask, for example, maybe to build some around the script, some web interface, yeah.
+for more usability, yeah, to have your tool that you can use for similar tasks. So this is great combination when you have agent which aware how to use some scripts because some operational things, yeah, when you need to compare some data.
+When you do some math operations, yeah, this definitely should be delegated to the, how to say, I don't know, to the programs, yeah, to the scripts, because LLMs, yeah, this is just a tool which can, which is trying to.
+
+   10:47
+Mhm.
+
+Oleksandr Pavlovskyi   10:53
+Complete your prompt, yeah, so you providing some initial data, yeah, and she trying to understand how to convert this data to output, yeah, to to build some logic, but regarding to the calculations, regarding to some logic, yeah, it can be random. Instead, when we are talking about the...
+logic, yes, that is in our program code. So this is a great example, yeah, but I recommend to save maybe this Python script, yeah, and with Copilot, try to tailor it to the reusable to universal solution for the similar files. So then you're gonna need just to...
+Provide the Excel file, yeah, and get needed, get it, I don't know, calculated data, yeah, based on your needs, yeah.
+
+John Zimmerman   11:45
+Mhm.
+
+Oleksandr Pavlovskyi   11:46
+Something like this.
+
+John Zimmerman   11:47
+Yeah, because there are some cases to where you have an account you can use to test, but you will need a couple of columns to adjust to be very specific cases. So this could come in handy of having an agent, okay, find me an account that at least meets this minimum criteria. And if these columns
+
+Oleksandr Pavlovskyi   12:10
+Mhm.
+
+John Zimmerman   12:11
+don't have these exact values, replace it with these values because you may have 10 records you want to change and that gets pretty tedious. And so yeah, there are a lot of things you can really do and it's very repeatable from release to release.
+
+Oleksandr Pavlovskyi   12:20
+Mhm.
+Yeah, yeah, yeah, unfortunately, yeah, limitation is only for some repeatable task, yeah, if we have if you have every time some customization, yeah, regarding to the response that you you you would like to get, yeah, this is probably hard to build universal script for this, yeah, universal.
+
+John Zimmerman   12:43
+Mm.
+
+Oleksandr Pavlovskyi   12:47
+It's gonna be complex, it's gonna be complex application, maybe, as a result, yeah.
+
+John Zimmerman   12:52
+Yeah.
+Yeah, but yeah, and there are definitely, you know, standard ones you're going to run all the time for regression or anything, or just some sanity checks. So yeah, there are a lot of, I think the use cases are kind of endless of how you want to use it. But you're right, you know, a lot of it's repeatable, but you are going to have those unique situations.
+depending on what your projects are you're trying to complete.
+
+Oleksandr Pavlovskyi   13:20
+Mhm.
+Cool, cool. Great use case. Thank you, John. Guys, questions to John.
+
+John Zimmerman   13:26
+What?
+
+Oleksandr Pavlovskyi   13:32
+Maybe you have similar use cases here when you need to work with this big Excel files or maybe similar data.
+And you use a similar approach of this for this.
+Yeah, and which model did you choose? You used a thinking model, yeah, for this, because, as I see, the this is a huge file compiler, but regarding to model, did you do some specific configuration? Because, as I remember, there we have thinking mode, yeah, we have usual mode.
+
+John Zimmerman   13:59
+Copilot.
+No.
+
+Oleksandr Pavlovskyi   14:11
+Maybe some instant Mo.
+
+John Zimmerman   14:13
+Uh.
+I don't remember. I might have.
+put more thinking on it just because of the vagueness I was giving it. I wanted it to think harder.
+But it was just co-pilot and I just updated it and told it what I wanted.
+
+Oleksandr Pavlovskyi   14:29
+Mhm.
+
+John Zimmerman   14:32
+I don't remember which mode I threw it in, but it would have been one that was a little more stringent.
+
+Oleksandr Pavlovskyi   14:32
+Where does it was?
+Mhm.
+OK, scholar, would you like to?
+
+Sukalya Rajendran   14:42
+Yeah, yeah, just a suggestion. I've worked a lot with Snowflake. So in Snowflake you can upload the CSV and now I think Rajesh's team is rolling out Snowflake Cortex, which is its own LLM feature, AI feature, where you can use NLP and ask questions about the data itself.
+like how you were querying in ChatGPT, you can do that directly on Snowflake. So if you were to load the CSV file into a test table or something, and then use Snowflake Cortex to ask your questions, that would also be work out if it's just test data that you're playing around with. You can try that out in Snowflake Dev if you have access.
+
+Oleksandr Pavlovskyi   15:15
+Mhm.
+
+John Zimmerman   15:19
+Ohh, OK.
+
+Sukalya Rajendran   15:22
+That's just a suggestion.
+
+John Zimmerman   15:23
+I'm not sure if I do or not, but I actually I don't think I do only prod access.
+
+Sukalya Rajendran   15:25
+Yeah.
+Okay, I can give you the role group name that you can request access for Snowflake, but for data related queries, I find Snowflake a lot easier to work with. It's just my personal preference, that's all.
+
+John Zimmerman   15:41
+Oh yeah, I'd rather have co-pilot use SQL to hit it, then the way it's going, it would be much faster and more powerful.
+
+Sukalya Rajendran   15:47
+Right.
+Yep.
+Yep, yeah, you wouldn't have to write the SQL itself. You can just ask, use NLP and ask questions now using this Cortex model that they have rolled out for you developers.
+
+John Zimmerman   15:52
+Okay.
+Oh, okay, cool.
+
+Sukalya Rajendran   16:02
+Yep.
+
+Oleksandr Pavlovskyi   16:05
+Yeah, yeah, yeah. Thank you, Sukalya. Great advice.
+All right, so thank you, John. So moving to the next showcase, Amit.
+
+Sharma, Amit   16:20
+Yeah, hi, hi, hi, Oleg. Hi, everyone.
+
+Oleksandr Pavlovskyi   16:20
+Who are you?
+
+Sharma, Amit   16:24
+Sure, I'll share my screen.
+K.
+I hope you can see the screen.
+
+Oleksandr Pavlovskyi   16:37
+Mhm, yes, again.
+
+Sharma, Amit   16:39
+OK.
+Yeah, so this is related to this is not any very complex or something. I just, it's like my first of first rather second and it's simple only. Yeah, I'm just creating an agent to create the dummy data for my iceberg tables in snowflakes.
+So let me come to the pain point why I need to do that. So what I was doing is like...
+I wanted to, I, there was a project in which I created the Snowflake Iceberg tables, new tables in Snowflake, okay? And I wanted to have some dummy data so that I can load them up into that Snowflake tables and then test it up whether they are.
+
+Manny Sanchez   17:27
+So.
+
+Sharma, Amit   17:28
+Like, data is working fine, loaded, and joining, and all, every all these things has been working fine or not, like, so for that I needed the data, so, but for every table I had to create a new glue job for each table, because why I need to...
+Create a glue job because I need the this dummy data in a parquet format because the chatbot cannot create and give me the time downloadable parquet format, so, so he would he would be rather giving me advice to create a glue job and then get the parquet file, so then for a couple of...
+Tables which I created in Snowflake, so for testing I had to create glue job for those tables to create Parker file, so that was like time consuming and you know efforts consuming.
+So what I thought of, like, let's create an agent workflow. So let me give you the workflow of the agent, how it works, then I'll show you the demo. So the input of that workflow will be my create table statement for my Snowflake, which I had created in Snowflake.
+So that statement, DDL, I'll give it to this. Then what my agent will do is it will parse the SQL. It will extract table name, column types, and partitions. It will map types from Snowflake to Spark type mappings. Then it will generate a script which is like nothing but glue job script, which I had to do manually earlier. So it will create that.
+script and then it will upload it to the S3. Then it will create a glue job via Boto3 and then it will run it like it will itself get access to IM role and then it will run that job, execute and monitor. It will wait for its completion and then.
+it will validate the output also, the parquet format files, which is it will be creating it and storing it in S3 and it will validate that also. And it will give me output in form of like JSON and parquet file in S3.
+So, that's the flow here, and let me take you.
+Two.
+Okay, the code me. So I use the code me to create a prompt. So I just simply give my normal English language prompt here. I just told him that I that input should be the create statement. The agent should understand the schema and.
+create a glue job and run it in Dave environment and which should create the mediator for few rows or number of rows as an input if I give and store the parquet format in S3. So that kind of input I gave and I also gave that I will provide the IM ERN and S3 location and.
+So naming convention of the job I gave it. So then it gave me this whole prompt.
+And so it gave me like.
+the behavior and steps. So input parsing, how it will do that. It will, it gave me some example and it will show, it shows me that it will consider like this and it asks me the inputs here. So it will ask the user for runtime input. It will schema mapping, it will do that.
+Then it will create a glue job generation. It will create a glue job here. Then it will create another script to run that glue job and another script for validation. So and then finally reporting and all. So that this.
+This.
+prompt I took it and use and created this.
+dot MD file here, agent. And I did some few changes, like I just gave which kind of, you know, the glue version it should use and a number of workers or worker type it should use. And I also gave it the path of my previous.
+glue job which I created manually. So just for reference so that it can have more actual and real life scenarios outputs. So that's how I created this agent. So now I'll run it for one of that. So.
+I'll see.
+OK, so my glue.
+I found dummy. This is my agent name.
+And I'll ask, could you please create?
+I mean, data for below.
+Statement.
+Then I'll just give an example and this is my create statement which I this is the great statement of my iceberg table in Snowflake. So this statement I'll give it.
+And yeah, and I'm using 6, 4.6. Okay, looks good. Let's go.
+So.
+I'll show you, I'll go back to my glue job and it will create a glue job here. And this is the path in S3 where it will create the dummy data. Okay, so going back.
+Certs.
+Okay, so because it I have you already used it for another table by one test 3 so it says like looks like same as it is using the same format.
+So it's schema mapping, it is, it has done.
+Then now it is creating dummy vantage for glue job. So you see here it has created a dummy glue job, which it will be running in glue.
+And apart from this, creating this glue job, it will also create the deploy vantage for the deploy script so that it can deploy it to S3. After that, it will create one more file to run it.
+And then it will create one more script to validate this.
+So all these files will be available here in the scripts. OK, deploy, run, and create, and then validate. So validate also has been created. So now it will deploy the glue job to S3.
+And here it will ask me whether I can do that. So I'm allowing it.
+Bear with me for some few moments.
+So, yeah. So I have already given the IAM because last time I ran it, so I gave the S3 path and IAM role, so it is considering the same. It's not asking me, otherwise it would have asked me.
+So now it is, yeah, so it is asking me it, it has it now it has loaded in S3. I'll show you this. So if I refresh this in Glue environment, it will, there will be a new Glue job with Vantage 4.
+Yeah, so the script, the glue job has been created here. So now we will run it.
+Okay, so now I'll start running it. I'll show you there.
+I think I have not clicked on it. OK.
+Okay, some issues.
+OK, so Joe has started now.
+Yeah.
+Yeah, so job is running now, so it will run for like one, one to two minutes, and so...
+After that.
+Meantime, like we, I can like any questions or comments and till we this job completes.
+
+Oleksandr Pavlovskyi   27:48
+Yeah, guys, interesting to hear your experience, yeah, especially, yeah, yeah.
+
+Jason Daggs   27:51
+Bye.
+I was just gonna say, I, I, I...
+very much like this use case and the way he's implemented it. I think it's definitely giving me some ideas. So thank you for this.
+
+Oleksandr Pavlovskyi   28:07
+If.
+
+Sharma, Amit   28:08
+Thank you.
+Yeah, so it will.
+monitor and then it will show you the status here.
+And let's go back to the glue job.
+Should be completed by any minute.
+OK, it's completed.
+So now job succeeded and check background ran this. Looks like it was impreted running again. We don't need to run it again.
+Yeah, so now it will ask me to validate the run the validate command validate the script so that it can validate the parquet file which we have created and then
+Once it runs, then that's all.
+Yeah, so it is now validating the output, and...
+Giving us the report.
+So we have job name this run ID succeeded 91 seconds location where the script is created. So this is a location. I'll show you that also and output also in this location rows 10 parquet file and 10 rows. Let's go to.
+to the location and see.
+Okay, file name was per K, so I'll just refresh it. So this is my scripts where he he he has stored the script. This is my script glue job script, which has he has created and ran it in glue job and coming back to dummy data. So now here it is one page 4, so it has created for like.
+10 files folders like in with the partition of date format. So these are the parquet format. So now after this I'll my I'll run my like so as part of this agent this job is finished now. So that's all here. So now you can take this like.
+This file and use it anywhere, so yeah.
+Yeah, that's pretty much.
+Yeah, that's all. Yeah, over to you, Oleg. Any questions, questions, comments?
+
+Oleksandr Pavlovskyi   30:57
+Cool, cool. There's any questions?
+Uh, yeah, like, yeah, like this.
+
+Sharma, Amit   31:05
+OK.
+No, I was just saying, thank you, yeah, okay.
+
+Oleksandr Pavlovskyi   31:12
+Ohh.
+Great, great use case. Thank you. Yeah. And yeah, you know, guys, I would ask Alan, today, today, yeah, you ask regarding to the separation, yeah, maybe to give you, to provide you some recommendations.
+Do you have a similar workflow regarding to your task? Do you also use Snowflake for your tasks?
+
+Allen Truban   31:44
+No, we just use, we have some tasks that query snowflake, but that's it.
+
+Oleksandr Pavlovskyi   31:51
+Just worry, yeah.
+
+Allen Truban   31:52
+Yeah, just queries.
+
+Oleksandr Pavlovskyi   31:54
+Just queries, yeah, it's maybe, maybe not not the same, yeah, but yeah, but you know, guys, we're talking not only about the solutions, yeah, it's just like a solution, yeah, for your tasks, yeah, and...
+About the approach, so it's interesting, guys, to to hear what what they're using, yeah, what approaches, for example, like Amit shows, yeah, he used CodeMe to generate the agent, yeah, then he generated script, yeah, and so it's...
+help like a build for him like a solution, yeah, this workflow. So it's interesting to understand the combinations and abilities of these tools, the possibilities, how you can use these tools and in what combinations. So I'm really looking forward when we're going to get MCPs, yeah, that's going to extend.
+abilities to use GitHub Copilot, yes, or inside your IDE, you can do almost the same, like we do with this combination of these tools, yeah. So for example, instead of using Microsoft Copilot, you can use GitHub Copilot, yeah, and...
+run this script inside your IDE. Yeah, if you need, it's going to be more useful to do some tweaks yet, maybe to update the logic, yeah, maybe to reuse the scripts for another solution, yeah, and based on your request, you're going to have more abilities to do some changes in the script in the logic, yeah, maybe to increase.
+to extend the logic, yeah, maybe to change and so on. So, yeah, but now we have this toolkit, yeah, and I think that's enough, yeah, to do this interesting solutions, yeah, even to use multi...
+agents approaches here for this and so on. All right, guys, next time we're going to have the following sessions here. On Monday we're going to have our Champions in Cup when we decide which topics going to be.
+Gonna be gonna be gonna be which topics which use case is gonna be presented on the next Wednesday, but guys, don't forget we have the board, so if you have your use cases, please submit them. So, we regularly discuss all use cases that we have on the board here, and don't forget to update.
+So, if let me share the screen here.
+Yeah, so don't forget to update statuses. So we have our workflow, yeah, intake. This is like a to-do column, yeah, in progress. That means that you're working on this use case. And when you're ready, move your ticket to the share column. That's going to be a signal.
+For our champions group, yeah, to schedule a session, or schedule session, maybe to schedule a pre-screen session if you need, yeah, but to schedule your showcase.
+with our lighthouse sessions. Yeah, and done column, it's like our definition of that, the definition of that, that means that the use case has been demonstrated here, only the documentation has been provided if it's needed here. And we're going to know that this use case can be used for production task.
+because most of this task is solution for your production tasks.
+Yeah, I see some of this here right now. Yeah, some tickets has been moved in a progress column. Alright, guys, any questions regarding to this?
+Cool, cool. So, okay, thank you all. Thank you once again, our champions to the great demos and your sharings. And see you next Wednesday. And have a great day.
+
+Chantal Justamond   36:33
+Thank you.
+
+Sharma, Amit   36:34
+Thank you.
+
+Iryna Pashko   36:36
+Kim.
+
+Allen Truban   36:36
+Thank you.
+
+Oleksandr Pavlovskyi   36:39
+Yeah, big guys.
+
+Nicholas Crowley stopped transcription

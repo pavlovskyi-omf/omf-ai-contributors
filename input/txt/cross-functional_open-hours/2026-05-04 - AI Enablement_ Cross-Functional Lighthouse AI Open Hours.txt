@@ -1,0 +1,540 @@
+AI Enablement Cross-Functional Lighthouse AI Open Hours-20260504_155946UTC-Meeting Recording
+May 4, 2026, 3:59PM
+38m 33s
+
+Eugene Semenyuk   2:39
+Hello, good morning, good afternoon.
+
+Angela Cureton   2:46
+No.
+
+Oleksandr Pavlovskyi   2:48
+Hi, guys.
+Right, so since Nikita.
+Ohh.
+OK, let's give one more minute here, because they probably stuck for one minute on another call, yeah, and we're gonna start, yeah, but before we start, guys...
+Would you like something to highlight?
+On the beginning of today's meeting.
+Right. Oh, Nikita is here. Nikita, do we have some specific agenda or questions that we need to raise from the beginning?
+
+Nikita Kumar   3:41
+Um...
+No, this is just open hours for you guys. So whatever anyone else has, they can ask questions and we kind of just go from there.
+
+Oleksandr Pavlovskyi   3:51
+I.
+Right.
+
+Alfredo Achecar   4:14
+I can ask a question, and this is this is for for Vlad. Vlad, is it possible? I know that we we talked about that.
+You showed that you showed me that sort of brain situation with cursor.
+Um...
+And I'm sure I can look this up and like follow it myself, but if you know we can use the time to like see how or just how to think about that.
+How to think about that? We had the mental model of building the brain to manage more data.
+
+Vlad Grubman   4:47
+Sorry, not. I'm not 100% sure what is the question.
+
+Alfredo Achecar   4:50
+But yeah, yeah, yeah, so last, yeah, no, so last week, or this is the week before last, I forget now, we, you had you had shown me that we were trying to solve the problem of like, okay, how do we ingest a lot of data, like, you know, like, like thousands of emails, so that then we can do, like, you know, data insights on it.
+
+Vlad Grubman   4:56
+Yeah, yeah, yeah.
+Mhm.
+
+Alfredo Achecar   5:09
+And you had shown me this, like, you know, this concept of like, oh, like a managed brain.
+In cursor, which I, like I mentioned, I'm sure I can look that up and do it and, you know, figure it out on my own, but if, you know, since we're here, I'm not gonna, might as well ask you directly if, perhaps not necessarily how to build it, but like how to think about it.
+Is that making sense?
+
+Vlad Grubman   5:34
+How do, I mean, yeah, yeah, it does. And there are multiple schools of thought. Sorry, I didn't mean to, I didn't mean for this to be a pun, but it is a pun. There are multiple schools of thought on how to think about it. Sorry, I didn't mean it like that. So the easiest
+The easiest, I think, the easiest way to approach this is from like what is the problem you're trying to solve, right? If you have...
+A 1000 pages, 1000 pages in conference, right? You can, can you ask Robo about stuff? Yes, you can. Can you, if you have like 100 transcripts, can you ask Copilot about that? Yes, you can. What kind of what kind of answers are you going to get? Is that solving your problem? For me, the way I think about this concept of the second brain,
+is I have a domain of knowledge, something that I really need to sort of compartmentalize, but also something where I need to go deep. Think your project knowledge, think your...
+I don't know, initiative, everything that happened there, all the discussions, all the conversations around it, the decisions that you made and why you made them, the rationale for those decisions, which is, I think, probably even more important than just the information, because again, information can be found, decisions.
+usually get lost somewhere. So in a way, you're thinking about the...
+knowledge itself and where is it coming from? And the second part to this, again, it's how to think about this. I'm answering the question, how to think about this, not how to build a brain. And the second part of this is, what do I want to get in return, right? Ultimately, what is the problem that I'm trying to solve? For me, the brain solves the problem of...
+Giving you.
+ability to have a conversation.
+About something that...
+You can call it tacit knowledge, right? You're something that sort of builds up through a lot of data, through a lot of sources.
+So, so in a way, if all you all you're trying to do is just extract the total sentiment of 10,000 emails, maybe a very simple, I don't know, machine learning exercise or just reading reading those those emails or reading those whatever.
+pieces of knowledge and compounding them together is enough and you really need a sophisticated brain. You can just sort of build, like read the email, build up a map, sort of a graph or something.
+But if you really wanted to have a conversation about those insights, like why is this insight valuable, you're going to need something that gives you that sort of connection. How did you get from the raw data to the outcome that you're seeing as an insight? That's where knowledge kind of comes in.
+Is that, I don't know, I don't know if that helps, Scott, but that I'm just trying to.
+
+Alfredo Achecar   8:39
+Yeah.
+Yeah, it helps. It helps it.
+
+Vlad Grubman   8:42
+communicate how I'm thinking about this.
+
+Alfredo Achecar   8:44
+Yeah, it helps. The use case that I would be trying to solve is OK, so we have a continuous influx of...
+I don't know, but if it's large amounts of data, like, like, for example, just in the case of the emails, we have emails coming in every day and we will have multiple teams that would want to get insights from the emails. These are these are emails that are written into like a static contact form that we have, like that you can reach out to to our customer support, so...
+
+Vlad Grubman   9:09
+Mmh.
+
+Alfredo Achecar   9:14
+You know, multiple things that want to know, hey, okay, what are these, you know, what are people reaching out for payment related issues or for maybe, you know, low like loan verification issues or document upload issues or login related issues? So, and then probably dive deeper into, okay, you know, you know, maybe...
+Zone into the specific emails and how, how, how they were phrased, what kind of sentiment was in them, so I think, yeah, it would be more than just running over the emails once and more of like, yeah, having a conversation and like parsing through those emails.
+
+Jason Daggs   9:53
+Hai.
+Go ahead.
+
+Alfredo Achecar   10:08
+Exactly.
+
+Vlad Grubman   10:09
+It, it might be, it might not be exactly the...
+What's the word I'm looking for? It might not be exactly the brain brain that I was showing, but it could be the same structure, just tailored slightly to the way you're building this thing. And again, feel free to explore if you need help, let us know. We'd love to.
+Kind of see how this plays out. Yeah, Jason, go ahead.
+
+Jason Daggs   10:36
+Yeah, I just wanted to ask you a question about that.
+Is the business need or the business value that we're trying to drive, is that well defined? I mean, you talked about kind of categorizing or classifying, if you will, different kinds of emails into different buckets, but is it that you're trying to
+automate that for the sake of saving time? Are people actually manually going through the process of sorting them? I mean, I guess it's just, I'm trying to understand what is the business value of the particular use case. And I wonder if that's an
+
+Alfredo Achecar   11:18
+Yeah.
+
+Jason Daggs   11:19
+Important question or not.
+
+Alfredo Achecar   11:20
+Oh, absolutely, absolutely. Yeah, the business value is...
+Is basically understanding, like, okay, if people like, you know, to put it very simply, like, you know, if we're getting, you know, 300 emails regarding an issue with it, you know, with uploading a document in a particular part of our flow, then we then that's a pretty clear signal that we can make an improvement on the UX and the, you know, the product experience.
+Of making that particular piece easier, or even if it's just particularly adding a piece of copy there, hey, you know, make sure your license is more visible. I'm just picking something out of thin there here, but yeah, it's a really good. These emails are very, they're very pointed. They're very pointed emails are not very broad. They're very like, hey, I'm having an issue with this, or please.
+You know, do this, or please, I need you know help with this. Somebody call me 'cause I need to cancel this, so that they're very directed email, so it could be it could very direct your signals about what we can improve in our experience.
+
+Jason Daggs   12:07
+Mhm.
+What is the output for such a system? Would it be just a singular report going to a particular team member that they can then use to kind of prioritize their own daily work? Or is there something more involved that's going to occur with the output from such a system?
+
+Alfredo Achecar   12:36
+Yeah, it's a good question because...
+It's a good question. The way that I kind of envision it.
+It's almost like, you know, we have a we have a giant river of data, and then each team can can plug into that data and, yeah, in some ways, like extract the insights that they that they need for their particular roadmap, so that particular, you know, product development process, right? So I have a particular way of envisioning that for for my team, and maybe and maybe that shape is helpful for other teams, but...
+
+Jason Daggs   13:04
+Mhm.
+
+Alfredo Achecar   13:07
+You know, it's I should I shouldn't they take the ship that it that it takes whether or not for another team.
+
+Jason Daggs   13:12
+Yeah, so.
+
+Alfredo Achecar   13:12
+And.
+
+Jason Daggs   13:14
+So it sounds like...
+
+Alfredo Achecar   13:14
+And I wanted, I wanted to add one more layer there, which is like these emails are just one, that's one channel, right? We also have, you know, customer support calls, like you can imagine, we also have app reviews, which are a different flavor of data, if you will, which may tell us more or less, it's a...
+
+Jason Daggs   13:18
+Mhm.
+Right.
+
+Alfredo Achecar   13:33
+Different kind of information, so we have multiple sources of these types of customer contact points that could be that could be very valuable for our for our for having you know listen to our customers essentially.
+
+Jason Daggs   13:46
+Okay, very interesting. So it sounds like you have kind of a...
+Like you do need some sort of classification for all of those customer contact points. And so you need some way of categorizing them. And then that way they can be redirected to the appropriate party based on what those categories are. So.
+But that, yeah, that's a very interesting, you know, it kind of reminds me of a combination of a, of a, you know, static or a, not static, but just a normal machine learning algorithm coupled with retrieval augmented capabilities, right, where you can...
+You know, what they talk about, what talk about is having a conversation with your data as opposed to, you know, running a set of rigid...
+you know, calculations like you might with machine learning. So that's very interesting. I'm not sure the appropriate, I'm not sure the what approach. It doesn't sound like though, or it does sound like that if you had an agent that could do both of those things, look at the data from a retrieval augmented generative.
+
+Alfredo Achecar   14:46
+Yeah.
+
+Jason Daggs   15:02
+Standpoint, and maybe some sort of machine learning algorithm that would, you know, that might be something interesting to look at.
+
+Alfredo Achecar   15:10
+For sure, yeah, the...
+Yeah, I think, I think, I think we can, I feel like most of us can kind of conceptualize how this could work, but I think the execution gets a little trickier because the like consuming the data sources, right? Like, okay, where do I, how do I pull a bunch of emails and then how do I pull a bunch of app reviews and how do I, you know, pull a bunch of like call transcripts and also, you know, anonymize them so.
+We don't have the AI data on them, and then make that available for multiple people to use. And then, to the point that we're discussing with Vlad, the problem of discussing with Vlad is like, how do we, how do you help the model regurgitate through all that data, the existing data, and also the new data coming in? So, it's kind of multiple layers of problems there, and but very interestingly, this is not a problem that's exclusive to this company, right? Like...
+Many, many companies or any company would want to solve this problem.
+
+Vlad Grubman   16:12
+All right, let's keep this moving. If you folks have any questions, yeah, reach out. I'd love to help. We're actually in phase one, later closing, so it's probably going to be late February. We actually did a demo where we wipe-coded sort of the dashboard.
+
+Alfredo Achecar   16:13
+Anyways, thank you.
+
+Vlad Grubman   16:33
+For app reviews, because they're public, that's the only thing we could access. The dashboard kind of like prioritization dashboard that shows you what the what the app review said, which domain it belongs to, and how big of a deal it was based on the amount of and and and sentiment inside the message.
+So it's very doable, it's very buildable, as long as you have access to the right tools. I think that's one of the blockers that you guys have. It's direct access to all of the models so that you can make sense out of each individual message. So that's basically, that's where.
+you need access to the model as where you need something to read that message and tell you what is it about.
+So, let's, yeah, let's talk about this offline. If anybody has any any questions that maybe hands-on stuff or anything else, then help us. We're here to help. Help us help you talk to us.
+Come on, folks, don't be shy, especially if something's not working and you're not sure how to get out of it. That's where we can help. We have a full team on standby.
+
+Jason Daggs   18:16
+I guess I'm still waiting for my Slack and Miro integration to.
+someday be available in CodeMe, but that may be a while.
+
+Vlad Grubman   18:30
+being the security team. We have no power of your over here security team. We can just go and ask multiple times per day and annoy the hell out of them.
+
+Jason Daggs   18:33
+Yeah.
+Yeah, yeah.
+Yeah.
+Alright, yeah, I'll have to remember that.
+Well, let me let me ask this question more generally then.
+When?
+Something runs, like a little sustain agent does some piece of work, but then there is a part of where we need to implement a human in the loop. What?
+Tools can we use right now?
+To implement that human in the loop, where they don't necessarily have to be logged in and, you know, staring at the code me screen.
+to be notified that there's something waiting for them.
+like a, you know, like some sort of queue notification or something like that. What do you think we can do there currently that doesn't require getting security involved?
+That's a question for anybody, by the way.
+
+Mikhail Makarov   19:54
+I have one idea. Usually how I do that, for example, if your code be flow can change your tickets.
+in Jira. So for example, I have your Slack with your Jira connected to Slack, so I basically see things going on through, so you'll get an update in that Slack channel.
+
+Jason Daggs   20:05
+Yeah?
+Right, ohh right, that that's a ohh man, that's a great idea. Thank you for that. I didn't think of that, yeah, yeah.
+
+Mikhail Makarov   20:20
+Yeah.
+So, for example, what it can do for you, it can leave your personalized comment in a ticket. Let's say a specific person does this or that, and you will see it immediately in your screen.
+
+Jason Daggs   20:33
+Right, and we'll see something pop up on Slack that will say, hey, JIRA ticket just changed for you.
+
+Mikhail Makarov   20:37
+Yes.
+
+Deepti Pathak   20:38
+Yeah, I...
+
+Mikhail Makarov   20:41
+Yes, technically, if you would have webhooks in place, so you can just respond to the ticket same way, and Cody will pick it up.
+
+Jason Daggs   20:53
+Oh, okay, interesting.
+
+Mikhail Makarov   20:53
+Like, you even don't have to go out of the slack.
+
+Jason Daggs   20:57
+Okay. Interesting.
+Do you have any documentation on any additional setup that might be required to implement something like that?
+by chance.
+
+Mikhail Makarov   21:11
+I believe, yes, there should be, and it's a standard documentation on Cody and dot AI. We just need to have those web hooks set up, so Cody would have notifications from Jira or conference.
+
+Jason Daggs   21:23
+Mhm.
+
+Mikhail Makarov   21:30
+Like, return notifications.
+
+Jason Daggs   21:30
+Ohh.
+
+Mikhail Makarov   21:32
+Yeah.
+
+Jason Daggs   21:33
+Okay.
+
+Mikhail Makarov   21:35
+Uh, uh, mhm.
+
+Jason Daggs   21:35
+So are the webhooks something, basically the webhooks are something that you set up in GitHub or JIRA to respond to events or changes to a JIRA ticket and then it uses the webhook to tell ColdMe, hey, this has been done with this ticket and then it will kick off some other task. I gotcha.
+
+Mikhail Makarov   21:46
+Yes, correct.
+Mhm.
+
+Jason Daggs   21:55
+Okay.
+Yeah, I will have to look into that. That's very, that is, that's a very good idea though. Thank you.
+
+Mikhail Makarov   22:03
+It's much easier to implement than integration with teams because for teams you'll have to have that graph API exposed to CodeMe and it's not happened yet. It's in progress.
+
+Jason Daggs   22:12
+Yeah.
+Yeah, Okay.
+
+Mikhail Makarov   22:26
+Ah, yes, it is.
+
+Jurijs Markelovs   22:31
+Yes, I got a question. Not sure if it's worth this discussion here now, but I'll give it a shot. I was always skeptical for security reasons to share any tokens and or even like, I understand maybe something like a JIRA or a GitHub.
+
+Mikhail Makarov   22:33
+Thanks.
+
+Jurijs Markelovs   22:49
+token it, you know, but sharing or not sharing, integrating it with the AI, code me or I don't know, cursor or any other ones like AWS.
+
+Mikhail Makarov   22:50
+Mm-hmm.
+
+Jurijs Markelovs   23:02
+Uh, token and credentials, all the security.
+Um, all the, you know, the secret secret tokens and stuff like that. I was always skeptical about it. Can we get a comment on that?
+
+Mikhail Makarov   23:11
+Mhm.
+Well, right now we are having about six or seven MCP servers in progress. All of them are OIDC based. So you'll not have to share your personal access token or anything like that. You will just go through the standard authentication flow.
+
+Jurijs Markelovs   23:17
+Yeah.
+
+Mikhail Makarov   23:38
+And then it will remember the connection between you and particular application. I mean, MCP server itself. It's A relatively recent change in the way how MCP servers handling authentication.
+So now pretty much every single cloud vendor will have their own MCP, server deployed in their own environment, and you will go through the same authentication flow as usual. Even in many cases, it's going to be transparent for you. Because if you already authenticated using Okta, then you'll have to just connect
+things together and he will not have to enter any credentials one more time.
+
+Jurijs Markelovs   24:20
+Yes, I understand, but this is, this does not, I mean, I could be wrong, but it doesn't seem like eliminate the security concerns, right? Since the AI is still going to get to AWS, yeah, right?
+
+Mikhail Makarov   24:21
+Mhm.
+Sure.
+Mm.
+In what sense?
+Ah, that one. Well, if you need to do something and you don't feel like that particular operation should have your full set of privileges, then you may want to create a separate restricted token to do that. I mean, not, yeah, like not full security context, but limited.
+
+Jurijs Markelovs   24:51
+The.
+
+Mikhail Makarov   24:55
+token with limited set of operations available for that token.
+
+Jurijs Markelovs   24:59
+Yeah, that's perfect sense. Yeah, I'm gonna give you a little background what I'm trying to do. I'm trying to compare our staging environment versus production environment and trying to distinguish the differences between between them really for the staging is a little bit less right concerning, but for the production, I mean, to give it to give the cursor.
+
+Mikhail Makarov   25:03
+Thank you.
+Mhm.
+Yeah.
+
+Jurijs Markelovs   25:18
+Our for our Terraform, the AWS credentials, it's it's for production, even I might have, I might not have an access yet, I haven't really probably do, but for some some projects I really am really skeptical in doing that.
+Right, even even for for the for the limited privileges like read, basically still being able to to expose something like this, it's a large security breach, right?
+
+Mikhail Makarov   25:36
+Yeah.
+I.
+Anu.
+Yeah.
+Alexander, you have some.
+
+Oleksandr Tsyganok   25:53
+Yes.
+There is like a very big difference between using it from Corser like locally and using it from CodeMe. When you sharing this credentials in Corser, basically you give them your production token to all this like AI companies. It's like open AI on Tropic.
+
+Mikhail Makarov   26:14
+The.
+
+Oleksandr Tsyganok   26:17
+Please code me, it like never happens. What is the difference? Because in your like local tools, you just saying, hey, I have like stored like my token in some file, maybe even like some environment files that you never committed.
+Is like available only when you're like local secure like PC, but technically you saying like to LLM, hey, read this file and here you will see this token, or even even if it decides like to read this like information for any reason to execute anything, you always like given this token to.
+to like this like LLM. How to solve it? Like the standard solution was like MCP. Why we have this MCP? Because you saying that instead of providing the token, you just building a separate tool for AI and you're saying that, hey, if you like, we'll call this specific.
+Tool with this, like I don't know, like IP address or like local environment setup with this like port, this specific like API, this like tool will perform like some command in AWS, but credentials itself are never revealed to AI.
+Yeah, I only know like how to call this tool and where is this like tool is located and have like some basic understanding that these tools connecting it to AWS. So that's like a benefit like of like customly build like some local MCPs, just like additional layer and boundary between.
+your like LLM and your production environment. Exactly the same we have in the code me. So when you configure an integration, we never like exposing the secrets to LLM. We only ask an LLM, hey, we need to call AWS.
+Please provide us like an instruction which API needs to be called, which parameters they need to pass, and additionally, coding platform itself, when it gets this like instruction, it builds the specific API call and ejects these credentials they are stored in, like...
+Your own like management service in AWS in encrypted format, and only at that moment when it's required to send this request, it's got like decrypted and send it.
+directly from a CodeMe to like AWS. So technically, if you trust CodeMe platform, that's like credentials never leave the security boundary. So as a result, like no LLMs are aware of your credentials.
+Yeah, hope that I didn't like overcomplicate it. If you have like any additional questions, yeah, let's clarify it.
+
+Jurijs Markelovs   29:27
+Okay, thank you.
+
+Mikhail Makarov   29:32
+Another way is just you should not expose any tokens or credentials to LLM. You can use N variables. So basically just not provided in clear kept into any LLM request if that's a concern.
+On.
+
+Jurijs Markelovs   29:50
+Okay, are you saying like keeping them in like for example, GitHub actions as a secret variables and refer them?
+
+Mikhail Makarov   29:59
+Yeah, yeah, basically there are two places, right? Like, or two modes, interactive when you're talking to LLM and providing all information to LLM, and then the runtime when you execute in some code which is outside of LLM context, and that's where you should supply your tokens, like literally something out of the chat context.
+Then you, you will never ever get will get them exposed.
+And that's pretty much standard recommendations that you're going to get even from Cloud Code or probably in Core Store. They will tell you just please don't specify any tokens, just use the environment file or something else. So yeah, that's the ultimate solution.
+
+Jurijs Markelovs   30:46
+And the cursor.
+
+Mikhail Makarov   30:46
+LLM don't have to know that.
+
+Jurijs Markelovs   30:49
+And cursor itself, does it integrate? Is there a way to integrate it with the GitHub?
+
+Mikhail Makarov   30:56
+Yeah, same way. GitHub actions, it all works the same way as with VS Code. There is no difference technically.
+
+Jurijs Markelovs   31:03
+No, no, not in GitHub actions. How do you get the cursor to read secret variables from GitHub?
+Certain object.
+
+Mikhail Makarov   31:12
+Uhh...
+Do you need to read it locally or you still going to execute something remotely?
+
+Jurijs Markelovs   31:18
+Locally, just locally.
+
+Mikhail Makarov   31:21
+But how are you using locally in this case?
+
+Eugene Semenyuk   31:22
+Yeah.
+
+Mikhail Makarov   31:25
+I mean, like you using your local environment to pass credentials to somewhere else, right?
+
+Jurijs Markelovs   31:33
+Yes, again, about AWS, right?
+
+Mikhail Makarov   31:35
+OK, if you OK, if you're talking about local environment, then just use something, right? LLMs never read that. And if you're executing something locally from command line, then that will be the solution for you. If you're executing something in the remote shell or using remote invocation mechanisms, then you will have to store that in a storage on AWS.
+
+Jurijs Markelovs   31:52
+Ohh.
+All right, so I will be, I can use, obviously, use a terminal, right? But how do I make sure the terminal output connects? I mean, can I, in other words, can I run a terminal in the cursor, a CLI in the cursor?
+
+Mikhail Makarov   32:02
+Mhm.
+Yes, like as long as it's not exposed directly into LLM input stream, STDIO, I believe. So you should be fine. Just do not print tokens, do not do anything that will output your credentials into a stream.
+There is, like, there is no magic. If you have to, if you have to set up your token locally, you still have to access it somehow, right? So it can be a local credential storage. Let's say, I believe you all guys have one password and one password has that local encrypted storage for all tokens. Or if it's remote, then use remote
+Ohh.
+your storage for tokens. But in those cases, you don't have to expose it to AL.
+Um...
+Any other questions for today, guys?
+Any sense that you want to share, or any problems that you have besides, yeah?
+Yes, Deepak.
+
+Deepti Pathak   33:42
+All right, my question is like, I don't have any problems or blocker, but just curious to understand with regards to the webhook part. So I basically am trying to validate an end-to-end use case and try to understand the support pattern. So let's say I have a GitHub action trigger and then I want to trigger the CodeMe assistant. And just now you did explain a little bit on the webhook part of it, right?
+
+Mikhail Makarov   33:45
+Mhm.
+Mhm.
+Mhm.
+
+Deepti Pathak   34:05
+So how to create the webhook? Because in CodeMe, I don't see that. So is it like, do we need an admin access to do that? How does that work? I just want to try, I don't have, I mean, basically what I'm trying to do in my use case is like I have a GitHub action trigger and that triggers my JIRA. And let's say I, in that JIRA, I want that JIRA to update and create a JIRA.
+
+Mikhail Makarov   34:19
+Mhm.
+
+Deepti Pathak   34:27
+tickets like formatting the descriptions or adding the details and then the code me itself goes and do the it should basically then add some of the audit documents which I wanted and from that it and then it basically creates the PR and close. So all this I want code me to do it I can do it through GitHub action workflow as well but I was just thinking.
+
+Mikhail Makarov   34:47
+Mhm.
+
+Deepti Pathak   34:48
+What if CodeMe can do it when I'm triggering it through the GitHub action? So where is the webhook and how can I connect that?
+
+Mikhail Makarov   34:52
+Mhm.
+Yeah, Oleksandr Tsyganok, maybe you want to pick this one.
+
+Oleksandr Tsyganok   35:00
+Yeah.
+So you need like 2 parts. First part is actually an event and the webhook on the platform itself. So you should be should have access to like this repository, some admin permission to create GitHub webhook. Second part is actually just like receive an endpoint.
+And actually, APIs that will be called by by the GitHub when your like event happens, as I understand, like CI, like like run completed or some GitHub action completed, doesn't matter, pull request created at any event, then in a code me you need to create a webhook. Webhook in the code me is just another type of integration.
+
+Deepti Pathak   35:37
+Mhm.
+
+Oleksandr Tsyganok   35:46
+So you should navigate to integration menu in this list. You will have Jira confluence as we had this like head-on hands-on session and also you have web hook and scheduler integrations. Those 2 like types of integration are special and requires admin permission in coding project. Maybe that's the reason why you don't see it.
+
+Deepti Pathak   35:49
+Mhm.
+Mm.
+Yeah, yeah, I think that could be the reason I don't have that. So how can I get that admin permission or is someone from the from your team can help me for creating that webbook?
+
+Oleksandr Tsyganok   36:22
+Yeah, so I think like somebody in your team should be assigned to this like AI champions group and they should have this admin permission for your specific project and they should have like this webhook integration so you can find out who is like AI champion for your team and.
+
+Mikhail Makarov   36:42
+The.
+
+Oleksandr Tsyganok   36:44
+Ask them to create it for you, or I don't know, like maybe Mikhail can help me. Maybe you can create another request.
+
+Mikhail Makarov   36:47
+Mhm.
+Ohh.
+
+Deepti Pathak   36:52
+So Sukalya is under my team, like we are, we work together and I think I did check with Sukalya, she also didn't have admin access, but I can double check once she is back, but I, okay, I will do that.
+
+Oleksandr Tsyganok   36:56
+Oh.
+
+Mikhail Makarov   37:02
+Someone, someone should have it in your particular project, right? One of you should have that admin access to the project and to configuration page, but Alexander, maybe that's a good idea for one of them.
+
+Deepti Pathak   37:07
+Okay.
+Yes.
+
+Mikhail Makarov   37:18
+Meetings that we are going to have just to show everyone how to configure webhooks, Nikita.
+
+Nikita Kumar   37:23
+That is our session for tomorrow. It works.
+
+Deepti Pathak   37:25
+Oh, here we go. Perfect. There you go. Awesome.
+
+Mikhail Makarov   37:28
+Perfect, then.
+
+Nikita Kumar   37:29
+Yeah.
+
+Deepti Pathak   37:31
+I think I'm good then.
+
+Mikhail Makarov   37:33
+Okay, thank you.
+
+Deepti Pathak   37:34
+Thank you.
+
+Mikhail Makarov   37:36
+Anything else?
+Problems, questions, proposals, maybe.
+We can do something better.
+Okay, guys, if there is no more questions for today, let's save a few minutes between meetings. And thank you everyone for participating and sharing your thoughts and ideas and problems with us.
+Uh, Vlad, uh, do you have anything to add?
+
+Vlad Grubman   38:13
+No, Nikita, I think you're running this call, so it's your call, whatever you. Nope, all good.
+
+Mikhail Makarov   38:20
+All good? Okay, yeah, done. Thank you, everyone.
+
+Sujan Shrestha   38:25
+Thanks, sir.
+
+Angela Cureton   38:26
+Thanks, bye.
+
+ stopped transcription

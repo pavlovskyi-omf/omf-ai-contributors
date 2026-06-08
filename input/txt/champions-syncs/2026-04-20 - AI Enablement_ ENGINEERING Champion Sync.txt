@@ -1,0 +1,519 @@
+AI Enablement ENGINEERING Champion Sync-20260420_145927UTC-Meeting Recording
+April 20, 2026, 2:59PM
+30m 2s
+
+Iryna Pashko   0:14
+Hey, good morning.
+
+Karl Haggart   0:17
+Good morning!
+
+Iryna Pashko   0:18
+Oh.
+
+Robert Collins   0:21
+Good morning.
+
+Oleksandr Pavlovskyi   0:29
+Hey, guys.
+
+Sukalya Rajendran   0:31
+Hello, good morning.
+
+Karl Haggart   0:32
+Good morning.
+
+Oleksandr Pavlovskyi   0:33
+Good morning.
+Oh yeah, I understand. Yeah, let me let me rejoin.
+
+Oleksandr Pavlovskyi   0:59
+From another account here, understood why I don't see all people.
+
+Oleksandr Pavlovskyi   1:26
+Ohh, yeah.
+Because I was afraid I see only 10 people here in the list. And so remember, we have much more, yeah, 63 people, yeah. Right.
+63 + 16.
+Chez.
+Interesting. It does it mean that we have more than 50, 50 champions? Is it great? Yeah, it's almost, I would say that's 30%, yeah. All right, guys. Yeah, so as usual, before we start, guys, would you like to highlight something important for this group?
+Any questions, any proposals, any ideas? Would like to remind you on Wednesday, we're going to have another one, like our sessions. Yeah, so we have several candidates and we're going to discuss the topics. But before we start, guys, any questions?
+Alright, so let me, yeah, yeah, yeah, yeah.
+
+Muhammad Adnan Farooq   2:40
+Just one question, just one question. Can you point there as a quick update right that where we add for the onboarding process? Is it like an assessments completed for all the new teams which is inducted in phase two?
+
+Oleksandr Pavlovskyi   2:52
+That was for, that was now we on a kickoff stage for several groups. Yeah, that was 2 kickoff sessions for cohort one and two. This week we're going to have kickoff for cohort 3 and also we are starting assessment.
+I see tomorrow we're going to have assessment for...
+Group 3, no, no, no.
+
+Muhammad Adnan Farooq   3:21
+Actually, so, so, so trying to understand, you know, is do we have any timelines that, you know, by this time, everything assessment will be completed? Do you have any, like, you know, breakdowns about the phase two with that details?
+
+Oleksandr Pavlovskyi   3:23
+Yeah, assessment, yeah.
+Let me check, but as I remember, this should take two months. Let me check, you know.
+
+Muhammad Adnan Farooq   3:42
+Yeah, because I know that the headlines, like, you know, like in a high level, like, you know, timelines, I get it, like, do you know when it's been, I just need like some fine details that, OK, by this time the onboarding process completed, it will start this task.
+
+Oleksandr Pavlovskyi   3:47
+Mhm.
+Yeah, yeah.
+Everything should be in a confluence.
+
+Muhammad Adnan Farooq   4:00
+I can check that if the information is available, Oleksandr, then I'll check it out. Like, don't worry about it. Yeah, I don't want to hijack a meeting. OK.
+
+Oleksandr Pavlovskyi   4:06
+Uh-huh.
+Lighthouse Dev enable onboarding guide somewhere here, alright, yeah, so yeah, if you if you want find if you if you want find the links, yeah, I'm gonna share with you if you want, yeah, so that's gonna be you can.
+
+Muhammad Adnan Farooq   4:27
+Yeah.
+
+Oleksandr Pavlovskyi   4:28
+Search for this or use Rao yet to find this more faster and maybe get the the the direct answer to your question. All right, yeah, am I sharing the screen? No, I am not sharing the screen. Yes, so.
+
+Muhammad Adnan Farooq   4:32
+Yeah.
+
+Oleksandr Pavlovskyi   4:46
+Guru.
+Let's...
+Let's review our status in our Jira. Yeah, so we have 4 tickets that are ready for sharing. And so let me start from Sukalya. Sukalya, good morning.
+
+Sukalya Rajendran   5:05
+Hi, good morning.
+
+Oleksandr Pavlovskyi   5:07
+Yeah, so how about the demo this week's session? How do you feel?
+
+Sukalya Rajendran   5:15
+Yeah, I can demo it. You're talking about Wednesday, right?
+
+Oleksandr Pavlovskyi   5:19
+Yeah, Wednesday, could you go give more details because I see two tickets. One, this is the code me example, yeah. And another one, it's about the snowflake, yeah, DDLs.
+
+Sukalya Rajendran   5:20
+Yep.
+Yeah.
+Right.
+Yeah.
+Yep, so I did talk about the first one, the AI Assistant Jira Tracker, in a couple of meetings earlier, so it might sound repetitive for a few folks. So what we've done in this is, as part of the Catalyst program, we have to work with multiple subgraph teams.
+to bring in data to Snowflake for analysis. So we wanted to create an AI assistant that can automatically create the JIRA tasks for us. And all of the JIRAs has to go to different teams for review before it comes to us. So we wanted to create those backlog tasks, follow-up tasks also automatically.
+
+Oleksandr Pavlovskyi   5:55
+Cool.
+
+Sukalya Rajendran   6:12
+So what the flow is, you know, the catalyst team creates a task that has a snowflake impact. They label it a certain way. And this EPAM CodeMe AI assistant will keep track of those tasks and automatically create JIRA tasks for three teams. The domain review team.
+
+Oleksandr Pavlovskyi   6:17
+Mhm.
+
+Muhammad Adnan Farooq   6:19
+Yeah.
+
+Oleksandr Pavlovskyi   6:29
+Mhm.
+
+Sukalya Rajendran   6:32
+Snowflake data model team and the data pipeline team. So all three tasks will automatically get created and get linked to the main catalyst task as well. So it saves a lot of time and for the Scrum Master as such to create these tasks. So in our team we don't have an official Scrum Master doing this assignments. It's just us.
+
+Muhammad Adnan Farooq   6:32
+Yeah.
+
+Sukalya Rajendran   6:53
+playing different roles. So it helps us out in that way. And also we can track the tasks and reach out to different teams automatically when we need some information. That's the gist of this AI assistant. I tried it out two ways. One as a workflow by creating multiple.
+agents and also as a single agent capable of doing all three in one shot. Both worked out fine. So that's what this first task is about.
+
+Oleksandr Pavlovskyi   7:23
+Could you, could you, could you? Yeah, yeah, yeah.
+
+Muhammad Adnan Farooq   7:23
+And I just.
+I just want to add one more thing, right? That, you know, whatever the Sukalya is we are trying to build, like, we also creating these, like, you know, interdependency as well, right? As Sukalya mentioned, right, that there are multiple teams involved in this development work, so we just need to make sure that they follow the process, right? First, it needs to go, this ticket needs to go to our domain model team, right? Who can, like, you know, validate the domain model, right? That looks good. Once they approve it, then it goes.
+
+Oleksandr Pavlovskyi   7:37
+Mm-hmm.
+
+Muhammad Adnan Farooq   7:49
+to our foundation model team, which they need to review it and then approve it, right? And then it comes to like, you know, our team, which is like data orchestration team, right? That to build this, like, you know, ingestion process, right? Workflows, right? So, before that, it's a little bit tedious for us.
+creating these tickets, follow up with the teams, with this custom agents, things are very streamlined. So we don't need to follow up with the teams. It automatically come up on our board. Once everybody teams goes to the grooming session, they know that these are the tickets pending their attentions and that we need to provide some updates when this thing's been done.
+
+Oleksandr Pavlovskyi   8:27
+Cool. Guys, could you please more detail it, talk not only about the solution here, regarding to the preparation of this idea, yeah, how you build, I don't know, how you brainstorm this idea, yeah, because this is very important in the scope of our PDLC also, yeah, guys, because
+
+Sukalya Rajendran   8:42
+Mhm.
+
+Oleksandr Pavlovskyi   8:50
+The process of the ideation, it's also important. For example, today with Alan, we talk regarding to optimizing their workflows. Yeah, you know, guys working with the SQL databases, yeah, and they should do many manual steps. Yeah, and regarding to the improvements, yeah, it's important to think about your workflow.
+Just to imagine your workflows, what steps are you doing, what roles, what, I don't know, manual steps should be delegated to agents, or manual steps should be stay as a manual, or maybe you need to optimize some things, yeah, maybe to review this workflow, yeah, and maybe build it.
+in a more different way to be possible implement AI to this workflow. It's interesting to hear how you get this idea, how you brainstorm this, yeah, and also regarding to the solution. So cool, cool. And as for the next...
+
+Sukalya Rajendran   9:45
+Okay.
+Sure.
+
+Oleksandr Pavlovskyi   9:53
+Tickets, ohh yeah, and one more question regarding to the to the tools, yeah, it's we understand it's JIRA, yeah, and what what other integration do you use for this?
+
+Sukalya Rajendran   10:09
+This is mainly Jira and Confluence. That's it, yeah.
+
+Oleksandr Pavlovskyi   10:11
+Jury conference. No, OK, not not not any specific tools, yeah, OK, cool, cool, and yeah, I saw the hand, yeah, it was a hand, sorry, guys.
+
+Sukalya Rajendran   10:17
+Nope.
+
+Vazgen Ayrapetyan   10:26
+No, that was an accident, sorry.
+
+Oleksandr Pavlovskyi   10:27
+Oh, okay. Okay. And as for then this ticket, yeah, is it related to the previous one? Yes, understand.
+
+Sukalya Rajendran   10:37
+That is correct. I mean, in a way it is tied to it, but it can be a standalone as well. This is more of a development task. So what we've done here is whenever the subgraph team has a change to the data model, they use Prisma files that will track the RDS Postgres DDL changes. So they check in their changes.
+
+Oleksandr Pavlovskyi   10:44
+Okay.
+
+Sukalya Rajendran   10:56
+for Prisma files into the GitHub branch, the develop branch. Then automatically, I wanted the ERD diagram to be generated. So it will give a visual of the data columns and attributes that are getting added or removed, whatever the changes may be. And also generate an equivalent snowflake DDL.
+that the developer can use readily for corresponding to those changes. So right now, the current process is whenever the subgraph teams make these changes, we are notified only through the GRAT tasks, and then somebody has to go in and look through the database to understand what changes were applied.
+And also we have to reach out to the Postgres DBAs to generate the ERD diagram for us and give it to us so we can get a visual copy of it. And also it's very useful for the developer to understand the data types and build the Snowflake DDL. So all of this is being done today, but manually.
+
+Oleksandr Pavlovskyi   11:55
+Mhm.
+
+Sukalya Rajendran   11:55
+This one will entirely automate that process and make it easier for the developers. That and also we don't miss out on any changes that get that get applied on the main develop branch and we are ready faster for to support those changes. That's the idea behind this task. So for this I used GitHub Copilot.
+
+Oleksandr Pavlovskyi   12:00
+Mhm.
+Mhm.
+
+Sukalya Rajendran   12:16
+mainly and also the I think that was pretty much I think I tried using spackage to come up with the whole flow and generate the draft code for me to integrate it as a GitHub workflow action item. Yeah.
+
+Oleksandr Pavlovskyi   12:34
+Cool, so there's going to be two separate demos, yeah? All right. Okay, so yeah, cool. So let's align on the second demo after we ask Chantal, Chantal. Chantal, how about your?
+
+Sukalya Rajendran   12:40
+Yep.
+
+Oleksandr Pavlovskyi   12:54
+Use keys.
+
+Chantal Justamond   12:56
+Yeah, I'm ready.
+
+Oleksandr Pavlovskyi   12:57
+Are you ready? So, guys, I propose for this session, it's gonna be on Wednesday, to start from your first ticket Sukalya regarding to the workflow, yeah? And your, we're gonna build like a SQL, yeah? So.
+
+Jason Daggs   13:14
+Yeah.
+
+Oleksandr Pavlovskyi   13:18
+And next week, we're going to have the part 2, yeah, regarding the practical part. I mean, this ticket. And for Wednesday, for this Wednesday, yeah, Chantal, you're going to demonstrate the second showcase. Yeah, I mean, take the second slot, yeah, and with your showcase. How about this?
+
+Chantal Justamond   13:43
+All right, sounds good.
+
+Oleksandr Pavlovskyi   13:45
+Cool, cool. Great. All right, we have planned for this week and partially for the next. Also, we have Sujan. Sujan, how about your ticket? It's a pilot review.
+Oh, let me check if we have Suzanne today. Yeah, let me check with him. Yeah, because this ticket was created, I guess, a couple weeks ago. Yeah, and it's also in a queue.
+Okay, so let's discuss the status for the tickets that are in progress. Deepti.
+How about your ticket? How is it going?
+You're on mute, you're on mute, just in case.
+All right, Deepti, so let's turn to...
+
+Muhammad Adnan Farooq   14:51
+Alexander, let's go to next. I'll bring Deepti. OK.
+
+Oleksandr Pavlovskyi   14:53
+Yeah, yeah, alright, then, then Gaia, yeah, so probably not everybody had the ability to to join us, alright, Gaia's ticket.
+Mm.
+Yeah, I see that is Sam and probably they have some separate activity here.
+Ashwin.
+Also not in the call. Yeah, since I need to check. All right, Patrick, how about your ticket? Do you have three of these tickets? And as I remember, is it also interesting use cases, yeah, that we discussed a couple of weeks ago. Patrick, how about you?
+
+Patrick Behnke   15:43
+Yeah.
+So 2 of them I can kind of go over. The minimal viable JIRA ticket thing, we need to take a step back and look at like the full actual intake process, because we don't want to just jump in and use AI if we don't actually have a process to automate, if you know what I mean.
+
+Oleksandr Pavlovskyi   16:00
+Uh-huh.
+
+Patrick Behnke   16:06
+So I'm probably going to take that off the board until...
+
+Oleksandr Pavlovskyi   16:09
+Take off, yeah? Okay, so please, you would like to take off these air tickets?
+
+Patrick Behnke   16:11
+Huh?
+Yeah, yeah.
+
+Oleksandr Pavlovskyi   16:16
+Okay.
+
+Patrick Behnke   16:17
+Yeah, it's we have like little ones that we played around with, but whenever like the fact that like most of our team has random.
+
+Oleksandr Pavlovskyi   16:17
+Two.
+Mmh.
+
+Patrick Behnke   16:28
+ticket generators all over the board. It's not exactly helpful, you know what I mean? We're just wasting tokens at that point.
+
+Oleksandr Pavlovskyi   16:31
+Yes.
+
+Deepti Pathak   16:35
+Oops.
+
+Oleksandr Pavlovskyi   16:37
+Got it.
+
+Patrick Behnke   16:37
+Um, but the other two I could I could probably do like a tiny demo or something, nothing like really big.
+
+Oleksandr Pavlovskyi   16:44
+All right, all right. So let me move these tickets to the share column, yeah? Is it ready? All right. So, and let's align on this ticket on Monday. Yeah, I mean, regarding to the session date. But let's mark them as ready for demo. And regarding to this ticket, just decide, yeah, where you want to change this ticket. Yeah, maybe you just.
+
+Patrick Behnke   16:49
+Yeah, yeah.
+
+Oleksandr Pavlovskyi   17:09
+You can use this ticket here, just update the the body here, or just move to the down here with some status, I mean, mention this.
+
+Patrick Behnke   17:17
+Okay, yeah, I'll probably just move it to done because it'll be like a department level thing that we'll have to work together on to figure out. So.
+
+Oleksandr Pavlovskyi   17:27
+Okay, okay, cool. Thank you. All right, Deepti, you're back.
+
+Deepti Pathak   17:36
+I was there, sorry, I had the mic issue and that's why. Let me know if you all are able to hear me now.
+
+Oleksandr Pavlovskyi   17:40
+Ohh.
+It's happened. It's Microsoft products. It's OK.
+
+Deepti Pathak   17:45
+Yep, so regarding this, Alex, so I do have, I already completed the integration where it's basically right now, and I did it using the co-pilot where it's able to integrate with Jira and get all the details and I'm able to create the documentation. But as I mentioned on Friday, right, during the...
+
+Oleksandr Pavlovskyi   17:46
+Who?
+
+Jason Daggs   17:57
+No.
+
+Deepti Pathak   18:06
+working on, I would like to integrate it with the GitHub workflow. So you did share me the API URL. So I will try to do that test today. And if I get into any issues, I will reach out to you. And after that, I think I will be ready to do the demo as well. But yeah, yeah.
+
+Oleksandr Pavlovskyi   18:09
+Mhm.
+Cool.
+Great idea, great idea. Yeah, this is gonna be very interesting to investigate GitHub workflows, yeah, yeah.
+
+Deepti Pathak   18:30
+Yes, if that integrates, then we have multiple things like basically the whole flow will be to as soon as the PR gets created, the comments and review, everything should be there. So I really want to have a whole flow like that. But yeah, we'll see if that Git flow, GitHub workflow works for me or not.
+
+Oleksandr Pavlovskyi   18:48
+Cool, cool. Okay, so yeah, just let me know if you need my help, so...
+
+Deepti Pathak   18:54
+Sure, sure, we will let you know.
+
+Oleksandr Pavlovskyi   18:54
+Great.
+Thank you, thank you. All right, Angela, I don't see Angela, then who we have.
+
+Jason Daggs   19:07
+I should have a ticket somewhere around there, but...
+
+Deepti Pathak   19:08
+Mhm.
+
+Oleksandr Pavlovskyi   19:10
+Yeah, yeah, yeah, please.
+
+Jason Daggs   19:13
+Um...
+Yeah, it's uh, let me, sorry, hang on just a second, let me see, it's uh...
+
+Oleksandr Pavlovskyi   19:18
+So, are we talking about a Jones ticket or Jones? OK.
+
+Jason Daggs   19:21
+Yeah, yeah, I should have a, what is it, APE 278. I don't know why it's not under your share screen, but.
+
+Oleksandr Pavlovskyi   19:30
+827.
+
+Jason Daggs   19:32
+27278 APE 278.
+
+Oleksandr Pavlovskyi   19:35
+Two to seven, 8.
+Okay, this is the one, yeah. Oh, yeah, guys, intake here, where I can see it. It's in a Sharon column, but I can, where I can.
+
+Jason Daggs   19:48
+Yeah, yeah, that's it.
+I think, I think, I think you had to do a refresh to pull it back in. I may have, I may have, yeah.
+
+Oleksandr Pavlovskyi   19:58
+This is ticket.
+
+Jason Daggs   20:06
+Ohh.
+Ah, okay.
+
+Oleksandr Pavlovskyi   20:14
+These attacks, yeah, I'm using the inch, not engineering in a, yeah, no.
+
+Jason Daggs   20:17
+Mm.
+Okay.
+
+Oleksandr Pavlovskyi   20:21
+Now, where is it, Jason? Jason, where are you?
+
+Jason Daggs   20:26
+You're going too fast for me. I'm somewhere in there, yeah.
+
+Oleksandr Pavlovskyi   20:29
+Okay, never mind. I will fix it. Yeah, so it's important to have this intake, intake and engineering label if you mark like an engineering. All right.
+
+Jason Daggs   20:35
+Mhm.
+Okay, gotcha, gotcha.
+So anyways, I've completed the curriculum for knowledge transfer to the rest of the Guardians team for the code me application. I've scheduled 7 sessions and have
+
+Oleksandr Pavlovskyi   20:53
+Yeah.
+Mhm.
+
+Jason Daggs   21:04
+a have all of the curriculum for each session spelled out on a confluence page, and there's a link down at the bottom. So I think this one is actually.
+Done. I don't know if.
+We want to move it to done or leave it in shared. I don't know what kind of demo I could really do other than just bring up the confluence page and show people what I've done, but that's kind of...
+
+Oleksandr Pavlovskyi   21:32
+Yeah, yeah, what, what, what exactly we you would like to demonstrate? Yeah, what's yeah, if you...
+
+Jason Daggs   21:37
+Yeah, what?
+Yeah, well, there's just a confluence page that I can show people if they're interested in seeing what curriculum I've developed for kind of for code me for our for the Guardians team.
+
+Oleksandr Pavlovskyi   21:44
+Mmh.
+Cool. You know, that's going to be very interesting because one of the topics that we're going to discuss in the nearest weeks, yeah, that's going to be our best practices that we are using. We need to align regarding to best practices. Yeah, starting from basics, yeah, like
+
+Jason Daggs   21:53
+No.
+Ohh.
+Right.
+
+Oleksandr Pavlovskyi   22:12
+related to context engineering, spec driven development, all these agents, skills and so on. And maybe, not the maybe, an important part, how we going to document this. Where are we going to use repositories, yeah, in the what format, yeah, we need to build, I don't know, file structures.
+
+Jason Daggs   22:17
+Mhm.
+Mhm.
+Yeah.
+
+Oleksandr Pavlovskyi   22:33
+to make it understandable for each team, yeah, to not build the silos, yeah, and build some specific, I don't know, best practices inside every team. Be aligned regarding to all these useful things that we can share between us, yeah. So let's.
+
+Jason Daggs   22:47
+Yeah.
+Right, right, it might, yeah, it might.
+
+Oleksandr Pavlovskyi   22:52
+Mhm.
+
+Jason Daggs   22:53
+And my goal is just, you know, I want to make sure the rest of the team is kind of up to speed with how these tools work so that we can, as a team, work on creating and manipulating the workflows and the assistance so that each person on the team can
+can get one that's, you know, it can help develop and will be able to make modifications and keep it updated and learn how to more fully automate it, not just depend on, you know, like, for instance, just me to do all of it or something like that, you know. So, yeah, I think it's very important.
+to try to disseminate this information to the rest of the team. So we'll see how the curriculum works out as we go. So yeah, it's seven sessions once a week. So yeah.
+
+Oleksandr Pavlovskyi   23:42
+Mmh.
+Yeah, it's interesting, maybe intensive, but guys, we are growing with our EA maturity. You feel, you should feel this.
+
+Jason Daggs   23:49
+Gonna be interesting.
+Yeah.
+
+Oleksandr Pavlovskyi   24:01
+Cool, cool. Thank you, Jason.
+
+Jason Daggs   24:03
+Yeah.
+
+Oleksandr Pavlovskyi   24:05
+Yeah, oh yeah, now I see the ticket. Yeah, great. All right, let's move on.
+Um, yeah. Angela, Angela, alright.
+So, I see new names, yeah, probably not everybody can be in the list of champions, so yeah, I need to review. All right, so never mind, I will, I will, I will reach our our guys to directly in the chat, yeah, and...
+
+Allen Truban   24:33
+You.
+
+Sukalya Rajendran   24:42
+Ahh.
+
+Oleksandr Pavlovskyi   24:43
+Yogis.
+
+Sukalya Rajendran   24:44
+Sorry to interrupt, Alex. This is Sukalya. So some of the tasks that you see, the one assigned to BU, SG, that's part of the DataFactoryPlatform team. They're working in my team. So we are working on different AI related use cases within our teams, but we're still tracking it in this.
+Board, if that's OK. That's yeah, yep.
+
+Oleksandr Pavlovskyi   25:05
+Yeah, yeah, Sukalya, this is just a great. I see that you organized AI enablement program inside Data Factory team. Yes, so you have your own process and that's great. Yeah, guys, so that's just a great example. Yeah, how that should.
+
+Sukalya Rajendran   25:14
+Yeah.
+It's good.
+Yep, yep, alright.
+
+Oleksandr Pavlovskyi   25:26
+Should do, because it gets enabling a program here, we're trying to...
+showcase you some generic practices. Yeah, but every team is different. Yeah, you have different best practice, different approaches, different tasks, different technologies. So in some cases, yeah, probably this is going to be better yet to also try to investigate your own use cases to organize.
+Maybe small teams, yeah, but that's going to definitely help you to build your workflow specifically to your tasks, yeah, and this is a great example. Thank you, Sukalya.
+Ohh yeah, and this is your guy also, yeah, or it's a it's a girl, yeah.
+
+Sukalya Rajendran   26:14
+Yep, yeah, that's a good. Yep, so all our tasks will have the team tagged as DataFactoryPlatform. That's how you can identify it belongs to the DFP team.
+
+Oleksandr Pavlovskyi   26:16
+See you.
+Cool, cool, cool. Yeah, this I think I need to ask who who is administered, maybe Monika, yeah. This is going to be great to see the team here, yeah, also like have another one filled, yes, it's going to be visualized, which of the teams, it's going to be more easier to.
+to sort probably by the teams. Or I guess, any other, maybe I missed somebody, would you like to add to highlight your tickets or maybe you have any questions?
+Cool, cool. So we're going to have great agenda, yeah, in the following weeks. So guys, thank you. As usual, I'm available in the chats. So be happy, we'll be happy to talk to you. And see you, see you.
+When we gonna see it tomorrow, tomorrow we gonna have our PDLC session, so we gonna continue investigate code me. So, also don't forget to try code me, as you can see Sukalya and her team gonna demonstrate great, great.
+Demo of the workflow of the agent registry is understand that it's gonna be separate agents, yeah, that's and then you're gonna build like a workflow, yeah, that's the main benefits that Code may give us, and also, yeah, don't forget to.
+Take a look around. Yeah, for example, we're gonna try to experiment with the development of MCP to do with Allen with this, yeah, so probably we're gonna try to build our own MCP, yeah, that's gonna give ability to use GitHub Copilot.
+For external resources like Jira Conference and so on, and also GitHub workflow, yeah, and demo from from Deepti, yes, so.
+That's going to be interesting agenda for a couple of the next sessions. Cool. So guys, thank you all and have a great day. Happy Monday.
+
+Sukalya Rajendran   28:44
+Thank you.
+
+Jason Daggs   28:44
+Thanks, bye.
+
+Oleksandr Pavlovskyi   28:46
+Bye, guys.
+
+Iryna Pashko   28:46
+Thank your works, right?
+
+ stopped transcription

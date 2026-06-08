@@ -1,0 +1,1021 @@
+AI Enablement Cross-Functional Lighthouse PDLC Session-20260416_171249-Meeting Recording
+April 16, 2026, 2:12PM
+1h 15m 40s
+
+Sukalya Rajendran   0:04
+I do see the project training, but when I click on it, I don't see any integrations up here.
+
+Nikita Kumar   0:10
+Um...
+
+Vira Melnyk   0:11
+Um...
+
+Nikita Kumar   0:13
+Those were the ones.
+
+Vira Melnyk   0:13
+You have.
+
+Nikita Kumar   0:14
+Oh, go ahead. Go ahead, Vira.
+
+Vira Melnyk   0:17
+You have to create integration for yourself.
+in trainings. Or you can also use your own project and you can clone actually assistance which we will cloning right now together to your own project and work here.
+From your own project.
+
+Sukalya Rajendran   0:42
+Okay.
+
+Vira Melnyk   0:42
+I will, I will show it right now, so...
+
+Deepti Pathak   0:42
+S.
+
+Nikita Kumar   0:45
+For integration, that was what we also did last week with Olex, where people were creating JIRA integrations and things like that as well.
+
+Sukalya Rajendran   0:48
+OM.
+Also, it's just the Jira integration that you're talking about that has to get created under the training project, is it?
+
+Nikita Kumar   0:59
+Yeah, so yeah, it just says Jira here. So yeah, right now it'll be the Jira one. Yep. There's one more question, Vira. Yes.
+
+Sukalya Rajendran   1:00
+Got it.
+
+Vira Melnyk   1:00
+Yes.
+
+Sukalya Rajendran   1:02
+Okay.
+Okay, got it. Thank you.
+
+Swathy Lokula   1:06
+Yeh.
+
+Vira Melnyk   1:06
+Yeah.
+
+Nikita Kumar   1:08
+Yep.
+
+Swathy Lokula   1:08
+So do we have to create those multiple assistants before we start the orchestration or how does it work?
+
+Vira Melnyk   1:16
+Yes, yes, but right now, right now, we will simply, I'm already created it for you, so we will simply...
+Copy it, we will clone it. I will show how to clone and you will have everything in your project or better in training project.
+
+Swathy Lokula   1:36
+Okay, thank you.
+
+Vira Melnyk   1:38
+So, let's go to the top assistants.
+And please find this assistance created by me, Vira Melnyk, supposed to be here. I've also created nice images for them. This one you will not see because it's not shared with the project. So please let me know if you see.
+Some some them here.
+Okay, I see someone can able to see. Okay.
+Nice. So let's start always when you are working with orchestration, always start with sub-assistant.
+Yes, you see only three. So yes, there is only three assistants because this one, this was technical one.
+It's not shared with the project. You can see it. We don't need it.
+Where?
+Yes, yes, only see, yeah, only three shared, yeah, exactly. And now you know the difference. I see four because I have one technical and you can see only the ones that I've shared with you.
+And when you work with orchestration, always start with sub-assistance. So let's start with our story readiness checker.
+It's that one that we had before. Let me show you quickly. You shouldn't do this. What I'm talking about.
+And.
+So.
+Those of you who was present on the first session conversation probably did this together with Oleksandr. This is this is this is assistant which I am talking all the time. So we already created. The only prompt was slightly changed in order to work
+In orchestration. OK, now I'm go back to to to the trainings training project and let's move on with the story readiness checker. Let's clone it. How to clone?
+Press here dots and you see clone.
+Oops, better, you know, to take this name to copy this name to have it, or you can name it wherever you want, but better, let's keep it. Let's clone, let's copy paste the name.
+And I will add at the beginning my name to order not mess it with other.
+I will not share it, so you will not see it.
+Okay.
+to not create mess in your project, but I will work with it. You are supposed to have your own.
+Okay, please tell me if this is understandable.
+Yes. Okay, great. Okay, now we will save it.
+And you can see I have...
+Here, not one not shared project, I will work with it. Now, let's proceed with another sub-assistant.
+This one, this is Story Risk and Hidden Gaps Reviewer.
+It also designed in order to work in orchestration. Let's do the same.
+Uh, I'm simply clonet.
+In the same manner, I will not share it to not create mess. I will recommend you to do the same.
+For me, I'm adding this mark to not get lost.
+And save it.
+Okay, and now we need to copy orchestration, but orchestrator, but orchestrator has some extra setup.
+Uh, let's go to Orchestrator.
+Let's copy it, copy the name, clone it.
+Do the same.
+
+Doug Ball   6:27
+It doesn't seem that everybody has not clicked the Shared with Project button.
+
+Vira Melnyk   6:36
+Uhh...
+
+Doug Ball   6:37
+Not not you, just seeing a lot of a lot of people's bots show up.
+Agent show.
+
+Vira Melnyk   6:44
+Eh.
+Could you please repeat the question? What is the question?
+
+Doug Ball   6:49
+No question, just letting folks know that if you don't click that shared with project, then everybody's going to see all of yours and we're up to about 3 pages now.
+
+Vira Melnyk   6:58
+Yes.
+Yeah. Okay, so that's why I'm proposed to not share it with the project and keep it yours.
+Uh, okay.
+Now, let's go to check extra configuration and context and data source. This is tab which we need.
+And please ensure that you have here proper orchestrator. You have to attach your own orchestra, your own sub-assistant.
+Here.
+So, my one will be...
+This one.
+The one I cloned before.
+So, this is how attached the sub-assistance in Cogni.
+So I'm checking. I can see that I have proper assistant. I have everything set up and let me check if I have proper integration set up.
+
+Swathy Lokula   8:11
+So, sorry, I missed this one. Which assistant are you looking at now?
+
+Vira Melnyk   8:12
+In.
+Now I'm checking if the tools is set up properly, because my main assistant will work with JIRA, so I need to have a JIRA tool enabled.
+So, I am going in Sam. Let me repeat this.
+So.
+From up, I'm going down. I'm checking here's 2 configuration. I'm checking available tools.
+This project management tool supposed to be predefined.
+And if your integration set it up properly.
+You will see your integration here.
+
+Debamitra Bhattacharjee   9:03
+So Vira, sorry to interrupt you. So we created two agents, correct? So now we are on the third agent or we are actually updated the... Okay.
+
+Vira Melnyk   9:05
+Mhm.
+Yes, yes.
+Let me, uh, let me, uh, okay. Hello?
+
+Swathy Lokula   9:13
+Okay.
+Can you could you cancel this one and show which agent is this one, please? Yeah.
+
+Tony Moricca   9:20
+This thing is flooded too. I mean, I can't even find what you're doing because it's flooded with everybody else's personal stuff. So I'm falling behind because I'm just trying to find what you're trying to do and it's flooded with everybody else's stuff.
+
+Swathy Lokula   9:25
+Yeah.
+
+Vira Melnyk   9:35
+Okay.
+
+Debamitra Bhattacharjee   9:36
+It.
+
+Vira Melnyk   9:37
+Let's do it from the beginning. Okay, are you okay with previous to assistant?
+
+Swathy Lokula   9:45
+We cloned all three assistants; we are good until there, I think.
+
+Vira Melnyk   9:48
+Okay, so, Vivek, you...
+
+Doug Ball   9:50
+So basically, if you did your cloning and you did not check the checkbox, please go back and check your checkbox to not share with the project.
+
+Swathy Lokula   9:59
+Yeh.
+
+Vira Melnyk   9:59
+And if you have a mess here, please choose your name and you will see only your own assistant.
+No.
+Okay.
+Let's check if everything set it up properly.
+So this is my client assistant orchestrator. I'm checking. I have project management generic Jira tool. I have.
+Sub-assistance.
+Here, the one I chose. So everything looks good and let's try to chat with it.
+In order to chat with it, let me...
+Share with you a link to the Gira.
+
+Swathy Lokula   10:58
+So, on mine, the sub-assistant is in present, which sub-assistant should we take?
+
+Vira Melnyk   10:58
+Okay.
+Okay, now let's check it. First of all...
+
+Swathy Lokula   11:12
+Please ensure that you created previous two systems. Did you do this? Yes, I have the story refinement orchestrator clone with my name and it's not shared. Now I go into the project management, I see generic data, but the sub-assistant says no assistance chosen.
+
+Vira Melnyk   11:32
+Generic Jira, just a moment. Did you go connect some data sources? Have you checked this?
+
+Mia (Xiaoling) Zhou   11:32
+Yeah, I, I, I have the same issue.
+
+Swathy Lokula   11:43
+Next.
+So, we have to manually select that, isn't it?
+
+Vira Melnyk   11:53
+Here, you.
+
+Swathy Lokula   11:53
+Yeah, go on.
+
+Vira Melnyk   11:56
+You have to choose your own assistant.
+And ensure that you have the box checked.
+
+Nikita Kumar   12:11
+Please let me know if it's clear now, more clear. So after they clone these zero and then they go into edit this assistant and select context and data source, now they can select those duplicated or cloned assistants, correct?
+So.
+
+Swathy Lokula   12:26
+Yeah.
+
+Vira Melnyk   12:29
+Yes, you have to select here sub-assistant. If you don't have sub-assistant, you will not have a reputation.
+
+Nikita Kumar   12:30
+Okay.
+Yes.
+
+Vira Melnyk   12:41
+Also.
+
+Debamitra Bhattacharjee   12:44
+Oh, where can I see the server system, please?
+
+Vira Melnyk   12:48
+You can see Sab Assistant in context and data source tab drop downs.
+Can you see it? This, I just wanna, and it's blank.
+
+Debamitra Bhattacharjee   12:57
+Let me check. You have to...
+
+Vira Melnyk   13:02
+From the top.
+
+Altaf Shariff   13:02
+So, we...
+
+Vira Melnyk   13:04
+Yeah. So we need to select both sub-assistant or only one. No, we have to select both sub-assistant because there is no reason. Actually, you can create orchestrator with one assistant, but in my opinion, it's not really orchestration. It's only one assistant controller. You can work like this, it will consider.
+
+Altaf Shariff   13:11
+Okay.
+Okay.
+
+Vira Melnyk   13:27
+It will be considered as an orchestration, but this is not really an orchestration. OK.
+
+Altaf Shariff   13:31
+Okay, okay, thank you.
+
+Nikita Kumar   13:39
+Erik, can you scroll down on that just for a second really quickly?
+I'm just trying to make it so it's clear and set. Thank you.
+
+Vira Melnyk   13:44
+Mm.
+Yeah, yeah, yeah, okay, okay, Ness.
+Okay, this tab on text and data sources.
+Here, you can see.
+You can choose assistance, sub-assistance.
+Let me remove it, and it chooses it again.
+Select sub-assistant, you know, you see.
+And then you are...
+You already add your names in the subsystem and you can find it.
+
+Eric Trenz   14:38
+And in this case, are we selecting the other sub-assistants that we, or the other assistants that we cloned that aren't part of this orchestrator, such as like the...
+Definition of ready.
+
+Vira Melnyk   14:54
+No, you're supposed to, you're supposed to take maybe yes or maybe no. So let me repeat, you have to clone this particular.
+actually Sasha just pasted it in chat if you can't find it. So here's the links to assistance you're supposed to clone. So first of all, you clone 2 sub-assistant. I also added into the description that it is sub-assistant. You clone sub-assistant and then you will go to the orchestrator and you will
+
+Eric Trenz   15:16
+Yeh.
+Choose these two sub-assistants. OK, so yes, we're selecting the two sub-assistants that...
+
+Vira Melnyk   15:32
+Distance.
+Mm.
+
+Eric Trenz   15:36
+Yeah, they are the orchestrator. Okay, thank you.
+
+Vira Melnyk   15:40
+And save.
+And ensure that everything is set up properly.
+
+Debamitra Bhattacharjee   15:44
+Support.
+So the third assistant, I'm not able to see, can you even share the name, the one you were currently on?
+
+Vira Melnyk   15:56
+A...
+Sasha just Sasha just added it in chat.
+
+Debamitra Bhattacharjee   15:58
+I searched with your name.
+No, I'm not able to access that also.
+
+Vira Melnyk   16:07
+Do you have access to the training or to the training?
+
+Debamitra Bhattacharjee   16:13
+Project? Yes, I do.
+
+Vira Melnyk   16:14
+Project, yeah, I do. Okay, so probably, can you see, can you see this assistant?
+
+Debamitra Bhattacharjee   16:16
+Yeah, I do.
+
+Vira Melnyk   16:27
+The one with the beautiful images I created, I consider it beautiful. Oh my god, nice.
+
+Debamitra Bhattacharjee   16:31
+I can, I can see the other two.
+
+Vira Melnyk   16:38
+Okay, you can see which one you're not able to see. The story refinement or distracted that this is the one I'm not able to see.
+
+Debamitra Bhattacharjee   16:41
+But...
+
+Vira Melnyk   16:48
+Because you are in it.
+You are setting up as the orchestrator, right? So you can't see it in list.
+
+Nikita Kumar   16:58
+That's the name of the orchestrator that you're building right now.
+
+Debamitra Bhattacharjee   17:01
+Yes, OK, yeah.
+
+Nikita Kumar   17:02
+So you're not going to see it on the drop down because if that's your main agent, your subagents are going to be the other ones.
+
+Vira Melnyk   17:02
+So.
+Mhm.
+So if you are setting up this orchestrator, obviously you can't see it. Yeah, maybe I supposed to highlight it. So if you set it up orchestrator, you can see it in the list. And you, for orchestration, you only need it
+To control to sub-assistance, which I hope you see.
+
+Debamitra Bhattacharjee   17:32
+Right? Okay. Okay.
+
+Vira Melnyk   17:35
+Mm.
+
+Debamitra Bhattacharjee   17:36
+OK, let me check again.
+
+Vira Melnyk   17:41
+Sure.
+
+Altaf Shariff   17:42
+the bottom like product management something you did. Just a moment.
+
+Vira Melnyk   17:44
+Uhh.
+
+Altaf Shariff   17:48
+On the available tools.
+
+Vira Melnyk   17:51
+Okay, now, okay.
+Let's check everything one by one. And so what is most important for our today's session? Most important, it's context and data source.
+And here, if you're just setting up.
+It will be like this.
+context and data source and you are looking for your sub-assistance. That is why I asked you to add names. You see, I'm an abbreviation of my name and I able to see the assistance.
+
+Altaf Shariff   18:37
+Yeah, I think we...
+
+Vira Melnyk   18:37
+If the issue is too many assistants here, I would propose you go back.
+And create one more assistant for yourself and add your name so you can easily identify it. In reality, you will never face this issue. It's only because we have training now and so many people clone the same assistant.
+
+Altaf Shariff   19:07
+Yeah, I think we are good until here.
+
+Vira Melnyk   19:10
+Okay.
+
+Altaf Shariff   19:11
+Yeh.
+
+Vira Melnyk   19:12
+So then, what you supposed to check more?
+Uh, project management.
+tool, project management tool, ensures that the generic Jira tool has your integration.
+Active.
+And save it.
+Let me know if we are okay to proceed.
+
+Swathy Lokula   19:47
+I don't have the generic management. Could you show that again? Sorry.
+
+Hai Le   19:47
+I...
+
+Vira Melnyk   19:52
+Of course.
+You see here available tools? Yeah.
+It shows that you're in proper assistant in orchestrator.
+And here, project management tool. And this is supposed to be predefined.
+
+Swathy Lokula   20:10
+Good.
+Yeah.
+
+Vira Melnyk   20:19
+Open it, ensure the generic Gerald tool is used.
+
+Swathy Lokula   20:19
+I see that.
+
+Tony Moricca   20:20
+Nathan.
+
+Swathy Lokula   20:26
+It is chosen, but the default integration is present. Is that fine to the right?
+
+Vira Melnyk   20:31
+If you integration is a global integration, it will be OK, but but ensure and choose your your integration, the ones that you have, is the one which is you assure that work and save it.
+
+Mia (Xiaoling) Zhou   20:42
+Um...
+
+Swathy Lokula   20:47
+Okay.
+
+Mia (Xiaoling) Zhou   20:49
+The drop down here, I only have Jira training OMF user and Jira training project. Which one should I?
+Select.
+
+Vira Melnyk   21:00
+Mm.
+I am a few, which is yours?
+
+Mia (Xiaoling) Zhou   21:08
+I have no idea.
+
+Vira Melnyk   21:08
+Check.
+
+Nikita Kumar   21:11
+Mia, it should be the one that we created last week. Do you remember what you named that one?
+
+Doug Ball   21:12
+Yeah.
+
+Mia (Xiaoling) Zhou   21:16
+Oh, okay.
+
+Vira Melnyk   21:16
+You can go back to integrations, you can choose, check integration, and even can check if it works.
+All my integration works.
+
+Mia (Xiaoling) Zhou   21:26
+I, I don't have integration as well.
+
+Vira Melnyk   21:35
+Okay, but you have something available, right?
+
+Nikita Kumar   21:41
+Do you, um, can you send me a screenshot of what you have, Mia?
+
+Vira Melnyk   21:41
+In this drop-down.
+
+Nikita Kumar   21:45
+About your code me page looks like, and I can take a look at that really quickly.
+
+Mia (Xiaoling) Zhou   21:51
+Do you want the screenshot of which page, the dropdown?
+
+Nikita Kumar   21:55
+Just this whole, like how you're showing this whole thing right now, like your whole code me set up, because integration should be on the left-hand side.
+
+Mia (Xiaoling) Zhou   21:59
+Okay.
+Okay.
+Okay.
+
+Nikita Kumar   22:04
+Thank you.
+
+Mia (Xiaoling) Zhou   22:04
+Yes.
+
+Shai Eilat   22:12
+Do you want to quickly show how to create integration or something that you've done last week?
+
+Nikita Kumar   22:18
+We did that last week already, Shai. We did like a whole lesson on how to create integrations with API tokens and everything. Hold on.
+
+Vira Melnyk   22:24
+Mm.
+Okay, mm.
+
+Nikita Kumar   22:28
+But we, I, I...
+
+Vira Melnyk   22:28
+Okay, V.
+
+Mia (Xiaoling) Zhou   22:29
+Yeah, I did and I followed, but I still don't have that. I'm not sure why.
+
+Jatin Bagga   22:29
+But I do have a question on that. Sorry, go ahead.
+
+Vira Melnyk   22:37
+Okay, you can. Okay, let me do this way. We can help center. We can have actually YouTube channel here.
+By the way, right now, let me know if I need to show you how to create integration. I actually can, or you can use our frequently asking question chat bot in order to ask how to create, how to set up Jira integration in Jira, how to stop Jira integration in CodeMI.
+For example.
+Let me know, please, right now, should I should I show how to create integration?
+
+Sean Monaghan   23:32
+I think there are some of us that haven't been able to make all of these calls, so I don't want to like derail things here, but is there is there any other material we could reference outside of that?
+
+Mia (Xiaoling) Zhou   23:32
+OM.
+
+Vira Melnyk   23:43
+Yes, of course, as I already said, you can use a frequently asking question to our chat bot, and here we have...
+
+Sean Monaghan   23:44
+Yes, of course.
+
+Vira Melnyk   23:56
+We have actually all information inside of it. This one. You can ask it how to create integration. It will show it, or you can also use our YouTube channel. You will have video manual here about integration.
+
+Svetlana Stogni   23:57
+What?
+
+Vira Melnyk   24:16
+So, it's definitely how Git tool integration, so it's supposed to be Jira tool integration, and maybe someone can help to find the proper link while we proceed with our web.
+
+Svetlana Stogni   24:34
+Session, yeah, moreover, we have everything documented in Confluence, all the sessions with the agenda with useful links that we shared with you, like everything is there to help you.
+
+Vira Melnyk   24:53
+Just a moment.
+I need to do.
+Okay, you probably already have in the chat a link to our Jira ticket. I've posted it sometime ago. Please check if you have it.
+If you...
+
+Nikita Kumar   25:51
+People are saying they're getting access denied on the third agent assistant to clone.
+So, do you, I think you might need to share it, send a link in here again for the one that's they're getting access denied for, so can you check that one? It's the last message I just sent.
+
+Vira Melnyk   26:12
+Um...
+
+Nikita Kumar   26:17
+I guess some people might be having trouble viewing that particular assistant.
+
+Vira Melnyk   26:26
+Okay, please clarify what is the issue. Should I go back to the cloning of assistant, short one?
+
+Nikita Kumar   26:41
+No, I think they're just saying that some people have access to do it and some people don't. So I'm not sure why that would be happening.
+
+Vira Melnyk   26:48
+Probably, I'm still considering that it's the issue with the number of assistants which is created right now.
+
+Nikita Kumar   26:48
+Okay, Yana said she.
+
+Yana Asadchaya   26:58
+Guys, please try one more time. Yeah, try one more time, please, because for some reason it was not shared with the project. Maybe someone while Claudine changed it.
+
+Vira Melnyk   27:01
+Yes.
+Ahh, yeah.
+
+Yana Asadchaya   27:11
+But, uh, try one more time.
+
+Vira Melnyk   27:12
+Maybe, but now, now, now it's you shared it, Yana, right?
+
+Yana Asadchaya   27:18
+Yes.
+
+Vira Melnyk   27:18
+Okay, thank you.
+Okay.
+So, I'm going to the assistance that I'm already created.
+And I'm going to copy paste to paste a link to the Jira story.
+And sent.
+
+Swathy Lokula   27:44
+Could you put that link in the chat, please? I don't have it.
+
+Nikita Kumar   27:47
+Mhm.
+
+Vira Melnyk   27:48
+Mhm.
+
+Swathy Lokula   27:49
+Thank you.
+
+Nikita Kumar   27:49
+Thanks for you.
+
+Vira Melnyk   27:50
+Let me do it again.
+Okay.
+I was a bit hurried up because I wanted to ensure that everything works as expected. So now let's repeat it again.
+
+Nikita Kumar   28:33
+Sorry, I'm gonna quickly one more thing. So is everyone so far able to clone and create their orchestrator agent?
+
+Vira Melnyk   28:35
+Mhm.
+
+Nikita Kumar   28:44
+or follow along. Okay, great. Awesome. Thumbs up there. Now is where you can use this link and go into your start chat for orchestrator.
+Alright, Vira, back to you.
+
+Vira Melnyk   28:57
+I see that someone else have a question. The hand went back down. Go ahead.
+Ohh.
+Oh, okay, okay, okay. Probably everything is clear.
+
+Swathy Lokula   29:04
+Not everyone has access to this particular Jira. It is giving me error when I'm trying to run this, so I'm going to try for the Jira that I have.
+
+Nikita Kumar   29:12
+I would not use anything that's not training because your integration is with training and not unless your integration is with your real Jira and not training Jira.
+
+Hai Le   29:24
+I tried it, and...
+
+Vira Melnyk   29:24
+Probably.
+
+Nikita Kumar   29:24
+'Cause birds ring.
+
+Hai Le   29:26
+It failed. I'll show, I'll share a screenshot.
+
+Swathy Lokula   29:27
+Minefield 2.
+
+Altaf Shariff   29:29
+Yes, Sam.
+
+Vira Melnyk   29:30
+Was you presented on the previous?
+
+Nikita Kumar   29:35
+The integrations that you guys have created, are they on training Jira or are they on regular Jira? On regular.
+
+Vira Melnyk   29:36
+The.
+
+Hai Le   29:41
+Doing training.
+
+Nikita Kumar   29:43
+Interesting.
+
+Hai Le   29:43
+Minds on training.
+
+Vira Melnyk   29:48
+Okay, let me ask another way. If someone has access to the...
+To this, you mean can you open it this link directly?
+First of all.
+
+Altaf Shariff   30:05
+Yeah.
+
+Vira Melnyk   30:08
+Can you just follow this link and open it and ensure that you will be able to open it?
+
+Hai Le   30:14
+Yes, I can open it.
+
+Vira Melnyk   30:15
+If you can open this issue with integration.
+Also, if it was presented on a previous session.
+You can use also this link.
+Let me...
+I have an issue with a copy pasting, but this is.
+the same, but just number as end is 55, I think. Hope it will work. Just a moment.
+So, for this one, if you was presented in previous session, you will supposed to have 100% access to this.
+Link, you can use it as well.
+
+Hai Le   31:14
+Yeah.
+
+Vira Melnyk   31:21
+OK, if everything is set up properly, the only issue is the orchestration is set up the way that you simply.
+Go there, copy, copy, paste the link.
+And your, your.
+Your assistant start working one by one.
+Uhh...
+Everything is controlled by orchestrator. It asks from the beginning readiness checker, then it asks hidden gaps reviewer, and then propose
+proposed to the user, gives the proposition to the user. So to check story refinement summary,
+If it's okay to post it to the JIRA.
+So.
+As you may see, a story readiness checker works.
+Is a similar is a similar view as in the previous lessons, and...
+Risk hidden gaps reviewer works. It has, it found some gaps.
+And then we are proposed to put the summary as a comment in there.
+That's someone was successful. Anyone? Yes, I'm successful. Yeah.
+Oh, great. Great.
+
+Dhanalakshmi Chinnasamy   33:04
+Yes, it's successful for Ramesh.
+
+Doug Ball   33:06
+My assumption, my guess is that a lot of people's tokens have expired since the last session, and that's probably why.
+
+Mia (Xiaoling) Zhou   33:06
+Mm-hmm.
+
+Alfredo Achecar   33:16
+Yeh.
+
+Vira Melnyk   33:17
+Maybe, maybe because it's because, because you probably use default.
+
+Altaf Shariff   33:24
+Yes, Yeh.
+
+Vira Melnyk   33:24
+Proposition, no proposition, it is quite short, like one week or something, yeah.
+
+Altaf Shariff   33:26
+Yeh.
+
+Doug Ball   33:28
+Seven days, yeah.
+Yeah, yeah, go to integration and test your connection, then use that. Yeah, once I updated my token to a valid token, it worked.
+
+Swathy Lokula   33:33
+Yeah.
+
+Altaf Shariff   33:40
+Yes, yeah.
+
+Swathy Lokula   33:44
+Mine was successful when I tried a different JIRA, but it is failing with the ones which you gave.
+Yeh.
+
+Vira Melnyk   33:54
+Okay.
+Probably a token.
+Was longer or something. OK, and let's put this summary as a comment to Jira.
+
+Nikita Kumar   34:12
+Well, while this is happening, we also have open hours tomorrow for troubleshooting where we can give a little bit more one-on-one attention because I know there's quite a few people in these calls, but feel free to also come in there. It's not just like if you have questions, it's more just like we can help you troubleshoot so that you guys are ready for homework for the following week. And
+and prepped with your code me environment as well, so we can help with there tomorrow as well.
+
+Vira Melnyk   34:37
+Actually.
+OK, let's proceed with what we had, and OK.
+As we can see, it was posted.
+I would like to highlight.
+
+Nikita Kumar   34:52
+We have a quick question, Vira. Yeah, Eric.
+
+Vira Melnyk   34:55
+Yep.
+
+Eric Trenz   34:58
+If I'm getting ahead, just tell me to table it, please. But I was just wondering why we have to copy and paste a link to the Jira story. Is there a way for us to automatically retrieve it if we have the Jira integration?
+
+Vira Melnyk   35:16
+But which proper story you supposed to check?
+
+Eric Trenz   35:22
+What's that?
+
+Nikita Kumar   35:22
+The JIRA integration doesn't, the JIRA integration is just for overall JIRA, but it's not going to select a story unless you built it in your agent to like do specific sprint or specific stories, I believe. Okay, so if we configure it, if we configure it differently, we might be able to, I just wasn't sure if that was a.
+
+Vira Melnyk   35:24
+Yeh.
+
+Nikita Kumar   35:35
+So you'd have to know which one to select.
+
+Vira Melnyk   35:35
+Yes.
+Exactly.
+
+Nikita Kumar   35:41
+Correct. Yeah, so if you do it.
+
+Eric Trenz   35:42
+capability if we do configure it correctly. Okay.
+
+Vira Melnyk   35:42
+Yes.
+
+Jatin Bagga   35:43
+Thanks, Bob.
+
+Nikita Kumar   35:46
+Yeh.
+
+Vira Melnyk   35:46
+Moreover, moreover, you get...
+Set up your your assistance the way is that it will not need to link at all. It will be will just copy paste. You will should not link Jira story at all. You will do everything manually. So also possible. It's also option so, but but in this particular case when we have.
+
+Eric Trenz   36:07
+Okay, thank you.
+
+Vira Melnyk   36:13
+JIRA call, Cody is very nice in that you able to check what's going on inside. So you see that call to the JIRA, you see that both sub assistance was called, that everything worked as expected. You can check, you can fix what you have and
+then you can check what you have inside. Oh, I see that everyone posting, many people posting, it's mine. This is nice. And we can see that this story is not ready.
+needed, needs refinement. But I see that it's too strong for the story, but maybe you will stop it differently.
+Okay, we have actually only 10 minutes and we are not fully finalized this flow.
+Babli, let me go back to the presentation.
+Mm.
+Just try to proceed.
+
+Nikita Kumar   37:30
+Vira, what else is remaining on the floor for today?
+
+Vira Melnyk   37:34
+Actually, how to actually explanation about orchestration and also how to build orchestration by your own. I can actually move to the how to build by your own orchestration in order to, you know,
+people could do their homework and then in a Tuesday we will go back to explanation.
+
+Nikita Kumar   38:02
+Sure, yeah, that works great. Thank you.
+
+Vira Melnyk   38:06
+Okay, let me.
+Just.
+Go back to...
+Um...
+My slides.
+
+Jatin Bagga   38:39
+Hey, Nikita, while Vira is pulling that up, just one thing, you know, like how in Jira we have like a specific nomenclature. So like, for instance, if I'm looking at payments or something, right, or like 1 advisor or whatever, like the acronym, the prefix of the story is like PMT or whatever, right? The part where I'm not really clear is even if you try to take an agent, like...
+
+Vira Melnyk   38:39
+Mm-hmm.
+
+Jatin Bagga   38:59
+Is it with this integration, if we specify the, like, do we need to specify the entire link from Jira to what like Eric was asking earlier? Or can we actually just say that, look, if if it's if it's like the 1st 3 letters are PMT, then you know, maybe I want to just add a.
+item to my backlog, like is there a way to sort of get that done as part of the orchestrator itself that always defaults to PMT, creates it as a general story within that within that bucket of the nomenclature called PMT? Am I making sense? Yeah, so basically, oh, go ahead, do you want?
+
+Vira Melnyk   39:36
+You.
+
+Nikita Kumar   39:38
+Go ahead, dear.
+
+Vira Melnyk   39:40
+Yeah, yeah, basically you can set up set up assistance or in your purpose. The way the way I would like to to see it, for example, the list of your integration or your your tickets.
+
+Nikita Kumar   39:59
+Yeah, so when you set up your assistant, basically you can specify in your story checker assistant to only look for tickets with PMT. So that when you're setting up your assistant, it's a little bit more coded to what you're looking for versus looking for every single link that you're doing. So that way when the orchestrator does run it, it should only run it on those tickets if it's set up correctly in the assistant.
+
+Jatin Bagga   40:23
+Got it. And so maybe I'm just not doing the right thing, Nikita, maybe, you know, like your point, maybe I can bring it up tomorrow, just schedule some time with you. I think I was, I was not able to get it to work, but yeah, good stuff. Thank you. Yeah, yeah, tomorrow there's open hours, so the team can help troubleshoot that a little bit to show what it might look like if you need to customize it a little bit more.
+
+Nikita Kumar   40:28
+Yeah.
+But yeah, they can definitely help with that.
+
+Vira Melnyk   40:45
+OK, let's go back to our to our how to how to create orchestration in practice. This will be important for your homework. You will get all this presentation at and on Tuesday I will explain general concept and answer all the all the questions.
+So, but when you are going to create a presentation, orchestration, definitely you need AI. Do not create it yourself. You can, of course, but it's not necessary and it will get you a worse result. But first of all, by your own
+Define the business problem, what you would like to solve. Let's imagine you have teacher and you are going to create orchestration feature launch readiness, right? Like here. So define the business problem, then ask, call me,
+to suggest an orchestrator approach, orchestration approach, then I have to write whether the orchestration adds enough value from 1 to 10.
+to understand if you really need this orchestration.
+So, and then proceed in the same chart, define the roles and workflows, and test and simplify them. So, better to create everything in one chart. Let me show it to you because we will have homework anyway.
+Set it up. For example, I'm going to show you and I'm going to give you right now this prompt so you can try it right now. Just...
+Just in place. OK, in the chat, I'm posting this prompt.
+Um...
+And I'm going to try it together with you.
+Um...
+Encode me.
+
+Svetlana Stogni   43:08
+Where are you? Where are you?
+
+Vira Melnyk   43:08
+Just a moment.
+
+Svetlana Stogni   43:09
+Sharon is a screen.
+
+Vira Melnyk   43:11
+What?
+
+Svetlana Stogni   43:13
+You are not sharing right now.
+
+Vira Melnyk   43:14
+Yes, I know because I'm sorry, I'm switching between our wonderful environment.
+
+Svetlana Stogni   43:16
+Oh.
+
+Vira Melnyk   43:29
+Um, okay.
+So.
+What I'm doing now, I'm going to share my screen and I'm going back to the code meme.
+Is it feasible?
+
+Sukalya Rajendran   44:00
+Yep. Yes.
+
+Vira Melnyk   44:01
+I hope I'm taking the simplest chat bot that we have here on the left panel, AI run chat bot. I'm going to copy paste first prompt that you have right now in chat, first prompt.
+
+Bandana Sriramka   44:01
+Yeh.
+
+Vira Melnyk   44:17
+It's just the first one.
+Um...
+Help me to design A orchestration on feature launch readiness.
+So...
+I would push you to, yeah.
+
+Nikita Kumar   44:42
+We are so sorry, we only have 3 minutes left and then I know everyone else has a call after this. Do you think it's okay if we review this on Tuesday while we also do some homework Q&A there as well?
+
+Vira Melnyk   44:46
+Mhm.
+Okay, so yes, but it's important, you know, in order to do homework, at least some something. Okay.
+
+Nikita Kumar   45:02
+Yeah, I think.
+Yeah, I think for homework, I was just going to say we will have some homework and I think maybe it's continue trying to work with these assistants, even if you are cloning to see what you're getting, but at least trying to create this orchestrator flow for yourselves on your end with agents that
+you might be wanting to create or try out.
+And then Vira also suggested prompts for your orchestrator as well.
+
+Vira Melnyk   45:37
+Yes, okay. As homework, I actually had also pretty simple orchestration as, for example, brainstorming orchestrations that definitely don't need any integration and you can simply create it. Oh, I see all solution here right now.
+
+Nikita Kumar   45:57
+So this is your quick question. On here, you're basically asking it to run prompt for the orchestrator, right? But they can use any GPT, any AI for this.
+
+Vira Melnyk   46:00
+Mm.
+Absolutely, absolutely.
+
+Nikita Kumar   46:08
+Right.
+
+Vira Melnyk   46:10
+So the main idea is that you are iterating your question. First of all, you ask about orchestration. Is it about the idea of orchestration? And then you are asking about the value if it works to create orchestration.
+And always a good approach to rate it from 1 to 10. If you have something more than more than eight or seven even, it's worse to create. Then proceed asking about the roles of orchestration. First of all, create sub-assistance.
+Then, and then join it into the orchestrator.
+
+Nikita Kumar   46:56
+Got it.
+
+Vira Melnyk   46:56
+Okay, we will paste the homework into the chat.
+And I will be waiting for your questions. Also, you can write me a message in a slack.
+
+Nikita Kumar   47:11
+Thank you. Thanks, Vira. I know we're out of time. I did post some homework in here, and Vira, if you want to add some more to clarify that, that's great as well. We will see this on Tuesday. Tomorrow, we've got open hours, so people can hop in there and ask any questions to help with troubleshooting as well. But yeah, thanks, everyone.
+
+Jatin Bagga   47:12
+Thank you.
+
+Vira Melnyk   47:13
+Thank you.
+
+Nikita Kumar   47:30
+Have a great rest of your day. Thank you.
+
+Oleksandr Pavlovskyi   47:32
+Thank you.
+
+Eric Trenz   47:33
+Thank you, Vira. Thank you.
+
+Sujan Shrestha   47:34
+Asset.
+
+Nicholas Crowley stopped transcription

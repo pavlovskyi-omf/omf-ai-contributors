@@ -1,0 +1,780 @@
+AI Enablement Cross-Functional Lighthouse PDLC Session-20260526_135954UTC-Meeting Recording
+May 26, 2026, 1:59PM
+1h 5m 57s
+
+Svetlana Stogni   0:32
+Yeah.
+I.
+
+Eugene Semenyuk   1:34
+Hello, good morning.
+Yeah, let's give folks maybe one more minute to join, and then we'll start.
+I.
+OK, let's start, so...
+Yeah, hi everyone. Good morning, and welcome back to our cross-functional PDLC session. So, today we will continue with the Multi-Repos System Intelligence use case that we introduced in the previous session. So, last time we discussed the idea and value.
+how we can help us to understand a system across multiple repositories, connect services, dependencies, and later support, troubleshooting, QA validation, and root cause triage. So today we'll make this more practical. So today the goal
+is to build the first version of this use case end to end and together. So yeah, by the end of the session, we should understand how to index and connect get repositories.
+to call me and create data sources for those repositories, create agents, connect these agents to these data sources, and start asking questions about the project that has multiple distributed repositories. So yeah, this is, this will be a hands-on session. So we have
+Please follow follow along if you if you have access to quote me. Yeah, I believe the majority of you, yeah, have access. So, and if you don't have access, so yeah, no worries. So, yeah, you can you can request it. So, yeah, if you...
+If you need access, so yeah, please just let us know. So yeah, we will send you instruction how to get the access. So yeah, and as usual, so yeah, please, yeah, follow me, stop me, and ask your questions.
+So, yeah, the more more interactive it will be, so yeah, more more available it will be. So, yeah, for today, for today's flow, we have pretty simple agenda. So, first I'll describe the use case again.
+just to make sure we are all aligned. So then I will, yeah, then we'll talk about what we need for this exercise. After that, we will create integrations in all the required data sources. And yeah,
+At that point, I'll pause and explain what a data source is and how it works conceptually, like similar to where it will augment on generation.
+Yeah, and so on, and then we'll create the agent, so you can reuse, you can reuse the prompt that I will use, or you can build your own prompt.
+So yeah, and after that, we'll connect the data sources to the agent and start asking questions about your project.
+Yeah, and then, yeah, we'll stop for some questions. Next step, yeah, and...
+Yeah, I think we will reach the end of this session by this stage. Okay, before we start, yeah, before we start clicking through the setup, so let's quickly remind ourselves what we are building. So yeah, let me quickly share my screen.
+Dunn.
+Is one entire screen?
+So yeah, the use case is called multi-repo systems intelligence. So yeah, in.
+Yeah, in real project system knowledge is usually not stored in one place. So we may have different repositories like front end repository, BFF, backend, API contracts, task automation repositories, and so on.
+Yeah, and when someone asks a question like, how does this feature work end to end, or where is this endpoint implemented, or which service owns this integration, the answer is often distributed across multiple repositories.
+So the goal of this agent is help to help us understand the system as a whole. Like for digital teams, this can help explain customer journeys and business capabilities of the whole system. For QA teams, this can help identify what's
+services participate in flow, which logs should be validated, and where a defect may come from. Yeah, and yeah, for QA teams, it can also be some kind of static testing, because for example, you have some.
+you have some tests stored somewhere, for example, in X-ray. So you have expected behaviors, and you can compare this expected behavior with what actually implemented in code. So you can ask,
+questions about behavior of some feature and compare it with your test cases. So yeah, it can be some kind of static testing, like without code execution. So yeah, it can also can help with initial feature review, even before code deployed to some test environment.
+Yeah, and for engineering teams, these can help navigate multiple repositories, find APIs, configs, error handling, yeah, see some tasks and dependencies. Yeah, and later on this system intelligence foundation exists,
+We can connect it to logs, errors, failed tests, or incident reports, and use it for root cause triage. Yeah, but for today, we'll focus on the foundation, like connecting repositories, creating data sources, creating an agent.
+and asking some useful system questions.
+So yeah, this is like small conversation with this agent. So yeah, for example, we have agent for self-service team. So that was connected to the repositories. Yeah, and we can ask some questions.
+Yeah, for example, we asked how do we determine whether a loan is active? So yeah, and we can see the process.
+So yeah, it searched through multiple repositories and yeah, it gave us.
+Short answer, yeah, first, first short answer.
+So, yeah, for example, in the current loan system, a loan is traded as active current, unless it is explicitly classified as, yeah, and some.
+Yeah, some points for configuration, so yeah, and yeah, evidence. So yeah, the key logic is in this file, in this repository, in this file. Yeah, and then we see like detailed explanation step by step.
+Even with some, even with some code.
+Get pieces of code and explanation how and why it works like that.
+Yeah, for now we connected only the...
+GitHub repositories. So yeah, but in future we can connect Jira confluence and expand this.
+This system intelligence with additional data sources.
+Yeah, and even maybe build some build some context and project knowledge based on what we have in the code.
+Okay.
+So let's move on. So what we need for this session. So for today's hands-on part, you need two main things. So first, you need access to call me. Yeah, I hope the majority of you have access. So yeah, and the second,
+You need get access to the repositories that you that are required for your use case. So, yeah, I believe, yeah, you will you will build you will build something like that that I've created for service and team, but for your particular team.
+So yeah, and for this purpose, you need to know what repositories are used in your team. So yeah, but if you don't know, so yeah, you can repeat after me with repositories for self-servicing team.
+So, yeah, but ideally it will be it will be great if you if you will know your repositories and you will use your your your repositories. So, yeah, if you don't.
+Yeah, if you don't have access to the repositories, so yeah, no worries. You can still follow the session conceptually. So yeah, and maybe during this meeting or maybe after, you can ask your
+engineers or repository owners to follow these same steps. Yeah, and answer the data sources are created and indexed so they can be shared with the team base. Yeah, they can be shared with the team. Yeah, and everyone in the project can.
+can access to and use these data sources. So yeah, you need access to Git repositories.
+to create data sources, but you don't need access to work with data sources. So yeah, for example, if you are digital or QA,
+Yeah, if if you if you are from QA or digital team, so yeah, you can ask engineers, developers to create these data sources, yeah, and then you can you can attach these data sources to some agents and use and use these agent, yeah, and use these data sources in the agents.
+Okay.
+So, yeah, let's...
+Let's start this exercise. Yeah, but before we move on, so do you have any questions?
+Okay.
+One, two, three.
+
+Jatin Bagga   15:13
+Sorry, Eugene, I have one simple question, I think. Eugene, with this model, this is really like very cool and I was experimenting as well over the weekend. One part I was not 100% sure is with this particular agent, let's say like you just put a question there saying, how do you like, you know, just give me the loan steps or whatever.
+
+Eugene Semenyuk   15:16
+Yeah.
+
+Jatin Bagga   15:32
+But like if you are wanting to get some information, let's say out of the Teams chat, which has, let's say video recordings, and they're not your video recordings, obviously like it didn't work for me, which I think is probably what I should have expected in the 1st place. Is that correct, Eugene? It's like it would need explicit permissions across any transcripts or videos on the user profile in order to, let's say, scrape some of the information to collate. Is that correct?
+
+Eugene Semenyuk   15:58
+So, yeah, for now is a first.
+Step for this use case, so we just connect the code repositories, and yeah, to to allow our agent to talk with with the code and explain some things that.
+Yeah, how our system and how our code behavior. Yeah, but as a next step, so we can think about some other data sources. Yeah, like connect these two. Yeah, we can connect it to.
+
+Jatin Bagga   16:34
+I see what you're saying. Okay, got it.
+Okay, so because I use a different use case, but you're talking about specifically code repos, strictly code repos. Got it.
+
+Eugene Semenyuk   16:43
+Yeah, we start, yeah, we start with code repos, but then we can expand it with additional data sources, like, yeah, like meeting transcripts.
+
+Jatin Bagga   16:50
+Noted. Got it.
+
+Eugene Semenyuk   16:55
+Yeah, but trying to speaking, yeah, uh, I need to...
+Need to communicate with our code me team, like how we can.
+how we can work effectively with transcripts stored somewhere, and how to effectively pick up these data.
+So, yeah.
+
+Oleksandr Tsyganok   17:17
+Yeah, so, so if we like talking about this like transcripts, it's like not directly related to today's session, but still technically, if we want to get Teams transcripts, you can pull any transcripts for meetings where you participated.
+
+Jatin Bagga   17:19
+Okay, that's good. Thank you.
+
+Oleksandr Tsyganok   17:36
+So if you was invited, you will have access to these transcripts. But it will require some additional setup, like some special configuration, separate application registration in your tenant. So it should be like coordinated with security team.
+
+Jatin Bagga   17:54
+Got it. And yeah, and you're right. You know, I was just thinking from a product applicability standpoint, like we don't have access to code, so we go into a developer as a code repo rather than what would be the most applicable use case. That was sort of in my head, but I get it. That makes sense to me. Thank you so much.
+
+Eugene Semenyuk   18:08
+Yeah, thank you.
+So, yeah, and even if you don't have access to the code, so yeah, yeah, if someone, yeah, if someone creates a data source, you can use it. Yeah, and for example, you can communicate with this agent to
+Yeah, two.
+Yeah, to build like better understanding of how system works. Yeah, for example, you are thinking about new feature, yeah, and you need exactly know how it works like that. So, yeah, how it works in our code.
+So yeah, and you can communicate this is this agent and understand like everything, like how it implemented, how it exactly implemented.
+
+Jatin Bagga   18:51
+Got it, got it.
+Got it. Thank you. This is super exciting. I'm really excited about this one. And this is going to really help in a lot of ways. Thank you.
+
+Eugene Semenyuk   19:00
+Because, yes.
+Yeah, thank you.
+So yeah, and as I mentioned, so yeah, if you don't have access to Git repo, so yeah, that's fine. So yeah, let's ask our developers to create these data sources. Yeah, and later after that, we can connect these data sources to agents, yeah, and use them even if you don't have access to Git.
+Okay, so yeah, let's start.
+The first part for us will be creating Git integration. So yeah, this integration allows Cody to connect to Git provider and read repositories that we want to use as a context. So yeah, let's go to the integrations.
+So yeah, this part is actual for for guys who have access to Git repositories. So yeah, if you don't have, so yeah, feel free to skip and let's wait for some repositories, for some data sources.
+to be created. So yeah, but for those who have access.
+Let's.
+Let's continue.
+So yeah, let's click create a user integration.
+Let's select the project.
+Yeah, in my case it will be training project.
+Oh.
+Yeah, let it be not global integration. For credentials, we need to select gate.
+Mhm.
+GitHub.
+I already have GitHub integration, so yeah.
+Let me add Alice like this.
+Or like this GitHub too.
+So.
+
+Jurijs Markelovs   21:26
+Can we use an existing one, or?
+
+Eugene Semenyuk   21:29
+Yeah, if you have existing one, so yeah, you don't need to create.
+A new one.
+So, okay, we need to generate personal.
+Personal access token.
+So, yeah, how to do this?
+So, we need to open a...
+We need to go to GitHub.
+Then, click your...
+Your account at top right corner, and then go to settings.
+
+Sanjay Kumar Parui   22:13
+Eugene, if you already have integration, we don't have to create a new one, right? Or we have to, okay.
+
+Eugene Semenyuk   22:16
+Yeah, yeah, yeah, yeah, yeah, if if you if you already have, so yeah.
+
+Sanjay Kumar Parui   22:21
+Thank you.
+
+Eugene Semenyuk   22:23
+Yeah, we need developer setting. So yeah, the last.
+The last menu item.
+in the left sidebar.
+Yeah, and here we need personal access tokens. Let's click it and then select tokens classic.
+I already have some, but I will create a new one.
+Let's click generate new Tolkin.
+Generate new.
+New Tolkin.
+Fine, right? Yeah, let's use classic, probably.
+Now let me confirm.
+Access.
+The canter.
+Mm.
+Okay.
+Okay, what?
+What do I need?
+Yeah, we need.
+I believe we need just rep a control.
+Correct me if I'm if I'm wrong, Alexander, yes.
+
+Oleksandr Tsyganok   24:09
+Yes, we we need to select like this whole repository permissions, yeah, if you want to like publish some like comments, so like I think like in this like enterprise setup, like if you will just select like this, like some.
+
+Eugene Semenyuk   24:14
+Mm-hmm.
+Yeah.
+
+Oleksandr Tsyganok   24:28
+Part of this data, you might have like limited functionality, so the recommended ways use this setup that you have.
+
+Eugene Semenyuk   24:34
+Mm-hmm.
+Okay, thank you.
+So yeah, here you can specify expiration.
+For this case, let's select no expiration.
+Call me. Yeah, in my case, it will be called me.
+Two.
+Because I already have.
+Okay, generate Tolkin.
+Here is my token. Let's copy it.
+Yeah, ossification.
+Personal access token.
+Now, let's paste it, paste it here, and let's...
+Caroline and Nayeem.
+Or the Tolkin.
+Yeah, and as as URL, as I believe we need.
+To use.
+Github.com.
+Yeah, and uh, as I remember, we need to...
+Choose this one.
+Okay, let's...
+Let's save it.
+Mhm.
+Okay, yeah, looks like I have...
+I have integration created.
+So, okay.
+Let's move on. Now, the Git integration exists. The next step is to create data sources. Yeah, for this use case, each repository that we want the agent to understand should be added as a data source. So yeah, let's go to the
+Data sources section.
+Yeah, and I'll probably delete.
+Delete some data sources and we'll create them.
+From scratch.
+Yeah, that's.
+Frontways and.
+Mobile.
+So...
+Okay, let me prepare some...
+Service.
+And.
+So, okay, to create new data source, we need to go to Data Sources tab and click Create Data Source.
+Yeah, here, let's specify project.
+So, yeah, you can use training project or your team project.
+They both fine.
+Yeah, and...
+To return.
+Yeah, first of all, let's paste repository link.
+So, in my case, it will be this one.
+So, yeah, if you would like to...
+to create the same data source.
+Not for training, for purpose.
+So, yeah, here, here is, here is the link.
+In the chat.
+
+Amit Kumar   28:47
+Eugene, we need to...
+Have.
+Link to specific repo, or can can we have, like, I'm thinking of data source should be per repo.
+
+Eugene Semenyuk   29:00
+Yeah, per repo, yeah, and we we need to provide like exact link to the repository.
+
+Amit Kumar   29:08
+Dee.
+
+Eugene Semenyuk   29:09
+Yeah, and yeah, what?
+
+Sanjay Kumar Parui   29:09
+Is it for repo for organization agent? I thought it was for organization.
+
+Eugene Semenyuk   29:15
+Ohh...
+It should be per.
+Per repo.
+
+Amit Kumar   29:22
+So if I have like 22 repo access.
+
+Eugene Semenyuk   29:26
+So, yeah, we, we, we...
+
+Amit Kumar   29:26
+You would end up creating 22 data sources.
+
+Eugene Semenyuk   29:29
+Yeah.
+Yeah, I I know it can be a boring boring task, so yeah, but but later we can connect all these repos to the to the agent and guide this agent how to how to work with this repos, yeah, and yeah.
+
+Sanjay Kumar Parui   29:45
+Oh my god.
+Mute sort of like 500 and eighty-eight applications something or repose.
+
+Oleksandr Tsyganok   29:54
+Yeah, you can create this data sources programmatically, so if it's like not training scenario and you do doing like some engineering stuff, you have like tons of repository, you can use access to Code API and create it directly through API.
+
+Eugene Semenyuk   29:54
+Ohh.
+
+Sanjay Kumar Parui   29:59
+Yeah.
+
+Eugene Semenyuk   30:10
+Mm.
+
+Sanjay Kumar Parui   30:12
+Okay, so like for us, like if I want to start with, I can just create 2 repository or and then use it together, correct?
+Okay, I'll try that.
+
+Eugene Semenyuk   30:22
+Yeah.
+
+Chantal Justamond   30:25
+One quick question though. Why would you go through all of this when you can just go to GitHub, click agents, and then in one click you can add the repos from your org?
+
+Eugene Semenyuk   30:25
+Yeah, and...
+Mhm.
+
+Chantal Justamond   30:38
+Like what's the benefit of CodeMe in this case? If you have access to the code, you're a dev, you know what you're doing, you want to ask some questions about the infrastructure and let's say you have like 7 to 8 repos, what would you go through all these steps here in CodeMe?
+
+Eugene Semenyuk   30:45
+I.
+
+Chantal Justamond   30:57
+instead of just going to GitHub.
+and do it in one click or three.
+
+Eugene Semenyuk   31:05
+Ah.
+So yeah, in, yeah, I'd like to understand like this flow. So yeah, so you're saying that in GitHub you can.
+
+Chantal Justamond   31:20
+Yeah, you can, oh yeah, you, if you have access to you, I mean, you have access to the code, you go to your organization, let's say current loans, you click on agents, and then there's like a little plus sign where you can just have a couple checkbox and you add all of the repos and then you can ask questions.
+
+Eugene Semenyuk   31:20
+Like also connect, connect.
+Mhm.
+
+Chantal Justamond   31:39
+About the organization.
+
+Eugene Semenyuk   31:46
+Yeah, it can be also used, but...
+What if you have more than one organization?
+Can it be used?
+
+Chantal Justamond   32:00
+I think if you have an organization in GitHub as an overall, as an umbrella, you can.
+
+Eugene Semenyuk   32:10
+Yeah, but what if, yeah, we have for example...
+Uh-oh.
+loans organization and maybe some other organization and we would like to...
+connect repositories from different organizations. Yeah, for example, we have two systems.
+That that works together, that that that work together.
+Yeah, I'm just thinking in loud.
+
+Chantal Justamond   32:37
+Yeah.
+
+Eugene Semenyuk   32:41
+Yeah, and yeah, other benefit of this.
+Have called me.
+for for this particular workflow that this talk, talk, talk, talk with your code, this is like foundation. So then based on this foundation, we can expand it with meeting notes, with confluence data, with Jira.
+So, yeah, that's that that's why we selected a code me, yeah, but frankly speaking, the tool for.
+
+Chantal Justamond   33:17
+So this is the first step in that case. This is just the first step and then you can do more advanced stuff. I'm hopeful.
+
+Eugene Semenyuk   33:19
+Yeah.
+Yeah, yeah, we can, we can, yeah, and we we can even connect it with some.
+With some monitoring tools, yeah, and monitoring tools can...
+can send some request, for example, based on some event. For example, system throws 500 error. And this event can trigger a request to code me and code me agent can analyze this error.
+This multiple repos and then provide some.
+And then send some guide or like next steps, like what we should do, so like, like, like initial troubleshooting for some problem.
+
+Chantal Justamond   34:21
+Okay.
+
+Eugene Semenyuk   34:21
+So, yeah, this is like first step, yeah, but for talk, talk, talk, talk with your code, yeah, you can you can use multiple tools. So, yeah, as you said, we can you can use GitHub, you can even can you can even use some local stuff like Copilot or...
+Cursor, like you, you can you can open just a few few repos in one workspace, yeah, and use just chat interface to to ask some questions regarding the code, yeah, but...
+The main concern for this for this particular part for for cursor in Koppula that context, yeah, and.
+And you will, you will reach limits very, very soon in this case.
+Yeah, and uh, yeah, and you will be out of the tokens.
+So yeah, maybe.
+I'd like to suggest to use CodeMe for.
+For such general tasks, yeah, and the copilot and cursor for some like engineering tasks where...
+Where, where?
+Where were the most powerful?
+Yes, yeah.
+In each tool, we have limits, and I heard some teams already reached some limits in Cursor, in Copilot. So, yeah, and probably in next phases, this question can be really, really hot.
+Okay.
+one thing that I lost in personal access token. So yeah, let's come back.
+So yeah, we need to configure SSO.
+And, like, search for the organization.
+Yeah, first of all, let's authorize for America pilot.
+Because, otherwise.
+Um...
+Otherwise, the...
+The document won't be able to.
+To use.
+Ripples from this organization.
+Okay, now we can see that when I have compilot.
+Saucerized.
+Yeah, and now let's come back to our data source. So yeah, we pasted a link to the repository. We need to specify branch.
+So yeah, in this particular example, the main branch is MAIN. Yeah, some teams have some different branch, for example,
+Dev or develop or something like that.
+So, yeah, please, yeah, make sure that the main active, yeah, the main branch is correct here.
+Because for some teams, the full branch can be other.
+Yeah, and as a name.
+Let's use some pattern, like, yeah, we usually prefer to use some few letters like GitHub, GH, and then...
+And then the repository name.
+Yeah, and we also need some description. We can say something like called the repo or...
+for this one. Yeah, and let's make sure that...
+This is shared with the project.
+Yeah, and as I remember, the name is unique.
+So, yeah, in your case...
+You can, you can add some some index, for example.
+Yeah.
+Looks like we are out of.
+Characters here, so we can we can add something, so you can you can use some different.
+Different prefix here, like maybe your.
+Like for your initials, like in my case it can be yes.
+Mhm.
+Okay, what we should select next? Model used for embeddings. So I propose to select small.
+This large model is a bit expensive.
+So, yeah, but for our training purpose, let's let's select small.
+Yeah, and let's select our integration.
+So, yeah, you can select any any available integration.
+Yeah, and other things, let's leave.
+As they are, yeah, and let's create repository.
+Data source.
+Yeah, and now, now we see.
+I see that you started.
+Index in here, and we also...
+I see some some errors.
+Yeah, let's see what we have. Uh-huh.
+Looks like something is wrong with authorization.
+Yeah, please make sure.
+
+Oleksandr Tsyganok   40:40
+I think you just you skip the split part with authorization in like enterprise setup for this like single sign on.
+
+Eugene Semenyuk   40:51
+Yeah, yeah, I I might mention this part, but yeah, a bit later, so yeah, yeah.
+
+Oleksandr Tsyganok   40:55
+Ohh, I missed this part.
+
+Eugene Semenyuk   40:59
+Yeah, I initially missed that, but yeah, but later I I cover it, so yeah, and if you if you have authorization error, so yeah, please make sure that.
+
+Sanjay Kumar Parui   41:03
+Yang.
+
+Eugene Semenyuk   41:12
+that here in tokens.
+Under configure SSO.
+So, you you authorized here, so here you should you should see the the authorized, so yeah, that that means that you you already have authorization.
+Yeah, and you are authorized in this particular organization. If you, if you see just gray authorized, so yeah, please click it.
+Yeah, and then the...
+Continue with.
+These things.
+Yeah, and after that, you can click.
+
+Jurijs Markelovs   41:52
+What was the error, Eugene? How did you determine this to authorization error?
+
+Eugene Semenyuk   41:58
+You can click this icon.
+
+Jurijs Markelovs   42:01
+128, that's representing transition error.
+
+Eugene Semenyuk   42:02
+And...
+Yeah, here is header observation basic.
+Uhh...
+
+Oleksandr Tsyganok   42:16
+The server code 128 is just related to any kind of authorization error, so it's not specific to this like single sign-on. There is no like clear differentiation in like low level Git tool.
+
+Eugene Semenyuk   42:24
+Mhm.
+Yeah.
+
+Jurijs Markelovs   42:32
+Yeah, I got exactly the same error, but I do have all of the all of the organization authorized, so I was wondering if there's a better way to debug it.
+
+Sanjay Kumar Parui   42:42
+Yeah, same for me too.
+
+Eugene Semenyuk   42:48
+Let's scroll Lea.
+Mm.
+Yeah, in some cases, in some cases, I've got this error.
+where default branch is incorrect.
+Example.
+In some teams.
+There will be, there was.
+The dev or develop branch, so yeah.
+In other cases, probably.
+Yeah, let's...
+Yeah, let's make sure that we have.
+These things selected.
+
+Oleksandr Tsyganok   43:52
+Yeah, to simplify, to simplify this troubleshooting in code, I can also recommend using Marketplace Assistant. I created this assistant. You can assign your selected integration and just provide this link to repository to check.
+
+Eugene Semenyuk   43:52
+An observation.
+
+Oleksandr Tsyganok   44:12
+whether assistant have access to it and it can provide like more detailed like level errors.
+
+Jurijs Markelovs   44:21
+What name of the assistant from the marketplace to be used?
+
+Eugene Semenyuk   44:25
+Yeah, could you please share the link?
+
+Oleksandr Tsyganok   44:25
+Something with GitHub, GitHub training or something like this. It's not like much assistance there. Give me one second to share it.
+
+Eugene Semenyuk   44:27
+Artur.
+Yeah, let me.
+Yeah, let me.
+Okay.
+Yeah, and one more repo that we would like to index.
+Yeah, this mobile repo.
+Oh yeah, I see that they they are from different organizations.
+Mhm.
+Let's select training, gate, whole code base, the URL to the repository.
+Ohh.
+GH.
+Yeah.
+Cups lock enabled.
+One main mobile.
+Something like code.
+A wrap up for.
+Let's specify main branch.
+Select text embed in small.
+Select your integration.
+Share this project, and then save.
+
+Amit Kumar   45:58
+I think if you change that.
+Headed access headed token, you know, in the date in the integration.
+
+Eugene Semenyuk   46:09
+Ohh.
+Yeah, let me double-check.
+Let's count integrations and let me.
+Yeah.
+Yeah, it looks like...
+We don't need this.
+
+Amit Kumar   46:42
+Yeah.
+
+Eugene Semenyuk   46:43
+Yeah, thank you. Good catch.
+So yeah, let's go back to our integration and disable these use other based authentication.
+And then you can go back to the data sources and...
+Yeah, if you have error, so you can please click this keypad button and click full re-index.
+You.
+Okay, once we have some repositories.
+Indexed, so we can create some agent that can.
+That can work with these repositories.
+So, let's go to Assistance.
+Let me copy link. I've already created a...
+this assistant and let me share the link. So yeah, using this agent, you can reuse.
+
+Sanjay Kumar Parui   48:02
+Yes.
+
+Eugene Semenyuk   48:04
+You can reuse the prompt, and we will do this.
+Together, and we'll create it from scratch.
+So, let's copy system instruction.
+And then create a new assistant from scratch. Let's create, click new, create new assistant.
+Let's click create manually.
+Then, paste.
+Our prompt.
+So, yeah, you can adjust team product application name. So, yeah, this this prompt is very generic. Yeah, and for yeah, you can you can adjust this prompt with some additional instructions like how to how to work with your repositories.
+So yeah, but in our case, it will be generic.
+Show.
+Okay, let's, yeah, before adding data sources, let's add some fancy name.
+And.
+Like, you change.
+Multi.
+A ripple.
+Now, to repo agent.
+No.
+
+Amit Kumar   50:00
+So, each in your project should, uh, should be called me or should that be training?
+
+Eugene Semenyuk   50:04
+No, no, no, no, no, yeah, let's let's select, yeah, done.
+Actually, it can be like your team project or our training project. So yeah, and let's share this project.
+
+Saeyed Shamlou   50:12
+Does exactly that enough.
+Out.
+
+Eugene Semenyuk   50:22
+Okay.
+Um...
+I'm lazy.
+In description, I will just...
+Use the name of the agent.
+Yeah, okay.
+The main step here.
+As we provided name and system instructions for our agent, we need to add our data sources.
+So, here is context and data sources.
+Section, and here we can select our data sources.
+Yeah, just using.
+Checkbox current loans.
+front end dashboard API.
+Front-end workspace.
+One MAIN Mobile.
+And.
+On our project.
+Tests from Desk.
+And there should be 7 repositories, one, two.
+Three, 6, 5.
+Looks like I... Okay, one, two, three.
+One, two, three, 4. Okay, looks like...
+I've selected the right repositories for self-service team. So, yeah, in for your particular step, yeah, you need to select your agents, your data sources.
+Yeah, and uh, yeah, we just need to save it.
+Yeah, no, let's try to ask something.
+So yeah, let's make sure, yeah, we have system instruction. We have, oh, let's maybe select.
+In other model.
+It should be under extra configuration.
+Let's select.
+5.2 or 5.4.
+Yeah, let's select 5, not 4.
+Okay, let's see what we have. We have system instructions, we have data sources. So we don't connect any tools for now. So yeah, in future we can connect.
+Confluence, Jira.
+And maybe some other things.
+Maybe some connection to logs.
+to transcripts.
+Yeah, now let's test it.
+Let's ask a question about...
+No.
+Yeah, I have a list of questions prepared.
+I like me.
+Let me see. Okay, yeah. Oh, this is really good question. What happens if origination data is missing?
+Yeah.
+Mhm.
+Okay.
+And does the missionary nation been in the current laws?
+Okay, for this part.
+Yeah, it will be great to verify with.
+Some subject matter expert.
+So yeah, but agent sets are based on the code. So there is no confirmed business rule validation or fallback tied to origination date.
+With the BFF front-end dashboard API or TaskCafe automation.
+So, yeah, and...
+Yeah, it searched for these things.
+findings.
+So, yeah, let's ask maybe one more.
+Question.
+Again, about the loan.
+Yeah, and we can even compare this answer with the previous one.
+I mean.
+The agent that I've created before.
+Mhm.
+Let's scroll up.
+Yeah, loans is considered active primary in the substream product active. I will probably status is active.
+Thank you.
+Yeah, and we also have these statuses like not paid off, not charged off, not bad credit, and not blah blah blah, so...
+Oh, this is not this question.
+Mm.
+Let me refresh the page.
+Yeah, this this answer looks uh...
+Pretty similar to what we had in the first.
+Two.
+In the first agent.
+So, yeah, it looks like it can it can be, yeah, it looks like it is a bit deterministic.
+Yeah.
+Okay, looks like we...
+We've built the...
+The foundation, yeah, the agent that can talk with Kohut.
+So...
+Mmhmm.
+So yeah, then for next sessions, we can take, yeah, we can try to expand this with some additional knowledge and additional skills.
+So, yeah, do you have any questions? Yeah, we have a couple of minutes.
+
+Alfredo Achecar   58:15
+Hey, Eugene, question.
+
+Eugene Semenyuk   58:16
+Mhm.
+
+Alfredo Achecar   58:18
+And you may, you may have mentioned this, I think, throughout the meeting or the different part of the meeting.
+
+Eugene Semenyuk   58:19
+Yep.
+
+Alfredo Achecar   58:24
+What, what, how big? So, what I'm understanding that is happening is that the the code needs like and doing text embeddings on the on the right? So, like, how how big can that be and what if we what if we use?
+
+Eugene Semenyuk   58:35
+Mhm.
+Mmh.
+
+Alfredo Achecar   58:41
+Yeah, maybe like what Jatin mentioned, like larger data sources like transcripts, um, like, how, how, like, how easily can this break?
+
+Eugene Semenyuk   58:50
+Yeah, that's pretty good question. So, Alexander, do you know about the limits? So, what kind of limits we have here?
+
+Oleksandr Tsyganok   58:59
+Ohh.
+I don't think that we have like, it's like easy to reach like some limits. So you just splitting all this data into like smaller chunks if you're talking about like some GitHub data. So you can think that technically it's kind of processed like for this like files one by one.
+And then you just collecting all this data in our like vector storage. So technically all this like index data that belongs to data source, like index at once and you can like query it like multiple times. It's stored like within.
+Code me itself, we have this like re-indexing functionality where you can like update and make this data actual, but technically I don't think that it will be easier to hit like some limitation. I saw that on the like very beginning when we like presented this feature, some like huge repositories was indexed at maybe like...
+400 megabytes repositories or something like this. So the main limit is like token costs.
+
+Alfredo Achecar   1:00:19
+With the main limit, sorry, do you mention the last part again, Alex? The main limit was what about tokens?
+
+Oleksandr Tsyganok   1:00:24
+Tolkin costs for like converting it to this like embedded vectors, like all this like data, but it's like rather cheap, especially if you select on this like small embedded models. I think for this like 400 megabytes repository.
+
+Alfredo Achecar   1:00:27
+Ah.
+
+Oleksandr Tsyganok   1:00:43
+It was something like around $5.
+
+Alfredo Achecar   1:00:46
+Gotcha.
+
+Oleksandr Tsyganok   1:00:46
+for this like one run operation. And yeah, technically it's like a really big one. I don't remember like for which specific team this repository was, but it just was some huge repository.
+
+Alfredo Achecar   1:00:49
+That's me.
+Gotcha, gotcha, and how does this work with the with the with the context window? Is it the same?
+Or different than like adding, like then attaching it to the to the prompt itself, like does it hold does it hold better if it's doing this kind of indexing?
+
+Oleksandr Tsyganok   1:01:15
+Yeah, it's like completely different approach, so...
+The main idea that when you're using like data source, it runs this like semantic search against this like vector database that we created. So technically, you're not using like some LLM capabilities at that moment. You're performing that search for like this semantically like relevant topic. So if we...
+asking about this like long like active state, it will just find like all this like documents across all this repositories that we index it. So it's not using at that moment like LLM capabilities. It will load.
+I believe, like, currently system configured in such a way that it will load only up to 10, like most like relevant documents, and then like feed all this like data to LLM to provide this like final summary. So, I don't know, like, Eugene, you can expand like one of this like search results, we will see this like pieces of like document, we will have this like...
+query, what does it say since it's like query? I don't see it well. It's like a bit small screen, but it should like have like some refined query. Yeah, determine where the loan, loan is active, active loans, basically just like rephrase your query.
+to like all like possible like relevant searches and then you see that it's like loaded top 10 code documents that are semantically like relevant to the specific like query. And you can expand like is this like separate chunk, you will see just a raw source code.
+that is like relevant to this like query. So basically you have like this pieces of documents loaded at that moment like LLM still not involved, but then you get in like all this like small pieces and feed into LLM. So it's like relatively small context window because it's like limited to top 10 documents and this like chunks.
+Are like relatively small, so you will not hit like this context limit for like modern modern. We can check like how much it costs since like in tokens a specific query, so we can estimate like whole this like chat, how many tokens was sent.
+So, if you can click on this like info, we can like just see like some estimation, like usually like context window something, at least like...
+One 100, like 1000 tokens. It's like on the very top, like this info icon, we can see like the total usage.
+So it's like 11 million, right? One and a half million.
+
+Alfredo Achecar   1:04:20
+I think it's 151, 152,000 basically. 152,000.
+
+Oleksandr Tsyganok   1:04:25
+Ah, yeah, yeah, so basically like all all this like charts and like multiple like iterations, so it's it should fit like this context window.
+
+Alfredo Achecar   1:04:36
+Got it, understood. I see. So basically, so all that semantic querying is being done basically on the cloud, but it's not using LLM. It's just like, like, yeah, like just doing like a, yeah, like a semantic search over the over the data over these repos that it has already consumed and and and and vectorized.
+
+Oleksandr Tsyganok   1:04:51
+Mhm.
+Yeah, yeah, so like all these queries are free, like only like the summarizing this results involves like LLM usage and yeah, only like final summary will use like this input and output tokens.
+
+Alfredo Achecar   1:05:11
+Awesome, thank you so much.
+
+Svetlana Stogni   1:05:20
+New Junior muted.
+
+Eugene Semenyuk   1:05:24
+Sorry. Yes. Yeah. Thank you. Thank you, Alexander. Thank you guys for your participation. So yeah, we've created a guide how to how to create it from scratch and share it with you. So yeah, let's continue expanding this flow on Thursday. And yeah.
+Let's pause here. So thank you and have a great rest of the day and see you soon.
+Bye.
+
+Nicholas Crowley stopped transcription

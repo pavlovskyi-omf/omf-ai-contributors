@@ -1,0 +1,877 @@
+AI Enablement Cross-Functional Lighthouse PDLC Session-20260421_135853UTC-Meeting Recording
+April 21, 2026, 1:58PM
+1h 0m 42s
+
+ started transcription
+
+Vira Melnyk   0:36
+Hello?
+
+Vlad Grubman   0:38
+Hello, hello, hello.
+
+Nikita Kumar   1:01
+Hello.
+Give everyone a few minutes to hop in here.
+
+Jatin Bagga   1:52
+Good morning.
+
+Nikita Kumar   1:55
+Hi, we're just giving everyone a minute or two to hop in and then we can get started.
+
+Vira Melnyk   1:57
+Hello!
+
+Jatin Bagga   2:09
+Either while we wait, I have a question.
+
+Nikita Kumar   2:14
+Yeah, sure.
+
+Jatin Bagga   2:15
+So like, is this the place where we come in and ask for help from cross-functionally, like if we need engineering or architecture help?
+
+Nikita Kumar   2:22
+Today's is more homework show and tell, but yes, you can also ask for help if you are having trouble with something that can also be asked in this, but we also have our Friday open hours for.
+
+Jatin Bagga   2:37
+Thank you.
+
+Nikita Kumar   2:37
+Yeah, sure.
+All right, I think we can get started. We're getting a lot of people in here. So hello, welcome back. Last week we learned about orchestrator. So this week for today, it's show and tell for homework, showing kind of like demos of what you guys are working on. Show us what your orchestrator is looking like. Again,
+This was homework and we'll start picking on people if people aren't volunteering. So if you'd like to be our first volunteer, please raise your hand and we can get started.
+where I'll start picking people from the names I see in here.
+
+Svetlana Stogni   3:22
+Yeah.
+Yeah.
+
+Nikita Kumar   3:25
+Any brave volunteers for today?
+Was everyone also able to create their agents?
+Or it doesn't have to be something that you that worked. It can also be something that didn't work that you want to show us and we can help troubleshoot that way as well.
+I'm gonna have to start picking names.
+off our chat here. So like the first name I'm seeing right now is Ravi. I have to pick on you a little bit, Ravi, to show us what you worked on for your homework for orchestrator.
+Has anyone done the homework from last week?
+Again, this only works if you guys are also participating with us.
+
+Jatin Bagga   4:37
+So...
+Yeah, so, uh, Nikita, go ahead.
+
+Ashwin Jain   4:44
+Sorry.
+Yeah, I did it. If you want, I can show.
+
+Nikita Kumar   4:50
+Yeah, that would be great. Thank you.
+
+Ashwin Jain   4:54
+Sorry, Jatin, you can go ahead.
+
+Jatin Bagga   4:57
+Oh, no, no, you go. I think mine was a little more rudimentary since nobody was saying anything, but go ahead, please.
+
+Ashwin Jain   5:07
+Sure.
+Let me share my screen.
+So yeah, basically I created two orchestrators. One is like, basically I extended whatever trainer has created last week and added like.
+I added like test case generator orchestrator, which basically creates a BDD scenarios like for this and then it post for now it post as comment for in Jira ticket.
+Um...
+Basically, yeah, and the thing is I cannot integrate with X-ray because there was like lag. I was not able to get X-ray client credentials, so I was not able to integrate with X-ray test case generation.
+So, basically...
+This orchestrator I used it and just extended to add one more assistant to it. So let me show this.
+The.
+So I added like instead of this two, I copied the story readiness and story hidden.
+
+Vira Melnyk   6:41
+Uh, I think you're not sharing.
+
+Nikita Kumar   6:42
+Oh, your screen share went away.
+
+Ashwin Jain   6:45
+Yeah, somehow it got I shared a couple of times, but not sure. Why is it going away? Is it visible now?
+
+Nikita Kumar   6:53
+Yes.
+
+Ashwin Jain   6:54
+Okay, yeah. So I added one more. I created an agent which generates X-ray test cases and then I used the other two agents which was created before and I used the same orchestrator and updated it to use the VDD test case generator for it.
+And just modified a little bit for this, and let me show.
+Assistance and.
+Chat now, and let me get a user story.
+Yeah, if I give this user story, it's basically analysis. Yeah, and when I use the story readiness program, and then it also creates the test cases for it.
+I'm not sure why is it taking so long time, but let me see if I have some previous one here. So basically, if I just ran yesterday, so it's basically creates this and it it runs all the agents one by one, like readiness, hidden track, readiness checker, and then it generates A X-ray test cases.
+The thing is, X-ray integration is not there, otherwise I would have posted all these test cases to X-ray. But for now, I just ask them, ask the orchestrator to collect the BDD scenarios and post it as a JIRA comment.
+So, basically, it it posts all those things, and then it added adds the.
+MBDD scenarios as well.
+See if it, yeah, so this is making progress, yeah.
+
+Nikita Kumar   9:29
+Thanks, so using all of this right now, posting to the JIRA ticket afterwards.
+
+Ashwin Jain   9:34
+Yeah, for now, yes, but we can we can integrate it with the X-ray, and then once X-ray is available, we can do directly post create X-ray test cases, all of those.
+
+Nikita Kumar   9:35
+Okay.
+Cool. Do you have a JIRA ticket we can look at to see what that sample looks like?
+
+Ashwin Jain   9:50
+Yes.
+Again.
+Oh yeah, this is the one.
+
+Nikita Kumar   9:58
+How awesome!
+
+Ashwin Jain   10:00
+So it posts the comments and it adds the BTD scenarios. So this was 1 use case I found and other use cases where, yeah, let me.
+
+Nikita Kumar   10:00
+That's great.
+
+Ashwin Jain   10:12
+I created another orchestrator. Basically, what Artur does is it looks at the GitHub code, and what basically, whenever you created a pull request, right, usually Copilot reviews it, and then it provides comment. So, but the thing is, when you accept those comments, it keeps on creating.
+Being like every time you pull request for all of those modifications, each of them. So what I did is I created one PR review update orchestrator. What basically does it?
+Basically, first agent will, let me show you. The first agent will review the PR and provides a feedback like what has to be updated and second agent would basically implement those changes. So this is like a second use case I implemented, I tried.
+See.
+So yeah, I have two, I have used two assistants here. One is Desk Case PR Reviewer, Desk Cafe PR Reviewer, and Desk Cafe PR Updater.
+And let me see.
+Chant.
+In the interest of time, I'll just go through like how it does. Basically, I provide the PR to it, one of the GitHub repository PR, which I created for testing purpose. And basically, it reviews the PR and provides the feedback like you have to do this changes. And the next agent will make all those changes and post it to get.
+Git repository. The thing is it is still failing for updating it, but...
+I have to look into it, but at least that's the idea of using orchestrator. So it basically in the end creates a pull request for me.
+And.
+So there are two comments and it's just for sample purpose, so I just left the invalid code for CodeMe to fix the PR. So I just added like extra invalid code, which is error, so it just went there and removed it.
+Ohh.
+
+Nikita Kumar   12:43
+Thanks.
+
+Ashwin Jain   12:44
+Yeah, Nikita, that's what I wanted to show you. Any questions?
+
+Nikita Kumar   12:47
+Awesome. That's so great.
+Any questions from the team? I feel like you went above and beyond for your homework, so that was really great to see.
+
+Ashwin Jain   12:56
+Sure, thanks.
+
+Svetlana Stogni   12:58
+Yeah, really great results. Thank you for sharing.
+
+Marcos Diez   13:01
+Yes.
+
+Nikita Kumar   13:02
+Awesome. Thank you so much. This is awesome. This is great. We love to hear from other people. Again, you can show us things that worked or didn't work, because if it didn't work, we can help you kind of resolve the problem as well. It doesn't have to look flawless, but just so we can see that the team is working on things. So anyone else who'd like to volunteer or I'll start picking names again?
+Yeah.
+Oh, okay, I see a hand up.
+
+Altaf Shariff   13:28
+Yeah, yeah, good morning everyone. Myself, Altaf. Yeah, I did the basic homework, nothing special, but I will share what I did.
+So you can see my screen. So I created that story refinement orchestrator. The main objective of that orchestrator is to work with two specialized agents. One is readiness checker, other is the story risk and hidden gap previous.
+So basically, it will review the user story. For first, it will make sure that the user story is fully ready or not. Then it will also see if there are any hidden risk or any gaps as part of the story.
+So I created this and I didn't have any changes, it was straightforward. So if I want to, I already updated the Jira, but I can do it one more time as part of this demo. So we need to give the user story link or user story name to the orchestrator. I have given CS179.
+Then, send.
+So it will be pretty quick.
+So it is give overall readiness how the score is.
+Then it will give you the deformation.
+And it will update that Jira if I say yes.
+Yeah, that's it. It has been posted. You can see it here.
+I think you should show up.
+Yeah.
+Yeah, that's it for my site.
+
+Nikita Kumar   15:39
+Nice, thank you.
+
+Altaf Shariff   15:40
+Thank you.
+
+Nikita Kumar   15:42
+Yeah, I think it's great for us to see even like simple orchestrators, whether they're intricate or simple, but it's really awesome to be able to see that and in turn helps you guys. It also helps you guys take some of that manual labor out of your day-to-day as well. Oh, I see a hand. Yeah, awesome. Thank you so much. I see a hand from Alice.
+
+Altaf Shariff   15:57
+Yes, yeah, definitely, yeah.
+
+Alice Merrill   16:04
+All right, yes. So let me share my screen here.
+So for the purpose of homework, I just created or cloned the orchestrator that, so I put HW in it, but it was the same one that Vira had had had us also create. That was the one over here that I created during the training.
+Training O for this one.
+I did assign two different sub assistants. You can see here it was test scenario and test data requirements and Jira story QA assistant. So these two are supposed to assess readiness of a specific Jira story and then also come up with the test scenario.
+
+Marcos Diez   16:52
+The people seen it.
+
+Alice Merrill   16:57
+test scenarios and test data requirements. So when I run that though...
+That's the thing I'm kind of, hold on, let me.
+Get my.
+Moment here of what I wanted to.
+So I'm telling it to why pasting does that. It kind of puts it in there oddly.
+Okay, so I'm just telling it to review this story and then using the sub-assistance assess project readiness and identify test scenarios and test data setup requirements and then post to JIRA only after receiving confirmation from me. It was interesting to see that Altaf just put in the link, the JIRA link.
+So...
+I didn't know that it wasn't necessary to kind of, you know, tell it all of this information, so that's good to know, but...
+The thing I'm expecting then, and what I found when I ran this, was that it really, and granted, I did get up and leave my desk during that time. So I don't know if when it completed one and it was waiting for me to say, yes, I want you to post it. Because.
+The end result was that it only posted the readiness portion and it did not, I saw it creating all these test scenarios, but it didn't post those as a comment. So I don't know why it only did, you know, fulfilled one of those requirements.
+
+Dhanalakshmi Chinnasamy   18:37
+Yeah.
+
+Alice Merrill   18:40
+I guess that's where I'm.
+
+Vira Melnyk   18:40
+I've checked, I've checked your your prompt right now, and I see that you add new new sub-assistant, which is right, but you haven't changed.
+
+Dhanalakshmi Chinnasamy   18:41
+You?
+
+Alice Merrill   18:47
+Mhm.
+Mhm.
+
+Vira Melnyk   18:59
+the main prompt. You have to make orchestrator to orchestrate your sub-assistance. That is the key.
+
+Alice Merrill   19:03
+Hey.
+
+Dhanalakshmi Chinnasamy   19:09
+Yeah.
+
+Alice Merrill   19:13
+Okay, I mean, I thought I had, because we looked at that one, and it showed the two sub-assistants that I wanted it to execute. And I mean, here you can see it's coming up with test scenarios.
+
+Vira Melnyk   19:14
+Because.
+
+Dhanalakshmi Chinnasamy   19:16
+Yeah.
+
+Vira Melnyk   19:23
+Yes.
+
+Alice Merrill   19:29
+S.
+
+Vira Melnyk   19:29
+Right now, you are mostly rely on LLM. If your LLM version would be less advanced, you will not reach even these results.
+But you have to have proper scenario in orchestrator, otherwise it will not work. That's why you're not taking, actually, you not see the testing results in results because your orchestrator.
+Don't know what to do with this results. You still have in your orchestration, as I can see in the prompt, you still have...
+
+Dhanalakshmi Chinnasamy   20:09
+Yeah.
+Okay.
+
+Alice Merrill   20:12
+they did bring it back.
+
+Vira Melnyk   20:15
+Yeah.
+
+Alice Merrill   20:17
+I mean, it's definitely coming up with all of these, right? I mean, that's it. It's doing this.
+
+Vira Melnyk   20:20
+Mhm.
+Yeah, it's doing because it's smart enough, but you still have a trigger in the flow in step three. You have, you can you can open actually in a new tab, I think. Yes, you can open.
+
+Alice Merrill   20:24
+Mhm, mhm.
+While it's doing this, okay.
+
+Vira Melnyk   20:42
+Um...
+Your prompt.
+
+Dhanalakshmi Chinnasamy   20:45
+I.
+
+Vira Melnyk   20:47
+Mhm.
+
+Alice Merrill   20:50
+Okay, so here's the one that I'm using. This is the orchestrator that I'm using for this.
+
+Vira Melnyk   20:52
+Yep.
+Yes, please scroll down.
+And you see, we can see that on the left side, you see one, actually, even 2 assistants with a different name. And in the step 3,
+Uh, opposite prompt your.
+
+Alice Merrill   21:15
+Two and three.
+
+Vira Melnyk   21:18
+You still orchestrate new old assistant sub-assistants.
+
+Alice Merrill   21:20
+Ohh.
+Okay, so this here is preventing that from working, even though it knows up here.
+
+Vira Melnyk   21:24
+You have to make him.
+Yeah.
+From working properly, it works, but we see that it works, but it's supposed to work properly, so...
+
+Alice Merrill   21:38
+Okay.
+So I just need to, I have to update these or because like up here I did update somewhere you had had the names and I had said like it had them listed here under your role, the two assistants and I just changed it to coordinate the identified specialized sub assistants.
+
+Vira Melnyk   21:57
+Yeah.
+
+Alice Merrill   22:02
+because I'm like, well, I'm telling it here which sub-assistant, so it should only be paying attention to those. I didn't think that in the body of these instructions that it would.
+that would override, I guess, what is over here.
+
+Vira Melnyk   22:18
+If you have a choice to give more context or to give less context and you know that you are not give them, give it too much context, choose more context.
+
+Dhanalakshmi Chinnasamy   22:21
+Oh.
+
+Alice Merrill   22:26
+Okay.
+Uh-huh.
+Okay, I guess I was just thinking it would make it more...
+
+Vira Melnyk   22:36
+Not like overloading it, but this is important.
+
+Alice Merrill   22:42
+Reusable.
+Okay.
+
+Vira Melnyk   22:52
+From the your prompt, it's supposed to be clearly understandable.
+
+Alice Merrill   22:56
+Okay, so if I revise this then and rerun it, it should work better. Okay. Okay. I will try that then.
+
+Vira Melnyk   23:00
+Yep.
+And let me give you one more tip of how to handle it. Let me...
+
+Alice Merrill   23:07
+Mhm.
+Dee.
+
+Vira Melnyk   23:15
+share my screen. It will be useful for everyone in just a moment.
+
+Alice Merrill   23:17
+Okay.
+
+Vira Melnyk   23:29
+For example, here is our.
+Our code name, right? You have assistant. OK, mine.
+Let's check this one.
+Okay, I have some previous runs and maybe I'm not very satisfied with it. I can export this conversation, export as JSON.
+Now, in download, download, of course, I have this Jason file.
+I could go, for example, here.
+And.
+Add this assistant.
+Here, and ask the question.
+Isn't do this and that.
+Send it, and you will get the answer.
+That's a way how to troubleshoot such cases, not only with orchestrator, but also with any assistant. And in this JSON, it will see all your system prompts, all your connections, all tools that you are using. So
+I think it will be helpful.
+
+Alice Merrill   25:07
+Yeah, I did get an error at some point during my running and I did ask it what was the cause of the error and it did very clearly reply that basically it was the name of my assistant was too long. It was like 48 characters and the maximum is 46 characters or something. So
+
+Vira Melnyk   25:10
+Mhm.
+
+Alice Merrill   25:27
+I mean, it did help me, you know, work through that error initially. So that was just another good experience that I wanted to share that you reminded me of.
+
+Vira Melnyk   25:35
+Absolutely.
+Yeah, yeah, this way is also correct. Wherever it helps you to troubleshooting, it's good.
+
+Alice Merrill   25:46
+Thank you.
+
+Vira Melnyk   25:47
+Okay.
+Just a moment, stop saying.
+Okay.
+
+Nikita Kumar   25:59
+Thank you so much. That was really cool to see and see, like, we want to make sure we can help you guys troubleshoot. So thanks, Vira. I see another hand up, the lunch, which me, I think you're first.
+That a Lakshmi.
+
+Dhanalakshmi Chinnasamy   26:15
+Yes, Nikita. So the homework, whatever they showed, I have already completed. It worked fine for me. And also, I tried the Robo Orchestrator. I tried to run the Robo agents through CodeMeet. I can share.
+
+Nikita Kumar   26:16
+Okay.
+
+Dhanalakshmi Chinnasamy   26:33
+I'm still trying to fix the permission.
+Sorry, it's taking time.
+
+Nikita Kumar   26:46
+Are you sharing your screen yet or just waiting on the screen share real quick?
+
+Dhanalakshmi Chinnasamy   26:49
+Yeah.
+It's taking time to load. Can you see my screen now?
+
+Nikita Kumar   26:56
+Not yet.
+
+Dhanalakshmi Chinnasamy   27:03
+Yeah, I'm having that issue, so whenever I share the Chrome, and if I try to open the Chrome, it's ticking back. With the Teams, it's loading long. Can you see my screen now?
+
+Alice Merrill   27:20
+It's trying, but it's not there yet. Yep.
+
+Nikita Kumar   27:22
+Yeah.
+
+Dhanalakshmi Chinnasamy   27:35
+Bye, I stopped sharing and try it again. Can you see my my screen now?
+
+Saeyed Shamlou   27:43
+Donna, perhaps we can let Bandana go 1st and then Wall yours. We can see it.
+
+Nikita Kumar   27:47
+Oh, I think I see it.
+
+Dhanalakshmi Chinnasamy   27:48
+Okay.
+
+Divya Ramkumar   27:48
+Ohh, we can see the screen.
+
+Saeyed Shamlou   27:50
+Oh.
+
+Dhanalakshmi Chinnasamy   27:52
+Okay.
+Can you can you see my screen now? This robot is trick.
+
+Divya Ramkumar   28:04
+Yeah, yes.
+
+Nikita Kumar   28:05
+Yep, we can see it.
+
+Dhanalakshmi Chinnasamy   28:07
+Okay. So what I tried, we have created so many agents for test case analyst and the test designer. So I tried the orchestrator to run for the task, to run the agents. Either we can specify it in the order or if you specify in the order in the comments, it will run.
+But currently, I'm having some connection issues. I didn't fix it, but...
+When it's expired, I'll try and I have to provide some confidence access permission to create pages in the confidence page. I will fix that in the next demo, but it's working fine. I can able to run that all the Rover agents through CodeMe.
+Still my screenshot.
+
+Swathy Lokula   29:10
+Are these agents created in the Robo sandbox or are they in Robo production?
+
+Divya Ramkumar   29:11
+Yeah.
+
+Dhanalakshmi Chinnasamy   29:13
+Yeah.
+Yeah, I have created all these row agents in the sandbox.
+
+Swathy Lokula   29:21
+Okay.
+
+Dhanalakshmi Chinnasamy   29:34
+Ettlin.
+And it's adding the Jira commands as what are the ROA agents do. It's running the first the context generator test that will create the project context in case if there is no existing context, then the test is analyst. It's analyst the story and add the comment in the Jira story. But
+For each one completes, we have to provide a yes or no to proceed the next row agent.
+In case if we want to stop, then we can...
+Stop the process, and we can, you know, update based on.
+Other comments?
+
+Saeyed Shamlou   30:25
+Yeah, it's taking too long, Dana. Maybe we can we can stop and just speak to it.
+
+Sam Jayavelan   30:31
+Yeah.
+
+Dhanalakshmi Chinnasamy   30:33
+Okay.
+I'm sorry, I will try again. Maybe Bandana, you can press.
+
+Ashwin Jain   30:50
+Yeah.
+One.
+Or you can just go to the last run, right? The chat. If you go down, you can see the last run. You can use that to show.
+
+Vira Melnyk   30:56
+Yep.
+
+Dhanalakshmi Chinnasamy   30:57
+Yeah.
+No, last one I did not.
+
+Ashwin Jain   31:03
+In the.
+
+Dhanalakshmi Chinnasamy   31:05
+Run it this, I'll try the last week.
+
+Ashwin Jain   31:05
+Okay.
+
+Vira Melnyk   31:06
+Okay.
+It.
+
+Ashwin Jain   31:10
+All right, yeah, sure.
+
+Vira Melnyk   31:10
+If you go down, you will see your previous run. You can see a folder, orchestrator, and if any of them was successful, we can see it.
+
+Dhanalakshmi Chinnasamy   31:24
+No, it's nothing else. OK.
+
+Vira Melnyk   31:27
+Mhm.
+
+Dhanalakshmi Chinnasamy   31:27
+This one, I have some permission issue. This is I just a few minutes ago.
+Mm.
+
+Oleksandr Tsyganok   31:55
+Yeah, I think with current Atlassian setup, they share like limited access to like robot agents from external system. So technically, there is no API where you can call from external system your robot agent. You can achieve it.
+With potentially Jira automation, where you just send in like a request to a Jira system and it triggers a specific like robo agent, but you will not have like full communication with this external system in our cases, CodeMe, where it can.
+Send like a specific like command or like interact with this like agents like directly so you can use some like maybe pre-configured prompt to trigger this agent.
+There is like kind of like agent to agent protocol for such kind of interaction. It's like supported by CodeMI, but it's like limited in ROA. I didn't test it specifically. I know that potentially you can call other agents from Atlassian system, like so ROA technically implements part of this like agent to agent communication where it.
+can call, for example, code me agents, but it doesn't work in like opposite direction. I don't know, like, are they like planning to like enable this feature in nearest feature or not, or they just not enabling it from like some other.
+
+Dhanalakshmi Chinnasamy   33:15
+Mhm.
+
+Oleksandr Tsyganok   33:31
+like internal reasons, but I think technically we can still like build some kind of communication with Jira automation.
+But yeah, ideally, it should be like tested, and yeah, maybe that's a good idea for like another session.
+
+Dhanalakshmi Chinnasamy   33:50
+Yes.
+
+Oleksandr Tsyganok   33:51
+Have this like practical example.
+
+Dhanalakshmi Chinnasamy   33:56
+Yeah.
+Okay, thank you. I'm sorry. I will try to reboot my machine. I will try to connect again and will show you.
+
+Nikita Kumar   34:22
+Thank you so much. And then if we can, if that's still an issue, you can bring it to open hours on Friday. I think Oleg will be on there and the team will be on there to help as well.
+
+Dhanalakshmi Chinnasamy   34:33
+Yeah, no issues to connect and work properly, but now only chatting and permission conference space, but I was able to fix and I was able to create conference pages successfully with the Drogo agents. Yeah.
+
+Nikita Kumar   34:33
+Um...
+The.
+Ness.
+Awesome.
+Great. So I think we've got one more hand up right now. We've got Bandana out here also.
+
+Bandana Sriramka   35:02
+Hey everyone, that's so I have created the same story refinement orchestrator. Let me share my screen.
+I didn't get a chance to further enhance it, but this is the one mostly what Vira had created. And so this is story refinement orchestrator and there are two sub-assistants, story readiness checker and story risk and hidden caps reviewer. So I have added both the sub-assistants and it is working fine. I have also tried it with.
+one of the ORS story that I just published here, as you can see.
+And it's working fine. Once I've given some time, I'll be refining it further and I'll be able to show more on this, but let us just run it and see.
+Or that or the story.
+So, it's working fine. There are no issues, but...
+Oh, I would still like to enhance it.
+There we go.
+It's failing now.
+I was just able to post it here a while ago.
+Yeah, we can check this offline while it's failing now, but yeah, it's working fine.
+That is all I wanted to share that.
+Thank you.
+
+Vira Melnyk   37:19
+Nice, and you can tweak it to adjust to your team needs, because...
+
+Bandana Sriramka   37:23
+Yes, yes.
+
+Vira Melnyk   37:26
+Do not have strict, so strict, not ready, maybe it's ready.
+
+Bandana Sriramka   37:30
+Yeah.
+
+Svetlana Stogni   37:34
+Okay.
+
+Nikita Kumar   37:35
+Thank you so much. That was great.
+
+Bandana Sriramka   37:36
+Thank you.
+
+Nikita Kumar   37:38
+Anybody else have any homework to show us today?
+or anything that worked, didn't work. Yeah. Oh, go ahead, go ahead.
+
+Jatin Bagga   37:44
+So, Nikita, I have sorry.
+
+Nikita Kumar   37:56
+Jonathan, if you're talking, oh, there you go.
+
+Jatin Bagga   37:56
+Uh, Nikita, I just want, sorry, I think we're going at the same time. Go ahead.
+
+Nikita Kumar   38:01
+No, no, if you're on mute, I couldn't hear you, but yeah, please go ahead.
+
+Jatin Bagga   38:06
+I was going to just show something like it didn't work, but I because you said show whatever. So like what I was trying. So, you know, like how I'm trying to work on that other project that I'm not going to name where I need an orchestrator. I was trying to create like some more simplified sort of assistant, like an orchestrator assistant with sub assistants.
+
+Nikita Kumar   38:11
+Mhm.
+
+Jatin Bagga   38:25
+to see what type of outputs I get. I ran into a bunch of issues. I mean, I think I checked the mark for like creating sort of the sub assistant. So I just want to show you. So this is like my one advisor foundational screen based, like my main assistant, which I'm calling an orchestrator here. But like if you go to the configurations, for instance.
+And I'll just show you, just to check the box on the orchestrator, we'll talk about the issues I've been having. That's different. Not personal issues, but the orchestrator issues. We're not going to talk about personal issues, right, Nikita? Okay, that was a joke, bad joke. All right, Nikita, so you can see like what I did there. I just wanted to prove.
+to myself, like, you know, the sub assistant works the way I want it to and it can really, I can create multiple threads and have one sub assistant work against each against the other technically and or complement each other. If you remember, like going back a month and a half, two months ago when Vlad, you and I were talking, so like there was some existing sort of, you know,
+
+Nikita Kumar   39:21
+Mhm.
+
+Jatin Bagga   39:27
+Assistance already like chat bot was there, there's like a JIRA backlog planning assistant, and I just create a very dummy superficial J's JIRA story, like from I think Vira, the one who had given it, just to kind of prove a point. So, at least from a homework standpoint, I was able to create that, but my problem is like I wanted to actually...
+like create a story to see like, okay, if I've uploaded a screenshot, because you can see like I uploaded that user guide, like one advisor user guide. I want it to be scanned and then sort of generate like a bunch of stories just to see, right? And then push it to Robo. I didn't even get to that stage. I kept getting this error, which I think is my fault. It's not this thing. You can see again, I tried it right now, like literally a few seconds ago as well.
+It keeps giving out a pure chat chain object has no attribute name. And I kept looking like, did I miss, like, enter something? Like, am I supposed to write some or enter name here or something? And that's what's causing an issue. Because I do have a name here, but like I couldn't make it interact.
+with me, if that makes sense. So 2 things, a homework, I feel like I did what was asked, but I couldn't get it to work the way I intended it to work and I ran to all these roadblocks. Does that make sense?
+
+Vira Melnyk   40:44
+Yes, this makes sense.
+I actually have to check your assistant in order to...
+Give it thrice.
+
+Jatin Bagga   40:55
+Yeah, and that's okay. I just wanted to show you that, you know, the intent was really, like, if I have an assistant that has certain, like, already foundational resources, resource being like data files or sources, then can I, that helps me build a foundation, right?
+
+Vira Melnyk   40:57
+Mm.
+
+Jatin Bagga   41:14
+And then I can use a sub assistance to run, to generate some additional information, no matter what the assistance is. In this case, I used like 3 different examples, Jira Story Analyzer, actual create a Jira story, and then also the chat, right? Because I thought, oh, it's a good thing because one advisor is a chat.
+So I would like to also interact with the chat to see what would the team member experience be. You know what I mean? Like that whole OneAdvisor products function is that it provides policies and procedures to the team members. So what will be the experience if I can make a sub-assistant actually try to portray that they're, you know, like the persona of a team member?
+If this is sounding gibberish, let me know, because you probably don't know the one advisor product, but that's what sort of the intent was to make the subassistant behave like a team member and kind of understand the team member experience and then sort of try to get some user stories for my Jira backlog.
+
+Vira Melnyk   42:13
+Yeah, and you know what I can see right now? So your user prompt, your, I'm sorry, system prompt is not set up as an orchestrator, is the first of all.
+
+Jatin Bagga   42:18
+Yeah.
+Mhm.
+
+Vira Melnyk   42:29
+So, so I see here, point one and point 2, um, Karen for you can critically review uh file.
+
+Jatin Bagga   42:30
+Oh, okay.
+
+Vira Melnyk   42:39
+And about screenshots, and there is nothing about orchestration.
+
+Jatin Bagga   42:46
+Oh, so...
+
+Vira Melnyk   42:46
+at all. So it doesn't know that it is orchestrator. Maybe it could trigger some sub-assistant only relying on code new functionality, but stop, stop, stop, stop scrolling.
+
+Jatin Bagga   43:04
+Okay.
+
+Vira Melnyk   43:05
+Okay, up a bit up.
+
+Jatin Bagga   43:19
+Mmh.
+
+Vira Melnyk   43:20
+Too short, not enough for.
+For proper orchestration, this is the first issue.
+
+Jatin Bagga   43:31
+Okay.
+
+Vira Melnyk   43:32
+Um.
+Probably let me share as information about how what we should see in a system prompt.
+
+Jatin Bagga   43:45
+No, I have your, I do have you like a story refinement orchestrator that you showed. One second, let me get out of this first.
+
+Vira Melnyk   43:51
+Mhm.
+
+Jatin Bagga   43:55
+We're kind of like basing it off of that, but maybe I missed some step one second.
+
+Vira Melnyk   43:55
+Okay.
+
+Jatin Bagga   44:00
+Ohh, come on!
+One second.
+Okay, now let me try folder.
+Yeah, so I have your assistant. I mean, sorry, your instructions.
+
+Oleksandr Tsyganok   44:16
+Yes.
+Yeah, before before we move forward, can I add like some nodes that I see? Like we also have this issue with example where we added sort a system but didn't change the system prompt. Maybe let me explain like some like analogy from real life. So you might have like an orchestra.
+
+Vira Melnyk   44:22
+Yeah.
+
+Jatin Bagga   44:28
+Yeah.
+Okay.
+
+Oleksandr Tsyganok   44:40
+And usually you have a conductor. So conductor that is like acting as orchestrator usually also have this like musical score for like whole instruments, like full musical score for everybody. And that's a missing point. So when you select in the assistant in the drop down, that means it's this guy's just sitting there with instrument.
+and ready to play something. But you didn't mention about these guys in this like system prompt that is like a kind of this like musical score for conductor that these guys are here and I don't know in act 4 they need to play some specific music. So that's like a core part you need to explain in like very details that.
+your role is this like this orchestrator, conductor, you control in this specific agents that know how to play specific instrument and you need to give this instruction when specific agents should play their role in this whole flow. That's like a key part.
+Because without it, it might work like it's kind of like no, as like Vira mentioned, that internally in the code, we have like this reference tool for this like orchestrator. If you will select like more powerful model, maybe it will work. Another issue that you selected like mini model, and I think it definitely struggles without this full instructions.
+
+Nikita Kumar   45:44
+Okay.
+
+Jatin Bagga   46:06
+Oh, that's helpful, Alexander. Yeah, go ahead.
+
+Nikita Kumar   46:06
+I think it would be...
+Oh, I was also going to say, Vira, I know we've got 15 minutes, but maybe this is a good time to kind of just show orchestrator again, just so people can, everyone can see it. Because I think, Jonathan, you might have missed the session or it is a little complicated because it takes some time to get used to it. But here, maybe this is a good time we can just show like the orchestrator again, like actually what it's doing. So that way you can see it again and for anyone else as well.
+
+Jatin Bagga   46:17
+Yeah.
+Yeah, and and before you go, that's perfect. I think that that helps, but I just want to understand, so with the so you can create sub-assistance.
+Without, I'm sorry.
+Let me put it differently. We have the ability to create sub-assistant, and my understanding was that if you, if you do enter sort of sub-assistant, you're technically converting your assistant into an orchestrator, whereas what Oleksandr you said is that you need to put it specifically just in the instructions, like you need to just state that, hey.
+your role is of an orchestrator, and then that would actually trigger the action. Did I hear that correctly?
+
+Vira Melnyk   47:11
+Uh, let, let me... oh, okay.
+
+Oleksandr Tsyganok   47:11
+Hello.
+
+Jatin Bagga   47:13
+Yeah, go ahead.
+
+Vira Melnyk   47:16
+Let me rephrase: your manager, you are just hiring the team, and you hire team team members, QA, BA, dev, developer, and you are...
+Take, for example, Junior Manager.
+It's sitting, it has all team somewhere. It just knows the addresses, for example, addresses in the team. It's no context in the team, for example, and nothing more.
+This person doesn't know what to do with this team. This person doesn't have any information how to work with them, who is these people. So it only knows that these people exist.
+
+Nikita Kumar   47:52
+I.
+
+Jatin Bagga   48:06
+I see what you're saying. Oh my god, it's so rudimentary like that. Got it. I should have. Yeah, that's very helpful. So basically, I just need to provide a little bit more TLC to it, and then it should work, basically. So I'll probably play with it while you're talking, I think. Thank you.
+
+Vira Melnyk   48:25
+Okay, so let me probably start this way. Probably I will not show, I would like to show you some boring theory, but we needed to, I see from this point, this is a prepared orchestrator.
+A...
+Can you see my screen?
+Okay, nice.
+Mm.
+Okay, this is orchestration prompt structure. What supposed to be is an in orchestration prompt. This is very simplified flow. So you have to, you should have role and task. For example, for example, your manager supposed to know that.
+He is manager and he's supposed to know that he is a manage development team. So then flow, how to process is organized. Who is asking first, who is asking second,
+who is as concerned. Decision, how to collect result and how to process this result and to make proper decision. And then output, it should know which output it should give the user and what's supposed to be next.
+Should we proceed this output somehow, for example, as in our example, to post in Jira or to just read and confirm and...
+like that. So it's something that is supposed to be in our...
+Our orchestration, orchestration. Let me show you on it's actually I see that you Jatin copied. I'm just choose to your name, but now I'm choose to my name and I can see my orchestrator.
+Yeah, so this orchestrator knows that it is orchestrator know about the roles.
+Know about the all flow, what how it's supposed to handle all this assistance and pay attention that it know.
+North.
+Who is the sub-assistance?
+So, it's very important to mention properly with the proper names.
+As we already saw, that the model is smart enough now that it could could could trigger some assistant, but it's still not smart enough now to which assistant was supposed to do what.
+Okay, and then how to handle the result, how to make decision, readiness decision, which is mandatory, status, and anything you would like to add to the next floor. All other steps are less important, is just optional.
+This is about the prompt of orchestrator. And what I would like to show you a bit more, it's orchestration, how to design orchestration. Actually, the principle of design, because also principle of design of orchestration exist.
+Exist, so just a moment, I would like to present.
+Ohh.
+Okay.
+There is, let's say, two main approach. First approach, structured orchestration. That is when...
+Your orchestration know all assistants, coordinates and aggregates all result, but every each assistant has its specialized role. They don't know about each other. They could work independently. So you practically taking
+any assistant and start join it in orchestration. So the main role is on the relay on orchestration and it manage everything. So what is the benefits?
+Simpler, I would say that in a quarter marks, set up because you should not, you don't have to set up the sub-assistance, right? You already have it. So clear roles for everyone, orchestrator is only.
+facilitator and each orchestrator do handle its own role. And it is easier to scale. Obviously, you have to change only the orchestrator.
+Next, next collaborative orchestration.
+This is another approach. This is more like team members. They know about each other. So assistants, cyber assistants also aware about the orchestration and they also aware about each other. And of course, collaboration orchestrator, it also know about each assistant.
+Here is everything the same. Here we could share more context between assistant. So the collaboration between them is richer and better context awareness and we can see more natural team behavior.
+And, as you might guess, we in our example from the previous session, we show I showed you this type of orchestration collaborative, because maybe you remember that we changed the story readiness, we add information about.
+It is a part of orchestration.
+And.
+What I would like also to to highlight, so...
+Whenever approach you choose, always, always set up all roles separately because it's a benefit of orchestration. Each role supposed to be splitted as much as possible. So each assistant supposed to have its own role.
+And orchestration should not be overloaded with data source with tools. So if you can avoid to add data source and tools, data sources and tools to orchestration, it's supposed to only facilitate the old.
+Process, as you may remember, for our orchestration.
+For.
+Orchestration, our orchestration actually had Jira tool.
+In orchestrator, but that what I did only to not over-engineer it because it's a simple it's a simple orchestration with only two sub-assistants that that is why I added this tool to.
+to orchestrator directly. But in ideal world, then you will create more complex solution. Only subsystems supposed to have this tools added.
+So, um...
+Actually, yeah, what I would like to show you extra in the next 5 minutes, so I'm also created for you.
+Um...
+This orchestration decision coordinator, what it is?
+So, as you may remember in previous lessons, I give you 2 prompts to validate if your idea about the orchestration is valid.
+So, and...
+Here, I'll create the orchestration which action to validate your idea.
+I will show you the previous runs.
+So, you put here the idea about about the orchestration, which is supposed to do. I want to analyze a pull request and determine risk level, impacted components, requested required test coverage.
+Should I use it? It triggers one assistant. It is not aware that it is a part of orchestration. You can easily use it separately. So it gives you its response, then
+Triggers.
+Critic.
+idea critic, it start to critique this idea and then it trigger our assistant, FAQ assistant, which can give you information
+If it do, it wouldn't code me and how to do this.
+So.
+And it will give you answer, final decision. Should you go with this idea or not?
+For example, let me try with some.
+Worse ideas, one of the oops.
+Um...
+Just a moment, what's happened?
+
+Nikita Kumar   59:17
+Here, I think we only have two minutes left, so yeah.
+
+Vira Melnyk   59:18
+Mhm.
+Yeah, yeah, so OK, I'm stop. I will stop, but please, you can go to this training, our training.
+training project and you could play with this orchestrator and test your ideas. And this is an example of orchestrator as it is not aware, whereas sub assistance is totally not aware about the orchestration.
+You can check it, so that's it from my side if we don't have any time.
+
+Nikita Kumar   1:00:00
+Thank you so much. Yeah, we appreciate that a lot. We will also have open hours on Fridays, so if there's anything that you guys still need help with, even if it's something that's not working, we'll be able to help assist on Friday as well. So today's session, we don't have any homework, but going into Thursday's session, we will have a new topic and some homework, and I believe Svetlana already added that.
+in our chat as well for the agenda coming up for Thursday. Please let us know if you guys have any questions. Feel free to ping us and we're happy to help.
+Thanks, everyone.
+
+Jatin Bagga   1:00:32
+Thank you.
+
+Svetlana Stogni   1:00:33
+Thank you. Bye.
+
+Iryna Pashko   1:00:36
+Okay.
+
+Vira Melnyk   1:00:36
+Thank you.
+
+ stopped transcription

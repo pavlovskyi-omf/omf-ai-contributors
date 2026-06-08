@@ -1,0 +1,745 @@
+AI Enablement Cross-Functional Lighthouse PDLC Session-20260430_135924UTC-Meeting Recording
+April 30, 2026, 1:59PM
+57m 19s
+
+Eugene Semenyuk   0:05
+Yeah.
+Do do do.
+I.
+The.
+
+Nikita Kumar   0:18
+Hello.
+
+Eugene Semenyuk   0:20
+Hello, good morning.
+
+Nikita Kumar   0:22
+Good morning. Giving everyone a few minutes to hop in here.
+Hopefully, we get some good attendance. We've got a good topic today.
+
+Eugene Semenyuk   0:47
+Yeah.
+Yeah.
+Bing.
+
+Nikita Kumar   1:08
+We'll give everyone like 2 minutes and then we can get started.
+
+Eugene Semenyuk   1:13
+Mmh.
+Yeah.
+Yeah.
+
+Oleksandr Pavlovskyi   1:51
+Morning, guys.
+
+Iryna Pashko   1:51
+Yeah.
+
+Nikita Kumar   1:54
+Just giving everyone a minute to hop in.
+
+Eugene Semenyuk   1:54
+Good morning.
+
+Iryna Pashko   1:55
+Still.
+
+Angela Cureton   1:57
+Morning.
+
+Nikita Kumar   2:06
+I think maybe we can get started. This is being recorded as well. So from our last conversation on Tuesday, we reviewed over use cases that could be potentially cross-functional. And what we kind of received were still a little bit siloed to your own team and to your own function. So we were hoping to get some more use cases today from the team that might be more cross-functional, like
+that are hitting digital, dev and QA, even if you don't have someone who's like a digital role, but like a piece of digital that could potentially help you. So if you guys have anything else, we'd love to hear from you. I see a hand raised. I don't know where it went though.
+Oh, it went down. So we'd love to kind of hear from the team, especially just like figuring out a problem that is going, that's like a pain point for you that can help you kind of across the board and help the other teams across the board and combine it in a full workflow. So we'd kind of love to hear from you. We gave people more time for homework. So if you have anything else to add or additional use cases that are going to be cross-functional.
+Please raise your hand and we can walk through them.
+Or if you don't have anything right now, we also have a presentation on what cross-functional actually looks like. So you can get some examples of how we're doing cross-functional, and maybe that'll kind of help inspire what cross-functional use cases could look like for your team. So maybe, Eugene, we start off with that, and you can go through what cross-functional looks like for the teams, and then we can go from there and get some use cases from everybody.
+or just problem and pain points that are happening for you and we can figure out how to incorporate them into cross-functional use cases for across the team.
+
+Eugene Semenyuk   3:51
+Yeah, sure. And I hope it will help you a bit to warm up. Yeah, and maybe come up with some great ideas. So, okay.
+
+Joshua Smith   4:02
+I have one. If it's, I don't know if it's been discussed yet or not, but for me, requirements hardening before we start dev is 1. So, I mean, I guess.
+
+Eugene Semenyuk   4:04
+Ohh.
+
+Joshua Smith   4:17
+It's cross-functional in my mind, but keep me honest if you don't think it is. But even before the dev and QA starts, the cross-functional element is in the requirements hardening, identify unclear requirements, any edge cases that might come up. I mean, this happens all the time, right? Where a product can write what they think are clear requirements, but then inevitably edge cases come up.
+
+Eugene Semenyuk   4:21
+And.
+
+Svetlana Stogni   4:33
+Yeah.
+
+Nikita Kumar   4:35
+Yeah.
+
+Joshua Smith   4:36
+because we can't think of everything. Then even with dev, there's different assumptions that are usually made with dependencies that might come up from a dev perspective that we didn't think about. So obviously, identifying those up front and hardening the requirements could be very valuable.
+
+Nikita Kumar   4:40
+Yep.
+
+Eugene Semenyuk   4:40
+I.
+
+Nikita Kumar   4:41
+Yeah.
+Yeah, absolutely. And that's actually one of the ones Eugene is going to go over as well, because that was our end-to-end use case. We did have requirements hardening as like the part that's coming from like digital, right? So you have to make sure before you guys even get it that the requirements are in tip-top shape and you can start your work without having to go back and forth multiple times. So that's a really great example for cross-functional because, you know, those can then eventually help get
+
+Eugene Semenyuk   4:59
+Yeah.
+
+Nikita Kumar   5:18
+into like QA regression test cases too. If the requirements are good, you're doing, you have it right before you start dev. And those can also then be used for QA work as well. But that's a really, really great one and we have a note for that.
+
+Joshua Smith   5:28
+Yeh.
+Good. And that's what I was thinking as well, is that so much can flow from this sort of like master case. There's so many downstream benefits. So I'm glad to hear it. That sounds good. I'm on board.
+
+Nikita Kumar   5:34
+Yes.
+
+Eugene Semenyuk   5:35
+Mhm.
+
+Nikita Kumar   5:39
+Yeah, that's literally what Eugene is about to show you right now, so...
+
+Eugene Semenyuk   5:43
+Yeah.
+
+Joshua Smith   5:43
+Good.
+
+Eugene Semenyuk   5:45
+Yeah, awesome. OK, let me share my screen.
+Extreme this one.
+the reason why we are having this conversation. So some of you have already created really good AI scenarios. We have examples around user story analysis, task design, engineering, pull request review, documentation, release notes, onboarding, and many, many other.
+great use cases. This is exactly the right starting point. And most of these ideas naturally start as a functional use case. QA has a QA problem, engineering has an engineering problem, digital has requirements or customer experience problem. And today the goal is to help
+more people take those functional ideas and identify where they could become cross-functional. And I want to make this session interactive. So I'll ask a few questions as we go. So please don't be shy. Feel free to answer in the chat or unmute yourself.
+There are no wrong answers here. The more examples we hear from you, the easier it will be to make this practical for everyone. So let's start with a quick one. So when you hear cross-functional use case, what
+comes to mind. So one word or maybe one short phrase. So what do you think?
+Yeah, let's warm up a bit.
+So, please...
+Unmute yourself, or...
+Or you can write.
+
+Sukalya Rajendran   7:52
+It involves interaction with many teams.
+
+Eugene Semenyuk   7:56
+Yeah, many.
+Many teams, yeah, and what else can be in cross-functional?
+
+Alice Merrill   8:07
+It can be something that helps multiple areas of a team.
+
+Eugene Semenyuk   8:08
+Yeah, something that...
+Yeah, yeah, within one team, but multiple functions. Yeah, that's absolutely right, Alice. Thanks. Something that connects different teams from different areas. Yeah, and different areas inside one team.
+So yeah, this is exactly the thing that we'd like to discuss today. So yeah, and I'll give a simple definition so we can use. Transfunctional means the AI outputs helps more than one function make a better decision, better deliver decision.
+So for this framework, we are focusing on 3 lenses, digital engineering and QA. Digital brings business intent, customer journey, acceptance criteria and so on. Engineering brings implementation, architecture, dependencies and technical risk. QA brings
+testability, coverage, regression, and quality risk. So the key phrase here is multiple perspectives plus a shared decision plus better handoff. And
+And here, there are two main ways to create cross-functional value. Like we here, like we see on the slide. The first way is connect existing functional use cases into PDLC flow. So we already have some requirements hardening use cases.
+implementation plan, test case creation. So yeah, for example, we may have already.
+have separated use cases for such functions and activities. So each one is useful by itself, but if we connect them in so some flow, so we get a stronger flow. Requirements hardening, implementation plan, test case creation.
+That gave us smoother handoff and less rework, so...
+Yeah, a common example for this part is story analyser. So it may start as a QA or product tool, but engineering can use the same output to create implementation subtasks and QA use it to create
+Test scenarios, yeah, and the 2nd way is to shape one.
+one use case with multiple perspectives. Yeah, and Q and the requirements hardening is a good example. Yeah, as yeah, as we mentioned before. So yeah, it can connect different perspectives, like instead of only asking is requirements complete.
+We can ask from digital point, is the intent clear? From engineering, is it feasible to implement? And from QA,
+Is it testable? So that turns one functional use case into one shared readiness decision. Yeah, and moving forward, one mistake is thinking that cross-functional has to be big and
+end to end. So it does not in every case. So there are three levels we defined. Simple means one artifact, but multiple perspectives. Yeah, for example, this
+use case regarding requirements readiness, requirements hardening, Jira user story review, and similar use cases where we can connect three point of views. So, and they can be reviewed by digital engineering and QA and provide some
+consolidated artifact and output. So medium use case means multiple artifacts, one.
+workflow step. For example, pull request review using the pull request divs, linked user stories, and task context. So, and the complex use case, it connects multiple
+multiple PDLC steps. And it can be end-to-end, like the first use case that we demonstrated on the first session. So like from...
+requirements hardening to implementation, testing, and so on. So, yeah.
+Yeah, we can.
+Ohh...
+Yeah, that's empty. Do you have any questions regarding complexity?
+Or, or types of the use cases.
+I guess it should be...
+Simple, but yeah, it should provide.
+a clear picture on what is cross-functional use case. So it can be a flow of some functional use cases, or it can be shaping for some existing functional use case, providing different point of use for this.
+For this use case, like for requirements hardening.
+Okay, if no questions, let's proceed.
+So, the best place to find cross-function opportunities is at PDLC handoffs. So, look at the flow, like idea requirement, development, pull request, review, QA validation, release, and production. So, these handoffs are very, and yeah, these handoffs are...
+where context moves from a function, from one function to another function. And what is...
+And that's is where problems usually appear.
+So...
+Yeah, where do you think the most rework or late clarification requirements, pull request review, QA validation, release, or production? So what do you think?
+Any any thoughts?
+Don't be shy.
+Unmute yourself or just type in the chat.
+
+Alice Merrill   15:26
+I don't think I understood the question. Can you say it again?
+
+Eugene Semenyuk   15:32
+Yeah, think about where do you usually see the most rework or late clarification, like on requirement stage, priority review, QA validation, release, or production?
+
+Oleksandr Pavlovskyi   15:47
+In the perspective of your team, yeah?
+
+Eugene Semenyuk   15:50
+Yeah, yeah.
+
+Oleksandr Pavlovskyi   15:50
+Yeah.
+
+Joshua Smith   15:54
+For me, it's fairly.
+
+Oleksandr Pavlovskyi   15:54
+Yeah, guys, once again.
+Yeah, yeah, yeah, please.
+
+Joshua Smith   15:57
+It's.
+
+Eugene Semenyuk   16:04
+Mm-hmm.
+Mhm.
+
+Joshua Smith   16:17
+Perspective.
+
+Eugene Semenyuk   16:19
+Yeah, so it should not be like some some pattern for the whole organization. Yeah, of course, it can be team dependent. Yeah, and this is this is a great point to to understand, like...
+So, yeah, instead of asking, so what AI idea can we invent, we can ask, what is our pain point and where do we lose context in the PDLC? So, and that is where strong cross-functional use case usually live.
+And moving forward to some existing examples that we have. So this slide is meant to show that we already have the building blocks. So yeah, we collected already implemented use cases or some use cases that we have in
+in backlog. So yeah, and collected a few patterns. So the first pattern is requirements to plan to test. In the backlog, we already have story analyzers, definition of ready, definition of downloadation, implementation plans as subtasks.
+and test design. So these can be connected into a cross-functional flow from requirements, readiness gaps, implementation subtasks, recommended tests, and so on. So this is the first pattern where we can
+use some cross-functional flows. So the second pattern is pull request review plus task recommendation. So we already have code review, PR checklist, JIRA update, PR analysis, and recommended task for pull requests. So that can become a cross-functional
+PR review, like engineering risk, digital or project product impact, and the QA regression scope. And the third pattern is release readiness. So we already have release notes, demo scripts, Jira-based documentation, release version linking, and deployment validation.
+So these can become one release readiness view.
+And out of these three patterns, requirements to test, pull request review, or release readiness, which one feels like the faster, quick win for you?
+Or maybe these patterns can inspire you to something, to something else. So do you have some thoughts?
+
+Jason Daggs   19:13
+My first thought is I'd like to steal this slide from you so I can present it to my team this afternoon, if that's all right. But
+
+Eugene Semenyuk   19:14
+Yeah
+Mhm.
+
+Jason Daggs   19:24
+Yes, this is I think this is a very good way to continue soliciting for use cases or to use this to solicit for use cases on my on my Guardians team. And so I think that would be very helpful to kind of give them the kind of give them some inspiration as far as maybe what mindset to get into to think about what can
+
+Eugene Semenyuk   19:41
+Mm-hmm.
+
+Jason Daggs   19:44
+and can't be done.
+
+Eugene Semenyuk   19:48
+Mm-hmm.
+Yeah, I agree. This is...
+This is a good idea.
+
+Jason Daggs   19:54
+Mhm.
+
+Eugene Semenyuk   19:58
+So, any other thoughts?
+So, my default recommendation would be...
+Yeah, the first, the first two patterns, like requirements.
+Yeah, connecting some existing existing use cases into one flow, because yeah, you guys implemented really big amount of functional use cases. Maybe some of them can be easily connected with the
+With other use cases, yeah, and bring some continuous continuous flow, yeah, and yeah, the simple and the simple examples and quick wins from from our perspective would be requirements readiness or pull request reviews.
+So they are narrow enough to pilot, but available enough for multiple teams. So yeah, and the point is we do not need to start from scratch. We can connect or reshape what already exists.
+Yeah, and uh...
+Now, let's move into the identification framework.
+So there are two lenses. So the first is the individual lens. This is what any one person can do when looking at a functional use case. The second is team lens. So this is what digital engineering and QA do together.
+to validate and prioritize. So which one do you think?
+is usually either sporting the idea individually or validating needs as a team. So what do you think, guys?
+
+Jurijs Markelovs   22:07
+Brainstorming in the team, as always.
+The option.
+
+Eugene Semenyuk   22:12
+Mhm.
+Yeah, this is...
+Yeah, from my perspective, this is the most valuable one. Yeah, because I would say individual sporting is easier. Yeah, but team validation is more important because cross-functional use cases need shared ownership.
+So, yeah, individual sporting give us candidates, but team validation turns them into some some pilots, yeah, and...
+When you look at any functional use case, ask 5 questions. So the first one, who consumes the output? The second, AZ and handoff. The third one, what is found too late?
+Fourth, what artifacts are needed? And the last but not least, whose perspective is missing?
+So yeah, let's use a simple example, like pull request review. Which of these questions?
+would point beyond engineering.
+What do you think?
+Yeah, initially it was like purely, purely engineering use case. Yeah, but we can think from other point of views.
+Any ideas?
+
+Jason Daggs   23:56
+So this is, so what you're saying, and correct me if I'm wrong, is that you're looking, this is to provide questions you ask.
+
+Eugene Semenyuk   24:00
+Mm-hmm.
+
+Jason Daggs   24:05
+To see if a functional business case.
+
+Eugene Semenyuk   24:06
+Mhm.
+Mhm.
+
+Jason Daggs   24:10
+Is is cross a team, and by that you mean...
+like the business analyst to development to QA, kind of that kind of cross-functional.
+Situation, is that what I'm hearing?
+
+Eugene Semenyuk   24:31
+Yeah, so these questions can help you to
+to shape like existing functional use case with other perspectives like digital, QA and yeah, and other things. So yeah, initially pull request review, this is like engineering use case. Yeah, but yeah, let's.
+
+Jason Daggs   24:46
+Yeah.
+
+Eugene Semenyuk   25:00
+So if we ask these questions for this use case, I think we can find some...
+Some interesting answers. So what do what do you think?
+So I would start with who consumes the output and whose perspective is missing. So a pull request is stronger when it does not only identify code risks, but also explains product impact and the test or
+QA regression scope. Yeah, for example, a functional pull request review may answer is the code correct. A cross-functional pull request review can answer from different point of views, like from engineering is.
+the code sounds, is the code sound and maintainable? Digital, from digital point, what customer behavior or business rule may change? From QA, what tests should be added or rerun?
+So, a practical rule: if two or more answers point beyond one function, treated as a cross-functional candidate.
+So yeah, and...
+Yeah, these questions really help.
+Uh, yeah, to identify such such candidates like pull request review requirements hardening, yeah, because...
+Uh, yeah, they, they, they bring a lot of value if they, if they become cross-functional.
+Okay, let's move on.
+Once we spot a candidate, we can wear it in five steps. Start with current use case, map upstream and downstream, add the missing digital engineering and QA lenses. If applicable, define the shared decision.
+And then name the smallest, but...
+The available pilot.
+And yeah, let's think about requirements hardening. So what shared decision should it support?
+What do you think?
+
+Alfredo Achecar   27:53
+But, Eugene, can you repeat that question?
+
+Eugene Semenyuk   27:56
+Yeah, the question is, yeah, we take requirements, hardening use case, and what shared decision should this use case support?
+
+Alfredo Achecar   28:12
+Okay, but you mean in regards to like aligning on like a comprehensive set of use cases, edge cases?
+
+Eugene Semenyuk   28:20
+Yeah.
+Yeah, the shared decision.
+Yeah, I would use. So is this story ready?
+to build. So that is simple and actionable. So that decision matters because it prevents the use case from becoming just content generation. So it makes a decision support.
+Yeah, thanks. Thanks, Alfredo. Let's move on.
+So, we were moving from individual to team lens, so...
+The team lens is a lightweight workshop. Digital engineering and QA each brings two or three or more current functional use cases. Then the team aligns or shared pain points.
+maps use cases to the PDLC flow, finds collision points, score candidates, and defines one or two pilots. So yeah, if you run this workshop with your team, so what
+Would be.
+The hardest part for you, bringing these cases, agreeing on shared pain, or choosing the pilot, or...
+or maybe like connect everyone together. So what do you think from your perspective, for your particular team?
+What would be the hardest part?
+
+Alfredo Achecar   30:11
+I think.
+I think the challenging part here, and maybe what is perhaps what we are experiencing now also is like, um...
+Like.
+Teasing the brain to come up with potential pain points, because probably a lot of us, you know, are experiencing these pain points on a daily basis, so we're, you know, we are sort of tuned out out of them.
+
+Eugene Semenyuk   30:26
+Okay.
+I.
+Mm-hmm.
+Yeah.
+I see this is a real challenge.
+So, any any other thoughts?
+So, what would be challenging for your teams?
+So, bring in use cases, agreeing on shared pain points.
+Choosing the pilot.
+Or, or maybe something else.
+
+Alfredo Achecar   31:08
+It.
+Eugene, I think.
+But probably part of the reason, and I'm still speaking for myself, part of the reason why I'm getting a bit caught up here, I think I very much understand what you're all trying to share here, and this is sort of very specific to what you'd like to product managers, engineers, and QA.
+
+Eugene Semenyuk   31:25
+Mhm.
+
+Alfredo Achecar   31:32
+But, like, when we when I think of cross-functional, I usually think of teams beyond the teams that I work with, so, and in the case of OMF, like that's marketing, legal, security, copy teams that are actually outside of outside of our immediate realm, and there's I see significantly more the pain points.
+
+Eugene Semenyuk   31:33
+No.
+
+Alfredo Achecar   31:52
+Let's say that the pain points there are more apparent than perhaps the pain points within the within the team.
+So not yet, but I think this is still very, very valid. I just, I think I'm sort of trying to like put out there where my mind is going with the cross-functional pain points.
+
+Eugene Semenyuk   32:01
+Mm-hmm.
+Uh-huh.
+So, yeah, this is like one more, one more, one more perspective of cross-function, yeah, but here we we'd like to concentrate on.
+Like, yeah, starting from one team collaboration. Like, yeah, in the majority of teams, we have different functions. Yeah, and one of our goals, engage the people from different functions, but inside one team,
+
+Alfredo Achecar   32:28
+Mm.
+
+Eugene Semenyuk   32:44
+to collaborate and come up with some shared use cases for the team. So the next step can be cross-team collaboration. So where some use cases can be shared,
+or aligned with other teams. So yeah, but this is quite next step, I would say.
+So, uh, Patrick.
+
+Patrick Behnke   33:17
+Yeah, so I have a question in terms of...
+
+Eugene Semenyuk   33:17
+Would you like it?
+
+Patrick Behnke   33:23
+One of the reasons why we haven't made very many use cases from our team is a lot of our stuff, we communicate really well with our partners. We go through and do all sorts of things like in-person deployments, where the devs and us do our deployments at the same time to make sure that there's no confusion, make sure it gets
+Deployed correctly, and.
+It feels like we're trying to put AI into a place where it would probably cause more confusion.
+
+Eugene Semenyuk   33:58
+Mmh.
+
+Patrick Behnke   33:58
+because then the AI, if you put the AI early on in the process, that could potentially go through and make.
+Assumptions.
+Inside the mix.
+
+Eugene Semenyuk   34:11
+Yeah.
+
+Patrick Behnke   34:12
+that end up becoming major issues on later.
+So, that, that's why I'm trying to find it, trying to find issues to go through and tackle it with, but I kind of feel like we're putting the tool before the problem, if you know what I mean. We're trying to find places.
+
+Eugene Semenyuk   34:17
+Yeah.
+Yeah.
+Absolutely agree, we we shouldn't we shouldn't use AI for sake of AI, so yeah, it should it should solve solve problems.
+Yeah, so solve our pain points, so yeah, if if if it cannot solve the problem.
+
+Patrick Behnke   34:47
+Right.
+So, if we can't find these cases.
+To put on the board, then.
+What do we do?
+Because aren't we graded on these or at least we turned up to upper management?
+
+Eugene Semenyuk   35:05
+Could you please repeat your question? I guess I didn't get the first part.
+
+Patrick Behnke   35:09
+Yeah, so.
+These use cases and such get reported up to upper management and the lack of use cases also gets put up to upper management. If we don't have use cases because we're not going to shove AI into stuff, does that mean we get penalized?
+
+Eugene Semenyuk   35:26
+Mhm.
+Thank you.
+Ohh.
+
+Nikita Kumar   35:30
+That would be on the leadership to answer because we don't manage that part of it.
+
+Eugene Semenyuk   35:33
+Mhm.
+
+Filippo Morelli   35:33
+I, I don't, I don't let me try and answer that.
+
+Patrick Behnke   35:35
+Okay.
+Yeah, I'm not like judging or anything or trying to push any ideas. I'm just very curious as to, yeah.
+
+Filippo Morelli   35:41
+Yeah, yeah, you're asking a question. I, I, I think...
+Yeah, I I get your question.
+This technology gives, and this happens every once in a while, this technology gives us a great opportunity.
+To.
+Examine.
+things are the way they are because they got that way. In other words, the ways we do things with the things that we have. And
+A big reason why the first part of this exercise with workshops has had experimentation as part of it has been so that we can look at the work we're doing, we can look at the work products and things that we want to accomplish, and we can go through the experience of reimagining how we might be able to use
+use these tools to do things in a different and better way and alleviate certain work that we wouldn't need to do because we can do it this way to allow us to then be able to do other work. So
+The negative way of looking at it is shoving AI into something. The positive way to look at it is to actually explore the work you've always assumed the way you've done it and look for opportunities to do it in new and better ways. That's really the point of the that's really the point of the exercise and the way that
+That it should be embraced.
+I don't know if that helps.
+
+Patrick Behnke   37:29
+I kind of, yeah. It's more of an experimentation thing than an actual, like, I, yeah.
+
+Eugene Semenyuk   37:31
+Yeah.
+
+Filippo Morelli   37:36
+Well, yeah, I mean, if I always, if I always dug holes with shovels and I was really good at it, and at some point this machine comes along with a motor attached to it, right? It's a different way. I think it just doesn't change the way the hole gets dug because it changes a bunch of stuff in terms of
+how we will go about solving the problem that we have and so on. And that's, there's a lot of opportunity with the AI capabilities. And what we're looking for, you know, on the engineering floor is that we're exploring and looking and finding new ways of doing things that are better with that tooling. And so I think one of the things you want to do is take a look at the things that you're doing and
+you know, look for the opportunity to leverage AI tooling. And in terms of the cross-functional work, it's really that, you know, one of the things that sometimes we see is, you know, that work kind of gets done in isolation. And so, you know, sometimes it's done very collaboratively, but
+You know, with the cross-functional work, we start to realize that, you know, the ability to pull certain things left earlier in the work cycle, to be able to use them to form them. I mean, at the beginning, we talked about, you know, requirements hardening was the term that was being used, which is like, you know, you just can't write requirements in free spaces. Some, you know, ideally,
+
+Eugene Semenyuk   38:56
+Yeah.
+
+Filippo Morelli   38:59
+You know, what you really want to know is, is it buildable? Is it testable? Right? And those kinds of things. And that's a good cross-functional example. And I think that that's the spirit of the use cases that are being talked about here is how do we look at some of the work that we're doing and how do we look for those opportunities? And I think that's the spirit that
+
+Eugene Semenyuk   39:15
+Yeah.
+
+Filippo Morelli   39:18
+kind of you want to come at it with.
+
+Patrick Behnke   39:20
+Okay. Yeah. I was just, yeah, I've been.
+
+Filippo Morelli   39:22
+I hope that.
+
+Patrick Behnke   39:26
+Not necessarily punished, but I've been told multiple times that I'm not doing enough and participating enough with AI stuff, even though I've been looking and making AI solutions for things and whatnot.
+
+Eugene Semenyuk   39:46
+Okay.
+
+Patrick Behnke   39:47
+Thank you.
+
+Eugene Semenyuk   39:48
+Yeah, well, let's let's let's move on, yeah, regarding regarding this team workshop, so...
+Yeah, from my perspective, one of the main challenge is choosing the pilot. So teams often have many ideas, many use cases, many pain points. So
+the scoring step is important for this part to identify like what what we can pilot as a team. So yeah, and the workshop output should be practical, like a short list of candidates and one or two quick win pilots. So not a huge.
+strategy document. Yeah, and one more.
+slide regarding collision. So this is probably the most important concept, like collision point. A collision point is where multiple functions care about the same artifact or decisions. So but they ask
+different questions, like for requirements hardening, digital asks isn't unclear. Engineering asks, is scope feasible? QA asks, is this scope testable? Sure. So shared decision, is this story ready?
+to build. For pull request review, engineering ask is code sound. Digital ask what behavior change. QA asks what tests are needed. So share decision is this PR ready to merge and test. Yeah, and if multiple functions ask
+useful questions at the same PDLC step, that is a cross-functional opportunity.
+Yeah, then let's bring this together. So, a cross-functional use case is usually one or two things. First, a connected flow across the PDLC, like we mentioned in the beginning, requirements hardening to implementation plan to test case generation and so on. The second one,
+Use case expanded with multiple perspectives like requirements hardening, reviewed by digital engineering and QA and so on.
+So yeah, the fastest path is functional use case, shared workflow, collision point, get some quick win, and then scale. That is the pattern we want teams to repeat. Yeah, and
+I'll close with one question for everyone to take back. So do not only ask, can AI help my function? But ask where can AI help us to make a better decision together? So that's shift.
+is what turns functional ideas into cross-functional opportunities. Yeah, and if there is one practical next step, it is this. Pick one existing functional use case, map who provides the input and consumes the output.
+identify the handoff, and define the shared decision. So that gives you a real candidate to bring into team's decision. So that's it from my side for today. Do you have any questions, any new ideas?
+regarding these cross-functional use cases.
+I hope it should help you to...
+To make a clear picture.
+Of cross-functional idea.
+And maybe it will help you to come up with some good ideas.
+
+Nikita Kumar   44:15
+Thanks, Eugene. Yeah, so based off of this, this is kind of what we're thinking for cross-functional use cases, where it, like, as Eugene just went through the whole step of what cross-functional actually means. We do have a call with our champions after, so maybe it's a, it probably will take some time to digest some of this information.
+Eugene, I think we can share this deck as well. But I think what we can do in our champions call coming up next, we work with the AI champions in each of your teams because they are already assigned to kind of come up with, you know, what are some of their pain points that they're dealing with and how we can help turn those into more cross-functional use phase cases for them to help.
+
+Eugene Semenyuk   44:36
+Mhm.
+
+Nikita Kumar   44:53
+align across the team in our next conversation with them as well. But in the meantime, I think we can share this with you guys as well, and you guys can look at what might work for you. Like, you know, requirements targeting is such a big one. And if that's a use case that everyone is kind of aligned on, that is something we can align for our next few sessions where we can teach you how to build a requirements targeting agent.
+
+Eugene Semenyuk   44:57
+The.
+
+Nikita Kumar   45:15
+And the goal for these next two sessions, it's 40-20 time-wise, being like 20 minutes of us doing like a demo or showing you guys how to work with it and 40 minutes of you guys doing hands-on work and actually building these for your team. So that way, you know, the requirements are aligned to what your team is specifically looking for, because each team is going to have a different requirement hardening.
+like requirement in general. So it just depends on what each team is specifically looking for. But the goal would be then to like help actually build this out and any other use cases that come up from simple to complex to make it easier for you guys. I see a hand up.
+
+Jason Daggs   45:41
+Yeah.
+Is there is there already some example requirements hardening workflow somewhere or some documentation that might for general guidelines that we could post?
+
+Nikita Kumar   46:00
+Yes.
+Yes, actually I think we have the first, the first demo that we did was end to end with requirements hardening. So we do have the link for that we can share. Someone from our team can share that with the deck as well. So that way you guys can join in and take a look at that. But it does have like preliminary prompt I think we had put in there as well. And you guys can tweak it. But it's also already an agent within CodeMe.
+
+Jason Daggs   46:13
+Okay.
+Right.
+
+Nikita Kumar   46:25
+So if you ever need to clone it and tweak it for your requirements, you can do that as well.
+
+Jason Daggs   46:29
+Great, great. Awesome. Awesome. Thank you.
+
+Nikita Kumar   46:31
+Yeah.
+For sure. Sorry, I see your hand.
+
+Heath Fest   46:37
+Hi, I feel like, and someone please disagree with me, disagree with me if you don't feel like this is correct, but I feel like requirements hardening isn't the beginning of the process. To me, the beginning of the process would be system and
+process, context, and documentation. I feel like a lot of times we just, and I've talked about documentation just the other day, right? I feel like a lot of times.
+We as an organization feel like everything is documented. And that's just not the case. And the documentation that we do have is scattered across JIRA or shared folders or in.
+Confluence, SharePoint, emails.
+And...
+We don't have.
+I don't think that our processes are documented in order for us to...
+Look at them and define as a group what our requirements are to help the business going forward, so...
+That's just my talk.
+
+Jason Daggs   47:56
+Yeah, I, if I may respond to that, Heath, you bring up excellent, excellent point, and that's something that I've looked into, and...
+Just maybe taking a page from spec-driven development, which is something I've been researching A lot. What I'm seeing is that part of that process of driving spec-driven development is creating something called a constitution. And this constitution is really just one or more files.
+that do exactly what you're saying, describe those processes, describe the system context, and add additional rules. And these are and and so these are these are things that are part of the prompt for every action.
+that is performed on the code base, right? And so you always have these instructions in the background informing your agent what to do next or how to do it next. So, you know, maybe that's something that might be helpful if
+If I can, you know, get around to writing it up and putting at a use case, I don't know, but I'd like to hear others' opinions on how they go about doing that.
+
+Heath Fest   49:13
+Yep.
+
+Jason Daggs   49:18
+Thank you.
+
+Heath Fest   49:18
+I completely agree. The demo that I gave in the earlier meetings that we had was along the exact same lines. The name that I came up with it was System Contact Hub, but it definitely included information just like what you were talking about.
+about which is a constitution spectrum in development. Exactly. I feel like the entire organization would benefit.
+
+Jason Daggs   49:41
+Yeah.
+
+Heath Fest   49:49
+In general, plus adding on top of documentation like that with AI, that would expand the...
+functionality and productivity of everyone.
+
+Jason Daggs   50:02
+Right.
+Right, yeah. I mean, part of the process of doing that is to in fact tell AI, hey, build me a constitution that contains all this information and just let it ask you questions and then just answer them and let it fill in the gaps and edit and repeat, you know. So it's a living document that changes as you're
+code base changes. Yeah, I think that's, yeah, I hope we maybe talk more in the future about different techniques along those lines that can solve the problems that you're describing.
+
+Heath Fest   50:32
+Yeah, I, I, but the main thing is, is that...
+We as a whole, the whole organization has to agree on what the...
+the structure of that constitution is, right? Because if we all have different structures, then it's not gonna, it's not gonna be the same, right? And so.
+
+Jason Daggs   50:47
+That's right, yeah.
+Yeah, and I don't know if maybe that's something that has to be decided on a project to project basis. Like we might have for CAPS, for instance, we might just have a CAPS specific constitution that details like the framework that we're using and any rules that our developers have that we want to enforce, for example. But yes,
+
+Heath Fest   51:03
+Right.
+Okay.
+
+Jason Daggs   51:13
+Also, having a business-wide kind of background context, I think, yes, would be very, very helpful, especially for new developers who may not be as familiar with the business as you are.
+
+Heath Fest   51:14
+True.
+Right.
+Absolutely.
+Yeah, if I can't explain to you how a process works, then how is AI supposed to understand how it works and how to test it, what the edge cases are, how this process connects to another process. So if I make changes, how are those going to waterfall into someone else's process?
+
+Jason Daggs   51:30
+Mhm.
+
+Heath Fest   51:48
+It's not possible. It all has to start with documentation.
+
+Jason Daggs   51:49
+Yeah, right. Yeah, that system level thinking is still not something that AIs are able to really do yet. So luckily, that's the case. We'll see how long that lasts, though.
+
+Heath Fest   52:02
+Yeah.
+Yeah, thank you.
+
+Nikita Kumar   52:04
+Yeah, and I feel like that's definitely going to be a bit larger of an undertaking, especially from like an organizational level wide to build upon that. We do have some stuff, but it's closer for like knowledge management of like everything that's already in Confluence. So like if you have clean documentation, clean transcripts, if everything's in there, like you'll be able to.
+pull off the data that other people are also putting in. But again, like if there is no process in place, it'll be harder to actually, it'll be harder to implement a lot of those things. So like, I understand like you need like the system context in place first, but I think we can start with something a little bit smaller and a little bit less complex before we get into like the more complex part of it. But yeah.
+Yeah, from like an organizational standpoint, I think if there is a way that the team can, it might not be a one day undertake, obviously it's not going to be one day undertaking, but it might take some time to figure out what that looks like for you guys as an organization.
+
+Jason Daggs   52:58
+And regardless of what we do, we need to make sure we add a rule that says, don't delete databases ever.
+
+Nikita Kumar   53:06
+Yeah, I don't think it should be doing that. I saw the comment on here. That was kind of scary.
+
+Jason Daggs   53:11
+Yeah.
+
+Nikita Kumar   53:14
+Awesome. Okay, so I know we only have 8 minutes left. We will send you guys the stuff for requirements hardening on here that we've already worked on with the team. And again, you know, feel free to tweak it for your team and how it's going to look for you guys. In our next conversation with the champions, we will work with them to kind of help figure out what's like a sample use case, even if we come up with like 3 solid use cases and those use cases can be used across different teams.
+different teams. Every team can then clone it and then build it upon what looks like, what's good for them and what works for their team. We'll be able to do that as well. So realistically, like a lot of the homework will fall mostly on our cross-functional champions. So if you guys are on the call, the most of the homework will be on you guys. But in our next call with our champions, our goal is to.
+figure out some of your pain points, get an understanding of how we can help turn some of your use cases cross-functional across the board, with how Eugene has explained it, and we will also send this deck across to everybody.
+Any additional questions?
+
+Alfredo Achecar   54:18
+Just another comment. I know a lot of the conversation here has been around like kind of definition and building. But there's, you know, in digital teams, there's also a big portion that is about a really important portion about customer discovery, iterations.
+
+Eugene Semenyuk   54:24
+Play, yeah, yeah, Asadchaya.
+
+Alfredo Achecar   54:36
+and really kind of connecting with the connecting with the user base. I know that maybe not all the teams here are customer facing, but they may have other stakeholders as well. So I know that this is, I'm just going to call on this out that is, I'm not, we haven't really seen a whole, we've spoken about it in phase one about voice or customer synthetic users for sure. So I'm not saying that that's been excluded, but.
+That is also a really big, important piece of of product teams that is, and and that may not be super cross-functional, but it arguably is, because that's usually the PM designer and then researcher engineers can and can be involved as well, but not not not as heavily.
+
+Nikita Kumar   55:01
+Yeah.
+
+Alfredo Achecar   55:15
+So, I'm just kind of calling out that there's other avenues here that...
+You know, the focus has been a lot on like sort of, you know, tickets and shipping and code review and QAing, which are obviously really super important. But there's also big pieces that are not being necessarily, that we're not really talking about a lot.
+
+Nikita Kumar   55:33
+Yeah, those are going to be mostly in our lighthouse sessions, like in our individual work streams, because we know in digital it's a little bit different. Like, so all the phase one use cases are still in progress. That includes voice of customer and knowledge management and all that stuff. But anything like if it's cross-functional for like design, we can also do that. It's just a matter of like, like we're still building on use cases for phase two for digital.
+
+Alfredo Achecar   55:42
+Hello.
+
+Nikita Kumar   55:57
+separately as well. So each team is doing individual use cases that are coming up as well in their own lighthouse sessions. And the purpose for the cross-functional is to kind of connect the dots across the board. So yeah, I agree. Those are still important, but they'll be in the other meetings that were already in.
+
+Alfredo Achecar   56:07
+Ah, okay. Fair point. Fair point.
+Fairpoint, thank you.
+
+Nikita Kumar   56:14
+Hurt.
+If no other questions, we'll give everyone 5 minutes back for their day.
+
+Eugene Semenyuk   56:21
+Okay.
+
+Nikita Kumar   56:23
+Thanks, everyone. Oh, yes.
+
+Eugene Semenyuk   56:26
+Yeah.
+Run Abhishek to Jira Ke song.
+
+Svetlana Stogni   56:30
+Just, please share.
+Yeah, feedback. Do you have any questions? Any anything else you would need us to help you with?
+We need your feedback.
+Please share it with us.
+You can do it offline if you would like.
+
+Eugene Semenyuk   56:56
+Or during our champions. Cool.
+
+Nikita Kumar   56:58
+Yeah, in our champions call next or offline, wherever you guys want to give feedback.
+
+Eugene Semenyuk   57:01
+You need to use the promoted translation.
+
+Nikita Kumar   57:06
+Thanks, everyone.
+
+Eugene Semenyuk   57:09
+Thank you. Thank you.
+
+Nikita Kumar   57:10
+Have a great day. Bye all.
+
+Iryna Pashko   57:11
+You?
+
+Oleksandr Pavlovskyi   57:11
+Guru.
+
+Eugene Semenyuk   57:12
+See you soon.
+Yeah, stop raising, Sharma.
+
+Nicholas Crowley stopped transcription

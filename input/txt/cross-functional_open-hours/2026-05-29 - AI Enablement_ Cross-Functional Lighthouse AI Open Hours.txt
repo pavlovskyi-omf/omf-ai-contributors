@@ -1,0 +1,935 @@
+AI Enablement Cross-Functional Lighthouse AI Open Hours-20260529_140028UTC-Meeting Recording
+May 29, 2026, 2:00PM
+1h 1m 46s
+
+Vira Melnyk   0:04
+Yeah.
+
+Eugene Semenyuk   0:27
+Hello, good morning.
+
+Vlad Grubman   0:29
+Well, hello, hello, everybody. Just, let's give everybody a minute or two. I know, I know people are switching over.
+
+Eugene Semenyuk   1:47
+Yeah, and while we're waiting, so yeah, if you have, if you have any questions, yeah, feel free to ask us.
+
+Jurijs Markelovs   2:06
+Yeah, I worked, I contacted, well, we contacted the View Eugene at last and Jira support, I think a few days ago. So for the Jenkins integration for the Jira automation, I believe the integration had been, the bridge was created, but.
+
+Eugene Semenyuk   2:16
+Mhm.
+Mhm.
+
+Jurijs Markelovs   2:25
+It requires, I believe it requires every single time the JIRA Admin to establish the new connections, so I'm not sure how this.
+should be handled, but that's the case as of now.
+
+Eugene Semenyuk   2:40
+Mhm.
+Yeah, I think we can, we can continue discussion with the Atlassian team.
+And discuss with them, like...
+What is the most effective way to do this?
+To make this bridge.
+So yeah, again. So feel free to ask any question related to our yesterday's topic and previous topics, AI tools.
+and processes, any kind of questions, yeah, feel free to ask.
+I.
+
+Jurijs Markelovs   4:15
+Yeah, by the way, there is the same issue with the creating connection and integration with Jenkins for the ChatGPT agents as well.
+
+Eugene Semenyuk   4:27
+Mm-hmm.
+Mm.
+That's interesting.
+Let me check ChatGPT. So do we have Jenkins in ChatGPT? I don't see it.
+Yeah.
+Yeah, by the way, I'm working on my daily planning agent. So yeah, and I can briefly.
+Show, I'm still experimenting with it.
+So, yeah, and...
+Yeah, I'm trying to build something useful and actionable. So yeah, I've updated my initial instruction for this agent to.
+to change output format to the table. So yeah, now we created the table with some tasks for me based on recent chats, calendar, and Jira items.
+So yeah, now I'm thinking how tall to make it.
+More or more convenient for me.
+
+Biniam Wubyeshaw   6:13
+It can, but can we have a session how to use a cursor, a build agent in cursor?
+
+Eugene Semenyuk   6:21
+Oh.
+Yeah, good.
+Good proposal. Yeah, as I remember in our phase one.
+So yeah, we had sessions only with Copilot.
+So yeah, we can discuss this with Alexander, maybe conduct some sessions like how to build agents, skills, like rules, skills, commands, and cursor, and how to utilize them.
+
+Biniam Wubyeshaw   6:47
+Mhm.
+Thanks.
+
+Eugene Semenyuk   6:57
+So, yeah, not not not sure about next Tuesday, so yeah, but maybe...
+Yeah, in the end of next week or maybe next week after the next week. So yeah, we definitely can conduct something related to the cursor.
+Yeah, for the next session, I'd like to explore more these.
+ChatGPT agents, so yeah, I'd like to find some limitations or some edge cases, yeah, to to see.
+Uh, the capabilities and limits for for this tool.
+Yeah, and maybe decides, maybe create some decision metrics, like, for what use cases, ChatGPT agents will be more efficient for what use cases, role agents, and for the word use cases, code me, for what use cases, core circle.
+pilot and so on.
+Because yeah, ChatGPT agents. So yeah, this is really brand new feature. So yeah, it requires some kind of investigation.
+Yeah.
+
+Jatin Bagga   8:20
+Wait, sorry, what's a brand new feature for GPT configuration? Sorry, I missed that part. Can you repeat that?
+
+Eugene Semenyuk   8:24
+Yeah, I, I, yeah, I mean that that feature that we discussed yesterday, like the ChatGPT agents.
+So yeah, this is like a brand new thing for us, brand new tool. So yeah, I'd like to explore capabilities, limits, yeah, to better understand for what use cases it will be the best choice.
+And for what use cases we probably should avoid it and use something else.
+The.
+Because, yeah, for now, yeah, society is brand new, brand new tool for us, yeah, and...
+Yeah, it requires some kind of investigation. We have to see.
+See real, real potential.
+Then the limits.
+
+Debamitra Bhattacharjee   9:30
+Anshul.
+
+Eugene Semenyuk   9:30
+Yeah, and uh, sure.
+
+Debamitra Bhattacharjee   9:32
+One thing is, I think you mentioned last week that you were going to show something on the playwright MCP with VS code, so I'm not sure if I missed that.
+
+Eugene Semenyuk   9:41
+Yeah.
+No, no.
+I, I haven't done it, so yeah, yeah, I just wanted to mention.
+
+Debamitra Bhattacharjee   9:46
+Okay.
+Okay, okay.
+
+Eugene Semenyuk   9:56
+This lane, so yeah, I'm going to...
+Yeah, I'm going to...
+
+Debamitra Bhattacharjee   10:15
+Yeah.
+
+Eugene Semenyuk   10:15
+It should be next Wednesday. So yeah, if you would like to see how to use Playwright MCP for QA tasks, so yeah, welcome to our QA Lighthouse session. Yeah, and one more.
+
+Debamitra Bhattacharjee   10:19
+Okay.
+Okay.
+
+Eugene Semenyuk   10:32
+Idea, so yeah, I'd like to to demo it for a cross-functional audience.
+Like, uh, because yeah, play with MCP, you really, yeah, and play with CLI.
+So, they are really powerful tools, so yeah, and they can be, yeah, they can help developers with debug, they can help digital guys with...
+UI, UX work with some.
+with some exploratory and so on. So yeah, I'm going to like present the.
+Present like the most useful capabilities of these tools.
+Yeah.
+So, yeah, and probably next week.
+On Thursday, we will have, we will have like end-to-end demo from one of our teams, so yeah, it should be servicing team, so yeah, they can, they they will demo their end-to-end cross-functional workflow.
+Yeah, and I, I'm pretty sure it should inspire you for some new experiments.
+Yeah, Jurijs.
+
+Jurijs Markelovs   12:09
+Good morning once again. Yesterday I've tried to utilize these ChatGPT agents, right? And I came across another issue when trying to connect to GitHub. GitHub.
+
+Eugene Semenyuk   12:16
+Mhm.
+Mhm.
+
+Jurijs Markelovs   12:25
+And I have added that connection right to the GitHub, but reality, it's still blocked. It's telling me right now, blocked by missing access to certain.
+Uh, repos.
+And then requires, probably requires additional setup on the GitHub first, right, to create that integration.
+
+Eugene Semenyuk   12:41
+Mhm.
+That's interesting. Let's double check together. So yeah, let's start blank.
+Let's use.
+GitHub.
+
+Jurijs Markelovs   13:06
+I actually have one to, if you want to, but it's up to you.
+Uh, it's configured already; I can, you can look at it if that works.
+
+Eugene Semenyuk   13:12
+Uhh...
+I.
+
+Jurijs Markelovs   13:17
+But yeah.
+
+Eugene Semenyuk   13:19
+Yeah, you can, yeah, but you need to share your agent.
+To the organization.
+
+Jurijs Markelovs   13:25
+That's what I was gonna do.
+
+Eugene Semenyuk   13:29
+Ahh.
+Looks like my...
+No.
+And have you tried to use ChatGPT just in the...
+In regular chat.
+Like...
+Maybe something like this, chat.com, like use.
+GitHub.
+And.
+Ohh, yeah.
+I see only my.
+Yeah, repositories from that I have for my user.
+Let me double check it.
+Yeah, by the way, have you tried to do similar thing, like just use GitHub application to get access to some?
+
+Jurijs Markelovs   14:40
+I have not.
+
+Eugene Semenyuk   14:40
+Organizational repository.
+No.
+
+Oleksandr Tsyganok   14:44
+Yeah, usually if you have...
+
+Debamitra Bhattacharjee   14:44
+I guess OMF is still not allowing Eugene. If you remember initially when we, I mean at first, like initially we got the ChatGPT, that time I could configure the GitHub, but after that something happened that we took off all of our access.
+
+Eugene Semenyuk   14:49
+Mhm.
+
+Debamitra Bhattacharjee   15:06
+And after that, I couldn't configure GitHub OMF for all the reports.
+
+Eugene Semenyuk   15:07
+Mhm.
+
+Debamitra Bhattacharjee   15:12
+I don't know about now; I didn't check now, like yesterday or day before.
+
+Eugene Semenyuk   15:13
+Yeah.
+Mhm.
+Yeah, let's.
+Yeah, let's double check together. So yeah, I can select here. Let's select MF Copilot.
+Uh huh, yeah, it looks like I have permissions to authorize.
+GitHub like.
+Organizational repositories here.
+Like, yeah, only my personal.
+Football.
+
+Oleksandr Tsyganok   15:55
+Yeah, potentially they're using this like application type of authorization. It's also like available in CodeMe, but it requires like this additional permissions to be able to install like application in specific organization. And as I understand, yeah, that's like part of permissions that is.
+
+Eugene Semenyuk   15:56
+Yeah, we need.
+Mhm.
+
+Oleksandr Tsyganok   16:15
+Not like available for now.
+
+Eugene Semenyuk   16:17
+Yeah.
+Mm-hmm.
+Play.
+
+Jurijs Markelovs   16:22
+Any doors we need to knock to get this available because this is going to be like a really big breakthrough.
+
+Eugene Semenyuk   16:29
+Yeah.
+
+Jurijs Markelovs   16:29
+No, thank you.
+
+Eugene Semenyuk   16:32
+Here.
+
+Jurijs Markelovs   16:32
+Because I have sent the request, but it something tells me I need to go through the.
+Official.
+Request placed.
+For the service now, I would assume.
+Right.
+
+Eugene Semenyuk   16:52
+Mhm.
+Ohh.
+So, yeah.
+Mm.
+Yeah, I'll connect with our teams, so yeah, and we decide what is the best approach to promote.
+This.
+Because, yeah, I understand this is.
+Which is very important.
+Yeah, and maybe there is some some reason, like...
+Why we don't have, yeah, and probably we won't be able to use.
+Prepose, yeah, but...
+Let's get some official.
+decision.
+from the leadership.
+So yeah, we will communicate it.
+
+Jurijs Markelovs   18:04
+But pretty much any flows, what we have done previous, at least what I experimented yesterday, you can copy the instructions from the CodeMe assistant, for example, or Robo assistant agent, right? And just drop it here in the agent, ChatGPT agent, and it generates similar.
+
+Eugene Semenyuk   18:10
+Mhm.
+Chez.
+
+Jurijs Markelovs   18:26
+based on the prompt, it generates the agent, right, pretty comfortably.
+
+Eugene Semenyuk   18:32
+Yeah, I suggest, like, do not just go paste it here.
+So, yeah, I suggest you go, yeah, copying your prompt here in chat, yeah, and ask to adopt it for ChatGPT agent.
+
+Jurijs Markelovs   18:51
+Right, that's what I meant, and it works pretty, pretty good.
+
+Eugene Semenyuk   18:53
+Yeah.
+Yeah.
+So yeah, we need it for like...
+For transition agents from Rover to to code me.
+Yeah, from compiler to core me and vice versa.
+So yeah, it should work well.
+Yeah, let's.
+Let's probably try to generate skill because yesterday...
+I won't, yeah, I wasn't be able to to generate skill, yeah, for example, for my daily planning, so let's generate.
+Skill that we all have.
+Ohh.
+I worry to you.
+Rules.
+Yeah.
+Yeah, let's just try to see.
+Because yesterday it throwed an error.
+Each time when I try to generate skill.
+So yeah, for example, we can...
+I can move this logic to skew.
+Yeah, maybe reusing some other.
+In some other agents.
+So yeah, it's creating.
+Yeah, and the last time.
+It failed on the last step, like upload and attach this skill to the agent.
+Yeah, but I believe we can just generate this scale, copy to MD file.
+Put this empty file to zip.
+And then upload.
+Yeah, but in this case...
+Uh, the skill is just...
+for agent so you cannot reuse.
+the scale in some other agents, so you need to upload it once again.
+This is.
+Not so user-friendly.
+
+Jurijs Markelovs   21:40
+And what is the difference between?
+
+Eugene Semenyuk   21:40
+And not scalable.
+
+Jurijs Markelovs   21:43
+And what is the difference using this skill, new skill added versus connected, I don't know, MCP connection?
+To a certain.
+
+Eugene Semenyuk   21:56
+Yeah, skill is just like a bunch of instructions, so yeah, it...
+
+Jurijs Markelovs   21:58
+Please.
+
+Eugene Semenyuk   22:04
+It doesn't work with tools. So it just contains some instructions on how to do some task. Yeah, for example, in our case, so yeah, we, oh, it created. Yeah, awesome. Looks like it fixed.
+So yeah, for example, in our case, we can move this logic.
+Or virtualization to.
+To these priority rules.
+Yeah, and let's see.
+No.
+And can we publish those skills somehow?
+So yeah, we can download it.
+So yeah, and here we should be able to see.
+Like...
+MD file.
+With this skill, with this description.
+My.
+Yeah, and now we can guide our agent. Oh yeah, it already asking us like update the instructions to rely on the new priority skill.
+Let's do this.
+So now it should update this block.
+To use.
+The skill.
+So yeah, and this is like good, good practice. Yeah, if you have some tasks, so yeah. And of course, and especially if they are repeatable. So yeah, you can create skills for each task.
+Yeah, and skills.
+Yeah, skills have.
+some instructions like how to do this task.
+Yeah, and then you will have beautiful instruction.
+Like how to operate with the sources, with skills to fulfill your goals.
+Because, in some cases, you don't need...
+like all the skills. So your agent will execute skills like by demand.
+If they need this task, so they will execute, if not.
+They will not execute this skill.
+Yeah.
+So, yeah, let's update.
+And this is really interesting how to how to publish this skill.
+Make it reusable.
+Voice.
+This is updating, upload.
+Looks like for now there is no option to publish it.
+Yeah, for example, let's open, yeah, this is new agent. It's updated.
+Refresh the page. OK, what do I need?
+We don't need GitHub.
+To remove it for now, so yeah, we need skills.
+And what skills priority rules?
+Yeah, but I'm not able to find this skill.
+Yeah, it looks like for now, if you need to reuse this queue, so you need to open it, download.
+And upload to.
+And upload here.
+Yeah, but I believe there should be a motion to share this cue.
+Hmm.
+But look, that looks like no.
+Um...
+Yeah, because even even in shared agents.
+Okay.
+Yeah, this kills someone, sure.
+Hey, uh, Jason, I see you, and...
+I had to queue to ask a question connecting.
+Concerning ServiceNow integration.
+Yeah, let's discuss your question connected to ServiceNow.
+So yeah, feel free to unmute.
+
+Jason Daggs   27:34
+Oh, sorry, there you go. Thank you.
+
+Eugene Semenyuk   27:36
+Yeah.
+
+Jason Daggs   27:37
+Several of the teams that I've been working with have absolute hard requirement on ServiceNow integration. It's kind of almost a non-negotiable. So.
+
+Eugene Semenyuk   27:48
+You.
+
+Jason Daggs   27:50
+You know, and my research so far, you know, it's not been exhaustive yet, but my research so far has shown that we just don't have that anywhere, either in progress or available as far as, you know, OMF paying for it or setting it up or
+making it available to us. So what do I need to do to try to get that in somebody's queue to see about getting that moving forward? Otherwise, we're just going to have a lot of teams that are just, at least a few teams that are just not going to.
+just not going to be able to do much.
+And then we know that there is Big EAI out there.
+But those licenses are already capped, right? They're already used up. We don't have any, so...
+Any, any help in this direction would be greatly appreciated.
+
+Eugene Semenyuk   28:49
+Yeah.
+Mhm.
+
+Oleksandr Tsyganok   29:00
+Yeah, I can comment on like technical perspective, but not organizational. So like, code me have native service now integration, but it was not like requested as a tool to be like enabled in OMF. So as far I understand, we didn't get like frequent like requests that this tool is important. So we didn't start this like process.
+
+Eugene Semenyuk   29:00
+So, you could...
+Mhm.
+
+Jason Daggs   29:24
+Gotcha, gotcha. Do you know how we might be able to get that requested expeditiously?
+
+Eugene Semenyuk   29:40
+Ah.
+Good question.
+So, yeah, looks like we need to submit a ticket.
+Order for review.
+
+Jason Daggs   29:51
+Through SpamSafeOMFServiceNow.
+
+Eugene Semenyuk   29:54
+Uh...
+I guess, I guess, share a ticket for for tools for MCPs reviews for for infrastructure team.
+
+Jason Daggs   30:06
+Okay.
+
+Eugene Semenyuk   30:06
+So, yeah, as I remember.
+Uh, Marcos and Avani, so they uh...
+They they are working on uh such such tickets.
+like for approvals.
+So, yeah, and then I believe our team can can enable.
+And trust this feature.
+
+Jason Daggs   30:28
+Okay, and so who is that a kid you said I needed to get in contact with?
+
+Eugene Semenyuk   30:34
+Ohh.
+Let me double-check.
+
+Jason Daggs   30:39
+I mean, and by the way, I don't want to take up too much time, but you can send it to me later if you want to, and we can continue with another question. But any information that you have, please, please send it to me.
+
+Eugene Semenyuk   30:54
+Mm-hmm.
+So yeah, let me connect all the information and I will reach out to you a bit later.
+
+Jason Daggs   31:03
+All right, great. Thank you.
+
+Eugene Semenyuk   31:06
+Thank you.
+Yeah.
+Yeah, and you are not only one who are interested in in ServiceNow.
+So, yeah, and in this in this case, yeah, I think it should be a bit.
+
+Jason Daggs   31:26
+Yeah.
+
+Eugene Semenyuk   31:30
+quicker. Yes, we have a demand.
+
+Jason Daggs   31:32
+Yeah.
+Yes, we, yes, as far as you know, everyone of my team so far is like asking about that for sure.
+
+Eugene Semenyuk   31:43
+Mhm.
+Okay, any any other questions?
+
+Jurijs Markelovs   32:03
+Yeah, by the way, just got a response from the Jira integration.
+class and team. It doesn't seem like we're going to get a connection to the Jenkins because the Jenkins destiny has been defined. It's going to an end very soon. So we're not going to get that integration.
+
+Eugene Semenyuk   32:09
+Mhm.
+Yeah.
+
+Jurijs Markelovs   32:26
+We are moving away from Jenkins, basically, and then going to the GitHub actions mostly.
+
+Eugene Semenyuk   32:26
+Mm.
+Ohh.
+
+Jurijs Markelovs   32:32
+Dau.
+
+Eugene Semenyuk   32:32
+Mm-hmm.
+Yeah.
+Poo poo poo.
+That's interesting. Do we have something for?
+Oh yeah, this is the last year.
+Yeah, let's use over.
+I'd like to double-check, so, like, do we have...
+GitHub actions.
+steps for geo automation.
+Yeah, and frankly speaking, this is a good task for AI to move, to move your like jobs pipelines from.
+from Jenkins to...
+GitHub actions.
+Yeah, usually, yeah.
+Yeah, it creates really good jobs for.
+Or workflows for GitHub actions.
+So, yeah, it should not be a big deal to to.
+Remove.
+Let me read from Jenkins to Service, ohh, not ServiceNow to GitHub actions.
+Yeah, but let's double check, so...
+So we will be able to use.
+This integration, or yeah, probably we can send some web request if we don't have option to trigger some job.
+Or trigger.
+Or trigger code agent that can trigger CI job for GitHub actions.
+Yeah, but the best choice will be just...
+Native step into your automation.
+Let's help the strawberry.
+Too old.
+Doesn't work.
+Yeah.
+Ohh, let's...
+Yeah, let me take my flu.
+Change your 18.
+The.
+Bass.
+Action.
+Let's see, looks like no.
+We have on the add comment, approve pull request, create branch, yeah, and other actions, get actions, reject and search.
+Yeah.
+Looks like, yeah, for this case.
+We can trigger.
+See a job using a web request.
+Or call Codney agent that will execute CI job. I'm pretty sure Codney should be able to.
+To execute.
+Correct me if I'm wrong, Oleksandr.
+
+Oleksandr Tsyganok   36:35
+We don't have like this integration, or we're talking about Git actions jobs, not Jenkins one. Ah, yeah, for Git, if you have configured integration, it's just like an API call, and Adrien should know, like, tell us about specific like API calls, and it should work.
+
+Eugene Semenyuk   36:35
+Yeah.
+Yeah, yeah, yeah, yeah, yeah, I get that.
+Mm-hmm.
+Yeah, and you already know how to how to create webhook and integrate your agent to the geo automation workflow.
+So, yeah, in this case, we can, I can use call me agent that can trigger your CI job.
+Yeah.
+Okay, any any other questions?
+
+Debamitra Bhattacharjee   38:05
+So, I have a question, Eugene, regarding the code me workflow. So, did we have any hands-on session on code me workflow creation? I tried myself, but I'm facing some problems, so I'm not sure.
+
+Eugene Semenyuk   38:06
+Mhm.
+
+Debamitra Bhattacharjee   38:23
+I miss something.
+Are we planning, if we not, are we planning to give some, some, some, I mean, have some demo or session on that?
+
+Eugene Semenyuk   38:35
+Mhm.
+Yeah, that's a pretty good question. Yeah, unfortunately, we haven't covered this topic yet.
+So, yeah, but let's let's send it to our agenda.
+So yeah, I like it. We have pretty much topics in our agenda. So yeah, probably we can create some kind of...
+Ohh.
+some kind of pole.
+Yeah, and you can...
+Yeah, and you can.
+Like, decide together, so what what what topics are the most important, yeah, and we can build agenda our our future agenda based on your.
+
+Debamitra Bhattacharjee   39:10
+Mhm.
+
+Eugene Semenyuk   39:18
+Your answers and requests, so yeah, but yeah, I I like this idea to to have a hands-on session to to call me workflows because.
+From my perspective, this is the most powerful workflow builder that we have at the moment.
+
+Debamitra Bhattacharjee   39:38
+Yeah.
+
+Eugene Semenyuk   39:38
+So it is more powerful than Flow Builder in Jira automation. Yeah, but at the same time, this is the most complex Flow Builder.
+
+Debamitra Bhattacharjee   39:52
+Mhm.
+
+Eugene Semenyuk   39:55
+So, yeah, well...
+
+Debamitra Bhattacharjee   39:55
+Yeah, because like for Chat GPT, like if you see we are not able to configure the gate, like there are still so many things we need to have on GPT, Chat GPT.
+
+Eugene Semenyuk   40:02
+Yeah.
+Mm-hmm.
+
+Debamitra Bhattacharjee   40:20
+Between ChatGPT and CodeMe, I would say like CodeMe has lots of lots of better features to, I mean, as a useful for, you know, all the execution or some.
+orchestration.
+
+Eugene Semenyuk   40:38
+Mhm.
+Yeah, and for now, these ChatGPT agents, so they are pretty straightforward. So you can just create one agent. So yeah, you can use applications and skills, but you cannot create a...
+
+Debamitra Bhattacharjee   40:51
+Mhm.
+
+Eugene Semenyuk   40:54
+big orchestration or workflow of agents.
+
+Debamitra Bhattacharjee   40:57
+Yeah.
+Yeah.
+
+Eugene Semenyuk   41:02
+So, yeah, probably in in future, in in future updates, we will.
+So we will have Agent Builder from OpenAI, where we can connect multiple agents.
+
+Debamitra Bhattacharjee   41:14
+Ohh.
+
+Eugene Semenyuk   41:17
+So yeah, but not sure.
+The.
+So yeah, this is a really good topic. So we'll definitely add it to our agenda.
+
+Debamitra Bhattacharjee   41:28
+Sure, thank you.
+
+Eugene Semenyuk   41:30
+Yeah, thank you.
+
+Oleksandr Tsyganok   41:34
+Eugen, I just checked like this sharing skill limitation. Looks like that it's like OMF setup issue. If you have like some admin contact point, it should be like enabled specifically because for enterprise, by default, it's always turned off. Looks like that nobody.
+
+Eugene Semenyuk   41:52
+Mm-hmm.
+
+Oleksandr Tsyganok   41:54
+configured it yet properly.
+
+Eugene Semenyuk   41:56
+Yeah.
+So yeah, let's add it to action item to connect with the...
+administrators. So yeah, probably it will be Erin, but not sure. So yeah, we'll connect and then discuss. So yeah, this is not for a facilitator to create this action item for us.
+Yeah.
+Yeah.
+Well, let's...
+Sweet.
+Agent.
+And for you.
+Verify.
+Not very funny.
+Yeah.
+I'd like to test one on Fisher here.
+So, in...
+I'm thinking about how to make how to make this GitHub, not GitHub, ChatGPT agent autonomous.
+Ohh.
+Yeah, and yeah, because we don't have any triggers here right now, but we have schedule.
+Yeah, for example, we can run our agent every hour.
+And and check some conditions.
+For example, I'm sure if it's capable that will.
+Select.
+Yes.
+Return to your items.
+Is that where?
+Updated.
+Hmm.
+Recently, let's make something like this.
+Um...
+For TPT project.
+Yeah, let's double check if it's feasible.
+To create such GQL.
+And get such items.
+So, yeah, and yeah, basically we can build some some JQL.
+for example, items that...
+updated by someone or items that updated from one status to another status during some period of time, for example, one hour.
+or some other period.
+So, yeah.
+This can be...
+some kind of trigger for us.
+And then we can we can do something with these items.
+For example, do some kind of analysis and then message some channel for some.
+in teams or slack.
+Yeah, I really love this pointer.
+And it's pretty cool because, yeah, it's...
+Yeah, it's it's showing HH step.
+And it's easier to learn from such kind of automation. So it's doing it step by step.
+Like adding app, adding instructions.
+Add in some name, even, even icon for this agent.
+Yeah, saved.
+Okay, preview a test run.
+Yeah, let's double check that we don't have right. Oh, it started. Yeah, but I'm sure we don't have.
+All right, permissions for JR 2. So yeah, we just need to get.
+get items that were updated during the last 23 hours.
+You see, for now, it's really important to...
+To have like hours, not days, for such period.
+And in this case, we can run this agent every hour.
+Yeah, I see that the query found eight matching issues.
+So, in the first response, included more details than needed. So, paging through smaller results sets to extract the consist fields cleanly.
+Yeah, but anyway, it looks like it works.
+We can add some additional, yeah, here they are.
+And that's interesting.
+Mhm.
+It will be awesome to have links here.
+And I'm guessing it should be feasible for the agent to build such links.
+Yeah, and looks like it works, so yeah, we can adjust, we can adjust conditions, for example, add the.
+Like, status.
+change or assign me.
+For some period of time, for example, one hour, then we can...
+Create a schedule for this agent, yeah, and it can be open, it can be open almost.
+
+Jurijs Markelovs   50:21
+But is there any way to integrate this thing with the Jira automation, you think?
+
+Eugene Semenyuk   50:28
+Good question. Not sure.
+
+Jurijs Markelovs   50:32
+Since since we have a a JR integration, right?
+
+Eugene Semenyuk   50:35
+Yeah.
+Ohh.
+
+Jurijs Markelovs   50:45
+So we won't have to schedule it, that will be more efficient.
+
+Eugene Semenyuk   50:46
+I'm not sure.
+Yeah, I'm not sure if it's possible to...
+To trigger on ChatGPT agents, so use an API.
+So, if so, yeah, it should be easy.
+Otherwise, yeah, I can't represent sure that we don't have.
+ChatGPT here.
+So, we will have like native integration from Jira to ChatGPT.
+So we have integration from ChatGPT to Jira, but not vice versa.
+And the only one option that we can use is just to send that request.
+And here we need to make sure that it's possible.
+Because I doubt about this because you cannot use, you cannot use.
+
+Jatin Bagga   51:49
+Aiden.
+
+Eugene Semenyuk   51:56
+Like chatting chat using API.
+
+Oleksandr Tsyganok   52:02
+Yeah, the one in the workaround that we have right now is like trigger and we are slack. That is not the best like option. I'm not sure like what kind of parameters can be like passed, but that's the only way like, like kind of automate decisions.
+
+Eugene Semenyuk   52:10
+Mm-hmm.
+Mhm.
+Yeah.
+
+Jatin Bagga   52:21
+Hey, Eugene.
+
+Eugene Semenyuk   52:21
+And the.
+
+Jatin Bagga   52:22
+Sorry, go ahead.
+
+Eugene Semenyuk   52:24
+Yeah.
+Yeah, yeah, um, yeah, go, go, go ahead.
+
+Jatin Bagga   52:28
+There are 8 minutes left and I just want to, can you do a quick walkthrough of what you did yesterday? Sorry, because I had to go in and out of other meetings. I don't know if you covered it already, but since this is office hours, I guess all play free play.
+
+Eugene Semenyuk   52:39
+Mhm.
+Yeah.
+
+Jatin Bagga   52:41
+And replay.
+
+Eugene Semenyuk   52:44
+Absolutely.
+So yeah, okay, we can even repeat like this agent that we created right now. So yeah, let's delete it.
+
+Jatin Bagga   52:58
+And one more time, I don't know who was asking that question. You said it's one way communication between JIRA and ChatGPT. It's one way coming inbound into chat, but not outbound. Is that what you said? Or is it outbound?
+
+Eugene Semenyuk   53:07
+Mhm.
+Yeah, yeah, we can we can communicate with Chira from ChatGPT, but not vice versa, so we cannot communicate with ChatGPT from Chira.
+
+Jatin Bagga   53:24
+Okay, but can you get an input into ChatGPT from Jira and output it out to Jira? You can do both. It's A two-way communication from ChatGPT, like a true MCP server, a two-way communication.
+
+Eugene Semenyuk   53:24
+for example.
+Yeah.
+Yeah.
+Yeah.
+Yeah, yeah, yeah, it's the way, so yeah, you can read data from Jira and you can write to Jira.
+
+Jatin Bagga   53:37
+Okay.
+And it applies to the same to Slack, Teams, Outlook, all.
+
+Eugene Semenyuk   53:48
+Uh, yes.
+
+Jatin Bagga   53:50
+Okay, thank you. That's very helpful. It's pretty cool.
+
+Eugene Semenyuk   53:51
+Yeah, it, it, it, yeah, it depends. It depends on...
+like the app and capabilities. Yeah, and let me show you how to do it. So yeah, let's create agent from scratch. So yeah, we just need open browse agents, then create agent. So you can ask your, you can send your request here.
+
+Jatin Bagga   54:05
+Perfect.
+
+Eugene Semenyuk   54:16
+Or start building by, yeah, from scratch. Yeah, let's start blank.
+Yeah, and now.
+Yeah, let's repeat the Sam.
+same request that we did. So yeah, we need the agent that will return JIRA items that were updated recently.
+Like, can we put like 23 hours? So within these 23 hours, we need some items that were updated for TPT project.
+So yeah, and yeah, this is our start point. So later we can expand it with some logic, for example, provide some analysis for these items. Yeah, and so on. Let's start.
+And now it will create the agent for us for this purpose.
+Yeah, and using this condition, we can make this agent autonomous.
+Because we can, we can make and create schedule, for example, run this agent every hour.
+Yeah, and here we can add condition like we need updated items for the last hour.
+Yeah, and we can make sure that we will pick up only
+Relevant items.
+Okay.
+Looks good. Let's click build the Jira Recent Updates Agent.
+So, yeah, and now we'll...
+It will.
+Do everything for us.
+Yeah, here are three tasks.
+Yeah, and it's thinking.
+So, I'm running the instructions for the agent focus to recent TPT updates. OK, it added a prompt like instructions.
+what and how to do it added integration with Atlassian.
+Tools.
+Yeah, it added name and even fancy icon for this.
+And now it should propose us to test it.
+It created agent, updated.
+Yeah, and here, so if if you click on some app.
+So you can see what actions it can do. And you can even restrict or allow some actions. For example, in our case, we restricted all write actions for Atlassian tools. So we can only read.
+So yeah, but you can enable, for example, add a comment to JIRA.
+And you can even you can even manage these actions for right actions, like ask permission to do something or not.
+For example, for adding comments, we don't need.
+We don't need permission.
+So for updating and adding some items, so yeah, we need some permissions.
+
+Jatin Bagga   58:25
+And one more time, how did you get to this? You just clicked on the Atlassian. When you saw that Atlassian in the box, you just clicked on it. Yeah, you just clicked on it and it case you have the permissions itself, and then you can figure out what you want to handle it. Yeah, and Mia and I played with this a little bit yesterday, where with Teams, with the automated one versus the non, sorry, the agentic one versus your own account one.
+
+Eugene Semenyuk   58:29
+Yeah.
+Yeah.
+Yeah.
+Yeah.
+
+Jatin Bagga   58:45
+Remember the thing that we were talking about? It was creepy, man. It was really creepy. The agentic one was just sending me random messages from Mia. I was like, Mia, can you see the message I'm getting? And she's like, no. And it was creepy. So she of course turned it off, but that was very cool. Anyway.
+
+Eugene Semenyuk   58:46
+Mhm.
+Mhm.
+Mm-hmm.
+Yeah, and now let's test the agent. So yeah, it's proposing us right now to test it.
+Yeah, let's try and chat.
+Yeah, here is our agent, recent Deepti updates.
+Yeah, now it should return at least eight issues.
+Because, yeah, previously we already run this, yeah, similar agent and it returned.
+Eight items.
+Yeah, but maybe we will have one more item, so if someone...
+Updates.
+At your item.
+
+Jatin Bagga   1:00:09
+This is great. Eugene, I need to drop, but thank you so much. This is so cool. I feel like I need to get my hands a little more dirty just to really understand this, the power of what we've got now. I'll take a look at this recording as well. Do you mind sending this again to the OMF directory so we can actually like...
+
+Eugene Semenyuk   1:00:12
+Mhm.
+
+Jatin Bagga   1:00:27
+Maybe you just look at the prompts and just do it ourselves as well. Okay.
+
+Eugene Semenyuk   1:00:33
+Sure, yeah, yeah, we already have user story testability agent here in OMF directory. So yeah, and I can also save this agent. So yeah, and yeah, next Tuesday we will discuss limits and capabilities. So yeah, we will explore a bit more in details.
+
+Jatin Bagga   1:00:37
+Yeah.
+Yes, that would be perfect.
+Yeah, yeah.
+Yes.
+
+Eugene Semenyuk   1:00:52
+This tool, yeah, especially in terms of limits.
+
+Jatin Bagga   1:00:55
+Perfect. Sounds good. Thank you so much. Bye.
+
+Eugene Semenyuk   1:00:58
+Yeah, thank you.
+Yeah, and let's wait for the response. Yeah, and then we'll close the session.
+Yeah, it worked for one minute. Yeah, and we have one, two, three, 4, 5, 6, 7, 8 items. So yeah, the same result.
+Okay, looks like that's it. So yeah, let's pause here. So yeah, if you have any questions, so yeah, feel free to reach out to us. So yeah, have a have a great rest of the day and weekend. So yeah, and see you see you next week. So thank you.
+Bye.
+
+Sujan Shrestha   1:01:44
+Cancel.
+
+ stopped transcription

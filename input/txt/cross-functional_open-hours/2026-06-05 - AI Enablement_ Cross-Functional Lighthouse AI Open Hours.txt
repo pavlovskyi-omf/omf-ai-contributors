@@ -1,0 +1,631 @@
+AI Enablement Cross-Functional Lighthouse AI Open Hours-20260605_135951UTC-Meeting Recording
+June 5, 2026, 1:59PM
+43m 9s
+
+Akash Gupta   0:25
+Hey, Heath, do you know this meeting?
+
+Heath Fest   0:30
+Um, I'm sorry, say it one more time.
+
+Oleksandr Pavlovskyi   0:46
+Lucas.
+
+Heath Fest   0:48
+Help.
+
+Oleksandr Pavlovskyi   0:53
+How are you doing today, guys?
+
+Heath Fest   0:56
+Good.
+
+Oleksandr Pavlovskyi   0:59
+Have you already feeling the Friday's mood?
+
+Heath Fest   1:03
+Yeah, yeah, yeah, ready for the weekend.
+While everyone's still getting on here, I created my first Robo agent in the training sandbox yesterday and finished it up. Still kind of playing with it this morning.
+
+Oleksandr Pavlovskyi   1:22
+Sorry, Rainbow Agent.
+
+Heath Fest   1:24
+Yeah, Robo Agent, yeah.
+
+Oleksandr Pavlovskyi   1:26
+Oh, Robo, Robo agent, yeah, uh huh.
+
+Heath Fest   1:27
+Yeah, yeah.
+
+Oleksandr Pavlovskyi   1:30
+Yeah, it's definitely a useful thing, especially if you should work with tons of documents in the confluence. And what's the goal for this agent?
+
+Heath Fest   1:40
+It reviews an epic to determine if it's if it's ready to be put into a sprint.
+
+Oleksandr Pavlovskyi   1:52
+Okay, it's like a system, like a chatbot, yeah?
+
+Heath Fest   1:55
+Yep.
+
+Oleksandr Pavlovskyi   1:56
+Oh yeah, that's a really, really, really great implementation. Yeah.
+
+Heath Fest   2:01
+Okay.
+I need to create a...
+A ticket on the on your board, so I guess I can I can put that in there, yep.
+
+Oleksandr Pavlovskyi   2:09
+Yeah.
+Yeah, surely, let's track it here, let's track it here, because it's definitely very useful use case, yeah, yeah.
+
+Heath Fest   2:13
+Yeah.
+
+Oleksandr Pavlovskyi   2:20
+And guys who is joining here, he has shared that he created Robo Agent, yeah, a system that helps him to clarify this story, yeah, if I've got right, yeah. Ask right questions, yeah. And then as a final step, you're building a ticket, yeah, for this.
+
+Heath Fest   2:34
+Yeah, yep, yep.
+
+Oleksandr Pavlovskyi   2:40
+Similar, like we have this intake agent, yeah.
+
+Heath Fest   2:41
+Yeah.
+Yeah.
+
+Oleksandr Pavlovskyi   2:45
+It's much more easier, yeah, to to work with this assistant, yeah, than when you're trying to, I don't know, craft your description for tickets, yeah, and especially if you need to clarify some details from Jira Confluence, yeah, you can connect some specific sources here to your assistant, and it's gonna automatically get this data, yeah, and...
+
+Heath Fest   3:04
+Yep.
+
+Oleksandr Pavlovskyi   3:08
+prepare for you understandable, yeah, summarized description related only for the goals of the ticket. So yeah, and this tool is available for everyone, guys. So I think it's like a tool that we can use by default, yeah, in our, in our days, yeah.
+And in all possibilities that provides us modern LLMs.
+
+Heath Fest   3:40
+Yep.
+
+Oleksandr Pavlovskyi   3:43
+Cool.
+All right, Eugene, do you have anything special for today that you would like to discuss?
+
+Eugene Semenyuk   3:51
+Ohh.
+Probably no, so yeah, we are waiting for your for your questions, guys.
+
+Oleksandr Pavlovskyi   4:03
+Guys, any questions, yeah, ideas regarding to our cross-functional track or maybe some specific use cases? Yeah, so this is a time when we can talk and this is free topic discussion. So if you want, we can talk not only about the use cases, maybe, I don't know,
+We would like to discuss some last, some news here. For example, I don't know, maybe you hear about these models that's going to be released soon here by Microsoft. Yeah, especially I'm looking forward for this voice model, yeah, that can give us ability to.
+
+Jatin Bagga   4:32
+Yeah.
+
+Eugene Semenyuk   4:47
+Stop your hands!
+
+Oleksandr Pavlovskyi   4:48
+not only work with the facilitator who is just providing us notes, yeah, technically it should talk to us, if I understand right, the idea, yeah. So then maybe instead of us, I mean, me and Eugene, we gonna have assistant here who gonna.
+
+Eugene Semenyuk   4:51
+Yeah.
+
+Oleksandr Pavlovskyi   5:09
+Facilitate these meetings, yeah.
+And it's, yeah, it's a really pretty interesting video.
+
+Jatin Bagga   5:15
+I thought Alex, yeah, I thought Alex, you were like giving us the whole brain to ask anything. So I was going to ask, like, how about we talk about the IPOs that are getting launched next week, man? Talk to me about that. SpaceX, OpenAI, and then we're getting, you know, Claude, like, let's talk that. Let's talk some stuff.
+
+Heath Fest   5:26
+Yeah.
+
+Eugene Semenyuk   5:27
+Mhm.
+
+Oleksandr Pavlovskyi   5:29
+Yeah.
+
+Vlad Grubman   5:35
+Not financial advice, not investment advice. We are not providing any of those.
+
+Jatin Bagga   5:37
+You don't need advice. Let's build some stuff, man. Let's build something together. Improve its worth. Sorry, I'm just being fistitious. Anyway, go ahead, Yury.
+
+Eugene Semenyuk   5:45
+****, ****.
+
+Vlad Grubman   5:48
+Oh, speaking of building stuff, how many of you are using Apple Help?
+
+Oleksandr Pavlovskyi   5:49
+Yeah.
+
+Eugene Semenyuk   5:57
+Apple Health.
+
+Vlad Grubman   5:58
+Yeah.
+
+Eugene Semenyuk   5:59
+Ohh.
+
+Vlad Grubman   6:00
+Two people have no idea what it is, right?
+
+Eugene Semenyuk   6:02
+Just, yeah, just to pound steps.
+
+Jatin Bagga   6:02
+What the heck is Apple Help? What the heck?
+
+Oleksandr Pavlovskyi   6:03
+Play me.
+
+Vlad Grubman   6:06
+Ohh, so...
+
+Oleksandr Pavlovskyi   6:06
+The Microsoft guys, unfortunately.
+
+Vlad Grubman   6:10
+Okay, so I'm a ******** Android person, just so you would understand what's happening. I'm A ******** Android person. I hate anything Apple. It's not like, I hate the idea of walled garden, right? So a couple of months ago, I started doing some research on some...
+
+Jatin Bagga   6:11
+Hold rather.
+
+Eugene Semenyuk   6:12
+Yeah.
+
+Vlad Grubman   6:30
+data stuff. And one of the interesting things that I noticed is that Apple ecosystem is much more, well, you know, it's a blessing in the course, much more integrated with the, much more integrated altogether. And it allows you to collect all the data in one place. It's not easy. It's, again, it's very Apple way, which means it's extremely convoluted and
+super anti-user friendly, but it's possible. And that's what matters in my world, right? I, like I said, I'm a very heavy Android user, and I've been wearing Galaxy watches for years and Fitbit before that, and it's been always a challenge to get the data, move the data, and...
+Get access to the data, so I essentially I gave up on that. Apple seemed to be a lot easier. There's a way to do it with Apple Health Kit, so you know an absolutely crazy twist of twist of a plot twist. I always have two two phones. It's an old childhood trauma.
+So I have two phones and I had I had two Android phones. I had Samsung because it's the best phone in the world that takes pictures. And you know, I do a ton of photography. So, you know, what's the best camera? The one you have on you when you see something. And I had Google Pixel because I was kind of interested in the ecosystem and it absolutely sucked in.
+In every way possible, so I went in and changed it to iPhone, and I got myself an Apple Watch, and I got myself the whole access to the Apple Healthcare data, and turns out it's just a treasure trove of stuff, so...
+Uh, this, this is speaking of building things, this is what I'm building.
+
+Jatin Bagga   8:11
+Thanks for sharing, Vlad. Are you asking us to build an Apple Health, like from a therapy session standpoint, like to figure out what you were saying? Is that where you're going? Like, what the heck?
+
+Vlad Grubman   8:19
+You don't, no, no, no, no. I'm saying it collects your, your...
+Not not your not not your psychological state. It doesn't doesn't do that. It's it collects your.
+heart rate, dynamics of the heart rate, blood pressure, all those cool things. If you're working out or if you're doing any kind of like strenuous physical activity and you want to track things like that, it's really helpful and it's all there. So speaking of projects, speaking of what should we build,
+This is an absolutely untapped market. There's a bunch of stuff here and there, like tiny little bits, but there's not a single solution that sort of lets you see your health state based on all the data that you have.
+
+Alfredo Achecar   9:14
+Wait, wait, Vlad?
+
+Vlad Grubman   9:14
+If you, if you, yeah.
+
+Jatin Bagga   9:16
+Yury has his hand up. He's probably getting tired. I think we should let him talk. He's got something on the.
+
+Vlad Grubman   9:20
+Okay, I'll shut up now. I'll shut up. I apologize. I'll shut up now.
+
+Jurijs Markelovs   9:23
+Yeah, you do understand what the most important details about health health results is their accuracy, right? And based on the based the way of the the the the the metrics, what they are, Apple devices are providing, this is not.
+Not accurate enough to to make some kind of a decisions. I would I would be very skeptical.
+
+Vlad Grubman   9:48
+I mean, I mean, I'd love to carry, I'd love to carry MRI machine with me, but I've heard they're heavy, so...
+
+Jurijs Markelovs   9:54
+Yeah, all I'm saying is just they they coming up of the ring smart rings these days and all that crazy stuff, but how accurate they are.
+Mm.
+
+Denis Platonov   10:04
+There is also oraring. It's pretty good, actually.
+
+Jurijs Markelovs   10:04
+What?
+Yeah, well, yeah, yeah, that I think that was a...
+
+Vlad Grubman   10:09
+I actually, as a matter of fact, I have an Aura ring. I know Mikhail and our team also has Aura ring. We take data off of it, and it's really helpful in understanding the sleep dynamic and...
+
+Jurijs Markelovs   10:23
+Is it one of these where they change color depends on your mood?
+
+Vlad Grubman   10:26
+No, no, it's the one that tracks your blood pressure and everything.
+
+Jurijs Markelovs   10:28
+I'm just kidding. Yeah, I know they are the most sacred ones in the market these days.
+
+Denis Platonov   10:30
+But it's surprisingly good, like tracking your state.
+
+Vlad Grubman   10:34
+Yep, yep, yep, I was I was I was really surprised, and when it's paired, and that's kind of the cool part about Apple HealthKit. It absorbs the data from Ora Ring, so you don't have to go into different places. You can just pull everything from from a single data source, which is, to in my head, is really cool.
+
+Denis Platonov   10:51
+So now, welcome to the team Apple Guy. Great.
+
+Alfredo Achecar   10:52
+But.
+
+Jurijs Markelovs   10:55
+Yeah, but there is a viral, viral video on the YouTube I've seen recently, my son, not me, how it cheating these smart rings, how they're hacking them, or not to be able to track accurate information. But anyway, that's just not what I wanted to ask. What I really wanted to maybe start a conversation, which I
+tried a few times, right? Is the very common use case, I think, when we are migrating from one stack.
+of, yeah, the stack from one stack to another. In our case, I think we are post-functional QA, hopefully, migrating for one automation framework to another. What would be the guidelines? I mean, I kind of experimented enough already to get some kind of general idea, but I would.
+I was hoping to get some kind of assistance or guidance where somebody had an experience utilizing obviously the AI capabilities to do so.
+
+Eugene Semenyuk   12:02
+So, yeah, for this, for this task, yeah, especially for especially for test automation solutions, you can think about designing some skills that can help to migrate some parts of the framework to the in order to.
+Knowledge here, like, and then skills you can specify, like, how to migrate page objects, how to migrate tasks, how to migrate to TLTs, and so on.
+Mm.
+
+Jurijs Markelovs   12:31
+Right. These would be like more straightforward use case, like UI related test cases, but the reality is quite different. The fact we have heavily relying on the API mocking, stabbing, you know, like them some fixture files.
+
+Eugene Semenyuk   12:32
+Mhm.
+Yeah.
+Mhm.
+
+Jurijs Markelovs   12:51
+the JSON injection, SQL injection, dealing with company firewalls and bypassing all that. This is like another dimension, right? So what I have...
+
+Eugene Semenyuk   13:04
+No.
+
+Jurijs Markelovs   13:09
+Like a safer way to start doing that is just I broke my broke the test cases, what I have to migrate into like a three or four different categories of the complexity, the low hanging fruits, basically I have migrated already, right? I have made an attempt to migrate.
+like a medium complexity of the tests, but this is where everything goes like chaotically off.
+And I'm having like issues to connect dots.
+Hopefully it makes sense. So maybe providing some kind of the guidelines, like you said, Eugene, it does makes perfect sense, but maybe more down to earth example. All right, we have our spec tests, which is API, unit tests, integration, UI, and so on.
+
+Eugene Semenyuk   13:56
+Oops.
+So, and yeah, and for for each type of task, yeah, it requires a bunch of bunch of skills, like, like how to how to migrate these particular tasks to, for from this technology to the another technology, yeah, like for for.
+Every for each repetitive operation, so yeah, it would be great if you will have a skill.
+So, yeah, and uh, yeah, and uh...
+Yeah, and here we can specify, like...
+For example, yes, you mentioned some mocking mocking strategy, yeah, and how how to convert like the test from.
+Um...
+From such smoking to the for one technology and make this smoking on the another technology. So yeah, yeah, for this speaking.
+Yeah, it requires deep understanding of both technologies, like from what you are migrating into what.
+
+Jurijs Markelovs   15:09
+Right.
+Do you think first step, the most important step, to run around existing test framework and just try to learn, create some rules, not rules, but the logic, internal logic, or...
+Type of the tests are basically trying to learn the first step. Do you think the first step would be suggested step would be learned using AI? Obviously, create like a migration guidelines based on existing framework, right?
+
+Eugene Semenyuk   15:30
+Yeah.
+Okay.
+Yeah, like, like describe existing framework dependencies, yeah.
+It should be helpful.
+So, you can you can use a prompt that I shared for this automation context, so yeah, it should be.
+feasible for this prompt to analyze the current task automation solution, map dependencies, rate infrastructure, yeah, and
+Yeah, and then you can think about, like, what, what and how.
+You need to migrate.
+
+Swathy Lokula   16:27
+Xbox.
+
+Eugene Semenyuk   16:32
+Because.
+Yeah, probably we should not migrate all the tests. Maybe you have some tests that can be optimized.
+
+Swathy Lokula   16:38
+Yeah.
+
+Eugene Semenyuk   16:48
+So yeah, maybe in this case, we can think about how to optimize current test suit.
+Yeah, to migrate less amount of tests.
+
+Jurijs Markelovs   16:59
+Yeah, so what I was specifically doing, my task is, all right, we have 9,000 tests, which I mentioned a while ago, right? Let's try to identify end-to-end scenarios based on these tests, because they are like a lot of redundant. Like I said, unit test integration and so on.
+
+Eugene Semenyuk   16:59
+Yeah, that's...
+Mm.
+Blue.
+
+Jurijs Markelovs   17:20
+So I'm trying to identify the end-to-end test cases, which are, and the ones what have an easy or low complexity I have migrated, but something more advanced are.
+
+Eugene Semenyuk   17:38
+Okay.
+
+Jurijs Markelovs   17:38
+So much luck.
+
+Eugene Semenyuk   17:40
+Alexander, would you like?
+
+Oleksandr Pavlovskyi   17:42
+Yeah, yeah, guys, ohh.
+You was talking about, I think, yeah, that should be also mentioned. Yeah, you should build the plan. But don't forget that AI help us to do one important thing. You can do discovery, investigation. Yeah, like you remember in this spec-driven development framework, yeah, we have
+stage, not only plan, we have clarification stage. So before building plan, you can brainstorm with AI. Don't forget about this ability, yeah, that provides very well. And let's give you one important thing that you need to do. Also, you need to build this project documentation for AI.
+understandable instructions, yeah, regarding to these parts that you would like to migrate, yeah, identify these parts, yeah, and then when you're gonna have this plan, yeah, you're gonna think you're gonna have ability to think about the tools that you would do would need to use, yeah, if it's gonna be some...
+routine procedure, yeah, for example, you need to create some specific instructions, I don't know, for some steps, or you need to provide some skills. You can design these skills also based on this plan. So that's why, yeah, I always recommend to use spec driven development because it's a great framework. It's very universal thing, not only for implementation.
+
+Swathy Lokula   19:02
+S.
+
+Oleksandr Pavlovskyi   19:09
+This thing, yeah, help us to organize any work, yeah, which you can use with EI and give you ability to generate needed documentation for this. Of course, yeah, that should take time, but that give you ability to think about some ideas, some side effects in your conception and so on.
+So I recommend to start with the first step, and always the first step, it's a brainstorming key on your idea. Yeah, you know the goal, for example. Yeah, you know the goal with which you want to achieve. But how to achieve? Yeah, it usually takes some actions, yeah, that you need to do with your team.
+And in in some part with AI nowadays, yeah.
+
+Jurijs Markelovs   19:54
+And what spec framework are you referring to, Alexander?
+
+Oleksandr Pavlovskyi   19:58
+Spec driven developments. If you remember, I have shared the, you can you can just type in a Google, you're gonna find the GitHub repository to this thing. And it's just provide for you some several agents, yes, that give you ability to build this workflow, yeah, because step is spec driven development, it's a framework, yeah, that provides some workflow.
+
+Jurijs Markelovs   20:04
+So.
+
+Oleksandr Pavlovskyi   20:22
+And on the first side, it's aimed maybe only on implementation, but not, but migration, it's implementation as well, yeah, just because you're doing the same thing technically, yeah, but the goal different, yeah, you're implementing not the new.
+Feature, you implementing some changes in your code base, for example, yeah.
+Ohh.
+Well, you know, this year, because our solution architects always use this clarification part to brainstorm.
+It's a good agent instructions, yeah, that give you ability to get from AI very important questions, yeah, to estimate this migration process for you. Migration, I don't know, steps that you need to do. Technologies and so on, discuss.
+
+Debamitra Bhattacharjee   21:28
+Alexander, can you please type the, it's not test driven development, you mentioned spec driven.
+
+Oleksandr Pavlovskyi   21:33
+So, yeah, please give me give me a couple of minutes. I need to connect to video because I can copy paste to this chat specification driven development, but in a couple of minutes I will post to the link to the chat.
+
+Debamitra Bhattacharjee   21:42
+Okay.
+Mhm.
+
+Oleksandr Pavlovskyi   21:49
+We discussed this here several times during our workshop sessions. We had several showcase from our champions. Jason is a big fan of spec-driven development, for example.
+We talk not only about spec-driven development framework that GitHub provides, we talk about alternative like OpenSpec. It's the same, yeah, but it provides a bit different instructions, but the idea is the same.
+
+Eugene Semenyuk   22:38
+So, what, what, what, and what kind of tool would you like to recommend? Open spec or spec gate?
+What is?
+
+Oleksandr Pavlovskyi   22:45
+It doesn't matter, guys, because the idea is the same. Maybe GitHub provides more, I don't know, iterative support on this, yeah, because it's a GitHub, yeah, it's more popular source, yeah.
+
+Eugene Semenyuk   22:47
+Okay.
+
+Oleksandr Pavlovskyi   23:03
+Of this idea, but this is all about context engineering, yeah, and the idea is to optimize our communication with with AI and all these conceptions, yeah, all these paradigms that we use, yeah, I mean skills, prompt instructions, MCP service, and so on. It's always.
+generic, yeah, it's not something new. Yeah, maybe it's gonna be different, difference only in your habits. If you're gonna use always GitHub or OpenSpack, it's gonna be more useful because you understand the expectations. Yeah, for example, like we.
+Using, yeah, for example, we have fans of cloth models or somebody would like prefer to use, for example, GPT models. Yeah, why? Because we know what results we're gonna expect. Yeah, we know that, for example, for my application, yeah, when I...
+trying to do this code review, yeah, I'm getting this result and I know that some gaps can be with my model, but I know these gaps, yeah, but when we're trying to use new model, yeah, it's always some unexpected result that says it can be, yeah, maybe better, yeah, maybe worse.
+That's why the same is working with this all open source libraries.
+OK, give me give me a minute here, and meanwhile you can guys continue discussion.
+So, Jurijs, that's gonna be migration only related to framework here that you use in here, or could be should be affected as well.
+
+Jurijs Markelovs   24:57
+No, just the apples to apples. Not required my task. Well, it could be either or, whichever is simpler, but my alternative goal is just to migrate existing, identify existing based on like different type of tests, identify E2E scenarios.
+Um...
+Basically, there are 9000 tests or whatever. I would assume that would be like close to 100 E2E scenarios or so to identify based on existing ones, so...
+
+Oleksandr Pavlovskyi   25:32
+Yeah, you know the most complex part, yeah, it's uh, I don't know.
+Combine all this information in your head, yeah, and then somehow to represent this information for AI in these instructions, yeah, so technically, yeah, AI can do that thing that you can good.
+Explain to to it, yeah, give this instructions. If you talk about skills, yeah, this is this is instructions as well, yeah, but in this case, yeah, this, if you remember, yeah, how we on the beginning of this EIH, yeah, we build our prompts and we assign a role.
+act as a senior automation engineer, yeah? Automation QA engineer, yeah? That means that he knows about some things about automation engineer from the internet and learn on this, so he has some neural neural links connection regarding to this topic, yeah, and we expect that he gonna use these details. But in our
+In case we can define this role. Yeah, we can explain what does it mean automation PA Engineering.
+
+Jurijs Markelovs   26:50
+Do you think?
+Do you think we can just step aside and maybe set up a little bit of time, review with what I have, and maybe just...
+suggestions on your end.
+because it's quite complex.
+
+Oleksandr Pavlovskyi   27:05
+We can use, we can use these time slots, guys. These time slots for this, we have not only me, Eugene, Vlad, yeah, Ron, we have everybody, yeah. So, if you would like, yeah, let's use this office hours here to to have this brainstorming. We can.
+Discuss it with our future auditory.
+It's going to be more useful because you're going to get advices maybe from some similar projects. Yeah. So if you would like, yeah, we can plan this session, for example, next Friday. Yeah.
+
+Jurijs Markelovs   27:38
+Yeah.
+Yep, that's exactly what's gonna propose. Um, so already a little better.
+
+Oleksandr Pavlovskyi   27:45
+Mhm.
+In brainstorm, maybe to do like a live coding session to try maybe some implement to to try some to to brainstorm this, yeah.
+Uh, Aditya.
+
+Heath Fest   28:09
+Hey, Alexander, my team has been working on spectrum and development too.
+So.
+
+Oleksandr Pavlovskyi   28:16
+Yeah, and yeah, could could you please share your experience with this? Yeah, because of course we have some drawbacks here, yeah, because spec-driven development, it's not the regular thing that we have to use, because you know it's tokens cost consuming, yeah, in some cases.
+For some simple task, yeah, it's more easier just to use simple agent, yeah, and ask to do something, but in the regular procedures, yeah, it it works, yeah, because you have this documentation here, you can regularly update this documentation, and then, like, what's showcased, yeah, a couple weeks ago, you can rebuild like a second brain for your project, yeah, because you...
+Have this this enough detailed documentation here regarding to all actions that that was that that did, yeah, that you did in in this that your team did in this project, yeah, and that give you ability to, I don't know.
+Build an expert of your of your project, yeah, and you can ask this expert about anything, so many things, yeah, that how you can use it. So, here's could you share your experience? Yeah, interesting to hear, yeah, the...
+Real life experience, how it works for your project.
+
+Heath Fest   29:45
+We're still in the beginning stages of it. We're also splitting out.
+Uh, the source of truth for the...
+system context from the changes that are going in for that iteration.
+So the specs themselves, the specs for the changes, and then we're also...
+Um...
+moving out the skills or the SDLC for that developer. We're putting those in a separate location as well. After we get a little bit further.
+We can do a demo, but...
+We're learning as we go, if that makes sense.
+
+Oleksandr Pavlovskyi   30:44
+Yeah, yeah, yeah.
+You know, it's hard to say that that will work for you as it's, I don't know, documented in this official documentation, yeah? You need to play with it, yeah? Because not for all project, yes, but driven approach is going to be applicable, yeah? I mean, for example, for some support things, yeah.
+Or some legacy projects, it's gonna be hard to implement these because it's tons of code, yeah, and so, yeah, I know, yeah, we have similar similar projects, yeah, and yeah, we have teams, yeah, which try to build this documentation, yeah, especially if they, for example.
+by some solution, yeah, that was not supported, for example, by your company, yeah, and it was not enough documented. And unfortunately, you have time, you have spent time to understand this application, this implementation, and so on. And in this case, yeah, going to be very helpful, yeah.
+And probably in this case, spec-driven development could be also a useful thing because it can automatically generate all the specifications, yeah, document all models of your application, yeah, and all services and so on, and then support with this, but it's...
+We need to experiment with this. Yes, I have posted the link to this spec kit. Yeah, and his do you use spec kit or open speak? Open spec? Could you please remind?
+
+Heath Fest   32:24
+Um...
+We didn't, we're not using.
+
+Oleksandr Pavlovskyi   32:30
+Cool.
+
+Heath Fest   32:33
+Um, one particular...
+Um...
+one particular type of kit.
+Um...
+
+Oleksandr Pavlovskyi   32:45
+Okay.
+
+Heath Fest   32:46
+I...
+
+Oleksandr Pavlovskyi   32:48
+I've got it. The idea, yeah, is to build these specifications, yeah, so, and it's going to be like a regular format, like an MD format. It's okay, yeah, it's okay, because if it's more applicable for your project, yeah, it doesn't break this conception, of course.
+
+Heath Fest   32:49
+Yeah.
+Yeah, the main idea is that we wanted to be able to...
+To have.
+Um...
+a reusable source of truth for the application and that would be put into the MD files.
+
+Oleksandr Pavlovskyi   33:25
+Mhm.
+
+Heath Fest   33:28
+That way.
+As.
+Sorry, I really wasn't prepared to like talk through it today, but I'll try and like suffer through it. But so the point is, is that there's a lot of different
+
+Oleksandr Pavlovskyi   33:37
+Yeah.
+
+Heath Fest   33:47
+people with different skills on our teams. And so if me as a SQL engineer,
+If I had a change that I needed to make, I for a certain database or certain not database, but for a certain application.
+I would pull down the context for that system to my local machine that already had, and then I pull down, so that would be a reusable context that me as a SQL engineer I would reference or.
+my agent would reference for context. But then the middle tier and UI developer and QA agent, our analyst, would also be pulling down that same.
+system context for them to create their test cases or the changes they need to make to Java or Mule or GraphQL.
+But yeah, the idea is that the context is at the system level.
+So that everyone is, you know, marching down that same path.
+As far as the specs.
+As far as the spec driven development side for the changes themselves for that particular iteration of whatever we're changing in the application, yet that lives at the code level. And then those specs get moved into the system context for
+Future reuse.
+
+Oleksandr Pavlovskyi   35:35
+Yeah, yeah, yeah, yeah, there's definitely a solution for your team, yeah, this is, I understand.
+Cool, cool.
+
+Heath Fest   35:46
+Yeah, the levels of spec driven development that I've seen so far is something called like spec first and then spec anchor and spec as a source. And I feel like we're incorporating the three of those.
+
+Oleksandr Pavlovskyi   35:58
+Mm.
+
+Heath Fest   36:05
+Into a solution.
+
+Oleksandr Pavlovskyi   36:10
+And these specs are part of your code base, yeah, let's let's let me clarify, yeah, or you have like a separate repository for these, so I mean, how how developers QAs, yeah, for example, working with this, because usually, yeah, we...
+
+Heath Fest   36:24
+Yeah.
+Yeah, so...
+
+Oleksandr Pavlovskyi   36:30
+Mm.
+
+Heath Fest   36:31
+Yeah, sure. So.
+So inside the code for whatever it is, whether we're talking about Java or SQL, whatever, there'll be spec, there'll be MD files in there for in a spec folder, right? Some of those MD files will just be.
+
+Oleksandr Pavlovskyi   36:51
+Mm.
+
+Heath Fest   36:55
+pointers back to the context for that system or for that application. And then there'll be a pointer back to the SDLC that defines out what the skill is for that code. So if I'm bringing down a database project from GitHub, of course, the skill that's going to be in there that MD file is going to reference is going to be SQL Server or SQL.
+And so inside that MD file for for that for for for the SQL skill will be everything about, you know, how we structure our tables and naming conventions and logic that we like to use, reuse inside of store proc.
+you know, all that kind of stuff that us as engineers do on a daily basis, right? So that way there's context for the system and then also how to write the code. So the idea is that the agent would pull down the main branch.
+for that skill and for that system context. We're in the process of creating two new GitHub organizations, one for system context and then one for skills for the SDLC portion.
+
+Oleksandr Pavlovskyi   38:04
+Please.
+
+Heath Fest   38:20
+Um...
+Hopefully those will be done soon. We didn't want to...
+I thought that it was best or we thought that it was best to keep the skills and the system context separate in two different repos, sorry, organizations. Mixing the two would be cumbersome or...
+confusing at times. So yeah, that's where we're at now. We're going through a process of determining what goes into each of the MD files for the skills and for
+a sample application right now. It kind of got put on the back burner for a little bit. I had some other stuff that I needed to focus on, but.
+Yeah, I'm just trying to.
+help the process grow. And so, yeah, that's where we're kind of at right now.
+
+Oleksandr Pavlovskyi   39:30
+Cool, cool, sounds cool, yeah. And you know, this is the thing that we definitely should share, yeah, across OMF organization, yeah, because this is the way, yeah, how we definitely should use AI in the future. Yeah, I think this spec first approach, yeah, there's going to be a...
+
+Heath Fest   39:47
+Yeah.
+
+Oleksandr Pavlovskyi   39:51
+Like something, I don't know, use usual, yeah, I think.
+
+Heath Fest   39:51
+Yep.
+Yeah, I mean, the plan is to share it across the organization.
+But we're, I don't wanna.
+overcommit and underdeliver, you know, so I want to make sure that, you know, we kind of work out the bugs because I'm sure that we're not going to get everything right the first pass, right? And so, yep, the idea is to share it.
+Outside of just our teeth.
+Yeah.
+Sounds good. Yep.
+
+Oleksandr Pavlovskyi   40:42
+our sessions or during our office hours meetings. Yeah. Now we are in a phase, we are almost in a phase three, yeah, and we are aligning regarding to some organizational part how our sessions gonna be planned, yeah. But I'm really sure, yeah, that we're gonna have these office hours meetings, yeah.
+this, I don't know, community session, yes, that we can use here to discuss.
+Topics like this. Great idea here, so...
+Yeah, that's going to be very, very interesting to hear about the results. And if you're going to need any advice, so just ask, yes, in this audience or personally, we are always ready to help.
+
+Heath Fest   41:18
+Thanks.
+Sure. Sounds great. Thank you.
+
+Oleksandr Pavlovskyi   41:38
+Alright, guys, any other ideas? Yeah, maybe somebody inspired to use spec-driven approach as well.
+We have 20 minutes more.
+All right, so great discussion. Thank you all guys.
+We should have a great Friday, yeah, and if you're gonna have any ideas, questions, you can just ask us in the chat, yeah, or submit tickets on our board if you would like to some to to to showcase something, and so...
+See you, what's what today? See you on Monday, yeah, it's on Monday, yeah. For us, we are more lucky here, yeah, because it's almost Friday's evening, so Friday's more Phillips for us, like Friday.
+
+Eugene Semenyuk   42:36
+Yes.
+Yeah.
+
+Oleksandr Pavlovskyi   42:46
+Yeah, and so, Eugene, would you like to add something?
+
+Eugene Semenyuk   42:52
+No, just like have a great rest of the day and happy, happy weekend.
+
+Oleksandr Pavlovskyi   43:00
+Happy weekend, guys.
+
+Eugene Semenyuk   43:02
+Okay.
+
+Heath Fest   43:03
+YouTube.
+
+Eugene Semenyuk   43:04
+Thank you. Bye.
+I.
+
+ stopped transcription

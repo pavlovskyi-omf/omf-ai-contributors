@@ -1,0 +1,819 @@
+AI Enablement Cross-Functional Lighthouse PDLC Session-20260414_090129-Meeting Recording
+April 14, 2026, 2:01PM
+1h 0m 53s
+
+Nicholas Crowley   0:07
+I think it has a mind of its own. They're all set up to auto-record.
+
+Nikita Kumar   0:08
+Yeah, Teams is like, yeah, Teams is like, I'm getting ready for summer. Leave me alone.
+
+Nicholas Crowley   0:14
+Ha ha ha.
+
+Nikita Kumar   0:16
+Awesome. I think we have most of our Code Me team as well and our coaches are on too. Great. Happy Tuesday. This is session number three of Benny coming up for you guys. But basically today's focus as we move forward, Tuesday focuses are going to be more
+show and tell of the homework that you guys have been assigned on Thursdays, as well as any questions that you might have from our sessions that were on Thursday or Tuesday from the following week as well. We also don't have to wait for this session for questions. We also have our Friday open hours where people can come in, ask any homework questions and things like that.
+So we'll get started. If we would love to have volunteers to show their homework for what they did. If not, I'm just going to go and pick names from the names that I'm seeing here. So if Laura wants to volunteer first, please feel free to raise your hand so we can get started for homework show and tell, which was creating your own assistance from our last session.
+Awesome. Jason, I saw your hand go up real fast.
+
+Jason Daggs   1:21
+Yeah, yeah, uh, just gotta, I gotta enter this octa token. I'm sorry, I...
+
+Nikita Kumar   1:27
+It's okay. We all have to do the Octo token.
+
+Jason Daggs   1:27
+Was not all the way logged on.
+But yeah, give me just a second.
+
+Nikita Kumar   1:31
+Doctor token is all of our problems.
+
+Jason Daggs   1:34
+Yeah.
+
+Nikita Kumar   1:35
+Hurt.
+No worries, take your time.
+
+Jason Daggs   1:38
+Yeah, almost there.
+And...
+My goodness.
+Is it gonna let me?
+Ah, there we go. Okay, great.
+You never know, it's always a gamble when doing these demos.
+
+Iryna Pashko   1:58
+Thanks.
+
+Jason Daggs   2:03
+Let me share my screen. Give me just...
+Oh gosh, give me just a second here. Unfortunately, it seems like every time I start Teams and try to use a browser application, those things just don't.
+Mix for some reason. I don't have enough.
+Hamsters in my machine, I guess.
+
+Iryna Pashko   2:47
+What?
+
+Nikita Kumar   3:21
+Sorry, interview.
+
+Jason Daggs   3:21
+Okay, here we go. Okay, we got somewhere. All right.
+
+Nikita Kumar   3:23
+There we go. Awesome. Thank you.
+
+Altaf Shariff   3:26
+Yeah.
+
+Jason Daggs   3:28
+Huh.
+Are you there for a second? OK, so...
+From my understanding, the point of the homework was to kind of exercise using CodeMe to create a new agent. And I was able to go through all the steps with the exception of actually verifying it worked.
+Unfortunately, what happened?
+It turns out is I don't have the EPAM.
+application available to authorize in my GitHub account. So that was that was a kind of robot for me. So maybe we can discuss how to how to overcome that. But I did want to just kind of go over and just
+
+Nikita Kumar   4:14
+Yeah.
+Absolutely.
+
+Jason Daggs   4:22
+Kind of briefly show what I did, what I did, and and how I went about doing it.
+So first, oh, oh, I'm not, am I not sharing it? Oh, goodness, okay.
+
+Nikita Kumar   4:33
+Are you sharing your screen yet? Sorry, we're not seeing anything. Not yet.
+Yeah, and our CodeMe team is here so we can help troubleshoot as well.
+Yeah.
+
+Jason Daggs   4:48
+OK, great. OK, so this is the assistance page, and so what I did is I, you know, I went looking around for some examples of existing code review agents that were, oh, I don't know, seem to be very popular. You know, really, it's a subjective thing, I'm sure, but...
+There's, I mean, there's literally dozens of repositories filled with agent skills that you can just, well, you can literally just copy and paste right into.
+To this particular tool, and yeah, it just usually it will it will work right, but...
+What this what this is supposed to do is review your PRs for you, and...
+And get a report.
+Five dimensions that it says in the description, and the modifications that I made, number one.
+Actually, the only modification I had to make was just to just include this line right here.
+And of course, this is just, you know, it's got to read the issue fields and metadata. And that's enough to get it to try to access that ticket.
+And then again, you know, it just, there's just some questions it's supposed to answer, correctness, readability, architecture security, performance, output formatting.
+which I like, gives you kind of a good priority, a good way to determine priority of any changes.
+Yeah, probably could stand to do some more work here on the verdict, perhaps in the future, getting it to actually approve the GitHub PR. But yep, and just a set of rules here at the bottom.
+And...
+Let's see now, I'm gonna go ahead and run this just once, just so we can see what it does, and this is just kind of the, you know, this is the conversation starter that you can add, and so when I send it...
+It's going to complain about not being able to actually access that GitHub.
+Repo, hopefully, that's still thinking, okay.
+Um...
+If it decides to come up, it'll give you hopefully an example of kind of how it helps you work. Ah, here we go, yeah, so...
+Yeah, it's telling you it can't do it.
+But, uh...
+In previous iterations of this, oh yeah, here it is right here. It's right here. It's actually telling you.
+Command you can use to work around that and paste the diff into this agent.
+And let's see any I.
+Not sure, it's giving you all kinds of different rules and example implementations and such, so that, you know, may be helpful, but yeah, you see, it just, I mean, it spits out a page of text even when it doesn't, even when it doesn't actually.
+At your.
+So, fantastic in that regard, and I haven't tried that yet, so probably.
+Want to do that in our demo today, but anyways, let me wrap up here and just say, here's the agent I was able to.
+create, easily create the GitHub Integration and you know, and hopefully in the future I can actually get connected to both of those. So thank you.
+
+Altaf Shariff   9:00
+It was a mini in there.
+
+Jason Daggs   9:23
+Excellent, thank you.
+
+Nikita Kumar   9:24
+Awesome. Thank you so much. That was so great to just be able to see. And then, you know, you went above and beyond because it was more JIRA, but this is kind of cool too, to just to see the cool stuff that you worked on. So thank you.
+
+Jason Daggs   9:34
+Ohh yeah, thank you.
+
+Nikita Kumar   9:36
+All right, who do we have next? Oh, go ahead, go ahead.
+
+Oleksandr Tsyganok   9:36
+Yeah, I get.
+I can, I can, I can mention that, yeah, currently we see that we just rely on on LLM itself, so there is no actually connection to GitHub. Maybe it's like some security restriction or some misconfiguration of integration, but it means that it's like...
+Still, it cannot connect; we have this like tool to GitHub and extract this pull request, so this like output that we have currently is like fully like based on LLM knowledge.
+
+Jason Daggs   10:11
+Yeah, and you know I followed those instructions that you just sent me. I actually found those, and that's what I did to get everything. But if you see right down here where it asks you to authorize an organization,
+
+Oleksandr Tsyganok   10:12
+Yeah.
+Mm.
+
+Jason Daggs   10:27
+You have highlighted the OMF EPAM organization, but I don't have that on my list, so...
+
+Oleksandr Tsyganok   10:35
+Yeah, you need to organize like organization where you have your source code.
+
+Jason Daggs   10:43
+Oh, I'm sorry, say that one more time.
+
+Oleksandr Tsyganok   10:46
+You need to organize the organization, like where you have like a source code for your project, because currently in OMF you have like multi-organization setup, so it was just an example in the guide, so I have only access to this like EPAM organization and that's seems.
+
+Jason Daggs   11:00
+Oh!
+Oh, I see. So if I had authorized like the OMS Service Hub organization, which is what I generally work in, I think, OMS Service Hub prod or something like that, if I authorized that, then it would have worked? Okay.
+
+Oleksandr Tsyganok   11:05
+Mm.
+Yeah, let me.
+Let me check your.
+Mhm.
+Potentially, yes, let me let me check your tools that was.
+
+Jason Daggs   11:24
+OK.
+
+Oleksandr Tsyganok   11:25
+Connected the configured, yeah.
+You will also need to like connect Git tools. Let me share like my screen.
+
+Jason Daggs   11:35
+Yes.
+Okay, yeah, please.
+
+Oleksandr Tsyganok   11:40
+And by simply, you can try like this extra steps, and if you still have questions, we can like have a deep dive on Friday, as Nikita suggested. Yeah, first.
+
+Jason Daggs   11:51
+Yeah, and and I did, yeah, I did select that in the GitHub.
+
+Oleksandr Tsyganok   11:55
+Yeah, good.
+Yeah, first of all, you need to select this one. I'm like editing your agent and it's not selected. You need to select, it was not selected. Yeah. That should be like enough to use GitHub API and directly to like interact with it. If you want to have like some.
+
+Jason Daggs   11:57
+Mhm.
+Oh, okay. Oh, it was not selected. Interesting. Okay, interesting.
+Mm.
+Oh gosh, well...
+
+Oleksandr Tsyganok   12:16
+extra steps and actually work with your source code, use some like Git capabilities, connect like a data source. You can also add this like additionally Git tool with like set of functionalities that you want to work with. It's like basically we'll check out this repository and work with it like locally using like Git commands. First one is.
+
+Jason Daggs   12:17
+Mmh.
+Right.
+Right, yeah, it.
+Yeah.
+
+Oleksandr Tsyganok   12:37
+Connecting via API, second one is like working with people, and so, yeah, but yeah, so you should like...
+
+Jason Daggs   12:43
+Ohh, okay.
+Okay, go to, could you go to the, what was the first one you selected? VCS.
+
+Oleksandr Tsyganok   12:50
+Version control systems, so like you should select like GitHub, yeah, and you can just save, you can select your specific integration if you have like multiple connection connectors, like, but yeah, just just try configuring extra tool, you should like see like each time, like a good indication that.
+
+Jason Daggs   12:53
+Okay.
+Alright, right.
+Gotcha.
+
+Oleksandr Tsyganok   13:10
+It works correctly when you use your assistant. You see, you should see a specific tool called. Let me show it some example, examples.
+
+Jason Daggs   13:18
+Okay.
+
+Oleksandr Tsyganok   13:23
+Specific agents that we were building, so, as you can see, it's has specific Jira tool call, like confluence tool call, and then code me so that just like infer and like LLM model and just output and token for your case, you only have this like...
+
+Jason Daggs   13:27
+Yeah.
+
+Oleksandr Tsyganok   13:42
+LLM connected but not not this tools. Yeah, so you can try extend this like with extra steps and yeah, let's see like how it's going on Friday.
+
+Jason Daggs   13:51
+OK.
+Yeah, yeah, I'll keep working on it. Thank you.
+
+Nikita Kumar   13:57
+Thanks, Alex.
+Um, who do who do we have next who wants to volunteer to show what they've been working on for their homework?
+We will pick names if people don't raise their hands. All right, Swetha.
+
+Swetha Koppula   14:11
+Hey, good morning.
+
+Nikita Kumar   14:11
+I see your hand went first. Good morning.
+
+Swetha Koppula   14:15
+Yeah, let me share the screen. Just Jira Integration, it should be quick.
+Yep. Based on the last week meeting, I have created an agent Jira story homework. And before that, I created a story using an example of last week's ES, which has been.
+Oh.
+
+Nikita Kumar   14:57
+Are you sharing anything yet? Just wanted to ask, but it's not on the screen. No worries.
+
+Swetha Koppula   14:59
+Yes. Oh, sorry. One second.
+Oh, so bad I missed the screen. Sorry.
+
+Nikita Kumar   15:57
+No worries.
+
+Swetha Koppula   16:11
+Yeah, oh, can you see my screen?
+
+Nikita Kumar   16:14
+Yep, the Jira page, correct? Yep.
+
+Swetha Koppula   16:15
+Yep, yes, yes. I created this JIRA story based on the previous meeting based using that as an example. And I don't have proper JIRA ticket for type work like it will be like 2 lines description, whatever I work.
+
+Altaf Shariff   16:29
+Yeah.
+
+Swetha Koppula   16:35
+But yeah, I created this Jira story and then I create an agent here.
+Let me show the configuration. Yep.
+Yeah, I need an assistant that can work the Jira. I just check user story quality and post the comment. And I started some conversation starters here and added some prompt. And then in the tools, how just...
+selected this and added the token which we have created and then
+Integration.
+Yep. Assistance, here is the one.
+And the chart, yep.
+Yep, when I use when I just run run that post the comment for this, I got a failure because I have created this user story on the production one, not on the training one, which I got known, and then random.
+And then I got the failures and then I realized I was not using the, I mean, I don't have the permission on that. And then I used the one which have the Jira ticket on the training. And then I posted a comment. I just added a prompt here to post the comment.
+This is the data ticket. Yeah, this is the one I got.
+And then I asked for the review for that. It asked for the permission, like I added in the prompt to give a confirmation before hiding anything. When I said yes, then only post the comment and then it got some review for that Jira ticket.
+This is the homework I've done.
+
+Nikita Kumar   18:43
+Awesome. And can you show what the comment looks like again in the JIRA ticket?
+
+Swetha Koppula   18:48
+Yep, this is like how actually how our data tickets will be. Yeah, this is the reason I created what have done using that last week data ticket which has been showed by the trainer used that as an example and the user some agents and.
+
+Nikita Kumar   18:52
+Yeah.
+
+Swetha Koppula   19:08
+and the documentation which I have done in the conference and I created this story. But yeah, for unfortunately I created in the production one, so I could not able to. So I used the original ticket. Yeah, this is a comment.
+
+Nikita Kumar   19:20
+No worries.
+So, it gave you everything, because, yeah.
+
+Swetha Koppula   19:26
+A do it, a clarity, completeness, and testability, everything on that.
+
+Nikita Kumar   19:32
+Nice, awesome. Yeah, like some of these, this, an agent like this, similar to what we've done with our end-to-end demo with requirements hardening, is to make sure that, you know, when you guys get tickets as developers, you're making sure those tickets are as full-fledged for you and ready for you, so there's less back and forth.
+with the digital and the product teams as well, but the end goal of like our sessions with cross-functional is so you can take some of the agents that could be created with the digital team and then pull them in with Deb and with QA to be able to build like one larger flow for yourself. But this is awesome. I mean, I'm glad you were able to see all the different things that weren't there because.
+
+Swetha Koppula   19:50
+Yeah.
+
+Nikita Kumar   20:09
+The ticket only had two points on there, but this looks great.
+
+Swetha Koppula   20:12
+Yep.
+
+Nikita Kumar   20:13
+Thanks, Oleg, any comments from your from your side?
+
+Swetha Koppula   20:15
+Yeah.
+
+Oleksandr Tsyganok   20:18
+Yeah, looks great.
+
+Nikita Kumar   20:22
+Awesome. Thank you so much. Um, Sukalya, I see you have your hand up as well.
+
+Swetha Koppula   20:22
+Thank you.
+
+Sukalya Rajendran   20:28
+Yep, so I just wanted to share one of the Jira assistants that I created.
+OK, are you able to see the screen share?
+
+Nikita Kumar   20:40
+Yes.
+
+Sukalya Rajendran   20:41
+Okay, so we got access to EPAM code to me in phase one itself. So we went ahead and played around with it and created a bunch of assistants. What I'd like to show here today is 2 things. One is the catalyst DDL watcher. So this assistant is shared with the project. And here, if you see this is integrated with the project.
+
+Altaf Shariff   21:00
+Okay.
+
+Sukalya Rajendran   21:01
+the JIDA to pull any task that is created by the Catalyst UX team that they have labeled as Catalyst DDL update. So if that's a task that has this label on, it means it impacts the data pipelines which we own from the EDS team. So I wanted to be able to create follow-up.
+tasks for every front end change that had a DDL impact. So this assistant will just do exactly that and some conversation starters to see to help create a template for data model review or domain model review and also just show me a list of the Jira tasks that have this label.
+and in what status it is and also create a template task for data pipeline work itself and give it a bunch of instructions as to which Jira board it has to create the follow-up tasks in if it finds a catalyst detail update task. So I had given it.
+Three particular Jira boards, because after the Catalyst team does their work, it has to go through a bunch of hops, one for domain review to a different team, and they follow a different board. I've given that information, then if you go to the data modeling team, they follow a different board, so it has to create.
+a follow-up task there and finally the DFP data pipeline work which comes to the DFP board. So I gave it a lot of instructions. I did work with the different teams here to find out in what format they would want their Jira tickets to be in. So I got some basic information.
+like this particular example for the domain review work, they asked for, you know, the business concept information and then the enums that have to be mentioned and things like that. So that will make their job easier while reviewing it from a data modeling perspective. So if that information is available in the source JIRA.
+then it'll add all that information in the follow-up JITAs as well. So they don't have to keep referring to the old ticket. So, and I've also given some examples. Then let me just quickly show you a chat that we had with.
+This particular one, yeah.
+So this, this Jira, okay. So this is an execution where I literally told it to track and give me the list of open Jiras that have this particular label. It gave me two Jiras from the cat board, which is the catalyst board. Now it asks me permission as to what the follow up is.
+tasks have to be. So already I had run this assistant a couple of times, right? So I'd already created some tasks. So I wanted to mention that if a follow-up task already exists in those boards, I wanted to know. So I gave this command and then it was able to pull up the correct task.
+follow-up tasks that it had already created for me with the details and what status it was in. And then, yeah, for the data pipeline, I had not created a task. So I asked it to create some of the missing tasks for specific cat tasks. It went ahead and did that and created it in the correct boards.
+and give me the information. So I can pick one task, which is the Snowflake, the main model review task. And then basically it has a link to the original cat task as well. So yeah, so if they want to, they can refer to the source. And then it also gives the downstream dependencies like.
+the DFP task that is dependent on the Snowflake model task. So that way they're aware as to the upstream and the downstream dependencies. And yep, that's about the Jira Assistant that we've created specific to Catalyst Stage 2 work. The next thing I want to do on this is to schedule it to run automatically.
+I did check with Alexander on that and I think we were told that feature is being rolled out, the scheduling feature. So once it's available, I'll probably schedule this to run automatically on its own at least once a day. That way the follow-up tasks get created in my backlog automatically.
+Any questions?
+
+Oleksandr Tsyganok   25:22
+Yeah, great demo scheduler feature is already available, so you can create a separate integration of type scheduler. You will need to have like admin permissions for a project to create this like scheduler integration and like another.
+
+Sukalya Rajendran   25:23
+Yep.
+Okay.
+Yeah.
+
+Oleksandr Tsyganok   25:41
+like recommendation you mentioned like links, you can also add instruction to this agent to use native Jira functionality. So it can also like use native Jira functionality with links. You have like this link section, so it's like much more easier to navigate.
+
+Sukalya Rajendran   25:44
+Mm.
+Sorry, can you repeat that? Native?
+Okay. Okay.
+Mhm.
+
+Oleksandr Tsyganok   26:01
+I don't remember, maybe there is no API to create a user story and add links in a single call, but you can add like instruction to create a story and then link it if it doesn't work with one step. Yeah, and otherwise it looks like really great.
+
+Sukalya Rajendran   26:12
+Yeah.
+Okay.
+Okay.
+Okay, got it.
+Thank you.
+
+Oleksandr Tsyganok   26:25
+Yeah, so, like, if you like continue like developing and and after making it like another option for improvement, it's better to track somehow that task was already processed, so you can add like special status or some like extra label, just not to force LLM to search across all Jira items.
+
+Sukalya Rajendran   26:32
+Mhm.
+Mhm.
+
+Oleksandr Tsyganok   26:46
+To answer this question, was it already processed or not?
+
+Sukalya Rajendran   26:46
+Fest.
+Okay, filter on the status and already processed ones. Got it. Okay, thank you. And similar to Jason had done, even I had an assistant for PR review. It used to work. For some reason, it's not working anymore. I do have the Git integrations enabled and authorized it.
+
+Oleksandr Tsyganok   26:54
+Mm.
+
+Sukalya Rajendran   27:10
+as well. So if you see here, I just asked it to pull the late, pull a specific, sorry, review a specific pull request. And it is able to pull the details from the repo, at least that's what I see here. But it's taking a while to return the results. But in the past, it used to work because I did have solid results from previous chats. You can see.
+it was able to pull and give me solid recommendations. I don't know if there's something going on with the tool right now that's just making it slow or if there's something that I'm missing.
+
+Oleksandr Tsyganok   27:52
+Yeah, I'm not sure about like, yeah, specific specific situation. You can like just try to refresh. I don't know, maybe some like transient network issues or it's still like, but but when you're switching it on like UI, I think it's not like actively refreshing it.
+
+Sukalya Rajendran   27:52
+If you want, we can take it offline. Yeah.
+Yeah.
+Okay.
+
+Altaf Shariff   28:11
+Madeline.
+
+Sukalya Rajendran   28:11
+Uh, yeah.
+
+Oleksandr Tsyganok   28:11
+So.
+
+Sukalya Rajendran   28:13
+Yeah, I mean, I tried this morning as well, but still getting the same sort of issue.
+
+Oleksandr Tsyganok   28:17
+Mhm.
+Ohh, I see that you have like huge like processing time. Yeah, well, you can share this chat. I will take a look. It's gonna...
+
+Sukalya Rajendran   28:24
+Yep, yeah.
+Okay. All right. Thank you.
+Thanks, Nikita.
+
+Nikita Kumar   28:36
+Thank you so much. I appreciate it. I can't, I have to look through the pages, but who do we have next on here with the hand raised? Sorry. There's so many pages on here.
+Jurijs that you?
+
+Jurijs Markelovs   28:48
+I think that, I think so.
+
+Nikita Kumar   28:50
+Awesome, thank you.
+
+Jurijs Markelovs   28:53
+Unless Sukalya.
+Re-raise her hand. OK, yeah, I don't have a lot of time enough time, but hopefully so.
+
+Nikita Kumar   29:02
+No, no, this is this is your time. Feel free to feel free to run through this with us.
+
+Jurijs Markelovs   29:06
+No, I mean I have a stand up, started like 13 seconds ago, but anyway, here we go. I have worked with the workflow, right, which is the orchestrator of the several assistants and the and like a finalizer extraction tool, so I believe I'm sharing, right? Am I sharing?
+
+Nikita Kumar   29:08
+Ohh, fair, fair.
+
+Altaf Shariff   29:22
+Yeah.
+Okay.
+
+Jurijs Markelovs   29:32
+Start from the beginning.
+The idea here is test and issue test generator. It's pretty common, I would say. Ticket gets into the testing column, or status is testing, and it has contains or added a certain label.
+
+Altaf Shariff   29:38
+It.
+
+Jurijs Markelovs   29:55
+And in this case, we are generating a series of actions, right? So first action is...
+Check, well, first of all, get the get the status of the other attributes of the Jira ticket, and second one is is pulling a branch of existing and automation test coverage.
+So repo, we pulling that out, we checking if the repo, we checking out the repo, we are learning the structure of the framework, and based on the structure of the framework, we create placeholder test cases.
+which is in the original format, is in the playwright, right? And we create the new test cases if they do not exist, right? So hopefully it makes sense. Again, this is a structure assistant number one.
+
+Altaf Shariff   31:03
+Yeah.
+
+Jurijs Markelovs   31:03
+is pulling the JQL query. The project name again.
+status of the ticket is testing and certain label, right? And we fetch in certain attributes of the Jira object. First assistant configured with...
+with project management, which is a Jira-specific tool. Kind of strange, I think it's a defect on the code me or EPAM, but when I select the when I select the object, you know, from the drop down, it disappears next time and get.
+To it, so, but I think it's still working as expected. So, this is the first assistance assistant is fetching the data from the JIRA board and waiting for a ticket to get into the testing phase. Second one.
+Has has the configuration also, and...
+Yeah.
+And it also contains the Git integration. The same thing here when I select, I can select integrate.
+
+Oleksandr Tsyganok   32:28
+Can we check this specific bug? Let's update it. Select your integration and save like this workflow just to confirm that we have this issue.
+
+Jurijs Markelovs   32:36
+Both.
+Yeah, first of all, there is no save button here, but if I...
+
+Oleksandr Tsyganok   32:42
+Ohh yeah, you should click here and save here, yeah, and then save on the top.
+
+Jurijs Markelovs   32:44
+I do this.
+Yes, save here, and I could save here as well.
+
+Oleksandr Tsyganok   32:53
+Yes.
+That's like when you like have like final final save, because yeah, that's like just an intermediate update of of the stage.
+
+Jurijs Markelovs   32:55
+Two points.
+Ohh, here we go, maybe that.
+OK.
+Here we go, it's still not selected. I don't know, but that's...
+
+Oleksandr Tsyganok   33:10
+Okay, yes, thanks for highlighting it.
+
+Jurijs Markelovs   33:15
+That's an idea. And there is a custom action block, which is really finalizing what's happening, right? So at this point, what works and what's not, if I run, save and run, and I get here, I don't know, test.
+The work. Hello.
+It will take a minute, but I can show the history of execution.
+For example, here.
+It creates for each step, it creates the mini report. So this is a system number one if you click here.
+It's nothing if you click here.
+Ohh, it's nothing. I think the test what I ran was OK. Let me take a look at this one.
+What's going on? Maybe just a summarizer.
+There's data here.
+Yeah, maybe that's not the one either.
+Yeah, a little strange here with...
+With reporting and all these reports sometimes look blank, but the workflow found the object in the Jira board would have meets all the requirements.
+contains, it's in status, status is in testing and it contains the label. Then I checked in, created the branch, the second assistant created the branch with the tests will be added on existing framework and created the branch and added the placeholder.
+test cases, which will be added and modified later as per needs with the QA engineer. It's still to be polished, obviously, to meet the acceptance, to meet the requirements of the framework, you know, need more details and learn.
+More details on existing framework, but that's an idea as it's becoming and sometimes becoming a bottleneck on some of the teams, so I'm trying to improve the process.
+Idea is also, I'm hoping to integrate the crown job, but not quite sure where.
+It will take place in the in the workflow configuration.
+Is it on a system level or on a workflow level? It doesn't work, but I guess I can take this offline.
+Any questions?
+
+Oleksandr Tsyganok   36:02
+Yep.
+Yep, great job. So you far ahead with the workflows part. Yeah, glad that you managed to like set up this like integration and assistant.
+
+Jurijs Markelovs   36:18
+Yep. All right. That's all I got. Thank you.
+
+Nikita Kumar   36:22
+Thank you so much. Anyone else who wants to share something today with us?
+I can do maybe a couple more and then Alexa can hand it off to you to do a quick deep dive or not a deep dive against basics. Deepti.
+
+Deepti Pathak   36:41
+So mine is just a simple and it will just take like a few minutes. So let me share my screen quickly.
+Let me know if you are able to see my screen.
+Okay, so are you all able to see my screen by the way?
+
+Nikita Kumar   37:04
+Yes.
+
+Altaf Shariff   37:04
+Yes, yes, yes.
+
+Deepti Pathak   37:04
+Okay, all right. Perfect. Okay, so to just give a background, it's a simple agent, but the background behind it is like from last year onwards, the enterprise wants to monitor how the metrics are being monitored, right? For example, everyone has a set of...
+Jira dashboards where they basically see how many teams are working, what's the performance, are they like overloaded with the work, or is there the team when the work is happening, is it like the work is too much and there are like not too much, too many people are there. So recently we do have like a Jira dashboard, which we, I mean, I can let me just check it for that here.
+We, and I'll show you that too.
+Uh...
+Okay, so it tells like how much time a person is taking to time what tasks are in the block status, right? So my assistant is nothing, but it's a very simple assistant which is going to monitor what are the Jurijs which are in block status. And sometimes what happens is we put the Jira into the block status and we forget what's going on with that. And then that also it screws up our metrics, right? That okay, this particular...
+Jira is in block and then my lead time or my cycle time is continuously increasing and we haven't even been aware of it. Is that an issue with the user? Is that an issue with the developer? What's going on or we just literally forgot about it? So this Jira monitor is going to basically check what are the Jurijs we have it in the block status and if it's like blocked for more than three days it can it can.
+search for that, search for the reasons why it's been blocked and if needed it can post or tag the user or the or the or the group of persons to check whether it's like why it's been blocked. So this is the assistant. Let me quickly go through the instructions of it. Zira block monitor is the name of.
+the assistant and then I'm trying to just find it out. Basically it's going to follow these couple of instructions like what are the it will basically fetch all the Jurijs which is in the block status. Right now it can fetch for all the projects under this particular under the I think the.
+OMF training as training JIRA, so you can just add your project key just to find the block JIRAs under yours. So that's what I have put it in that chat and I'll walk you through that as well. And then if the JIRA is blocked just for like less than 24 hours, we can just monitor it. But as soon as it's blocked for greater than 24 hours, we can like have a follow up.
+But if it's blocked for like more than three days, you can just like escalate it. Then you can just put also the post, like add a comment over there, which will give a summary of a reason if there is a reason been mentioned over there that why it's getting blocked, and then put a comment on it. My next step I would really like, but I don't know if it's possible right now or not, is like all those conversation or the summary can.
+and be like posted into the Slack or Team channel to inform it. I mean, I can try just to put it over the conference page just to have a summary if like anything is blocked and we know the reason behind it. So I did, this is something I tried it and then this is what, so right now I think in the training.
+JIRA, we have only one JIRA for my DFP, which is blocked. So this is what I posted. Show me all JIRA issues currently in block status for DFP. And this is what it gives me right now. And then it also tried to find that there is no exact reason why it's blocked. So it is properly giving me all those details.
+And then I did ask, like, okay, please go ahead and put a comment, post a comment on the JIRA, and it's able to do that as well. So if I go here to my DFP JIRA, which is under the OneMain financial training, I do, it tells us the summary that this issue has been blocked status and requiring immediate attention because it's blocked.
+more than 139 days. And then it tells you the date, what's the blocker reason, risk is high, and all those details.
+That's all from my side. Any questions?
+
+Nikita Kumar   41:11
+That's awesome. Thank you.
+I think there's a question in the chat, Alex, from Angela.
+If we can help with that real quick, and then I can hand it off to you to do a quick basics of code me for us.
+
+Oleksandr Tsyganok   41:30
+So what is a specific issue? It like never completes like the separation or we see like some errors.
+
+Speaker 1   41:38
+It never completes that, so does it?
+I had the issue, generally speaking, with just to generate the AI for the prompt, but that finally resolved itself. But then once I created the agent and then they wanted to refine the instructions, if I hit that refine, I can't remember what the button is, but if I
+
+Oleksandr Tsyganok   41:58
+B.
+
+Speaker 1   42:00
+Refine with AI, that refine with AI, I actually have another screenshot if you want that. If I hit that button, it would just, it would just spin. And I tried that probably 10 or 15 times and it just would spin, spin. And it didn't matter if I waited 5 minutes or an hour, it never came back with an answer.
+
+Oleksandr Tsyganok   42:00
+Yes.
+I see. And yeah, can you share like this specific agent or I can try?
+Find it.
+Just to confirm.
+
+Speaker 1   42:31
+The Nigerian intake.
+
+Oleksandr Tsyganok   42:34
+Can it be like just a huge prompt?
+
+Speaker 1   42:40
+Not really. It wasn't a huge prompt.
+
+Oleksandr Tsyganok   42:43
+Okay.
+Um...
+So it's a Jira TDM intake.
+Mhm.
+Okay, let me check it.
+So, that's that's your short like prompt that should should be fine. Let me check what kind of tools I simply.
+
+Speaker 1   43:18
+Well, my actual agent itself works. The agent works. I was, yeah, I just wanted to refine it. And when I click that button, it just didn't do anything.
+
+Oleksandr Tsyganok   43:21
+Yeah, yeah, I got it.
+So.
+Yeah, let's let's try what will happen. Do you have like some specific improvements that you want to modify? I will not change like your agent will not save this changes.
+
+Speaker 1   43:38
+It's fine. I've already I've already refined it, but I mean there is still one more issue with it. It's not it's not assigning the ticket, so you could probably ask it.
+
+Oleksandr Tsyganok   43:46
+Mhm.
+Mhm.
+
+Speaker 1   43:51
+to assign the ticket to Tommie Payne.
+
+Oleksandr Tsyganok   43:55
+Ohh.
+We have a specific person that should be like assigned to, right?
+
+Speaker 1   44:00
+Yeah, yes.
+
+Oleksandr Tsyganok   44:03
+Can you copy this like name in the chat?
+
+Speaker 1   44:13
+I put it in the tab.
+
+Oleksandr Tsyganok   44:14
+Mhm.
+
+Speaker 1   44:19
+I mean, I worked around it, I had it, I just refined it, I just went to VS Code and had it refine it for me and pasted it back in there. I was just...
+
+Oleksandr Tsyganok   44:26
+Mm.
+
+Speaker 1   44:29
+I was hoping that I could do everything within code me and not have to use another.
+
+Oleksandr Tsyganok   44:34
+Yeah, let's try. I saw that like last time on like our session, it like really took like significant time to generate initial prompt. I know that we had like some changes like new version released. Yeah, potentially we might need to check like performance of this like part and figure out what is going on. But yeah, let's.
+Let's try to see.
+So ideally you should just generate a div of like what you had before and what you have like what like AI decided to suggest like you have like really like small prompt here that it shouldn't be a problem.
+For processing it, but yeah, I already see that.
+Takes like some time.
+
+Deepti Pathak   45:25
+Always do it.
+
+Oleksandr Tsyganok   45:27
+Yeah, so I think we will take like deeper like logs and figure out what actually happened here and then we'll return back to you just not to waste time. Yeah, I see this like error that I saw before. I think, yeah, that's that's.
+
+Deepti Pathak   45:27
+Chase.
+Because I want to.
+
+Oleksandr Tsyganok   45:46
+I didn't copy this one. Yeah, we will take a look at this issue since I mentioned it.
+
+Nikita Kumar   45:52
+Thanks so much.
+
+Speaker 1   45:53
+Thank you.
+
+Nikita Kumar   45:55
+Thanks. I know we have 13 minutes. Do you think that's enough time to do like a quick run through of the basics of code me for today?
+
+Oleksandr Tsyganok   46:04
+Yeah, let's let's try to have a quick overview, because yeah, we we already started from like practical part, but we completely skipped like like overview, maybe like somebody who's seen like this platform for the first time will miss like here like part that might be like really useful.
+
+Nikita Kumar   46:06
+Cool.
+
+Oleksandr Tsyganok   46:23
+Yeah, so once you like navigate into the main page.
+
+Jatin Bagga   46:25
+Sorry, Alexander, just one second. Sorry, this is Jatin. So can I request you please, as you're going through it, can you also comment on specific enhancements that you've done in order to, you know, since maybe like 4 weeks ago when we were in the phase one or something, that would be really helpful. Like explicit call outs of that will be really good.
+
+Nikita Kumar   46:47
+In this, I don't think there is. This is just basics of like the platform itself. Yeah, yeah.
+
+Oleksandr Tsyganok   46:47
+Uhh.
+
+Jatin Bagga   46:51
+Okay, got it.
+
+Oleksandr Tsyganok   46:52
+Mhm.
+
+Jatin Bagga   46:53
+Okay, so maybe as a follow up, Nikita, can you just get maybe even as just like in this chat later, like tomorrow, maybe if you could just place a list of like, hey, here are the five, six things that we've enhanced since the last time, that would be super helpful.
+
+Nikita Kumar   47:03
+There hasn't been like quite enhancements. This is all just to start kicking off CodeMe again, because we only did like one training session on CodeMe when we started phase one. So this is all new stuff for digital specifically, but the engineering and the QA team have seen some of these things in their sessions. So we're kind of just.
+
+Jatin Bagga   47:12
+Yeah.
+Got it.
+
+Nikita Kumar   47:22
+trying to tie the knot from digital down to QA. So at the end of these sessions, you guys can do a workflow together. So like, there's nothing that's changed on the platform, but we're just doing a deeper dive into the actual hands-on workshop. So it's easier for all the teams to be on the same page.
+
+Jatin Bagga   47:31
+Oh, got it. Okay.
+Gotcha. Okay, thank you.
+
+Nikita Kumar   47:41
+Yeah, of course. All right, Alex, all you.
+
+Oleksandr Tsyganok   47:45
+Yeah, so once you like navigate into like a platform, you can start like conversation with like any assistant that like at that moment available for you. Is that one that you created or team share it with you. So yeah, we can select this like chatbot. It's like just a.
+Simple like assistant that have like no extra capabilities, so you can use it as a replacement. I don't know for chat.
+GPT if you have a specific system and then you need to like run some general task that is kind of like not not like specific for your regular system. Yeah, once you have like a prompt, yes, here you have like a basic functionality where you can copy like original message, you can like change original ones that will.
+Changing in the history, if you like debugging your like assistant, you can easily like resend like a previous message, so it will clear this previous history and send a new message. Yeah, the most important part, please guys, if you like observing any issues or you have like some.
+like need to share like your work, please always use this share chat button. So by default, like all chats are like private, nobody except you can like access it. But once you share them, everybody will get like this read-only version, so I can.
+Share it with you app run link because it's like a.
+VDI, give me one second.
+Just to paste it here.
+Yeah, so and once you like open it, you will see like this chat in like read-only mode, so like super helpful to share like.
+Yeah.
+Some of your experience, so if you like have like some troubles and need to help, help to like troubleshoot it, yeah, that's like a nice tool, and also you can have like this usage details, how many like tokens you spent, and like you can download if you need to like other like system to work with this like data.
+Or you can start like clean chat if you want to like erase this like history and start working with this mode. Okay, so next part like chats like all history always like preserved and like allocated to a specific folder by default it's like just an assistant. Yes, for example, this Jira story readiness checker that we were on in like.
+Last session, you can always find this like history by default, it's like allocated to respective assistant. You can also like create like additional folder, move specific items to a different folders, like...
+pins this like items to always have it on the top. For example, we have like some guides and I just wanted to make sure that I'm not accidentally deleting this like charts because they used like some kind of like a reference. So yeah, where it is.
+So, I just as an idea, I created this like a separate like folder and just publish it like several links here, so I I know that it's like always like safe safe just to move this like between different folders. Yeah, next part like assistance, so yeah, I think you already know that you have access to like your.
+assigned project plus this like training project where we have like all materials so we can always like filter this data I find it like weekly. We have like a marketplace where we can share some agents.
+Across like all products, so once you have fully functional like production ready assistant, it's a great to share this like assistant with other teams, so they can like use it as is just connecting their custom integration. For example, if we will take a look at this like assistant, it has a special behavior.
+that allows to configure like this agent tools and yeah connect your custom like integrations. Yeah, example, I think this one should have integration. Yes, as you can see, it's like your private integration, so you're sharing like...
+one assistant, but in order to have, I don't know, some comments posted on behalf of your name, so each user will be able to select their own integration and this is like common assistant, common shared assistant will act on behalf of a given user. Yeah, so once you're working with your assistant, you
+have like this sharing option. First option, you can, yeah, that's just an like example of some systems that was created as part of this training. So you can share it with project. As you can see, it was all.
+share it another level that I mentioned you can publish this assistance to a marketplace. Again, that's one should be like used before like high quality like ready agents and another thing that you might need to like configure.
+Or, like, change somebody else like a system, for example, I don't want to introduce some changes, so there is easy way you can just create a clone of this like assistant, provide like some name, some like test, it will capture like everything, like all integration, all prompts, so that's a...
+easy way to test something and customize. So you just click and save and yeah, here is my copied like assistant. Let me delete it so we don't have like.
+Some unnecessary agents here. Yeah, another part that we have this like.
+templates. So basically, like kind of like library of pre-configured assistant. It's mostly created as part of a code me, so might not be applicable for your specific use cases. For example, we have like some CICD assistant. I believe that it's like configured to work specifically with.
+GitLab, but yeah, so some other parts might might might be like reusable, and we can create kind of template library, and if needed, we can add like white changes, this is like configuration, we can add like some extra agents here.
+Yeah, another like part is skills. It's like rather new feature for for now we are not like covering this functionality, but just to let you know, so you can treat a skill just like some like template for.
+For your prompt, you might have a situation where you working with multiple assistant and you have like a common task, so by default you just like copying this specific prompt for each like individual assistant, but it's like easier.
+just to extract this prompt to a skill. For example, we have like some, let's say this meeting summary skill, the main instructions that as input.
+We have like a meeting and we can generate this like standard summary, like overview, action item, meeting evaluation. So you can work with like many different agents. One can get like this meeting from teams, another one can get it from different conferencing tool. You might.
+I don't know, copied from file, and that's like an easy way to connect the skill to like multiple assistants, so we have this like attached assistant, and you can configure like which assistant should have this skills. Yeah, also you have like an option to work with this.
+part like dynamically, once you like open in chat, you will see like first control that you can select a LLM model for this specific chat. For example, maybe you have like more complicated task and by default using mini model that is not so capable. And yeah, for that specific chat, you want to have those like some heavy lifting so you can.
+select more powerful model here. And another skill, so you can temporarily connect like skills that will be connected only to a specific like to this conversation only. Yeah, another part workflows. I think for now we can skip it. We will have a separate session.
+where we will have this like overview of this functionality. The main idea is that we just orchestrate in multiple agents in like standard like flows, they like doing like a standard set of operations, they trigger it based on some event or as we were discussing for this example, just based on like a scheduled trigger.
+Yeah, for integration, I think we already familiar that we can connect Jira and many other integrations. We will have a separate session to review like which tools we can connect. Data sources, another like topic for next discussions, but here you can think about data sources, additional.
+knowledge base to your agent so you can connect your source code, you can add some like files as additional source of knowledge for your agent. You can index your whole backlog, maybe find duplicate.
+Gates or tracks, like some bugs from, I mean, like from Jirabic log, or connect like confluence, and yeah, have like this fully available directly in, and another cool feature we have is like, where it just like a practical tasks.
+So if you have like some time and want to know more details about CodeMe, that's a good opportunity. Just like some hand-on session, like usually they are like rather short. That's one is for 15 minutes. So that's like an intro with like some list of challenges. You just need to like navigate to different parts.
+Get familiar with this like functionality, but also we have like more advanced, like, for example, for like working with like workflows, suite into like multiple parts, I believe, maybe at 5, yeah, we have like this all details, like how it works, so for example, so...
+Bronzer for like the spectacle tasks.
+Another part here, and it's most important that it's for your profile. You can see like your usage for a given period. So yeah, we have, I believe, $500 limit. Yeah, I think we're already running off out of time, so I will not.
+like spent like more time. We can have like more details in the next session.
+
+Nikita Kumar   59:54
+Thank you, Oleg.
+
+Oleksandr Tsyganok   59:54
+But yeah, that's like an idea of like platform. Yeah, maybe like last part that it's cool like part that you have this like help center with like all documents like YouTube channels and like all answers for your question and this like AI run chatbot.
+
+Nikita Kumar   1:00:12
+Thank you. I appreciate it. I know we are a little bit over time, but we can also do Friday. We have open hours, so feel free to hop in there if you have any more questions, whether it's homework related or code me related. We're here to help. And those are just, you know, those are just there. They're optional, but we also have ad hoc. So if anyone has any questions ad hoc, we're happy to help there as well.
+Thank you guys for joining. Our next session will be on Thursday and it'll be a hands-on working session and homework will be coming on Thursday.
+
+Iryna Pashko   1:00:42
+Thank you.
+
+Nikita Kumar   1:00:42
+Thanks, everyone. Have a great rest of your day.
+
+Eugene Semenyuk   1:00:46
+Yeah.
+
+Svetlana Stogni   1:00:47
+Thank you. Bye.
+
+Swetha Koppula   1:00:47
+Thank you. Thank you. Bye.
+
+Eugene Semenyuk   1:00:48
+Thank you. See you.
+
+Oleksandr Tsyganok   1:00:49
+What?
+
+Nicholas Crowley stopped transcription

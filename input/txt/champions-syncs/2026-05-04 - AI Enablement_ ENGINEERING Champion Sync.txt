@@ -1,0 +1,439 @@
+AI Enablement ENGINEERING Champion Sync-20260504_150006UTC-Meeting Recording
+May 4, 2026, 3:00PM
+27m 57s
+
+Oleksandr Pavlovskyi   0:14
+Yeah, hi, Alan.
+
+Allen Truban   0:16
+Hey, how you doing?
+
+Oleksandr Pavlovskyi   0:18
+Is it real Chewbacca?
+
+Allen Truban   0:21
+It was in, yes, from Star Disney World.
+
+Jason Daggs   0:24
+Oh, was someone talking about my beard again? What?
+
+Allen Truban   0:27
+Yeah.
+
+Oleksandr Pavlovskyi   0:30
+The.
+No, no, we are talking about Alan's avatar.
+
+Allen Truban   0:32
+The.
+Yeah.
+
+Jason Daggs   0:36
+Yeah.
+
+Oleksandr Pavlovskyi   0:47
+Jason, you looks more like one of the of all the character from Rings from Lord of Rings.
+
+Jason Daggs   0:57
+Oh yes, yes.
+
+Oleksandr Pavlovskyi   0:58
+Yeah, like Gandalf.
+
+Jason Daggs   1:00
+Yeah, that's what I'm going for the wizard look. Yeah, you got it.
+
+Oleksandr Pavlovskyi   1:03
+Yeah.
+You're from another story, yeah.
+Yeah.
+All right, guys, so let's give one more minute.
+And...
+Yeah, let me open the...
+Yeah, I'm on board.
+
+Muhammad Adnan Farooq   1:26
+What?
+
+Oleksandr Pavlovskyi   1:28
+Mhm.
+Yeah.
+Alright, who is on the call already?
+Right, only 13 people.
+Okay.
+And Carl is here, so we can start. Let me share the board. So as usual, let's go by our statuses. But guys, if you have topics to share, so as usual, let's align some time on the beginning. Guys, do you have any questions, any ideas?
+All right, so all ideas on our board.
+Alright, so today I already talked to Deepti here and...
+On Wednesday, we're gonna have use case from here, the demo of this use case. So let me set the date, and that will be, that will be May 6th, yeah.
+All right.
+So.
+And see you.
+And also...
+Yeah, let me check with Gaia. Yeah, this ticket should be closed, but they would like to use cursor for this use case. Yeah, so I'm waiting for update regarding to...
+It is regarding to this ticket, so let's leave it.
+OK, so let's move from the end. Do we have somebody from the dream team?
+Not sure.
+Sukalya, right, Jason, this is yours. Could you, could you please remind us regarding to this idea?
+Jira creation and evaluation use case.
+You on, sorry, you on mute.
+
+Jason Daggs   4:26
+Yeah.
+The idea here is that...
+The JIRA tickets are being created by kind of at the analyst product manager level. And so we need some additional method to
+kind of either enrich the ticket or make sure that it meets some kind of quality criteria. So the developers who may not be in the same meetings regarding the definition of the business requirements will at least have enough information
+to know what to do with the ticket. And a lot of times, and I don't want to say a lot of times, but there are some times when not all of the business requirements are detailed. And so we would need some way to successfully check that, a way to automatically
+Validate the quality of those tickets, essentially.
+Um...
+This is one that I haven't brought up yet with that particular part of the team. So it's still in progress. And so as a team effort, it's this use case, and I think there's one other use case that I haven't added, we'll be going over shortly.
+with our team internally.
+
+Oleksandr Pavlovskyi   6:07
+Alright, alright, yeah, but in our reality, this is a case for Quad Mia to connect all these tools, yeah, alright, alright, so...
+
+Jason Daggs   6:14
+Yes.
+
+Oleksandr Pavlovskyi   6:22
+Yeah, yeah, cool, cool. Yeah, also, we gonna have, we gonna, we should align regarding to agenda, yeah, but to tomorrow, yeah, I'm gonna make a small spoiler, yeah, Eugene gonna share the webhooks.
+
+Jason Daggs   6:24
+Mhm.
+
+Oleksandr Pavlovskyi   6:41
+So guys, that's going to be one more thing that can make Kodangil more, how to say, give Kodangil more credentials here to use other services here and connect by webhooks with it. So.
+probably that's going to be a chance to extend this use case for the following steps. All right, great, great idea. Thank you, Jason. Yeah, and regarding to your idea of the curriculum, yeah?
+
+Jason Daggs   7:11
+Yeah.
+Oh.
+Yeah, yeah, that's been developed and there should be a link on it there. I think we moved it to share at one point just so that we could discuss it in one of our previous meetings. But I
+
+Oleksandr Pavlovskyi   7:20
+Yeah, yeah.
+
+Jason Daggs   7:34
+I think I would mark this one as done, and...
+What I'm going to do, my current plans are after we get done or get close to being done with implementing the curriculum that is doing the knowledge transfer, then I'm going to do spec driven development for just the developers on our team.
+
+Oleksandr Pavlovskyi   7:46
+Wood.
+All right, all right. You know, today we discuss your use case, yeah, and think about how to make it more universal. Yeah, maybe that's going to be great because you will do these steps manually to prepare this curriculum to build like a system.
+
+Jason Daggs   8:10
+Yeah.
+
+Oleksandr Pavlovskyi   8:20
+For this, just to use the main framework, yeah.
+
+Jason Daggs   8:25
+Oh, right. Yeah, right, right, right. Because, yeah, because right now, you know, obviously, there's still a lot of manual knowledge transfer that's taking place from CodeMe to this brain and then back to the developers. But yeah, if
+Once I feel comfortable with understanding CodeMe to the point where I no longer need to worry about the curriculum, right, to make sure we're on the right path, then yeah, absolutely. It would be a great tool to have an agent that could, in fact, do that knowledge transfer in a very proactive way for individual
+who just, you know, who just go to the agent and say, hey, teach me about Code Me. And, you know, it goes off and starts offering the curriculum one piece at a time. Yeah, that'd be great.
+
+Oleksandr Pavlovskyi   9:20
+Yeah, so how about to talk about this tomorrow? Yeah, we're going to have all our audience, yeah, and also our champions.
+
+Jason Daggs   9:32
+Well, hang on just a second. Let me check something. Our sprint.
+Well, yeah, we do have our end of sprint exit and planning act tomorrow, unless it's in the late afternoon. Oh, Wednesday. Oh, okay. Yeah, yeah, yeah. Yeah, that's great. Yeah.
+
+Oleksandr Pavlovskyi   9:46
+Oh, no, no, no, not tomorrow, Wednesday. Sorry, Wednesday. Yeah, Wednesday. Yeah.
+
+Jason Daggs   10:00
+Oh, great.
+Okay.
+
+Oleksandr Pavlovskyi   10:05
+already our curriculum, we have tons of materials in our conference. Yeah, and she's working on a similar task. So, yeah.
+
+Jason Daggs   10:14
+Oh, I like that. Yeah, yeah, that's great. Okay.
+
+Muhammad Adnan Farooq   10:15
+Yeah.
+Yeah, so Jason, yeah, Sukalya has already created the first draft, and I think that he, like, she already shared it with Mikhail and Alexander with you, right? So, yeah, but it's better that you can, let's connect offline, Jason. Sukalya is out of office this week, attending like, you know, main event.
+
+Oleksandr Pavlovskyi   10:28
+Yeah.
+
+Muhammad Adnan Farooq   10:38
+So she will be back next week and then, you know, we can like, you know, have a quick sync up meeting.
+
+Jason Daggs   10:42
+Okay. Great, great. Yeah, just please put something on my calendar and yeah, that'd be great. That would be fantastic, actually.
+
+Oleksandr Pavlovskyi   10:42
+Yeah, yeah, yeah.
+
+Muhammad Adnan Farooq   10:51
+Okay, we'll do that. Thank you.
+
+Jason Daggs   10:53
+All right, great. Thank you.
+
+Oleksandr Pavlovskyi   10:53
+Great, great.
+Oh yeah, guys, please don't forget to mention your teams here.
+
+Jason Daggs   11:01
+Oh, yeah, yeah.
+
+Oleksandr Pavlovskyi   11:02
+Guardians, alright, alright, great. Thank you, Jason.
+
+Jason Daggs   11:08
+Mm-hmm.
+
+Oleksandr Pavlovskyi   11:09
+All right, so for this Wednesday, we already have the agenda. And let's move on. Yeah, okay, do we have...
+Shamlou.
+Uh, Patrick, is it so? Yeah.
+
+Muhammad Adnan Farooq   11:26
+So, yeah, Alexander, like, you know, that's part of my team, so we are internally.
+
+Oleksandr Pavlovskyi   11:31
+Oh yeah, sorry, it does effective here.
+
+Muhammad Adnan Farooq   11:33
+Yeah, we are internally reviewing this task tomorrow, and then, like, you know, Shanu will reach out to you that if we are going to present this thing in upcoming session or not.
+
+Oleksandr Pavlovskyi   11:42
+Cool, cool. All right, so guys, if you will be ready, yeah, just move this ticket to our share column. Yeah, and we're gonna plan this showcase for the following sessions. Cool, thank you. Thank you.
+
+Muhammad Adnan Farooq   11:50
+Yeah, building.
+We'll do that, yeah, no problem.
+
+Oleksandr Pavlovskyi   12:02
+Alright, another one ticket from you for your team also.
+
+Muhammad Adnan Farooq   12:07
+So this is still on in progress right now. So as soon as we are ready, we can, you know, move it to share and then we'll provide you all the details, right? Because we also asking my team to just creating all this conference page, which can document everything over there, right? So, so we are, we are not.
+marking it or sharing it without the document and making sure that they have all the information documented in conference page before we share it or demo it.
+
+Oleksandr Pavlovskyi   12:34
+Cool, cool, yeah, yeah, it's and this is another one topic, yes, it's important to discuss, discuss. We already have created the group with Ravi's team, yeah, regarding to these best practices and also for documenting, because it's going to be great to
+share your guidelines, yeah, how you creating this documentation, how you save and structure in these, maybe to build our conventions, yeah, or just best practices, yeah, across our organization. Cool, cool, great, great.
+Thank you.
+And Joe, this is QA use case, probably in engineering.
+Ohh, this is the management here.
+Let me take this ticket, because maybe that's more like a...
+DLC ticket. Okay, yeah, but it's not from our group.
+OK, Patrick.
+Yeah, could could you please give us give give update regarding to to this ticket?
+The agentic project guidelines and code generation for no tillers, too.
+
+Patrick Behnke   14:01
+Yeah, I believe I talked about this already. We don't have any time in any current sprint that we can throw this in. So it's going to be a while.
+
+Oleksandr Pavlovskyi   14:13
+Yeah, understand, absolutely understand.
+Yeah, and guys, please create ticket regarding to your idea with with this Teams chat, yeah, that we chat bot that we discussed in a parallel, and yeah, I'm gonna plan the meeting, so I just discussed your idea with Aliaksandr Tsitsiankou, yeah, and this.
+probably going to be possible to implement with code me using webhooks. So I understand which blockers do you have? Yeah, but let's discuss it separately. Yeah, I'm going to plan meeting for this week. It's going to be half of our meeting, yeah, and you're going to share your blockers.
+And probably we're going to give you good advices regarding how it's possible to do. And it looks possible to implement. So yeah, great idea. So guys, please just post your ticket to this board, yeah, for start to strike. And we have to not forget about, forgot about this ticket, about this idea.
+Okay.
+All right.
+Pretty initial development is the framework and first-hand implementation using code quotes.
+I'm not sure if Ashley is here.
+So, yeah, I'm gonna...
+Get updates regarding to it. OK, Gaia, Gangane.
+Yeah, so she gonna provide me.
+Yeah, maybe you send no update regarding to this ticket.
+Sam.
+
+Sam Jayavelan   16:03
+I'm here, yeah, yeah, I'm here, but I am not. She had done a different use case. I'm just trying to see which one is this.
+
+Oleksandr Pavlovskyi   16:04
+Yeah.
+Yeah, she, yeah, she gonna create new ticket for this use case, yeah, because she decided to use a cursor.
+For this implementation, so yeah, all right, and let's align for to this tickets that we have in a to do status ESM regarding to this one. This is pretty old one, yeah, created in the February.
+
+Sam Jayavelan   16:22
+Okay.
+Oh, I think this was just done as a placeholder to show how this is done, I guess.
+
+Oleksandr Pavlovskyi   16:42
+Ohh.
+So, uh, could you...
+
+Sam Jayavelan   16:48
+We've kind of done this, like where we've done the Jira ticket and the cleanup, like the what is, what will we use the ChatGPT agent, right? And for the how we use the cursor. I'm not sure how to, I can look at it and kind of add a comment and close it if that helps.
+
+Oleksandr Pavlovskyi   17:02
+Huh.
+Yeah, but did we did we had to showcase for these? I don't remember.
+
+Sam Jayavelan   17:13
+For this one, we did the, I mean, the one what we did using cursor, we showcased it in ELT.
+
+Oleksandr Pavlovskyi   17:14
+This showcase is here.
+
+Sam Jayavelan   17:23
+For this, yeah, we we did showcase.
+
+Oleksandr Pavlovskyi   17:23
+Showcase, yeah.
+
+Sam Jayavelan   17:29
+one similar one in ELT for the demos and I can put the link there.
+
+Oleksandr Pavlovskyi   17:33
+All right, so yeah, so yeah, if that's already showcased, just put the link and move to the closed status. Okay, thank you.
+
+Sam Jayavelan   17:41
+Okay, I'll do that. Thanks.
+Yep.
+
+Oleksandr Pavlovskyi   17:46
+All right, Sam.
+Amit.
+Also, old one, yeah, probably.
+This is a similar story. All right, and we have the several draft tickets. Patrick seems like it's yours also, yeah.
+automate the change log summary to team. Oh, this is the one. Yeah, this is.
+The one that we're discussing.
+Yeah.
+
+Patrick Behnke   18:29
+Yeah, I forgot about that.
+
+Oleksandr Pavlovskyi   18:32
+All right.
+
+Patrick Behnke   18:32
+Yeah, it was just a random idea that I had wanted to throw it out there in case somebody wanted to pick it up and give it a try.
+
+Jason Daggs   18:39
+Oh, oh, that was a use case that came up on our team just the other day. I haven't added my ticket for it yet, but yes, so the answer, at least from my point of view, is yes, that's a very valuable, very valuable thing.
+
+Patrick Behnke   18:44
+Yeah.
+
+Oleksandr Pavlovskyi   18:51
+Yeah.
+
+Patrick Behnke   18:53
+Yeah, so if you want to pick it up and run with it, feel free.
+I just want to throw stuff on the board.
+
+Jason Daggs   18:58
+You.
+Yeah, okay, sure.
+
+Oleksandr Pavlovskyi   19:03
+OK, so Jason, could I can I assign it to you?
+
+Jason Daggs   19:09
+Absolutely, yeah, that'd be great. Thank you.
+
+Oleksandr Pavlovskyi   19:10
+Flora.
+And this ticket moves to Guardians team.
+
+Jason Daggs   19:14
+Yep, yep.
+
+Oleksandr Pavlovskyi   19:15
+Right, real team collaboration.
+
+Jason Daggs   19:18
+That's right.
+
+Oleksandr Pavlovskyi   19:21
+Right, auto update on boarding documentation for PR's changes.
+
+Patrick Behnke   19:26
+This is another one of my recommendations that I threw out there for people to pick up. Basically, you go through, you make a change or an update and merge to MAIN, and then after that, they would pick up the changes and whatnot and update the documentation based on those changes.
+That way, if you have any architectural or coding items inside that onboarding documentation, the new people would automatically be updated with all the new stuff that you've pushed out since last time because we're horrible at updating documentation.
+
+Oleksandr Pavlovskyi   20:04
+Hmm.
+This can be a part of this assistant, yeah, so we can, in the scope of this ticket, we can generate these artifacts, data sources, yeah, and in the scope of this onboarding assistant, yeah, we can, we can use, I mean, this engine, yeah.
+To get this data.
+It's gonna be.
+Yeah, how do you think, Patrick? Yeah, did I get the right idea, yeah?
+
+Patrick Behnke   20:37
+I mean, I don't mind however it gets implemented. I just wanted to throw some ideas out there on the board. You could tackle this multiple different ways. You could do it like on PR, you could do it on requests, you can make data source that refreshes every night. There's all sorts of different ways to tackle this. So however anybody wants to tackle that.
+but tackle it, feel free.
+
+Oleksandr Pavlovskyi   20:59
+Okay, but first of all, we need to create this documentation.
+To get this data in the most convenient way for our assistant or agents.
+Doesn't matter.
+Introduce.
+Right, so let's take it.
+Let's discuss it separately, but...
+OK, OK, so let's discuss it separately, but idea definitely makes sense.
+Um...
+Great agent for data visualization, Snowflake pipeline.
+Uh, do we have the Debamitra on the call?
+Okay, so let's get me...
+For me.
+Oh, no, let's give me, I'm gonna connect to her separately regarding to this ticket.
+All right.
+Uh, and the tickets from CRM team are Shoaib.
+Yeah, this is your... Could you please correct me if the pronunciation of your name was wrong?
+
+Shoaib Naseem   22:22
+Yeah, it's Shoaib.
+
+Oleksandr Pavlovskyi   22:24
+Shoaib, alright.
+
+Shoaib Naseem   22:26
+I love you.
+
+Oleksandr Pavlovskyi   22:29
+Right, could you please give more, give more details regarding to this ticket? How to generate GitHub release notes on tag creation for SIM front end workspace?
+
+Shoaib Naseem   22:41
+Yeah, we had meeting regarding this last week and I'm almost done with the implementation part. So there were two outstanding parts that I discussed with you and you provided feedback early today. So I'll be looking at those links and you know, we'll get back if I have any questions.
+
+Oleksandr Pavlovskyi   22:59
+Cool, cool. So I can move this ticket. Can I move this ticket to in progress? Yeah.
+
+Shoaib Naseem   23:05
+Yeah, it's in progress. Yeah.
+
+Oleksandr Pavlovskyi   23:07
+All right, all right. So when we're going to be ready, as usual, moving to the share call, yeah, and we'll plan the showcase. Cool, great.
+
+Shoaib Naseem   23:17
+Sounds good.
+
+Oleksandr Pavlovskyi   23:20
+All right, seems like that all tickets. All right, guys, any questions?
+So.
+Who?
+I'm I'm.
+I always talking about this board, yeah, and this is because this board, this is the main source of our use case tracking, and we have the in this think we have tricky tricky moment, yeah, because definition of done for these tickets, yeah.
+this is like a showcase. And sometimes, yeah, if you see similar tickets that looks like our use case, yeah, we're just skipping this because it's already showcased. But in this case, we don't track your tickets, yeah. For example, if you take something basic, yeah, for example, creating.
+A good review agent here for your task kit, so...
+one of the popular use case, yeah, and every of your team, yeah, already implemented this. But we can track this. So guys, don't pay attention on tickets that already present here. So if you have any ideas, if you're working on this, yeah, just submit your tickets, yeah.
+to give us ability to understand on what tickets are you working, yeah, on what ideas you're working. Or even if you just have ideas like Patrick, yeah, he has submitted several good ideas, yeah, and for example, this one was taken by Jason. Yeah, if you have ideas, use our board, just submit these tickets.
+and we're going to discuss this in or in our Champions in Cups or separately here, but we're going to have understanding that we have action item on this on this idea. So, use this board, yeah, because this is like the most universal and the most...
+a convenient source that we can use to track in these use cases. And of course, our AI enablement program. We have to understand where we are and on what things we need to focus, what use cases aligns with our business goals.
+For example, yeah, now in a parallel, we have discussion regarding our PDLC stream, yeah, and we use all these use cases that are here, yeah, to understand what already implemented, yeah, and what PDLC use cases can be.
+Plan it for discussion, yeah, based on that use cases that already here, we just we can just connect several of these use cases and build a small workflow, or maybe workflow across all PDLC. So, this is a point, yeah, that I would like to highlight, guys, yeah, so...
+don't pay attention on that tickets that's already present here. Yeah, I mean pay attention like a source of ideas or maybe useful contact point. Yeah, but if you have something very similar, just post it, yeah. And we're going to decide, yeah, maybe that's going to be great to talk about.
+Once again, spec-driven development, yeah, because this important topic, or maybe just talk about code review assistant, yeah, maybe you're gonna find more convenient way how to use it for your project, yeah, more maybe more powerful.
+Assistant with more powerful instructions.
+Sowmya.
+Alright, I guess it's all from my side for today.
+Kayce, 3 minutes that we have. Also, if you want, we can discuss.
+Something important.
+or save 3 minutes for coffee.
+Cool, great guys. Thank you all, and see you tomorrow.
+
+Chantal Justamond   27:46
+Thank you.
+
+Allen Truban   27:49
+Thank you. Bye.
+
+ stopped transcription

@@ -1,0 +1,27 @@
+# Lighthouse - AI Hours Session Scores
+**Session:** AI Enablement: ENGINEERING Lighthouse Session — 2026-05-13
+**Jira Tickets Showcased:** [APE-1058](https://onemainfinancial.atlassian.net/browse/APE-1058) | [APE-308](https://onemainfinancial.atlassian.net/browse/APE-308)
+
+---
+
+## Lighthouse - AI Hours Sessions
+
+| Name | Date | Contribution | Score |
+|---|---|---|---|
+| Sanjay Parsi | 5/13/2026 | **Why he stood out:** Delivered a purpose-built PR reviewer and code optimizer agent that fills a specific gap in the existing CodeMie peer reviewer (token expiry, output format), adds performance and cost analysis layers for Python, Spark, and Snowflake SQL, and published it in a shared repo with full Confluence documentation for team reuse.<br><br>**Significant contributions:**<br>- Built an agent covering four review modes: standard quality review, performance-only, cost-only, and combined review-and-optimize — with customizable interaction modes and a concise summary table ranked by severity (critical/high/medium/low).<br>- Demonstrated live: reviewed a GitHub PR showing location/category/impact for each issue; optimized a Snowflake SQL query with estimated credit savings ("reduce warehouse seconds by 50–90%"); analyzed a Glue job and suggested optimal DPU settings.<br>- Published the agent instructions in a shared GitHub repo and created a detailed Confluence page so any team member can adopt it — confirmed by offering the link in session chat.<br><br>**Contribution:** Demo / Use Case — Published PR reviewer and code optimizer agent for Python/Spark/Snowflake with performance, cost, and quality analysis (APE-308). | **10** |
+| Jason Daggs | 5/13/2026 | **Why he stood out:** Built and demonstrated a working custom MCP server in Python (FastMCP) that connects Claude Code directly to Jira, developed end-to-end with Claude Code itself, and showed it live retrieving 35 open issues and sprint information.<br><br>**Significant contributions:**<br>- Wrote a Python/FastMCP MCP server exposing tools: get_jira_ticket, get_active_sprint_issues, get_my_open_issues, search_jira_issues (with JQL), and sprint_info — all callable from Claude Code via natural language.<br>- Demonstrated end-to-end: Claude Code listed 35 open Jira issues grouped by status and retrieved active sprint details — all via natural language, without manual context switching.<br>- Explained MCP architecture clearly: STDIO vs. HTTP server modes, the decorator-based tool registration pattern, and how Claude Code auto-discovers and uses exposed tools.<br><br>**Contribution:** Demo / Use Case — Custom MCP server for Jira integration in Claude Code, built with Claude Code itself using FastMCP (APE-1058). | **5** |
+| Swathy Lokula | 5/13/2026 | **Why she stood out:** Asked a targeted question about Jira context that revealed an important scope boundary of the PR reviewer agent.<br><br>**Significant contributions:**<br>- Asked whether the agent is fed Jira information to validate against requirements (vs. just reviewing code changes).<br>- Helped clarify the agent's scope: it reviews git diff, not requirement compliance.<br>- Engaged constructively throughout Sanjay's demo.<br><br>**Contribution:** Active participation — clarified the requirements-validation scope of the PR review agent for the whole group. | **1** |
+| Sam Jayavelan | 5/13/2026 | **Why he stood out:** Drew a useful parallel between Sanjay's agent and EPAM's PR blast radius tool, helping the group understand differentiation.<br><br>**Significant contributions:**<br>- Referenced the EPAM PR block radius and risk analysis tool and asked how Sanjay's agent differs.<br>- Clarified the benchmarking/performance distinction: this is pre-release optimization, not just syntax review.<br>- Engaged substantively with both presenters.<br><br>**Contribution:** Active participation — provided comparative context between Sanjay's agent and existing EPAM PR tooling, sharpening the value proposition. | **1** |
+| Haris Khan | 5/13/2026 | **Why he stood out:** Engaged with Jason's MCP demo with a question that highlighted why tool-specific MCP servers add value for agent focus.<br><br>**Significant contributions:**<br>- Asked how Claude was used to build the MCP server tools, confirming Claude Code's self-referential capability.<br>- Noted the key benefit: "it stops your AI agent from wandering around — you can pinpoint it to the right direction using the correct tools."<br>- Expressed interest in MCP for internal services.<br><br>**Contribution:** Active participation — articulated the agent-focus value of custom MCP tools and confirmed the build-with-Claude-Code approach. | **1** |
+
+---
+
+## Scoring Notes
+
+| Participant | Jira Ticket | Demo Level | Rationale |
+|---|---|---|---|
+| Sanjay Parsi | APE-308 | D3 — Impactful/Reusable (10 pts) | Clears D2 (working agent, live demo with concrete outputs including credit savings estimate); clears D3 via **reuse** — instructions published in a shared GitHub repo and detailed Confluence page open for any team member to adopt. |
+| Jason Daggs | APE-1058 | D2 — Working (5 pts) | Working custom MCP server demonstrated live end-to-end with real Jira data retrieval; reproducible by builder. No confirmed teammate adoption yet; potential D3 upgrade if other engineers adopt the pattern or the server. |
+| Swathy Lokula | — | Active participation (1 pt) | — |
+| Sam Jayavelan | — | Active participation (1 pt) | — |
+| Haris Khan | — | Active participation (1 pt) | — |

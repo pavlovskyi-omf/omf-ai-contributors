@@ -1,0 +1,757 @@
+AI Enablement Cross-Functional Lighthouse AI Open Hours-20260424_135939UTC-Meeting Recording
+April 24, 2026, 1:59PM
+50m 38s
+
+Vira Melnyk   1:12
+Hello!
+
+Lisa Ruby   1:19
+Good morning.
+
+Svetlana Stogni   2:27
+Hi, everyone.
+
+Vlad Grubman   2:31
+Good morning everyone. How's everybody doing?
+
+Allen Truban   2:32
+No.
+
+Svetlana Stogni   2:37
+And happy Friday, everyone! It's finally Friday.
+
+Vlad Grubman   2:42
+No way.
+
+Svetlana Stogni   2:44
+Yes, I believe.
+
+Vlad Grubman   2:44
+Something for Wednesday.
+
+Svetlana Stogni   2:49
+Are you disappointed?
+
+Lisa Ruby   2:49
+It's the best part of the week.
+
+Svetlana Stogni   3:00
+I believe everyone has great plans for the weekend.
+
+Vlad Grubman   3:06
+Yes, ChatGPT 5.5 is out. The plans, the plans are truly great.
+Which brings us back to why we're here today. We're here to help you out, folks. If you have any questions, this is open hours, right? This is where we help you if you're stuck, if you're...
+
+Svetlana Stogni   3:17
+Yeah.
+Okay.
+
+Vlad Grubman   3:26
+I don't know if you if you're not stuck, but still wanted to know how to do things, you need help.
+help with something beyond the homework. This is a time when you can speak up and ask for help. It's okay to ask for help.
+This time, yeah, go ahead, whoever that was.
+
+Svetlana Stogni   3:54
+Hello.
+Please don't hesitate to raise your hand and to pinch everything that you have. We're here to help you.
+Okay, Kai, please go ahead. The stage is yours.
+
+Kai Jei   4:14
+Hi. So I was trying to put together an assistant that would basically
+take a look at a screenshot of some type of design, whatever, and give you feedback or critique it. But the, and the issue is not like the system prompt or anything. I think that I'm just having issues.
+Are saying the...
+screenshots for some reason every time I paste a screenshot or in the chat, it does not seem to work. Like it's not seeing anything. Yeah.
+
+Vlad Grubman   4:54
+Can you share your screen? Can you share your screen and demonstrate that that help us understand why, what, where, when?
+
+Kai Jei   4:59
+Yeah, I'm trying to, I'm trying to connect to Global Protect right now, so it's going to take a minute. Someone else could go if they're ready.
+But yeah, I'm trying to do that right now.
+
+Alfredo Achecar   5:11
+Ho.
+Hey, like, good morning. I wanted to see if we could, if this is the right place to chat about. I wanted to see what prompt when you showed me that brain thing that you did.
+For the...
+For the, you know, I wanted, I wanted to see like what prompt you gave it, like, how do you, how did you arrive there?
+
+Vlad Grubman   5:25
+Mmh.
+That, that's, that's just not just the prompt, that's the whole, like, white paper and a study, but...
+Yeah, that I think it's just gonna take a lot of time. It's not a secret, I'll show you. If you guys find it useful, we can set up a separate session just for that, and I'll walk you through how to activate it, how to set it up, how to start populating it. So for context for everybody else.
+
+Alfredo Achecar   5:41
+And it.
+I love it.
+Yeah.
+
+Vlad Grubman   6:00
+Uh...
+I've shown Alfredo what's called a second brain. This is a very well-known thing.
+I don't know how else to call it. It's a thing in AI development. It's when you set up your own index information storage. Depending on how much information you have, you can use plus files, you can add either a regular SQL database like Postgres or SQL Lite or whatever. And on top of that, if you need
+Additional search capabilities, you can add vector storage or semantic storage, so you can find things faster if your knowledge repository grows beyond, let's say, a few 1000 documents, originals, right? So, if anybody's interested, ping me.
+I'll set up a session. It's absolutely optional. You don't have to do it, you don't have to learn it, but it's a really cool thing. And understanding how you build it is probably even more valuable than just having it. So yeah, I'll set something up probably next week. I'm out most of the time next week, but
+I'll see what I I'll try to make time.
+
+Alfredo Achecar   7:11
+No, no, no, no particular rush on that one. So, if you're gonna be out, that's OK. Just, just, yeah, it'd be it'd be great to know if you can if you can spend the time. Sure, sure, sure.
+
+Kai Jei   7:22
+Okay, I got it pulled up. So this is the assistant is called the design co-pilot. And like I said, the premise is to be able to upload a screenshot and say, could take this. And then it should ideally give you some recommendations based on some guardrails.
+
+Vlad Grubman   7:24
+Yeah.
+
+Kai Jei   7:41
+or rules that you've set. But I keep getting this, like I can't critique this because I don't have any usable image findings, but I obviously like had put an image there, so I don't know what's happening. Can we go into the design?
+Okay.
+
+Vlad Grubman   8:01
+The actual, you know, how how did you how did you set up the system?
+
+Kai Jei   8:06
+Okay, so...
+Yeah.
+See configuration, configure and test. How do I like make this bigger?
+Should I just?
+
+Vlad Grubman   8:22
+You can go into assistance and edit it from there. It'll be a lot easier.
+
+Kai Jei   8:28
+Yeah, okay, from here, how do I, I guess, let me search.
+
+Vlad Grubman   8:31
+Click created by me, lower, lower. No, no, just go lower. Created by. Okay.
+Yeah.
+No, get out of this, get out of this right there, checkbox created by me.
+
+Kai Jei   8:48
+Oh, there you go. Okay.
+
+Vlad Grubman   8:49
+Yeah.
+And then...
+
+Kai Jei   8:51
+Cool. Oh yeah, yeah, that's fine. All right, so this is basically the system instruction app as da da da da. You have some core expectations. You've got UI stuff. And so I don't know if I'm like missing anything here. Do I need to add some tools?
+Should I let me go into the it so maybe you can help me with anything else I need to add to make sure it can read a JPEG?
+
+Vlad Grubman   9:29
+I see we have Vira and Alex. See folks want to jump in here.
+Should work for me. Yep.
+
+Monique Braxton   9:56
+Let me check your assistant. Kai, is there a reason why you decided to use Code Me instead of GPT, like try GPT?
+
+Kai Jei   10:04
+Well, because I don't have ChatGPT from like from EPAM, no, no, from OMF, sorry. Okay.
+
+Monique Braxton   10:07
+Okay.
+
+Kai Jei   10:12
+I don't have access to that because I do know that ChatGPT can do this. I was just trying to see if Cody could do it. So.
+
+Monique Braxton   10:23
+Okay.
+
+Kai Jei   10:28
+But yeah, that's my issue. If anyone on the EPAM side can help me.
+troubleshoot this at some point, that would be great.
+
+Vlad Grubman   10:42
+I think Vira is looking into it right now.
+
+Kai Jei   10:45
+Okay.
+
+Vlad Grubman   10:46
+Right, Vira, let me know if I'm wrong. I have urgency.
+
+Svetlana Stogni   10:49
+Yeah, yeah, yeah, I, I'm, I'm now I'm checking, checking, yeah, of course we will help to fix the problem and to troubleshoot, no worries.
+
+Vlad Grubman   10:53
+Okay, okay.
+
+Kai Jei   10:57
+OK.
+Cool.
+
+Svetlana Stogni   11:01
+It will take some time, like, anyway, like we can do it offline and show the results.
+Just to set the time for the audience, right? We have 53 people more. While Vira is investigating the issue, any other questions?
+
+Kai Jei   11:09
+Okay.
+
+Svetlana Stogni   11:25
+As I remember, we had someone who had raised a hand.
+Okay.
+
+Monique Braxton   11:36
+I have a question. So to Kai's point, so I've been using ChatGPT because I think that is my GPT of choice, but is it better to set up, like what I think I'm starting to get into the habit of doing is like setting up individual GPTs for all of my specific projects as opposed to creating like a GPT that reviews design. Is it better to do it one way or another?
+
+Svetlana Stogni   11:38
+Awesome.
+
+Monique Braxton   12:01
+or the other, like while I want it to support, you know, give me some feedback on the designs that I'm working on, I want it to give me feedback in the construct of the project that I'm working on as opposed to in general. So is it better to set it up as like 1 GPC that is specific to design or is it better to set it up as individual projects?
+
+Vlad Grubman   12:37
+Sorry, I'm not sure I understood the question, so I'm going to repeat it back to you and you tell me if that makes sense. You're using...
+
+Monique Braxton   12:42
+Yeah.
+Uh-huh.
+
+Vlad Grubman   12:46
+Chat GPT or are you using still using code me?
+
+Monique Braxton   12:49
+I'm using chat GPT. So as opposed to, so in Kai scenario, she set up a GPT that's exclusive to like giving design critique on projects. But I think that I have found, or I'm trying to figure out what's a better way to do it. Is it better to set up one GPT that is exclusive to like design premise or?
+
+Vlad Grubman   12:50
+Um...
+Charge UPT, okay.
+
+Monique Braxton   13:09
+For me, what I find is a little bit better for me is setting up a GBT based on a project with all of the context about that specific project. And then using that as a place where I like collect design feedback about that specific asset in the construct of the larger project. Does that make sense?
+
+Vlad Grubman   13:28
+Yes, yes, yes. So I think you're almost there. I got confused by the word project, so I apologize. There are projects in ChatGPT. So
+OK, if I were, if I were doing this, I'm gonna assume I was going to, I would...
+
+Mia (Xiaoling) Zhou   13:42
+Yeah.
+
+Vlad Grubman   13:46
+I'm going to assume on your behalf, okay? So I would assume that you have a...
+set a larger initiative project on a project? Yes.
+You need constant feedback on. So you need to iterate, you need to get additional elements. And so I would set up a project in ChatGPT. Okay. Set up ground rules for that.
+and then have additional dialogues within that project.
+on new things. Like you have, again, maybe I'm just going to come up with a dumb example, but just bear with me for a moment. You have a first, I don't know, page one design or wireframes or wireframes and then design. That would be 1 dialogue. Then you have a different page.
+
+Monique Braxton   14:26
+Yeah.
+
+Vlad Grubman   14:36
+That would be a different dialogue under the same project. Why? Because the way ChatGPT built OpenAI built a ChatGPT harness, the interface that you're using when you're using ChatGPT.
+is the memory, they keep the memories within the project. And if I remember correctly, I'm gonna quickly go check.
+Um...
+Projects, projects, projects. Yeah, I think.
+There is a...
+Yeah, there's a sources, so you can add additional files. So you can create master prompt or master instruction and upload it to the project. So you don't have to repeat your original prompt over and over and over. It would kind of understand what you're trying to do.
+through you setting up that project. So you have, you have, let's say you have, I don't know, a specific journey, a specific flow. You set up a project for that and you keep having multiple conversations under that project. And so it's not going to be a combined intelligence. That's what that brain is for that I was talking about with Alfredo. But
+will retain some memories and will understand the overall, like, what is it you're trying to do? We'll have more of a context of what you're trying to accomplish. So this way, you will have sort of the best of both options that you talked about. You can have a pointed conversation about specific
+asset or a specific screen or a specific flow under the umbrella of the project that you're working on. Effectively, you're going to map the project you're working on to the project in ChatGPT.
+and have conversations inside that. If you're ever going to work on a different project, you don't have to reinvent the wheel. You set up a different project, give a different context. Okay, this was flow number one. Now this is flow #2. Here's what's happening. Let's go discuss the things that you want to discuss. Does that make any sense to you?
+
+Monique Braxton   16:36
+No, but I think there's a way that I need to let, so like, like Kai is a designer and like her exclusive responsibility is like to design.
+
+Mia (Xiaoling) Zhou   16:38
+Oh.
+
+Monique Braxton   16:48
+The features, but like my responsibility is to manage the team, so, like, I'm getting project briefs. I mean, all the designers say projects, and I do consider myself a designer, but I'm gonna get a project brief. I'm gonna put it into the GPT, and I'm gonna ask, does the project brief give us a proper understanding of like what the business goal and outcomes are, and then...
+How do we want to structure the page given the user segment that we're dealing with and the business outcome that we want to accomplish? Okay, here is the wireframe that we came up with as a result of the context that we heard. Is this appropriate to the initial brief and business context that we want to be a part of? So like there's a continuation of me managing back, but it's not always specific to the wireframe. Sometimes it's as a pushback to like,
+hey, the fidelity of context you've given me for the business doesn't make sense or isn't valid to the core audience that you're trying to tell me it is for or like something to that effect. So it's not necessarily always going to be like, give me your perspective on wireframes, but like from a process perspective, do the designers have all of the things that they need in order to be successful in creating the design?
+
+Vlad Grubman   17:53
+Mhm.
+It's the same thing, right? I gave an example of a wireframe, and I think that's where it got confusing, and I apologize. And think about it more of a more generic thing. You have a project and you have a project brief. That's your project in ChatGPT. You got another project brief for a different project. You set up a different project in the ChatGPT.
+
+Mia (Xiaoling) Zhou   17:56
+Thank you.
+
+Vlad Grubman   18:16
+That's that's really all there is to it, and you can have same conversations, you have multiple conversations, it will retain the...
+
+Kai Jei   18:24
+It will retain the context more of it. OK, OK, that makes more sense to me. Thank you. I think that I think one of the another approach which I have found to be a bit more scalable is, yes, doing the project-based approach, but...
+
+Vlad Grubman   18:30
+Yes, Kai.
+
+Kai Jei   18:45
+creating skills that pertain to a particular task. So you have a skill that is like...
+The skill is to, you know, like go through the project brief and pull together a very detailed PRD. So all of those skills, every time you start, because those skills are portable and reusable, you can just port them into a new project.
+So it's a set it once and either iterate on it to see what works or set it and forget it. I create a new project, I import those skills into that project, and I just start to feed in my inputs. This is my project brief, this is my peer, whatever. It gives you the output, and then every time you need a specific task, you call on the skill that you need for that task.
+
+Monique Braxton   19:37
+Does that make sense, Monique? Yeah. And do you ask it like, like in addition to design critique, like I want to understand from accessibility perspective if the wire frame that I'm showing is aligned with that. Like, is that a part of the design grid or that's like a separate?
+
+Kai Jei   19:48
+Yeah.
+Yeah, you could, you could break, you could do it either way. You can create a very versatile skill or you could create a skill that's very, you know,
+specific to a particular task. It depends on how you want to approach it.
+
+Mia (Xiaoling) Zhou   20:06
+Yeah.
+Yeah, I feel like all these like GPTs or agents, they are different tools. Like, like they are washer, washer clothes, they are like dishwasher, washer dishes. So you just create like different like this kind of like applications. And but the project is more like a folder, like.
+You put like contacts in a folder, and but in this folder you are able to call different tools, like, for example, in project A, you are able to let it to the design critique to do the to do the like accessibility test.
+like by calling different agents you built before.
+
+Monique Braxton   20:56
+Okay, that makes sense. Kai and Mia, maybe I'll pull you 2 into a separate chat and we can go through some scenarios.
+
+Mia (Xiaoling) Zhou   21:00
+Yeah, sure. Sounds good.
+
+Vlad Grubman   21:05
+Just want to give a big shout out for for skills. I think it's rightly one of the right ways to do it. That's why that's how it can help. Not that the thing called me, just saying it's there until you get something else. But yeah, that's another good thing. And yeah.
+folders, projects or folders in terms of ChatGPT. If you folks working on the same project, maybe it even makes sense and feel free to reach out to our CodeMe team. We explore if that's possible. Create a project for projects in CodeMe so you can all share your artifacts within the team.
+I don't want to promise that it's like easily doable, but we can look into it.
+
+Kai Jei   21:51
+Yeah, I think something that works like really, at least for me, works really well. It's just, it's a bit more developer centric, but creating a repo for a project and not necessarily, because I don't necessarily like to use the, even though I have chat GPT like a personal account.
+I don't like to use the app. I like to just go into either Codex or, you know, cloud code inside of an IDE. And then with that, I can just create a repo, right, for a particular project. And then I start to create my skills that I can attach to that project.
+inside of that repo, it's very portable. I can push the Git. It doesn't have to be a fully like I'm building out a like I'm building out code in this repo to have a GitHub repository for it. And that way I can just work on any computer. I can, you know.
+put in skills whenever I want, I can do whatever. So for me, at least that approach works a bit better than.
+
+Vlad Grubman   22:58
+100% I do the same thing. Yeah. Yeah.
+
+Tony Moricca   23:02
+Yeah.
+
+Kai Jei   23:03
+And that way to you.
+
+Vlad Grubman   23:03
+And and and it's yeah, sorry, just just want to give a brief shout out. Git is not just for code. You can literally keep things any kind of things in Git. Just make sure it's private so you're not publishing for the whole World Wide Web. Yeah, for sure.
+
+Alfredo Achecar   23:23
+So, what?
+Alfredo, I think you had your hand up. Yeah, so what exactly is a skill?
+
+Kai Jei   23:30
+Right, so.
+
+Alfredo Achecar   23:30
+I mean, I, I, yeah, go ahead, Kai. I was just gonna say, and...
+
+Kai Jei   23:36
+Anyone can add in their thoughts in.
+opinions on this, but the way I see skills are basic, it's the way the word is, is very literal, right? Is a skill is a capability that you can give to an agent. So it can be a skill for front end design. It can be a skill for animation.
+And it's basically built out as a uses the file system architecture. So it's just folders. You can put instructions in those folders. You can put scripts in those folders. And it is basically given the capability to any agent that calls that particular skill.
+a set of instructions that tells it how to go about a particular task. Does that make sense?
+
+Alfredo Achecar   24:28
+Yeah, it does. Got you, got you, got you. Yeah, so it's...
+So, so it's like a it's like a set of like maybe let's say specialized instructions with more with more context. OK.
+
+Kai Jei   24:35
+Yes, yes, very detailed, detailed instructions, guardrails, what to do, what not to do. Like it's basically just instructions and dot MD files and like Python scripts that you can plug into that particular skill that every time that skill is called upon, you're given that agent.
+superpowers in a very specific, you know, category. Yeah.
+
+Alfredo Achecar   24:59
+I see, I see. Yeah, that makes sense. No, I mean, I figured like I I could intuit what the, you know, what what the what it was trying to do, but not how they were built, so that makes it that's really helpful. OK, and there's even like inside of Codex and Cloud Code, there is a skill called Skill Writer, so if you're starting out and you don't know how to...
+
+Kai Jei   25:08
+Yeah.
+create a particular skill, you can just call that skill writer skill, and your agent would read that skill and be able to build out whatever skill you're trying to build.
+
+Alfredo Achecar   25:30
+That's pretty cool. Okay. Good to know.
+
+Oleksandr Tsyganok   25:32
+Yeah, we we we can think about this like skills as just a kind of reusable prompt, some like instructions that can be reused across like multiple different agent, but if we're talking about the specific skills and skill writer from code, it have like very specific like rules.
+how to write it, there is like, like kind of official specification for this like skill requirements, like all this like details, structure, like folders, tools, and like all other parts that needs to be maintained. So it's like not just a prompt, but...
+
+Kai Jei   25:57
+Yeah.
+
+Oleksandr Tsyganok   26:13
+additional like tools, it potentially can be some like Python code that just like no details about some API connectivity and like all other details.
+
+Svetlana Stogni   26:28
+And, by the way, in we also have this functionality.
+I'm not sure we didn't have enough possibilities and opportunities to share this functionality with you, but anyways, skills are also a part of this tool.
+
+Oleksandr Tsyganok   26:48
+Yeah, but we we should like clearly differentiate what what we're talking like, like what is this like definition of skill if we're just saying that it's like kind of reusable prompt that's like one thing like if we're talking about this agent skills that I believe like entropic created this like kind of open specification and like like libraries.
+
+Svetlana Stogni   26:54
+Yeah.
+
+Oleksandr Tsyganok   27:09
+It's like a different, a bit different since that it have like specific structure, like like commands, like some like scripts that needs to be executed and other parts.
+
+Kai Jei   27:22
+Oh, so are you saying that the skills in Code Me are not the same as the anthropic and open AI skills?
+
+Oleksandr Tsyganok   27:34
+Yes, if I remember, currently we don't have this like part to execute like some arbitrary code. So it's just for security perspective, like technically in a skill you can add additionally just like scripts.
+
+Kai Jei   27:50
+It's great. Yeah.
+
+Oleksandr Tsyganok   27:52
+Yeah, and this part, as far I remember, like currently is not executable.
+
+Kai Jei   28:01
+Okay.
+
+Oleksandr Tsyganok   28:01
+Yes.
+Big.
+Development, I'm not sure like how it should be like approached from like enterprise perspective, but yeah, that's the current limitations that we have. I think like we still like didn't figure out how to make it like in this insecure way.
+
+Kai Jei   28:22
+Got it.
+
+Vlad Grubman   28:25
+Yeah, another difference would probably be the difference between how you actually prompt each individual type of LLM. So, by nature, you've...
+If you really want to be very extremely specific.
+the GPT models will be different from the tropic models.
+I would, I would actually, like, if that's something you want to dive in, and skills are extremely, extremely useful, regardless of which platform you're using. There's a set of skills that OpenAI developed, and they all they outsource pretty much everything except the models. So, in addition to the skills that Alex posted and Jason, you can look at the GitHub OpenAI skills.
+To see the skills for.
+open AI models, right? So if you want to use them in codex or anywhere else.
+
+Kai Jei   29:21
+Yeah, and there are like marketplaces as well that you can go to to find more skills. Oh, oh yeah, absolutely. My my concern with marketplaces is you, unless you inspect the the that. What it's doing, yeah, yeah, for sure.
+And.
+
+Vlad Grubman   29:35
+Skill, what is it to really do? Yes, so I mean, with OpenAI, you can at least kind of point a finger and say, "Yeah, you did it, but..."
+No.
+Some, I don't know, Crazy Fox 12345 is probably not a good reference.
+
+Kai Jei   29:52
+And.
+Yeah.
+
+Vlad Grubman   30:00
+Cool. I'm glad I'm glad we're exploring beyond that. From our end, we're working with your management and your security teams to unlock some additional possibilities, maybe including Codex, since you already have most people have ChatGPT Enterprise. In the meantime, again, not being called me, but
+Codebe does have skills. If you want to experiment with them, by all means, go play with the skills in Codebe.
+Try things out, see how it works.
+Are there any other questions? Do we have anything else? Any other any other things? By the way, I don't know if came back. Were you able to see what's happening with that upload thing?
+
+Oleksandr Tsyganok   30:43
+Yeah, before we will move forward, couple comments about like this code me skills. So again, it's like a bit like different setup. So if we're talking about specifically like for code me skills, so it's like not just like a reusable prompt, as I mentioned in a code me.
+
+Vira Melnyk   30:43
+Uh, unfortunately.
+Yeah.
+
+Oleksandr Tsyganok   31:02
+It's also possible to connect like this like tools instead of like this like arbitrary scripts and like some random code from like this like marketplaces. We can connect like existing tools. So if you already have like this integration with Jira, Confluence and like some approved MCP servers.
+We can set up it directly in the code me when you create in the skill, you can provide this instruction plus connect this like tools that you need for this specific skills. So it's like kind of a bit like better control, but yeah, so as I mentioned, there is no like direct import of like close skills, just SS. You can definitely.
+Try to adopt it, like check like this like script part and try to adopt it to like existing code middle, so we have like some code execution, like local is is isolated inbox, and yeah, technically you can kind of migrate it, but...
+There is no like one-to-one setup.
+
+Vlad Grubman   32:15
+Thank you, Alex. Do we have Vira, Shoaib? Yeah, go ahead.
+
+Vira Melnyk   32:18
+Yeah, according to the assistant, assistant, can I please, I'm messaging you in a private message. I need the Jason of your chat and also your image for troubleshooting.
+
+Kai Jei   32:35
+Okay.
+I will send that over.
+
+Vira Melnyk   32:37
+Thank you.
+
+Vlad Grubman   32:49
+Cool. All right. Anything else? Any other questions? Please feel free to speak up.
+
+Debamitra Bhattacharjee   33:17
+So I have a question regarding the data source creation of AWS. So I already set up the integration with AWS.
+But when I'm trying to create a data source.
+with the AWS maybe S3, some storage location. So I don't see the option to select AWS at all.
+So.
+How to do that?
+Hello.
+
+Oleksandr Tsyganok   34:15
+Tools that we're planning to set up in the near future, and yeah, it may be it's currently in review, so you can maybe like test it in this like training like environment, but I think for like production usage scenarios need to be approved, and as I understand, you want to create.
+
+Debamitra Bhattacharjee   34:20
+Oh.
+See.
+ID.
+Chocolate.
+Yeah.
+
+Oleksandr Tsyganok   34:36
+some kind of data source and like what should be source of this like knowledge base.
+What kind of documents need?
+
+Debamitra Bhattacharjee   34:45
+So.
+
+Oleksandr Tsyganok   34:49
+Be collected there.
+
+Debamitra Bhattacharjee   34:51
+Yeah, so like in the API gateway, so AWS API gateway, we have a couple of services, so I just wanted to connect, so I wasn't sure, like, what are the steps, so I thought, like, when I'm done integrating AWS with CodeMe, the next steps would be to create the data source, then we would...
+go create a flow chart, I mean the workflows and something like that. That's what my understanding was. But then again, I could be wrong. Like maybe we can create workflows that directly without creating any data source with AWS.
+
+Oleksandr Tsyganok   35:35
+Yeah, so...
+
+Debamitra Bhattacharjee   35:40
+So that.
+
+Oleksandr Tsyganok   35:40
+Not sure, like, let me share like maybe my screen. Okay. Yeah, I can share my screen. We should clearly differentiate like data sources and integration. So integration, it's just a mechanism to provide like authorized access.
+
+Debamitra Bhattacharjee   35:42
+Hai.
+
+Oleksandr Tsyganok   35:44
+Well, you can share it like we should.
+To existing systems, just like you can think about some connectivity, we are like like REST API or some like application to application integration, something like this, so you have like some credentials, you connect in some like API, it has like set of functions that you can use.
+
+Debamitra Bhattacharjee   36:00
+Mhm.
+Okay.
+Yeah.
+
+Oleksandr Tsyganok   36:19
+directly from code me and you give like a description of this like function and all capabilities to AI. So AI can be like all this like parameters, how to execute it correctly and take this like decision which specific function need to be called. Data source is like internally stored knowledge base.
+
+Debamitra Bhattacharjee   36:38
+Okay.
+
+Oleksandr Tsyganok   36:39
+Uh, it's stored within Kodangil. OK.
+It's processed with embedding models, so basically it's like vectorized like data, and the main feature that is used in this like retrieval, retrieval augmented generation, so...
+
+Debamitra Bhattacharjee   36:51
+Uh-huh.
+
+Oleksandr Tsyganok   37:01
+Like a large data source for AI, you can get like some most relevant documents. Usually in the Cody, we get like top 10 documents from this like large data source. So if you ask an AI about some specific questions, it will...
+
+Debamitra Bhattacharjee   37:02
+Mmh.
+Okay.
+Okay.
+
+Oleksandr Tsyganok   37:20
+Search across this data source and find like most relevant information. Yes, the main idea is that it's using this like semantic search, so it's not like trying to find it like exact match for like this word that you provided. It will try to find like something like logically similar, like semantically similar.
+Information there, so like what we provides like different types of data sources, but it doesn't matter like where where we like extracted this information. It can it can be a confluence, like any documents that you have in confluence, and can be JIRA items. Maybe you want to track, like I don't know, like all existing bugs or like track call backlog.
+
+Debamitra Bhattacharjee   37:58
+Ohh.
+Okay.
+
+Oleksandr Tsyganok   38:04
+It can be just a local file. So I'm not sure like what kind of data you want to pull from like AWS. At the moment, we don't have like a native integration.
+
+Debamitra Bhattacharjee   38:15
+Yeah, okay.
+Okay, so I got it. So then, so my main objective was to invoke the APIs through AWS API Gateway. So for that, I don't need to have a data source here set up with AWS. I can create a workflow directly with AWS.
+
+Oleksandr Tsyganok   38:29
+Mmh.
+
+Debamitra Bhattacharjee   38:38
+And I need to have some data source calling from some confluence page or something to get the payloads and all the other details, correct? That way we can do that. Yeah, so if it's just like some gateway and it's like your custom internal API.
+Mhm.
+Yeah.
+
+Oleksandr Tsyganok   38:58
+So we have a type of integration, open API specification. So usually, like, all API should be like documented. That's like the best, like, common tool for documenting API. Let me share it.
+
+Debamitra Bhattacharjee   39:06
+Ohh.
+Mm.
+Okay.
+
+Oleksandr Tsyganok   39:18
+I, I'm not sure, like, are you using this like open API specification? Is your APIs that you hosting documented in some way?
+
+Debamitra Bhattacharjee   39:31
+Yeah, it some of them are documented in the confluence page, but they are not in one place. They are kind of scattered around, but I can, you know, create a page with all the payload details as a data source, and then...
+
+Oleksandr Tsyganok   39:35
+Uh-huh. OK.
+
+Debamitra Bhattacharjee   39:51
+I can create like workflows calling AWS API. That's how we can automate the process.
+
+Oleksandr Tsyganok   40:00
+Yeah, I see. So if you don't have like formally described documents, like in form of like usually this like open API specification, I just will share this link. So alternatively, you can build this specification from your confluence.
+
+Debamitra Bhattacharjee   40:03
+Ohh.
+Mhm.
+
+Oleksandr Tsyganok   40:21
+Pages, and you can connect it in the code integration. So, like, it's basically the document is open API specifications and documentation for APIs. As I mentioned, it just described all endpoint like addresses, like how to access it, specific like set of parameters.
+that needs to be passed to this like endpoint and some information what's this endpoint doing. Like, yeah, so if you're using like any kind of like public APIs, most of them are using this like open API certification in some form.
+
+Debamitra Bhattacharjee   40:57
+I think we are not using open API or any public API. It's like all the AWS services we're using.
+
+Oleksandr Tsyganok   41:05
+Yeah, but it doesn't matter where you're hosting it. You can have like on premises setup, but you need you usually if you build an API, you need to share it with like, like whole world, like have like some like developer portal if.
+
+Skyler Hildreth   41:09
+Oh, OK.
+
+Debamitra Bhattacharjee   41:14
+Ohh.
+
+Oleksandr Tsyganok   41:23
+It's like quality-facing API. I understand that it's like mostly like some kind of internal private one, but yeah, the best practice to have like this documentation, and that's why you need it, because AI have no idea how you build your API. It need to know how to build this like parameters, and that's why you need like this specification.
+
+Skyler Hildreth   41:28
+Mhm.
+Mm.
+
+Debamitra Bhattacharjee   41:44
+Kai.
+Okay.
+Okay, I'll try to work on that maybe. And I think I would have more questions, so I will reach out to you.
+
+Oleksandr Tsyganok   42:02
+Yeah, sure.
+
+Vlad Grubman   42:02
+Yes, please. So sorry, Alex. I'm going to answer you on behalf. Yes, please reach out to us.
+
+Debamitra Bhattacharjee   42:05
+Yeah.
+Yeah.
+Yeah, I will. Thank you.
+
+Vlad Grubman   42:24
+All right, we have about 18, 17, 18 minutes left. If anybody has anything else, we still have time to process your request.
+
+Oleksandr Tsyganok   42:35
+Yeah, I will share this like link, for example, you might know this like trailer tool from Atlassian. That's just a description of their API, like hosted on their site, but yeah, behind the scene, it's like just this like open API specification. You can download this like Postman collection, you can...
+
+Debamitra Bhattacharjee   42:50
+Okay.
+
+Oleksandr Tsyganok   42:56
+Download specific like open API file that's the link to this like format, and that's that's like how CodeMe can integrate like some arbitrary tools in the system. Again, we need like to make sure that we have like some kind of security approval.
+
+Debamitra Bhattacharjee   42:57
+No.
+Okay.
+For this external system integration within Cody, OK, so that actually brings another question is...
+Currently, I can see, like, there is no integration with Snowflake, correct? With CodeMe with this, can we integrate Snowflake or that is again?
+
+Oleksandr Tsyganok   43:43
+Yep, technically we can integrate anything.
+
+Sukalya Rajendran   43:44
+Security, so snowflake.
+Yeah, but Snowflake has data, right? I think that that's literally the database for analytics team. So I'm not sure if that integration would be approved by security right now. Because Snowflake has its own AI tool called Snowflake Cortex, where you can use NLP to do your querying and understand the data, right?
+
+Debamitra Bhattacharjee   44:01
+Ohh.
+Oh.
+Yeah.
+Yes.
+
+Sukalya Rajendran   44:11
+but I'm not sure if that will be approved to integrate with the other tools as such.
+
+Debamitra Bhattacharjee   44:11
+Yeah.
+So no, having a separate AI is not blocking to integrate because see, both Confluence and Jira also have its own API, AI, correct, but we are still integrating it with CodeMe.
+
+Sukalya Rajendran   44:33
+Yep, but that is literally customer data that we maintain. It's different from our internal pages of what we maintain in Confluence. Ideally, we're not supposed to be putting any sensitive information in Confluence and things like that, but that rule does not apply in Snowflake. We already have customer, yeah, application and, you know, customer data, loans, information and all that.
+
+Debamitra Bhattacharjee   44:34
+Um, and...
+Hey.
+Snowflake.
+
+Sukalya Rajendran   44:56
+So, but I mean, I'm not saying it's ruled out. I'm just bringing up a point, saying it has more security implications than the other systems that we have integration with today. And I think under Naman's wing, Rajesh is the point of contact for Snowflake. So, and he's already part of that JN AI council as well. So.
+
+Debamitra Bhattacharjee   45:08
+Mm.
+
+Sukalya Rajendran   45:17
+I've not heard anything about allowing Snowflake to be integrated with the EPAM CodeMe tool as of now. Okay.
+
+Debamitra Bhattacharjee   45:17
+Okay.
+Hmm.
+Okay.
+Yeah.
+Yep.
+Thank you.
+
+Vlad Grubman   45:52
+All right, 15 more minutes.
+This has been great. Honestly, I just want to give a shout out to all of you folks. Really good questions, really good conversations. So by all means, please keep them coming.
+
+Svetlana Stogni   46:18
+And by the way, guys, have you started thinking about these cases you would like to present on Thursday for your teams? Oh, not Thursday, on Tuesday.
+This is your home task.
+
+Debamitra Bhattacharjee   46:36
+So, Svetlana, one question. When you were seeing the use cases, the one which is not resolved yet, correct? Which we from the teams want to resolve with the help of AI? Actually, that's a great question, because we can also consider, you know,
+It is.
+
+Svetlana Stogni   46:56
+these cases that are already resolved and thinking about the way how to incorporate those use cases into end-to-end workflow covering like digital engineering and QA parts you see and it's a great approach to reuse everything that
+You have, you have that you've already prepared.
+But then, I, I, I just...
+
+Debamitra Bhattacharjee   47:20
+No, I mean, I have so many unresolved ones. So, so the question that that's why that's why I ask, like, is it all about the unresolved one or the resolved one?
+
+Svetlana Stogni   47:25
+Yeah.
+Hurt.
+
+Debamitra Bhattacharjee   47:35
+Talk.
+
+Svetlana Stogni   47:35
+Both, like everything that will bring value for your project and will help to increase the productivity for your particular team. Like, you can bring everything that you have also.
+
+Debamitra Bhattacharjee   47:48
+Mhm.
+
+Svetlana Stogni   47:55
+The ideas covering all the points that you face, because we are here to identify those pain points and to fix everything with AA capabilities and get the value.
+
+Debamitra Bhattacharjee   48:07
+Oh.
+
+Oleksandr Pavlovskyi   48:10
+Okay. Yeah, yeah, that can be just an idea, yeah? So you just need to bring these tickets to the board, yeah? And we're going to discuss during this session. And of course, think about the use cases that you already have, yeah? Because this is your experience or that use cases that was submitted by...
+
+Debamitra Bhattacharjee   48:22
+But...
+
+Oleksandr Pavlovskyi   48:30
+other guys, yeah. So we can collaborate on this, yeah, and build your workflow, reusing our experience that we already have. So guys, it can be idea or maybe something that already implemented, so anything, yeah. So we're starting, this is going to be a great starting point, yeah, to start talking about it.
+
+Vlad Grubman   49:16
+All right, we have almost 10 minutes, 11, 12, something like that. If you folks don't have anything else, we can give you those 10, 11 minutes back. Again, thank you for really great discussion. Please keep in mind your homework.
+The use cases, think about them as problems, like Alex said, something that you're trying to resolve right now, or you have resolved, but there's a better way of doing it. We'll see how it ties into your overall flow from your intake, from requirements to engineering and to testing.
+Bring them in, file them as tickets on the board, please. So we have sort of, we have traction and we have.
+Well, we will have availability, of course. Also, we'll track all these cases so nothing gets lost. If we don't get to your case first and we know where it is, where to find it, then we can get to it second.
+All right, again, last call. If nobody has anything else, we can adjourn. Give it 10 minutes back.
+Gone once, gone twice.
+Alright, folks, thank you all. We'll see you next time.
+
+Svetlana Stogni   50:29
+Thank you. Thank you. Have a good rest of the day and great weekend.
+
+Oleksandr Pavlovskyi   50:29
+Thank you.
+
+Denis Platonov   50:30
+Play.
+
+Eugene Semenyuk   50:36
+Thanks, Seyoum.
+
+ stopped transcription
