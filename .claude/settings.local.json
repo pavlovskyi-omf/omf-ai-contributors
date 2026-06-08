@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:onemainfinancial.atlassian.net)",
+      "mcp__atlassian-rovo-mcp__getConfluencePage",
+      "mcp__atlassian-rovo-mcp__getJiraIssue",
+      "Bash(pip show *)",
+      "Bash(python *)",
+      "mcp__atlassian-rovo-mcp__getAccessibleAtlassianResources",
+      "mcp__atlassian-rovo-mcp__updateConfluencePage",
+      "mcp__atlassian-rovo-mcp__lookupJiraAccountId",
+      "Bash(python3 *)",
+      "mcp__atlassian-rovo-mcp-api__getTeamworkGraphObject",
+      "mcp__atlassian-confluence__getTeamworkGraphObject"
+    ]
+  },
+  "prefersReducedMotion": true
+}

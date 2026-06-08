@@ -1,0 +1,18 @@
+Update the <Confluence page>: https://onemainfinancial.atlassian.net/wiki/spaces/PE/pages/1433669146/Engineering+-+Phase+2
+
+Goal: Iteratively update the relevant table on the page using score data from the Markdown file(s) listed below.
+
+<Markdown file()s>:
+C:\Projects\OMF\Reports\omf-ai-contributors\output\champions-syncs\2026-04-27 - AI Enablement ENGINEERING Champion Sync - Scores.md
+
+C:\Projects\OMF\Reports\omf-ai-contributors\output\champions-syncs\2026-05-04 - AI Enablement ENGINEERING Champion Sync - Scores.md
+C:\Projects\OMF\Reports\omf-ai-contributors\output\champions-syncs\2026-05-11 - AI Enablement ENGINEERING Champion Sync - Scores.md
+C:\Projects\OMF\Reports\omf-ai-contributors\output\champions-syncs\2026-05-18 - AI Enablement ENGINEERING Champion Sync - Scores.md
+C:\Projects\OMF\Reports\omf-ai-contributors\output\champions-syncs\2026-06-01 - AI Enablement ENGINEERING Champion Sync - Scores.md
+
+-------------
+Use 'atlassian-rovo-mcp' 
+Make appropriate updates in tables on the page: https://onemainfinancial.atlassian.net/wiki/spaces/PE/pages/1433669146/Engineering+-+Phase+2 
+
+Iteratevely yse the following content from md file(s) to update the page:
+C:\Projects\OMF\Reports\omf-ai-contributors\output\champions-syncs\2026-04-27 - AI Enablement ENGINEERING Champion Sync - Scores.md

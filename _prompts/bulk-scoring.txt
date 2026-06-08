@@ -1,0 +1,59 @@
+Use the 'score-meeting' skill to score the following meeting transcripts using the recognition rules.
+
+Iteratively generate one Markdown score report per session and save each report to:
+C:\Projects\OMF\Reports\omf-ai-contributors\output\champions-syncs
+
+Process the sessions in order.
+
+Session 1:
+<Transcript>: C:\Projects\OMF\Reports\omf-ai-contributors\input\txt\champions-syncs\2026-04-13 - AI Enablement_ ENGINEERING Champion Sync.txt
+
+Session 2: 
+<Transcript>: C:\Projects\OMF\Reports\omf-ai-contributors\input\txt\champions-syncs\2026-04-20 - AI Enablement_ ENGINEERING Champion Sync.txt
+
+Session 3: 
+<Transcript>: C:\Projects\OMF\Reports\omf-ai-contributors\input\txt\champions-syncs\2026-04-27 - AI Enablement_ ENGINEERING Champion Sync.txt
+
+Session 4: 
+<Transcript>: C:\Projects\OMF\Reports\omf-ai-contributors\input\txt\champions-syncs\2026-05-04 - AI Enablement_ ENGINEERING Champion Sync.txt
+
+Session 5: 
+<Transcript>: C:\Projects\OMF\Reports\omf-ai-contributors\input\txt\champions-syncs\2026-05-11 - AI Enablement_ ENGINEERING Champion Sync.txt
+
+Session 6: 
+<Transcript>: C:\Projects\OMF\Reports\omf-ai-contributors\input\txt\champions-syncs\2026-05-18 - AI Enablement_ ENGINEERING Champion Sync.txt
+
+Session 7: 
+<Transcript>: C:\Projects\OMF\Reports\omf-ai-contributors\input\txt\champions-syncs\2026-06-01 - AI Enablement_ ENGINEERING Champion Sync.txt
+
+
+---------------------
+
+Session 2:
+<transcript>: C:\Projects\OMF\Reports\omf-ai-contributors\output\2026-04-22 - AI Enablement_ ENGINEERING Lighthouse Session.txt
+<Jira tickest showcased>: APE-285, APE-266
+
+Session 3:
+<transcript>: C:\Projects\OMF\Reports\omf-ai-contributors\output\2026-04-29 - AI Enablement_ ENGINEERING Lighthouse Session.txt
+<Jira tickest showcased>: APE-281, APE-126
+
+Session 4:
+<transcript>: C:\Projects\OMF\Reports\omf-ai-contributors\output\2026-05-06 - AI Enablement_ ENGINEERING Lighthouse Session.txt
+<Jira tickest showcased>: APE-294, APE-278
+
+Session 5:
+<transcript>: C:\Projects\OMF\Reports\omf-ai-contributors\output\2026-05-13 - AI Enablement_ ENGINEERING Lighthouse Session.txt
+<Jira tickest showcased>: APE-1058, APE-308
+
+Session 6:
+<transcript>: C:\Projects\OMF\Reports\omf-ai-contributors\output\2026-05-20 - AI Enablement_ ENGINEERING Lighthouse Session.txt
+<Jira tickest showcased>: APE-1057, APE-282
+
+Session 7:
+<transcript>: C:\Projects\OMF\Reports\omf-ai-contributors\output\2026-05-27 - AI Enablement_ ENGINEERING Lighthouse Session.txt
+<Jira tickest showcased>: APE-1465
+
+Session 8:
+<transcript>: C:\Projects\OMF\Reports\omf-ai-contributors\output\2026-06-03 - AI Enablement_ ENGINEERING Lighthouse Session.txt
+<Jira tickest showcased>: APE-112, APE-1028
+
