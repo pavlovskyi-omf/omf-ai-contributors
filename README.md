@@ -4,7 +4,8 @@ A small utility repository used to extract text from DOCX files and produce simp
 
 ## Project structure
 
-- `docx2txt.py` — main extraction script
+- `docx2txt.py` — DOCX-to-text extraction script
+- `merge_reports.py` — merges per-session Markdown score reports into one combined report
 - `input/` — source DOCX and TXT files (not committed)
 - `docx2txt_output/`, `output/` — generated outputs (ignored)
 - `_prompts/` — prompt templates
@@ -43,6 +44,33 @@ Dependency: the script uses the `python-docx` package. Install with:
 ```bash
 pip install python-docx
 ```
+
+## Merging score reports — `merge_reports.py`
+
+Combines all per-session Markdown score reports in a folder into a single consolidated report. The output file is named after the input folder and written to `output-report/` by default.
+
+```bash
+# Merge all .md reports in a folder (output -> output-report/<folder-name>.md)
+python merge_reports.py output/champions-syncs
+
+# Specify a custom output directory
+python merge_reports.py output/champions-syncs --output-dir path/to/output
+
+# Short forms for the output directory flag
+python merge_reports.py output/champions-syncs --o path/to/output
+python merge_reports.py output/champions-syncs -o path/to/output
+```
+
+Notes about behavior:
+
+- Input must be a directory; all `*.md` files inside are processed in alphabetical (date) order.
+- Each file must follow the standard score report template: a `**Session Date:**` header and a `| Name | Date | Activity | Score |` table.
+- The merged report's **Period** line is set automatically from the first and last session dates found.
+- Files with no parseable table rows are skipped with a warning; the run continues.
+- The output directory is created if it does not exist.
+- Running without arguments defaults to `output/champions-syncs/` as input.
+
+No additional dependencies — stdlib only.
 
 ## Notes
 
