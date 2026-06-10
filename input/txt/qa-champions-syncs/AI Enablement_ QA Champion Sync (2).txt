@@ -1,0 +1,406 @@
+AI Enablement QA Champion Sync-20260518_140016UTC-Meeting Recording
+May 18, 2026, 2:00PM
+33m 1s
+
+Eugene Semenyuk   0:19
+Hello!
+Good morning.
+
+Jamie Hayes   0:27
+Morning.
+
+Eugene Semenyuk   1:22
+Let's wait a few minutes.
+More folks to join us.
+Yeah, let's wait one more minute and then we'll start.
+What?
+Okay, let's start. So, hi everyone, thank you for joining today's AI Champions Singh. So, yeah, today's session will be structured in a few parts, as usual. Yeah, first we'll discuss some some news, then we'll open up the discussion, so we'd love to hear.
+what you've been experimenting with, what use cases you're exploring, and where you might need some support, and so on. And finally, we'll wrap up with some next steps and alignment. So yeah, the goal for today is not just to present something, it's to collaborate, unblock each other, accelerate adoption,
+In.
+Smart and structured way, so yeah, let's start with the, yeah, with some news, yeah, and maybe some...
+Maybe the main topic for today's discussion. So, yeah, last week during our cross-functional PDLC session, we discussed...
+servers, like what is MCP server, what MCP servers we have at OMF, how to configure.
+connections, how to build connections with those servers and so on. So yeah, we even brainstormed on some use cases that we can use for cross-functional things. Yeah, but today I'd like to emphasize here to think about where.
+Where in QA, yeah, where in QA task we can apply some of our MCP servers. So, yeah, but before that, we can we can start with our regular.
+Ohh.
+I would say health check. So yeah, we can go around the room and discuss some news about your use cases. Yeah, maybe you need some help somewhere. So yeah, now I would like to open the discussion room. Yeah, and yeah, go.
+go around it. So yeah, I'd like to know how are you doing this week? Have you had a chance to experiment with AI since our last season? So I'm currently working on any AI related use case. So yeah, and any
+Any things that you would like to share with us?
+So, yeah, let's probably start. So, Bandana, would you like to be the first?
+Today.
+
+Bandana Sriramka   6:51
+Yeah, sure, Rujin. So I was, I am currently working on an agent for regression where I have already showed that, you know, I am getting a line breaks. I think I'm going to discuss that with you today, how to avoid that in the output.
+
+Eugene Semenyuk   7:05
+Mhm.
+Mmhm.
+
+Bandana Sriramka   7:11
+Apart from that, I also worked on an agent recently where if there is a user story, for example, originations user story, and they want to validate the hydration for that particular user story. So they have a Excel sheet with all.
+
+Eugene Semenyuk   7:29
+Mhm.
+
+Bandana Sriramka   7:29
+and different tabs. Let me quickly show that.
+I'll share my screen.
+
+Eugene Semenyuk   7:35
+Mm-hmm.
+
+Divya Ramkumar   7:39
+So, Eugene, to give a background, this was a request from Andy from Originations. So, yeah, that's why we're working on it.
+
+Eugene Semenyuk   7:44
+Mhm.
+Yeah, I see. Thanks.
+
+Bandana Sriramka   7:48
+Yeah, so this is an access sheet that is going to be attached on that particular user story. User stories are listed here. And there are a lot of tabs with all the information for that particular user story.
+
+Eugene Semenyuk   7:57
+Yeah.
+
+Bandana Sriramka   8:05
+So the requirement is to basically read that access, the agent should read the access sheet and validate against the user story that and confirm that the hydration is, that story is completely hydrated for us to go ahead with the testing. So I created an automation also.
+
+Eugene Semenyuk   8:21
+Mhm.
+
+Bandana Sriramka   8:24
+For that, I created an agent, then created an automation for that. This is the agent that I have created. And I'll show.
+The flow.
+Yeah, so this is the zero automation that I created. I have given a condition to 1st look for the attachment on that user story. And I have also specified that the work type should be story. And it will validate that the attachment already exists. Then it will proceed for the next step.
+
+Eugene Semenyuk   9:03
+Mhm.
+
+Bandana Sriramka   9:04
+that it will read and read the attachment and it will output the verdict for us and add the comment. So the comment will look like something like this here.
+It will read and tell us that the hydration is confirmed. It will read through all the tabs on the Excel sheet. It will list it out. And finally, it will tell us that the story is hydrated and it's QE ready.
+
+Eugene Semenyuk   9:31
+Yeah, yeah.
+Yeah, and I, I really love to see that. Yeah, you use you use the knowledge that you know the knowledge from our cross-functional sessions, I mean, about geo automation rules. Yeah, that's awesome, and yeah, I'm really curious about.
+
+Bandana Sriramka   9:47
+Yeah.
+
+Eugene Semenyuk   9:54
+How?
+How robo agents read this this Excel files? Yeah, is it is it good enough?
+
+Bandana Sriramka   10:02
+Exit.
+Yeah.
+Yeah, it is good enough. Yeah, it is ready and through it, yeah.
+
+Eugene Semenyuk   10:09
+Ohh.
+Mhm.
+Looks, looks good, yeah.
+
+Bandana Sriramka   10:16
+Yeah.
+
+Eugene Semenyuk   10:20
+Awesome.
+
+Bandana Sriramka   10:20
+So that's all I have worked on.
+
+Eugene Semenyuk   10:22
+Mhm.
+So, yeah.
+Yeah, it would be great if you can demo it some, some, somehow, maybe this Wednesday or maybe next Wednesday.
+
+Bandana Sriramka   10:38
+Sure, and I leave it with you.
+
+Eugene Semenyuk   10:38
+So, yeah, Amy.
+Yeah, it would be, it would be awesome. Yeah, thanks a lot. This is really interesting use case.
+
+Bandana Sriramka   10:44
+Thank you.
+
+Eugene Semenyuk   10:48
+Yeah, especially, especially, I like the part where you made it autonomous, like create, create a rule, I mean, your automation rule, yeah, set up some triggers, yeah, and now we can work autonomously based on these conditions.
+
+Bandana Sriramka   11:08
+Yeah.
+
+Eugene Semenyuk   11:08
+So yeah, this is really awesome. Thank you.
+Okay, yeah, let's proceed. So...
+Yeah. I wanted to ask Dana, yeah, but first, yeah, I'd like to mention that last week we tried to connect X-ray with Code Me. Yeah, but yeah, unfortunately, we faced some issue with
+SSL, and yeah, it looks like looks like there is some network issue and X-ray host blocked by code me, so yeah, and as I know guys are working on this right now.
+Yeah, and I hope really soon X-ray will be available in CODME.
+
+Dhanalakshmi Chinnasamy   12:15
+Okay.
+
+Eugene Semenyuk   12:16
+So, but...
+Yeah, besides that, so Dana, maybe you have some interesting experiments.
+These cases.
+
+Dhanalakshmi Chinnasamy   12:28
+I tried MCP, Mabel MCP. I'm able to create a test and also I integrated with the Jira MCP with the requirements. Jira, I'm able to create.
+
+Eugene Semenyuk   12:31
+Yeah.
+
+Dhanalakshmi Chinnasamy   12:40
+tests in Mable and also I'm able to analyze the results with Mable MCP.
+
+Eugene Semenyuk   12:46
+Mhm.
+Oh yeah.
+I love this part too. Yeah, because...
+Yeah, in many cases, MCP can.
+Can make our life a bit easier, so yeah, and uh...
+Yeah, and say, as I understand, you, you've done it in VS code. I mean, used VS code to connect to Atlassian MCP to get some items from Jira, use Maple MCP. So, yeah, I guess.
+Really soon.
+MCP will be enabled in code me.
+Yeah, and we can connect maybe MCP to call me and like.
+To create some agents that can interact with JIRA, X-Ray, Mabel, and...
+I hope, based on, based on such infrastructure, we can build something, something strong.
+
+Dhanalakshmi Chinnasamy   13:56
+Yeah, with X-ray, with X-ray I tried Atlassian MCP, but I think some of the APIs are not supported. With the GRI, it's GRI of admins I'm able to process, but with the X-ray, some of the equivalent MCPs
+
+Eugene Semenyuk   13:56
+Like, uh...
+Hmm.
+Mhm.
+
+Dhanalakshmi Chinnasamy   14:16
+APIs are not available, so it's not working.
+
+Eugene Semenyuk   14:22
+Okay.
+So, yeah, I hope it will be fixed soon, so yeah, and we can build some.
+Yeah, even maybe something end to end, like...
+Uh, trigger.
+Trigger the flow answer.
+And so, user story ready for development, so yeah, it can be triggered, analyzed the user story, analyze user story, generate test cases, upload them to X-ray, then create Maple tests based on.
+These use, ohh, Desk cases.
+So, yeah, and yeah, I also would like to to discuss.
+Uh...
+MCP integration with the.
+With Jira, and yeah, especially with the Robo agents, but yeah, I see that we, yeah, we have such option, yeah, but looks like it still requires some configuration.
+Yes, yeah, it will be it will be really awesome to to have such MCP servers also in in the Robo.
+So we can expand our QA use cases with the Mabel connection.
+Yeah, maybe some some other MCP servers.
+So yeah, and definitely it should streamline.
+
+Divya Ramkumar   15:56
+Okay.
+Eugene, Dennis from my team is working on integrating global with Maple MCP and X, right?
+
+Eugene Semenyuk   16:06
+Mhm.
+
+Divya Ramkumar   16:06
+And now is working on creating a QA workflow.
+
+Eugene Semenyuk   16:10
+Yeah, that's.
+That's awesome.
+Thank you for.
+Such updates, so yeah, maybe I'll connect with the Dennis offline and we can discuss, so maybe I can can help with something.
+Okay.
+So.
+Guys, your is hi. Do you have something interesting?
+On your plates.
+
+Hai Le   16:48
+Nothing interesting on my end, but I'm still trying to get my Jira Automation deployed to production so that we can start using it. Other than that, last Thursday we were...
+assigned to new teams, right? So I do plan to connect with the folks that are on my new team to start working on the two new AI use cases.
+
+Eugene Semenyuk   17:15
+Mhm.
+Awesome. Good luck.
+
+Hai Le   17:20
+Thanks.
+
+Eugene Semenyuk   17:21
+Thank, thank, thank you for for updates.
+So, Jurijs, do you have something, something interesting?
+We usually have some experiments. Yeah, and by the way, I heard that...
+Yeah, last time you had some issues with player at MCP.
+So do you have such issues right now?
+Barish.
+Yeah, maybe he's away.
+Two.
+Okay.
+Yeah, it looks like we're done with our regular updates, so yeah, and we we already touched the...
+topic about MCP servers. Yeah, and...
+Yeah, let me let me know if you need some some additional, maybe some kind of demos or...
+or even some kind of small workshop, like how we can use MCP servers for some of QA tasks.
+So yeah, the main the main MCP service for us will be Atlassian MCP, Mabel MCP, Playwright MCP for some cases.
+So yeah, if you need some additional guidance, yeah, feel free to reach out to me.
+So, yeah, we can try to play with them.
+So, ohh, I see, I see reaction from from you, Ris.
+Haris, are you with us?
+
+Jurijs Markelovs   19:28
+Yes, I am. Sorry, did I miss something?
+
+Eugene Semenyuk   19:30
+Yeah, yeah, yeah. How are you? Do you have something? Do you have something interesting?
+
+Jurijs Markelovs   19:33
+You see everything.
+Well, yes, I have tried to put the knowledge, recent knowledge on the playwright MCP servers and Automation together, trying to enhance my
+China hands my assist assistant orchestration flow code me in the code me format.
+Uh, and uh, trying to basically...
+Update existing my my existing use case when I worked with playwright test generation based on the certain context and JIRA JIRA item movement in the on the board and trying to come up with universal solution with when.
+We gonna trigger that event or that orchestrator based on the Jira Automation, which you have shared recently, Eugene and Oleksandr.
+So, I'm done, I'm hoping, hoping to get this integrated soon, and uh...
+If anyone interested, I can share later on, but...
+
+Eugene Semenyuk   20:57
+Mhm.
+
+Jurijs Markelovs   20:57
+We're getting that, and as far as the playwright MCP MCP, for whatever reason.
+I think I think I got it figured out the reason why it wasn't playing the way I would expect it to be. I think what I was expecting to have is the code code type of interaction with the playwright when he just self-heals and does all these 9 yards. So here what I've figured out.
+I need to add.
+When I'm trying to communicate with the player right MCP, I need to every single time I need to add the target right objectives, so I'm so my prompt is like, "Hey, player right MCP, do this and that, otherwise it doesn't trigger it."
+
+Eugene Semenyuk   21:42
+Mm-hmm.
+I.
+
+Jurijs Markelovs   21:49
+For me at least, it triggers like the old communication.
+But every single, once I made that adjustment, it will make sense now.
+So, again.
+
+Eugene Semenyuk   22:03
+Yeah, that's...
+Yeah, that's some kind of expected behavior for for for Playwright MCP, yeah, and I I suggest you to create maybe some skills or or agents.
+Yeah, and even, or even you can create a...
+Instructions in D for for Koppula, so to.
+Yeah, it it it it can help to to trigger Polaroid MCP.
+Yeah, when do you when you would like to to trigger it, because yeah, usually usually from my experience, if I just say something like use playwright MCP to to run this test or do something usually, yeah, without any additional instructions, it can it it just.
+It just creates playwright script. Yeah, and that's it. And yeah, to make it...
+Yeah, to make it more more authentic and yeah, to to get expected behavior like execute MCP, open browser and do do other stuff. So yeah, we need directly call what what it should do does like use player right MCP server tools. Yeah, this.
+This phrase is essential, like server tools. Because, yeah, otherwise, even if you mention MCP, it will create just playwright test instead of executing MCP server.
+So, yeah, but if you if you say something like use player at MCP server tools or some specific tool, so yeah, it can execute it, so yeah, and yeah, comparing with code code, yeah, it requires some.
+Some direct instructions, and you can you can place them to agent skills and the in instructions for a pilot.
+
+Jurijs Markelovs   24:20
+Do you happen to have them to share, Eugene?
+
+Eugene Semenyuk   24:24
+Ah.
+Good question. So, yeah.
+I'll, yeah, I'll prepare something and share share with this group, like some some instruction initial instruction for for co-pilot, yeah, and maybe few few agents and skills that can be applicable for for play with MCP.
+
+Jurijs Markelovs   24:49
+Yeah, so to distinguish that different communication, like if you communicate on the co-pilot or MCP, it's kind of a slightly unknown to me, at least, yeah.
+
+Eugene Semenyuk   24:55
+Mm.
+Mhm.
+Yeah, good, good, good, good point. So, yeah, maybe...
+Maybe I can even demo something, maybe on Wednesday.
+Yeah, with uh, like these skills agents.
+Yeah, for for player with MCP.
+Yeah, maybe.
+This will inspire you on something. OK, thanks.
+Ohh.
+Okay, we have 5 minutes left.
+So, does anyone have...
+Any.
+Any thoughts, ID?
+
+Jurijs Markelovs   25:48
+Did you guys, did you guys ever thought in might be a discussion of these AI slide? Like, there's always elephant in the room, right? When we're talking about AI, right? And not a lot of people are.
+
+Eugene Semenyuk   26:05
+No.
+
+Jurijs Markelovs   26:06
+vocal about it, right? What I'm talking about is the reference of the government, governance, right? Many, meaning security constraints and so, and we always got to be extra careful. Did we ever think of, I don't know our...
+our teams, security teams, our cybersecurity teams are working probably on these aspects, right? But do we want to build some kind of like our own firewall, sort of like on the proxy or whatever we call it, which can, or the rules which cannot be changed, right? Like 7.
+set in stone rules when we not, when one allow the AI to, I don't know, delete some artifacts or expose something which should not be exposed.
+I don't know. We hear in a lot of the stories what can something can go wrong and south, right? Do we think of, did we ever thought about building some kind of like a set of stone rules which should not be overwritten and to feel a lot safer than we are right now, I believe?
+
+Eugene Semenyuk   26:58
+Mhm.
+Mm-hmm.
+
+Jurijs Markelovs   27:16
+No, not sure if that email can make any sense, but this is...
+Um...
+Because what we're doing right now is we're building the AI to help us to run smoother processes, right? Our mail-up processes, but we, and maybe just like I said, a conversation for another audience, but
+Did we do, did we do enough at this point to make sure?
+
+Eugene Semenyuk   27:41
+Yeah.
+
+Jurijs Markelovs   27:45
+We do not expose something which should not be exposed and do not modify or alter something which should not be altered.
+Right. And if that's the key, that's not the case, what other would be the steps to do so?
+
+Eugene Semenyuk   27:53
+Yeah, yeah, yeah.
+Yay.
+Yeah, you're absolutely right, so...
+Yeah, previously, yeah, previously we just created some some use cases, some some agents that improved our productivity. Yeah, but in in lower term, yeah, we we can notice that AI changed not.
+Only.
+Affects not only productivity, but the PDLC itself, yeah, and the, and yeah, and this PDLC should be.
+Should be adopted.
+Somehow, yeah, to include considerations from different points and from security, yeah, and other things. So, yeah, that's definitely we should, yeah, that's definitely the thing that we should care about and think under.
+And, yeah, as as I know.
+Yeah, I say no, this is maybe...
+One of the topics that we would like to work.
+In the nearest future.
+You have to think like how to how to adopt PDLC.
+To the...
+To search environment changes.
+
+Jurijs Markelovs   29:30
+Because the next step, and this is a QA group, right? The next step is really like, we need a QA who testing AI, right? We haven't, I haven't heard any topics around that at this point yet, but this is just me thinking out loud.
+
+Eugene Semenyuk   29:38
+Mhm.
+
+Filippo Morelli   29:49
+Well, there's an analog to that too.
+
+Eugene Semenyuk   29:49
+Yeah.
+
+Filippo Morelli   29:52
+which is if you step back, because I think a lot of folks when they start doing this work, it reminds me a lot of...
+The experience of going from being a procedural programmer to an OO programmer, the joke is that early OO programmers are writing procedural code in OO. We're doing that with AI right now. In other words, we're solving the problems that we have in the traditional ways we do stuff with these new capabilities.
+But the reality is if you step back, the way that you can build software from the beginning to deployment is completely different than the way that we work today, ultimately. And to be able to do that, particularly the testing and cyber capabilities,
+need to be really well built up because, you know, if you start thinking about what's getting created and the speed at which you want to push it through, right, it completely changes the model in terms of what, you know, what you what you need out of out of testing and cyber.
+So I think it's, I think over time, that's yet another interesting piece of this is that we're going to see, we're going to see certain capabilities really evolve or come in, come to be because of that.
+We're not at that place yet, but...
+Because we will have the problem of code being generated. We'll have the issue of code being generated just at a scale that we don't deal with today.
+And that has some profound implications when it comes to, well, you know, how do we test that? How do we ensure the security of what we're building before we push it out? Because not only are we going to create a lot more of it, but we're going to want to move it through a lot faster.
+Otherwise, it just stacks up. So it's going to be interesting.
+
+Jurijs Markelovs   31:49
+Yeah, I see already 2 instances when we are we were trying to deliver something to the staging environment, for example, things got on production which had like no the objects would have no reference, right? And it's like it's it can clearly see it like.
+
+Eugene Semenyuk   32:03
+Mm-hmm.
+
+Jurijs Markelovs   32:08
+by the naming, right? Like something like put me in or something like that. And you can clearly see like something is like the source of that problem.
+And this is just the beginning of the row, right? So.
+
+Eugene Semenyuk   32:29
+Yeah, I guess, so sorry, it looks like we are out of time, so yeah, let's probably continue our discussion this Wednesday, yeah, and Jurijs, yeah, touched really.
+really great topics. So yeah, let's continue. So yeah, but now, yeah, thanks. Thanks everyone for joining us today. Yeah. And see you. See you soon. Thank you. Bye.
+
+Nicholas Crowley stopped transcription

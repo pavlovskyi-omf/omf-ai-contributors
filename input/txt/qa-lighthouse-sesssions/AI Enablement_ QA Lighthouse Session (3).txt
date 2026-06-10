@@ -1,0 +1,253 @@
+AI Enablement QA Lighthouse Session-20260513_140059UTC-Meeting Recording
+May 13, 2026, 2:00PM
+32m 43s
+
+Eugene Semenyuk   0:04
+Staff.
+Yeah.
+Do do do do do do do do do.
+Do.
+Hello, good morning.
+Let's wait a couple of minutes.
+from the old folks to join us. Hi, Saeyed.
+
+Saeyed Shamlou   0:42
+Good morning.
+
+Eugene Semenyuk   0:42
+MAIN.
+Okay, let's wait one more minute and we'll start.
+Did.
+Did you?
+I...
+Yeah.
+Yeah.
+Okay, I guess we can start. Recording started. Okay, hi everyone. Welcome to today's White House session. Thanks for making the time to join us today. So yeah, for today's session, we have a really interesting
+
+Rishabh Gupta   2:24
+Ms.
+Yeah.
+
+Eugene Semenyuk   2:30
+Demo that.
+all the use cases that have been implemented for Cyrus and team. So the name of this use case is Smart Test Selection. So yeah, and Oleksandr will present this use case. So yeah, this is really interesting and
+I would say engaging use case. So yeah, feel free to feel free to raise hands, ask your questions. Yeah, and as always, the goal for this session is simple, like share, share what we're building, learn from each other.
+identify what's scalable and reusable and accelerate adoption through real examples. So yeah, if you will have time after Alexander's demo, so yeah, if you have something, you can raise a hand and show some of your experiments.
+So yeah, with that, let's don't waste time. So let's jump into our first demo. So Oleksandr, the floor is yours.
+
+Oleksandr Tsyganok   3:48
+Yes, thank you, Jim.
+Um, yeah, let me find...
+High-level description of use case. Can you see my screen now?
+
+Eugene Semenyuk   4:04
+Yep, we can see.
+
+Oleksandr Tsyganok   4:08
+Yeah, so the idea here that we have like automated kind of a review of a pull request, but it's not focused on reviewing changes in the original source code. The goal is to review changes and analyze.
+Potential impact of this changes from QA perspective, find related test cases in our test management system, and this AI agent should suggest like better, like relevant.
+Test in three, like different categories, plus like just smoke tests, regression tests, and some SAN it tests, plus they identify potentially gaps in this coverage that we have at that moment.
+and have like some suggestions what kind of tests potentially also need to be implemented. Yes, so how it will work for the end user. So we have this pull request. Currently I already have like opened pull request and modified files just for demo purpose.
+But you can assume that it will start this like workflow automatically when new pull request created. So currently, I think, yeah, we have like multiple of changes. We have like another agent review, like this summary of like and risk analysis.
+And yeah, that's that's all. So, once this new pull request is created, we're using like integration with the web hooks that will trigger automatically this like workflow. We can emulate it here, so I'm just changing title of this like pull request. It will work as...
+Like replacement for newly created pull requests, so it will trigger this like webhook and initialize our workflow in the code. So, from a user perspective, like nothing else need to be done, you just submitting like new pull request.
+And in, I believe it takes up to 5 minutes. In 5 minutes, you have like this final result of this like review, suggested test that needs to be executed for the specific change and yeah, so on. Yeah, while we're waiting, we can still take a look how it works in the CodeMI.
+But again, the idea is that it's like a fully autonomous, like user don't need to interact with a platform when it's like connected. Yeah, so we have this like webhooks behind the scene. I'm not sure, like, do I have...
+Still active session. Yeah, looks like, yes, we have this like event that was sent a minute ago for this like pull request edited. So it just a huge payload with bunch of information what was actually changed, like some pull request ID, like also like some.
+user related information and so on. So this event we will receive in the code me with like web hooks and that will be a trigger for our workflow. So here we have code me and.
+Yeah, if we will navigate to workflow, we have this like smart test selection workflow that use on the webhook integration that connects to this like workflow and executes it. So, if you will open it here, we should see that this workflow is...
+Already running, yeah, while I was talking for two minutes, this workflow was like doing it jobs and was like running this like analysis, so here we have again the same like payload, it just URL encoded by GitHub, but it actually it's exactly the same content.
+That we saw here, like this payload that GitHub sent us, and we have this like kind of a bit complicated workflow, not sure, like, are you able to see all this like small details, but yeah, we will not go into like...
+Low level details is the idea that this workflow just have like some model of dynamic configuration which we pull in from separate repository, so basically the idea that this like workflow can be reusable across like different.
+Teams, and here we have like some bunch of architectural documentation that part of our configuration, basically a mapping between different components. You can also like run it in cross repository scenario to analyze like not a single repository impact, but...
+For example, this use case connects like 5 different repositories, so it can analyze this like impact on wider like scope, and like bunch of like other agents that we have here have like different purposes, it's just analyze this like changes from a different perspective.
+Some agents provides like recommendations for this like possible like gaps and other agents like responsible for mapping this code changes to specific code component and one pulls data from.
+Test management system. At that moment, it's still using kind of static exported file from Spira, but I think we almost like ready to approve like X-ray integration and it will be like easy to switch one of these agents to.
+Like real test management system, instead of using this like static configuration, yeah.
+
+Eugene Semenyuk   10:34
+Yeah, and...
+Yeah, and sorry, I will interrupt you a bit here. So yeah, yeah, we can use X-ray and also, yeah, as we have Mabel MCP approved, we can also interact with Mabel MCP and get tasks from Mabel.
+
+Oleksandr Tsyganok   10:52
+Yeah, was it?
+
+Eugene Semenyuk   10:52
+Not only from X-ray, yeah, that's also.
+
+Jamie Hayes   10:55
+And Eugene, I will just add that Spire has decommissioned, right? So we're fully rolled out to X-ray.
+
+Eugene Semenyuk   10:58
+Yeah.
+Yeah, yeah.
+
+Oleksandr Tsyganok   11:01
+Yeah.
+
+Eugene Semenyuk   11:03
+Thank you.
+
+Oleksandr Tsyganok   11:03
+Yes, so it have like a bunch of like small steps. For example, we like parsing this initial huge event that we received from a GitHub. We just extracting like information that's relevant for our workflow, like this repository name, branch information.
+And also, it has like automatic mechanism to figure out what is the actual Jira ticket. So if you have this Jira ticket added to branch name, like somewhere in as a comment to pull request or to pull request title, like AI agent.
+To help us to try to find it like in multiple places, because yeah, different teams might have like a different setup, but yeah, it will do its best to find this Jira, but if like even Jira not mentioned like anywhere, it will just skip this Jira part and just have will have like later on some.
+warning message that it doesn't have like full full context. Yeah, we have this like step where we actually like pull in information about original ticket that was related to this PR and just providing like some short summary that like.
+can be used later on for this analysis. Yes, I mentioned we have like a bunch of small configurational files that part of actual loads sync up to five config files. The idea was to not record it as part of agent system prompt and instructions.
+but to move for this like dynamically changeable parts to configuration files just in a separate repository. So it can be like any file, any like architecture related information that might be useful for your agent. For example, here we have this like dependency graph that.
+basically describes like a repository, it says that yeah, we have like front end, it contains from like several models like this like account summary, like some payment, some user profile. So basically this documentation was created just as a result of analysis of this like 5 repositories and it just.
+Cross, cross repository like dependency graph generated with like some AI capability, so it's not a part of workflow, we just like manually prepared and pre-configured data, but yeah, technically you can connect here any any available like technical information, for example, just like test map, as I mentioned in.
+We don't have like actually connection to Spira or X-ray at that moment, so that's why we just get a Excel file that was shared with us. It just looks like just a bunch of like test cases. It's export from Spira, so we just huge Excel file. Again, it was like analyzed with AI and just converted.
+Converted for to this like text-friendly and AI-friendly like registry of test cases, but the contents it's exactly the same as in this like file, yeah, and plus we connected like original repository to find like references.
+to source code where this like automation tests are located. Yeah, so you can come up with like different configuration files that will be like relevant to your scenario and dynamically change it. It's not necessary, just like nice to have, so you can have another tool that will maintain this file in.
+actual state and you don't need to return back to code me agent and modified system prompt. But it's completely like optional and you can add like some hints to a system prompt as well. Yeah, then as part of this like flow.
+We will perform like multiple type like of analysis, as I mentioned. We have like this like matching like file changes to specific like component, then to specific like file. We have this like dependency graph information that I showed that AI can consume.
+We can find this like dependencies to like external components if like anything is impacted. We can have like this like analysis of like PR changes and like its impact.
+Then we can have like the core part of our flow when we classify and like test into like different 3 categories, just like small, sanity, and regression tiers. And we just basically like mapping our test cases that we have in our test strategy to this like three.
+Different categories, and yeah, we have this like potential like gaps in our coverage coverage and like recommendation what might need to be like extended, and then like we like combine in this all all steps together and like final AI engines that just collects like bunch of all of this like information.
+that we perform this like a small granular analysis, combines like all this data and outputs is in like structured format. It has like this strict like table format output and yeah, looks like it succeeded, took around 6 minutes and yeah, the final part that we.
+produced this command so it should be automatically published command to GitHub.
+Where we will see.
+Like actual results of like our analysis, yeah, and we have, I think, for this specific case.
+just like small change, like very small change here. So that's why we have.
+Not full.
+Like coverage and we just like recommending to run the set of like regression tests here.
+So like, yeah, we have this some sanity test that related to this like feature change that was like changing this like account summary functionality and the task was related to like some payments functionality and payments.
+like pop-ups that users might be confused. And yeah, so we have like bunch of tests that are related, like most of like this automation tests that we have in this repository focusing on this like specific area for this like account summaries, it's like a core part.
+Of this functionality, so we saying that potentially we can run a bunch of this tests as like kind of a regression test, yeah, and we have like some potential like gaps in like coverage that what we have specifically, yeah, I think like no.
+end-to-end tests for some specific like logic. So that's why we have this like recommendation for this like one app component. We could also add this test. We have like some low level like information how actually got this like changes. We have.
+like this, like internal documents and like mapping of different code changes. That's like specific file where we had like a code change. So, and yeah, the logic, like how we found like this potential impact and which components this specific change can impact.
+Uh...
+And yeah, we have like just some like risk summary. Currently we have like only one model here impacted because this like demo test case is like really small. So we just change, yeah, that it has like impact for this specific area only.
+Ohh.
+Yeah, and it says that, yeah, since like this change is not, I think like we maybe didn't load this Jira part and currently in this like workflow, we have like an option to also.
+pull like a defect history, but currently it's like turned on off. Basically the idea that we could load all previous like bugs that we had from a Jira and also include this information in like our analysis. So it's like since it's turned off, I believe that we added this like rule for escalation point for.
+marking it with like lower confidence if like some parts wasn't loaded. Yes, that's like a high level review. If we want to like have like more deeper dive in specific area, guys, let me know. We can check like some specific part if you're interested in, I don't know, maybe some.
+technical stuff or some like other mechanisms that was used in this workflow. But yeah, basically that's the idea of this workflow.
+
+Eugene Semenyuk   21:14
+Thank you, Oleksandr. So, yeah, it looks looks really good. Yeah, and from that perspective, yeah, it has a really big potential because, yeah, it not only identifies test cases that you need to run, but also identifies potential coverage gaps.
+And yeah, potentially it can highlight like what tests we need to create. Yeah, and we can expand this workflow with test case creation agent and with some agent that will be able to update.
+outdated test cases.
+So yeah, I really love this idea.
+So, guys, do you have any questions?
+That.
+
+Dhanalakshmi Chinnasamy   22:09
+So, Eugene, we cannot directly integrate with the X-ray. We can do this one only through GitHub.
+
+Eugene Semenyuk   22:17
+So yeah, for now.
+For now, we have some some issue with connection with with with X-ray connection in code me, so yeah, but I hope it will be fixed soon, so yeah, and we will be able to utilize this connection.
+
+Dhanalakshmi Chinnasamy   22:38
+Okay.
+
+Eugene Semenyuk   22:38
+For me, ball, I guess it will be.
+User task because we have MCP.
+So yeah, and not sure about code me.
+Like, how how we can utilize MCP and code me? Not sure about is this feature enabled or not for now, so yeah, but...
+Tomorrow we will have a session about MCP servers during our cross-functional VDLC session. Yeah, and I hope on Monday together we can discuss like.
+how and where we can utilize these MCP servers.
+So yeah, but thank you.
+
+Oleksandr Tsyganok   23:33
+Yeah, I think it's not yet enabled, but yeah, soon will be available after one of next deployments. And yeah, so if you really need to use this like information immediately, you can also do this like trick that I applied here. You can always export like this data from your system
+and to some text file and create a data source in the code me or just...
+some kind of configuration file that you can connect to your assistant. It's definitely not the same like experience if you're just using like this native integration from Academy. But if you know that you will create the specific agent and have this like solid plan that you will have integration with X-Ray.
+That can be just a temporary replacement that will work pretty decent, but yeah, always be like kind of a bit outdated because there is no automatic synchronization of data.
+
+Eugene Semenyuk   24:45
+Mhm.
+
+Dhanalakshmi Chinnasamy   24:46
+Is this is this assistant in training? Um, so can we access and explore?
+
+Oleksandr Tsyganok   24:54
+No, this workflow is a project specific workflow because it have like many data sources connect to this like specific repository. So it's not a kind of general purpose workflows that.
+can be simply executed as is, it will require like some extra extra setup and configuration that specific to a project needs. But technically, technically it's like more or less like transferable, but yeah, not available like it's like out of the box, so like some.
+
+Eugene Semenyuk   25:15
+I.
+
+Dhanalakshmi Chinnasamy   25:26
+Okay.
+
+Oleksandr Tsyganok   25:35
+edges that were shared that can be just easily executed and tested.
+
+Eugene Semenyuk   25:44
+Yeah, but it's definitely scalable, yeah, but requires some adjustments for a particular team. So yeah, and if you would like to try this workflow on your team, so yeah, please let us know.
+So, yeah, we can we can connect and and help you to to adjust data sources, yeah, to try it with with a particular team.
+
+Bandana Sriramka   26:14
+Is it possible to have all the setups required for this documented somewhere so anybody can refer to that for the setup?
+
+Oleksandr Tsyganok   26:14
+Y.
+
+Eugene Semenyuk   26:19
+No questions.
+
+Oleksandr Tsyganok   26:24
+Yeah, I'm planning to like document this like for whole workflow. It will be like confluence page, as usual we have for our test cases, plus short like technical section for custom like configuration. So as you can see, we have like some kind of.
+Ahh.
+architecture like related data sources additional to this configurations that they showed and plus we have like multiple repositories connected so I think it's like 6 different repositories that are indexed data sources and
+connected to like several like assistants that need access to like original source code.
+
+Bandana Sriramka   27:13
+Thank you.
+
+Eugene Semenyuk   27:24
+So yeah, if you would like to, again, yeah, if you'd like to adopt this for some particular team, so yeah, please let us know. So yeah, we will be able to help you guide.
+Take you through the process.
+Yeah, and uh, yeah, meanwhile, so we can we can think about how can expand this workflow with with some additional logic.
+Like create new test cases that that requires to to cover this.
+This.
+Coverage cap, yeah, and update existing existing test cases of that, but outdated by new requirements.
+Yeah.
+
+Svetlana Stogni   28:21
+And moreover, this scenario might be extended with this automation creation, not only is it discussed, but governed by this automation end-to-end scenario.
+
+Eugene Semenyuk   28:26
+Mhm.
+So yeah, it depends. It depends on like testing process. So yeah, for some teams, yeah, they manage all the tasks inside task automation repository. So yeah, for those team, we can think about agents that can build task automation.
+scripts and test automation code inside test automation repository, yeah, and manage this code, like add new tests, update existing tests, and so on.
+Yeah, for those teams who use just manual testing, so yeah, we can update just manual tests.
+For teams who use, for example, only Mabel, so we have a can also connect with Mabel, get the tasks, and...
+And maybe create new tests, update existing tests, and so on.
+So yeah, I guess that's it. Any other questions?
+Okay, thank you. Thank you, Oleksandr.
+Yeah, let's proceed. So guys, do you have any other topics, maybe some experiments that you would like to share with us today? So as we have 15 minutes.
+Yeah.
+So, if not, I guess, yeah, I guess we'll have...
+I guess we'll have a...
+Up.
+Yeah, I guess we'll have new use cases or some updates for existing use cases because of MCP on 14. So yeah, tomorrow we will dive into this topic, like what is MCP, how to use these MCP servers, what exact MCP servers we have.
+in the company, how to connect them, yeah, and for what use cases they can be applicable. Yeah, and during our champions call, we can discuss like exact use cases and what and where we can apply to.
+to improve behavior of our existing AI agents.
+So yeah, feel free. Yeah, and please join us tomorrow. It will be an important topic. So yeah, I'll send.
+Yeah, I'll send a short to Janta really soon for this for this call, yeah, and...
+Yeah, if if no demos.
+From our champions, I guess we can.
+If no more demo, so yeah, we can we can close a bit earlier for today. So, any other final final questions for today?
+Or maybe you have something to demo.
+One, two, three. Okay, with that, I think we can, we've done, again, we can finish a bit earlier. So thanks again, everyone, for your time and your thoughts and ideas, questions. So have a great rest of the day and see you.
+See you tomorrow.
+Bye.
+
+Oleksandr Tsyganok   32:36
+Bye.
+
+Svetlana Stogni   32:37
+Yeah.
+
+Denis Platonov   32:38
+Thank you, bye bye.
+
+Svetlana Stogni   32:38
+Yeah.
+
+ stopped transcription

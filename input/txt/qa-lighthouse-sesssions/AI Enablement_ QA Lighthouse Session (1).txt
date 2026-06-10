@@ -1,0 +1,847 @@
+AI Enablement QA Lighthouse Session-20260527_140023UTC-Meeting Recording
+May 27, 2026, 2:00PM
+47m 47s
+
+Oleg Kharlamov   0:13
+Hey guys, how you doing?
+
+Eugene Semenyuk   0:46
+Hello, good morning.
+
+Oleg Kharlamov   0:48
+Good morning.
+
+Eugene Semenyuk   0:51
+Well, let's wait a couple of minutes.
+
+Oleg Kharlamov   1:04
+Yes.
+
+Eugene Semenyuk   1:06
+Yeah.
+Yeah, let's wait maybe one more minute.
+And then we'll start.
+Play.
+So, okay, I guess, I guess we can start. So, yeah, hi everyone. So, welcome to our today's Lighthouse session. So, yeah, we didn't have our champions meeting this Monday. So, yeah, let's use today's session to go
+Yes, to combine our regular champions, call and Lighthouse. So yeah, we can go through the statuses, updates, maybe some of your interesting use cases, and maybe run a couple of demos.
+So...
+Yeah, and as usual, yeah, we structure this session in a few parts. So, yeah, first we'll share some news. After that, we'll go to the...
+Yeah, we'll go around the room and, yeah, we'll have some some discussion, and finally we can.
+Yeah, if we have something to demo, we can demo it. If not, I can I can show you some some small demos, like how to use how to use playwright MCP for for your task automation tasks.
+Tsao.
+Yeah.
+That's it for introduction part. So yeah, let's show.
+Yeah, that's probably...
+Try to discuss, like, what, yeah, what would we have on our plates right now? So, yeah, what what experiments do you have in your in your teams? So, yeah, and but yeah, before before that, I'd like to ask, yeah, especially quality engineering teams.
+
+Oleg Kharlamov   5:05
+Yeah.
+
+Eugene Semenyuk   5:17
+So guys, yeah, if you don't have access to ChatGPT or Cursor, so yeah, please, please let me know. Yeah, in case if you need such such such tools. So yeah, please let me know. I will share the instruction how to
+How, how, how to request?
+Uh, these tools.
+
+Saeyed Shamlou   5:45
+Eugene, I have a question for ChatGPT. Does it, is it going to have access to Confluence, SharePoint and JIRA and all those everything that Copilot has access to? Or do we need to do anything special to get those?
+
+Eugene Semenyuk   6:01
+Yeah.
+As I remember, for now it has access only to only to GitHub repositories, yeah.
+
+Saeyed Shamlou   6:12
+No.
+
+Eugene Semenyuk   6:13
+Right, yeah, but I I heard I heard some discussions that OMF is working on.
+
+Saeyed Shamlou   6:14
+Yeah, that's...
+
+Eugene Semenyuk   6:23
+connecting some applications like Jira Confluence to ChatGPT. So yeah, maybe in the nearest future, we will have such connections available for ChatGPT.
+
+Saeyed Shamlou   6:37
+Okay, thanks.
+
+Eugene Semenyuk   6:41
+Yeah, okay, so yeah, let's probably open the discussion and go around the room. So yeah, we'd like to hear like your...
+Yeah, like, how are you doing this week? So, have you had a chance to experiment with the AI? Yeah, since our last session? So, yeah, maybe you experimented with something interesting during our cross-functional PDLC sessions. Yeah, this experience also...
+is really available for us. So yeah.
+Yeah, first of all, yeah, let's, so yeah, let's try to discuss this. So, do you have any volunteers?
+
+Bandana Sriramka   7:31
+Yeah. Hey, Eugene.
+
+Eugene Semenyuk   7:31
+Just to start, yeah, yeah, hello.
+
+Bandana Sriramka   7:35
+So last week I demoed about the originations hydrator agent that I created and I mentioned that I am seeing differences in the outputs in manual trigger versus auto trigger. So somehow this week when we tried also that lasting team award.
+
+Eugene Semenyuk   7:41
+Mhm.
+Mhm.
+
+Bandana Sriramka   7:54
+We are seeing the same outputs in both. Not sure how it got resolved on its own, but that's the update I wanted to share with the team.
+
+Eugene Semenyuk   8:01
+Mhm.
+
+Bandana Sriramka   8:03
+So outputs are coming same now. And second thing, I've been playing around with MCP. I have configured the Mable MCP and able to trigger tests from VS Code using the MCPs. Can quickly share a few things.
+
+Eugene Semenyuk   8:03
+Yeah.
+Mhm.
+Mhm.
+
+Oleg Kharlamov   8:13
+Yeah.
+
+Eugene Semenyuk   8:14
+Yeah.
+
+Oleg Kharlamov   8:15
+Chez.
+
+Eugene Semenyuk   8:19
+Mm.
+Yeah, that will be awesome.
+
+Bandana Sriramka   8:26
+So.
+As you can see, I've configured both local MCP versus cloud MCP. Local, we don't need anymore since Mabel have deprecated it and there will be no updates on it. So we can ignore this. We should be using cloud MCP.
+
+Eugene Semenyuk   8:33
+Uh-huh.
+
+Bandana Sriramka   8:47
+Yesterday I was playing around and I gave it instructions like use this workspace and run the test. Which test we can give the test name or we can give the test ID and we can run it. It will fetch all the information that it needs and like application ID, etc.
+We have to also specify the environment because we have multiple applications and it will run them. So it ran all of the three and I can verify the same in Mabel too.
+
+Eugene Semenyuk   9:11
+Mm-hmm.
+
+Bandana Sriramka   9:19
+So that's particular. So also I asked it to analyze why the test failed since I saw in Mabel that the test have failed. So it gives us a good analysis also for the three runs why they have failed since it was an accessibility test. I see it failed because of there were violations.
+
+Eugene Semenyuk   9:19
+Mhm.
+
+Bandana Sriramka   9:40
+Of the accessibility fail.
+
+Eugene Semenyuk   9:41
+Mhm.
+
+Bandana Sriramka   9:43
+Yeah.
+That's all.
+
+Eugene Semenyuk   9:46
+Yeah.
+Yeah, that's that looks really awesome. Yeah, and I, yeah, I, I'd recommend to to connect it with Atlassian MCP. Yeah, I mean, yeah, you can you can use like Atlassian MCP to get some items, yeah, especially in case if you need to create.
+It create, create new tests, yeah, or maybe update some test runs in Jira, so yeah, you can do, you can do this, yeah, I see that you have at last an MCP.
+
+Bandana Sriramka   10:10
+Yeah.
+Mhm.
+Yeah, I do have, yeah, yeah.
+
+Eugene Semenyuk   10:20
+So, yeah, and yeah, you can play around both of these MCPs, yeah, and build some scenarios, yeah, and yeah, you can also think about maybe some agents or skills, yeah, that can.
+
+Bandana Sriramka   10:24
+Yeah.
+
+Eugene Semenyuk   10:40
+Yeah, using these agents and skills, you can guide like how to how to use these MCPs effectively with your tasks.
+
+Bandana Sriramka   10:49
+Mhm.
+
+Eugene Semenyuk   10:50
+So, yeah, and the it will be awesome to to have some some some demos, maybe some new in the nearest future, like maybe how to create new tasks using maybe MCP and like how to run.
+And maybe maybe debug, 'cause yeah, I I know that there there is the possibility to do this.
+
+Bandana Sriramka   11:10
+Yes.
+
+Eugene Semenyuk   11:18
+Yeah, and yeah, maybe.
+
+Bandana Sriramka   11:18
+Yeah, I'm playing around with it. I'll create a test using Atlassian and Neighbors booth and I'll update you.
+
+Eugene Semenyuk   11:25
+Mhm.
+Yeah, that's that that will be really awesome.
+
+Bandana Sriramka   11:29
+Yeah, sure.
+
+Eugene Semenyuk   11:30
+It should be really powerful use case, yeah, and I, as I remember, Denis is experienced.
+Ohh.
+A person, yeah, but with this with this MCP, I mean.
+
+Bandana Sriramka   11:41
+Yeah.
+Yes.
+
+Eugene Semenyuk   11:44
+Maybe MCP, and maybe he can help you and guide.
+
+Bandana Sriramka   11:46
+Yeah.
+
+Eugene Semenyuk   11:50
+Like, how to effectively use the Sam CP?
+
+Bandana Sriramka   11:50
+Sure.
+
+Eugene Semenyuk   11:55
+Yes, yeah, I, I, I just played.
+A bit with this MCP, yeah, just research capabilities, yeah, and...
+Yeah, it look it looks promising, so...
+Yeah.
+
+Denis Platonov   12:12
+Yeah, let me know if you have any questions or anything I can help.
+
+Bandana Sriramka   12:17
+So, Denis, thank you.
+
+Eugene Semenyuk   12:19
+Yeah, thank you. We really appreciate it.
+Okay, thank, thank, thank you guys.
+Okay, do you have?
+other volunteers to share something with us.
+Some interesting experiments.
+Maybe blockers.
+
+Dhanalakshmi Chinnasamy   12:43
+Yeah, with the limit and...
+Let me, and also I ran it from and it worked fine, but I tried to, I integrated with X-ray and imported this already, so I'm trying to assign the X-ray IDs to the.
+
+Eugene Semenyuk   12:53
+Mhm.
+
+Dhanalakshmi Chinnasamy   13:06
+But it was not successful, and I noticed it's a MOBILE issue, some authorization in the.
+Middle side, so I informed it to enable team and they're looking into it.
+
+Eugene Semenyuk   13:20
+Mhm.
+Yeah, good. Thank you.
+And.
+Thank you.
+Hey, let's let's move on, so yeah.
+Any, any other volunteers?
+to share something with us. So maybe you would like to demo something.
+So yeah, if no, so yeah, I can I can ask somebody. So maybe yours, do you have something interesting? So you usually you usually have some interesting experiments.
+I really...
+I love to hear something about it.
+Jurijs, are you with us?
+Are you muted?
+
+Oleg Kharlamov   14:32
+Jim, Eugene, I'm gonna break ice a little bit.
+
+Jurijs Markelovs   14:34
+I'm sorry, yes, I was muted. Could you repeat your question? I was multitasking.
+
+Eugene Semenyuk   14:40
+So yeah, I'm just interesting, like, do you have any interesting experiments? So you usually have a lot of...
+
+Oleg Kharlamov   14:41
+Yeah.
+
+Jurijs Markelovs   14:46
+Yeah.
+
+Eugene Semenyuk   14:49
+Stuff on your plate.
+
+Jurijs Markelovs   14:51
+Yeah, well, let's see one of the one of the things when I'm when I'm working on and I have like no.
+No idea how it's gonna work, but here is a Jira Jira Jira, not a Jira, the Teams channel.
+Right, and it's just basically used for debugging of the test environments, right? Then there are random people asking a random question: why this environment is down, why this isn't down, you know, why the API is failing. So, I was thinking if we could implement...
+
+Eugene Semenyuk   15:10
+Yeah.
+
+Jurijs Markelovs   15:27
+using a context of a certain project or repos, implement like a debugging structure, debugging steps, right, for the black box testers, for example. But that requires the team's connection where MCP.
+
+Eugene Semenyuk   15:38
+Mhm.
+
+Jurijs Markelovs   15:48
+integration. I think I have requested that and it just requires some approvals and so so so basically idea we have we have assistant called me assistant which contains all the context all these repos right and potentially some of the confidence pages.
+
+Eugene Semenyuk   15:57
+Okay.
+
+Jurijs Markelovs   16:12
+And I think Bandana or someone else mentioned this earlier with they have worked on something similar. And based on these contexts, for each issue we are facing on the test environments that will be provided
+Based on the context, we will be provided steps to debug and try to recover the state of the API or something on the infrastructure level or whatever is at least having someone, you know, some directions where the issue resides. So that was one of the things what I'm...
+Trying to come up with, but not.
+Just too complex, I think.
+
+Eugene Semenyuk   16:57
+Mhm.
+
+Jurijs Markelovs   16:58
+Another thing what I have tried is, it seems pretty straightforward, but that the ticket, Jira ticket gets into the testing phase and it's certain label added, right? And we want to make sure that the Jenkins deployment.
+will be happening triggered to a certain environment. And that, since the whole logic is in Jira Automation, it just, I believe it's just a mismatch.
+Of of the users, because it's a Jiri user versus.
+The user on the Jenkins.
+Right.
+
+Eugene Semenyuk   17:42
+Mhm.
+
+Jurijs Markelovs   17:43
+That was failing for me with authorization issue.
+
+Eugene Semenyuk   17:49
+Mhm.
+
+Jurijs Markelovs   17:50
+No.
+
+Eugene Semenyuk   17:51
+And, and what, and what if uh...
+You will, yeah, and and and so showri.
+So, have you tried to use just regular web web request with?
+With talking.
+
+Jurijs Markelovs   18:08
+I think that's what I used. Yeah, I think that's exactly what I used to web request.
+
+Eugene Semenyuk   18:12
+Mhm.
+
+Jurijs Markelovs   18:12
+And it's returning 5 or do not recall, but I would say 5 or 4.
+
+Eugene Semenyuk   18:18
+Yeah, I see.
+
+Jurijs Markelovs   18:19
+Yeah.
+
+Eugene Semenyuk   18:21
+Um...
+Huh.
+Say, remember, we should have called me into, we should have, we should have Jenkins integration in code me.
+
+Jurijs Markelovs   18:34
+Yeah, I have tried both options, integrate Jenkins integration and the webhook as well, and neither one of them are.
+
+Eugene Semenyuk   18:35
+Have you gotten?
+Mhm.
+
+Jurijs Markelovs   18:48
+You're failing, basically.
+
+Eugene Semenyuk   18:50
+Mhm.
+In.
+Do you mean only in Jira Automation or in code me too?
+
+Jurijs Markelovs   18:59
+Jira Automation.
+
+Eugene Semenyuk   19:01
+So yeah, we can...
+Yeah, maybe, maybe there can be the reason that you mentioned that Jira is not in the OMF perimeter.
+Yeah, and Jenkins, yeah, Jenkins deployed in the OMF period.
+Perimeter, as well as called me, because yeah, called me deployed also in in OMF cloud.
+So, I believe...
+Yeah, from network point of view, they should be, they should be fine to communicate.
+So, yeah, let let let's probably connect offline and and discuss this.
+
+Jurijs Markelovs   19:45
+That would be great. Thank you for volunteering.
+
+Eugene Semenyuk   19:48
+Yeah, and...
+Yeah, and for the first question, or for the first, I mean, maybe not question, but for the first use case, yeah, this is really interesting, and this is like our maybe...
+Ultimate goal for for the use case that we started on our cross-functional sessions.
+like to help with troubleshooting.
+Uh.
+So yeah, but the main challenge that I see is...
+Like access to access to infrastructure.
+Especially like how to get some some logs.
+To start the bugging.
+Yes, yeah, I ideally it should be some some autonomous flow, like, for example.
+Some issue happens.
+
+Jurijs Markelovs   20:47
+What we can do, Eugene, sorry to interrupt, what we can do is use the context of the, I don't know how ethical is that, right? How proper is that context of already resolved cases to provide, this is just, you know, to provide some kind of attempts to recover.
+
+Eugene Semenyuk   20:51
+Yeah, yeah.
+Mhm.
+
+Jurijs Markelovs   21:09
+Certain issues, right? Basically, just like a copy the entire logs of the what was resolved, how it was resolved, and we can utilize that, even that, that even to simplify it at this point.
+
+Eugene Semenyuk   21:11
+Uh-huh.
+Mm-hmm.
+
+Jurijs Markelovs   21:24
+Could also work, think.
+
+Eugene Semenyuk   21:28
+Mhm.
+
+Jurijs Markelovs   21:28
+It.
+
+Eugene Semenyuk   21:29
+Yeah, definitely.
+And, uh...
+Yeah, that that's really good.
+Good point, and also I'm thinking about...
+Maybe some.
+Some other others logic, for example, yeah, and some of my other projects, so yeah, we...
+we have alerts configured. So yeah, if some event happens, for example, yeah, if I, some server issue or something like that, so yeah, alert triggered and it triggers, it triggers some event. So yeah, in some cases,
+It automatically create a Jira Jira item, OK, like Jira task with some pieces of logs.
+And like some.
+Error, error description.
+Yeah, and then...
+Yeah, it was before AI error, so yeah, and usually some developer took this ticket and investigate the issue.
+So, yeah, but here.
+Yeah, based on some alert, we can trigger, we can trigger the agent that can analyze this issue, analyze, analyze, so like.
+historical issues and maybe find the solution if we already faced this issue before.
+And if not, go to our code base infrastructure things, yeah, and help to guide what to do next.
+with this error.
+So yeah, it can be something like that. Yeah, but...
+Regarding access to Teams. So yeah, this is really important topic. And yeah, we already started conversation.
+Around it.
+So, yeah, it requires some additional setup to...
+Yeah, to configure this connection, because, yeah, it will be really important for different cases, like to use Teams to get to get transcripts from some meetings, and...
+do something with these transcripts.
+So yeah, and it should help like every function, like engineers, QA, and digital.
+MAIN.
+So, yeah, let's...
+Yeah, let's...
+Keep, keep, keep, keep this use case in mind. OK, yeah, thanks a lot for for for for your updates. Yeah, let's connect offline and discuss, like, how how to configure Jenkins.
+Okay, thank you.
+Ohh.
+Yeah.
+Who would like to be next?
+
+Oleg Kharlamov   25:09
+Eugene, I have a couple of questions. How are you doing? So,
+
+Eugene Semenyuk   25:09
+Sadh.
+Yeah, sure. Yeah.
+
+Oleg Kharlamov   25:19
+Yeah, currently, like, in, and I'm gonna speak from acquisition team, technically, we just to start to look at what exactly people are using and how they're using it and stuff like this, we're trying to learn this kind of type of thing, you know, I'm trying to learn that.
+
+Eugene Semenyuk   25:19
+No.
+Yeah.
+Mhm.
+
+Oleg Kharlamov   25:40
+There is a, there is a base of questions we actually collected from guys, so, and so one of the questions actually popped, which is...
+Kind of like a question will be like a sort of, uh, what's the...
+Why would we use the scales versus agents? You know, right? You know, is it just the name or there's a significant difference between those? So it's one thing. The second thing, is there easy way to actually to monitor logs?
+
+Eugene Semenyuk   26:10
+Mhm.
+
+Oleg Kharlamov   26:24
+Like, for example, we have sentry logs, which is constantly going. We have tons of logs, which one are...
+Um...
+Basically, we have errors, some of them noise, some of them not, you know, and how, how would be this is a real serious like a problem we we would like to solve to to to use AI actually versus versus like...
+
+Eugene Semenyuk   26:38
+Yeah.
+Mhm.
+Yes.
+
+Oleg Kharlamov   27:01
+Yeah, so we're talking about real-time monitoring application, our part of application, or town, like, hey, monitor this part of application, something like that.
+
+Eugene Semenyuk   27:07
+Mhm.
+
+Oleg Kharlamov   27:16
+Especially when it goes like after release and stuff. So yeah, that's another thing. Well, and there's one more thing going on. We're working on a project called Target State, you know, and it's like a moving like from Angular to...
+
+Eugene Semenyuk   27:30
+Mm-hmm.
+
+Oleg Kharlamov   27:35
+To.
+Ohh, what's the name of it to from the rails to Angular and and that?
+
+Eugene Semenyuk   27:40
+The
+Mhm.
+
+Oleg Kharlamov   27:45
+Like, required a lot of things going on, but, but the thing is, and all we're using the tools for skills and stuff like this, we developed the skills for that and stuff, and...
+
+Eugene Semenyuk   27:52
+And.
+
+Oleg Kharlamov   27:57
+We actually find a way to share them between our team, you know, so basically.
+By what we do with actually we work in our process.
+
+Eugene Semenyuk   28:05
+Yeah.
+
+Oleg Kharlamov   28:14
+How to share with the team, and now, like, for example, I can develop the skill right, you know, or something like that, and just want to share it with with rest of the team members, and what we figure out that the best way to do that actually use a GitHub GitHub report.
+
+Eugene Semenyuk   28:14
+No.
+No.
+Mm-hmm.
+
+Oleg Kharlamov   28:34
+To to share that, like, for example.
+We're trying to unify actually what people is going to use within our team. Like for example, are we going to use the...
+GitHub compiler or cursor, like, and try to build the skills on top of it, so everybody can, like, you know, who works in a project, not use the same sort of things, and interesting thing we discovered that.
+that skills can be shared globally and locally.
+
+Eugene Semenyuk   29:10
+Mhm.
+
+Oleg Kharlamov   29:12
+You know, and and on top of that, it's interesting synchronization process, which one we discovered that we have to use to actually to synchronize those skills, update, delete, whatever you know you need to use with, like, for example, let's see you using a global thing.
+You know.
+So, and we're working on that. I'm just trying to tell what we're working on. So, and there is a bunch of documents we, and we see within the secure we created, and we're gonna actually collect collection of the skills, which one we think potentially we're gonna use.
+Right now, we're working on this repository, you know, and it's so far promising, so, but just to let you know what we're working on, you know, so, and...
+
+Eugene Semenyuk   30:04
+Mm-hmm.
+
+Oleg Kharlamov   30:12
+But...
+From my perspective, like two things, two questions actually. Agents versus skills, and is there...
+Is there a way to solve the log analysis? It's like a real problem, you know, within our our tools right now, currently, 'cause 'cause the one one more thing, you know, like Sentry actually is outdated for us, you know, and you know, I'm not sure if it's Sentry.
+
+Eugene Semenyuk   30:31
+Mhm.
+I.
+
+Oleg Kharlamov   30:46
+capable actually talking to logs, but is there a way to actually talk to local logs because we do local development, just tracking down and see what would be like a best way to do this kind of thing, you know, so.
+
+Eugene Semenyuk   31:04
+Mm-hmm.
+Yeah, thanks a lot for your future updates. Yeah, and this is pretty cool to know that you're building such a foundation with skills that can be shared. Yeah, and I will be really, really glad to see and look at this.
+and these skills. Yeah, maybe we can share something with some other teams. So yeah, but coming back to agent skills, yeah, and I also would like to add instructions. Yeah, because
+Yeah, they they can be like different levels for for Copilot, yeah, yeah, basically the same for for for cursor, so yeah, it's instructions.
+guide your, all of your agents, like how to interact with this workspace.
+some general rules that all agents, all skills in this repo should follow.
+So, the next layer.
+Is agent, so yeah, you can you can create some agent. Yeah, by default, we have three agents like Ask, Explorer, Plan, and Copilot. So, yeah, but we can create some new custom agent, provide some instructions like how to how how how to do some.
+Some things, yeah, but...
+Skills, this is really awesome, awesome part because...
+For some agents, for some tasks, the instruction can be really, really huge. But in some cases, we don't need all the steps.
+So yeah, for these cases, for some steps, we can create skills to do some huge step. Yeah, and it will save, it will save tokens and decrease context because
+Skills will be executed by demand, so yeah, if agent need, yeah, if agent needs to do something, so it will execute this skill, so if not, so we will we will not overdrive our model with additional context.
+So, yeah, and the...
+And also...
+Yeah, we can create like multiple skills, how to do this, how to do this, this, this, and this. Yeah, and multiple agents can reuse this logic.
+Like, reuse, reuse these scales.
+Yeah, in uh, in...
+In cursor, we also have comments.
+This is also one, one, one layer, one layer down, so yes, some skills can can use some comments.
+So yeah, I would say this is like different layers of abstractions.
+Age.
+
+Oleg Kharlamov   34:30
+Go on.
+
+Eugene Semenyuk   34:30
+Yeah, and...
+Yeah, and skills, yeah, usually skills are easier to reuse.
+Like comparing with agents.
+Yes, agent agent can do some complex task or or multiple tasks, but usually skill aims to solve some.
+Some, some problem, someone, one action, like...
+Yeah, and it also helps with the like tokens and limits.
+
+Oleg Kharlamov   35:09
+Cool, I...
+
+Eugene Semenyuk   35:09
+Yeah, and regarding, yeah, regarding the second question.
+Yeah, or or would you like to discuss the first part?
+
+Oleg Kharlamov   35:19
+Yeah, that's cool. Yeah, the second question is...
+We would like to actually eliminate the noise with the logs, you know, fix some problems and stuff like that, you know, like...
+
+Eugene Semenyuk   35:31
+Yeah, that's...
+
+Oleg Kharlamov   35:37
+Like a local environment can be predicted only with the with that, like, what are we implementing right? You know, there's something new goes and all you want to track it down that, but but in production it's probably like, let's say I want to evaluate twenty-four hours of noise.
+Of working environments within, you know, and so how can I like safely evaluate those logs, you know, like a production logs, right? You know, so that for that, like, for example, for...
+
+Eugene Semenyuk   36:03
+Mhm.
+Uh-huh.
+Mhm.
+Uh-huh.
+Yeah.
+
+Oleg Kharlamov   36:38
+Um...
+So, is there an easy way to actually to actually to solve the serial problem? You know what I mean?
+
+Eugene Semenyuk   36:47
+Yeah, I know this is this is really a huge problem, and...
+A big pain point, yeah, and yeah, and that's really similar to to use case that we discussed with yours, so yeah, and...
+Mmmm.
+Yeah, this is kind of a...
+DevOps challenge, I would say.
+Uh, like to to monitor.
+
+Oleg Kharlamov   37:16
+No, it's not the DevOps challenge. It's more like DevOps.
+Okay, DevOps, you know, they can evaluate only network issues, right? You know, we want to evaluate functional issues, you know what I mean? So it's more like a...
+
+Eugene Semenyuk   37:36
+Yeah, yeah, some exceptions, error, error codes, like...
+
+Oleg Kharlamov   37:39
+Yeah, well, are you talking about connector itself? You know, right? The DevOps problem with the connector, it's possible, yes, you know, but more like for us, it's gonna be like more practical analysis, like saying like, hey, we release something, can we just like focus on this one?
+
+Eugene Semenyuk   37:45
+Mhm.
+Yeah.
+
+Oleg Kharlamov   37:59
+Particular task or something like that.
+
+Eugene Semenyuk   38:02
+Yeah, but, by, but, but by, I mean that, yeah, usually, usually, like, guys work with with infrastructure, yeah, and yeah, as I mentioned before, so yeah, usually for such cases, there is a good practice to set up alerts.
+So, yeah, we can we we can we can set up some monitoring and alerts that can that can monitor logs for some unhandled exceptions, yep, and for some unexpected errors.
+Like, uh, you've got internal server error, so yeah, and usually it is like...
+Not not expected behavior, so yeah, we we do not expect internal server errors, so yeah, and...
+Yeah, if, yeah, if monitoring.
+Got got such such such error in logs, so yeah, it can send some email, maybe create ticket in JIRA, or somehow notify people, like, look, here is some something that you need to to look at.
+Yeah, and usually, yeah, this is task for for for for DevOps to to configure configure.
+Such, such, such, such things, such, such alerts, such, such, such monitoring.
+in different environments.
+Yeah, and yeah, it it it really helps with the to to build a really good reactive reactive approach and reactive process.
+Yeah, because...
+If, if something happens, and...
+And user maybe.
+Yeah, and the user haven't seen it, so yeah, it will be noticed by monitoring.
+It will send some alert, yeah, and then based on this alert.
+We can connect some AI tools to investigate this alert.
+Like, to see what is what is the error, maybe some to look at the exception, maybe go to some system, maybe ping some endpoint, maybe go through the like historical issues and possible solutions.
+For then, maybe investigate source code.
+
+Oleg Kharlamov   40:48
+Yeah.
+
+Eugene Semenyuk   40:48
+Huh.
+Yeah, but good point is like start with like regular deterministic monitoring and alerts.
+And then handle these alerts using the AI.
+
+Oleg Kharlamov   41:01
+Um...
+Well, alerts, actually, this is just something that...
+I would say like.
+We have them already with the sentry, you know, right? You know, and what what happened is, you know, we have them a lot, you know, but but we need actually sort of like a saying, like, hello, okay, so either my pair of eyes are looking at those, you know, like in trying to...
+
+Eugene Semenyuk   41:18
+Mm-hmm.
+Mm.
+Mhm.
+
+Oleg Kharlamov   41:36
+make a sense of it or AI. So the number one step will be like saying like, hey, AI, look at the stack of this stuff, you know, and maybe at some point, like maybe I don't have to start from Sentry. Let's see if I can start from.
+
+Eugene Semenyuk   41:47
+Mhm.
+
+Oleg Kharlamov   41:55
+My local, right? So does it mean I have to point to the logs log file or or or?
+
+Eugene Semenyuk   41:57
+Mhm.
+
+Oleg Kharlamov   42:05
+It's like, per se, like instead of doing like AI saying like, hey, I...
+I basically ask you to actually to go look at this log and see if there is any any predictability of the problem or or per se say like you know hey I see them look at that stuff continuously in just to predict me issues while I'm working on this you know so.
+
+Eugene Semenyuk   42:20
+Mhm.
+Yeah, continuously can it can be.
+Really expensive.
+
+Oleg Kharlamov   42:38
+Ha ha ha!
+Okay, let's see. All right.
+Tsao.
+
+Eugene Semenyuk   42:48
+Yeah, but based, based on, based on some event.
+
+Oleg Kharlamov   42:49
+It's a it's a it's a stage.
+
+Eugene Semenyuk   42:51
+Mhm.
+
+Oleg Kharlamov   42:52
+It at the stage right now when the AI says like, you know, hey, I am a library, you know, you go tell me like what to look, I'll look at that and tell you what's going on. But like to see if you feel alone like a per developer and say like, you know, hey, I have some idea you're doing that wrong right now.
+
+Eugene Semenyuk   43:11
+Mmhmm.
+
+Oleg Kharlamov   43:13
+You do it, this is this is like this is a very expensive task. I got it.
+
+Eugene Semenyuk   43:15
+Okay.
+Mhm.
+
+Oleg Kharlamov   43:22
+OK, so, but but there is a there is a there is still a way to actually to go and say, like, hey, yeah, I look at this log and say, per se, like, not to to figure out.
+
+Eugene Semenyuk   43:22
+Yeah, but, but, but, but analyze.
+Mhm.
+
+Oleg Kharlamov   43:33
+Tell me what you see, basically, pretty much, you know.
+
+Eugene Semenyuk   43:36
+Yeah, yeah, yeah. For example, you have 10 alerts, like, hey, AI, yeah, please review these alerts, yeah, and say, like, what is what is really issue and what is just some warning.
+
+Oleg Kharlamov   43:46
+Okay, Casey.
+So, basically, at this point, I just go extract each each potential, like, you know, I'm alerted by this, you know, or I felt like, you know, this is not right in in the century, for example, and and go ahead and just go through the research tools with the AI and talk to them and and and.
+
+Eugene Semenyuk   44:00
+Mhm.
+Mm-hmm.
+
+Oleg Kharlamov   44:13
+do the analysis for this, you know, so based on what exactly that. So like for example, user case will be like, hey, I have an error, this is my code.
+
+Eugene Semenyuk   44:15
+Mhm.
+
+Oleg Kharlamov   44:28
+Connect the dots, right? You know that just that that just a step into the manual process and build that sort of like a skill to actually to properly evaluate based on like what kind of tools, what kind of knowledge and that and stuff like that, I see.
+
+Eugene Semenyuk   44:30
+Yeah, mhm.
+Yeah.
+Yeah.
+
+Oleg Kharlamov   44:47
+Okay, yeah.
+
+Eugene Semenyuk   44:48
+So, yeah, I, yeah, I, I propose to connect, like, yeah, maybe let's create a small, small group like you, me, and Jurijs, because, yeah, you're also really interested in this use case, and he's working on similar use case, so, yeah, maybe together we can...
+
+Oleg Kharlamov   45:05
+Sure.
+
+Eugene Semenyuk   45:06
+Yeah, we can come up with some solution. So yeah, and yeah, if you guys work, if yeah, if you guys have the same problem, like analyze logs, so yeah, please let me know. So yeah, we can expand this group and think together like how to,
+how to do it in the most effective way and share it across teams.
+
+Oleg Kharlamov   45:31
+And uh, I have one more question, uh, actually, and uh, um...
+
+Eugene Semenyuk   45:31
+Yeah, thank you.
+Okay.
+
+Oleg Kharlamov   45:37
+So, like what I notice, and this is from my team, actually, and a lot of people looks for us like desire to actually to use a code.
+
+Eugene Semenyuk   45:49
+Uh-huh.
+
+Oleg Kharlamov   45:50
+As of like tools to, is there any any any possibility we can just go to that direction as well?
+
+Eugene Semenyuk   46:01
+Yeah, and yeah, I heard some positive vibes about this process. Yeah, and I hope, yeah, we'll have got caught really soon.
+
+Oleg Kharlamov   46:17
+Ohh, cool, then I'll let them.
+
+Eugene Semenyuk   46:18
+So yeah, I heard some discussions around these. So yeah, I believe it should be available.
+
+Oleg Kharlamov   46:21
+Okay.
+Well, it's not only, it's not only for, it's not only for the coding stuff, you know, it's also for, so for the...
+
+Eugene Semenyuk   46:31
+Yeah.
+
+Oleg Kharlamov   46:39
+Yeah.
+
+Eugene Semenyuk   46:40
+EI.
+
+Oleg Kharlamov   46:42
+Yep, organize you work and everything, yes.
+
+Eugene Semenyuk   46:42
+So yeah, it will, it will be really.
+
+Oleg Kharlamov   46:49
+All right. Thank you. Thank you so much. And yeah.
+
+Eugene Semenyuk   46:50
+Yeah, thank you.
+Yeah.
+Yeah.
+
+Oleg Kharlamov   46:55
+Sorry, sometimes I'm missing sessions because I'm extremely busy. I'm sorry, you know, there's just one on.
+
+Eugene Semenyuk   46:59
+Yeah, totally understood.
+Yeah, thank you. Thank you guys for for your really valuable ideas and productive discussion. So, yeah, we are we are around, yeah, we are out of time. So, yeah, thanks a lot for participating in this session. So, yeah, let's stay on track. Yeah, feel free to connect with me.
+Or, Svetlana, if you have any issues, blockers.
+So yeah, yeah, and yeah, see you tomorrow on our cross-functional session. Yeah, and have a good rest of the day.
+
+Oleg Kharlamov   47:40
+Yeah.
+
+Saeyed Shamlou   47:41
+Thank you.
+
+Eugene Semenyuk   47:41
+See you. Bye.
+
+Oleg Kharlamov   47:43
+Thank you. Thank you, Jain.
+
+Bandana Sriramka   47:43
+Thank you.
+
+ stopped transcription

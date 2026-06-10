@@ -1,0 +1,523 @@
+AI Enablement QA Lighthouse Session-20260506_140018UTC-Meeting Recording
+May 6, 2026, 2:00PM
+33m 28s
+
+Eugene Semenyuk   0:04
+I think I can use the first one.
+
+Jurijs Markelovs   0:14
+What?
+
+Eugene Semenyuk   0:22
+Chez.
+I need to do it.
+Hello, good morning.
+Hello.
+Let's wait one or maybe 2 minutes.
+But...
+Yeah.
+
+Ravi Nachimuthu   0:57
+One.
+
+Jurijs Markelovs   0:58
+Eugene, can I go first with demo what I have?
+
+Ravi Nachimuthu   0:58
+I have a question.
+
+Eugene Semenyuk   1:02
+Sure.
+
+Jurijs Markelovs   1:02
+I got to go earlier.
+
+Eugene Semenyuk   1:05
+Yeah, yeah, let's just wait one more minute. Yeah, let our other folks.
+Train us.
+
+Ravi Nachimuthu   1:25
+Can you hear me now?
+
+Eugene Semenyuk   1:25
+Mmh.
+Yeah.
+
+Ravi Nachimuthu   1:28
+Okay, I think my headset connected. So I think I have a question for either you or Nikita. So the cohort 2, the 24 teams, do we have any of those teams part of these calls for the last two, the last few weeks?
+
+Eugene Semenyuk   1:30
+The.
+Yeah.
+No.
+
+Ravi Nachimuthu   1:44
+Or are we keeping them?
+until we, until for a future date. Trying to understand because I see mix of cohort one and cohort 2 in some of these calls and haven't seen invitation for all of the cohort 2. So trying to understand what is the rationale behind and who's part of these calls and who's not.
+
+Eugene Semenyuk   1:53
+Play the song.
+No.
+Ohh.
+And.
+Nikita, do you know something about this?
+
+Nikita Kumar   2:18
+For QA or for just lighthouse cross functions.
+
+Eugene Semenyuk   2:19
+Yeah.
+Farmer.
+
+Ravi Nachimuthu   2:24
+So, lighthouse meaning.
+
+Eugene Semenyuk   2:26
+I.
+
+Ravi Nachimuthu   2:27
+The cohort one.
+
+Nikita Kumar   2:32
+I don't know if those teams are invited to all of the calls just yet because they're separate teams and the team, like the way that you guys are working, you're way ahead of schedule. So I don't know if they're in the cross-functional just yet. Those are separate teams, but I think Mikhail would have a better idea on that because he's the one running that part of the program.
+
+Eugene Semenyuk   2:45
+Mmh.
+No.
+
+Ravi Nachimuthu   2:55
+Okay, yeah, I'm a little confused because I see looking at the
+the conversation that we had yesterday, the different individuals involved in them. And I'm a little confused, you know, what is the rationale behind and who's invited in all these sessions versus not. Maybe I'll catch up with Mikhail on that.
+
+Eugene Semenyuk   3:03
+Show, Show.
+Play.
+ICC.
+Oh.
+Yeah.
+
+Nikita Kumar   3:14
+Yeah, so the sessions that are currently happening right now are the existing Lighthouse team. So everyone that's in, for example, like the Tuesday, Thursday calls, that's everyone from our previous phase. Because this team is already so advanced, those are, they're working on the cross-functional use cases. I don't think the new cohorts are in yet because those are the, those are the 24 new teams that are coming into play.
+
+Eugene Semenyuk   3:16
+The.
+I.
+Ohh.
+Bing.
+Yeah.
+No.
+
+Nikita Kumar   3:37
+And since they have no background on what's happened in phase one, they're not in any of these cross-functional meetings just yet. I don't think so. But there will be a separate program for them. But I think Mikhail might have a better answer for that because he's the one running on that part of the program.
+
+Ravi Nachimuthu   3:37
+Mhm.
+Okay.
+Okay, gotcha. Thank you.
+
+Eugene Semenyuk   3:52
+Mm-hmm.
+
+Nikita Kumar   3:53
+I, I mean, I don't know if you have any anything on that from from program perspective.
+
+Eugene Semenyuk   3:59
+Ohh.
+
+Iryna Pashko   4:00
+Yes, yes, exactly. Nikita, thank you for clarifying. Yep, so my assessment is completed. My assessment reports are generated. There will be a separate set of calls for new 2014 teams starting next week.
+
+Eugene Semenyuk   4:06
+I.
+Sing.
+
+Ravi Nachimuthu   4:14
+Okay, thank you. Appreciate it.
+
+Eugene Semenyuk   4:15
+Like.
+Yeah, okay, thank you guys for the discussion. So yeah, let's probably start. Hi, everyone, and welcome to our today's Lighthouse session. So today we have a few demos lined up, showcasing some progress and experiments across different teams.
+So, yeah, and as always, the goal of this session is simple: share what we are building, learn from each other, and yeah, identify what's scalable and reusable. So, yeah, feel free to ask questions during the demos or note them down for...
+for discussion afterward. So yeah, with that, let's jump into our first demo. So, Jurijs, the floor is yours.
+
+Jurijs Markelovs   5:08
+All right, good morning, good afternoon, good evening. The use case, what I'm going to share, very straightforward, but I was given a task. So the idea is I'm somehow associated with deployment, production deployments, and the idea was to backfill.
+do backfill the front-end release.
+A log which is had been used used to be maintained manually, so it logs look like this.
+Like this previously, it was just just for the last year, so nothing was added for this year, right? So, basically, here is a release date, release notes, and what exactly was released. So, that purpose I've tried using Robo wasn't very helpful.
+There, right, and then I tried to use the um assistant was a little bit better, right? So, idea is here.
+Is very simple, right? Again, we got the...
+We go, we, so let me just add it really quick. So we connect, we integrate, we integrate what? Yeah, we integrate, we integrate conference page.
+Were given user.
+JIRA for the given user, and that's really all we need for this purpose, right? So, the goal is described in instructions, then the JQL query is explained is added to that as well, so the accountants.
+Parent page is added. Confluent space key is nothing but the key of the project and is specifying the behavior step by step. How we group in, rendering, output format, which is described a little bit better, more explicit in here.
+Right, so as an example.
+Um...
+What else? So, basically, we use in the JIRA REST API. There are some some examples of error and how errors can be handled and reporting with nothing but the page, right? So, and...
+It worked pretty well. We added these pages with release, release notes, release items, and I believe someone else is on this call working or something similar. So what I went one step ahead and what I did, I integrated.
+integrated confluence scheduler for these systems, right? So what it really is, it just grabs the assistant ID and executes the job on Sunday, 10 A.m.
+Think.
+And there you go, no magic. Any questions?
+
+Eugene Semenyuk   8:30
+Yeah, looks good. It is similar that Bandana did for...
+
+Jurijs Markelovs   8:35
+Yeah.
+
+Eugene Semenyuk   8:37
+Yeah, for releases.
+
+Jurijs Markelovs   8:40
+There you go, so...
+
+Eugene Semenyuk   8:40
+Yeah.
+
+Jurijs Markelovs   8:42
+Thank you.
+
+Eugene Semenyuk   8:44
+Yeah, thank you. Do you have something else?
+Yeah, probably not.
+
+Jurijs Markelovs   8:53
+No, not today.
+
+Eugene Semenyuk   8:54
+Yeah, okay. Thanks. Thanks a lot for your use case. Guys, do you have any questions?
+Ideas.
+regarding this use case.
+Okay.
+Uh, yeah.
+In this case, we I think we can proceed with with next demo. So, Hai, could you please?
+Describe your use case.
+
+Hai Le   9:29
+Yeah, hi guys. Let me share my screen.
+
+Eugene Semenyuk   9:33
+Madhan.
+No.
+
+Hai Le   9:51
+Can you see it?
+
+Eugene Semenyuk   9:55
+Yep.
+And.
+
+Hai Le   9:58
+Right.
+So, by now, I think all of us have already seen Eugene and a lot of other folks created different robo agents, and one of them is to assess or analyze Jira tickets for readiness.
+And so I created something very similar, but what's different about mine compared to others is that I also added Jira Automation to it.
+So let's just take a look at what this all looks like.
+Right now, let's just say that your team is doing sprint planning, right? And you're about to start a new sprint.
+We're gonna, we're gonna start this sprint here, high sprint four.
+for demo purposes. Obviously when you guys do this.
+for real in your own sprint, you're going to have a lot more tickets than just these three, right? But for demo purposes, I'm only going to include three for now, just to save time. So I'm going to, you know, we're done with sprint planning and discussion with the team. And as a product manager, I'm going to click on start sprint.
+So let's see what happens when I do that.
+Okay. Jira Automation, I noticed it usually takes, it can take up to like a minute to update or refresh. So I'm just going to give it a little time here and then refresh, manually refresh the browser.
+Payne.
+Something is not working. Gotta check the logs. One second.
+Okay.
+
+Eugene Semenyuk   12:19
+Yeah.
+
+Hai Le   12:19
+It looks like there are some errors and the automation rule didn't fire.
+
+Eugene Semenyuk   12:22
+Yeah.
+
+Hai Le   12:25
+Let me try again.
+
+Eugene Semenyuk   12:26
+Yeah, let's probably open open this chair automation rule. Yeah, maybe we need to authorize in the rule because, yeah, I see failed to fetch rule permissions. So, yeah, let's, yeah, let's open this rule.
+
+Hai Le   12:38
+Right, it you do.
+It used, yeah, it used to work.
+
+Eugene Semenyuk   12:43
+I guess I know.
+Yeah, so yeah, well, yeah, let's open this rule in edit mode.
+
+Hai Le   12:47
+OK.
+
+Eugene Semenyuk   12:54
+Yeah, and uh, yeah, just check a few things.
+
+Hai Le   12:57
+How do you open it in edit mode?
+
+Eugene Semenyuk   12:59
+Uh, yeah, please click return to return to flows.
+Yeah, and then, yeah, yeah, yeah, yeah, yeah, you, you just need I did the rule.
+
+Hai Le   13:06
+Oh, you mean edit the rule? Okay.
+Okay.
+
+Eugene Semenyuk   13:13
+Yeah, what exact rule is it? Yeah, this one. So, yeah, let's...
+
+Hai Le   13:19
+Is this one here?
+
+Eugene Semenyuk   13:24
+Yeah, let's click on your agent. Yeah, and yeah, use agent node. Yeah, let's click on it.
+
+Hai Le   13:34
+Uh...
+Where?
+
+Eugene Semenyuk   13:36
+I mean, yeah, in in in in your in your workflow, yeah, you have use agent Jira story readiness analysis, so yeah, let's click it.
+
+Hai Le   13:43
+Yeah, right.
+
+Eugene Semenyuk   13:46
+Yeah, and.
+Yeah, let's let's click change connection.
+Yeah, to make sure, yeah.
+Let's create a new connection, because...
+I see that owner is some some other person.
+
+Hai Le   14:07
+Yeah, did something change? The last time I ran it, it worked.
+
+Eugene Semenyuk   14:08
+So, yeah.
+Yeah.
+Yeah, there is.
+
+Hai Le   14:13
+Okay, I changed it.
+
+Eugene Semenyuk   14:15
+Yeah, yeah, and now let's click update, yeah, and let's let's rerun.
+
+Hai Le   14:22
+OK, let's try again.
+
+Eugene Semenyuk   14:26
+Mhm.
+
+Hai Le   14:30
+I think I should start a new sprint again from the first step.
+
+Eugene Semenyuk   14:31
+No.
+Yeah.
+
+Hai Le   14:36
+Right.
+Okay.
+I have to create a new sprint first, so one second.
+All right, let's give it one more shot.
+
+Eugene Semenyuk   15:14
+Mhm.
+
+Hai Le   15:17
+So right now the sprint is empty. I'm going to start a new sprint.
+Okay, maybe give it like 5, 10 seconds and refresh.
+
+Eugene Semenyuk   15:29
+Yeah.
+The.
+Sing.
+No.
+
+Hai Le   15:36
+If this doesn't work, I still have another workaround.
+
+Eugene Semenyuk   15:39
+And you?
+
+Hai Le   15:42
+Alright, refreshing. OK, perfect. It worked. Alright, so, so what happened, Rai? So, when I started a new sprint.
+
+Eugene Semenyuk   15:43
+Okay.
+Mm-hmm.
+What?
+
+Hai Le   15:52
+Um...
+You can see that two out of the three tickets that were added to sprint, two of them were automatically moved to blocked and one is still in to do. So what happens? Let's open it up and see what happens, right? Here's a story.
+
+Eugene Semenyuk   16:02
+Sing.
+Call.
+Okay.
+
+Hai Le   16:09
+And let's scroll all the way down.
+So about 31 seconds ago, the Robo agent added this comment, letting whoever picks up the story know that the story is not ready for development. And why is that? It's all because of these red...
+circles. And I intentionally added these red and green emojis just to make things more visual and a quick way for the user to quickly identify whether or not something failed or if the story is actually ready for development or testing.
+So it's nice to have something in colors. And then at the bottom, you can see that the action items needed are these three items. At referenced media, such as design links, screenshots, videos, blah, blah, blah. It was missing a story point. As you can see, story point value is 0.
+Anytime we add tickets to, yeah, we add new tickets to work on in a sprint, it must have a story point. And then also a fixed version is required as well. And you can see that the fixed version is blank. So those are the three things that failed. And when
+when the teams, if you start a new sprint and there's a ticket similar to this and it's missing some requirements, it will just automatically move the ticket to blocked, as well as assigning it to the PM, in this case, Mo. So that way,
+Every time, every morning, or whenever you guys have your scheduled stand-up call, you can quickly go over the tickets that are in blocked and open it up and see, hey, why are these tickets in blocked? And the reason for doing this is because a lot of times, if this doesn't happen,
+Mostly QA folks, they waste so much time with developers and the PM and everyone else on the team to go back and forth on, you know, why is this ticket missing certain information? Why is there no ACs in the ticket? Why are there no screenshots or design links and whatnot?
+So that's really the gist of it, right? It is mainly, the purpose of this role agent is to analyze tickets for readiness, but I take it a step further by adding Jira Automation to it so that it saves some time not having to.
+wasting any time picking up on a ticket and then getting trying to get started testing it or doing whatever with it and then come to find out at the end that it's a waste of time because nothing is actually ready for the QA yet. So that's the whole idea and I added.
+three different Jira Automation rules. One, as you can see here, is after a sprint is started, that's what will happen. Another way to analyze and kick off this Jira Automation is by manually, let me go back to the ticket.
+by manually clicking on this automation icon at the top right and selecting the Robo agent. So when you do that, it'll also manually analyze the ticket and do its thing. If it's missing some requirements, it'll move it to blocked and it'll assign it to the PM.
+Another way is I set it on a schedule, right? So in this case,
+I think I have it open.
+like right here. I set it to fire off at 730 A.m. every day. So this way, our DSU time, our stand-up time is at 10 A.m. So I try to schedule it at 730 so that by the time we meet at stand-up.
+people when they bring up the Jira board and the active sprint, they can immediately see the tickets that are in blocked right away, you know, and then they can take actions. So let's take a look at this one ticket that is in To Do. Why did it not get moved?
+to blocked, so let's see why.
+So here, so as you can see, 5 minutes ago, it happened. This JIR story is ready for development and testing. So that's why it didn't get moved to blocked. And everything here, listed here, is green. So that's just a quick visual way for people to know that nothing failed.
+Right. So my role agent, I simply provided a list of custom requirements, things that I wanted to look for. And so pretty much these are all of the requirements that I wanted to check. The story title is clear and easy to understand. The story contains a clear description.
+stating the background or the business context. Story includes easy to understand acceptance criteria in Gherkin format. Notice I specify Gherkin format because that's the format that our team prefers. So if...
+Scroll back up, so...
+See here, the acceptance criteria is written in the given, when, then format, which is Gherkin. If it's ever written in a way that isn't Gherkin, this will fail and it'll get moved to blocked. So every team is different, right? So if you do work with...
+a virtual agent like mine, or you want to be able to mimic something that I'm doing here, I can share it, but you will have to customize your own requirements because every team is different. So these are just my own set of requirements for my own team. So it's just a...
+a nice way for team members to quickly tell whether or not something is ready for testing or something is not ready for testing, which I think will end up saving a lot of time overall.
+So imagine if you have a sprint with like at least 30, 40 tickets in here, and you know, during sprint planning or not sprint planning, backlog refinement is when your team should be doing the reviews on the ACs and the ticket requirements and whatnot. So.
+A lot of times people will miss it, will miss certain things to include in the tickets. And so by the time you bring these tickets into the sprint, if they don't get automatically reviewed by these verbal agents, and they would just be in progress, team members will pick on them to get started on and notice that, or realize that, you know.
+they're actually not ready, which will end up wasting a lot of back and forth. And you don't want that to happen. So that's the main idea. My Robo agent has zero automation built in, and that's what is kind of special about it.
+Any questions?
+
+Eugene Semenyuk   23:55
+You.
+
+Bandana Sriramka   23:55
+Yeah, hi. I have a quick question. Rai. Yeah. So for the agent, are you taking any definition of ready document as a context or you are just specifying everything in the prompt itself?
+
+Eugene Semenyuk   23:57
+Yeah.
+
+Hai Le   24:09
+Yeah, good question. Yep, I don't feed it any confluence documents or anything. I just provide a long list of custom instructions in the agent.
+
+Bandana Sriramka   24:23
+OK.
+
+Hai Le   24:23
+Yep.
+
+Eugene Semenyuk   24:31
+Thank you a lot. Hi for your demo. So yeah, this is a good continuation of our yesterday's topic. Yeah, yesterday on the cross-functional VDLC session, we started the topic about autonomous agents.
+Yeah, and during this session, we'll rebuild a a small.
+autonomous agent that can review requirements. Yeah, but yeah, on previous session we had a prototype here, but this...
+this use case and this flow presented by Hai. So yeah, it is more mature version of that flow that we implemented.
+So, yeah.
+That's something that can be definitely scalable.
+
+Hai Le   25:29
+Yeah, I forgot to talk about this bug. It's a similar idea, but I meant to, you know, I intentionally included an example of a failed story and a failed bug. So this bug, right, how many?
+
+Eugene Semenyuk   25:29
+Okay.
+
+Hai Le   25:47
+How many of you have seen bug tickets that just don't have a lot of information in there, especially missing steps to reproduce? As QA, I think we always want to make sure that it contains all of the right information in there, so that our developers, when they pick them up, you know, they don't get frustrated with us, they don't.
+come back to us with questions and whatnot. I don't know if there are any developers on here. I think this is mostly a QA meeting, but you get the idea, right? So as you can see, this bug ticket, all it has is just a title and a mention of a test account.
+Like, that's it, nothing else. So obviously it failed the requirements that I gave it to the Robo agent. And so the Robo agent analyzed it and moved it to blocked, automatically assigned it to the PM. So if we scroll down, you can see that the agent.
+The agent added a comment.
+10 minutes ago, stating that it's not ready for development or testing due to all of these red things, right? So it's a long list of items that are missing. So yeah, it's a similar idea, but...
+On.
+Again, the whole purpose of this Jira, this Rover Agent plus Jira Automation is to help teams save time and be more efficient.
+
+Eugene Semenyuk   27:24
+Mm.
+Yeah, absolutely. Yeah, and yeah, guys, if you would like to build something similar, so yeah, feel free to connect to our tomorrow's session, so yeah, we'll we will build something something similar.
+Yeah.
+So, yeah, any any other questions, guys, regarding this use case?
+
+Hai Le   27:47
+Right.
+
+Eugene Semenyuk   27:56
+Yeah.
+One, two, three. Okay, thanks a lot, Hai. So yeah, it was really, really awesome. Yeah, thank you for a great demo. Okay, guys, do you have any other demos, any other topics that you would like to discuss?
+
+Hai Le   28:07
+Thank you.
+
+Eugene Semenyuk   28:19
+Yeah.
+Yes, yeah, I have one. I have one topic. Yeah, looks like MCP servers were approved. Yeah, and...
+And now you can try to use them in VS Code. Not sure about cursor. So yeah, yesterday Alexander and I tried to play it with cursor. Yeah, and only Atlassian MCP server worked well in cursor. But other MCP servers,
+In GitHub Copilot in this code, they they worked well, and we we are planning we are planning to conduct the session about MCP servers, I guess next week on Thursday, so yeah, we will we will discuss like what is MCP server.
+how to use, for which use cases it can be applicable, and how to set up these MCP servers on your machines.
+So, yeah, I guess...
+This is great news for us.
+So, yeah, especially for those who, um, who...
+Yeah, who we were waiting for for this?
+Uh, these MCP servers, so yeah.
+
+Divya Ramkumar   29:58
+You think, can you can you tell us what all MCP servers were approved?
+
+Eugene Semenyuk   30:00
+M.A.
+I.
+Yeah, let me, let me find the page with our MCP server, so yeah, I'll send it to you. Yeah, yeah, there should be Atlassian MCP server.
+
+Divya Ramkumar   30:11
+Okay, thank you.
+
+Eugene Semenyuk   30:20
+Maybe MCP server should be in this list as well. Yeah, yeah, maybe, maybe it should be, yeah, yeah, yeah, just, just give me maybe 5 minutes.
+
+Divya Ramkumar   30:23
+Even Mabel.
+Can, can you check?
+Okay.
+Okay.
+
+Eugene Semenyuk   30:33
+Yeah, and I'll come back with the list of MCP servers.
+On the, yeah, I'll send them in to this chat.
+So, yeah, I guess it should be it should be a great opportunity to experiment with with new capabilities. So, yeah, and next week we will definitely try to use them for different scenarios.
+Yeah, how, like, how to use a plus an MCP to get JIRA items in your ID and maybe update something, how to use a player at MCP to open the browser and do some things in the browser, yeah, and yeah.
+And some other MCP servers, yeah, we will, yeah, maybe we will try, maybe it will MCP.
+And, like, how to use this in in the escort, so yeah, but we we are still, yeah, we we are building agenda for for this session because it will be cross-functional session, so yeah, we won't be focusing on the...
+on the on the QA part. Yeah, we will I will try to cover digital engineering and QA part on this session and go through the list of approved MCP servers and think about how we can utilize them for our use cases.
+So.
+Yeah, that's probably it from my side. So do you have any other?
+Things to discuss.
+Topics, ideas.
+
+Bandana Sriramka   32:28
+Eugene, do you have any update on the PMT test summary reporter to move to products?
+
+Eugene Semenyuk   32:30
+No.
+Sorry.
+Yeah, it's, yeah, it's still in progress. So yeah, hope, yeah, hope it will be moved soon. So yeah, I'll let you know. Thanks.
+
+Bandana Sriramka   32:37
+Okay.
+Okay, thank you.
+Thank you.
+
+Eugene Semenyuk   32:46
+Okay, any any other final questions?
+One, two, three. Okay, thanks again everyone for your time and engagement. Have a great rest of the day and see you tomorrow.
+and the cross-functional PDL session. So yeah, we'll continue with Jira Automation, web hooks, and other automation parts. So see you soon. Bye.
+
+Iryna Pashko   33:23
+Eugene.
+
+Bandana Sriramka   33:24
+Thank you.
+
+Divya Ramkumar   33:24
+Thank you.
+
+Eugene Semenyuk   33:25
+Thank you.
+Again.
+
+ stopped transcription

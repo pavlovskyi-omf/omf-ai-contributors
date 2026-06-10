@@ -1,0 +1,476 @@
+AI Enablement QA Champion Sync-20260601_140125UTC-Meeting Recording
+June 1, 2026, 2:01PM
+29m 9s
+
+Jurijs Markelovs   0:13
+Yeah.
+Who?
+
+Eugene Semenyuk   0:19
+Hello, good morning.
+I.
+Let's wait maybe a couple of minutes.
+For more folks to join us.
+Yeah.
+Yes.
+Oh
+Yeah, let that think.
+We are we.
+Yeah.
+Do do do do do do.
+One minute, then.
+And we'll start in short today.
+And
+Yeah.
+Yeah.
+OK, let's maybe let's start. So, probably someone will connect us a bit later. So, yeah, hi everyone again. So, thank you for joining us today. So, yeah, in this...
+Small, but...
+very warm group, I would say. So yeah, today is usual. Yeah, I'd like to go around the room, discuss some news, some open questions. Yeah, we'd love to hear about your experiments.
+Like, what use cases are you exploring, what challenges you have, what maybe where you might need support. So, yeah, and finally, we will cover some next steps and an alignment. So,
+Yeah.
+Let's probably start. So regarding news, we don't have pretty much news.
+For today, so...
+Yeah, previous week we.
+Yeah, on our cross-functional sessions, we...
+We discovered ChatGPT agents. Yeah, and this is a really interesting topic. Yeah, and I guess...
+Especially, especially for for.
+to engineers and digital folks.
+So yeah, for engineering, probably not sure about it because yeah, these agents don't have access to ChatGPT or to GitHub repositories for now.
+So yeah, but for QA use cases and some digital use cases, I think it is a really great tool.
+Uhh...
+So, yeah, but...
+I, ohh yeah, I see Donna Donna joined us, so yeah, I I remember you requested the ChatGPT license. Have you got any response about it?
+
+Dhanalakshmi Chinnasamy   5:31
+You think, and I got it.
+
+Eugene Semenyuk   5:34
+Could you please repeat that?
+Sorry, I didn't get.
+
+Dhanalakshmi Chinnasamy   5:37
+Yes, we can. I got the ChatGPT license.
+
+Eugene Semenyuk   5:42
+Ohh, awesome!
+
+Dhanalakshmi Chinnasamy   5:43
+The.
+
+Eugene Semenyuk   5:44
+Yeah, and yeah, that's awesome, so.
+Yeah, and I think you can you can share like the process with your with your teammates, yeah.
+In case if Bandana don't have the license yet, yeah, if if you have.
+
+Bandana Sriramka   6:04
+I got it, too.
+
+Eugene Semenyuk   6:06
+Yeah, awesome.
+
+Bandana Sriramka   6:07
+Yeah, I was trying to see the agents, but I don't see the agent option. I did see it the first day, but when I was trying to create some, I don't see the edges listed on the side. I can maybe share my screen.
+
+Eugene Semenyuk   6:16
+G.
+Mhm.
+
+Bandana Sriramka   6:24
+Real quick.
+
+Eugene Semenyuk   6:25
+Ohh, that's interesting.
+
+Bandana Sriramka   6:29
+Yeah.
+
+Eugene Semenyuk   6:31
+I...
+
+Bandana Sriramka   6:31
+You can see it.
+
+Eugene Semenyuk   6:34
+Uh-huh.
+
+Bandana Sriramka   6:34
+Someone logged into OneMain Enterprise. I don't see agents listed. Am I missing something or?
+
+Eugene Semenyuk   6:44
+That's.
+
+Bandana Sriramka   6:44
+I did see it when I got it first, but the next day when I tried to use it, it was gone.
+
+Eugene Semenyuk   6:47
+Yeah.
+Yeah, to be honest, I just log in in ChatGPT and I don't see agents here.
+
+Bandana Sriramka   6:57
+Yeah.
+
+Eugene Semenyuk   7:05
+What? What happened?
+That's really interesting.
+
+Vlad Grubman   7:12
+Oh, Eugene, your agents are missing too.
+
+Eugene Semenyuk   7:13
+Mhm.
+Yeah.
+
+Vlad Grubman   7:16
+Even after you deliver the demo, right?
+
+Eugene Semenyuk   7:19
+Right.
+
+Vlad Grubman   7:20
+Okay, I think it's something to do with...
+Security team resetting the permissions or something. I'll you guys go on. I'll reach out to Nick. We'll see what can be done.
+
+Eugene Semenyuk   7:33
+Mm-hmm.
+So, yeah, and...
+Yeah, I thought it was approved because, yeah, it even mentioned like, like these tools are approved by admins and these tools are not approved and disabled, but by admins.
+So yeah, that's.
+That's interesting.
+Okay, yeah, we'll see. Yeah, at least we have good news that you guys have ChatGPT licenses.
+Yeah, and...
+Regardless agents, I think you should be able to work with applications. So, yeah, let me share.
+So...
+This one.
+So, yeah, I guess you can.
+You can connect some.
+Some applications and use them in the in chats.
+Yeah, for example, you can send the user story.
+and ask it to review.
+Not sure about write permissions.
+Yeah, but at least the Rik should work.
+Yeah, and the so remember, yeah, you can use.
+Teams, SharePoint, Outlook, GitHub.
+And Roa Atlassian, but by Roa, so yeah.
+In this application, you can use Confluence and Jira, not only Robot.
+Somu.
+OK, yeah, this is like...
+So, some news.
+Yeah, um...
+OK, yeah, let's probably discuss your your experiments, so yeah, like, have you had a chance to to experiment with the AI?
+So, yeah, it...
+Any, any, any volunteers?
+
+Bandana Sriramka   10:01
+No new experiments yet. I was trying to create the agents, but it was gone yesterday. Yeah. And I am yet to explore the MCP. Like I have to connect Atlassian. I have connected, but not used to take a ticket from Jira and create.
+
+Eugene Semenyuk   10:08
+He.
+Yeah.
+Mhm.
+
+Bandana Sriramka   10:21
+The same in a label, so I have to try that.
+
+Eugene Semenyuk   10:25
+Mhm.
+
+Bandana Sriramka   10:28
+Yeah.
+
+Eugene Semenyuk   10:29
+Yeah, that that should be really interesting.
+
+Bandana Sriramka   10:32
+Yeah.
+
+Eugene Semenyuk   10:33
+So yeah, yeah, we're waiting for your experiments in this area. So thank you. Thank you for updates.
+Jurijs, do you have any? Do you have any new experiments?
+
+Jurijs Markelovs   10:50
+No, my make my experiments were blocked by.
+known implementation issues, lack of the access rights to the JIRA, to the GitHub, as it requires admin rights to certain things to happen. Even on, even for training.
+Cloud.
+
+Eugene Semenyuk   11:19
+Uh-huh.
+
+Jurijs Markelovs   11:19
+Even for the training instances, right, I believe.
+So, as I, as I mentioned previously, the idea is try to realize previous expertise on solution on debugging certain issues on the front end, back end, infrastructure level for the testing test.
+environments, right? Also, so this is one of the keys when I'm trying to brainstorm how would be the best way to approach. So utilizing all the context of previous resolution of the some repos what could be used as a context as well.
+and trying to automate a process by sending debugging steps to the black box testers, some of the black box testers, based on the issues to be resolved.
+
+Eugene Semenyuk   12:12
+Mhm.
+
+Jurijs Markelovs   12:16
+Yeah, so that is a quite complex, and I'm not sure if, but it's just it's I think it's we should we could we should be able to.
+
+Eugene Semenyuk   12:21
+Mhm.
+
+Jurijs Markelovs   12:30
+To project is to the other, or what's the word? The scale is to other issues or projects or...
+As well, once we know the the approach to be taken here, right? Another thing is, like I've like I've mentioned right earlier, one of the use cases I want to try and play playing around with, not playing around with is, but I try to establish.
+Um...
+deployment, Jenkins deployment based on based on the PR, what added, what's added to the comments or in the development section of the JIRA ticket. But as of now, again, the Jenkins is going away at some point for certain.
+
+Eugene Semenyuk   13:09
+Mm-hmm.
+
+Jurijs Markelovs   13:23
+services will be we support and we're going to be moving to the GitHub actions mostly. So it's kind of like so this the issue with the connection bridge between Jenkins and the Jira Automation or any other like GitHub actions or sorry, ChatGPT for example or CodeMe.
+Are being hanging is hanging on the in a in a in a in the air, basically, because of the fact that it's going away, so it's kind of blocked.
+
+Eugene Semenyuk   13:54
+Uh huh, and what, what, and what about plans to move?
+from Jenkins to...
+Maybe get GitHub actions.
+
+Jurijs Markelovs   14:05
+Yeah, that's been a question for years as far as I know. It's very, it's a delicate question, and it's going to take probably like at least six months to a longer period. It's not going to be just over the weekend thing, as far as I understand.
+
+Eugene Semenyuk   14:06
+Sachin.
+Singh.
+Okay.
+Mm-hmm.
+
+Jurijs Markelovs   14:23
+Another use case, what I am trying to resolve, trying to find a solution is, as I mentioned long ago, is the migration from our specs to the different types of the framework, which is more.
+Modern.
+
+Eugene Semenyuk   14:46
+Mhm.
+
+Jurijs Markelovs   14:46
+able play right of Cypress, right? Because of our existing, existing our spec tests are quite complex and they're relying on the external services, API mocking and other contacts. So I'm trying to find the best way to.
+
+Eugene Semenyuk   14:52
+Yeah.
+
+Jurijs Markelovs   15:08
+To, but before the migrating, I'm sorry, I'm thinking out loud again. Even before migrating, I'm trying to find the duplicate tests to be able to remove them, right? And the redundant tests.
+that are not utilized anymore. So with the, I had to set up, I think using either CodeMe or the cursor.
+
+Eugene Semenyuk   15:27
+Mhm.
+
+Jurijs Markelovs   15:34
+which I'm trying to...
+Resolve these cases.
+
+Eugene Semenyuk   15:40
+Yeah, and what is the approximate number of tests in this solution?
+
+Jurijs Markelovs   15:45
+They are about 9000, 9100 tests, which has been, which are being executed in a CICD pipeline, in a CI pipeline, right? And they are somehow flaky and lengthy. I think they're like...
+
+Eugene Semenyuk   15:49
+Ohh.
+
+Jurijs Markelovs   16:04
+Thirty, 30 agents with 30 parallel threats are being executed at the same time, and somehow they could be, you know, dependent sometimes, so that's the solution we're trying to overcome issue we're trying to overcome with migrate and test to another framework.
+
+Eugene Semenyuk   16:13
+Mhm.
+
+Jurijs Markelovs   16:26
+or the front end.
+
+Eugene Semenyuk   16:26
+Thanks.
+That's really huge, huge amount of tests, yeah, and for both tasks, like for for for migrating for like removing duplicates.
+Mm.
+Not sure.
+
+Jurijs Markelovs   16:49
+Yeah, I'm all ears and eyes. If you have some kind of suggestion to better. So the idea is here, idea is, idea is among these 9000 tests, most likely 20 to 40% of the test cases are redundant and they're not being used anymore.
+
+Eugene Semenyuk   16:55
+Ohh.
+
+Jurijs Markelovs   17:11
+And we need to identify the way to determine, all right, this test no longer applicable, right? And we just remove it safely. And considering the fact we have the owners of these tests are, might not be around anymore.
+
+Eugene Semenyuk   17:11
+Okay.
+Okay.
+
+Jurijs Markelovs   17:30
+trying to find the owners and it's really hard. So I think there is a solution in front of us at some point. We have something called hotel, which is going to be, anyway, I'm taking this to the wrong direction probably right now. So I'm trying to identify these tests, whether they're redundant or duplicate at this point with the utilization of the AI.
+
+Eugene Semenyuk   17:40
+Okay.
+
+Jurijs Markelovs   17:53
+And maybe I'll experiment with the chat GPT because if it's recent, but we're still not able to add the repo, right, as a context. We're not, okay. So I guess I'll wait better times.
+
+Eugene Semenyuk   17:53
+Mhm.
+Right.
+So, could you please send your?
+Link to your repository. I mean, that automation repository.
+Yeah, I'd like to...
+Explore it and maybe play with Copilot or maybe Cursor.
+Yeah, to see what we can do with such huge repository. Because yeah, it's really huge. Nice talent.
+Of tests.
+That can be.
+Really huge task, even for EI.
+
+Saeyed Shamlou   18:52
+Yuri, I missed part of your conversation. Can you elaborate what these automated tests are? What's the context? I apologize, I missed some of that context.
+
+Jurijs Markelovs   19:05
+I'm going to try to, let's pretend I end this to the question. So we have 9,000 tests, right, which are in the front end, Springly front end repository, which are part of the CICD pipeline, some of them for even for the production as a smoke test, but mainly they have been executed every single time.
+any merge request or the PR, every commit I believe could be wrong or at least on a PR request, right? Merge request and there are 9000 tests and they are in our spec format or framework, test framework, some of them API level, some of them
+are front end, copy bar related. Some of them are unit tests, some of them integration tests. So the task here is, so the problem is these tests are very, very long to execute. We are executing them in, I believe, like 30 or so parallel threads.
+They are flaky somehow. So we, the task is trying to identify the duplicate tests, right? Number one, #2, the tests were they're no longer applicable.
+
+Saeyed Shamlou   20:18
+Mm-hmm.
+
+Jurijs Markelovs   20:24
+Because.
+Our application has changed for over years, obviously, right? But these tests remain there. Even they are passing, it doesn't mean the fact what they are up to the date tests, right? So we have, that's basically the problem, the solution.
+
+Saeyed Shamlou   20:44
+Mm.
+
+Jurijs Markelovs   20:45
+What I'm trying to come up with is alternative end-to-end test framework, which will be like a fallback in case of some of these tests failing, right? We'll be able to execute these tests. But the goal, ultimate goal at some point, to migrate all these tests to different automation framework, right?
+
+Saeyed Shamlou   21:07
+Yeah.
+
+Jurijs Markelovs   21:08
+Um...
+Yeah, that's basically high level. That's what.
+
+Saeyed Shamlou   21:11
+Okay, so these tests are related to a particular workflow, origination Servicing, or its across different different lanes.
+
+Jurijs Markelovs   21:23
+It's across different lanes, originations, front end, acquisitions, somehow pub web as well, a couple of the lanes are involved.
+Um...
+In this pipeline.
+
+Saeyed Shamlou   21:43
+So these are things that we can migrate to Mabel. If, unless there is a limitation that we can move them, I think we have the capability, we have the skill set, the support, and the AI connectivity.
+with the MCP to quickly migrate them. We migrated quite a bit from TestComplete. So should we have a separate call to see how we can help you with this migration?
+
+Jurijs Markelovs   22:19
+Well, we can, but there is a parallel parallel effort when I'm really working on the is the is migrating them. Let's put it this way: there are a couple of the step couple of stages, right? One of the stage is just to try to...
+Not over, not to over, not to migrate a test with a redundant, right? So, because we don't want to do something that doesn't make any sense, and we are waiting for 3.1 Ruby upgrade to have to be deployed to the production, or at least to the test environments, and once it's completely validated.
+
+Saeyed Shamlou   22:44
+Mhm.
+
+Jurijs Markelovs   22:59
+We have Summit called Hotel, which is some kind of a service, a dashboard, whatever you call it. I'm not really familiar. It should be able to tell us, all right, let's run, let's just compare, let's run these tests and see if they are still applicable. And once that run will happen, that analysis will happen, it'll tell us like.
+50 whatever percent of these tests are no longer applicable. This will, and this will become redundant if we're going to start something. So I'm like slowly, like slightly touching the surface of what's happening right now in migrating these tests into the playwright moment.
+
+Saeyed Shamlou   23:24
+Mhm, Okay.
+Okay, so yeah, I don't want to hijack this call, but let's stay in touch so that if we can migrate the ones that are not duplicated, there's an opportunity to migrate to Mabel. We can do that. We have the AI workflows to even take that further. So let's stay in touch. That was great information. Thank you.
+
+Jurijs Markelovs   23:41
+Yeah.
+Sure.
+
+Eugene Semenyuk   24:02
+Yeah.
+This is a really interesting topic, Saeyed, and probably we can...
+Demo somehow, like the process, how we can migrate like existing tests to to Mable, so I think this should be really valuable.
+
+Saeyed Shamlou   24:17
+Yep.
+Yeah.
+For sure, for sure. We can look into that, yeah.
+
+Eugene Semenyuk   24:28
+Mhm.
+
+Jurijs Markelovs   24:29
+I think alternatives, not a solution, but alternative approach is let's try to create, I don't know, some kind of solution, the modular solution where regardless of what type of the framework we're going to migrate from and to, we should be able to reuse that solution because it's going to be very common case.
+
+Eugene Semenyuk   24:34
+I.
+
+Jurijs Markelovs   24:50
+once the newest frameworks will be on boarded, for example, right? Or are we going to migrate from, I don't know, whatever, Cypress test. They are Cypress test, they are Playwright test, they are Mabel test, they are some other test cafe frameworks, right? Tests written that way. Let's try and identify maybe a modular solution.
+to support migrate from one to another, right? So it would just be like, all right, this is a test framework, the original test framework, and this is what we are shooting for. And let's maybe just come up with something will be somehow universal for any migrations, right?
+
+Eugene Semenyuk   25:15
+Mhm.
+
+Saeyed Shamlou   25:15
+Okay.
+Mm.
+
+Eugene Semenyuk   25:29
+Mm-hmm.
+Yeah, I see it as a maybe agent or couple of agent for different tasks and for different skills for.
+different technologies, like one skill to migrate to Mable, one thing to migrate to this technology, yeah, and so on. And in this case, yeah, it can be scalable, reusable. So yeah, you just need to use.
+Call, call, call the right skill.
+Yeah.
+Yeah, but I really like to see, like, some some some migration from, like, some some legacy test automation framework to Mable using the AI.
+I think this is, this should be really interesting for other guys, yeah, and probably.
+Yes, some guys who have a legacy test automation framework, so yeah, they will they will decide to move to Mabel. Yeah, because they will see how easy we can migrate legacy tasks to Mabel.
+
+Saeyed Shamlou   26:46
+Yeah, that would be a very, very good candidate. And we're going to look into that. Yeah.
+
+Eugene Semenyuk   26:52
+Mm-hmm.
+Yeah, yeah, let's stay in touch.
+Okay, so thank you, thank thank you guys. Any any other?
+Experiments, ideas, questions.
+So, we have two minutes left.
+Do you have something interesting to demo on Wednesday?
+So, yeah, I have I have one small or maybe not small topic, so yeah, I'd like to to demonstrate like how to use how to use Playwright MCP for for QE tasks.
+
+Jurijs Markelovs   27:40
+Sorry, could you repeat, agent? Use what?
+
+Eugene Semenyuk   27:43
+Player at MCP.
+
+Jurijs Markelovs   27:45
+Okay.
+
+Eugene Semenyuk   27:46
+Yeah, like, and uh, like, how to use it, like, what what agents, what skills we can utilize for for these, yeah, and so on.
+Sorry, but if you if you have something to demo.
+
+Dhanalakshmi Chinnasamy   28:01
+Then.
+
+Eugene Semenyuk   28:04
+Oh, yeah, yeah, Dana.
+
+Dhanalakshmi Chinnasamy   28:04
+I will go to MCP disk creation data requirements and do that.
+
+Eugene Semenyuk   28:11
+So, would you like to demo it on Wednesday?
+
+Dhanalakshmi Chinnasamy   28:15
+Ministry.
+
+Eugene Semenyuk   28:18
+Okay, sure. I'll add you in the agenda. So yeah, you will go first. Yeah, and I'll finish with Playwright MCP.
+Up to you.
+Okay.
+Any other ideas, thoughts?
+For the clothes.
+One, two, three. Okay, let's pause here for today. So yeah, have, yeah, thank you for active participation, for your ideas, experiments. So yeah, have a great rest of the day and see you today or maybe tomorrow.
+
+Saeyed Shamlou   29:04
+Thanks.
+
+Eugene Semenyuk   29:04
+Bye.
+
+ stopped transcription

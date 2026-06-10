@@ -1,0 +1,755 @@
+AI Enablement QA Lighthouse Session-20260422_140012UTC-Meeting Recording
+April 22, 2026, 2:00PM
+49m 43s
+
+Oleg Kharlamov   0:12
+Hey, guys.
+
+Eugene Semenyuk   0:13
+Hello!
+
+Oleg Kharlamov   0:15
+Hey, Eugene, I have a couple meetings at the same time going on and I am, I know I like, you know, I'm trying to watch that stuff like after.
+
+Eugene Semenyuk   0:26
+A hair.
+
+Oleg Kharlamov   0:28
+It just, I cannot ignore, I tried to talk to guys and just come back to this meeting, but it just like apologize. I don't want you to think I'm ignoring you or something. You know what I mean? So it just a lot of work going on and stuff, you know, so.
+
+Eugene Semenyuk   0:32
+I.
+Mmh.
+No.
+Mhm.
+
+Oleg Kharlamov   0:48
+Yeah, so unfortunately.
+
+Eugene Semenyuk   0:51
+Yeah.
+
+Oleg Kharlamov   0:52
+But definitely I will rewatch it if I cannot join you guys. So just let you know.
+
+Eugene Semenyuk   0:54
+Yeah.
+Okay, yeah, thanks a lot for for updates.
+
+Jurijs Markelovs   0:59
+Smith.
+
+Oleg Kharlamov   1:01
+Yeah, so.
+
+Eugene Semenyuk   1:04
+Mhm.
+Mm-hmm.
+So, yeah, could you please repeat? So, I mean, your availability for today's session. So, when it will be more convenient for you? Yeah, yeah.
+
+Iryna Pashko   1:26
+No.
+
+Jurijs Markelovs   1:32
+Are you talking to me right now?
+I will be, I'll join. I mean, I believe we have like up to five demos scheduled for today, and if I could be, if I can be the last, no, all right, if I could be the last one on the list, that's all it matters. I'll be able to join.
+
+Eugene Semenyuk   1:47
+No, no, no, not fine.
+Yeah.
+Okay, so yeah.
+Yeah, that's friendly speaking, it was it was my plan.
+
+Svetlana Stogni   1:56
+No problem, Jurijs.
+It works well. If it works well for you, you can start, you can like show what you have in the beginning and then switch and watch the rest of the recording. Just propose this thing now. It's up to you.
+
+Eugene Semenyuk   2:13
+Yeah, it's up to you.
+
+Jurijs Markelovs   2:15
+I'll join later.
+
+Eugene Semenyuk   2:17
+Okay.
+
+Svetlana Stogni   2:17
+Okay, we will be waiting for you, by the way.
+
+Jurijs Markelovs   2:18
+Yeah.
+
+Eugene Semenyuk   2:20
+Yeah.
+So, hi, everyone, and the...
+Yeah, welcome. Welcome to our today's Lighthouse session, and thank you for finding time to join us today. So, today we have at least two demos in our lineup. So, yeah, if you have something to demonstrate, hello.
+Yeah, if you have something to demonstrate. So yeah, feel free to just say that, hey, I have something and I'm going to demonstrate this and this and this. Yeah, but yeah, today we have two demos. The first demo will be about our robot agent for
+JIRA item analysis. So yeah, this demo will be conducted by Dana. Yeah, and the second demo will be by Jurijs. So he will present us his workflow, beautiful workflows and some improvements in this workflow.
+So, yeah, our goal as usual, as always, is simple. So we share what we're building, learn from each other, identify scalable patterns and the things that we can reuse. Yeah, and as usual, and always accelerate adoption through
+some real examples that we demonstrate on these sessions. So yeah, feel free to ask questions during the demos, or yeah, you can note them down for discussion afterward. So yeah, and yeah, more interactive we are, so we, the more available this session becomes for everyone.
+So, yeah.
+
+Svetlana Stogni   4:14
+Yeah, our goal is simple but still very important.
+
+Eugene Semenyuk   4:18
+Yeah, yeah.
+Yeah, I agree with you, Svetlana. So, yeah, I think we can start with the first demo. So, Dana.
+Would you?
+Would you like to demonstrate your agent that we just moved to production?
+
+Dhanalakshmi Chinnasamy   4:38
+Yes, Eugene, I'm sharing my screen.
+
+Eugene Semenyuk   4:41
+Mhm.
+
+Dhanalakshmi Chinnasamy   4:48
+Can you all see my screen?
+
+Eugene Semenyuk   4:51
+Yep.
+
+Dhanalakshmi Chinnasamy   4:53
+Okay, so this Jira Story Analyzer Pro, we have already completed this useless and did a demo, but I have made a few changes and I'm just showing what I did. So this is
+Users to just identify the blockers and analyze the user story. But I have combined with the static context builder, which we have created as a separate Robo agent. Now I just matched these two and made, you know, one Robo agent to make it more easy.
+So, what this?
+Agent is the first thing.
+When we start this through agent first, it will start on before analyze the story, it will check the project knowledge back for this story. If there is already, if it already exists and if you know the URL, then you can just provide with the prompt, analyze the user story and you can provide the compliance page.
+URL, then it will start to analyze the story.
+So, in case if there is no project knowledge point found, and if you are not providing any URL, then it will extract all the content from Confluence, so it will search all the Confluence and existing use Jira user story to analyze the.
+Current user story, it will fetch all the information, then it will.
+create a knowledge pack, but before saving it to the Confluence page, it will ask you the option. Do you want to save this knowledge pack in the Confluence or just do you want to use this knowledge pack to analyze the user story? It will give you an option, yes or no, then it will
+analyze the user story. And there is another option as well. In case if there are existing knowledge pack or relevant knowledge pack found, then it will display the existing relevant knowledge pack and also give you an option. Option A, option B, option C. The option is
+whether you want to select the existing knowledge pack, or option B is if you are not, you know, it's not relevant, if you feel it's not relevant, and if you want to create a new knowledge pack, or you want to provide a, you know, a custom knowledge pack URL, it will get you an option.
+Then it will proceed.
+So that is the change I made it with the Jira Studio analyzer to make it more convenient. So we don't have to use a multiple mobile agents. First, we have to use a static context builder in case if there is no knowledge. Then we have to use an analyzer. But now I just managed these two.
+to make it more easy.
+On this content, we always, you know, can change depending on the requirements. This is a compliance page. The project, in case there is no project knowledge back, what are the information can be stored in the compliance? This can be scalable.
+So, I just want to show you.
+So, the first, the prompt, if you see, you can just analyze the user story with full context discovery, then it will just search. This is a new project and it doesn't have any project knowledge pack or any information, so it will just analyze and it will read all the confluence.
+Details related to this project.
+Okay.
+But...
+OK, so this will help us to, you know, analyze the user story without any explicit assumptions, so this...
+If there is no project knowledge back found, so it context related all context discovered from confluence for this user story.
+OK, so now I just, with the context, I just asked you to analyze the user story. This is a...
+And we can add it in the comment, or if you just want to.
+Create a new knowledge pack and analyze.
+Go to.
+Okay. So there is no existing knowledge pack found. If there is any existing package found, then it will give you an option. Option A, option B, option C, but there is no existing because it's a new project. Today morning only bought it from Jyothi. So now it's creating a new knowledge pack. But before to save it to the confluence, it always asks the
+the user options. Yes, create confidence page and save content. No, use this knowledge back for analysis without saving. So if I provide no, then it will just.
+analyze the user story. If yes means, it will just say the conference speech and we'll start to analyze the story. So we can use that knowledge back for another user story analysis.
+So this is.
+It's all unless all the user story at the end, we can add a comment. And the third option is analyze the user story using the knowledge pack. So now if you have already no URL, then you can provide an URL. So no project knowledge pack URL was provided by the user.
+So, so it's discovering, but if you have a compliance URL, just you can paste it here, then it will analyze the user story based on that.
+So that's the enhancement I made for that existing use case.
+Any questions?
+
+Eugene Semenyuk   11:59
+And yeah, what if we have some like questions and comments?
+So, we'll analyze them.
+
+Dhanalakshmi Chinnasamy   12:10
+Yes, I had.
+
+Eugene Semenyuk   12:10
+I remember some of some of your agents.
+
+Dhanalakshmi Chinnasamy   12:13
+Yeah, yeah, I have only the enhancement that I made for the existing one is adding that project context knowledge pack. I just combined with the analyzer, but whatever the existing use case, I showed the same thing it will do. It won't, it will take the, it won't take the content from the deleted comments.
+
+Eugene Semenyuk   12:23
+Uh-huh.
+Uh-huh.
+Uh-huh.
+
+Dhanalakshmi Chinnasamy   12:34
+that I have added in the prompt. And also, if you add anything in the comment, it will take it to the designer for the next row.
+
+Eugene Semenyuk   12:42
+Mhm.
+Yeah, sounds good and impressive. So could you please share the link to this agent to our chat? So yeah, I'd like to highlight that this agent is available in Jira production. So yeah, you can try to play with it.
+
+Dhanalakshmi Chinnasamy   12:44
+It.
+Is it?
+Mm-hmm.
+
+Eugene Semenyuk   13:05
+And yeah, I think it should be really valuable and help you guys in doing some testability analysis and yeah, especially during or before refinement sessions. Yeah, once you receive like some new user story and check their testability.
+And other things that Donna demonstrated today, so I think this is cases.
+
+Dhanalakshmi Chinnasamy   13:30
+Yeah.
+
+Eugene Semenyuk   13:33
+Yeah, in in in good shape and can be can be scalable across different teams, so yeah, guys feel free to to try.
+
+Dhanalakshmi Chinnasamy   13:35
+SN.
+
+Eugene Semenyuk   13:43
+Yeah, and provide us your feedback.
+
+Dhanalakshmi Chinnasamy   13:45
+Behind.
+
+Eugene Semenyuk   13:50
+Awesome. Any any questions?
+Ideas.
+About this use case.
+
+Svetlana Stogni   14:03
+I have an idea I wanted to discuss, not about this particular use cases, use case, but the overall idea, how we can share all the use cases implemented by other team members, by other deadlines, by other tracks, for example, digital.
+
+Dhanalakshmi Chinnasamy   14:06
+No, it is.
+
+Eugene Semenyuk   14:17
+Yeah.
+
+Svetlana Stogni   14:24
+engineering QA like to make 100% reusability because after phase one we have more than 60 use cases implemented and probably some of them might be reusable.
+for your particular needs, right? And we can think about creating some of the agents that would search and look for exact use case if it is already exist. If it is, like make some customization and use it.
+and to speed up this process. Just an idea. This is what we discussed on one of these sessions with AI leaders and AI mentors, actually. But I think it might be interesting for you as well as a group.
+As an idea to think about it and to experiment.
+
+Eugene Semenyuk   15:25
+Yeah, and speaking about the ready to use use cases, so we can we can add them to our one pager. So, yeah, as you remember, we have one pager when we stored all the all the artifacts that we created in phase one, like all reusable agents, like test analysis, test design.
+
+Svetlana Stogni   15:35
+Yes.
+
+Eugene Semenyuk   15:44
+test result reports. So yeah, I'll share it in our chat.
+Again, so yes, and I think this is a good place to increase.
+
+Svetlana Stogni   16:00
+Visit.
+
+Eugene Semenyuk   16:00
+Such amount of, yeah, use cases, and yeah, to improve visibility.
+
+Svetlana Stogni   16:03
+Yeah.
+
+Eugene Semenyuk   16:06
+Yeah, and definitely can be shared across multiple groups, like, I mean, across different tracks, so yeah, and they can see what what can be reused.
+And so on and so forth, so yeah, good, good idea, so yeah, we definitely will add all these agent created by Donna that we.
+That we just seen, and yeah.
+Any other questions? We have one more demo before Jurijs demo.
+Yeah, we have one more candidate.
+So any questions about these?
+Jurijs readiness use case.
+One, two, three. Okay, we have one more demo that will be conducted by Bandana. So, Bandana, would you like to demonstrate something for us?
+
+Bandana Sriramka   17:15
+Yeah, I'll share my screen.
+
+Eugene Semenyuk   17:19
+Mhm, mhm.
+
+Bandana Sriramka   17:21
+Okay.
+So...
+I have created one similar agent, test summary report for ORS team. There, we had to pull up the stories that goes by the fixed version, like in here, as you can see. But in this test summary report, I'm creating for UAT team.
+Here, we don't have to get the stories right away with the fixed version, and it's not easy to report like that. So what we have in this, the requirement is to get the linked worked items, which is tested by the UAT members. So we have to display this.
+stories in the report. And these stories, if I open it here, this doesn't go by fixed version and they go by sprints, as you can see. So this was a little challenging because the report has to display this particular information goes by sprint.
+but that traceability should have.
+the main story, not the linked story, not the QE task, instead the lane task, lane stories. So what I did is I have created a filter which will pull up all the linked work data which is tested by and
+It will display in the report by sprints rather than fixed versions. So I'll show you here quickly the agent in the top if you go.
+There are a lot of information which is really complex, so I will not go over that, all the JQLs and information. I'll go down about the reporting stuff.
+If you come here, you will have to specify that each row will have one story only. It cannot merge. If there is a bug, it should be only on one row. Not merge across rows, do not leave any cell empty. And also this
+Information is really important because sometimes agents tend to skip the steps or skip the stories in the reporting if it doesn't find an information. If the one of the information is missing, so it is really important to display it with some values as to be decided or something.
+So it doesn't miss that value in the reporting. So all that being added here, how the, what is the requirement traceability, how it's going to display, what's the objective we have to display, from where we have to get the areas covered, what will the approach. So all of that information has been added.
+And I'll show you, I'll test this agent and I'll quickly show you. So I have created 3 conversations here. Let's go for the sprint one because I'm training in the training session and
+So, as you can see...
+This is the top which was as required by the UIT team. This top section is important, so it has to display, so which is displaying in our report and...
+It has created a report for us in one click.
+instead of manually creating all the tasks one by one.
+As you can also see, now it is giving us a link also to publish it in whichever space we want. So we can always go ahead and publish it in our spaces.
+Also, it will give us a total of how many tasks, how many bugs were there.
+So I'll go ahead and publish it.
+There's the link.
+So it will not display the QV task. Instead, it will get the parent task for which the linked item was tested for. And it will pull up all the areas covered, what was the approach, who was the tester for that particular linked task, like that.
+Any questions?
+
+Ashwin Jain   21:55
+Uh, I have one, but then I like for requirement traceability, if if a test case covers multiple requirements, right, will it capture multiple of them?
+
+Bandana Sriramka   21:57
+Mhm.
+Mhm.
+No, I have not configured it to capture multiple, but it can be added.
+
+Ashwin Jain   22:12
+Yeah, because usually one test scenario might cover like 2-3 requirements, right, sometimes.
+
+Bandana Sriramka   22:18
+Yes, yes, but in this particular requirement, in this particular use case, that was not a requirement, so I have not added, but I believe we can update our prompt to add those.
+
+Ashwin Jain   22:30
+Sounds good. Thanks.
+
+Bandana Sriramka   22:35
+Okay, that's all from my end.
+
+Eugene Semenyuk   22:41
+Yeah, thanks a lot for a great TEM.
+So yeah, I believe we will move this test summary reports agents to production, as well as other agents. Yeah, really soon. So yeah, stay tuned. Thanks a lot, Bandana. Any other questions?
+Uh, if not, uh, yours, I always play with us.
+Two.
+Maybe not.
+Hmm.
+Do you know the song?
+
+Nicholas Crowley   23:34
+Hopping in, see if we can rejoin.
+
+Eugene Semenyuk   23:37
+Yeah, it will be, yeah, maybe, yeah, he's on another call, yeah, as I mentioned.
+Google.
+
+Jurijs Markelovs   23:58
+Yes, I'm here. I should be able to quickly.
+
+Eugene Semenyuk   23:59
+Yeah.
+
+Jurijs Markelovs   24:03
+Demo, it's my turn.
+
+Eugene Semenyuk   24:05
+Yeah.
+
+Nicholas Crowley   24:06
+Thanks, Bruce. Appreciate it.
+
+Eugene Semenyuk   24:07
+Okay.
+Awesome!
+
+Jurijs Markelovs   24:10
+All right.
+In just a second.
+
+Eugene Semenyuk   24:13
+Yeah.
+Yes.
+
+Jurijs Markelovs   24:17
+All right, about to start sharing. And the task, when I'm about to demo, was already demoed once or so. I will try to reiterate. All right, so here is, the task is pretty simple or pretty known.
+
+Eugene Semenyuk   24:19
+No.
+And.
+Yeah.
+
+Jurijs Markelovs   24:36
+For the QA flow, right here is a Jira ticket would get into the testing phase and it was assigned certain tag and certain activity need to happen, right? In my case, the task was all right, so we got a we got a ticket is ready. The next step is we need to create.
+
+Eugene Semenyuk   24:43
+You.
+Yeah.
+
+Jurijs Markelovs   24:57
+try to create playwright tests based on already written tests in the test framework, extracted from either acceptance criteria or preferably acceptance criteria or from the requirements, right? So
+
+Eugene Semenyuk   25:02
+Okay.
+
+Jurijs Markelovs   25:18
+I have few versions of this here as I'm testing the few steps, you know, a few few things what it worth it's worth mentioning here. What I'm working on right now here is the the scenario when there is more than one ticket, more than one ticket, what is created.
+
+Eugene Semenyuk   25:22
+Show, play.
+Okay.
+How much?
+
+Jurijs Markelovs   25:37
+and ready for for these action to be executed against. So, that's one thing what I'm working on. Second thing I'm working on is the more explicit tests related to the related to the actual Jira ticket and more exposure to the.
+
+Eugene Semenyuk   25:37
+Proof.
+What?
+Good morning.
+
+Jurijs Markelovs   25:57
+to the existing test cases. So making sure they are as per expectation. This is like a feature work. But what I can demo right now, for example, probably this guy here.
+Mm.
+So, hopefully you guys can see.
+
+Eugene Semenyuk   26:18
+Huh?
+
+Jurijs Markelovs   26:18
+And...
+All right.
+So we have a, I have a series of assistants, right? Which each one of them do its own specific task. Assistant one, for example, and lessons to be learned.
+get back. Instead of using the virtual assistants, I start using the actual assistants because they are easier to test, right? If you give them one task at a time, so one assistant and one task at a time, it's a lot easier to debug and see what's actually happening. So once you test a system, you can move on to the next.
+next step. That's what my suggestion is. So basically I can go to the actual assistant, number one, and what it does really, it just try to execute this JQL query against a certain project, right? And it fetches the items, the objects where are in testing phase and it contains certain labels.
+Right? Once it happens, it could be one object or could be a series of objects. It's trying to parse.
+the object into this shape, right, which contains certain attributes which will be used later on in the process. This is a system number one. Oh my goodness, all right. So
+Has the output schema?
+which I just demoed a second ago, which will be used in the second assistant. If I click here, I get to the, I get to assistant #2. What it's trying to do, what it's trying to do is trying to properly parse the JSON from the first assistant.
+Now, by my experience, this was a lot of a troubled area because of some of the some of the characters role characters from the role JSON were given troubles to parse the JSON, so this is additional assistant which does try to.
+It's trying to...
+It's trying to, trying to parse.
+in trying to exclude certain characters. So from JSON to be parsed. So that's, it was creating some errors in parsing. The next step here is, as we can see,
+It's if condition. What this really is here is the fact if the branch already created for whatever reasons were from the previous run or for the manual interaction with the application with the with the with the with the branch if branch is already created.
+Or it already exists.
+We are ending the process. Vice versa, we go into the assistant #3. And assistant #3 is not doing nothing but...
+And.
+Is nothing but trying to trying to learn, well, it gets the JSON from the previous system, right? And it's trying to learn existing framework structure based on the main.
+French.
+Right, so there are a series of actions and requirements here, and it's trying to generate the actual tests.
+by, like I said, it's learning existing test cases if they are making sure there are no duplication and it's outputting the another JSON in this format where the test cases are already there, right?
+And the next, I think the last, not the last, and then the system #4.
+It's actually right in test, it's nothing, nothing that not fancy, but it's actually right in the test when we were generated by the previous assistant. And the reason I broke it down in the chunks is the fact that these assistants can be reused in another workflows.
+Right. And #5.
+Once the tests are added to the branch, the branch created, the branch contains the test case coverage. It's nothing but summarizing the workflow.
+summarizing the workflow and the notifier to the JIRA in this case.
+Now, we try to notify in the JIRA ticket corresponding JIRA ticket when the PR is created, and it contains certain tests.
+For the benefit of this demo, I'm not going to be executing and I can show the previous execution.
+Ohh.
+Like I said, it contains summaries and we can look at the last results.
+Cleaner format, it just breaks down.
+where everything would happen. It found an issue, but meets the criteria.
+second assistant parsed, first one parsed, right? Yeah, no, sorry, sorry, the second one parsed, and so on, what I just explained. Result can be seen here. This is the branch or the project where the playwright test contained.
+Created the branch, and we can quickly look.
+Oh.
+with these branches not empty, it contains certain tests and stuff. So like I said, a couple areas of improvements is making sure the tests are more applicable, more to the subject, more explicit to the acceptance criteria.
+and doing a better job on covering what's actually need to be covered. And covering tests, covering scenarios where more than one Jira ticket is added to the flow, to the column and contains certain label.
+Another thing what I have tried is the, I have tried for suggestion.
+that I have tried integrating the scheduler, right? What this is really is, it's running that.
+So what it does, it grabs the, it creates the crown job. In this case, every 40 minutes, this job will be executed. And against this resource, you select the resource type, and this is a workflow, and this is the ID of that resource, which was generating
+as a test was generated every 40 minutes or every hour, the branch, if the new tests, the new jury tickets were added. Basically, that's what I've been working on. Any questions?
+
+Eugene Semenyuk   34:06
+Yeah, have you tested this current job? So, is it working right now? Yeah, awesome.
+
+Jurijs Markelovs   34:10
+Yes, it is.
+I can do do do do do. I think it was working against.
+Against this guy here, none of, yeah, as you see, there were quite a few executions, right?
+
+Eugene Semenyuk   34:29
+Mhm.
+
+Jurijs Markelovs   34:29
+And.
+Somehow, yeah, but yes, I think this was against this particular.
+
+Eugene Semenyuk   34:39
+Mm-hmm.
+
+Jurijs Markelovs   34:39
+I can look once again, but yes, the schedule was working. Yeah, just to keep in mind to turn it off, disable it once your test is done.
+
+Eugene Semenyuk   34:53
+Yeah, looks looks impressive. Yeah, and.
+
+Jurijs Markelovs   34:55
+Yeah, the only problem what I have is another problem, but is the ability to store your workflows like in the development, like gradual like versioning or something like we do in a Git in a GitHub. So what I did.
+
+Eugene Semenyuk   35:11
+Mhm, mhm.
+
+Jurijs Markelovs   35:14
+I just create, I'm just creating separate versions, so it, you know, makes me not to lose if something goes wrong in the new version, it makes me, you know, backup, creates a backup for me to work against in the next interaction.
+
+Eugene Semenyuk   35:32
+Uh-huh.
+Yes, I remember our our guys.
+They try to version to version their agents and YAML files for workflows in some GitHub repositories.
+
+Jurijs Markelovs   35:52
+Okay.
+
+Eugene Semenyuk   35:52
+So yeah, and maybe this can be solution, like if you change something, so you just update some.
+Markdown or YAML file in some repository.
+Oh, here I can see some history.
+
+Jurijs Markelovs   36:07
+Yeah.
+Yeah, but it's not very described, you know, it's not really explicitly saying what exactly the version, so it's harder to do, but yes, there is a way to restore backup, yeah, but that's not perfect.
+
+Eugene Semenyuk   36:17
+Mhm.
+Mhm.
+Yeah.
+Yeah.
+The message about the.
+So, yeah, yeah, you can you can use some external gate as a alternative solution, yeah, and here we can mention, like, what what have been changed and...
+somewhat what main idea of this particular workflow and so on. So yeah, but anyway, anyway, sounds.
+
+Jurijs Markelovs   36:50
+Right.
+
+Eugene Semenyuk   36:54
+And looks really good.
+
+Jurijs Markelovs   36:55
+Yeah, so one slight suggestion I might have, if it's possible on your end, right, Eugene and your team, to be able maybe create a folder structure, if it's possible, meaning, all right, we can name the folder like, I don't know, the...
+
+Eugene Semenyuk   36:59
+Mhm.
+Mm.
+
+Jurijs Markelovs   37:14
+For whatever categories we want, like a Jira extraction or Jira parser, and you can click, and all right, and these, this is the folder that contains all flavors of the Jira parsing, and I can just pick each one of them, any one, and like a next step or whatever, if it's possible, that would be very helpful for reusability, because...
+
+Eugene Semenyuk   37:27
+Hai.
+You CA.
+Mm-hmm.
+
+Jurijs Markelovs   37:35
+What it what I meant by reusability factor in my case is, I know, you know, these assistants, you know, I can use them right because I kind of know what they're doing, but if they would contain it, would they would lie each one of them assistants would be on a separate folder in the shared format, would be a lot helpful for somebody just to grab it and be like, "All right."
+
+Eugene Semenyuk   37:45
+Mhm.
+
+Jurijs Markelovs   37:55
+Seems like it's working. All right, let me just grab it and so...
+for usability purpose. I don't know if it's possible, but yeah.
+
+Eugene Semenyuk   37:59
+Mhm.
+Yeah, I...
+Yeah, I see your idea and yeah, probably it can be handled by tax.
+So, yeah, we can, yeah, we can, we can add some text to to agents.
+And, yeah, and handle them using text.
+Let me see.
+
+Jurijs Markelovs   38:23
+Something, yeah, if we can sort and filter them somehow, uh, would be nice. Otherwise, they are...
+You know.
+
+Eugene Semenyuk   38:36
+Yeah, let me see, do we have such featuring economy? Yeah, unfortunately we don't have.
+Our great call me team here, so yeah, probably they will, yeah, they, yeah, they should be able to answer it quicker than I.
+OK, let me open some patron.
+He did.
+Yeah, we have categories. Yeah, and probably, yeah, we have up to three categories.
+Yeah, maybe we can we can use categories.
+And, uh, yeah, try to to think about what what kind of categories we can we can use.
+Because, yeah.
+We we we we don't have we don't have folders.
+Here, unfortunately.
+
+Jurijs Markelovs   39:37
+And how do you categorize them?
+
+Eugene Semenyuk   39:38
+Yeah, but...
+Uh...
+Yeah, that's a good question. So, yeah, we can come up with some categories. You know, for now, we categorize them like by track, like engineering, quality assurance, and so on.
+So yeah, but we can think about some alternatives.
+
+Jurijs Markelovs   40:00
+You mean like a category of the like a project categories, right?
+
+Eugene Semenyuk   40:02
+Yeah, yeah.
+Uhh...
+Yeah, by default, they like distributed by projects, yeah, as you mentioned, yeah, and inside the agent system, yeah, let me quickly demonstrate.
+Lady.
+Here it is, so yeah, we we have categories.
+Yeah, and here we can.
+Like we can use some categories, yeah, and as I believe we can add some some additional categories here.
+Yeah, unfortunately, we don't have like...
+Ohh.
+tags that we can easily create. Yeah, but at least we can use categories and expand list of these categories.
+That will help to reuse these agents.
+Yeah, and then...
+Yeah, we can sort them by category.
+Yeah, for example.
+Yeah.
+Let's select assurance.
+So, yeah, and we we filter them by this category.
+And project.
+If we need, if I don't need projects, so yeah, we can remove this filter.
+Yeah, something like that.
+No.
+Do you like this?
+Yeah, so we can think about such such categorization, like what what text we can use.
+What would the most reusable?
+Categories we will have.
+Yeah, that's a good suggestion. Thank you.
+Yeah.
+Okay, any other questions regarding this or other demos? Any ideas?
+Yep, Ashwin.
+
+Ashwin Jain   42:11
+Yeah, one question: like, when you are running cron job, right? Like, yeah, it's a great workflow you have created, but, like, when you're running cron job, is it just going to JIRA and fetching the stories? That's what the job is doing, or is it executing the test cases? No, at this point, no, there was no...
+
+Eugene Semenyuk   42:11
+Oh.
+Yeah.
+Hey.
+
+Jurijs Markelovs   42:30
+It was not a system was taking care of that piece, but at this point, there are a few ways to do so, right? In one way, there is an iterator feature in the workflow, which is, which can be, I understand, you know, Eugene can help me, right?
+
+Eugene Semenyuk   42:38
+Yeah.
+
+Jurijs Markelovs   42:48
+which can iterate certain piece of your workflow. I didn't use that. What I did is just iterating over entire workflow, right? Because in my case, I had a workflow. You can do the same thing for a system, right, if you want to.
+
+Ashwin Jain   42:59
+MAIN.
+I.
+
+Jurijs Markelovs   43:09
+But the idea here is you can skip certain parts of your workflow in case your condition is not met. So it'd be like, all right, it'll start and it'll just end, start and end.
+
+Ashwin Jain   43:22
+I mean, yeah, you can just create separate workflow to execute, right, like test cases, yeah, and...
+
+Jurijs Markelovs   43:27
+Okay.
+Yeah, yeah, particularly that is not in the scope yet.
+
+Ashwin Jain   43:31
+Yeah, and other thing is during this process, I think one piece is missing is you are not creating test cases, like in some kind of test case management tool, like put a x-ray where you are dumping all your test cases that are being created.
+
+Jurijs Markelovs   43:33
+Yep.
+Yeah.
+
+Ashwin Jain   43:47
+So that.
+
+Jurijs Markelovs   43:47
+Yeah, this one.
+Yeah, so that you can track like what is being created, what is being created by the playwright, and everything is in sync. Great idea, Ashwin. I'm looking forward to see your piece of missing piece of the puzzle, and that would be like a see, and these kind of these kind of conversations are very helpful, right? For example, Ashwin has an idea, right, of you know, integrating X-ray piece.
+
+Ashwin Jain   43:58
+Yeah.
+Yeah, I'm in...
+
+Jurijs Markelovs   44:12
+And if we would have like a X-ray piece already by developed by someone, I could be like, just like, boom, encoded as a separate assistant and we're done, right? But we don't have that approach developed yet. So, but yeah.
+
+Eugene Semenyuk   44:21
+Uh-huh.
+
+Ashwin Jain   44:28
+Yeah, I mean, like, because the thing is, it is referring user stories and creating tasks directly in playwright, so you don't know what is happening unless you go deep in code and see like what it actually is doing right. If you create mapping or like some X-ray visible test management tool, you know, like these are the test cases, this is what the tool is doing. I think I created some X-ray integration.
+I have to get my client credentials, I got it. So I'll probably create an assistant which does that, like take a user story and generate a test cases. Yeah, then probably we can integrate it. So that will be like complete end to end, everything is built.
+
+Eugene Semenyuk   45:03
+Mm-hmm.
+
+Jurijs Markelovs   45:05
+Yep, priceless conversation, Ashwin. If you can send me the system which we have, I'll try to include it.
+
+Ashwin Jain   45:07
+Yeah.
+No, what you've developed is the main thing that's the important, like it does automation automatically. That's the important piece. There's one missing piece which I saw, so that's why I was suggesting it.
+
+Eugene Semenyuk   45:22
+Yeah, friendly speaking, this is...
+
+Ashwin Jain   45:22
+But then it's good.
+
+Eugene Semenyuk   45:24
+Yeah, this is a great benefit of this like workflow approach, 'cause yeah, we have some modules and we can, yeah, we can we can we can expand existing workflow with additional models, yeah, like like you mentioned, so we can add some some more models like...
+to do some kind of risk-based analysis, to update existing tasks based on some changes. So yeah, and it can be one big, huge workflow that consists of different modules.
+
+Ashwin Jain   46:01
+Right.
+
+Eugene Semenyuk   46:01
+So, yeah, but, but yeah, at least this place is that looks looks really good.
+
+Ashwin Jain   46:09
+And one last question, sorry. When you are creating all this workflow, right, is it executing test case as well? Like, is it running the scripts which has been created, or is it just creating the test scripts?
+
+Eugene Semenyuk   46:10
+Okay, guys, yeah, yeah.
+
+Jurijs Markelovs   46:23
+At this point, the task was just to create it. It's more like a placeholder at these point tests, meaning all right, they might require some interaction, you know, by the actual developer or QA, right? It's more like a, all right, here's an acceptance criteria and try to identify the tests.
+reusable methods or classes what could be implemented, but if there are no reusability, no reusable methods found or functions found, it just creates A placeholder.
+Right then, that later on.
+
+Ashwin Jain   47:01
+No, no, sorry. My question is like, when you are creating this flow, right, it is playwright scripts are being generated. Are these scripts running somewhere or is just generating code?
+
+Jurijs Markelovs   47:12
+No, just generating the code. Ohh, OK.
+
+Ashwin Jain   47:16
+Yeah, probably, as we suggested, maybe we can create one more flow which execute all the scripts, like, and then we...
+
+Jurijs Markelovs   47:21
+Then we got, we all gonna lose our job then, Ashwin.
+
+Ashwin Jain   47:25
+I mean, with AI, it didn't going to happen, if it is not now or in future, but it's like we are reaching there, so it ultimately will be that, but yeah, but the thing is the other part is like there will be a lot of applications which can be developed, like any ideas or any applications you get.
+
+Jurijs Markelovs   47:27
+It was done intentionally.
+
+Eugene Semenyuk   47:30
+Yeah.
+
+Jurijs Markelovs   47:33
+Right.
+
+Ashwin Jain   47:44
+There are a lot of applications being created. So any idea you get, you can create one more application. It creates a lot of work as well. But ultimately, AI will definitely do does that.
+
+Denis Platonov   47:56
+Yeah, I believe whatever it produces, it's always broken, so you have to actually run it and fix.
+
+Eugene Semenyuk   47:56
+Yeah, and I'm all.
+Mhm.
+Yeah.
+
+Ashwin Jain   48:04
+Yeah.
+
+Eugene Semenyuk   48:05
+Mm-hmm.
+Yeah, and one idea how to run tests so we can you can trigger CI drop on Jenkins or GitHub actions.
+So yeah, and it can run tasks and return some results to your workflow.
+
+Jurijs Markelovs   48:23
+Yeah, once the...
+
+Eugene Semenyuk   48:23
+And then you can even create like feedback and improvement loop. So for example, if test failed on CI, so it can analyze the reason. So is it a defect in product or is it a defect in test automation solution?
+Yeah, and if it's different in task automation solution, you can try to fix it, like fix locator and something like that.
+OK, good, good discussion. So, yeah, let's let's continue this topic on our next Champions meeting, because, yeah, I think I think this is...
+Really interesting and engaging. Yeah, but we are out of time. Okay, thanks a lot, guys, for sharing your brilliant ideas and use cases. And see you, see you tomorrow on our cross-functional PDLC.
+
+Svetlana Stogni   49:14
+Yes.
+
+Eugene Semenyuk   49:26
+workshop session. So have a nice day. See you soon.
+
+Svetlana Stogni   49:30
+The agenda for for tomorrow's session, you can find in our Teams channel. Yeah, thank you.
+
+Saeyed Shamlou   49:37
+Thank you.
+
+Eugene Semenyuk   49:38
+Thank you.
+
+Ashwin Jain   49:40
+Yeah.
+
+Eugene Semenyuk   49:42
+Bye.
+
+Nicholas Crowley stopped transcription

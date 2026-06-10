@@ -1,0 +1,454 @@
+AI Enablement QA Lighthouse Session-20260520_135934UTC-Meeting Recording
+May 20, 2026, 1:59PM
+28m 2s
+
+Filippo Morelli   0:09
+Yeah.
+The.
+
+Eugene Semenyuk   0:59
+Hello.
+Morning.
+
+Filippo Morelli   1:15
+Doctor.
+
+Eugene Semenyuk   1:40
+Yeah, let's wait one or maybe 2 minutes.
+And then it will start.
+Yeah, let's wait one more minute.
+I hope you will join us.
+Okay, I guess we can start. So hi, everyone, and welcome to today's White House session. Thanks for making the time to join us today. So yeah, today we were supposed to have two demos in the lineup, but it looks like there will be only one.
+So yeah, but maybe someone else will still have something to show us. So yeah, as always, the goal of a house session is simple. So share what we are building, learn from each other, identify what's scalable and reusable.
+and it's late adoption sort of through real examples. So yeah, and please feel free to ask questions during the demos or note them down for discussion afterward. So yeah, the more interactive this is, the most valuable, the more valuable it becomes for everyone. So yeah, with that, let's.
+Let's jump into our first demo. So, yeah, Bandana, would you like to...
+If they discuss, describe your use case and demonstrate your great flow.
+
+Bandana Sriramka   4:51
+Yeah, let me share my screen.
+Okay, so as I mentioned on Monday, this was a request from Andy's team. So they are trying to verify whether a story is completely hydrated or not. They need to confirm before they start the testing. So this is the Excel sheet that they have prepared.
+with some Jira keys on it. There are several tabs for the confirmation with all the information in here. So what we have to do is that Excel is attached in that particular Jira story. And I have created a...
+agent that will read the Excel 1st and read the story also and confirm whether the story is hydrated or not. And it will finally give us that the hydration is confirmed.
+So I can walk you through that agent. Also, I have created a flow. I can show you that as in data automation where I am using a manual trigger and also I specified that it has to be a story. The work type has to be a story also.
+I added a condition to make sure that the attachment, the Excel sheet is attached to the story. If this condition is not met, it will not go ahead with the further steps. So once this is verified, it will utilize the robo agent that I have created.
+I have given a basic prompt to output the verdict and all the technical details, whatever is mapping and matching with Excel. Also it will give us like a addition confirmed. And also it will add a comment as usual. So let us try that.
+I'll do a manual trigger for the automation.
+And we can go back or flow.
+Audit log, and we can see it hasn't triggered.
+So, let's give it a second.
+Okay, so we see success.
+Let's go back and refresh our page.
+And...
+You see that it has read the Excel sheet, the attachment, and it has come up with a verdict and says hydration is confirmed. Also, it has specified what all tags were there, all the keywords, so that anyone can easily refer.
+And also, it tells her that the implementation is ready, and the task can be moved to ready for work.
+So.
+Oh.
+This is all I have created. But there is one question I already have, working with Atlassian team on this, that whenever I am using manual trigger here, I am seeing a different output. And when I'm seeing auto trigger, I am seeing the output is a little different. So.
+We are kind of researching that part.
+
+Eugene Semenyuk   8:27
+And then.
+
+Bandana Sriramka   8:30
+Yeah, well.
+
+Eugene Semenyuk   8:31
+That's that's pretty interesting.
+Yeah, look.
+Mhm.
+So, you, you, you're saying that the output differs?
+
+Bandana Sriramka   8:45
+The.
+The.
+Yes, for example, I can show here. So this was the output from manual trigger, sorry, auto trigger. It is not giving us all the details, as you can see here, with all the SQL views and the keywords and everything. But auto trigger, it just reads the story and give us the artifacts like this.
+
+Eugene Semenyuk   8:49
+Mm.
+Mhm.
+Mhm.
+Mmh.
+Mhm.
+
+Saeyed Shamlou   9:14
+Bandana, who from the Atlassian folks is helping you? Is that Ben? Who is helping you? OK.
+
+Bandana Sriramka   9:18
+Word, word, yeah, yeah.
+
+Eugene Semenyuk   9:23
+Mm-hmm.
+
+Saeyed Shamlou   9:23
+Good, thanks.
+
+Eugene Semenyuk   9:28
+And yeah, but by manual trigger, so do you mean manual trigger using a workflow? Yeah.
+
+Bandana Sriramka   9:35
+Mhm.
+Yes, yeah.
+
+Eugene Semenyuk   9:38
+Like this. That's pretty interesting.
+
+Bandana Sriramka   9:39
+Yeah.
+Yeah, yeah.
+
+Eugene Semenyuk   9:44
+Ohh.
+Yeah, and yeah, frankly speaking, yeah, I'm very, yeah, I was very surprised to to know that robot agents can can also read attachments, yeah, and and especially Excel files, yeah, that's.
+
+Bandana Sriramka   9:46
+Think, what?
+Read text.
+Yeah.
+Yeah, if I show you.
+
+Eugene Semenyuk   10:05
+That's awesome.
+
+Bandana Sriramka   10:07
+Um...
+Directly from here, it output comes out really neat.
+So if I directly use this, that read this attachment in the story and confirm the hydration with this basic prompt, it gives a neat output.
+
+Filippo Morelli   10:17
+Hey.
+
+Bandana Sriramka   10:33
+Yeah, so you can see it will give you in table structure everything from the Excel sheet that we have attached.
+
+Eugene Semenyuk   10:41
+Uh-huh.
+Interesting.
+
+Bandana Sriramka   10:46
+Yeah.
+Yeah.
+
+Eugene Semenyuk   10:48
+Yeah, looks good. Yeah, and I really love the automation part, like that you made it.
+autonomous.
+Like to to set some some trigger and uh...
+
+Bandana Sriramka   11:02
+That's all.
+
+Eugene Semenyuk   11:06
+And I run it as a as a dual Automation flow.
+
+Bandana Sriramka   11:14
+Thank you.
+
+Eugene Semenyuk   11:15
+Okay, thank you. So, any any questions regarding this?
+Peaceful.
+Okay, if no questions, we can we can proceed, so yeah.
+Yeah, as I said, we were supposed to have one more demo going up here, but looks like, yeah, we won't have a second demo. So yeah, maybe you have something to share with us.
+So, anyone from from this group?
+So maybe you have some interesting experiments.
+By the way, yeah, I see Denis on the call. Yeah. Hi, hi, Denis. How are you? How is your work on your tool?
+
+Denis Platonov   12:33
+I'm redesigning it a little bit.
+But yeah, hopefully we'll show something in the next week, maybe.
+
+Eugene Semenyuk   12:44
+Yeah, it will be really interesting.
+Because, yeah, now we officially have MCP servers. So, yeah, it should.
+
+Saeyed Shamlou   12:55
+Denis, I'm not sure if everyone is aware what you're working on. Can you provide a brief description so everyone knows the workflow and the objective of that?
+
+Denis Platonov   13:08
+Yeah, I showed a couple of times like the web app, but right now, basically, I'm wrapping up the MCP server for X-Ray. So after that, it will be used by, I mean, pretty much any consumer, I guess, we can.
+can use it. That's like the default. So through the row, we can basically trigger like Mobile test creation or analysis and also X-ray test creation or just pulling some more context or.
+updating anything.
+
+Eugene Semenyuk   13:50
+Mhm.
+
+Saeyed Shamlou   13:52
+OK.
+
+Eugene Semenyuk   13:52
+So, you, you, you, you're wrapping your tool like in MCP server, right?
+
+Divya Ramkumar   13:53
+So, um...
+So, Eugene, we are integrating Robo with Mabel MCP and X-ray MCP. So, his first workflow is through agent, through Robo, will create agents that will read Jira user stories and create tests in X-ray and Mabel.
+
+Eugene Semenyuk   14:02
+Mhm.
+
+Saeyed Shamlou   14:04
+Mhm.
+
+Eugene Semenyuk   14:18
+Yeah, I see. That sounds great.
+
+Denis Platonov   14:20
+Yeah, it's just a different implementation of QA Studio.
+
+Eugene Semenyuk   14:25
+Mhm.
+
+Divya Ramkumar   14:26
+Since we can use Robo, it will be easier for folks to use it instead of a separate tool. Because everyone is in Jira and conference day in and out, so they can just directly use those agents.
+
+Eugene Semenyuk   14:32
+Mhm.
+Mhm.
+Yeah, Carey Studio. I like this name.
+
+Denis Platonov   14:43
+Yeah.
+
+Eugene Semenyuk   14:45
+Yeah, and yeah, as I understand, you, you're creating MCP server that will be able to interact with the...
+with the QA Studio using.
+Yeah, from from Jira, like from Rover. Yeah, Rover can use this MCP server to interact with Maple, X-Ray, yeah, and maybe some other systems, query-related systems.
+
+Saeyed Shamlou   15:15
+So, one of the things, Eugene, that DVS team is focusing on is to integrating or the tooling testing, test tooling landscape, and that's from all sides, you know, from Jira, from Mable side.
+
+Eugene Semenyuk   15:16
+Mhm.
+
+Denis Platonov   15:16
+Yeah.
+
+Eugene Semenyuk   15:30
+Mhm.
+
+Saeyed Shamlou   15:35
+And also we are working on a mocker and also there's a test data portal, synthetic test data portal, and that all come together. So that's something that DDS team heavily is working on. And once it's complete, then we will showcase that to this entire team, the areas that the AI was used.
+
+Eugene Semenyuk   15:53
+Mhm.
+Yeah, that's sounds sounds awesome. Yeah, looking forward to to see it.
+Yeah, and the, yeah, at the same time, so in code me, yeah, in the in the nearest release, we we expect MCP.
+MCP feature enabled. So yeah, in the nearest feature, we can also use MCP service from Code Me. Yeah, and it will open some opportunities for the agents to interact with the X-ray, Mabel, and other systems. Yeah, for example, if you need
+interaction with some source code. So yeah.
+Cold me can can be an option.
+
+Denis Platonov   16:48
+Does it require to be like installed by admin or or it's like kind of baked in?
+
+Eugene Semenyuk   16:48
+In this case, as well.
+So, yeah, they they will be installed by admins, yeah, and they will be available for for for everyone.
+I mean, these seems to be servers.
+
+Denis Platonov   17:09
+Okay, cool.
+
+Eugene Semenyuk   17:15
+Yeah, OK. Yeah, looks like.
+Looks like we have really great potential in our use cases.
+So, yeah, and yeah, for the next late house session, I'm going to prepare some some demo and some assets, so...
+with the playwright MCP. Yeah, and maybe I will connect with...
+Some of you who are already using Playwright.
+Yeah, to work with your repositories, yeah, and yeah, to create some skills, some instructions, and maybe some agents inside your repository.
+Yeah, and uh...
+Try to demo it maybe next next Wednesday.
+Yeah, and uh...
+Yeah, in a while, but we are thinking about our...
+Our like.
+next steps for cross functional sessions. So we're thinking about implementing the use case about troubleshooting and something like talk to your code and the reverse engineering. So yeah, and I'd like to
+Quickly discuss this with you, so...
+How often do you face the situation where you need to?
+get some kind of explanation, like how it works in, yeah, how this feature works in our application and so on and so forth. So.
+Do you face such situations? Do you see some benefits in this use case?
+So, yeah, any any thoughts?
+Or.
+Or, or you understand the everything inside your applications.
+So yeah, my goal start with something simple, like to build some agents that can interact with code base and answer some questions based on this code base.
+like how this feature works.
+and then move it to some kind of troubleshooting.
+For example, like we have...
+Five or...
+Six repetitories for team.
+And yeah, we face some issue, so yeah, we can pass the logs to some agent, and agent can analyze these logs, analyze different repositories, and say something like, yeah, you have you have an issue in this repository.
+In this module, and it affects this, this, and this.
+So, is it?
+Interesting for you.
+Like at least first step.
+Any thoughts, guys? You are so silent.
+Yes, no.
+
+Divya Ramkumar   21:16
+So, Eugene, um, it will analyze the repository and get.
+
+Eugene Semenyuk   21:18
+Mhm.
+
+Divya Ramkumar   21:22
+The.
+
+Eugene Semenyuk   21:22
+Yeah.
+So yeah, we can connect multiple repositories.
+
+Divya Ramkumar   21:25
+Okay.
+
+Eugene Semenyuk   21:28
+To some agents, yeah, and this this agent can analyze.
+Uh, yeah, you, you, you, your request, yeah, for example, you ask something about about some teacher behavior.
+Yeah, how it works currently in our application, and maybe compare it with the...
+Um...
+Some test artifacts.
+
+Divya Ramkumar   21:55
+And where will you build this agent?
+
+Eugene Semenyuk   21:55
+Yeah, for example.
+Yeah, we're thinking about to implement this use case during cross-functional sessions.
+Yeah, and implement.
+
+Divya Ramkumar   22:07
+And using what AI tool using code me or?
+
+Eugene Semenyuk   22:10
+Yeah, for this, for this use case, yeah, probably the best tool would be Codme, because in Codme we can connect multiple repositories to one agent or flow.
+
+Divya Ramkumar   22:26
+Oke.
+
+Eugene Semenyuk   22:27
+So, yeah, and...
+Yeah, but yeah, Cognit can be then can be an an engine for this tool.
+So yeah, but...
+Like the front end of these can be different. Yeah, maybe it can be a robo agent.
+That can, yeah, for example, we can send some requests to Robo Agent, yeah, and yeah, Robo Agent send request to Codme.
+and talk to talk with the repository and then return something to robot agent.
+Legacy, yeah, for some, for some guys, role experience is more, yeah, is more convenient.
+
+Divya Ramkumar   23:20
+Mhm.
+Yeah, that that's the reason we also moved to Robo for the QA Studio, because it's more convenient.
+
+Eugene Semenyuk   23:30
+Yeah, because yeah, it's true or native.
+
+Divya Ramkumar   23:33
+Yeah.
+Oh.
+
+Eugene Semenyuk   23:38
+Yeah, and yeah, the great benefit of Codney that, yeah, it can work as a separate module block or something that we can integrate to some other system.
+Yeah, because...
+Yeah, it provides great opportunities to to make.
+To make things, you know, in an enormous way.
+Yeah, like we did on our cross-functional sessions, yeah, where we had cross-functional requirements review.
+So, yeah, we have, yeah, we have a few agents from Robo and one agent from CodeMe, and we connected them into one Jira flow.
+Yeah, and uh...
+Use some trigger.
+So, yeah, and...
+And for users, so yeah, users don't use any tools. So yeah, they just need to move item to the specific status. Yeah, and then
+Yeah, everything.
+Everything will perform automatically.
+
+Divya Ramkumar   25:01
+Okay.
+
+Eugene Semenyuk   25:07
+Yeah, okay.
+So, yeah, any any other thoughts?
+Ideas, maybe topic to this topics to discuss.
+
+Dhanalakshmi Chinnasamy   25:23
+Is there any update on the code me and extra integration?
+
+Eugene Semenyuk   25:26
+So yeah, we are waiting for...
+
+Dhanalakshmi Chinnasamy   25:30
+Yeah.
+
+Eugene Semenyuk   25:30
+Perfects.
+For this part, so yeah, it looks like X-ray is not is not.
+Mm.
+Yeah, it's not part of hosts that are in whitelist.
+So, yeah, we are waiting for for this fix.
+Yeah, hopefully it will be completed today or this week. Not sure about today.
+
+Dhanalakshmi Chinnasamy   25:59
+Play.
+
+Eugene Semenyuk   26:02
+Yeah.
+
+Dhanalakshmi Chinnasamy   26:04
+And we have requested a document for the Alexander demo, which is connected with GitHub Jira and Conference.
+
+Eugene Semenyuk   26:09
+Yeah.
+Yeah, Oleksandr still working on this part.
+
+Bandana Sriramka   26:18
+Oh, he actually shared it with me yesterday. I'll share it with you, Dana.
+
+Eugene Semenyuk   26:22
+Oh.
+Great.
+
+Bandana Sriramka   26:29
+Also, Eugene, is there any update on the reporter agent for PMT?
+
+Eugene Semenyuk   26:29
+That's OK.
+Yeah, it's still, it's still still in progress.
+
+Bandana Sriramka   26:36
+Yeah, any reason it's taking this long?
+
+Eugene Semenyuk   26:40
+Not sure.
+Sorry, I'll double-check it today.
+
+Bandana Sriramka   26:45
+Okay, then.
+
+Divya Ramkumar   26:45
+So you think who moves it from sandbox or training to cloud?
+
+Eugene Semenyuk   26:52
+Could you please?
+
+Divya Ramkumar   26:53
+Who moves the agents from training to prod?
+
+Eugene Semenyuk   26:58
+So, yeah, previously, yeah, previously it was me, so yeah, but now I don't have this permission, so yeah, it is Jira lesson team.
+
+Divya Ramkumar   27:08
+Okay.
+
+Eugene Semenyuk   27:16
+So, okay, any other questions, ideas?
+
+Filippo Morelli   27:18
+Yeah.
+
+Eugene Semenyuk   27:32
+Yeah.
+Okay, so yeah, if no questions, I think we can close this session a bit earlier for today. So yeah, feel free to reach out to me in case of any questions. Yeah, have a great rest of the day and see you tomorrow.
+On our cross-functional PDLC session.
+See you. Bye.
+
+Saeyed Shamlou   27:58
+Thanks, bye guys.
+
+Gayathri Venkataraman   27:58
+Thank you.
+
+Bandana Sriramka   28:01
+Thank you.
+
+ stopped transcription

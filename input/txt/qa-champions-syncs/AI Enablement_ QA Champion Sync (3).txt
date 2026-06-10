@@ -1,0 +1,456 @@
+AI Enablement QA Champion Sync-20260511_140017UTC-Meeting Recording
+May 11, 2026, 2:00PM
+29m 27s
+
+Eugene Semenyuk   0:34
+Hello, good morning.
+
+Dhanalakshmi Chinnasamy   0:39
+Okay.
+
+Eugene Semenyuk   0:55
+No.
+Let's wait a couple of minutes.
+Two.
+Okay.
+I think.
+Guys.
+Thank you.
+Yeah.
+Yeah.
+To do, yeah, let's, let's, yeah, let's wait for one more minute.
+Right.
+Yeah.
+Start over.
+Discussion.
+Okay.
+Yeah.
+Yeah.
+Okay, I guess we can start. So yeah, probably...
+Yeah, other folks will join us a bit later.
+So, ohh yeah, I see.
+You guys joined us. Okay, hello everyone. Thank you for joining us today in our AI's Champion scene. So yeah, I'm really glad to see you all here. So as usual, this session will be structured in a few parts. So first we'll discuss some news.
+After that, we will go.
+go around the room and discuss what we have, what experiments, yeah, what experiments you had, with what use cases you were exploring and where you might need support.
+Yeah, and finally, we'll wrap up with next steps and alignment and so on and so forth. So yeah, the goal today is not just present, but just.
+collaborate and block each other, discuss updates, yeah, and of course, it's related option in the smart structure. Wait.
+So, yeah, I've got the news, as you may heard, she may, yeah.
+Previous week, previous week, we've got good news. So some of MCP servers.
+Have been approved, so, and yeah, and the majority of the most important servers were approved. So, in this list, we have such MCP servers like...
+MCP, Atlassian MCP, Slack MCP, GitHub MCP, and many, many other MCP servers that can support.
+Uh, yeah, that that like that can support our yeah use cases and uh these.
+Thursday we will have a session about MCP servers. Like what is MCP?
+how to use MCP servers, how to how to connect and how to set up everything. And yeah, we will go through the MCP servers available available in OMF. Yeah, this session will be conducted by Oleksandr.
+Pavlovskyi and I, so yeah, we will discuss both both engineering, digital, and QE capabilities.
+How to utilize MCP servers, how to connect, yeah, and so on and so forth, so...
+Yeah, please join us this Thursday. So this is very, very important topic for everyone.
+Um...
+Yeah, and tomorrow we will have one more session regarding...
+requirements, readiness, requirements, how to name use case. So yeah, last session, we've built a small autonomous workflow that can review user story from digital point of view based on
+status transition from to do to in progress. Yeah, and tomorrow we will expand this workflow with QA and engineering part. So yeah, please join us. Please join us tomorrow. So
+Yeah, it will be. I hope it will be interesting session, because we will utilize and combine together a Rovo and Codmi agents, yeah, and use them in one in one flow.
+So, basically, that's it with updates.
+No, remember a few things, so regarding a chance of that.
+That are moving in production, so yeah, they are still they are still in progress, so yeah, hope they they will be moved.
+really soon, maybe today or tomorrow. So yeah, I'll let you know. So yeah, and regarding Cursor license, so yeah, we've noticed that guys who requested the license part haven't used it.
+For a while, so yeah, these these licenses are not available right now, so yeah, we need to request these licenses one more time, so yeah, and the...
+Yeah, I'm waiting for some some steps from from Mikhail, so yeah, and hope hope to hope to share this instruction very soon for those guys who lost this license.
+Yeah, probably that's it from my side. So yeah, let's, yeah, yeah, now let's go around the room, yeah, and open the discussion. So yeah, we'd like to hear how you're doing this week and previous week. So have you had a chance to experiment with AI since our last champions call?
+And yeah, are you currently working on any AI related use case? Is there something you're trying to automate or improve with the AI? Yeah, and of course, yeah, if you if you face some challenges, we we'd like to hear it and and provide you.
+Some support.
+So, who would like to be the first?
+
+Bandana Sriramka   10:29
+Hi, Eugene. One quick question on the licenses. Is the licenses a bit like available for ChatGPT enterprise also? Like if some people are not using, if they're idle, can it be moved to other people who need it?
+
+Eugene Semenyuk   10:45
+Good question. So I need, I need to double check it.
+So, yeah, and as I know, so guys from quality engineering team, so you don't have, you don't have ChatGPT license, right?
+
+Dhanalakshmi Chinnasamy   10:55
+Yeah.
+
+Bandana Sriramka   11:00
+No, but in one of the document I saw that the mentors need it. I think I shared the link with you. So if like people in the org not using it.
+
+Eugene Semenyuk   11:09
+Mhm.
+Mhm.
+
+Bandana Sriramka   11:17
+We can avail that.
+
+Eugene Semenyuk   11:19
+Mm-hmm, yeah.
+Yeah, great. Yeah, I'll discuss this with team. Yeah, and at least, yeah, it will be great to provide.
+this license, at least for mentors.
+Yeah, because I think this is essential, especially for mentors.
+
+Bandana Sriramka   11:43
+Yeah.
+Oh.
+
+Eugene Semenyuk   11:44
+Okay, yeah, thank you for this topic.
+
+Bandana Sriramka   11:46
+Also, one more thing, currently I'm working on regression test summary report reporter agent. Let me quickly share my screen.
+
+Eugene Semenyuk   11:55
+Mhm.
+
+Dhanalakshmi Chinnasamy   11:55
+Yeah.
+
+Bandana Sriramka   11:56
+So to create that, I have added this description that we need to pull it from Jira task. So I added this manually for now going forward, since the Jira tasks are created using automation, using a manual trigger.
+
+Eugene Semenyuk   12:07
+Mhm.
+
+Bandana Sriramka   12:15
+Currently, the tasks don't have description in them. So we have advised to update the tasks which are already there in the automation to add the description. So when we are creating the report, the areas covered section will be pulled in from those tasks. Right? So to test it out, I have manually added this description, but when I do it, it's adding a line break here.
+
+Eugene Semenyuk   12:31
+Mhm.
+
+Bandana Sriramka   12:41
+that I try to update in the comments, but it's not removing it. Either one option is I add it like, you know, in a single line and not, but that won't look good.
+So that's the only challenge I'm facing right now. Others are being populated correctly. Do you have any suggestion how to go about it to remove the line breaks? If I don't do line breaks, it's either putting a new line or a line break here in the description.
+
+Eugene Semenyuk   13:01
+Huynh.
+
+Dhanalakshmi Chinnasamy   13:07
+Yeah.
+
+Eugene Semenyuk   13:13
+Yeah, that's pretty interesting.
+Dun, Dunn, Dunn.
+Could you please share, share, share your agent? So, yeah, I will, I will play around with it, so yeah, maybe...
+
+Bandana Sriramka   13:30
+Yeah, yeah, sure. And the plan is to...
+
+Eugene Semenyuk   13:30
+Yeah, well.
+Will give you some some advice.
+
+Bandana Sriramka   13:36
+Okay, sure, I'll share the agent with you. And once in regression, since there are many lanes, are addressed, like compliance, originations, DSS, collections, et cetera. So I'll be creating agents for all of those lanes, and I'll be creating an automation. So we can do the automation, it will create.
+
+Eugene Semenyuk   13:38
+Mhm.
+Mhm.
+
+Bandana Sriramka   13:56
+that reports for all of the lanes at once.
+
+Eugene Semenyuk   14:00
+Mhm.
+So, yeah, but in automation, we have one.
+One limitation that we need to keep in mind, so yeah, it it it triggers only for the particular project.
+
+Bandana Sriramka   14:10
+Yeah.
+Yes.
+For the particular project, you mean it taking that the task which we use as a context, correct?
+
+Eugene Semenyuk   14:26
+I mean, so yeah, if you create a automation, for example, in quality engineering project, so yeah, it will pick up on the items from from quality engineering project.
+
+Bandana Sriramka   14:33
+Mhm.
+
+Eugene Semenyuk   14:39
+Yes, I remember.
+
+Bandana Sriramka   14:41
+I see. The tasks that I will be creating are all under quality engineering, but only the linking, the requirements traceability have different lanes in them.
+
+Eugene Semenyuk   14:51
+Mhm.
+Yeah, in this case.
+I hope it should be. It should be doable.
+
+Bandana Sriramka   15:02
+Yeah, I...
+Okay, I'll play around and I'll let you know.
+That is what I'm currently working on.
+
+Eugene Semenyuk   15:07
+Yeah, at least.
+Yeah, at least at least agent can can go to the items.
+Yeah, I can see.
+
+Bandana Sriramka   15:17
+Yeah.
+
+Eugene Semenyuk   15:17
+Okay, yeah, sounds good. Thank you for your updates.
+
+Bandana Sriramka   15:18
+Okay.
+Thank you.
+
+Eugene Semenyuk   15:26
+Take any.
+
+Dhanalakshmi Chinnasamy   15:27
+for region, yeah, X-ray integration I tried, it's not successful. I can share it in my screen.
+
+Eugene Semenyuk   15:28
+Uh huh.
+Yeah, let's...
+Let's try to see what's wrong.
+
+Dhanalakshmi Chinnasamy   15:42
+Um...
+Yeah, I just, you know, to test it in the training environment, I tried to connect, but it says, even though if it's configuration I integrated, it says X-ray cloud, these are all the information required. And in the chat, I provided all this information just to see whether it
+It's connected or not, because I did not get any information from Grigori, but Divya has access to create the API credentials, so I created, but now it says.
+Uh, is this a certificate verification failed when connecting to the base URL?
+
+Eugene Semenyuk   16:24
+Let's open integrations.
+I mean, yeah, here.
+Yeah, an X-ray.
+Now, let's see what we have here. Global X-ray.
+Some URL.
+Client secret.
+Hmm.
+Okay.
+That's interesting.
+Okay, I see that it's available globally. Yeah, and you provided like correct credentials here. So yeah, I'll double check it today. So yeah, and...
+
+Dhanalakshmi Chinnasamy   17:09
+Mhm.
+Okay.
+
+Eugene Semenyuk   17:15
+Yeah, and let let let you know, yeah, that's that's interesting.
+
+Jurijs Markelovs   17:20
+I would probably suggest to run this call locally, like API, just a second connection using like API call, adding all these client IDs and all that, whatever is required, and test it on your local, just local machine.
+
+Eugene Semenyuk   17:26
+Mmh.
+
+Jurijs Markelovs   17:36
+if you got the same result.
+Probably URL's wrong, if not.
+
+Dhanalakshmi Chinnasamy   17:40
+Um...
+
+Jurijs Markelovs   17:43
+Something else, yeah.
+
+Dhanalakshmi Chinnasamy   17:44
+Ha.
+
+Vlad Grubman   17:47
+Eugene, wasn't there an authentication URL, a full URL to the board, and shouldn't it be just to the instance?
+
+Jurijs Markelovs   17:47
+Does it make sense?
+
+Vlad Grubman   17:56
+I'm sorry, I just...
+
+Eugene Semenyuk   17:56
+Yeah.
+
+Vlad Grubman   17:58
+I just, I just saw a glimpse of the screen before you moved before you moved away, so maybe maybe it's an easy fix. I don't know. I, I'm just asking, like, look at even even here, right? Even on the screen, look, everything is OneMain OneMain Financial training atlassian.net, that's the proper URL, OneMain Financial.lassian.net, that's the proper URL.
+
+Eugene Semenyuk   18:00
+Mhm.
+Mhm.
+
+Vlad Grubman   18:20
+And then the whole...
+
+Eugene Semenyuk   18:22
+Bye.
+
+Vlad Grubman   18:22
+Jira software C projects. I think that's what's not working, but please double check me. I'm not. I'm not an expert, not 100% expert.
+
+Dhanalakshmi Chinnasamy   18:34
+So, this is how we...
+
+Eugene Semenyuk   18:34
+So, yeah, let's...
+Pro.
+Yeah, I guess, yeah, it requires just a URL to the instance.
+But, French is speaking, I'm not sure.
+Mm.
+Does X-ray has their own?
+Instance.
+And there were their own URL.
+Not sure.
+
+Dhanalakshmi Chinnasamy   19:12
+But this is the sandbox URL we have got it.
+
+Eugene Semenyuk   19:21
+Hmm.
+
+Dhanalakshmi Chinnasamy   19:21
+I initially created just with this one. It didn't work, so I tried this to add as well, but nothing worked.
+
+Eugene Semenyuk   19:35
+Mm.
+Are you sure that this URL is correct for X-ray?
+Mm.
+
+Dhanalakshmi Chinnasamy   19:58
+This is what we do that.
+
+Eugene Semenyuk   20:06
+Mm.
+That's interesting. Okay, let's probably connect after this meeting. Yeah, and...
+
+Dhanalakshmi Chinnasamy   20:17
+Mhm.
+
+Eugene Semenyuk   20:18
+Yeah, I see.
+So, I I hope there should be some some easy easy fix, so yeah, maybe yeah, maybe some other link to the environment, so yeah, but let's.
+Double check it together. Okay, uh, Jurijs.
+Your hand.
+
+Jurijs Markelovs   20:40
+So.
+Yeah, so what I've tried and what I succeeded on is I was...
+
+Eugene Semenyuk   20:44
+Yeah.
+
+Jurijs Markelovs   20:51
+I was analyzing, had like a comparison analysis between a staging environment and production environment. That was my task. And I identified a couple of resources and confluence, confluence pages from different resource, different lanes. Then I added.
+Our our repo couple of repo with the Terraform and then related to UI related to acquisitions.
+Front-end terraform.
+Infrastructure as well, and was able to provide in local profile AWS credentials to some production account which would need to be.
+analyzed, right, based on my task and I got pretty interesting results. So I was able to reveal all the dependencies, some infrastructure.
+
+Eugene Semenyuk   21:54
+I know.
+
+Jurijs Markelovs   22:01
+basically layers, right? And I was able, you know, the, I think I use, I think I, yeah, I use Robo. Yeah, I use Robo. Actually, I used Robo and Cursor.
+
+Eugene Semenyuk   22:10
+Mhm.
+
+Jurijs Markelovs   22:15
+So a couple of them interact between one another and it reveals some good results. And with the, again, with the Robo, I was able to create some conference pages, some tables.
+Myro boards.
+which will be used for the further analysis and just try and the goal was here, trying to get update our staging environment, hopefully with something to meet, to be as close as possible to production for testing purposes, right? And it gave me some good results.
+
+Eugene Semenyuk   22:55
+Mhm.
+
+Jurijs Markelovs   22:58
+Without going into the details, another thing what I have tried is we have certain channels, team channels and Slack or Slack channels, teams for example, right, that are questioning on how to debug certain issues, right?
+So my thinking was try to use AI where possible, but we need some kind of integration. So what I did also, with the cursor, I added as many projects as I could, or repos as I could.
+to be able to properly answer or give some debugging steps for certain issues with some QA folks might be facing, right? Like as a like a black box testers, right? For example, all right, these.
+You know, this page returns 500, or this page returns 404, something like that. What's the what would be the steps to debug and try to get it recovered, or like, who would you reach out to? Stuff, you know, stuff like that. I think this has like a bright future, but connection bridge.
+
+Eugene Semenyuk   24:08
+Mm-hmm.
+
+Jurijs Markelovs   24:14
+Between.
+Doing to provide some kind of support, instant reply in the teams is kind of limited, I believe.
+I'm not sure how to.
+how to integrate that.
+Um...
+Did I make myself clear? So basically the task here, we have some channels that are like, you know, like people asking around like, what's wrong? You know, the certain environments down or certain things are happening. What can we do to instead of waiting for like a 30 minutes an hour for someone to get there?
+
+Eugene Semenyuk   24:36
+Uh-huh.
+
+Jurijs Markelovs   24:52
+pick up that, trying to answer, trying to find, trying to debug, the task is try to provide some kind of initial debugging steps where you know what direction to go and how to try to possibly try to get it resolved yourself. So based on internal logic, internal...
+You know, the, you know, all the projects is as a context, like infrastructure, you know, front end, back end, infrastructure, all that has certain contexts, right? And as well as some conference pages could be also utilized potentially, but that's what was my thinking.
+
+Eugene Semenyuk   25:30
+Mmhmm.
+
+Jurijs Markelovs   25:32
+It's just more like abstract, didn't go too far.
+
+Eugene Semenyuk   25:37
+Yeah, that's kind of interesting. So, yeah, let's probably connect connect and fly and then discuss this use case in details.
+
+Jurijs Markelovs   25:38
+Yet.
+
+Eugene Semenyuk   25:51
+Like, what do, for what purposes, we can utilize here?
+and how.
+
+Jurijs Markelovs   25:57
+Okay, the last question maybe I have is the so we we using that sandbox.
+It was called the sandbox project for our Automation right, and I've seen, for whatever reason, this, for example, the condition of the status status of a Jira ticket.
+
+Eugene Semenyuk   26:13
+Mhm.
+
+Jurijs Markelovs   26:24
+is very limited to certain states like to do and done or I think that was all that's all. Is there a reason why?
+
+Eugene Semenyuk   26:27
+Yeah.
+Mm-hmm.
+Uh...
+Yeah, friendless speaking, yeah, it it was a new project and we we didn't configure the like custom statuses.
+So yeah, but probably, yeah, that's...
+That's good notice. We can we can expand it with a like regular statuses so that the majority of you have like blocked testing, acceptance, and so on.
+
+Jurijs Markelovs   27:08
+Okay, because life's, you know, life scenarios is like so totally different.
+
+Eugene Semenyuk   27:11
+Mm-hmm.
+
+Jurijs Markelovs   27:14
+Yeah, I mean, yeah, I'm just curious. That's all. Thank you.
+
+Eugene Semenyuk   27:15
+Yeah, that's a good point. So, yeah, I, yeah, I'll go through the like Jira flows to make sure that, yeah, we have the most common Jira flow for this project.
+Yeah. That's a good idea. Thank you. And yeah, would you like to share something?
+On Wednesday.
+
+Jurijs Markelovs   27:46
+Feel, I'm sorry.
+
+Eugene Semenyuk   27:47
+Ohh, any any experiments, any any demos?
+
+Jurijs Markelovs   27:52
+Uh.
+I could if I'll get a little further down if what I just mentioned.
+
+Eugene Semenyuk   27:59
+Okay. Okay, gotcha. Thank you.
+Okay.
+update space.
+I.
+Any challenges?
+observations.
+Do, do, do.
+Okay, I I guess Monday is Monday is a bit hard.
+Yeah, okay, so I guess we can wrap up a bit a bit earlier today. So yeah, before we close, does anyone, anyone have final questions?
+One, two, three.
+OK, thank you everyone, and have a good day and see you, see you tomorrow.
+MIKE.
+
+Bandana Sriramka   29:23
+Thank you.
+
+Dhanalakshmi Chinnasamy   29:25
+Thank you.
+
+ stopped transcription

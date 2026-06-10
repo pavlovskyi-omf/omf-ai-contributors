@@ -1,0 +1,529 @@
+AI Enablement QA Champion Sync-20260504_140136UTC-Meeting Recording
+May 4, 2026, 2:01PM
+26m 20s
+
+Eugene Semenyuk   0:04
+Do, do, do.
+The process used to be.
+Is my price.
+Watch.
+Hello, good morning.
+No.
+
+Bandana Sriramka   0:26
+Good morning.
+
+Eugene Semenyuk   0:27
+I.
+What this is?
+Do, yeah, let me think.
+Other folks.
+You want a good English?
+Kim.
+Ethnic Yoshi, Miss John item of.
+You want to talk about it?
+Yeah, let's skip a few minutes.
+Where are the folks to train us?
+That.
+Yeah, and then we'll go through some updates.
+Mmh.
+
+Saeyed Shamlou   1:34
+Morning.
+
+Eugene Semenyuk   1:35
+Good morning, Saeyed. Long time no see.
+
+Saeyed Shamlou   1:39
+No, I only missed the last week. It was crazy last week.
+
+Eugene Semenyuk   1:42
+Yeah.
+Yes.
+What?
+
+Saeyed Shamlou   1:48
+How's life, Eugene?
+
+Eugene Semenyuk   1:50
+Yeah, everything's awesome. How are you? Yeah, a bit. Yeah.
+
+Saeyed Shamlou   1:53
+You got new headsets.
+
+Eugene Semenyuk   2:03
+Yes, Atlanta won't be able to join us. She's in business trip.
+OK, let's wait one more minute, and we'll start.
+
+Saeyed Shamlou   2:38
+How many people do you expect on this call, Eugene?
+
+Eugene Semenyuk   2:42
+Oh, good question. So usually we have something around 15 or 20 persons. Yeah, but today maybe we'll have a bit.
+
+Saeyed Shamlou   2:53
+Oh, okay.
+
+Eugene Semenyuk   3:01
+Somebody should.
+OK, 30 seconds.
+Is this?
+No.
+Okay, I guess, I guess we can start. So, yeah, thank you, thank you everyone for joining today's CAIA Champion scene. So, I'm really glad to see you all here. Yeah, yeah, and yeah, really glad to see you, see your faces. So, yeah.
+As usual, today's session will be structured in a few parts. So first, we'll discuss some news updates and upcoming topics. So after that, we'll open up the discussion. So we'd love to hear what you've been experimenting with.
+what use cases you're exploring and where you might need some support in case of any challenges. And finally, we'll wrap up with the next steps and alignment. So yeah, regarding news, we are still waiting for
+MCP's approval, and yeah, and and close quote approval, yeah, and yeah, tomorrow, tomorrow we will have interesting session in our PDLC ALC cross-functional workshop, so we'll we'll discuss.
+Autonomous, autonomous agents, and how to how to run agents without like manual manual inputs, yeah, because previously we...
+Yeah, we triggered each of our agents manually, for example, in Code Me or Robo. So, yeah, tomorrow we will learn some patterns and approach how to run agents based on some events. For example, we add some...
+user story back or task to JIRA and agent can be triggered and review or or does some operation with this item. Yeah, or for example, the well appropriated pull request and based on these pull requests, we'll start some
+So, yeah, tomorrow on our cross-functional session, I'd like to go through this topic and demonstrate some practical examples that we can that we can reuse. Yeah, and maybe some of our folks who unfortunately haven't joined us today, so yeah, maybe they can share their...
+Their experience, because we have we have few guys from our QA Champions group who already implemented such such flows. Yeah, for example, our...
+Champion from servicing team Hai Le implemented this flow in the robot and the Jira automation, so he implemented he implemented agent and Jira automation workflow that analyze items in Spring backlog and validate their.
+Definition of ready criteria, so yeah, and also Jurijs created a workflow that.
+Works on some schedule, for example, each hour this workflow, this workflow analyze.
+Jira backlog and if it has some some item it takes these items to the work.
+So yeah, we already have some such experiments. Yeah, but tomorrow we'll dive deeper into this topic.
+Yeah, and see how it can help us and reduce reduce manual work. Yeah, at least for for starting the agents.
+So yeah, that's it for news and updates from my side. Do you have any questions regarding this topic or maybe some other topic?
+
+Bandana Sriramka   7:53
+Eugene, a quick question. Any update on the PMT test summary report agent to move to prod?
+
+Eugene Semenyuk   7:55
+No.
+Did you say a movie?
+Uh...
+Yeah, let let me check, because...
+Yeah, the last agent that we moved was UIT, right? Yeah. So yeah, I'll double check it. Yeah, hope it will be moved soon.
+
+Bandana Sriramka   8:13
+Yes.
+Okay, thank you.
+
+Eugene Semenyuk   8:22
+Yeah, and you've you've sent me one more agent.
+
+Bandana Sriramka   8:27
+Yes, that's the painting one. Yeah.
+
+Eugene Semenyuk   8:28
+Ah, this is, this is, this is, this is PMT, yeah.
+
+Bandana Sriramka   8:30
+Yeah.
+
+Eugene Semenyuk   8:33
+So yeah, yeah, I'll double check the status, yeah, and let's let you know.
+Yeah, but that's really awesome that...
+Yeah, PNT team validate the output that they approved. So yeah, that's nice to hear. Okay, let's probably continue with our updates. So yeah, let's open the discussion and go.
+around the room. So yeah, we'd like to hear like, how are you doing this week? So have you had a chance to experiment with AI since previous week? So are you currently working on any AI related use case? So maybe you have some challenges.
+So yeah, feel free to raise a hand or unmute yourself.
+So yeah, probably we can start with...
+With you, Bandana, so yes.
+
+Bandana Sriramka   9:38
+Oh, Eugene, so till Friday, I worked on that PMT agent and I created a page also for that agent so everybody can use it in that team.
+
+Eugene Semenyuk   9:39
+Yes, as you already mentioned.
+Mhm.
+Uh-huh.
+
+Bandana Sriramka   9:52
+Yeah.
+It's already, it has little variations, like they wanted to display the original summary, but the...
+
+Eugene Semenyuk   9:56
+Okay.
+Show me, Shai.
+Yeah.
+Ms. Katrinaja.
+
+Bandana Sriramka   10:08
+Tester should be from the link tasks, but not the actual link tasks. So there are a lot of variations compared to ORS, compared to UAT and PMT. So they all have like different requirements. So since PMT, yeah, since PMT is done, we will move to regression now. I'll be creating with them.
+
+Eugene Semenyuk   10:21
+Mm-hmm.
+Uh-huh.
+
+Bandana Sriramka   10:28
+Yeah, so that's the update from my end. I have one more agent which is pending. I'll be, I'll start working on that soon too.
+
+Eugene Semenyuk   10:31
+Uh-huh.
+Ruka Majin Singh.
+Oh, could you please describe your agent? For what purpose?
+
+Bandana Sriramka   10:40
+It's the Jira confluence auditor. Like when there is a Jira issue and corresponding conference page for that, it will go through the design document. So the team is currently updating the design document. So once that's updated, I'll be working on my agent to enhance that.
+
+Eugene Semenyuk   10:43
+Mhm.
+
+Bandana Sriramka   10:59
+and will basically compare the acceptance criteria and what is covered in ready document definition of ready. And based on that, it will tell us whether the Jira story is all up to date or not.
+
+Eugene Semenyuk   11:15
+Yeah, sounds really good. Yeah, and probably this use case can be cross-functional.
+Like it can check, like not only QA parts, but also maybe some other.
+
+Bandana Sriramka   11:28
+No, this is for ORS.
+
+Eugene Semenyuk   11:30
+Mhm.
+
+Bandana Sriramka   11:31
+But they might all have different definition of ready documents based on their requirements, so.
+
+Eugene Semenyuk   11:35
+Mhm.
+Yeah, I see. Yeah, sounds good. So, yeah.
+
+Bandana Sriramka   11:40
+Yeah.
+Okay.
+
+Eugene Semenyuk   11:44
+Yeah, please keep us, keep us posted, so that, yeah, this is really interesting.
+
+Bandana Sriramka   11:46
+Chen.
+Yeah.
+
+Eugene Semenyuk   11:50
+Yeah, thank you. Thank you for your updates. So, Dana, do you have any interesting updates? So, maybe...
+
+Dhanalakshmi Chinnasamy   12:00
+For the maybe integration still, I didn't get any response back. Even I've been to Grigori, he didn't respond to me back for anything.
+
+Eugene Semenyuk   12:05
+Mhm.
+No.
+
+Dhanalakshmi Chinnasamy   12:12
+So, and that I, OK, I tried a use case for the performance testing support in Nave to just use case to compare with the baseline.
+
+Eugene Semenyuk   12:13
+Yeah, let me.
+Play the song.
+Uh-huh.
+
+Dhanalakshmi Chinnasamy   12:25
+In the current run, and to generate a summary for a deal with the Excel, I'm not getting, you know, the expected output with the downloaded Mabel Excel.
+
+Eugene Semenyuk   12:28
+That is.
+
+Dhanalakshmi Chinnasamy   12:39
+But once the MCP is approved, maybe I can try and I can improve that use case.
+
+Eugene Semenyuk   12:39
+Mhm.
+Yeah, I see. Thanks, and regarding regarding X-ray access, so...
+Saeyed or Divya, do you know maybe maybe someone can help us to get to get what we need? We need API token or client ID client secret from from X-ray.
+And on massage.
+
+Divya Ramkumar   13:18
+Yeah, yeah, I can check. I'll, I'll check myself while I'll get with them.
+
+Eugene Semenyuk   13:22
+No.
+Yeah, because, yeah, it will be really, really awesome. Yes, yeah, in Codney, we have in Codney, we have integration with X-rays, yeah, yeah, and we can utilize it, yeah, and also in Dennis tool, so yeah, it also has.
+
+Divya Ramkumar   13:40
+Yeah.
+
+Eugene Semenyuk   13:42
+Integration with X-ray, so yeah, it will be it will be good to have.
+to have this list credentials and use it in some other agents.
+
+Divya Ramkumar   14:00
+Okay.
+
+Eugene Semenyuk   14:03
+OK, so many things.
+OK, any, any, any, any other updates, guys?
+Would someone else like to?
+Sure, Townsend. Yeah, hello.
+
+Hai Le   14:24
+Hey, Eugene.
+So, as on as for me, I'm still waiting for for you and Oleksandr to find availability to work on that smart smart test selection use case, because I know we we got started on it and then we we took a pause.
+
+Eugene Semenyuk   14:33
+Bangalore.
+Mm-hmm.
+Uh-huh.
+Show me, Srihari.
+Yeah, Oleksandr, Oleksandr is working on this use case, and I think in day or maybe two, so yeah, we will connect and show some pieces that he already implemented. Yeah, and we will ask you to...
+Review, yeah, or maybe, and maybe like adopt something.
+
+Hai Le   15:10
+Okay.
+
+Eugene Semenyuk   15:10
+Yeah, and yeah, and meanwhile, so we are working on really similar use case, but yeah, trying to shape it and to make it scalable for other teams.
+
+Hai Le   15:24
+Mhm.
+
+Eugene Semenyuk   15:24
+So...
+So yeah, I guess you attended our previous Thursday call.
+So yeah, this is pretty similar in this case. Yeah, but we'd like to scale it to multiple teams to engage engineering engineering teams.
+To work on this, because yeah, this is case can provide not only insights for for QA, but also for for engineering, like what?
+what unit tests they need to create, like what they need to validate before.
+Before moving task to task team and so on, like what?
+what dependencies they have and what they can affect by their changes.
+So, yeah, and...
+Yeah, oh, yeah. Also, I remember one thing. So, Hai, have you had a chance to check Jira automation in production? Do you have access?
+
+Hai Le   16:34
+I, no, I don't have access and I don't, I still have to talk to Sam to see if she can do it, but...
+
+Eugene Semenyuk   16:39
+Mm-hmm.
+
+Hai Le   16:42
+Yeah. Did you still want me to demo that in the live production environment or do it in the training environment?
+
+Eugene Semenyuk   16:48
+The Shop, now.
+Ohh.
+Yeah, let's let let let let's demo it.
+Compan.
+Yeah, if if you will have access in production, I mean, till this Wednesday, so yeah, it will be great to do it in.
+In production, but otherwise, yeah, if you can do it in sandbox.
+Yeah, because tomorrow we will have a really similar topic regarding Jira automation and CodeMe webhooks, like how to run agents in autonomous way. Yeah, and I suppose your demo will be really...
+Really helpful and applicable after tomorrow's session.
+
+Hai Le   17:45
+Okay, so I think it's still safer to demo in the sandbox.
+
+Eugene Semenyuk   17:52
+Uh-huh.
+
+Hai Le   17:53
+So why don't we just do that?
+
+Eugene Semenyuk   17:55
+Yeah, OK, yeah, let's let's do it in sandbox, yeah, and...
+
+Hai Le   18:00
+Yeah, and you want me to demo on Wednesday instead of tomorrow?
+
+Eugene Semenyuk   18:06
+Yeah, let's let let let let's do it on Wednesday.
+
+Hai Le   18:10
+Okay.
+
+Eugene Semenyuk   18:10
+So, yeah, probably, probably tomorrow I will like just just mention your use case and say that, yeah, you, you implemented, you implemented something similar that we...
+
+Hai Le   18:23
+Okay.
+Okay.
+
+Eugene Semenyuk   18:32
+We'll discuss today.
+I mean, on tomorrow's session.
+
+Hai Le   18:35
+Yep.
+That sounds good.
+
+Eugene Semenyuk   18:38
+Yeah, yeah, and maybe, maybe yeah, if folks will be interested, so yeah, maybe we can demo it once again on Thursday, but for a wider group of people, like for cross-functional.
+So yeah, it will be awesome if you can demo it twice this week.
+
+Hai Le   19:00
+Okay, that's fine.
+
+Eugene Semenyuk   19:03
+Yeah, because for our smaller QA group and for like bigger cross-functional.
+
+Hai Le   19:04
+Or?
+Okay, or maybe demo it on Wednesday, record it, and then play it on Thursday.
+
+Eugene Semenyuk   19:13
+Kristin.
+
+Hai Le   19:19
+No.
+
+Eugene Semenyuk   19:19
+Yeah, it can be, it can be, yeah, but probably, probably they will ask some additional questions.
+
+Hai Le   19:27
+Okay.
+
+Eugene Semenyuk   19:27
+You want Tema?
+
+Hai Le   19:30
+That's fine.
+
+Eugene Semenyuk   19:30
+So yeah.
+Yes.
+
+Hai Le   19:33
+I'll just do a live demo. It's no problem.
+
+Eugene Semenyuk   19:36
+Yeah, that would be awesome. Thank you. OK, yeah, I see that Jurijs joined us, so...
+How are you? Yeah, I see that.
+
+Jurijs Markelovs   19:51
+It's Monday. No, it was no.
+
+Eugene Semenyuk   19:54
+Okay.
+
+Debamitra Bhattacharjee   19:56
+Dia.
+
+Jurijs Markelovs   19:56
+As more can be expected on Monday, but is there are we planning some kind of a demos?
+
+Eugene Semenyuk   20:00
+GC.
+So, yeah, we, yeah, we, we, sorry, yeah, we were just discussing like our updates, ideas, challenges, and maybe demos.
+
+Jurijs Markelovs   20:17
+Yeah.
+
+Eugene Semenyuk   20:17
+Like, yeah, so last week we discussed with you really interesting use case, so yeah, maybe you have some updates.
+You would like to share?
+
+Jurijs Markelovs   20:28
+Um...
+
+Eugene Semenyuk   20:33
+Yes.
+
+Jurijs Markelovs   20:33
+Yeah, so basically I converted, I converted the workflow from workflow into the orchestration agent, right? And it seems like it's less confusion. I mean, if you willing, I can add.
+That you can add mute on the on the on the list, and I'll just maybe just pros and cons, you know, workflow versus orchestration of assistance, number one.
+
+Eugene Semenyuk   20:57
+At.
+Yeah.
+Yeah, that would be awesome.
+
+Jurijs Markelovs   21:04
+Yeah, all right, I can I can do that, and I also went on a minor but conference page generation based on the release nodes by fixed tag versions, which was the ask from my manager.
+
+Eugene Semenyuk   21:07
+Mhm.
+Yeah.
+Uh-huh.
+
+Jurijs Markelovs   21:24
+Nothing too fancy, but...
+I can demo that as well. That's news. And what is this for?
+
+Eugene Semenyuk   21:30
+Mmh.
+Yeah.
+Awesome. Oh, this Wednesday.
+
+Jurijs Markelovs   21:38
+All right.
+
+Eugene Semenyuk   21:38
+So, so, yeah, and yeah, could you please remind your first use case, yeah, for for for for the whole audience, yeah, because I I know, yeah, but that's...
+
+Jurijs Markelovs   21:50
+And the first use case was.
+
+Eugene Semenyuk   21:51
+Let's.
+Let's give some kind of announcement.
+
+Jurijs Markelovs   21:57
+I think majority of these people are in a call, audience on a call, demo 2, but it's pretty simple. We have a Jira board, right? We have our testing status for the column, so as soon as the ticket gets Jira ticket gets into the testing column, and...
+
+Eugene Semenyuk   22:04
+Yeah.
+You can do.
+Yeah.
+
+Jurijs Markelovs   22:15
+per demand particular label is added. We, the flow tracks that event and to make sure all these conditions are met and it tries to generate per acceptance criteria or per description which contains the requirement, hopefully, requirements, hopefully.
+
+Eugene Semenyuk   22:30
+Play song.
+
+Jurijs Markelovs   22:38
+It try to generate playwright test cases, create a branch in the GitHub, and generate test cases based on acceptance criteria or requirements, using the contextually using the branches.
+Um, uh, the MAIN.
+the repo's main branch and trying to see there are making sure there are no duplication and learning the framework current state, right, as it's being indexed for certain schedule. And that particular, you know, this entire orchestration is scheduled.
+per, you know, could be scheduled per hourly, daily or so, whatever we want. There are a couple of the things what I'm working on enhance this, but this is the use case.
+
+Eugene Semenyuk   23:33
+Yeah, thanks a lot. And yeah, I know that Gaia from Service and Team is working on similar use case. So yeah, I think it should be really interesting for her, yeah, to watch it.
+So, yeah, I'll make sure that she will join us, and yeah, and maybe and maybe after that you can connect together and yeah, discuss some.
+some pros and cons and maybe some...
+some things that can help you shape this use case. Okay, but anyway, thank you. Thank you so much for your updates. Deb, would you like to share something and ask?
+
+Debamitra Bhattacharjee   24:16
+Yeah, yeah, so, so Eugene, I'm facing a problem while creating multiple data source for get in code me, so I can share my screen and if anyone is facing the same problem.
+
+Eugene Semenyuk   24:29
+Uh-huh.
+Ohh.
+Bob.
+
+Debamitra Bhattacharjee   24:38
+Mm.
+
+Eugene Semenyuk   24:39
+Do you have any other meetings after that? So yeah, we probably can connect right after this meeting. Yeah.
+
+Debamitra Bhattacharjee   24:46
+After that, OK.
+
+Eugene Semenyuk   24:49
+Yeah, we have, we have just for four minutes left.
+
+Debamitra Bhattacharjee   24:52
+Okay, cool. Yeah. And then we can connect.
+
+Eugene Semenyuk   24:56
+Yeah, yeah, sure, sure. I'll message you.
+
+Debamitra Bhattacharjee   24:57
+Yeah, sure.
+Mhm.
+
+Eugene Semenyuk   25:03
+Okay, guys, any other questions, ideas, challenges?
+OK, we we have we have few demos lined up in.
+
+Saeyed Shamlou   25:16
+Okay.
+
+Eugene Semenyuk   25:22
+For Wednesday, so yeah, I will, I will send the agenda for vendors meeting very soon.
+So...
+Yeah, and...
+Yeah, one, one, one more time before we close. So, yeah, any any final questions?
+One, two, three. Okay, we can, in this case, we can finish a bit earlier. So thank you guys for joining us today, for bringing your ideas.
+challenges. So yeah, it was really productive. And yeah, see you soon, today or tomorrow. So have a good day and bye.
+
+Saeyed Shamlou   26:13
+Thanks, Eugene.
+
+Eugene Semenyuk   26:15
+No.
+Thank you.
+
+Bandana Sriramka   26:16
+Thank you.
+
+ stopped transcription

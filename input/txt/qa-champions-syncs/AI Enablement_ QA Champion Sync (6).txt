@@ -1,0 +1,311 @@
+AI Enablement QA Champion Sync-20260420_135938UTC-Meeting Recording
+April 20, 2026, 1:59PM
+20m 10s
+
+ started transcription
+
+Svetlana Stogni   0:20
+Hello, Hai, how are you today?
+
+Hai Le   0:24
+Hello, good morning.
+Actually, now good morning for you, right?
+
+Svetlana Stogni   0:27
+Yeah.
+It's, yeah, it's already afternoon, 5, 5 P.m. for me, yeah.
+
+Hai Le   0:32
+Yeah.
+Almost done, right?
+
+Svetlana Stogni   0:37
+Oh, I wish it could be, but I have meetings. Let me remember till 10 P.m. today. Oh, no, today is earlier, 8.30 P.m. So.
+I still have something to do.
+
+Hai Le   0:50
+As.
+So many meetings.
+
+Svetlana Stogni   0:55
+Okay.
+Oh yeah, yeah, and my calendar is shifted due to all my stakeholders located in the US, so...
+This is fine.
+And what about you? Do you usually work till 6 P.m.?
+Yeah.
+
+Hai Le   1:18
+Yeah, somewhere around there.
+96.
+
+Svetlana Stogni   1:20
+Okay.
+Good for you.
+Hello, hello, hi, everyone.
+We are discussing over by balance. Very good topic, especially for Monday, on the whole week.
+in the future.
+Yeah, people still join in. Let's wait for a couple more minutes. Eugene won't be able to drive this call today. It's a public holiday in his location. Like his work life balance in a good shape, at least today. Yeah.
+Don't be jealous, let's be happy for Eugene.
+OKOK.
+And today I wanted, you know, to go through our backlog. As far as you remember, we created this backlog of use cases, and then not sure if this status is up to date. And I wanted to go quickly through the list of use cases.
+that we currently have.
+especially those that are markers in progress. And they want to ask you if you need any assistance and help. This will be one part of the meeting. Another part, I would really appreciate if you share any feedback regarding our PDLC sessions. It's in you.
+Topic, a new stream for phase two, and currently it's mostly dedicated to coming to probably have some interesting insights to share with us because you're all best friends and we are looking for your feedback. Please be honest and open and
+Would like to improve this.
+Sam.
+So, I said...
+
+Divya Ramkumar   3:16
+Svetlana and Nick, I just wanted to say thank you for updating the meetings after a few people one year.
+
+Svetlana Stogni   3:18
+Yeah.
+
+Nicholas Crowley   3:22
+But.
+
+Svetlana Stogni   3:23
+Yes.
+Yeah, we had feedback and actually I'm also happy with this new calendar. It looks much better now. Getting back to work-life balance.
+
+Nicholas Crowley   3:25
+Yeah, of course.
+
+Divya Ramkumar   3:39
+Yeah.
+
+Svetlana Stogni   3:41
+Yeah, thank you, Nicole.
+for your great help in updating. I can even, I can not even imagine like it was a really hard work from from you for you like to update all the stuff of getting all these people, all the calendars, all the stakeholders, yeah.
+
+Nicholas Crowley   4:00
+It's a lot of, it's a little bit of surgery with 400 people in this program at this point, so, but...
+
+Svetlana Stogni   4:04
+I cannot even imagine, yeah, so you just, Semenyuk.
+Thank you so much.
+Okay, guys, let's get started and let me share my screen and let's see what we have.
+Now, backlog and let's quickly go through open or in progress use cases and you use like analysis. What is the current status of this use case?
+Would you like to share your updates?
+You are muted. I can see your results, but you are muted and I can't hear you.
+Guys, can you hear me?
+For yourself, okay.
+
+Nicholas Crowley   5:00
+Dev.
+
+Svetlana Stogni   5:03
+Yeah.
+It is.
+Are you with us? You were at the Chinnasamy? Okay, so probably, but let's get back to this part later. Brooke.
+Brooke is not with us, right? Today, at least today. So, Cindy, are you with us?
+This one is on Eugene, so it looks like we won't get any updates.
+Do you have Jyothi with us?
+Okay, so probably I will contact these people offline, right? One by one. Matt, I know you are with us. Any updates on this part?
+
+Matt Nobles   6:05
+Yeah.
+
+Svetlana Stogni   6:05
+Enable the MANTECA test test generation.
+
+Matt Nobles   6:08
+Yeah, that one we're kind of waiting to figure out when we can connect to Mabel, the MCP. That one's kind of where that one's, without connecting it to there, it's kind of on hold until we can figure out either a way around that or get the MCP set up with Mabel.
+
+Svetlana Stogni   6:20
+Yeah.
+
+Matt Nobles   6:27
+to connect it and take it, kind of progress it to the next level.
+
+Svetlana Stogni   6:33
+So probably we're missing one more column here, like blocked. It would be great to have this column here, the status, right, and to mark such use cases, and even to have the statistics on many use cases are blocked, any problems that we have.
+
+Matt Nobles   6:44
+Yeah.
+Yeah, that would make sense to kind of move those into that face.
+
+Svetlana Stogni   6:52
+Okay.
+Okay.
+May I ask you to provide any comments on the stick at all? I can do it later. Yeah, I would really appreciate. Yeah, thank you. Thank you so much. Just to keep everything up to date. And last but not least, yes.
+
+Matt Nobles   7:01
+Yeah, I can comment while we're waiting on.
+Yep.
+No.
+
+Nicholas Crowley   7:12
+Svetlana, just a quick question. Who owns this board in order to put that blocked? Could call on that. I think that makes a lot of sense.
+
+Svetlana Stogni   7:20
+That's a good question. And actually, MCP connections, this is something that a very important question being raised long time ago, especially MOBILE MCP to have this information.
+more efficient, up and running. And I know that Saeyed and his team is working on this part to ensure that MOBILE MCP is available right now and probably
+This is something that we need to clarify with him. And I know Divya is here today. Divya probably have.
+
+Divya Ramkumar   8:06
+Yeah, we are working on getting it approved.
+
+Svetlana Stogni   8:10
+Yeah, and do we need any help, anything, and any projection when MOBILE MCP will be available?
+
+Divya Ramkumar   8:19
+So, Saeyed is going to work with Rik, Rik Khurana, and get it approved.
+
+Svetlana Stogni   8:24
+Mhm.
+So, it's I'll save.
+
+Nicholas Crowley   8:27
+Do we need to run that through? We've got a list of AI tool that we're trying to enable through this program. I don't see MOBILE on there. It's the first I've heard that name. I'm learning. But so I think that list may be a little bit dated, but we need to make sure we get that on that list and, you know, so we can kind of work this through. They're trying to work on a whole process where we get a bunch of these MCPs through.
+
+Divya Ramkumar   8:36
+Okay.
+Okay.
+
+Nicholas Crowley   8:51
+together so that might help speed it up.
+
+Divya Ramkumar   8:53
+So can we add Mabel to that list?
+
+Nicholas Crowley   8:55
+Yeah, I will send that over to see if that's on their radar and get it added. I was my question, so that was the actual JIRA dash JIRA Kanban board we're looking at right now.
+
+Divya Ramkumar   9:01
+Okay.
+
+Nicholas Crowley   9:09
+Can we add that blocked status and column? Does QA on this board? Does like...
+Do we know how to get that?
+
+Svetlana Stogni   9:18
+Yeah, it's a common board, not only QA, I filter out based on the label our specific use cases and it's like a common board being used by digital and engineering lanes as well. But anyway,
+I can raise this question and propose to it one more column, you know, to visualize how many use cases are blocked and what are the reasons, right, to have this statistics and to have everything visualized, right?
+
+Nicholas Crowley   9:50
+PARK.
+Perfect. Thank you.
+
+Svetlana Stogni   9:56
+Yeah, I will raise this question. Yeah. Thank you, and thank you, Divya, for your update.
+And last but not least, okay, a great agent to detect and then take new I service table for upcoming years, see Angela.
+Enjoy if you're with us. OK, if not, I will contact her as well. So, this is like this problem, so can you hear us?
+He is our call me champion. He started creating workflows with call me.
+OK, prob.
+
+Nicholas Crowley   10:40
+Jurijs, are you on?
+
+Svetlana Stogni   10:42
+Yeah, probably he's not with us right now. And guys, speaking about use cases which are in intake status, do I need to update some of the statuses, for example, in progress done?
+Like.
+Angela, Amir, if you're here, please step in. Dev, are you with us?
+The Dell functional destinators.
+If you have 15 people, but...
+Yeah.
+I don't know. Those whom I ask are not them. And one more use case, which is in intake status, very sharp.
+But anyway, like we need to provide updates here. I want to have this board up to date and to see the progress, visualize everything and to understand like what people are working on and in case you need any assistance, it would be easier for us to contract.
+Okay, and like, like speaking about the like house session we are going to have on Wednesday.
+Are there any volunteers, any ideas what can be demonstrated during this session? Do you have anything to share, guys?
+Oh, Brooke, I can see you with us.
+What about your use case? I filter test accounts and return logins for indicator and files.
+
+Brooke Borowiak   12:38
+Yeah, I was supposed to hear from Eugene about a solution because I still can't get it to read in all of the indicator file indicator file.
+Yeah.
+So I've been trying different things, but kind of in a little bit of a pickle with how to handle that right now. But he said last week that he'd reach out to me within the next week or so about that because he had an idea. So
+That's where I'm at with that one.
+
+Svetlana Stogni   13:23
+Okay, okay, so yeah, I will highlight that you need additional consultation here, right, in this case to be implemented.
+Awesome, and the...
+Probably, hi, would you like to share some of the updates regarding the use case we are working on together with Eugene and with Oleksandr?
+Like for test selection, test management, prioritization.
+Okay.
+
+Hai Le   14:03
+Yeah, I have no new updates. Really just been waiting on...
+Eugene or Alexander to schedule a new meeting to go over Plan B.
+
+Svetlana Stogni   14:15
+Plan B, even like we decided the developers will start testing the workflows that we created, right? And we are waiting for feedback from them because K part was completed, right? And you know.
+
+Hai Le   14:32
+No, we're actually not waiting on feedback from developers because currently there's very low developer resources right now. And that's why we're going with plan B where I think Oleksandr mentioned that he's going to do something on his end.
+
+Svetlana Stogni   14:33
+No.
+Mhm.
+
+Hai Le   14:52
+And then we'll go from there, but it's really going to be mostly QA focused for now. And then when that is all sorted out and looks good, then we will bring in the developers.
+
+Svetlana Stogni   14:58
+Mhm.
+Okay, and...
+
+Hai Le   15:09
+But yeah, I think we need to schedule a meeting with Oleksandr and Eugene to discuss exactly right.
+
+Svetlana Stogni   15:12
+Yeah.
+Yeah, Robert.
+With this updated calendar, at least we have some slots, you know, to schedule. And as you can see, I need to cancel all the time our common, I need to cancel it our common meetings with Sam and Praveen because like we always
+has this conflict now with this new schedule, we have at least some slots to think about and proceed in our collaborative sessions. And yeah, okay, yeah, this week will improve definitely.
+This, this.
+Awesome. Okay, if yours is still...
+VLP OK.
+Anything else you would like to share?
+Any problems, any questions, champions? Okay, champions.
+Any feedback on our PDLC sessions? What do you think about the speeds? Do you have enough time to get prepared? Do you have enough materials to go through doing it? Anything else, any additional help?
+And.
+
+Bandana Sriramka   16:51
+Svetlana, I have one quick question. I know there were not enough licenses for ChatGPT for the enterprise version. Are there any available?
+to get for some of the champions like here in the team.
+
+Svetlana Stogni   17:07
+Even for K, yeah, for K, as I remember, it was harder to get this license, like licenses, mostly dedicated to digital team members.
+Let me, let me raise this question and get the latest status.
+
+Bandana Sriramka   17:29
+Okay.
+
+Svetlana Stogni   17:30
+Okay, mhm.
+
+Bandana Sriramka   17:31
+Yeah, thank you.
+
+Svetlana Stogni   17:38
+So, do you have anything else to discuss, any topics, questions?
+And feedback.
+Any pain points?
+I start thinking about potential use cases, not covering like specific clear okay part, but start thinking large, like what we can do.
+And how, as a team, I mean, as a Dev Lin and potential use cases covering the entire PDLC started from digitals and engineering and create part. And this way, you can achieve the highest level of maturity level.
+Well, you have a generic flows, so for the deadlines working together and providing maximum of efficiency and increased productivity. And I strongly believe like each team
+I know this from our assessments that you have your pain points, and it differs from team to team, but still, like I think about the problems you would like to resolve as a lane using AI capabilities, and let's start.
+Focusing and thinking about this.
+It will definitely help you to choose the next level of EM charity. And we're here to help you, you know, to implement this workflows and when we do see a change of growth, we'll be more than happy to assist you here. Okay? But start thinking about it, start brainstorming.
+as our champions.
+We rely on him.
+Awesome. If no more questions, then thank you. Thank you so much. And in case you need any help, anything else, you always know how to reach out. We're always here. We're always available for you. Thank you and have a good rest of the week and of the day and of the weekend.
+We'll see you hopefully tomorrow. Thank you.
+
+Divya Ramkumar   20:01
+Thank you.
+
+Bandana Sriramka   20:02
+Thank you.
+
+Nicholas Crowley   20:02
+Excel.
+
+Iryna Pashko   20:02
+Thanks.
+
+Svetlana Stogni   20:03
+Bye.
+
+Nicholas Crowley stopped transcription

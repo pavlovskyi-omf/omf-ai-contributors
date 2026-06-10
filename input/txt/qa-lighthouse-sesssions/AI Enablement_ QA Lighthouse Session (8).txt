@@ -1,0 +1,1081 @@
+AI Enablement QA Lighthouse Session-20260408_140004UTC-Meeting Recording
+April 8, 2026, 2:00PM
+53m 24s
+
+Svetlana Stogni   0:38
+Hi everyone. Hello. Hello.
+
+Monika Burnham   0:41
+He's Svetlana.
+
+Eugene Semenyuk   1:04
+Hello, good morning, good afternoon.
+
+Svetlana Stogni   1:08
+H.
+
+Eugene Semenyuk   1:13
+Yeah, let's give one more minute and let other folks to join us.
+
+Monika Burnham   1:28
+Eugene, this is already recording. We have to start a recording, so just give maybe give everyone a reminder.
+
+Eugene Semenyuk   1:33
+Mhm.
+Yep.
+Yeah, it feels like it's been a a few weeks since we last connected. So yeah, it's a really nice to to back together, be back together. Yeah, and and it's great to see you all again.
+
+Svetlana Stogni   2:08
+And by the way guys, what do you think about new time frame for all sessions? We heard your feedback and I believe this time frame should be more convenient. Jamie, you're muted if you're sharing something with us or it is not.
+For us.
+OK, so do you like a new time frame? Is it more convenient?
+
+Eugene Semenyuk   2:37
+Yeah, it should be one hour like comparing with previous time slot.
+
+Jurijs Markelovs   2:43
+Oh, you mean a time time frame?
+
+Eugene Semenyuk   2:45
+Yeah, yeah, that time time slot for for this session.
+
+Iryna Pashko   2:47
+Cancel.
+
+Jurijs Markelovs   2:49
+I hate it 'cause it's it's it's conflicting with other.
+
+Eugene Semenyuk   2:57
+Oh.
+
+Svetlana Stogni   2:58
+Now it's conflicting. The previous one was too late, too early. Now it is really conflicting.
+
+Jurijs Markelovs   2:59
+Things on that.
+As always happens when you have more than one kit, you can you can satisfy only one of them.
+
+Eugene Semenyuk   3:12
+Mm-hmm. It's version thing.
+
+Svetlana Stogni   3:14
+Hey.
+
+Nicholas Crowley   3:36
+Very important question before we start. Did the recording start automatically or did you guys have to start it today? I see it's running.
+
+Eugene Semenyuk   3:38
+Okay.
+
+Monika Burnham   3:42
+It started automatically. Yep. It worked this time. I know, I clicked that button and the ones yesterday didn't turn on, but we already had that selected, not sure what happened. So, all right.
+
+Eugene Semenyuk   3:42
+Ohh.
+
+Nicholas Crowley   3:44
+Yes, OK.
+I don't know what was going on with those other ones.
+
+Eugene Semenyuk   3:45
+Awesome.
+Yeah.
+So, okay, I guess we are ready to start. So, yeah, hi everyone. And yeah, again, great to see you all. Over this time, we have made some good progress setting up our Lighthouse meetings series. Yeah, and I hope very soon
+we should set up our champions call, champion calls, and they should appear in your calendars as well. So yeah, let's quickly go through some updates that we have at the moment, and then proceed with discussions and maybe some demos.
+So, yeah, as you may have seen, so we also kicked off cross-functional collaborative sessions yesterday between digital QA and engineering, so which is a big step forward. So, the goal here is to straighten how we work together.
+share knowledge and beer, build more integrated workflows across teams. Yeah, and for today's session, we'll be focusing primarily on...
+Ohh.
+Or sharing progress, like what we did during during past weeks. Yeah, maybe maybe we will see some some demos. Yeah, and for sessions about collaboration, will I mean cross-function collaboration will be focusing primarily on working.
+with Code Me as an orchestrator. So yeah, please make sure that you have an access to this tool. So it should be available in Okta.
+The idea is to better connect our agents across Robo, CodeMe, and maybe other platforms, and really start shaping more effective cross-functional workflows. So yeah, we won't build.
+pieces from scratch, so we will combine what we already built. Yeah, maybe implement some missing pieces in this workflow. So yeah, another important part of today is hearing from you. Like, we'd love to understand your progress over
+over this period. So have you been running any interesting experiments? So yeah, if so, please feel free to share or even do a quick demo. So we'd really like to see what you've been working on. Yeah, so and for a matter of
+This of the session, so let's keep it interactive, yeah, and spend time discussing your experiments, insights, and any any learnings or challenges you encountered.
+So, uh...
+Yeah, do we have any any volunteers to to describe?
+your progress, like how you doing these weeks. So have you had a chance to experiment with AI? So maybe you've got some challenges.
+
+Bandana Sriramka   7:27
+Hi, Eugene.
+
+Eugene Semenyuk   7:28
+Self.
+Hey!
+
+Bandana Sriramka   7:32
+Hey, so hi, I have completed the test summary report agent for ORS. Now I am working for payments lane. Also you waiting. So here it is a little different what we did in ORS. We were using fixed version.
+
+Eugene Semenyuk   7:32
+Hi, Bandana.
+You.
+Mhm.
+
+Bandana Sriramka   7:52
+But now all of the things are being pulled by a fixed version, but the tester's name is being pulled by the linked items. So we have to get the linked item, which is tested by, and
+
+Eugene Semenyuk   8:10
+Mm-hmm.
+
+Bandana Sriramka   8:11
+The signees.
+name is have to populate in the testers column, but this is getting a little bit challenging. I can probably share it sometime, but we have to, the thing is it's going by sprints and not fixed version.
+
+Eugene Semenyuk   8:17
+Yeah.
+Two.
+Uh-huh.
+
+Bandana Sriramka   8:34
+So that is what I'm currently trying to figure out, how we can populate using fixed version and sprints in the same report.
+
+Eugene Semenyuk   8:35
+Mhm.
+Yeah, that's quite interesting. Yeah, and yeah, I remember you used ROA for this use case, and yeah.
+
+Bandana Sriramka   8:48
+Yeah.
+Correct.
+
+Eugene Semenyuk   8:56
+It's interesting.
+Oh.
+So yeah, it will be great to discuss it.
+
+Bandana Sriramka   9:02
+Yes, yeah, yeah, it's a little technical and then once I share, maybe we'll have a better picture of it, what I'm talking about.
+
+Eugene Semenyuk   9:06
+Mhm.
+Okay.
+
+Bandana Sriramka   9:11
+Yep.
+
+Eugene Semenyuk   9:11
+So yeah, let's schedule some session. Yeah, and discuss it separately, and then share the results with folks.
+
+Bandana Sriramka   9:15
+Shah.
+Yeah.
+Okay.
+
+Eugene Semenyuk   9:22
+Awesome. Thanks a lot for your updates.
+
+Bandana Sriramka   9:24
+Yeah. Thank you.
+
+Eugene Semenyuk   9:27
+Uh, Jurijs.
+Would you like to share something with us?
+
+Jurijs Markelovs   9:33
+I could if it's, yeah. So what I've been working on recently is just, and we touched base with this a little bit, Eugene, is the work, code me workflow.
+
+Eugene Semenyuk   9:43
+Just.
+
+Jurijs Markelovs   9:49
+on tracking the status of the ticket on a dashboard, on a spring dashboard, and once it reaches the testing phase, testing column.
+The goal is to deploy.
+
+Eugene Semenyuk   10:02
+Yeah.
+
+Jurijs Markelovs   10:07
+Deploy the app code.
+What is within, what's in the scope of the changes to the certain environment, so...
+Sure, that's interesting.
+
+Eugene Semenyuk   10:20
+Mm-hmm.
+Will be great.
+
+Jurijs Markelovs   10:23
+So, we can, you guys can, can, can, can help you on the fly to fix it. That's the goal, not just demo, but so you fix it.
+
+Eugene Semenyuk   10:29
+CCC.
+
+Jurijs Markelovs   10:35
+So, do do do do, how do you?
+View details, how do you view the?
+the workflow. Oh, here we go. Am I sharing? I am. So the goal is here once again.
+
+Eugene Semenyuk   10:48
+Yeah, yeah.
+
+Jurijs Markelovs   10:55
+Is parsing a Jira event, which is, which is the event is mapped with the several keys, issue key, status, labels, components, right? Once that is mapped.
+We're running.
+Gonna make it bigger, yes, and we are running, we are running conditional statement if status of the Jira ticket is in testing.
+we do something and if it's not, we're done. We are done with our flow. So once it's in testing, with pass, for whatever reason, you cannot run several conditional statements at once. So the required for me to get like a pass through.
+
+Eugene Semenyuk   11:35
+Yeah.
+
+Jurijs Markelovs   11:49
+Transform block, which is not doing anything but just passing through, so, so once it's...
+The status of the ticket geo ticket is testing, and if then another conditional verification if label is added, for example, lower environment required to the labels, then we do something.
+
+Eugene Semenyuk   12:16
+Mhm.
+
+Jurijs Markelovs   12:17
+If it's not, we skip and we end the flow. So idea here, if basically in happy path, if ticket is in testing and ticket, Jira ticket is has the lower environment required label, then we deploy in, then we are deploying.
+Um...
+the changes to the environment, right?
+
+Eugene Semenyuk   12:43
+Mm-hmm.
+
+Jurijs Markelovs   12:44
+So, this is more like a prototype, right? Because I haven't hooked up the actual JIRA.
+Um, bored.
+to this, but that's what I got at this point. And the way I can test it as of now.
+
+Eugene Semenyuk   13:05
+Yeah.
+
+Jurijs Markelovs   13:05
+Is, well, it's already been tested, but...
+is passing the JSON or the Jira ticket, which contains all these attributes, and run the workflow. I wasn't ready for any of the demo. And the execution was successful, but...
+
+Eugene Semenyuk   13:25
+Okay.
+
+Jurijs Markelovs   13:28
+Dunn.
+Um, yeah, but um...
+For example, here, yeah, this is the test, JSON, what I passed, right? Status acceptance. It was on status acceptance, right? And label, and label. So the idea here, expectation is.
+Um...
+As per conditional statements mentioned earlier to end the flow, so...
+And, for whatever reason, whatever reason that the Jira is not is not read, the attributes is not read as a return, all, null, or whatever.
+So, in another more successful, in a happy path.
+This one.
+Happy path, we get the status and testing, the label is added. Environment name is Web 05.
+And we supposed to see the happy path, all labels good, right? And then it triggers the, it triggers the run.
+Supposed to trigger the deployment, sorry, but it's still, so I'll put this that, but obviously this is a prototype, nothing is being deployed at the moment, so the challenge is what challenges might have two challenges, right?
+
+Eugene Semenyuk   14:58
+Mhm.
+
+Jurijs Markelovs   15:03
+is the connection integration of the Jira. It could be the, it could be the that training Jira, right? And connection with either Slack, which can, which can trigger the boat.
+
+Eugene Semenyuk   15:15
+Mhm.
+
+Jurijs Markelovs   15:22
+Commands, what commands we've deployed to the Web05 box code, right?
+But...
+You know, another alternative of that, you know, avoiding the slack boat with the direct direct command to the to the Jenkins also requires API token for the Jenkins, which I have.
+was able to generate, but it was not able to apply just yet. So that's where I stand. And I'm sure.
+
+Eugene Semenyuk   15:58
+Mhm.
+
+Jurijs Markelovs   16:01
+You know, you guys are very helpful and be able to help me on that.
+
+Eugene Semenyuk   16:01
+Yeah.
+Yeah, idea is.
+
+Jurijs Markelovs   16:07
+And this is the YAML. If anyone interested to see that, I can share it here.
+
+Eugene Semenyuk   16:09
+Mhm.
+Yeah, this is really great idea and probably this is like maybe the first experiment with workflows. Yeah, because we previously we didn't we didn't cover workflows in Codney. Yeah, but it should be in our curriculum for our cross-functional trainings.
+So, yeah, and yeah, first speaking, we have we have good news, yeah, especially for the first part of this workflow. So, yeah, we just received a notice that webhooks in called me are working.
+And yeah, but we need to spend some time to play with them and do some experiments. Yeah, and I think maybe in a few days.
+Two days we will have some.
+Some ready to use examples, like how to use web hooks to to trigger, how to configure web hooks to trigger agents based on some events, for example, in in Jira, like, yeah, like like like you mentioned.
+When we change the status to some to something, so yeah, this event should trigger the workflow or agent in code me.
+So, yeah.
+This part should be should be ready really, really soon.
+
+Jurijs Markelovs   17:51
+I got a question.
+
+Eugene Semenyuk   17:51
+So yeah, actually it works right now, but yeah, we need to spend some time to configure it.
+
+Jurijs Markelovs   17:58
+So, I gotta, I get the questions in this: Can I, number one in this, can I be part of the experiment, Eugene, if possible, unless you guys running on a crazy schedule on that for that experiment, and #2 for the JIRA, I know how do how does the training JIRA instance connect with the production?
+
+Eugene Semenyuk   18:00
+Uh-huh.
+Sure.
+Sure.
+Yeah.
+
+Jurijs Markelovs   18:19
+Do they like independent or they are copying each other or?
+
+Eugene Semenyuk   18:23
+They are, they are independent, so yeah, Sandbox Jira is a just a...
+
+Jurijs Markelovs   18:23
+Katta.
+
+Eugene Semenyuk   18:30
+Like, snapshot of production JIRA, but that me on.
+In January, I believe, yeah, in the middle of January.
+So yeah, for now it can be a bit outdated. Yeah, but...
+
+Jurijs Markelovs   18:47
+Yeah.
+
+Eugene Semenyuk   18:48
+Yeah, and as I remember, it doesn't have any mechanisms to sync.
+Data.
+
+Jurijs Markelovs   19:01
+Okay, that's all I have.
+
+Eugene Semenyuk   19:02
+So, yeah, but, yeah, but, but, but, but in, you don't have any restrictions to to work with production Jira, so, yeah, the recommendation is like, try, yeah, and experiment in sandbox Jira, yeah, and then if it works, so, yeah, you can you can move it to production Jira.
+Yeah, you just need to change your integration.
+
+Jurijs Markelovs   19:28
+And how do I integrate the GR in here? I'm sorry, Eugene, just quickly, words of wisdom.
+
+Eugene Semenyuk   19:29
+Yeah, and regarding...
+Mhm.
+Huh?
+Oh.
+
+Jurijs Markelovs   19:34
+How do I integrate the workflow with the JIRA, the actual JIRA?
+Is there like a?
+
+Eugene Semenyuk   19:40
+Uhh...
+Yeah, you need you need to set up integration, so yeah, you can share your screen and can quickly go.
+
+Jurijs Markelovs   19:42
+Data source using the data source integration.
+Yeah.
+
+Eugene Semenyuk   19:52
+Three, it shouldn't take.
+
+Jurijs Markelovs   19:54
+Yes, I know the integration works that way with the systems, but with the workflows, it's slightly different, I think, right? But anyway, here I am on the integrations page.
+
+Eugene Semenyuk   20:03
+Yeah.
+Uh...
+Yeah, and yeah, I see on the GitHub.
+Integrations.
+No, Jira.
+So, yeah, you need to provide some some fancy name like Jira, provide a URL, set is cloud.
+
+Jurijs Markelovs   20:33
+And what will be the URL?
+Right.
+
+Eugene Semenyuk   20:37
+Your Jira instance. Yeah, this one.
+
+Jurijs Markelovs   20:37
+Is that me?
+Just this, right?
+
+Eugene Semenyuk   20:41
+Yeah.
+Yes, that is cloud.
+Provide your email.
+And generate token.
+So, and then you can connect this integration with agents and the workflows.
+
+Jurijs Markelovs   21:10
+And that's all I got.
+
+Eugene Semenyuk   21:11
+Yeah, yeah.
+
+Jurijs Markelovs   21:16
+And do I need to trigger this as a global integration?
+
+Eugene Semenyuk   21:20
+Ohh.
+
+Jurijs Markelovs   21:20
+Thank you.
+Yeah.
+
+Eugene Semenyuk   21:25
+Yeah, it's optional. So yeah, this. So yeah, if you enable this switcher, so this integration will be available in multiple projects. So yeah, but by default, yeah, it will be available for.
+workflows and agents inside acquisition growth project.
+
+Jurijs Markelovs   21:47
+Okay, so here we go. We got I got the I got this right. How do I connect it with this workflow?
+
+Eugene Semenyuk   21:50
+Mhm.
+Uh, let's open it.
+
+Jurijs Markelovs   21:58
+System to custom note.
+
+Eugene Semenyuk   22:00
+Maybe in tools.
+Yeah, and here, here you need to select, it should be project management tool. So I remember.
+Yeah, configure available tools.
+Yeah, generic JIRA and select your integration.
+
+Jurijs Markelovs   22:32
+Okay, and.
+And, and assault is escape here.
+
+Eugene Semenyuk   22:36
+Yeah.
+And let's.
+
+Jurijs Markelovs   22:39
+Safe.
+
+Eugene Semenyuk   22:39
+Let's close it. Oh, yeah.
+It was selected, so yeah.
+
+Jurijs Markelovs   22:43
+Okay.
+
+Eugene Semenyuk   22:47
+We have a generic tool.
+
+Jurijs Markelovs   22:51
+Okay, and what do I do here?
+Says method.
+
+Eugene Semenyuk   22:56
+Ohh.
+
+Jurijs Markelovs   22:58
+Go to a few, Rao.
+
+Eugene Semenyuk   22:59
+Yeah, good, good question, so...
+So yeah, here in workflow, so yeah, if you would like to use tools, so it will be more like straightforward and deterministic. So you need to specify like URL, what method, like get post, what parameters.
+and so on. So, but you can you can create you can create assistant like agent that can do operations with Jira for you.
+
+Jurijs Markelovs   23:39
+OK.
+Alright, if I'm taking too much time, is that what we are doing right now?
+
+Eugene Semenyuk   23:58
+Okay, I think that's that's fine.
+
+Jurijs Markelovs   24:02
+We can, we can take this offline, Eugene, if you want to, so everybody else can go, but alright.
+
+Eugene Semenyuk   24:04
+Okay, yeah.
+
+Svetlana Stogni   24:07
+And guys, just for your information, these topics will be covered during our next PTLC sessions. And so we will talk about integrations, how to set up the integrations. Yeah, we will send the detailed agenda.
+
+Eugene Semenyuk   24:15
+Mhm.
+Yeah, and as I remember, we will discuss it.
+Tomorrow, yeah, tomorrow we'll have some introduction workshop.
+
+Svetlana Stogni   24:33
+I have a little overview, yeah.
+
+Eugene Semenyuk   24:35
+We have a level overview and how to how to create the first assistant and how to configure the first Jira integration.
+So, yeah, it should be in our agenda.
+Okay, yeah, thanks a lot. So, um...
+So, yeah, do we have?
+Other volunteers.
+
+Dhanalakshmi Chinnasamy   25:01
+I'm just trying to integrate with the X-ray, code me with the X-ray. I'm still exploring it so that we can load results, agent results to X-ray.
+
+Eugene Semenyuk   25:04
+Mhm.
+Mhm.
+Yeah, that's a really important topic, yeah, because, yeah, we heard that some teams be creating to X-ray, yeah, and it will be really awesome.
+It would be really awesome to have such experiments and some agents, how to retrieve test cases, how to...
+How to update them and so on.
+Because, yeah, currently, currently in code me, so yeah, we we just generated tasks, but I didn't didn't send it send it somewhere.
+
+Dhanalakshmi Chinnasamy   25:41
+Yeah.
+Yeah, I'm exploring it still.
+
+Eugene Semenyuk   25:55
+Okay, so we have.
+Yeah, we are waiting for results of experiments, so yeah, looking forward.
+Okay, any any other experiments?
+Any, any blockers?
+Challenges.
+
+Svetlana Stogni   26:25
+Running pain points you are facing on a daily basis on your projects. Let's think about how to make your lives easier with AI.
+Let's brainstorm if you have any examples to discuss.
+
+Saravanan Ganeshan   26:48
+Hey, Eugene, we are using Robo, right?
+
+Eugene Semenyuk   26:50
+Yeah.
+Ohh.
+
+Saravanan Ganeshan   26:54
+Ohh.
+
+Eugene Semenyuk   26:55
+Mhm.
+
+Saravanan Ganeshan   26:56
+So, so with Robo, like you are getting a table, it has multiple columns, but like when it comes to table generation in Robo, like they're not able to set the columns with or adjust it like manually.
+Seems like it's when the content is overloaded, the length of the table is or like the length of the service is increasing, but like we're not able to adjust the column bit. So is there any option available or like is there anything that we can do?
+
+Eugene Semenyuk   27:22
+Mhm.
+
+Saravanan Ganeshan   27:36
+to make the table appear in a way that we wish.
+
+Eugene Semenyuk   27:43
+Uh, that's a pretty interesting question.
+Ohh.
+Yeah, let's probably discuss it offline. So yeah, let me find some time slot for us.
+Yeah, and.
+
+Saravanan Ganeshan   27:55
+Yeah, sure.
+
+Eugene Semenyuk   27:58
+Try to dive deeper into this topic.
+So yeah, I'll find something for.
+
+Saravanan Ganeshan   28:04
+Yep.
+
+Eugene Semenyuk   28:07
+Tomorrow, so yeah, we we should be in in similar time zones, as I remember.
+
+Saravanan Ganeshan   28:13
+Yeah, like, I'm from India, so like anytime.
+
+Eugene Semenyuk   28:18
+Yeah.
+
+Saravanan Ganeshan   28:20
+Uh, by no refined form.
+
+Eugene Semenyuk   28:23
+Yeah, yeah, okay. Yeah, let's sync up tomorrow and dive deeper.
+
+Saravanan Ganeshan   28:32
+Sure, that helps. Thanks, Eugene.
+
+Eugene Semenyuk   28:35
+Thank you.
+Yeah.
+So, any any other experiments, ideas?
+Yeah, if not, I'd like to to remind one more thing, so yeah, let me...
+Let me share my screen.
+And I like to...
+The shirt again there.
+the idea that I'd like to work with you during this phase.
+So, yeah, I've already mentioned it during our previous calls, yeah, but...
+I'd like to remind you about this.
+So, this is really uh...
+This is really a perspective idea, I would say. So yeah, this is L3 use case about smart task selection and
+And I think it's going beyond.
+The smart task selection. It's about smart task management.
+Yeah, am I sharing? Yes.
+So, yeah, the goal of the goal of this use case is...
+Uhh...
+Hayes.
+Analyze recent changes for some user story and connected pull requests, and based on, ohh, something is wrong with my sharing.
+No.
+Sorry.
+Yeah, now it should be better.
+So, yeah, let me start again. Yeah, the goal, the goal of this case, get user story, get connected pull requests, analyze changes described in these pull requests in and user story, see what
+what dependencies, what changes we had here. And based on the changes in code and the changes described in the user story, we would like to analyze test cases. And
+and see like what does cases can be reused for. Let me scroll it down a bit.
+to the schema. Yeah, what does cases we can reuse?
+for testing for this particular user story, what test cases we need to add to our test case library.
+And both those cases are outdated and can be can and should be updated. Yeah, because our behaviour, our...
+logic, yeah, have been changed. So yeah, that's the main idea. Connect, connect some data sources like product repository, test automation repository, manual test cases from Spira.
+or X-ray, mabl, yeah, get some dynamic data, like user story, linked conference pages for this particular user story, pull request, and based on the analysis of these artifacts, identify what
+We need to test.
+Yeah, and then.
+Analyze current tests and see what tests can be reused, what tests we need to add, and what tests we need to update.
+So yeah, we see you, we see you really big.
+opportunity to enhance testing process using this workflow. Yeah, and frankly speaking, we've done with some experiments.
+To, yeah, and they look.
+Promising, I would say. Yeah, we have a few agents and we are working with the servicing team, especially with Hai.
+on this workflow. Yeah, but yeah, I'd like to emphasize to you to to work with us on this use case and try to adopt it for your for your teams. So, yeah, if you would like participate, so yeah, just please
+Let us know, so yeah, we we will provide you all the instructions like how to how to start work on this use case.
+How to how to prepare initial data? What kind of data do you do you need?
+So, yeah, and once we will have something ready, we will prepare, we will prepare some.
+some guide and instructions like how to scale these solutions, the solution in an effective way to other teams.
+So yeah, that's...
+That's the main idea, and I hope it will be our main use case for this phase.
+Yeah, but...
+Yeah, I'd like to...
+Yeah, I'd like to hear your...
+Your your your thoughts, your ideas about this workflow.
+Do you see, like, is it applicable for your teams?
+Or not.
+
+Debamitra Bhattacharjee   35:16
+So, Eugene and Dev here, so this would be mainly based on quote me or...
+
+Eugene Semenyuk   35:19
+Mm-hmm.
+Ahh.
+Yeah, friendly speaking, the orchestration can be like anything, yeah, but we will work in Code Me.
+
+Debamitra Bhattacharjee   35:36
+Okay.
+
+Eugene Semenyuk   35:37
+And, uh, yeah, and yeah, I remember your...
+
+Debamitra Bhattacharjee   35:37
+Okay.
+
+Eugene Semenyuk   35:43
+I remember your.
+
+Debamitra Bhattacharjee   35:45
+Yeah, I mean most of our application, yes, because I would like to volunteer for this.
+
+Eugene Semenyuk   35:46
+Like conditions, yeah, and.
+Yeah, and.
+Uhh...
+
+Debamitra Bhattacharjee   35:54
+Butter.
+
+Eugene Semenyuk   35:54
+Yeah.
+
+Debamitra Bhattacharjee   35:56
+We need to figure that piece, like the Snowflake integration.
+
+Eugene Semenyuk   35:56
+Yeah, but...
+Mhm.
+Yeah, but I'm thinking right now, so maybe we don't need Snowflake integration. So yeah, the goal is like take user story, take pull request.
+
+Debamitra Bhattacharjee   36:05
+Mm.
+Yeah.
+Okay.
+Mhm.
+
+Eugene Semenyuk   36:17
+Like, analyze what has been changed.
+And, based on like these changes, just identify and prioritize scenarios, like what we need to, what we need to test.
+For this particular user story, then...
+Go to...
+test library. So it can be like manual test cases, mabl tests or test automation repository.
+Yeah, and see how these changes affect tests and what tests here can be reused for testing this user story, what tests we need to add.
+
+Debamitra Bhattacharjee   36:54
+Okay.
+Mhm.
+
+Eugene Semenyuk   37:10
+And what test we need to update? Yeah, and especially for your case.
+
+Debamitra Bhattacharjee   37:16
+Mhm.
+
+Eugene Semenyuk   37:17
+It should be, it should be really applicable for.
+
+Debamitra Bhattacharjee   37:23
+The custom framework on that.
+
+Eugene Semenyuk   37:24
+For change.
+Yeah, yeah, and for changes in our database schema or views.
+
+Debamitra Bhattacharjee   37:33
+K.
+
+Eugene Semenyuk   37:35
+Yeah, because.
+Yeah, I think it is quite a regular task for your team, so where I can engineering guys updates, update tables, views, yeah, yeah, yeah.
+
+Debamitra Bhattacharjee   37:44
+Yeah.
+Correct. Yeah, view definition. Yeah.
+
+Eugene Semenyuk   37:54
+And, uh...
+
+Debamitra Bhattacharjee   37:54
+Okay.
+
+Eugene Semenyuk   37:56
+And yeah, and at least this branch of this workflow should be able to catch this situation and propose updates for test Automation repository.
+
+Debamitra Bhattacharjee   38:03
+Okay.
+OK.
+
+Eugene Semenyuk   38:08
+So yeah, let's probably try. So yeah, let's connect. So yeah, I'll set up some session for us. So yeah, we we already have we already have few agents and we can we can we can try them. We can we can connect like your development repositories, your test automation repository.
+
+Debamitra Bhattacharjee   38:10
+Ohh.
+Shah.
+Ho.
+Okay.
+Yeah.
+Mhm.
+
+Eugene Semenyuk   38:29
+No.
+Yeah, to take take some some user story with pull requests and see, like, how it works with this particular part, because yeah, this, because I I see that this part is a pain point.
+
+Debamitra Bhattacharjee   38:46
+Yes, definitely. Okay, cool.
+
+Eugene Semenyuk   38:52
+Yeah, awesome.
+Yeah, any any other ideas?
+Starts.
+Maybe ideas not connected with this particular use case, maybe.
+Maybe this flow inspired you to something else, so yeah, and we will we will really glad just to hear your your ideas.
+Yeah, and help, and help you to shape them and scale.
+So yeah, feel free to share these ideas now or just or just ping me in direct messages.
+Me or Svetlana?
+So, okay, I think no, no ideas. Okay, so yeah.
+We'll connect with you offline, yeah, and we'll try to brainstorm on some use cases, like how to...
+How to make?
+These UI use cases to be more efficient for and more applicable for your for your particular teams.
+Pum, pum, pum.
+Okay, I see.
+Yeah, I see Denis on our.
+Another call, so...
+Hi, hi, Denis. Do you have any updates regarding your tool?
+
+Denis Platonov   40:56
+Hi.
+Well...
+I'm just trying to figure out the model situation right now.
+
+Eugene Semenyuk   41:05
+Mhm.
+
+Denis Platonov   41:06
+Because that's really like the...
+the key module of the whole application.
+Yeah.
+
+Eugene Semenyuk   41:20
+Do you mean model like?
+Using some.
+like API key or...
+
+Denis Platonov   41:29
+Yeah, I was just using like my own API key for open API. I also tried to use GitHub models, which is fine as well. Both are working. So I was able to hook it up yesterday with the code me using username and password, but that's like not model, it's agent, so.
+
+Eugene Semenyuk   41:31
+Mhm.
+Mm-hmm.
+
+Denis Platonov   41:51
+A bit different. So if we could get this light LLM proxy working, I think that would do the trick.
+
+Eugene Semenyuk   42:00
+Mhm.
+Okay, so let, yeah, let me operate on this, so yeah, I'll connect today with, yeah, with our infrastructure guys, yeah, and I hope they should be able to help with the light LLM things, yeah, and.
+
+Denis Platonov   42:19
+Yeah, that would be awesome.
+
+Eugene Semenyuk   42:21
+Yeah, and let's connect tomorrow, or maybe you...
+On Friday.
+Yeah, and yeah, I hope.
+I hope we can solve it.
+
+Denis Platonov   42:31
+Yeah, yeah, and also, like, in the meantime, the courser ID, I'm not sure how to install it because you usually request that through the software installation center, but it's missing there.
+
+Eugene Semenyuk   42:35
+To.
+Mm-hmm.
+Mhm.
+
+Denis Platonov   42:46
+So I guess there should be another request to actually add it there, because even if you log into Courser through the Okta chiclet, which is a web Courser app, which is really like a chat, but the whole point of having Courser.
+Is the ID piece of it not the chat?
+
+Eugene Semenyuk   43:07
+Mhm.
+Yeah, and.
+
+Denis Platonov   43:11
+So I think we should, I'm not sure like how people go around. I was asking people yesterday, like support team, they have no clue.
+
+Debamitra Bhattacharjee   43:12
+Um...
+So I have a question regarding the cursor. So I was trying, I could access from the Okta, but it seems like if I'm asking anything, it's like the, it's not able to like ask it anything like it's like disabled.
+I integrated my Git repo, but nothing after that.
+Is anybody facing that problem?
+
+Eugene Semenyuk   43:48
+Mhm.
+So.
+
+Debamitra Bhattacharjee   43:52
+So, yeah, this chat box.
+
+Denis Platonov   43:55
+And.
+
+Eugene Semenyuk   43:55
+So yeah, and regarding downloads, so yeah, I...
+So, so yeah, this is really quite, quite strange situation. So, yeah, you have cursor here, but you don't have cursor in software center.
+
+Denis Platonov   44:06
+Yeah, all downloads are blocked by the corporate policies for any software. So any software needs to be requested from the self-service portal. And then it shows up in a software center application where you actually click it and install it from there.
+
+Eugene Semenyuk   44:17
+But there is.
+
+Denis Platonov   44:24
+So, yeah.
+So this will not work. It shows like blocked by firewall.
+
+Eugene Semenyuk   44:28
+Yeah, and the, yeah, and I believe this, yeah, and and this option is not working, so yeah, it shows like the message.
+Like, this is...
+
+Denis Platonov   44:39
+Yeah.
+
+Eugene Semenyuk   44:40
+And for me, it's working, so yeah, let's try to connect with the guy that I mentioned.
+Uh, with James, as I remember, so yeah.
+
+Denis Platonov   44:51
+Yeah, I actually did yesterday. There was some back and forth, but he basically said that he tried to do...
+
+Eugene Semenyuk   44:58
+Right.
+
+Denis Platonov   44:59
+everything possible to show the courser IDE in the applications list, but it's not there. Again, my guess is that it's just not kind of approved, meaning it didn't go through the process to.
+
+Eugene Semenyuk   45:07
+Mhm.
+
+Denis Platonov   45:18
+To add.
+to the option to the software installation center.
+
+Eugene Semenyuk   45:23
+Mhm.
+Mm-hmm.
+Okay, and.
+
+Debamitra Bhattacharjee   45:28
+But can you ask, ask it here anything? Sorry to.
+
+Denis Platonov   45:28
+So there is a form though. I think you should probably fill out the form to do that. There is like some security scanning and some other stuff, my guess. And then it should just show up and just follow the regular process because for any software, like anything.
+possible you have to go through the request.
+
+Eugene Semenyuk   45:52
+Yeah, but in regular requests, I mean, to install the software, we don't have cursor option.
+
+Denis Platonov   45:58
+Yeah, for example, Visual Studio Code is there. So that's how I got it installed. So I just submitted the request, pick Visual Studio Code, approved, blah, blah, blah. It takes like a couple of hours maybe to start to end, and then you go and refresh your available applications and install from the...
+
+Eugene Semenyuk   45:59
+I remember.
+Mhm.
+Mhm.
+Mhm.
+
+Denis Platonov   46:17
+Software Installation Center.
+
+Eugene Semenyuk   46:21
+Yeah, and that's really interesting. Guys, do you have similar problem like to to install cursor using this option or software center?
+
+Debamitra Bhattacharjee   46:33
+So, Eugene, Dev here, can you hear me? I think we're fine. Okay, so I am facing the problem with my cursor is like, I'm not able to ask it for anything. Like, I integrated my repo, but...
+
+Eugene Semenyuk   46:36
+Mm-hmm.
+Yeah, yeah, yeah.
+Mhm.
+Ha.
+
+Debamitra Bhattacharjee   46:52
+Um, when I'm trying to, you know, just...
+
+Eugene Semenyuk   46:54
+I know.
+
+Debamitra Bhattacharjee   46:57
+It kind of like I tried to create new agents, nothing, nothing is working.
+
+Eugene Semenyuk   46:57
+I see.
+Yeah, do do you have do you have models here? So, yeah, I, I, I, you have that's strange because, yeah.
+
+Debamitra Bhattacharjee   47:07
+Yeah, yes, yeah.
+Yes, I can share my screen and show you.
+
+Eugene Semenyuk   47:14
+Yeah, let's try.
+
+Debamitra Bhattacharjee   47:18
+So, let me share my screen.
+Ohh.
+Can you see my screen?
+
+Eugene Semenyuk   47:31
+Yeah, yeah, yeah, and I see the models.
+
+Debamitra Bhattacharjee   47:34
+Yeah, these models are there, and you can see the integration here, but when I'm like, so...
+
+Eugene Semenyuk   47:35
+Mhm.
+Mhm.
+
+Debamitra Bhattacharjee   47:51
+So, see, this is disable, like I can't, it's asking for a select a branch, but when I'm trying to select a branch, it's not allowing me.
+
+Eugene Semenyuk   48:04
+Mmhmm.
+That's interesting.
+
+Debamitra Bhattacharjee   48:10
+And it's I'm logged in; my name is the.
+
+Eugene Semenyuk   48:17
+Mhm.
+Yeah.
+Yeah, let's maybe try to do it in a Coursor application. So yeah, by the way, could you please try to install it?
+Yeah, and see.
+Like, will we have, uh-huh, yeah, the same.
+
+Debamitra Bhattacharjee   48:36
+Okay.
+
+Eugene Semenyuk   48:41
+And could you please open Software Center?
+
+Debamitra Bhattacharjee   48:44
+K.
+Oh, software sent in my OK.
+
+Eugene Semenyuk   48:50
+Yeah, yeah, yeah, yeah, and Windows.
+Yeah.
+Yeah, let's...
+Uh-huh.
+I see no cursor.
+Ohh.
+So, yeah, I guess...
+I guess this is a common problem, yeah, because at least three, three of you.
+Yeah, I have this problem.
+So yeah, let's.
+Yeah, let's probably escalate it.
+
+Debamitra Bhattacharjee   49:37
+Okay.
+So, Eugene, I have another like problem I'm facing. Sorry to jump from one context to another one since I'm sharing already. So that's why like I thought of like asking some other people. So while connecting the get co-pilot from my ID.
+
+Eugene Semenyuk   49:44
+Mhm.
+OK.
+Mhm.
+
+Debamitra Bhattacharjee   49:58
+I am getting the like this error.
+Is anybody facing this issue? Because I can connect from a VS Code.
+
+Eugene Semenyuk   50:15
+Mhm.
+
+Debamitra Bhattacharjee   50:15
+But for only for this, from Pyjam, I'm getting this problem.
+
+Eugene Semenyuk   50:23
+Sorry.
+That's interesting, so...
+Ohh.
+Yeah, as I remember your.
+Your engineering team, yeah, they they also use PyCharm, so yeah, do they have such problem or?
+
+Debamitra Bhattacharjee   50:40
+Yeah.
+
+Eugene Semenyuk   50:46
+Is it on the for you?
+
+Debamitra Bhattacharjee   50:46
+No, they are not facing that problem.
+
+Eugene Semenyuk   50:49
+Uh-huh.
+
+Debamitra Bhattacharjee   50:51
+But when I Google it, like I saw some people mention about this problem with their ID and VS Code, it's working properly.
+
+Eugene Semenyuk   50:54
+Mhm.
+Mhm.
+Okay, so yeah, I'll ask our engineering folks about this. So maybe someone faced this problem, yeah, and maybe they have a solution. So, okay, so yeah, let's discuss it on our upcoming sync up.
+
+Debamitra Bhattacharjee   51:11
+Mm-hmm.
+Look.
+Okay.
+Sure, sure.
+Mhm.
+Shah.
+
+Eugene Semenyuk   51:32
+Okay, so yeah, I noted down all the...
+Things that we need to do, yeah.
+Yeah, and we have pretty much things to do. Yeah, we will definitely solve the problem with cursor, because I see that this is not a single.
+User problem.
+So, yeah, it should be something important.
+Okay, we'll solve it. So yeah, we'll stop some additional one-on-one sessions with you guys.
+Uh, you have to follow the the issues.
+And so on.
+And yeah, I see the message in chat. Do we have any updates on Claude?
+Clearance for usage for OMF yet, so unfortunately, for now, no updates regarding quote.
+So, yeah, hope, hope to hear something soon.
+Yeah, okay, any any other questions, ideas?
+So if not, okay, we'll schedule, we'll schedule some one-to-one sessions with you. Yeah, and yeah, let's catch up tomorrow on our cross-functional collaboration session. Yeah, have a good rest of the day, and.
+See you.
+Pai.
+
+Saeyed Shamlou   53:18
+Thank you.
+
+Debamitra Bhattacharjee   53:19
+Right.
+
+Nicholas Crowley   53:20
+So.
+
+Nicholas Crowley stopped transcription

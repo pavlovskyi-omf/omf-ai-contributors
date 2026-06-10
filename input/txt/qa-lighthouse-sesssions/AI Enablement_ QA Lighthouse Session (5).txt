@@ -1,0 +1,239 @@
+AI Enablement QA Lighthouse Session-20260429_140012UTC-Meeting Recording
+April 29, 2026, 2:00PM
+16m 46s
+
+Eugene Semenyuk   0:12
+Yes.
+
+Svetlana Stogni   0:29
+Hello, everyone.
+
+Eugene Semenyuk   0:31
+Hello.
+Yeah, let's wait a couple of minutes.
+Two.
+Do, do, do, do.
+By the way, while we are waiting, so yeah, I'd like to thank you for your cross-functional use cases that you wrote yesterday. So yeah, I wasn't able to join yesterday's session yet, but today I've seen these use cases. Yeah, some of them look so
+Looks impressive.
+So, yeah, and then I hope we will implement at least some of them.
+
+Divya Ramkumar   2:19
+Eugene, do you have a link for where the use cases have been recorded?
+
+Eugene Semenyuk   2:25
+Yeah, yeah.
+
+Divya Ramkumar   2:27
+Thank you.
+
+Svetlana Stogni   2:30
+And we also summarize the full list of the use case has been proposed by the participants and categorize based on the priorities and based on the fact if it is FDLC or not.
+
+Eugene Semenyuk   2:31
+Dun, dun, dun.
+Mm-hmm.
+
+Svetlana Stogni   2:51
+As far as you might remember, not all of these cases.
+They are truly ideal, right? Some of them are, for example, to their part only, or to CA or some organizational part like this use case, which is really, really strong, so highly I proposed like to...
+
+Eugene Semenyuk   2:59
+Yeah.
+
+Svetlana Stogni   3:15
+Set up a single library and source of tools with all the agents have been implemented to ensure the reusability of those agents. Yeah, it will be really helpful, but this is not like.
+
+Eugene Semenyuk   3:21
+No.
+
+Svetlana Stogni   3:35
+Fall, but still very relevant and very powerful.
+
+Eugene Semenyuk   3:42
+Yeah, and Francis speaking, I'm proud of you. So yeah, yeah, I've seen really good cross-functional use cases. Yeah, and yeah, it looks like QA, QA representatives were the more relevant and active during.
+during previous sessions. So yeah, I, yes, special thank you for you guys. Yeah, I'm really proud of you.
+
+Svetlana Stogni   4:06
+You.
+
+Eugene Semenyuk   4:15
+Ohh.
+Okay.
+Let's probably...
+Yeah, let's probably start. So yeah, I think other folks can join us a bit later or watch recording. So yeah, hi everyone and welcome to our Lighthouse session. Yeah, today we have, we have.
+one demo line up. Yeah, and if you have something, something that you can demonstrate today, so yeah, feel free to raise hand or just unmute and say, yeah, have some use case, some interesting.
+thing to showcase today.
+Yeah, and yeah, as always, the goal of this session is simple. Share what we're building, learn from each other, identify what's scalable and reusable, and accelerate adoption through real examples. Yeah, besides, yeah, besides
+today's demo. We're also working on some interesting use cases. Yeah, and hope, yeah, hope we will have few few interesting demos next week. So yeah, and yeah, as usual, please feel free to ask questions during the demo.
+or know them down for discussion afterward. So, yeah, with that, let's jump into our first demo. So, Bandana, would you like to demonstrate your agent that we just moved to production? So, yeah, and yeah, we...
+
+Speaker 1   5:51
+I.
+
+Eugene Semenyuk   6:08
+We moved to agents to production, so the first one.
+It is a Bandana agent, the second one agent created by Hai. So, yeah, let's start with Bandana agent.
+
+Bandana Sriramka   6:25
+Hey, good morning everyone. Share my screen.
+
+Eugene Semenyuk   6:31
+Yeah.
+
+Bandana Sriramka   6:31
+Okay.
+
+Eugene Semenyuk   6:33
+Yep.
+
+Bandana Sriramka   6:34
+So we already saw this agent before it was moved to prior, but let me demo this one more time. I do see few changes that I want to highlight first before I jump into the demo. So with the new agent, I see that the model has been upgraded.
+
+Eugene Semenyuk   6:38
+T.
+
+Bandana Sriramka   6:53
+We used to see a behavior thing, which is now merged with instructions. There is no more two fields to enter differently, like behavior instructions and the actual instruction. So both are clubbed. Another thing is after moving, the conversation starters were not moved.
+
+Eugene Semenyuk   7:09
+Mm.
+
+Bandana Sriramka   7:15
+So I had to add them.
+And I have also enabled to swap to the new model. It was also not enabled. So those are the few changes that I noticed.
+
+Eugene Semenyuk   7:17
+Okay.
+Yeah, sorry, can I interrupt you? Have you tested this new model? So yeah, I think this is quite a new piece.
+
+Bandana Sriramka   7:32
+Yeah.
+Yes, so in sandbox also I was using the new model. So yeah, and this morning also I tried this after it has been moved to prod instance and it works good.
+
+Eugene Semenyuk   7:40
+Yeah.
+Mhm, mhm.
+Awesome.
+
+Bandana Sriramka   7:51
+Yeah.
+
+Eugene Semenyuk   7:52
+Thank you. Sorry for interruption.
+
+Bandana Sriramka   7:53
+Yeah.
+No problem. So, for the test report summary for UAT, I'll show you quickly the actual report, how it used to look like. I think. Okay, so that's the actual report where we have to pin this top column.
+top block and also all of the columns respectively. This will show up the actual lane story, not the QV story or the linked worked item. And rest of the fields will be like this. And this linked worked item, whatever the tester have tested it, we have to display that.
+not the parent assignee. So as you can see, for example, this is the actual user story that came for that ERC. And we have to display this link worked item, which is tested by observe ATM. So if I open it, as you can see, this goes by fixed version.
+And the linked worked item, which is tested by, goes by sprints, not fixed version.
+So let's test out. Since I have already walked through.
+the instructions of the prompt. I'll just go ahead and test it out.
+I'm going to tell it to generate a report for UAT and I'm giving the sprint ID. So let's click on that.
+And as you can see, the top blocks is also generated. And it has properly pulled up all the stories, not the QV stories here in the requirement visibility and also the team from the linked worked item. And once it's generated, it will also give us a link here.
+to publish it to confluence.
+And I all be published it here.
+this morning and this is how it looks like.
+Any questions?
+How does it go?
+
+Eugene Semenyuk   10:28
+Looks good. Thank you. Guys, do do you have do you have any questions regarding this use case?
+
+Bandana Sriramka   10:29
+Yep. Thank you.
+That's all from my end. Thank you.
+
+Eugene Semenyuk   10:43
+Yeah, thank you.
+Thanks, Bandana. Looks looks brilliant, as usual.
+Hmm.
+Okay, so do we have something else to demonstrate? So yeah, in today's agenda we have, yeah, on this demo, but probably you have something that you would like to share with us today.
+I.
+Maybe some some new experiment.
+New ideas.
+Even if it's...
+on design stage.
+So...
+Yeah, well, while we're waiting, I'd like to mention that I'll schedule our session regarding smart task management.
+Regarding this use case for for for tomorrow.
+So, yeah, we'll continue discussing how to adopt this use case on the on the projects.
+So, yeah, Lisa.
+Yeah, keep in mind that you will receive this meeting invite really, really soon.
+Okay, any...
+Any other experiments, ideas, thoughts?
+
+Dhanalakshmi Chinnasamy   12:42
+I have a quick question. So currently in the code, we cannot we integrate the except the GRAM conference? Because I tried to refer the file system, looks like it's restricted.
+
+Eugene Semenyuk   12:44
+Yeah, sure.
+What could you please repeat what kind of instance would you like to integrate?
+
+Dhanalakshmi Chinnasamy   13:03
+So, when we...
+I tried, and I explored some use case to read the Excel file from the file system, and looks like it's all restricted. So, currently, with code, we cannot integrate except 0 and confluence; we cannot integrate with anything.
+
+Eugene Semenyuk   13:11
+Mhm.
+Uh...
+
+Dhanalakshmi Chinnasamy   13:24
+The file system.
+
+Eugene Semenyuk   13:28
+I mean file system.
+
+Dhanalakshmi Chinnasamy   13:31
+Yeah, if you did.
+
+Eugene Semenyuk   13:31
+Do you mean your your your own first your your own file system like on your?
+
+Dhanalakshmi Chinnasamy   13:38
+Mmh.
+
+Eugene Semenyuk   13:39
+on your machine or yeah, for this case, yeah, I propose to use data sources. So you can maybe show.
+As we have, since we have time.
+Mm.
+It called me.
+Looks like...
+My browser is not responding.
+Okay, while it's loading, so yeah.
+You can use data sources and store some files in data sources. So there can be some text files, Excel files, and many, many other formats you can put in data sources and agents can use these data.
+Or you can create Git repository and place all necessary files to these Git repository and use these Git repository as an alternative for your file system.
+
+Dhanalakshmi Chinnasamy   14:51
+Yeah.
+Okay.
+
+Eugene Semenyuk   15:10
+Yeah, but regarding integrations, yeah, for now we have only...
+on the GitHub, Confluence and Jira available and approved. Yeah, we have more integrations available like X-Ray and many, many others. Yeah, but they are still not approved.
+I would hope they will be approved soon.
+Yeah, and...
+Yeah, we can, we can try to use them maybe later.
+
+Dhanalakshmi Chinnasamy   15:46
+Okay, thank you.
+
+Eugene Semenyuk   15:47
+Okay.
+Thank you.
+Yeah, and yeah, before we close, does anyone have final questions?
+One.
+Two, three.
+Okay.
+Uh, yeah, we we are quick today, yeah, and uh...
+Yeah, please keep in mind that I'll send you a meeting request for our separate discussion for smart test management use case for tomorrow. Yeah, and yeah, I will be glad to see you tomorrow on our next cross-functional PLC session. So.
+Have a good rest of the day and see you tomorrow.
+Bye.
+
+Svetlana Stogni   16:40
+See you. Thank you. Bye.
+
+Bandana Sriramka   16:42
+Thank you.
+
+ stopped transcription

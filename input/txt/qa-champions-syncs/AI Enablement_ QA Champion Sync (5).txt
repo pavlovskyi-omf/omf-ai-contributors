@@ -1,0 +1,494 @@
+AI Enablement QA Champion Sync-20260427_140112UTC-Meeting Recording
+April 27, 2026, 2:01PM
+26m 50s
+
+Eugene Semenyuk   0:11
+Hello!
+
+Bandana Sriramka   0:15
+Good morning.
+
+Eugene Semenyuk   0:21
+Peach.
+Hello.
+Yes.
+Good morning.
+Couple of minutes and let other folks join us.
+Yeah.
+You.
+I need to do whatever.
+You.
+
+Svetlana Stogni   1:17
+You.
+Who?
+
+Eugene Semenyuk   1:46
+Good to know. Yeah, let's wait one more minute.
+I see full sun joining.
+I
+Yeah.
+Yeah, let me ping other folks.
+
+Svetlana Stogni   2:10
+Hi, everyone.
+
+Eugene Semenyuk   2:13
+Hi, Suparna.
+Yes.
+Sing song sung.
+
+Svetlana Stogni   2:30
+Eugene, say hello to your neighbor. We can hear you well as well.
+
+Eugene Semenyuk   2:31
+The.
+Yeah, sorry.
+
+Svetlana Stogni   2:36
+from our group.
+
+Eugene Semenyuk   2:37
+Yeah.
+Yeah, I hope I won't talk too much today, so yeah.
+Yeah, oh, I see guys are joining. Yeah, so yeah, well, yeah, let's start, and yeah, I hope some guys will join us later. Yeah, hi everyone, and thank you for joining today's AI Champions call, and glad to see you.
+All here. So yeah, as usual, this session will be structured in a few parts. So first we'll, yeah, we'll discuss some news, if any. After that, we'll have
+Some kind of open discussion, so we...
+Everyone would love to hear what you've been experimenting with, what use cases you're exploring, and where you might need support. And finally, we'll wrap up with next steps and alignment. So regarding news, so yeah,
+We, we don't have pretty much news for it for today.
+So, yeah, we have couple couple of role agents in in moving state to production, yeah, and I hope I hope today.
+Today, we'll move them to production. So yeah, we have one agent Sibili from Bandana and one agent from Hai. So yeah.
+Uhh...
+Yeah, stay stay tuned. So, I hope today I will I will notify you with the with the links to your new agents.
+Moreover.
+Guys, have you have you had a chance to think about cross-functional use cases?
+for your teams.
+as a part of our cross-functional sessions.
+Like any use cases where you can elaborate.
+Different.
+Um...
+Different perspectives for for some task.
+Like requirements analysis.
+Yeah, we can.
+We can conduct from different point of views. Pull request analysis. Yeah, we can also.
+We can also do some kind of analysis from QA perspective, like identify what we need to test from this particular pull request.
+some risk areas and so on.
+Yeah, if no idea, so yeah, we are working on, we are working on user guide for this process to help you to come up with some some ideas to help you organize your teams.
+And yeah, think about and come up with some ideas with for such use cases.
+Yeah, some of them can be really simple.
+And some of them can be complex, like...
+As a simple example, it can be some kind of requirements readiness review, where we can create few agents, like one for engineering, one for QA, one for digital part, and...
+do some kind of orchestration with these agents and analyze the requirements against three different point of views. So this is an easy example.
+Yeah, and here can be a bit more complex. For example, end-to-end scenario like we demonstrated on our.
+First session.
+Yeah, but yeah, the main idea that uh, cross-functional use case.
+Can be can be simple, so it can be something.
+Something really simple, yeah, but from cross-functional point of view. So yeah, we'll.
+We'll show this guide and how to use this guide later.
+probably tomorrow. Yeah, but now let's get back to our regular champions activities and champions discussion. So now we'd like to open the discussion and go around our room.
+So, and yeah, we'd like to hear like, how are you doing this week and previous week? Have you had a chance to experiment with AI since our last sync? Yeah, and any AI related updates that you have at the moment?
+So guys, if you have some news, feel free to raise a hand or unmute yourself and share your updates with us.
+
+Bandana Sriramka   8:25
+Quick update, Eugene. The test on the report, since you already updated that it is in moving state and it's been, once it's moved to production, it will be ready. I am now working for the report for payments Lin.
+
+Eugene Semenyuk   8:27
+Mhm.
+Mhm.
+Chen.
+
+Bandana Sriramka   8:42
+It's in progress and there are little changes as compared to the UT that I demoed last time. So I'm working on that one currently and once it's ready I'll be able to show you.
+
+Eugene Semenyuk   8:49
+Mm-hmm.
+Awesome.
+
+Bandana Sriramka   8:55
+That, yeah.
+
+Eugene Semenyuk   8:57
+Yeah, thanks a lot. Thanks a lot, Bandana.
+Um...
+Any other updates, guys? Or we can go through use cases that we have on our board.
+I.
+
+Divya Ramkumar   9:17
+So, Eugene, do you have any update on the workflows that you were, you know, collaborating with how many folks?
+
+Eugene Semenyuk   9:25
+Yeah, yeah, so for this for this week, I'm gonna set up one more one more session.
+Ohh.
+Yeah, and we will we will continue work on this on this topic.
+Yeah, we still have some interesting question raised on previous session, yeah, regarding regarding class.
+Class infrastructure in class code management, because, yeah, some of the some of the companies they depend on class infrastructure, yeah, and it can be probably a bit tricky task.
+for AI to analyze class components. So yeah, we...
+We are thinking on.
+some alternatives for class. Yeah, but anyway, we definitely will continue.
+Yeah, even if we won't be able to analyze class, so yeah, there can be other components that can be analyzed by this workflow.
+So, yeah, we'll continue.
+Work on this week, this week, yeah.
+
+Divya Ramkumar   10:41
+Okay, thank you.
+
+Eugene Semenyuk   10:44
+Yeah, and I, I, I just noticed your question about Light LLM.
+Also, yeah, unfortunately, yeah, we don't have we don't have permissions to to use Light LLM for now, yeah, and we we talked with Denise maybe previous week, yeah, I suggested to use CodeMe SDK.
+
+Divya Ramkumar   10:49
+Yeah.
+Mhm.
+
+Eugene Semenyuk   11:10
+So it can be a good alternative for his tool to use AI agents. So yeah, we can set up some agents in Code Me and his tool can trigger these agents.
+
+Divya Ramkumar   11:10
+Okay.
+
+Eugene Semenyuk   11:23
+Using code me, I provide really similar experience.
+
+Divya Ramkumar   11:27
+Okay. Okay. Sounds good. Thank you.
+
+Eugene Semenyuk   11:31
+Yeah, you're welcome.
+Okay, and...
+Yeah, let's continue.
+Dana, do you have any updates, new interesting use cases from your side?
+
+Dhanalakshmi Chinnasamy   11:53
+No, Eugene, I said that that is extra credentials still expanding, so I haven't tried, but I tried just a simple use case to find the matching regression in our from our confluence page.
+
+Eugene Semenyuk   11:57
+Mm-hmm.
+Yeah.
+The.
+
+Dhanalakshmi Chinnasamy   12:09
+Using the code me.
+
+Eugene Semenyuk   12:11
+Uh-huh.
+
+Dhanalakshmi Chinnasamy   12:13
+But for it, I'm waiting for X-ray.
+
+Eugene Semenyuk   12:13
+And Rik.
+
+Dhanalakshmi Chinnasamy   12:15
+Credentials.
+
+Eugene Semenyuk   12:16
+And regarding regarding X-ray, so yeah, you need to X-ray credentials.
+Yeah.
+And um, is it is it some client ID secret?
+
+Dhanalakshmi Chinnasamy   12:30
+Mmh.
+
+Eugene Semenyuk   12:31
+Mm-hmm.
+Yeah, yeah, we definitely, we definitely need these, yeah, and uh...
+And moreover.
+It will be great to have some kind of...
+Service account in X-ray.
+That we can use for AI purposes, like create.
+separate account and use this account credentials like client ID client secret from this account.
+
+Dhanalakshmi Chinnasamy   13:00
+Mm-hmm.
+No.
+Bing.
+
+Eugene Semenyuk   13:07
+Yeah, it will be a bit more convenient for for for the users across this group, because yeah, for now, if if you use your particular your your your your account, then yeah, all the comments, all the...
+Updates will be performed by your account. Yeah, and...
+For some people, it can be confusing, like, why, yeah, why, why I created test cases and see someone else's name?
+
+Dhanalakshmi Chinnasamy   13:42
+Yep.
+
+Eugene Semenyuk   13:42
+Here.
+So...
+Do you know the guys who are responsible for X-ray? So maybe I can connect with them and...
+facilitate this discussion.
+
+Dhanalakshmi Chinnasamy   13:57
+Ben said he is working with the Grigori, I think, for these credentials.
+
+Eugene Semenyuk   14:01
+Uh-huh.
+
+Dhanalakshmi Chinnasamy   14:04
+I didn't get any update.
+
+Eugene Semenyuk   14:04
+Uh-huh.
+Uh huh, okay, I see. So, yeah, I'll connect.
+
+Dhanalakshmi Chinnasamy   14:09
+to create a common service account.
+
+Eugene Semenyuk   14:12
+Mhm, mhm.
+Okay, thanks. I'll connect with...
+With Grigori and discuss this, yeah, because it is it is important, and yeah, as I remember, we already raised requests for such accounts for Jira and GitHub.
+Ohh yeah, to use.
+Service account credentials instead of personal.
+Yeah, and it it also would be great to have such account for for other tools like X-Ray.
+Okay, yeah, thanks a lot for for your updates, and uh...
+Yeah, let me, let me show you my screen.
+Yeah, I hope I'm sharing the right screen with the JIRA items.
+So, yeah, let me see who we have on the call, so...
+And what is in progress state? So yeah, we discussed with Bandana. Suparna is not on the call.
+Yeah, I remember.
+Yeah, this use case.
+I think you are waiting for maybe Lin CP, right, for this particular use case. Yeah.
+
+Matt Nobles   15:51
+Yep, that's correct.
+
+Eugene Semenyuk   15:55
+Okay, and yeah, for this use case that we're working with Brooke, yeah, I think, yeah, I'll, yeah, I still need some time to.
+To play around to these.
+Database, but we have him called me.
+
+Brooke Borowiak   16:13
+Nayak.
+I actually have an update on that. It turns out that, I mean, it's good and also not good. Not good because we didn't solve that problem, but good because I don't need that piece anymore.
+
+Eugene Semenyuk   16:16
+Mhm.
+Ohh.
+Mhm.
+Oh.
+
+Brooke Borowiak   16:31
+Yeah.
+I, after talking with some of my team late last week, I came upon some new information that I don't need to parse through that file anymore, so...
+Yay, but also that doesn't solve like why we were having that issue. So I am no longer blocked on that part.
+
+Eugene Semenyuk   16:51
+Okay.
+Mhm.
+Yeah, and and yeah, that's really interesting, and how you how you solve this issue.
+So do you use something else to define accounts?
+
+Brooke Borowiak   17:11
+Um...
+There was just a piece of info, like missing information on my end.
+
+Eugene Semenyuk   17:19
+Mhm.
+
+Brooke Borowiak   17:20
+In terms of that, though, the the like usernames that I was trying to like have it read through, there's a pattern, so like with how they're structured for the branches, and so it's it was just kind of a moot.
+
+Eugene Semenyuk   17:34
+Mhm.
+
+Brooke Borowiak   17:41
+Thing, but that was something that I didn't know until last week, so...
+
+Eugene Semenyuk   17:45
+Mhm.
+
+Brooke Borowiak   17:47
+So, an unnecessary complication.
+
+Eugene Semenyuk   17:52
+Yeah, I see. So, yeah, we can we can think about some something else, so yeah.
+You can think about some processes that you have some some some troubles.
+Yeah, we can think how to utilize CAIA to speed up something or how to make something in a more easier way.
+Yeah.
+
+Brooke Borowiak   18:19
+Yeah, for sure. And there's still like some ways I'd like to refine like this, this agent. So I'm going to, now that I, now that I'm not stuck on that other thing, I'll start weaning into some of that stuff more now.
+
+Eugene Semenyuk   18:23
+Yeah.
+
+Brooke Borowiak   18:37
+also.
+
+Eugene Semenyuk   18:38
+Mhm.
+So yeah, if you need some advice or something else, so yeah, feel free to reach out to me. Yeah, we can set up one-to-one call and...
+and discuss opportunities.
+
+Brooke Borowiak   18:53
+Awesome. Thanks, Eugene.
+
+Eugene Semenyuk   18:55
+Thank you.
+And, uh, yeah, regarding other use cases, so yeah.
+Yours is not here.
+And Angela as well.
+So, yeah, if if you're working on something, but...
+But you don't see it here on the board, so yeah, feel free to add.
+This board into or this use case AI intake into a PE project or in QE project.
+Yeah, for now.
+Yeah, I see that the majority of...
+The majority of use cases in in key project, so yeah, they they are done great, because yeah, here here I I filtered on the.
+Only that use cases that in, but not in done state.
+
+Divya Ramkumar   20:00
+Yeah.
+Um, Eugene, actually I moved my team's QE to APE project because the overall the Kanban board is only capturing APE.
+
+Eugene Semenyuk   20:06
+Mm.
+Mm.
+Ah.
+I see. Okay.
+Good.
+So yeah, if you have something else, so yeah, feel free to add it. Yeah, we'll track it, discuss, help you, and so on and so forth.
+Okay, any other updates, ideas, thoughts?
+
+Svetlana Stogni   20:46
+And guys, any insights? Have you started working on this PDLC use cases as a team, like with your teams, or what is the status just for us to make sure we get prepared for tomorrow's session?
+If you have any updates, like, is it a clear task? Like, do you know how to figure it out or any objections, any problems, anything?
+
+Eugene Semenyuk   21:10
+Okay.
+Yeah.
+I, I, I suppose, for for quality engineering team, it can be a bit a bit complicated because, yeah, they they...
+Mm-hmm.
+
+Svetlana Stogni   21:31
+Yeah, but you are our champions and you work as a team with other champions from digital and from engineering, right? Streams. So, and that's why I'm asking about this PDLC use cases. If you started this discussion.
+
+Eugene Semenyuk   21:38
+Mm-hmm.
+
+Svetlana Stogni   21:49
+Visit teams.
+No.
+
+Eugene Semenyuk   21:57
+Yeah, unfortunately, none. I believe no for now. Yeah, we raised this question in the beginning.
+
+Svetlana Stogni   22:04
+Yeah, yeah, I know, but probably just to reiterate.
+
+Eugene Semenyuk   22:08
+Mhm.
+
+Svetlana Stogni   22:08
+OK, so we'll definitely need this guideline. Eugene said you also have mentioned at the beginning for us to make it, not for us, but for the teams to make it easier.
+
+Eugene Semenyuk   22:14
+Mhm.
+
+Svetlana Stogni   22:22
+Yeah.
+
+Eugene Semenyuk   22:23
+Yeah, and uh...
+Yeah, and one more thing. So yeah, for guys who are working inside tough lenses, so it should be a bit more easier. Yeah, because they have the team with engineers, with digital folks. Yeah, but for...
+for quality engineering teams that drives by Divya, Jamie and Saeyed. So yeah, for them, it can be a bit more complicated because, yeah.
+
+Svetlana Stogni   22:56
+Yeah.
+Stunt.
+
+Eugene Semenyuk   23:03
+Yeah, because, yes, as I know, you don't have, uh, yeah, you, you, you act as a quality engineering team.
+
+Divya Ramkumar   23:12
+Yeah, since we don't work directly with the links, we are not involved in the actual SDLC process.
+
+Eugene Semenyuk   23:12
+Yeah, and you don't have...
+Yeah, yeah.
+
+Svetlana Stogni   23:16
+Yes.
+Yeah, for you guys, it's pretty clear, yeah, it will be a challenge through such setup, but still for as a team members probably.
+
+Eugene Semenyuk   23:21
+Yeah.
+Mhm.
+
+Svetlana Stogni   23:31
+This is something that you can start working on.
+
+Eugene Semenyuk   23:37
+Yeah, but, but, but we have a pretty big amount of champions from, yeah, from from your teams, and yeah, they are mature enough to...
+I would say use imagination and think about different use cases from different perspectives. Yeah, and maybe, yeah, they can.
+They can come up with some ideas, like, ohh, we can look at this use case under different glance.
+
+Divya Ramkumar   24:19
+Yeah, we will try.
+
+Eugene Semenyuk   24:19
+So, yeah.
+Okay, so...
+Do we have something else to discuss?
+We have 5 minutes left, so yeah, as you, as you may see, we...
+Uh, we decreased amount of time for for the session.
+Yeah, and I hope it will be more convenient.
+Because yeah, in this phase we have a lot of AI meetings.
+So I believe this 30 minutes time slot will be more convenient.
+Okay, before we close, does anyone does anyone have final questions?
+
+Hai Le   25:20
+Hey, Eugene, so we're still working on that smart test selection use case. Are we going to schedule another meeting for that?
+
+Eugene Semenyuk   25:22
+Okay.
+Mhm.
+Yeah.
+
+Hai Le   25:30
+Great, great.
+
+Eugene Semenyuk   25:30
+Yeah, I'll schedule you for tomorrow or Wednesday.
+
+Svetlana Stogni   25:35
+Mhm.
+
+Hai Le   25:37
+Perfect. Thanks.
+
+Svetlana Stogni   25:40
+And, by the way, this use case is a great example of the entire PTLC use case, because it connects digital engineering and key ports.
+
+Eugene Semenyuk   25:52
+Okay.
+
+Svetlana Stogni   25:55
+Probably, yeah, let's discuss it tomorrow and we'll show you some of the examples which use case might be like a simple one, medium one, and quite complex, but anyway, tomorrow we will share our ideas.
+
+Eugene Semenyuk   26:01
+Mmh.
+
+Svetlana Stogni   26:14
+and I will try to inspire you as well.
+
+Eugene Semenyuk   26:20
+Yeah.
+So yeah, join us. Yeah, please join us tomorrow on the PDLC cross-functional session.
+Yeah, okay, so I think we're done. So thank you, everyone. Yeah, and see you, see you tomorrow.
+
+Svetlana Stogni   26:42
+Thank you.
+
+Eugene Semenyuk   26:44
+Thank you.
+
+Bandana Sriramka   26:45
+Thank you.
+
+Divya Ramkumar   26:46
+Thank you.
+
+Eugene Semenyuk   26:48
+Bye.
+
+ stopped transcription

@@ -1,0 +1,594 @@
+AI Enablement QA Champion Sync-20260608_140030UTC-Meeting Recording
+June 8, 2026, 2:00PM
+29m 50s
+
+Filippo Morelli   0:08
+Yeah.
+
+Dhanalakshmi Chinnasamy   0:56
+Call has been forwarded to voicemail.
+At the tone, please record your message. When you have finished recording, you may hang up.
+
+Saeyed Shamlou   1:52
+Morning.
+
+Alice Merrill   1:57
+Morning.
+
+Eugene Semenyuk   1:59
+Hello, good morning. OK.
+
+Saeyed Shamlou   2:02
+Hello!
+
+Eugene Semenyuk   2:05
+Let's wait maybe one more minute.
+
+Saeyed Shamlou   2:06
+I.
+
+Eugene Semenyuk   2:11
+Yeah, then we'll start.
+Do do do.
+Ness.
+Play song.
+Okay.
+Okay.
+And, well, I think maybe someone or I don't know a meeting.
+
+Saeyed Shamlou   2:48
+Evgeniya, Divya had some personal matters this morning, so she isn't able to join, just FYI.
+
+Eugene Semenyuk   2:50
+Mhm.
+Mhm.
+
+Dhanalakshmi Chinnasamy   2:55
+It.
+
+Eugene Semenyuk   2:57
+Yeah, okay, thank you.
+No.
+Okay, I guess, I guess we can start. So, yeah, hello everyone. Thank you for joining us today on our AI Champion scene. So, really glad to see you all here. So, yeah, today, as usual, we will structure this meeting in...
+in a few parts. So yeah, first we'll discuss some news updates. After that, we'll open up the discussion. So we'd love to hear what you've been experimenting with, what use cases you're exploring, and yeah, and maybe the places where you might need some support and help.
+So, and finally, we will wrap up with some next steps and alignment, as usual. So, yeah, yeah, let's collaborate and block each other and accelerate adoption in a smart and structured way. So, yeah, let's start with the updates.
+So yeah, we are enabling MCP servers in CodeMe at the moment. So yeah, and I hope they will be available really soon. And then we can, yeah, maybe MCP will be.
+Maybe the first, yeah, but definitely it will be in the first row of the MCP server that we would like to connect, so yeah, and I'll let you know and...
+Entity will be available for us, yeah, also.
+Let's try to see. So yeah, do we have ChatGPT agents? Yeah, I see that we still don't have ChatGPT agents. So yeah, this means that that means that we're still waiting for some security reviews for these agents and hope it will be ready soon.
+So, yeah, and the...
+One more portion of news. So yeah, this week we will have cross-functional PDLC demos from two teams, from SIEM and self-services. So they will demonstrate their end-to-end AI.
+workflow, starting from requirements, adding with the proceeding with development testing. So yeah, I guess it should be interesting. So yeah, please join us tomorrow and on Thursday. Yeah.
+That's it from my side. So yeah, now, yeah, let's open the discussion and go around the room. So yeah, we'd love to hear like how you're doing this week. Have you had a chance to experiment with AI since our last meeting? So are you currently working on
+any related use case, so yeah, so on and so forth. So any kind of updates that you would like to share with us. So yeah, who would like to start?
+Today.
+
+Dhanalakshmi Chinnasamy   6:33
+IT.
+
+Bandana Sriramka   6:36
+Hi, Eugene.
+
+Dhanalakshmi Chinnasamy   6:37
+So, Eugene.
+
+Eugene Semenyuk   6:39
+Yeah, okay, let's start with Bandana and then proceed with Dana.
+
+Bandana Sriramka   6:45
+Okay, so I have two things. One that I was creating agents for the regression, the ORS and the payments lane. The count is really high, the volume is high, like 113 Jira tickets. So it is getting a little...
+
+Eugene Semenyuk   6:56
+Okay.
+Mhm.
+
+Bandana Sriramka   7:06
+challenging for robot to accumulate everything and publish that in the report. So I'm currently working on that part. That is 1 update. And the second one is I am trying to help the ServiceNow team to enable the MCP for.
+
+Eugene Semenyuk   7:08
+Mhm.
+Mhm.
+
+Bandana Sriramka   7:24
+Like service now.
+
+Saeyed Shamlou   7:26
+Be.
+
+Eugene Semenyuk   7:26
+Mhm.
+
+Bandana Sriramka   7:27
+So, since the Big EI is not available for all of the Service Now teams.
+
+Eugene Semenyuk   7:33
+Yeah.
+
+Bandana Sriramka   7:34
+I'm trying to get the MCP configured, but there are little challenges. I'm not sure if the MCP is approved yet.
+
+Eugene Semenyuk   7:39
+Mhm.
+
+Bandana Sriramka   7:44
+So we need some ID and secret. So I'll be working with the admin today to get those and see if that works working. So those are the two updates which I'm working on currently.
+
+Eugene Semenyuk   7:44
+Yeah.
+Mhm.
+Yeah, thanks. Thanks for sharing. Yeah, and regarding your first use case with a huge amount of data.
+
+Bandana Sriramka   8:06
+Mhm.
+
+Eugene Semenyuk   8:06
+Mm.
+Let me think, so...
+Yeah, probably, as we as we have as we have MCP servers available, so maybe we can move such reports creation to Copilot GitHub Copilot.
+So, we can connect, we can connect.
+GitHub compiled in VS Code to Atlas in MCP, yeah, and get the data using this MCP, then like export maybe some.
+export items to Excel.
+And then...
+Um...
+And then...
+Create some report based on.
+based on such exported Excel file. So some fields can be, some metrics can be calculated not by AI, but by some script, some formulas.
+It can be some JavaScript code or...
+Yeah, maybe JavaScript will be the most easiest part.
+So, yeah, if if you would like, we can we can try to experiment together.
+So, yeah, we can.
+
+Bandana Sriramka   9:41
+Sure, yeah, I'll share that with you.
+
+Eugene Semenyuk   9:45
+So, yeah, let me, yeah, let let me find some slot maybe for today or tomorrow, and let's play around it. I think it should be a really interesting use case, yeah, and from...
+From Copilot and the MCP integration perspective, it should be.
+
+Bandana Sriramka   10:12
+Yep.
+
+Eugene Semenyuk   10:14
+Because, yes, some analysis can be performed by some some functions.
+That Copilot can create, like Copilot can create some scripts that can calculate some metrics from exported.
+
+Bandana Sriramka   10:21
+Okay.
+
+Eugene Semenyuk   10:30
+All Jira items.
+
+Bandana Sriramka   10:32
+Okay.
+
+Eugene Semenyuk   10:33
+Yeah, and then use AI to provide some analysis for these metrics.
+
+Bandana Sriramka   10:38
+Mhm.
+
+Eugene Semenyuk   10:40
+Yeah, okay.
+
+Bandana Sriramka   10:40
+Yeah, we can try that, yeah.
+
+Eugene Semenyuk   10:42
+Yep, let's connect offline.
+
+Bandana Sriramka   10:45
+Okay, thank you.
+
+Eugene Semenyuk   10:46
+OK, thank you. Thank you.
+Okay, let's move on. So, Dana.
+How are you?
+
+Dhanalakshmi Chinnasamy   10:55
+I was able to ask, is there any update on the code me X-ray issues that I have raised a long time back, but I didn't, we didn't get any updates about it.
+
+Eugene Semenyuk   10:58
+Ohh.
+Uh, yeah, to be to be honest, I haven't heard it. Yeah, I haven't heard anything about it, so yeah, let me let me ping our team.
+So, yeah, and...
+Yeah, maybe today, tomorrow, or on our lighthouse call.
+on Wednesday, so yeah, I'll share some updates.
+Yeah, and regarding me, Williams, so yeah, our team is working on it right now.
+
+Dhanalakshmi Chinnasamy   11:34
+I...
+
+Eugene Semenyuk   11:37
+Shamlou.
+In this in this piece of information, I'm sure, yeah, I I heard it today, so yeah, our our team is working on it.
+
+Dhanalakshmi Chinnasamy   11:49
+Okay.
+
+Eugene Semenyuk   11:51
+Yeah.
+Okay.
+Dunn, dun, dun.
+Yeah, ohh, and I I forgot on one thing, so yeah, for for this Wednesday, so yeah, I I'd like to show some.
+Some small demo workshop about creating skills in in Copilot.
+Like, to to continue our previous discussion about MCP, so yeah, yeah, we'll we'll try to create skills for.
+For some, for some tasks, like not related to player at MCP, yeah, but we'll try to experiment with the different tasks where skills can be applicable for us as QE engineers.
+
+Bandana Sriramka   12:42
+Thank you for that, Eugene.
+
+Eugene Semenyuk   12:45
+Yeah, and if you would like to share something, yeah, some use cases, like conduct some demos.
+So, yeah, we still we still have at least one slot to do this.
+So yeah, feel free to reach out to me. So yeah, I'll...
+I'll add you into the agenda.
+Yeah, and by the way, I've just remembered one thing. So yeah, if you are working with, yeah, I'd like to remind her, so remind, so yeah, if you are working on some use case, so yeah, please create a ticket on our board. So it will be easier to track and
+Yeah, we are also working on the recognition program, so yeah, and this like amount of ticket and demos also counts, so yeah, and it will be good if you, if it will have like actual information about your use cases on our.
+On our dashboard.
+And so on, so yeah, please.
+Please add your experiments, and...
+
+Jurijs Markelovs   13:56
+Correct.
+I got a question to you, Eugene, probably just to you. What's the link between adding this work that we are working, like sort of independently, and when we work in the teams?
+
+Eugene Semenyuk   14:00
+Okay.
+
+Jurijs Markelovs   14:11
+Let's say I'm assigned for like 4 teams, I think, and we all have like monitoring tasks, system helping, whatever. And when we are working for our own sake or our own team sake, for example.
+They are like 2 independent flows, right?
+
+Eugene Semenyuk   14:32
+Right, the other.
+
+Jurijs Markelovs   14:33
+OK.
+
+Eugene Semenyuk   14:35
+Uh, that's...
+That's pretty good question, because, yeah, because...
+
+Jurijs Markelovs   14:43
+Yeah.
+
+Eugene Semenyuk   14:46
+To be honest, so yeah, if you're like improving like your your your your particular process, in our case it is testing, so yeah, at the same time you're improving like team team performance.
+at all. Yeah, because you're improving like some cycle time of testing activities. Yeah, at the same time, cycle time for the whole project also.
+
+Saeyed Shamlou   15:12
+The.
+
+Eugene Semenyuk   15:15
+improves. So yeah, and I would say that in this particular group, like we are mostly focusing on like improving testing productivity. So in some cases, it is team productivity because
+In some, in some teams, we have, like, we have more than one QE engineers, so in some teams we have only one QE engineers, so yeah, in this...
+Yeah, in this case, it will be just individual productivity. So yeah, but for...
+For cross-functional use cases, yeah, we are mostly focusing on some team team team team improvements.
+Mobile.
+I don't know if I answered your question.
+Perry.
+Oh.
+
+Jurijs Markelovs   16:16
+Because it looks like, at this point, it looks like a Hydra with the multiple heads that what we are doing right now. We're doing work in teams, we work experiment on a personal team level, on dedicated teams, and then just like...
+
+Eugene Semenyuk   16:24
+Mhm.
+
+Jurijs Markelovs   16:32
+Multiple directions and at the board which you mentioned, do you mind just dropping this link here to create?
+
+Eugene Semenyuk   16:35
+Yeah.
+Yeah, let me.
+Yeah, I need to.
+
+Jurijs Markelovs   16:45
+Thanks.
+
+Eugene Semenyuk   16:48
+Few minutes, so yeah, guys, if you, if you have, if you have the links, we have...
+I will be really...
+Happy if you can share it. So yeah, if not, Leah, I'll share it in a few minutes.
+Because I need to log in to VDI.
+Yeah, and yeah, you're absolutely right. So, yeah, everything starts with like individual experiments, like individual performance, and then it moves to...
+particular team improvements, and then it scales to cross-team improvements. Yeah, and as a final goal, it scales to like organizational improvements.
+Ohh.
+
+Jurijs Markelovs   17:51
+And by the way, I have tried that spec-driven development approach, what someone mentioned previous school, and it's just, yeah, and it's just, it's amazing. I just, it's amazing. It's capability and it's open source. So I'm using this, I've started using it for migration purposes and it fit.
+
+Eugene Semenyuk   17:53
+Yeah.
+Yeah, Oleksandr mentioned, yeah.
+Mhm.
+Mhm.
+
+Jurijs Markelovs   18:11
+perfectly well. He created a bunch of rules, bunch of skills, like prerequisites for the pre-migration, after migration, they just created very guided, very much guided oriented process, which is all what I needed at this point.
+point, it's just like, I was amazed of capabilities.
+No, thank you for that.
+
+Eugene Semenyuk   18:38
+That's, yeah, that's sound sounds really good. So, would you like to share, like...
+Like, maybe, maybe to connect some some demo, like, how, how do you do this?
+
+Jurijs Markelovs   18:47
+Right now.
+
+Eugene Semenyuk   18:51
+I think it should be really available for other.
+
+Jurijs Markelovs   18:51
+Just.
+I could, I could, yeah, I could. It's really not me doing it anymore. It's more like this guy doing it for me. But yeah, yeah, if it works, makes sense. That's like problem every single time the audience hears the playwright.
+
+Eugene Semenyuk   18:55
+For other forks.
+Yeah.
+Yeah, and...
+Yeah.
+Yeah.
+Yeah.
+
+Jurijs Markelovs   19:14
+They they they having some hiccups. Why are we doing a we using the playwrights? Everybody's trying to move the Mabel format, but my team in particular, yeah.
+
+Eugene Semenyuk   19:17
+Mhm.
+I think it should be.
+Yeah, I think I think it should be available for everyone who who's doing this creation, so yeah.
+So, the tool that we use, like to migrate, so it can be different, yeah, but the approach that you are using, so this is really valuable, yeah, and...
+
+Jurijs Markelovs   19:46
+Approaches what this this thing taking from me because it suggested like so many guys. I'm like, oh my god, it's just it's like all in the box.
+
+Eugene Semenyuk   19:50
+Yeah.
+
+Jurijs Markelovs   19:57
+Came out of the box, and it just, yeah, I can share, I can, I can share now, you mean?
+
+Eugene Semenyuk   19:57
+Yeah.
+No, no, let's let let's do it on Wednesday.
+Yeah, maybe this, yeah, this Wednesday.
+
+Jurijs Markelovs   20:16
+Yeah.
+
+Eugene Semenyuk   20:17
+So, okay, okay, just wait one more minute. I've opened VGI, so...
+Now, I'd like to open Jira.
+Dun, Dunn.
+And send you the link.
+Yeah.
+report. Oh, I need to log in.
+By the way, Iris, do you have any other interesting experiments?
+
+Jurijs Markelovs   21:02
+A lot of other my interest and experiments was.
+
+Eugene Semenyuk   21:04
+Booth.
+
+Jurijs Markelovs   21:06
+Blocked by the miss, not the communication, but miss.
+
+Eugene Semenyuk   21:08
+Yeah.
+Oh, yeah.
+
+Jurijs Markelovs   21:12
+The bias complexity, basically, at this point, as I have mentioned it several times, one of the very interesting, well, at least for me, case is I'm trying to implement implement suggestion guidelines for resolving issues for our test environments based on several contexts.
+
+Eugene Semenyuk   21:15
+Mhm.
+Okay.
+Yeah.
+Yeah.
+
+Jurijs Markelovs   21:33
+Resources.
+
+Eugene Semenyuk   21:34
+Yes.
+
+Jurijs Markelovs   21:35
+And it's not, and it's just it's just too complex, I think, to even start thinking the direction. There are too many contexts, not sure what exactly the context to be used, but we can maybe I know this use case is very...
+
+Eugene Semenyuk   21:38
+Yeah.
+Booth.
+Yeah.
+
+Jurijs Markelovs   21:54
+It will be very, very handy to unload the resources what we are using on these.
+
+Eugene Semenyuk   21:57
+No.
+
+Jurijs Markelovs   22:04
+Debugging.
+efforts daily, right? I receive like a daily 5, 10 cases when, for whatever reason, the test environment is down and we try to recover it. And it's like, what is happening? So, yeah, so that is the one of them, right?
+
+Eugene Semenyuk   22:07
+Yeah.
+
+Jurijs Markelovs   22:28
+Yeah.
+Not sure how interesting that is, but...
+
+Eugene Semenyuk   22:36
+That's interesting.
+
+Jurijs Markelovs   22:39
+Another thing when I mentioned, we should be able to, I think now we have an access to the.
+
+Eugene Semenyuk   22:44
+Mm.
+
+Jurijs Markelovs   22:46
+more resources. I was proposing a long time ago to extract information about existing and previous production defects and minimize them and based on that suggest maybe strategically suggest
+
+Eugene Semenyuk   22:59
+Mhm.
+
+Jurijs Markelovs   23:06
+certain areas where we are lacking, right? Because for example, we, a lot of the performance level defects, right, issues on production, for example, and then that will signify us, all right, these are the trouble areas or something else. All right, so we need to work maybe
+Switch gears a little bit, does that work?
+Um, I, I know this is like high level, maybe like a management level task, but...
+
+Eugene Semenyuk   23:30
+Mm-hmm.
+Okay.
+Yep.
+
+Jurijs Markelovs   23:36
+Um...
+
+Eugene Semenyuk   23:38
+Yeah, but by the way, so I know that that some teams have such production issues in ServiceNow, so yeah, what about your team?
+
+Jurijs Markelovs   23:52
+No, it's ServiceNow, it's...
+I don't know.
+
+Eugene Semenyuk   23:58
+So, are they in Jira?
+
+Jurijs Markelovs   23:58
+Work for them.
+
+Eugene Semenyuk   24:02
+Or maybe in some other.
+
+Jurijs Markelovs   24:03
+Yeah, they are all over, they all over, so I guess we need to first step is identify the resources, yeah.
+
+Eugene Semenyuk   24:08
+Yeah.
+Mmh.
+Because, yeah, we...
+Yeah, we tried, we tried to calculate some metrics for self Servicing team, so yeah, and yeah, we also tried to calculate some effect leakage and so on, yeah, but this is a bit tricky because yeah, they they they don't store.
+Uhh...
+Production box incidents in Jira.
+So, yeah, and they store it in Service Now. This is kind of a challenging task to get such data.
+Yes.
+No.
+
+Jurijs Markelovs   24:56
+Right.
+
+Eugene Semenyuk   24:56
+So, yeah, but but the use case that you mentioned, yeah, this is really, really valuable part.
+So, this is like true, true, true, true QA, true QA task, like analyze.
+Blind spots spots some.
+Uh, some areas.
+Yeah, and provide some.
+some insights.
+
+Jurijs Markelovs   25:28
+Yes, so I was wondering if you have any of your office time today or later on, maybe like in an hour.
+
+Eugene Semenyuk   25:28
+Yeah, sounds good.
+
+Jurijs Markelovs   25:34
+Maybe we could brainstorm that together.
+
+Eugene Semenyuk   25:38
+Yeah, we can we can do it right after this meeting.
+
+Jurijs Markelovs   25:39
+Thank you.
+
+Eugene Semenyuk   25:42
+If you have.
+
+Jurijs Markelovs   25:42
+Maybe not right, not not right after this, but maybe like 30 minutes after it ends. That's OK.
+
+Eugene Semenyuk   25:49
+Oh yeah, let me see my calendar.
+This and this.
+Okay, yeah, it looks like...
+Yeah, it looks like I have.
+Time, so yeah, let's let's connect offline.
+Ohh.
+Okay, so yeah, anything else that you guys would like to discuss?
+If not, so yeah, we can, we can.
+
+Jurijs Markelovs   26:31
+I think maybe we should think of really quick the hands-on experience. We should maybe establish some kind of guidelines or rules or, I don't know, skills and spread it across our teams. Rules what will be strictly
+
+Eugene Semenyuk   26:34
+Uh-huh.
+What?
+Yes.
+
+Jurijs Markelovs   26:50
+strictly prohibiting to commit to commit a certain certain objects which contains can contain PII or API or any other passwords or anything like strictly, right? And maybe just share that particular rule within everyone. So because for example, me, I was doing this migration.
+
+Eugene Semenyuk   26:54
+Mhm.
+Mmh.
+
+Jurijs Markelovs   27:13
+I slipped, right? And I committed non-production data, but like the address, name, address, or the test data. And the GitHub returned me, like start yelling at me a couple of days later.
+
+Eugene Semenyuk   27:26
+Okay.
+Mhm, mhm.
+
+Jurijs Markelovs   27:33
+Like, what are you doing? And this is not a first time when someone slips. Sometimes it's just hard to monitor exactly what's, you know, we're not perfect. So maybe just come up with some kind of universal rule, like, all right, do not commit this, do not do that, do not do this.
+
+Eugene Semenyuk   27:46
+I.
+Yeah.
+
+Jurijs Markelovs   27:52
+It could be reused, but this is just thinking out loud.
+
+Eugene Semenyuk   27:54
+Mhm.
+Yeah, this is, this is really, really.
+
+Jurijs Markelovs   27:59
+Oh, we're losing that audience too.
+
+Eugene Semenyuk   28:00
+Very good topic.
+Yeah, this is this is really good topic, and uh...
+And.
+Yeah, we can for from skills perspective for for code and task repositories, yeah, we can we can touch this point on Wednesday, so yeah, and and and and can create and create some skills.
+
+Jurijs Markelovs   28:19
+Yeah, spread of the curls that are broadness.
+
+Eugene Semenyuk   28:27
+that can prevent such things. Yeah, but it will be great to think about it in...
+like bigger scale, like some rules, because yeah, skills are controlling you inside the particular AI tool. Yeah, but there are some rules that come on across different tools, like do not send like some PII.
+to EI charts, yeah, some API keys and so on.
+
+Jurijs Markelovs   28:55
+Something globally, yes.
+
+Eugene Semenyuk   29:04
+Some login passwords, yeah, and so on.
+So, yeah.
+Yeah, let's think about how to design some some general rules we have.
+And publish it somewhere.
+Yeah, it's not a problem to create. The problem is like, how to how to make sure that everyone everyone reads it.
+So, this is...
+This is quite challenging.
+
+Jurijs Markelovs   29:37
+Let's see in an hour or 30 minutes.
+
+Eugene Semenyuk   29:37
+Okay.
+Yeah. Okay, yeah, thanks a lot guys. Yeah, have a good rest of the day. See you soon. Bye.
+
+ stopped transcription

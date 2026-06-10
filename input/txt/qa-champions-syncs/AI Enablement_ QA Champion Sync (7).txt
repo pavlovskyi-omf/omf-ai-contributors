@@ -1,0 +1,801 @@
+AI Enablement QA Champion Sync-20260413_135914UTC-Meeting Recording
+April 13, 2026, 1:59PM
+43m 58s
+
+Eugene Semenyuk   0:21
+Hello, good morning.
+
+Jurijs Markelovs   0:27
+Good morning.
+
+Svetlana Stogni   0:52
+A lot of them.
+
+Eugene Semenyuk   0:54
+Hello.
+Yeah.
+Yeah, let's wait a few more minutes.
+For other folks, join us.
+I.
+Yeah.
+Yes.
+Poo.
+Yeah.
+Yeah.
+Hello.
+
+Iryna Pashko   2:16
+Yes.
+
+Eugene Semenyuk   2:17
+Let's wait one more minute, and I'll Bing.
+I think I seen chat.
+
+Alice Merrill   2:37
+Mhm.
+
+Eugene Semenyuk   2:38
+It.
+Oh.
+The.
+Two.
+Play.
+Okay, yeah, I see.
+Let's see, guys are joining us. So, okay, let's probably start. So, hi everyone, thanks for joining us today on our AI Champion Singh. So, yeah, really glad to see you all here. So, as usual, today's session will be structured.
+in a few parts. So first we will discuss some news updates. Maybe you'll have some questions. Yeah, we'll start with this part to make sure that everything is crystal clear. Yeah, and then we'll proceed with open.
+open discussion. So yeah, we'd love to hear what you're building, what you're experimenting with, what challenges you have, and how can we support you. Yeah, and finally, we'll wrap up with the next steps and some alignment. So yeah, as usual, the goal
+Is not not to present, not just to present, so it's collaborate, it's to collaborate, unblock each other and accelerate adoption in a smart and structured way. So, yeah, let's start with some some news updates, so...
+Yeah, previous Friday we had a kickoff for our champions.
+champions program. So yeah, I hope you attended and yes, you've seen some some changes in this process. So yeah, we will have few more, few more new roles in our process. So we'll.
+We'll have AI leaders who will help us to.
+Who will help us to prioritize, plan, and yeah, to help to streamline our, yeah, adoption. So, yeah, and yeah, we we have we have leaders from from both practice like engineering, QA.
+Yeah, and yeah, I hope our great leaders will help us to supply this process. Yeah, and also we, yeah, we have one more new role, AI mentor. So, yeah, we suppose that someone from this audience
+Yeah, we'll act as a mentor and help other team members and maybe new teams that will join us in our White House group. So yeah, soon we will have about 20 additional teams.
+Yeah, they will join us.
+Yeah, and we definitely need some more experienced guys from our QA community who can help new team members.
+With their, with their like AI boarding.
+So, yeah, we have we have few candidates, so yeah, but yeah, if you would like to participate and try yourself as a mentor, so yeah, please let us let us know. So, we will really happy to add you into to.
+To the least of such great persons, great people.
+Okay, do you have any questions regarding these new roles?
+Or maybe other questions regarding our kickoff.
+Champions Program.
+
+Divya Ramkumar   7:10
+So, Eugene, I have one question: Will the leaders and mentors get instructions what to do, when to do?
+
+Eugene Semenyuk   7:13
+Yeah.
+Yeah, yeah, I suppose we will do it on the first sessions. So yeah, leaders and mentors will have a dedicated session. So yeah, we will catch up and discuss all these things. Like what, how, when, and so on and so on.
+
+Nicholas Crowley   7:35
+Yeah, there's a meeting on Tuesday with the leaders and mentors.
+
+Eugene Semenyuk   7:37
+Mhm.
+Right.
+
+Nicholas Crowley   7:39
+For that purpose.
+
+Divya Ramkumar   7:41
+Okay, thank you.
+
+Eugene Semenyuk   7:42
+Exactly.
+Yeah.
+Okay.
+Yeah, if if no questions, so yeah, I believe, yeah, it should be it should be clear, so yeah, we'll we can proceed with with our regular open discussion, like go through the updates, challenges, yeah, with someone who already had some.
+some one-to-one sessions where we discussed some blockers. So yeah, but if you have any any new any new blockers challenges, yeah, feel free to to raise a hand, to share your updates, share your challenges.
+Yeah, and so on and so forth. So yeah, this is our general check-in, like, how are you doing this week? So yeah, have you had a chance to experiment with AI since our last sync?
+So, yeah, any any volunteers to start?
+So.
+If no, so yeah.
+
+Dhanalakshmi Chinnasamy   8:57
+I'm still working on this. I'm still working on the X-ray code integration. I'm trying to create an assistant for X-ray, but for me, X-ray integration, it requires client ID client secret. I don't have access, so I'm working on that.
+
+Eugene Semenyuk   9:10
+Mhm.
+So, we are regarding client and decline secret.
+So, yeah, it should be someone from configuration, I mean, X-ray configuration.
+
+Dhanalakshmi Chinnasamy   9:28
+Yeah, in that one settings, it's not showing it for me. I'm working with Vinny Pai to get those details.
+
+Eugene Semenyuk   9:32
+Yeah.
+Mm-hmm.
+Okay, great.
+So, under.
+And yeah, could you please also elaborate a bit about your agent that we just moved? So could you please explain like what the purpose?
+
+Dhanalakshmi Chinnasamy   9:47
+Yeah.
+
+Eugene Semenyuk   9:53
+Go to the audience.
+
+Dhanalakshmi Chinnasamy   9:53
+For the row X-ray assistant.
+
+Eugene Semenyuk   9:55
+I mean, a role.
+Um, yeah, maybe, maybe both.
+
+Dhanalakshmi Chinnasamy   9:58
+Yeah, once I create, then I'm thinking to create a task and how to get the result.
+
+Eugene Semenyuk   10:00
+Mhm.
+
+Dhanalakshmi Chinnasamy   10:05
+For that first, I'm trying to...
+Thank you.
+
+Eugene Semenyuk   10:12
+Ohh.
+Yeah, because I hope it should be really interesting for...
+For other folks.
+
+Dhanalakshmi Chinnasamy   10:22
+Yeah, my idea is to create that.
+Oops.
+So, I think my deals is very slow.
+Sorry.
+It's very slow.
+
+Eugene Semenyuk   10:54
+Yeah, it's okay. You can. Yeah, you can maybe.
+
+Dhanalakshmi Chinnasamy   10:59
+Yeah, I will show.
+
+Eugene Semenyuk   10:59
+Try to explain an error.
+
+Dhanalakshmi Chinnasamy   11:02
+Yeah, my plan is to create an assistant to get some, you know, plan a task.
+And, and the input results.
+Deadlines.
+
+Eugene Semenyuk   11:14
+Mhm.
+
+Dhanalakshmi Chinnasamy   11:17
+That's what I'm trying, but for that, I'm just trying to integrate first. But still, that is an issue, as I don't have an access issue.
+
+Eugene Semenyuk   11:26
+Mhm.
+Yeah. Okay. So, yeah.
+Hope it will be solved soon, so yeah, yeah, if not, so yeah.
+Let us know, so we will try to help you.
+And, and what about your uh, Jira story?
+Analyzer.
+But we just moved to production.
+
+Dhanalakshmi Chinnasamy   11:50
+Yes.
+Yeah, just you responded back to my message and checking it.
+
+Eugene Semenyuk   11:57
+So, yeah, but but could you please explain this this agent here?
+So, what is the purpose?
+So, yeah, and what it what what it analyze?
+
+Dhanalakshmi Chinnasamy   12:07
+Yeah.
+Yeah, maybe I will share my screen and explain, but before that, I think I have to reboot my Chrome is keep on closing.
+
+Eugene Semenyuk   12:17
+Uh-huh.
+Yeah, okay. So, Merrill, let's demo this agent in our next Lighthouse meeting. Yeah, as we move this into production. So, yeah, I hope it should be really, really useful. And yeah, maybe some other folks would like to.
+
+Dhanalakshmi Chinnasamy   12:27
+Okay.
+
+Eugene Semenyuk   12:40
+Adopt this agent in their team, because, yeah, now it's in production, so it should be, yeah, it, it, yeah, it's available for everyone, and yeah, maybe someone will be interested in interested in this agent.
+
+Dhanalakshmi Chinnasamy   12:44
+Okay, sure, I will do that.
+
+Eugene Semenyuk   12:58
+Okay.
+Thanks a lot for your updates. Yeah, let's proceed. Do you have any other volunteers who would like to share updates?
+News challenges.
+Yeah.
+
+Bandana Sriramka   13:17
+Hi, Eugene. So I did not start anything new, but the report agent that I'm creating on, it's still in progress. I can quickly share the things that I still have to update here.
+
+Eugene Semenyuk   13:19
+Yeah.
+Mhm.
+Yeah, that's a little bit interesting.
+
+Bandana Sriramka   13:32
+I can see my screen.
+So this is the report that I have created. Here, the testers are displaying, but I still need to update this requirements traceability column to display the actual projects instead of the QE projects here. So that is a work in progress. I'll be updating that.
+
+Eugene Semenyuk   13:50
+Uh-huh.
+
+Bandana Sriramka   13:54
+Otherwise, this agent is almost done.
+The other columns like test objective, areas and testing approach, everything is populating correctly. Even it is pulling.
+
+Eugene Semenyuk   14:05
+Mhm.
+
+Bandana Sriramka   14:09
+The tester's name from the is tested linked item, but it's just that I have to update this column instead of QE projects. We have to display the actual.
+task, the story that it was linked to.
+
+Eugene Semenyuk   14:26
+Mhm.
+
+Bandana Sriramka   14:27
+So, yeah.
+It is a little bit off because the ORS or the other lane stories, they have fixed versions, but this QE stories, the linked items go by sprints, not fixed versions. So I'll have to be updating my GQLs inside the prompt to pull correctly.
+
+Eugene Semenyuk   14:50
+Uh huh.
+
+Bandana Sriramka   14:51
+Once, yeah, once it's ready, I'll show you.
+
+Eugene Semenyuk   14:55
+Yeah, awesome. I don't think that it will be.
+
+Bandana Sriramka   14:56
+Okay.
+Yeah.
+
+Eugene Semenyuk   14:59
+Huge, huge change, so yeah.
+
+Bandana Sriramka   15:03
+Dunn.
+
+Eugene Semenyuk   15:03
+Awesome, yeah, looks good. Thank you. Thank you for sharing your updates.
+Any other volunteers?
+Yeah, I...
+Yeah, I've seen that Dev unmuted herself. Yeah, but...
+
+Debamitra Bhattacharjee   15:33
+Yeah, so Eugene, no, sorry, I think something was wrong with Mike. I wasn't able to unmute it. So Eugene, one question. So in the last week during the Code Me demo, I remember Alex mentioned about that the first step is the clear.
+
+Eugene Semenyuk   15:34
+The.
+Mhm.
+Mhm.
+
+Debamitra Bhattacharjee   15:52
+Requirement, okay.
+
+Eugene Semenyuk   15:54
+Mhm.
+
+Debamitra Bhattacharjee   15:55
+Now, I don't know if it is true for everyone in our team. I would say, I mean, seventy-five percent of the time we get a user story with just one liner, just one liner. Okay, so in that case...
+
+Eugene Semenyuk   16:07
+Mhm.
+
+Debamitra Bhattacharjee   16:13
+Creating the no context and all the proper steps like test steps, test scenarios, detailed test cases are sometimes like not possible. We just we just skip sometimes because we don't get even.
+
+Eugene Semenyuk   16:29
+Uh-huh.
+
+Debamitra Bhattacharjee   16:34
+enough time for testing as well.
+Should D.D. I mean, can you can you recommend something on?
+or I don't know if there is anything which can help us, the testing team, for better documentation. If even if we are getting one liner, at least some way we can create a context from there with the help of...
+
+Eugene Semenyuk   16:45
+Mhm.
+Hi.
+
+Debamitra Bhattacharjee   17:06
+I tried with Robo; it wasn't successful.
+
+Eugene Semenyuk   17:10
+Mhm.
+
+Debamitra Bhattacharjee   17:10
+I created a couple of agents, integrating them with Confluence and also Jira. So suppose I'm getting Jira number one, two, three, I mean, user story one, two, three with the one liner. So I created the agent saying that, okay, try to search if there is any other ticket.
+With this, I mean related to this story, if not, search something if if it's getting any details in the confluence.
+
+Eugene Semenyuk   17:36
+Yeah.
+
+Debamitra Bhattacharjee   17:43
+But with that also, sometimes I don't get much of, you know, information.
+
+Eugene Semenyuk   17:51
+Mhm.
+
+Debamitra Bhattacharjee   17:53
+So...
+I didn't try recently, but from Rao, when I try to try to like ask my agent to.
+Searching the GitHub, it wasn't able to see our repos, but I didn't check recently, so that I need to check, but do you think CodeMe could help us in this case?
+
+Eugene Semenyuk   18:18
+Mhm.
+Yeah, a bit, yeah, but first, yeah, this is really interesting case, yeah, and the yeah, this problem with the requirements, so yeah, this is...
+Like a big, big challenge, and do do you have any like digital guys in your team or?
+
+Debamitra Bhattacharjee   18:46
+from development.
+
+Eugene Semenyuk   18:46
+Is your team.
+Yeah, or, or, or, or your team consists just from uh, engineering and QA folks.
+
+Debamitra Bhattacharjee   18:55
+Engineers, yes, yeah, engineers and kids.
+
+Eugene Semenyuk   18:57
+Yeah, just engineers.
+
+Debamitra Bhattacharjee   18:59
+Yeah, we have a BA there, but yeah, that's I mean, if we are not getting the details in the user story, we actually can't do from like, you know, testing perspective, like a QA perspective, correct, to make that details more.
+
+Eugene Semenyuk   19:13
+Mhm.
+Mhm.
+Yeah, and.
+Yeah, that's quite a big challenge. Yeah, one, yeah, one, one thing that, yeah, we can we can use to make some kind of quick win. So, for testing, so yeah, it it it has post.
+Pros and cons, like we can use some AI agent to analyze to analyze changes that have been made in in the pull request. Yeah, and based on these changes, create some.
+
+Debamitra Bhattacharjee   19:50
+Mhm.
+
+Eugene Semenyuk   19:59
+some documentation.
+
+Debamitra Bhattacharjee   20:00
+Yeah.
+
+Eugene Semenyuk   20:01
+Like a documentation that will be useful for for testing, yeah, but...
+At the same time, so we will use, so yeah, we will use code as a test oracle, like test basis. So it is not.
+
+Debamitra Bhattacharjee   20:17
+Mhm.
+
+Eugene Semenyuk   20:21
+Not, not a good idea, I mean, not.
+
+Debamitra Bhattacharjee   20:26
+Correct.
+
+Eugene Semenyuk   20:26
+Great idea, yeah, but it, but it's at least something, so it is, it is.
+
+Debamitra Bhattacharjee   20:31
+At least something we know like what we need to test at least what are the changes.
+
+Eugene Semenyuk   20:35
+Yeah, yeah, yeah, at least at least this part, so it should cover.
+Like, not.
+Click.
+Call straight straightforward, like you need to you need you need test this in this way and so on, yeah, but but at least identify like what what what you need to test.
+
+Debamitra Bhattacharjee   20:47
+Look.
+Mhm.
+Yeah.
+So, so yeah, so the reason why I'm asking is for a couple of stories, we just need to wait for the developer to tell us what need to test. So, I mean, that is not at all a proper way of, you know, starting testing, correct? Because the tester, the QA analyst should get the idea from a...
+
+Eugene Semenyuk   21:00
+To make.
+Mhm.
+Mhm.
+
+Debamitra Bhattacharjee   21:22
+business analyst or somebody is not biased on the development side.
+
+Eugene Semenyuk   21:25
+Mhm.
+Right, right.
+
+Debamitra Bhattacharjee   21:30
+That's the business of this problem we face a lot in our team, at least.
+
+Eugene Semenyuk   21:37
+Mm-hmm.
+
+Debamitra Bhattacharjee   21:43
+Mm.
+Sure, yeah, yeah, we have a lot to discuss, I think. Yes, OK.
+
+Eugene Semenyuk   21:52
+Let's discuss this topic as well. So yeah, but this is a huge challenge. I mean, like one liner requirements.
+
+Debamitra Bhattacharjee   21:58
+Yes.
+Yeah, we do get that all the time.
+
+Eugene Semenyuk   22:06
+Yeah, that's...
+That's a huge challenge. OK, yeah, let's think also how to how to deal with it, yeah, except just analyze pull request to tell.
+
+Debamitra Bhattacharjee   22:11
+Sure.
+Mhm.
+
+Eugene Semenyuk   22:20
+Like, what to test?
+
+Debamitra Bhattacharjee   22:22
+Shah.
+
+Eugene Semenyuk   22:24
+Okay, yeah, thanks a lot for your updates and insights and your thoughts.
+So, yeah.
+Appreciate it.
+Okay, yeah, let's.
+Let's proceed.
+So, do you have any other volunteers, or we can go through our board?
+Yeah, and see what we have.
+In progress.
+Yeah, and check.
+Check this datasets.
+So, if no volunteers, so yeah, let me share my screen.
+Enter screen.
+They swung.
+So we have 13.
+Tickets in progress, our intakes. So yeah, and yeah, small reminder. So if you are working on like any use case, so yeah, please create a ticket.
+Yeah, create a ticket. Yeah, if you are from quality engineering team, I mean from from Saeyed team. So yeah, you usually create tickets in quality engineering.
+project, so you have other folks, so you can please create tickets email. EPE project.
+So, yeah, my name is the first on this list. So, yeah, this is...
+Yeah, this is our huge, huge workflow that we started in this in this phase, like smart task selection.
+And maybe, maybe let's update, let's update it to Smart Task Management, not also, not, not, not.
+Not the selection, yeah, because, yeah, as you remember, this use case is dedicated to analyze pull request and user story, and based on the analysis of changes.
+Search through our.
+Search through our test library and see what tasks we need to use.
+for testing for this user story, what tests we need to add and what tests we need to update in this in our test library. Yeah, and yeah, for newly created tasks and updated tasks, so we can also continue with some task automation flows.
+Like, okay, well, that is something we need to update automation as well.
+So, yeah, we created prototype and yeah, and continue working on these on these agents with servicing team with Hai and.
+Yeah, we don't have pretty big updates since previous week.
+Yeah, we have some prototype and yeah, if you if you're interested in the like demo of this use case, so yeah, please let me know so I can.
+I can do it on our.
+Our lighthouse session.
+This week, or maybe, maybe next week, so...
+So, yeah, just like know.
+So, yeah, but I will go to make it a bit more autonomous, so yeah, we...
+We have web hooks that help us to trigger called me agents.
+automatically based on some event. Yeah, for example, we move user story to status ready for testing. Yeah, and then this event triggers our agents in Cody and agents
+agents do all this magic, I would say. And yeah, and in the end, provide us some result, like what tests we need to use for testing, so what tests we need to update, and what tests we need to add.
+So, yeah, that's.
+That's the main idea.
+So, OK, let's let's go through our port. So, yeah, I see met on the call, so meta.
+How you doing? So, what's do you have any?
+This is my news case.
+So yeah, do you have any updates, news regarding your use case?
+
+Matt Nobles   27:21
+The basically what we were waiting for on that is all the mabl MCPs to get ironed out to kind of take that one to the next step. And this kind of where that one's kind of held up at the moment.
+
+Eugene Semenyuk   27:27
+Mm-hmm.
+Yeah, and.
+Yeah, unfortunately, we don't have any, any, any news regarding regarding maybe MCP, but, but...
+Today, with Dennis, we will discuss some...
+Some some topics, yeah, and maybe we can we can integrate, not maybe, we will definitely integrate few things into his tool, and maybe we can we can use his tool, yeah, and.
+
+Matt Nobles   28:06
+Yeah.
+
+Eugene Semenyuk   28:10
+Yeah, I'm...
+Yeah, it's working with mabl right now, so yeah, maybe we can leverage or create some new features.
+that can help us with this use case as well.
+
+Matt Nobles   28:26
+Yeah.
+
+Eugene Semenyuk   28:30
+Okay, thanks a lot. Oh, that's...
+proceed.
+
+Matt Nobles   28:36
+Okay.
+
+Eugene Semenyuk   28:37
+What else do we have?
+So...
+Do you have Brooke on the call? Yeah.
+Hey, Brooke, do you have any updates regarding your use case or maybe some new use cases?
+
+Brooke Borowiak   28:56
+Hi, yes, I'm here. I have been dabbling with the same thing that I was working on. I've run into just roadblock after roadblock on solutions for the...
+reading like the entire file, like I was looking at, I think the last time we discussed. I've tried a number of different things, but so far nothing seems to be working. So I need to do some more research on that to see if there's a way to actually make that work.
+
+Eugene Semenyuk   29:24
+Mhm.
+Mhm.
+
+Brooke Borowiak   29:36
+work, but I just, there's been a lot going on, so I haven't had an opportunity to like dig into that further yet.
+
+Eugene Semenyuk   29:39
+Mhm.
+Yeah, I have, but, but I have some some good news. So, yeah, we, yeah, we added we added a small database to code me. So, yeah, and this database can be used as a
+
+Brooke Borowiak   29:48
+Oh, yes.
+
+Eugene Semenyuk   30:03
+As a test data library for for agents, yeah, and we can try to to create this table with with the users in this database, yeah, and yeah, probably it will be.
+
+Brooke Borowiak   30:19
+Oh.
+
+Eugene Semenyuk   30:22
+Be more efficient, so yeah, we can use SQL SQL queries to to find like relevant users.
+in this database. So, yeah.
+I'll research a bit this topic. Yeah, and yeah, let's connect maybe later this week.
+
+Brooke Borowiak   30:46
+Okay.
+
+Eugene Semenyuk   30:46
+Yeah, maybe we will have one more one more solution that will help us to to deal with with this use case.
+
+Brooke Borowiak   30:54
+Yeah, that sounds great. Thank you.
+
+Eugene Semenyuk   30:57
+Yeah. Awesome. Thank you.
+Let's.
+Let's go next, so we'll have Angela.
+So, Jurijs.
+How are you?
+
+Jurijs Markelovs   31:13
+I was actually typing a message, but I need to drop off, but I have 30 seconds for my life. Let's see. So I had a collaboration session with Oleksandr last week, I believe, and there were two flows, what's not on a board, what I'm working on, right, to support the QA optimization effort.
+
+Eugene Semenyuk   31:13
+You have to use cases.
+Mhm.
+
+Jurijs Markelovs   31:32
+The first one, the Jira Automation, where the ticket gets into the testing phase, you know, creates the web hook where it triggers either Slack bolt or the Jenkins job to deploy automatically, the PRs, what's within the scope of the Jira ticket.
+
+Eugene Semenyuk   31:41
+Okay.
+Mhm.
+Uh-huh.
+
+Jurijs Markelovs   31:57
+And second one is still placeholder when we are doing the same thing as the if acceptance criteria contains meaningful acceptance, when Jira tickets contain meaningful acceptance criterias and they can be converted into the playwright format or any other test framework format.
+
+Eugene Semenyuk   31:57
+Yeah.
+I.
+Yeah.
+
+Jurijs Markelovs   32:19
+It creates the placeholder for the tests and they just adds the, you know, the branch and then creates PR if necessary. So I'm working on that.
+
+Eugene Semenyuk   32:26
+Mm-hmm.
+
+Jurijs Markelovs   32:33
+Yes, so I'm working on a series of the assistance, which will assistance that will be orchestrated within the workflow, right, to do this task. So, yeah, again, the Jira Jira token.
+
+Eugene Semenyuk   32:46
+Mhm.
+
+Jurijs Markelovs   32:53
+For, but you know, it's not a blocker, but more like a Jenkins token, or the integration of the slack is the is blocking.
+
+Eugene Semenyuk   32:59
+Uh-huh.
+
+Jurijs Markelovs   33:03
+Testing of the flow now.
+
+Eugene Semenyuk   33:07
+Yeah.
+
+Jurijs Markelovs   33:07
+This is where I stand.
+
+Eugene Semenyuk   33:09
+Yeah, tokens.
+Yeah, this is this is a big pain in being OMF, I believe.
+Yeah, I mean, yeah, there are there are some security reasons, so yeah, that's probably why, so it is a bit challenging.
+
+Jurijs Markelovs   33:27
+So, what my my my idea is to create to create to create these assistance what could be reused for any other purpose, sort of like a parameterized assistance. So, you know, for example, ticket gets into this column or these, you know, and then you base on that what could be the reusability factor or the use case for it.
+
+Eugene Semenyuk   33:36
+Mhm.
+Mhm.
+
+Jurijs Markelovs   33:48
+So that's the goal. See how it goes.
+
+Eugene Semenyuk   33:50
+Yeah.
+Yeah, that sounds really impressive. Yeah, and it looks like a real AI native mindset. Yeah, I like it. Thanks a lot for your for your ideas and updates.
+Okay, yeah, button down already shirt.
+Sure, updates.
+So, I so I had a meeting with Sarban on today, so yeah, he showed he.
+His updates.
+OK, do you have any any other?
+Any other updates, ideas?
+
+Divya Ramkumar   34:41
+So, Eugene was saying that there was nothing could be done to increase or adjust the width of columns.
+
+Eugene Semenyuk   34:50
+Yeah, unfortunately, yes, yeah, but we we figured out some some alternative approach with tables, so yeah, we can we can merge some columns.
+
+Divya Ramkumar   35:03
+Okay, yeah, he was saying that he is going to reduce the columns and try, but alternative method, another alternative method would be to post published in conference and do it manually.
+
+Eugene Semenyuk   35:03
+Yeah, and uh, yeah.
+Mm-hmm.
+Yeah.
+
+Divya Ramkumar   35:16
+Okay.
+
+Eugene Semenyuk   35:17
+You see, unfortunately, yeah, in.
+In the role, we didn't have such capabilities, yeah, and probably in...
+You know.
+Conference APIs as well, we don't have such opportunities.
+
+Divya Ramkumar   35:35
+Would it be possible for me?
+
+Eugene Semenyuk   35:35
+Yeah, but...
+Um, not sure.
+So yeah, they use the same confluence API.
+So, yeah.
+Probably not.
+
+Divya Ramkumar   35:52
+Okay.
+
+Eugene Semenyuk   35:52
+So yeah, but yeah, at least we can.
+We can make them bigger manually, yeah, or or decrease, not not decrease number of calls, but merge them.
+
+Divya Ramkumar   36:05
+Okay.
+
+Eugene Semenyuk   36:05
+Like, yeah, we can we can merge few columns into one and it will make table to be more presentable.
+
+Nikita Kumar   36:17
+Is this for columns within like confluence pages when something gets posted automatically?
+
+Eugene Semenyuk   36:24
+Uh, yeah.
+
+Nikita Kumar   36:26
+So there, I think there is a way to do that. I think what we have to do, because we were playing around this with digital for a little bit. I have to look back, but I think you can set up the confluence page with how you want the table set up first. So like it'll have just like a template of what the table should look like and fix the column. So when you do push the data.
+
+Eugene Semenyuk   36:44
+Mhm.
+
+Nikita Kumar   36:47
+you can adjust the number of columns because I was able to do like 2, 3, 4 columns just depending on what we needed. It's a little complicated. I'd have to look it up because we did it like in the very beginning. But there might be a way, like if you're already doing that, then that's great. But Eugene, I can show you what I've done like in the past to see if that's helpful.
+
+Eugene Semenyuk   37:02
+Mhm.
+Yeah, our our main our main problem is that we don't we we have we have pretty big amount of columns, yeah, and the problem is their their width, so...
+So, yeah.
+
+Nikita Kumar   37:26
+Yeah, the width we'd have to manually do because I had to I had to do that too. Yeah, the number of columns and stuff. Yeah, if it's like the width and the sizing, yeah, I had to manually go in and update that myself as well.
+
+Eugene Semenyuk   37:26
+Yeah.
+Yeah, yeah, yeah.
+Yeah, yeah.
+So, yeah, but another another solution, so yeah, we we can probably, yeah, as we as we discussed, like, just to merge some columns and make table to be more and be a bit more smaller.
+Okay.
+So...
+And that's it for these tickets. So yeah, feel free to add new tickets if you're working on something.
+Ohh.
+Yeah, do we have any other questions?
+Ideas updates.
+
+Dhanalakshmi Chinnasamy   38:35
+Did you share the buffalo on last time?
+
+Eugene Semenyuk   38:39
+Mhm.
+
+Dhanalakshmi Chinnasamy   38:40
+And we showed interest, but we didn't get any addition for the details to work on it.
+
+Eugene Semenyuk   38:47
+Yeah, do you mean this?
+Let me find it.
+Oh.
+Where it is? This is...
+Should be this one.
+Yeah, do you mean this use case, right?
+Yeah, let me, let, let, let's wait for diagram.
+Yeah, this one, right?
+
+Dhanalakshmi Chinnasamy   39:22
+Are you sharing your screen? Are you sharing your screen?
+
+Eugene Semenyuk   39:25
+Let me check. I don't see it.
+Uh...
+This one.
+So, do you mean this use case or use case we demonstrated on our cross-functional?
+You'll see.
+
+Dhanalakshmi Chinnasamy   39:45
+I think.
+This is the one, is this from the high list?
+
+Eugene Semenyuk   39:47
+This is this is smart test selection.
+Mhm.
+
+Dhanalakshmi Chinnasamy   39:51
+I live that low, right?
+
+Eugene Semenyuk   39:55
+Yeah.
+
+Dhanalakshmi Chinnasamy   39:57
+Yeah, I think we showed many of them. The group showed an interest, but we didn't get any details for that.
+
+Eugene Semenyuk   40:03
+Mhm.
+So yeah, let's check on this week. So yeah, and...
+Yeah, we'll we already have some.
+Some some preparation phase and preparation and preparation artifacts described, so yeah, let's let's connect maybe tomorrow or on Wednesday.
+So, yeah, I'll, yeah, I'll gather all the guys who who desire to work on this use case. Yeah, I have some list.
+So, yeah, and I guess, like now, now we have something, we have something to to start with. Yeah, that's that's the main reason that's the main reason.
+Yeah, why, why, why we didn't do this before?
+So, yeah, we conducted some kind of research, identified what what we need from from the team, like what what artifacts.
+how we will handle them, and then we can, yeah, with this preparation artifacts, we can proceed through these steps.
+Okay, yeah, let's...
+Let's connect. I'll set up a work group.
+and meeting for us.
+Mmh.
+Okay, any...
+Any other questions, ideas?
+So, tomorrow we will have one more cross-functional collaboration session. Yeah, I'd like to see you during this session. So, yeah, we will continue work with the assistants.
+In CodeMe, and like how to configure them, and.
+Yeah, and our main goal, like build cross-functional workflows using such assistance, yeah, to make.
+We had to make our life easier and more productive, yeah, and at the same time, cross-functional and collaborative, like not only engineers doing something in isolation, yeah, not on the QA.
+Doing the same, so yeah, but yeah, act as a team, yeah, and doing great stuff together.
+So.
+Okay, to wrap up, yeah, thank you for...
+For sharing your experiments and insights, so yeah, if you, if you need help or refining a use case or...
+or preparing an agent for validation or any other kind of help. So yeah, feel free to reach out to us, like Svetlana, or reach out to me. So yeah, and before we close, yeah, does anyone have final questions?
+So if not, so thank you everyone. So yeah, and yeah, looking forward to seeing you.
+Tomorrow?
+Have a good day and.
+See you.
+Bye.
+
+Divya Ramkumar   43:51
+Thank you, Eugene.
+
+Bandana Sriramka   43:52
+Thank you.
+
+Nicholas Crowley   43:53
+Thanks, Bob.
+
+Nicholas Crowley stopped transcription

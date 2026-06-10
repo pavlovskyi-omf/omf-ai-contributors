@@ -1,0 +1,312 @@
+AI Enablement QA Lighthouse Session-20260415_140028UTC-Meeting Recording
+April 15, 2026, 2:00PM
+2h 50m 2s
+
+Svetlana Stogni   0:23
+Hi, everyone.
+
+Eugene Semenyuk   0:31
+Hello.
+Good morning, good afternoon.
+Yeah.
+Yeah.
+Let's wait one more minute.
+Yeah.
+I will start today.
+So.
+We.
+Yes.
+Let's wait 30 seconds.
+And we'll start.
+Sing.
+Okay, I guess, I guess we are here ready. So, hi everyone, welcome to today's Lighthouse session. Thanks for making the time to join us today. So, today, yeah, today we had two demos up, but unfortunately...
+One demo, yeah, we need to reschedule to the next like house session.
+So, yeah, we will have at least one demo prepared by prepared by me, so it will be fine.
+I suppose it would be a really interesting demo. Yeah, but yeah, if you have something that you would like to demonstrate, so yeah, feel free. So, yeah, we, yeah, we have some some time today to demonstrate something that that is not in our agenda for today.
+So.
+Okay, yeah, let me remind you our goal. So as always, the goal of this Lighthouse session is simple. So we share what we are building, learn from each other, identify what's scalable and reusable. Yeah, and explorate adoption through.
+our real examples. So please feel free to ask questions during the demo sessions or note them down for discussions afterwards. So the more interactive this session is, the more valuable it becomes for everyone.
+So, OK, before that, before we jump into the first demo, do you have any any questions?
+Is OK.
+
+Matt Nobles   3:51
+Hey, Eugene, maybe it's just me, but I'm having a hard time hearing you today. I don't know if it's just on my end or what.
+
+Eugene Semenyuk   3:53
+Yeah.
+
+Jamie Hayes   3:59
+No, I'm it's me as well, yeah.
+
+Eugene Semenyuk   4:03
+Ohh, Siri, I know, yeah, now it should be better. Yeah, it looks like my my headphones.
+
+Matt Nobles   4:07
+Hey, there you go.
+
+Jamie Hayes   4:08
+There we go. Thank you.
+
+Nicholas Crowley   4:09
+That is better.
+
+Eugene Semenyuk   4:14
+Okay, so yeah, thanks for that. Now I think we are ready to start.
+So, yeah.
+Yeah, previously I described, I already described this use case, like smart test management. Yeah, and today I'd like to demonstrate some artifacts and prototypes that we already created. Yes, so feel free to stop me everywhere.
+So if you have any question. So yeah, and today I want to walk you through a concrete example of the smart task management use case using a real user story, real pull request, and the output produced by the agent. So yeah, as I mentioned, the use case is smart task management, and the goal
+Is simple, so when...
+When a user story and pull requests are ready, we should be able to understand impact faster, identify the right test faster, and close coverage gaps faster, and make it much easier for QA engineers to review and act.
+So right now, a lot of this work is manual. So we read the story, review the pull request. Yeah, if we are able to do this. Yeah, look through existing test coverage, figure out what can be reused, decide.
+what is missing, update outdated test cases, and then organize everything for test execution. So all of that is valuable work, but it is also repetitive, time consuming, and hard to scale consistently across.
+projects and teams. So what I'm demonstrating today is a workflow with multiple agents that support that process. So the first agent does pull request impact and user story analysis. So it looks at the story, the requirements, and the
+through requests and gives us a focus summary of what changed and the companies are affected, where the main risks are and what areas need the most attention from QA.
+Yeah, the second intro looks at our...
+at our existing test library. So in our case, we have like existing test cases from servicing team. So yeah, and yeah, but in other examples, it can be, it can be Maple, it can be.
+... X-rays, Vira.
+Or, yeah, if you if you manage your test cases directly in test automation framework, so yeah, it can be test automation framework. So, yeah, it looks the test library and compares it against that analysis we did before, so it helps answer practical questions like...
+Which task can be reused?
+for this user story from our test library, which test I'm missing. Yeah, it means that we need to add this new test. And which existing test should be updated because of the behavior changed. So that already gave us a big step forward because instead of...
+starting from a blank page, we start from a structured recommendation. So let me ground this in the example I'll show today. So yeah, now I'd like to demonstrate my screen.
+Yeah, here is the user story I'd like to work with today. So the user story is about the loan tile experience from customers who are already paid up.
+And the business problem is that customers should not see confusing warning states or due dates, countdown, messaging when they actually have no current monthly obligation. So in these
+In these zero due scenarios, the experience should shift to a clearer action like pay extra, and it should avoid misleading due in X days or due date messaging. So from QA perspective, this is a great example because
+On the surface, it looks like a small change, but it has meaningful impact. It changes decision logic, customer visible messaging, and potentially what existing tasks are still valid. It also creates a classic risk area
+overlap conditions. For example, what happens when an account is both technically due soon by date logic, but also zero due because the customer has already paid up. So that's exactly the kind of thing that is easy to do.
+to miss and where this workflow is available. Now, let me show what the first agent.
+does with the import.
+So, yeah, I have, yeah, I I've created some agents in CodeMe and already around this workflow.
+One hour ago, yeah, and yes, so we send, so we send.
+
+Svetlana Stogni   10:42
+You too, you are not caring.
+
+Eugene Semenyuk   10:47
+Are you?
+I thought I'd fix it.
+So yeah, feel free to stop me.
+If I'm not sharing.
+Mmh.
+I guess it's working now.
+Okay, we start a conversation with the first agent. So it is change impact analysis.
+Mmh.
+So we send a link to the user story and pull request. Yeah, but friendly speaking, we can send just link to the user story and it should be able to find pull request attached to this user story. So we see that it requested.
+It requested all the necessary data and provided summary of changes. So identified the key change in logic there due now takes precedence for our due soon. So it also pointed to main files changed and highlighted the biggest QA risk.
+which is the overlap scenario where an account could match both conditions. So we see like what components change directly. So what potential components
+What, what, what, what companies can potentially can be impacted?
+Yeah, some dependencies.
+Yeah, and prioritized testing ideas distributed by levels, like unit level. So yeah, this part should be interesting more for developers, like API integration layer.
+Like, what should we test?
+Yeah, and the end-to-end system scenarios.
+So, in a short time, so the...
+These.
+This agent provides us a structured view of what to change, where the risk is, and what we should test.
+Then, then we can ask another agent, like test case analyst, so to analyze this output above against our test library.
+So, at...
+It searched through our test cases library.
+And provided us.
+Summary.
+Like what tests can be reused for testing for this particular user story? So yeah, we see multiple tests that we already have that can be reused for testing.
+It also produced.
+Missing coverage, like tests that we don't have in our test library. Yeah, but they are required for testing for this user story.
+Yeah, and the last but not least, very, very, very important test that required.
+some updates because they are outdated because of changed behavior.
+So we see like what does case ID with what title, why it's outdated, what must change.
+some risk and confidence.
+Yeah, then it provides search evidence like what?
+what keywords, what sentences we used for searching across our test library.
+Yeah, and uh, yeah, also in that we see assumptions and gaps.
+So, yeah, this is like initial.
+Initial step of this workflow: analyze what?
+what have been changed. And based on this, analyze our test library to see what tests we can reuse, what tests we need to add, and what tests we need to update. So comparing with our previous use cases that we created, like
+test design and so on. So yeah, in previous use cases, we analyzed only the user story.
+Yeah, and based on user story, we create a list of task conditions, and based on this list, create task cases. Yeah, but in this case, I see a lot of, I mean, in our previous approach, I see some limitations. Yeah, because
+We generate a list of task conditions, yeah, but they can be...
+They can duplicate existing tests.
+that we have in our test library. They also...
+Yeah, they also...
+Doesn't provide, they don't provide us insights about existing tasks that requires updates. Yeah, and the last but not least, very, very important step.
+So...
+Our previous approach analyzed only user story, yeah, but in this risk-based task management, so we analyze also the pull requests and all the...
+repositories connected with this product. So yeah, for this particular case, we have...
+
+Svetlana Stogni   17:23
+Yeah, I'm not sharing. You can share it for.
+
+Eugene Semenyuk   17:27
+Yeah.
+Thanks A lot.
+That's a pain.
+Yeah, and in this case, we analyze all the...
+all the connected repositories and find what, yeah, what this particular change can break, not only in our repository, but in other repositories as well, and provide us insights of what we need to test. So this approach is
+more mature because we don't test one user story in isolation.
+So, yeah, we test.
+We test it along with the...
+with impact analysis.
+of our product. Yeah, and then we can use...
+Yeah, we can use multiple of other agents. Yeah, for example, we can select the test case from missing.
+Missing coverage, for example, this one.
+and ask our test case composer.
+Yeah, this one.
+Create test case.
+For these.
+Scenario.
+Let's mention it.
+On the list.
+Bob.
+Yeah, now it should.
+Yeah, it should create test case.
+For this particular scenario, yeah, and then we can proceed with the...
+like test case creation. So we can download it in this particular format, we can copy paste it somewhere, or we can add integration with test case management system and ask it to upload it, for example, to X-Ray.
+or as a Jira subtask, yeah, and so on and so forth. So the thing we can do with the test case updation operation.
+Like, select the test case, ask this case composer to update particular test case based on changes that we have here.
+So yeah, that means the workflow is already helping us answering the core QA planning questions much faster and with more structure. So yeah, and now what makes this a special interesting is what come next.
+So today, this workflow is semi-autonomous and manual. So we, in this example, I triggered agents like one by one, provided some inputs and so on.
+So bad.
+Yeah, but...
+Eventually, I would like this workflow to become autonomous enough so that when a user story change to status, for example, testing, yeah, we move story to testing status.
+So, yeah, and this even triggers...
+Our workflow, where each step goes one by one.
+and does all the operations. Yeah, so the process starts automatically based on status change in Jira, and it analyzes the story in pull requests, reviews existing coverage, creates and updates what is needed, and then
+sends back a package for review with all the relevant links and artifacts. For example, to Jira comment and tag you to review.
+So yeah, instead of asking where do I start, so the team gets a review ready recommendation pack.
+So, yeah, and beyond that, we can expand this idea into test automation, like, and the workflow knows what changed, so what the risk is and what and what new coverage is needed, so it can.
+Also, start.
+Highlighting opportunities for task automation, or or even provide some updates in task automation repository, yeah, and create pull requests for review, yeah, and even maybe start.
+CI job for this particular pull request to run tests and see their statuses.
+So...
+Mm.
+So, yeah, and the...
+frankly speaking, this is not only about saving time. So yeah, it's about creating a more...
+more structured, scalable, and collaborative QA process that can not only improve productivity, but also improve quality of the product based on this risk-based approach. So yeah, and I want to emphasize the word
+collaborative. So this use case is not only for QA. So we already have engineering guys interested in participating and practicing this exercise. And that is straight, I would say.
+The better this workflow becomes at connecting story intent. I'm not sharing.
+
+Samvel Chalakhyan   24:09
+Eugene.
+
+Svetlana Stogni   24:11
+Yeah, not sharing.
+
+Samvel Chalakhyan   24:11
+We have not lost the the screen sharing again.
+
+Eugene Semenyuk   24:15
+Yeah, but yeah, actually I finished with the with the demo part.
+
+Svetlana Stogni   24:17
+Welcome.
+
+Eugene Semenyuk   24:23
+Yeah, but yeah, thanks.
+Ohh.
+So yeah, where I stopped.
+Yeah.
+
+Svetlana Stogni   24:34
+Collaborative approach.
+
+Eugene Semenyuk   24:34
+The better, the better, yeah, the better this workflow becomes at connecting story in town, technical change, and task coverage, the more useful it becomes across functions and QA brings the coverage
+perspective. Engineering brings the implementation context and improve these impact based impact analysis to better identify the dependencies and risks in the
+in the product in based on some code changes. So yeah, and we can shape this into a workload that teams will actually trust and use. Yeah, and we see really big opportunity to scale this use case because, yeah, in every team we have
+We have some specific things, yeah, specific technologies, repositories, and so on. Yeah, but the idea is the same. The approach is the same. So yeah, but yeah, we will have some differences in implementation. Yeah, but
+approach.
+Uh...
+Uh...
+will be slightly the same. So yeah, and what I'd like from this demo is engagement. Yeah, as you look at this output, I'd like to think about whether this would help on your project. Like, would this reduce the time to understanding?
+packed? Would it make test planning more consistent? Would it help expose missing coverage earlier? So, and would it make it easier to collaborate with engineering? Yeah, and based on that, tomorrow I'd like to gather and working
+group around this use case with both QA and engineering involved. Yeah, and so we can improve it together and start shaping how it could be adopted more broadly. So yeah, if you are interested, so yeah, feel free to
+to raise a hand, put plus in the chat. So yeah, let's connect together, collaborate, and make this use case to be more efficient.
+That's it from my side, so yours.
+
+Jurijs Markelovs   27:11
+I just raised my hand. That's very your request.
+
+Eugene Semenyuk   27:13
+Yeah.
+Yeah, yeah, so yeah, you are, yeah, at least.
+
+Jurijs Markelovs   27:18
+And last thing what you mentioned is the fact that you know it's manual triggering right now, but you were about to explore the secrets of how to make the make it run.
+
+Eugene Semenyuk   27:24
+Mhm.
+
+Jurijs Markelovs   27:31
+Uh, autonomously, but you didn't finish your foot.
+
+Eugene Semenyuk   27:33
+Yeah.
+So, yeah, the main the main idea is webhook, webhook features that we have in code me.
+Uhh...
+So yeah.
+Yeah, the the main the main idea is to use these web hooks and trigger trigger agents and workflows from Codney, like from Jira.
+Yeah, based on some events.
+And, uh, yeah, it should be...
+Yeah, it should be definitely feasible for us. And maybe for tomorrow's sessions, I will prepare something that we can try.
+Yeah, but not sure, so this is this is new for new new feature.
+or OMF called me. So yeah, we first of all need to test it.
+Yeah.
+So, yeah?
+That's it.
+So yeah, I definitely add you to this group. So yeah.
+You are in, you are in my list.
+Yeah, and uh, uh, DAP.
+Would you like to add something or be a part?
+
+Debamitra Bhattacharjee   29:02
+Ohh no, just raise my hand for the.
+
+Eugene Semenyuk   29:05
+Yeah.
+So, yeah, yeah, we we'll have we'll have a meeting today, yeah, to yeah, we can we can start to discuss, like, how how we can adopt this law in your particular project, yeah, but tomorrow, yeah, we will connect together, yeah, with QA and engineering folks.
+
+Debamitra Bhattacharjee   29:11
+Mhm.
+Sure, OK.
+
+Eugene Semenyuk   29:27
+Yeah, and uh, like maybe have some brainstorming.
+May create some backlog of improvements that we can make.
+Yeah, and uh, yeah, I, I rather prepared some uh...
+some guide like how to how to set up initial artifacts.
+So yeah, we can start with this. Yeah, because definitely we need to test these agents on other projects, because yeah, for now we test it on the in servicing.
+
+Debamitra Bhattacharjee   30:03
+Oh.
+
+Eugene Semenyuk   30:12
+Teams, yeah, but also, yeah, it requires some.
+Some polishing adjustments.
+
+Debamitra Bhattacharjee   30:19
+Yeah, all we say.
+
+Eugene Semenyuk   30:20
+And so on.
+
+Debamitra Bhattacharjee   30:23
+Show.
+
+Eugene Semenyuk   30:25
+Okay.
+Any any other volunteers?
+And then.
+Okay.
+So I guess that's it with this particular demo. So yeah, if you have any questions, ideas, yeah, feel free to.
+Uhh.
+Ask it now or yeah, reach out to me later.
+Okay, do we have any other ideas, questions to discuss, or maybe you have something to demonstrate? Yeah, at least we have one slot to demonstrate something.
+So yeah, maybe you had some experiments that you would like to share with us.
+So, if not, yeah, we can we can wrap up a bit earlier today, so yeah, unfortunately, yeah, unfortunately, we lost one one demo, yeah, but we will have this demo on the next session.
+So, yeah, stay stay tuned.
+Okay, thanks a lot for...
+For your ideas, questions, and engagement, so yeah, any any other last minute questions?
+Ideas.
+One, two, three. Okay, thanks a lot and yeah, see you, see you, see you tomorrow. Have a good day and bye.
+
+Svetlana Stogni   32:34
+See you, bye.
+
+Nicholas Crowley stopped transcription
