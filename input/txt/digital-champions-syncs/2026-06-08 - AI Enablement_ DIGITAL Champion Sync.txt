@@ -1,0 +1,459 @@
+AI Enablement DIGITAL Champion Sync-20260608_153001UTC-Meeting Recording
+June 8, 2026, 3:30PM
+30m 21s
+
+Vlad Grubman   0:14
+Hello, everybody!
+
+Samvel Chalakhyan   0:23
+Hey, Vlad, hey everyone.
+
+Nicholas Crowley   0:29
+Morning, all.
+
+Vlad Grubman   0:34
+OK, sent you a message in the Slack. Do you have a chance to see it? So, basically asking if there is any update on the on the tools.
+
+Nicholas Crowley   0:42
+Yeah, sadly, no. What I get is they're working on it. The agent, Erin Mays, is talking to Patrick Parker or whether they can enable it or if there needs to be additional review. The ChatGPT licenses for Lighthouse 24 teams.
+They're in process and enabling those.
+
+Jatin Bagga   1:03
+Hello.
+
+Nicholas Crowley   1:05
+Uh, Codex, it's uh, they're they're working on the um.
+
+Vlad Grubman   1:06
+Okay.
+
+Nicholas Crowley   1:14
+role group and getting the people into the role group to allow tech users and, you know, AIPDLC users access to that, but not everybody with chat GPT.
+So I'm struggling to get timelines. They're working on them on these things, but don't have good feel for timing around when they'll be enabled.
+
+Vlad Grubman   1:35
+OK, we need to we need to make sure that the right people from the digital team having access to it, because otherwise...
+They're gonna get stuck. Like, not everybody, again, I agree, not everybody needs it, but those who are actively working on something, the champions, the mentors, the people who are actually working on use cases, yeah, they definitely need access to that. So.
+
+Nicholas Crowley   1:54
+Yeah.
+
+Vlad Grubman   2:00
+Yeah.
+
+Nicholas Crowley   2:02
+Okay.
+
+Vlad Grubman   2:02
+Especially important for phase three, if we really wanted to get to those outcomes that, uh, Philip wants to general mentioning, like, yeah, the the the the wheels on this car would definitely go a long way.
+
+Nicholas Crowley   2:12
+Yeah, they need to have the wheels right in order to make the car move at all. I hear ya, I'm pushing.
+
+Vlad Grubman   2:15
+That, that's the metaphor, yeah.
+Hi, Jatin, hi, Alfredo.
+I don't think we have a lot of discuss, just a couple of things.
+that I wanted to bring to everybody's attention. This is the last week of this phase. We transition into the next phase. How, when, and where, we don't know yet, TBD. But ideally, what I would love to see is we have a JIRA board.
+Uh, yeah, PDLC enablement. The code for the board is APE. Unfortunately, I haven't had a chance to figure out what's going on with my...
+VDI, so I can't copy paste the link, but if you go to Jira and look up, let me share the screen there real quick.
+This is the board, the APDLC enablement. This is the this is the code APE APE. So if you go APE, you'll find this. We would love for you to track the use cases that you're working on in this board because that will help us. I know I know some teams do it in.
+their own boards, but this will really help us collect the proper analytics in this. So you're getting, you will be accounted for. You'll be accounted for, and for those of you who may not know, we do have a recognition program, so this will help us pick.
+the proper people and teams for the recognition.
+So if you want to be recognized, this would be based, yeah, Jatin got.
+
+Jatin Bagga   3:52
+Sue.
+So wait, if you don't want to be recognized, we don't have to do this.
+
+Vlad Grubman   3:57
+If you don't want to be recognized, don't put don't put your name on it, but...
+
+Nicholas Crowley   3:58
+Yeah.
+
+Ron Seager   4:03
+Recognition comes with money.
+
+Vlad Grubman   4:03
+If you want, if you want, if you want those 5 bucks, you know, 5 boxes per month.
+
+Nicholas Crowley   4:05
+Ha ha ha.
+
+Jatin Bagga   4:06
+Okay. All right, you need more tokens, baby. That's what I need. I just need more tokens. I have a bit of a thing, so yes, send this to me, but that's great. Thank you, please. But my agents got lost. I created two agents. They're lost. One I thought was going to be a breakthrough. I created for Method FI project, which I shared with you, which is really going to be helpful for everyone.
+
+Ron Seager   4:06
+Yeah.
+
+Vlad Grubman   4:19
+Yes.
+
+Jatin Bagga   4:24
+everyone because that's a Dana Wassam, Micah, like Dana, like a big view. And second I created which was going to be a surprise for everyone, which was the intake form. I kind of got all the intake forms together so that we don't have to think when we're trying to submit an intake. And dude, Vlad, why did you take it away?
+I'm going to blame you because you're the one who trained as an agent. Go figure it out. Get me the agent back. There was too much work I spent on it.
+
+Nicholas Crowley   4:43
+The.
+
+Vlad Grubman   4:47
+I...
+Yeah, I, I'm actually wearing special t-shirt today. I'm the reason the aliens don't visit, so yeah, please blame me. Yes, I made it, I made it up, I made it myself, just, just in the, so yeah, it's we're working.
+
+Jatin Bagga   4:56
+Does it don't kick me? Is that what it says? Don't shoot the messenger.
+No, but jokes apart, like my agents are lost. If we get access to the agents, will they be lost still or will I have access to those agents?
+
+Vlad Grubman   5:10
+I don't know. I can't answer that because we're still working on bringing them back. The security team is doing the research. It's a little weird that they were taken away to begin with because frankly, Microsoft Copilot does exactly the same thing. Like if you go with Microsoft Copilot and do either workflows, the agents, it's exactly the same thing. There's absolutely no difference.
+
+Jatin Bagga   5:12
+No.
+Ohh boy.
+
+Vlad Grubman   5:32
+So I'm not sure why that was taken away, but yeah, well, I know security teams working. This is what I was just chatting with Nick about literally 5 minutes earlier. Hopefully, hopefully at some point this year, they'll be back because, yeah, we really need.
+really need the right tools for the job. You can't do everything with ChatGPT.
+
+Jatin Bagga   5:56
+And I had access to, like, the weekend. I just lost it today.
+
+Vlad Grubman   6:00
+Everybody lost access to it. Everybody lost access to it. Yeah, I had access to it.
+
+Jatin Bagga   6:02
+No, I think people lost access last week, but I lost like this weekend. Like I had access today, it's not there anymore. Oh, what a shame. All right, whatever.
+
+Alfredo Achecar   6:02
+Okay.
+It.
+
+Vlad Grubman   6:12
+Sorry, I, I, I feel your pain.
+EPAM just took away access to my cloud code. I had a I had a pretty decent account, they they took it away, they they pushed me into the enterprise license, which basically doing the same work exactly, but at three times the cost, which I don't get it, but companies run on their own companies run on their own rules.
+Sometimes you just have to take the AL and move on.
+
+Jatin Bagga   6:39
+Yeah, so what's this board? Can you post that here real quick, please?
+
+Vlad Grubman   6:44
+Uh, yeah, it's uh, uh, sorry, I...
+
+Nicholas Crowley   6:47
+I'll post it; I think you have copy paste troubles.
+
+Vlad Grubman   6:48
+Oh, thank you. I appreciate it. I appreciate it. It's the board where we keep track of all the use cases for all the work within the AI enablement, because a lot of teams initially started tracking tickets, started tracking the work in their own JR boards, and we not necessarily had access to them.
+So the ask is if you're working on something.
+anything within this AI enablement program, put it on this board, even if it's a duplicate of the existing ticket that you have, it will still help us track the work and understand, you can link it. I mean, it's sure, all right. It will help us collect the stats because everything, like all the analytics that we do is automatic.
+Nobody's really going and counting the tickets manually, which is why we're asking everyone to put stuff in the zero board so we can track it easily, because it's all automated. It's all Mikhail built some very sophisticated workflows that he's now struggling to share with us, because he has like 5 different five different MacBooks.
+tied into this together like three different Claude accounts.
+So, yeah, it's...
+
+Nicholas Crowley   7:58
+Vlad, can you, to that point on linking it, I know there are people that are working in their own boards. What is the best mechanism for linking them?
+
+Vlad Grubman   8:03
+Mm-hmm.
+
+Nicholas Crowley   8:12
+It's not just a tag we need to do, we need to create a new ticket in APE, and then how do we link that together?
+
+Vlad Grubman   8:23
+Let me let me start back backwards. The desired outcome here is the work that what is what is it that you're working on and what is the current status? Ideally should be in April board. So however you want to make that happen.
+
+Nicholas Crowley   8:26
+Yeah.
+
+Vlad Grubman   8:41
+It's up to you, but the outcome that we need is what is it you're working on and what is the status? Because that's what goes into those dashboards that we report on.
+So, however, whatever you can, you don't have to, like, some teams actually decided to keep track in a board and not in their individual, as long as they somehow show that, you know, they spend their capacity, they spend their cycles on that board, they're okay. Some teams have to do the opposite. They have to keep stuff in their own board.
+So they create a copy or duplicate and link them. Like, hey, this is the copy of this. I don't want to prescribe specifically how to do this, but I do want to prescribe the outcome. The work needs to be visible on the 8th board.
+
+Nicholas Crowley   9:19
+Yeah.
+And to make it visible, we need a task or a story.
+
+Vlad Grubman   9:24
+That makes sense.
+Yeah.
+Yep, yep, yep, target AI, what was it, AI intake, and then either digital or product, like here, AI use case, if you're actually working on the use case, what, like, be flexible, but make sure it exists here, this way we can account for your use case, because we have some teams.
+
+Nicholas Crowley   9:29
+In the sport.
+Okay.
+Yeah, and take.
+
+Vlad Grubman   9:52
+We surface the new names of the teams and in our ops and that don't have use cases, but that means they don't have use cases on this board. Doesn't mean they're not doing any work around AI. It's just it's not visible. So I want to avoid that because we're building the report for this phase.
+The final report for phase two would be great if the team's recognized for the effort.
+
+Alfredo Achecar   10:18
+Hey, excuse me, I had a quick question for Jatin. Jatin, whatever happened to the snowflake stuff for the coal miner data transcripts?
+
+Jatin Bagga   10:31
+Snowflake stuff for call miner. You talking about the voice of customer?
+
+Alfredo Achecar   10:36
+Yeah.
+
+Jatin Bagga   10:37
+Yeah, so we got some snippet, but we're running into other issues with it's not stored in an S3 bucket. So we just got a snippet of the data, but not the entire thing. So we're trying to use that sample to then prove that it's really important for us. So we're sort of in a limbo state right now.
+Much like anytime you ask for anything deeper.
+So we're trying to figure it out, really. It's still...
+
+Alfredo Achecar   11:01
+Okay.
+The.
+
+Jatin Bagga   11:04
+That's a TBD.
+
+Alfredo Achecar   11:05
+OK, so, so the the the blocker is access to the data, or like, what's...
+
+Jatin Bagga   11:09
+The blocker would be accessed to actually putting it in a location from where we can actually extrapolate it, right? So right now it's like they don't even store some of this information. They can, but they're not. And for us to store it in a location, it has to be like an S3 bucket or Snowflake or somewhere else, right? Like Snowflake's not really a storage, but Snowflake can query off of.
+you know, wherever the data is stored. So we're working through those logistics of where they're going to store it. They've not responded to some of the messages that a couple of us, like Jay Guru and I were trying to get answers to.
+
+Alfredo Achecar   11:41
+Okay, gotcha.
+
+Jatin Bagga   11:42
+Yeah, yeah.
+
+Alfredo Achecar   11:46
+Yeah, I'm so, yeah, I mean I I share, but since it was a smaller group, so I'm still working through, and it's nice that the Wajdan is here also. I'm still working through the the contact form emails, and I'm trying to find, and I can maybe show it in a demo or at office hours. I'm trying to find a way to like really like...
+slice and dice the data using like rag and embeddings for the contact form emails to see if we could then like separate that into lanes and then you know pain points etc. So I'm trying to come up with a more let's quote unquote sophisticated way of doing it. Still not fully successful yet, but yeah, just kind of want to.
+Make sure that.
+
+Jatin Bagga   12:27
+Yeah, that sounds great. I think, well, yeah, one way or the other, this would come in handy, right? Like, so yeah, if you're trying to work on something that is very clear, clear cut use case, that's fine. It's just the whole process of like manually managing it.
+Alfredo gets a little tricky, you know what I mean? Like, that's the part that we would want to start avoiding, at least the work that I'm trying to do. But yeah, like, you know, if you have something that's like ready to use and stuff, I think that's just a good thing.
+
+Alfredo Achecar   13:05
+Yeah, no, yeah, that's I think you're bringing up a super important point. It's yeah, what I'm what I'm trying to do is basically just do a demo, like do a working version on my local machine, right? Because, like, that's the, yeah, yeah.
+
+Jatin Bagga   13:17
+Yeah, that's the whole thing. Yeah, correct. That's the rough that I think we're running into a lot of that issue across the world. Plus all these accesses for security reasons that are not available, they're not helping either. It's like I can't do a clear end-to-end anything, right? But nonetheless, I feel like, you know, look, if you've done work on the contact, I would say, yeah, just bring it up in one of the meetings, just showcase it and stuff. And folks, if they want to use it, they can probably use.
+either the GPT or whatever cursor, whatever you've created. I think again, the issue only would be that they would only be able to use it as a user, but not really, you know, like we can't scale it, if that makes sense. And there's manual intervention required every single time. That's the part that really gives me a little bit of a...
+
+Alfredo Achecar   13:54
+The.
+Yep.
+
+Jatin Bagga   14:01
+You know, like...
+
+Alfredo Achecar   14:01
+Yeah, no, exactly, but maybe I think part of perhaps proving the use case, like, hey, yeah, we can see that by doing this effort, even if it's running on a local machine, look, what's coming out of there is very valuable, and teams can see that, and then we say, okay, you know what, let's invest some time and effort in making this something that's scalable.
+
+Jatin Bagga   14:13
+Yeah.
+
+Alfredo Achecar   14:20
+And I not to put Shai on the spot, I know Shai is also doing his own efforts, you know, researching solutions for different kinds of things. So I know that's happening also.
+
+Jatin Bagga   14:20
+Okay.
+Yeah.
+Yeah, Shai, whatever you're researching, I don't know what that secret is, but would love to know what you're researching and how that's different. I'm just teasing Shai. Shai, I've run into all issues right now with like Jago and I trying to get the data as well. Like I feel like it's a stop, go, stop, go. We're very close. I think of an architecture standpoint, I feel like he's standing up something really solid.
+
+Shai Eilat   14:39
+Hey.
+
+Jatin Bagga   14:52
+that we can build off of, a voice of customer. But I don't see any other way right now for us to just plug and play. You know what I mean? Like that's a part that's not readily available for us, like that ecosystem, if you will.
+
+Shai Eilat   15:04
+Jatin, if, if, if we had that agent mode in Chati Pitty working what we had last week.
+Can't we use that? I guess we can use that to extract information from email, from Slack, from SharePoint, and create an agentic flow.
+
+Jatin Bagga   15:23
+Hundred percent, 100%.
+
+Shai Eilat   15:27
+If theoretically we would have access to that tool, would that solve some of the issues?
+
+Jatin Bagga   15:27
+100%.
+In a lot, yeah, so you're absolutely right. So I think we could do agentic flow easily through ChatGPT from email, Slack, Teams, Confluence, Jira, right? The issue is that, so it'll be a little bit fragmented, meaning from ChatGPT could use that, but then when you come into other tools like using cursor.
+Even though cursor has access, I think there was some challenges that we ran into from an email standpoint, at least that I ran into, Alfredo. I don't know if you've tested cursor for that. So, and then when you look at like broader sources like, you know, Qualtrics or like if you're looking at call miner data, sorry, call miner.
+they're not in emails, right? So you do need a source. So that's why I spent some time with Juris, really good guy. He's on our engineering site to try and ask him for some help on how to really set up agentic flow coming, pulling data through S3 or something. So the answer to your question is yes, but then again, it'll be very siloed. So you could do it for the email, but then it's not the holistic view across other.
+
+Shai Eilat   16:14
+Yeah.
+
+Jatin Bagga   16:35
+you know, sources of truth. So then you might have to use their output, which is then a process data to then infer, like that gets a little complicated. I think it'd be best if we.
+
+Shai Eilat   16:38
+Yeah.
+
+Jatin Bagga   16:46
+I mean, I feel like it's a little bit of a heavy lift initially, Shai, but if you can get this architecture straightened out, I think it would be much better for us overall. Does that make sense?
+
+Shai Eilat   16:56
+Yeah.
+
+Vlad Grubman   16:57
+Sorry, let me just jump in real quick. Jatin, you're on the right track. You're just kind of missing the piece of this whole thing because you were not exposed to it. I think what you're trying to do is you're trying to make things work with what you have, which is...
+
+Jatin Bagga   16:59
+Yep.
+Okay.
+
+Vlad Grubman   17:15
+Obviously the right thing to do. Unfortunately, for this to scale in any significant way, and I'm not only talking about like enterprise scale, I'm talking about scaling it beyond a couple of emails, you're going to need to have access to the model.
+Because what you want, and this is where your architecture, and I'm sure Diego said something to that end, because it's the only way it can work, is you need to, you need the actual model, like the actual GPT model or whatever other model, to read your email and give you a summary or give you a...
+Like, give you, give you like a skinny on that email, and it has to do it for every email or every batch of emails that you submit. Cursor can do that, like what the demos that I was showing you with the cursor, and I made it very clear, they are hacks, like they are ways to avoid needing.
+direct access to model. But if you really wanted to build this in kind of like a full scale way, you need to have, you need to go through emails or you need to go through your chats or whatever and send it to LLM. LLM creates a data sort of like a data package that explains what's in that.
+Email, and then you can use it. So, in the original demo that I did using the API to the model, it was exactly like that. It was like reading the email, creating sort of either a salary or meta, and then analyzing that, and then extracting the insights. Like, that's why I keep advocating for you folks to get direct access to the emails.
+Not everyone, but like Jatin, you like couple of other folks, those who actually work with large data sets like that, you can't avoid having access, direct access to the model. That is exactly the use case for it. Hope it helps. Like, I don't want you to lose track, lose sight of, like, if you ever want this to scale beyond like first 10 emails.
+
+Alfredo Achecar   19:08
+It.
+
+Vlad Grubman   19:14
+You really need to, you really need the right approach. You need to build this pipeline where your emails are being processed by LOL. Oh, sorry to jump into this. I just want to really want you to focus on that and not waste time on trying different things, because they're only going to work for, you know, a limited amount of data, and then you're going to run out of data.
+either context capacity or both.
+
+Jatin Bagga   19:39
+Yeah, and the only thing is that emails like...
+
+Alfredo Achecar   19:39
+Yeah.
+
+Jatin Bagga   19:44
+And some of the data is not going to come into emails, right? They're just not email enabled. It's very large, voluminous data, and there's capacity on how much email, you know, with the max limit of an email. So those are going to stay like where they need to stay. Like large data sets would not, you know what I mean, Vlad? Like they will not.
+
+Alfredo Achecar   19:46
+Yeah.
+Okay.
+But.
+
+Vlad Grubman   20:04
+Mhm.
+
+Jatin Bagga   20:04
+They're not email-friendly.
+
+Alfredo Achecar   20:06
+I, I think what...
+
+Vlad Grubman   20:06
+Exactly, and that's where you need to, that's where you need to build those pipelines.
+Yeah.
+
+Jatin Bagga   20:13
+Yes, I agree. Go ahead, Alfredo. You were going to say something. Go ahead.
+
+Vlad Grubman   20:14
+Yeah.
+
+Alfredo Achecar   20:15
+No, no, no, yeah, yeah, I was gonna like, yeah, what I'm what I'm trying to do with the so I have like about 2000 / 2000 emails that I'm trying to like run through, and it's yeah, I'm sort of running through trying to embed.
+give them embeddings using like a local model and then like vectorizing them using some fancy thing that I don't fully understand.
+
+Vlad Grubman   20:37
+Yep, that's one of the ways to do it, yes.
+
+Alfredo Achecar   20:40
+And then, and then, and then try to run an analysis on the vectors.
+
+Jatin Bagga   20:44
+Got it.
+
+Alfredo Achecar   20:46
+Yeah, but but I think that point is it still sounds like you like we need to kind of like basically pipeline of data that can feed into the model directly.
+
+Vlad Grubman   20:46
+Yeah, good.
+
+Alfredo Achecar   20:55
+that could be processed continuously.
+
+Jatin Bagga   20:59
+Got it.
+
+Vlad Grubman   21:00
+And I think that's what Diego actually proposed when we had those conversations. It is more or less a universal way of dealing with it if...
+Unless you have a different opinion or different approach to processing that data, because vector storage has its own limitations. And I made this mistake myself literally a few months ago. I treated vector storage as just, you know, chunk data that I can sort of read and access everything from it.
+and turns out I was wrong and there is very severe limitation. Think about it this way. Whatever you vectorize, you get top 10 results out of that based on the proximity, the...
+I forgot the word, the linguistic proximity, semantic proximity to the request, but you're not getting the whole thing. So that makes it.
+useful when you're looking for a specific phrase or specific things or a couple of specific things related to your query, but it makes it kind of dangerous to rely on if you're looking for insights across large number of emails or large number of transcripts or something.
+So then, then you have to, yeah, you have to do, like, you have to use different approaches depending on the use case, so...
+one of my first versions of knowledge management systems, I was like, hey, I can just vectorize everything I have and just ask questions about it. And turns out that's not the case. It consistently failed to find what I was looking for. Like, what's going on? So yeah, you have to really understand the use case or you really understand what is it that you're trying to solve for.
+and then decide if the RAG is the right solution. Because as much as we all love RAG, it makes things efficient. It's not always the right choice for what you want to do.
+
+Jatin Bagga   23:01
+Yeah, fair point. I need to drop, sorry. So I will try to update a couple of these. I guess I just need to create them again in the board. I suppose they don't exist already. So I'll update that, Vlad, in your PDLC board that you got here.
+
+Vlad Grubman   23:21
+Yeah, please do update the tickets. That's really important. Thank you, John. If you guys have any more questions, please go ahead. If not, we only have 7 minutes left, so let's make it efficient.
+
+Jatin Bagga   23:22
+Okay.
+All right.
+
+Alfredo Achecar   23:34
+Wait, so Vlad, how did you end up solving? Um, because I, I, I'm trying to do something very similar, I think, to like your initial approach to the knowledge management, so basically do rag and then...
+Like, query the rag, right? Like, like have the LLM.
+
+Vlad Grubman   23:50
+So, with the with the original, it was it was a while, it was a while ago, but the original way of solving for it was...
+I threw away the rag and I created...
+I think it was indexes, so indices where...
+I knew where everything is, and again, mind you, this was in the age of GPT-4 models, and I don't really have an alternative. Today, I would have probably opted for a, again, for my use case, the one I was using for. I would probably opt for something like a second brain.
+So that would be helpful. Alternatively, for the, when you try to extract insights from thousands of emails, Marine is probably not, at least the one that I presented, is not the best solution. What I ended up doing, and I think it was in the demo, one of the demos that we did in Vibe coding demos.
+What I ended up doing was I analyzed the email and create like a line or JSON entry in the file that explains what this is about. So basically you treat it as here's the raw data, here's the process data that I know what the data is all about, and then I can use that.
+as a database to extract the information that I need. So for example, if I analyze each, let's say it's an email or it's an app review, what is the topic of this review? Make that a meta, right? What is the, is it a positive sentiment, negative sentiment? Put this in a meta too, and so on and so forth. So now that I...
+If I want to sort of prioritize the themes or prioritize the topics, I can just go through my JSON or go through my actual real database and say, okay, count how many times login issues come up with a negative sentiment. And now I have an understanding of.
+What my situation looks like, right? So, the power of LLM here is not is not to create that sort of dashboard. I mean, it is, but it isn't really. The power is understanding, that's the keyword, understanding what the message is about, what that app review is about.
+Because once I have that, once I quantify that, or once I set up the attributes, then I can go and analyze using more or less existing tools so I don't have to overuse LLM because LLMs are expensive. This way I can, and the best part is it can create topics for you.
+So if there is an emerging trend that you didn't have a taxonomy for, it recognizes that and it creates it, rather than you having to read through unidentified topics and like, what is this? What is Shirley talking about? So this way, this is what dynamic roadmap was actually all about.
+Like, analyzing the bases, like, what, where are we coming from, and everything else is more or less, um, you know, once you have a meta.
+And, and you can, you can, you can set up the different agents to to to reanalyze and reprocess the meta, like once a week, once a month, because...
+It might make sense.
+In a low run, uh, but then it's all it's all it's like again, it's what is the problem you're trying to solve?
+Hope it helps. And again, it's not just, let's take 2000 emails through ChatGPT and have a look at it. You really have to, once you have a lot of data, once you start scaling, you really need to plan it through. And you can absolutely ask ChatGPT or whatever you're using, say, hey, I have this, what is the best approach? How do I do this if I...
+But you still need to keep that end goal in mind, right? Start with the end goal in mind.
+Hope it makes sense. Sorry, I know I talk A lot.
+
+Alfredo Achecar   27:53
+No, no, no, it did actually. I think I found like a tutorial from these UX researchers that are doing, like, like, they were using like app reviews and basically doing like that sort of, you know, doing like sentence embeddings, creating a JSON out of that, and the JSON would also think contain the snippets so that you could have multiple.
+Like multiple ideas on, because you'll have multiple ideas on one sentence or, and then like run through that, um, through an LLM, so they can like, you know, create topics and, excuse me, they like do that, do like a the the the vectorizing.
+
+Vlad Grubman   28:17
+Yep, yep.
+
+Alfredo Achecar   28:30
+And then I do like, I think a Keynesian or Bayesian analysis. I'm not like, I know that conceptually. I don't know exactly how that that's done. I know it's through done through Python. And then, and then do like the topic, like then do the topic generation based from that, that stuff.
+
+Vlad Grubman   28:36
+Mm-hmm.
+
+Alfredo Achecar   28:50
+So it sounds a lot like what you were saying, that's all I'm gonna say.
+
+Vlad Grubman   28:53
+I mean, I mean, there are a couple of good approaches, and I'm sure when I was asking, asking Olan, what's the best way to do this? I picked one of those, so that's why this sounds similar, and it makes sense. Again, you can experiment, there might be each cases that don't really fit.
+But again, that's the beauty of it, right? You can go and experiment and rebuild it and build the app once, twice, three times, four times, and until we get tired of it.
+
+Alfredo Achecar   29:23
+Excellent.
+
+Vlad Grubman   29:25
+Yeah, absolutely. My pleasure. We're at the time. Just a reminder, this is the last week of phase two. We're going to wind down some of the meetings. We're going to keep some for you folks to still come in, ask questions, and get answers. If you have any specific feedback you guys want to share, feel free to ping me in Teams chat.
+Slack, emails, I don't know.
+Any which way, any which way you feel like, we're open, we're open to feedback. If you want any specific meetings for the team for a use case that you're working on, let us know. We'll have availability.
+All right, with that said, thank you all. Appreciate your time, appreciate you showing up, and don't hesitate to be in touch.
+
+Alfredo Achecar   30:12
+Thanks.
+
+Wajdan Mahbub   30:13
+Thank you.
+
+Nicholas Crowley stopped transcription

@@ -1,0 +1,272 @@
+AI Enablement ENGINEERING Champion Sync-20260608_145901UTC-Meeting Recording
+June 8, 2026, 2:59PM
+22m 52s
+
+Oleksandr Pavlovskyi   1:33
+Oh, guys.
+
+Sukalya Rajendran   1:36
+Hey, good morning.
+
+Oleksandr Pavlovskyi   1:38
+Good morning.
+Right.
+Sure, let's wait for a minute here.
+And meanwhile, guys, any questions, any topics that we need to discuss before we start our usual agenda?
+Okay.
+Seems like...
+So far, so good. All right. As usual, I'm sharing the screen, our board, yeah. Okay, we have 10 people on the call. Yeah, guys, this week, it's going to be the last session in the phase two, I mean, our lighthouse session, yeah.
+Then we need to align regarding to the plans for the phase three, yeah. And I hope that this week or next week, we're going to inform you about the updates, yeah, how the our program going to be looks like in the phase.
+Three, yeah, what activities, what sessions we're going to have? Yeah, so currently our team is working on this planning here, but...
+This week, we have our regular schedule, yes, so, and yeah, guys, do you see the screen? Yeah, I'm sharing our board.
+Yep, can you see the screen?
+
+Sukalya Rajendran   3:20
+Yep.
+
+Allen Truban   3:21
+Yes.
+
+Oleksandr Pavlovskyi   3:22
+Yeah, and this Wednesday we're going to have two more sessions. Yeah, with two, as usual, exciting topics. So guys, let me confirm regarding to your readiness for the showcase. Jason, let's start from you.
+Ticket regarding to Jira creation and evaluation use case. Could you please briefly remind us? Oh yeah, sorry, you're on mute.
+
+Ernest Linzey   3:48
+Sounds doing people's first to solve for the New Yorker.
+
+Jason Daggs   3:51
+Yeah, the one that I'm going to be showing is a change log creation. No, not the JR creation. I haven't.
+
+Oleksandr Pavlovskyi   4:02
+Uh, change the log, this one, yeah, let me.
+
+Jason Daggs   4:04
+Yeah, that's it. Yeah, yeah. And I have I have something ready. I'm going to try to improve it a little bit to make it work better than it works now, but I'll, you know, I'll be ready to present something in that regard.
+
+Ernest Linzey   4:21
+I, you know, I'm actually starting to get a little tan. Let me see.
+
+Oleksandr Pavlovskyi   4:27
+Sorry, mute Ernest. Yeah. All right, all right. Could you please briefly remind about the idea of this ticket of this?
+
+Jason Daggs   4:35
+Yeah, so yeah, yeah, absolutely. So the idea is that we will create some kind of release branch that we're going to deploy. And when we do that, that branch is going to have a list of, you know, dozens of PRs. So what we do is we get that list of PRs.
+And then we cross-reference those PRs with the JIRA tickets that are linked to them, and then we add the description from the JIRA ticket along with the message of the PR that was committed. And then we just output an MD file with that information.
+
+Oleksandr Pavlovskyi   5:15
+Call, call, Greg.
+
+Jason Daggs   5:17
+Mmh.
+
+Oleksandr Pavlovskyi   5:19
+All right.
+So technically we can say that you, but you already use this flow, yeah, this use case, yeah, for your production tasks, yeah, am I right?
+
+Jason Daggs   5:34
+Not yet. We haven't had a release to use it on just yet. But as soon as we do, yeah, well, I'm hoping that I get it perfected, you know, before that. But yeah, that's the idea.
+
+Oleksandr Pavlovskyi   5:36
+Sounds good.
+Okay, so this like experimentation, yeah?
+
+Jason Daggs   5:53
+Yeah, yeah, at the moment, yeah.
+
+Oleksandr Pavlovskyi   6:01
+All right, experimentation. Yeah, and market this ticket here. We would like to define some tickets that are already in production, yeah, to understand which use cases are already, I don't know, make some good influence on your production, yeah, and experimentation.
+
+Jason Daggs   6:06
+Okta.
+
+Oleksandr Pavlovskyi   6:20
+All right, cool, thank you. All right, and the following topic gonna be from Deepti. Let me check if she is on the call. Yeah, I already confirmed, yeah, her participation, but...
+
+Jason Daggs   6:22
+Mm-hmm.
+
+Oleksandr Pavlovskyi   6:38
+I'm not sure if today she's here.
+
+Sukalya Rajendran   6:45
+I think she's probably got a conflict, but she was working on this. I'll follow up with her, Aliaksandr, and I'll let you know.
+
+Oleksandr Pavlovskyi   6:53
+Yeah, yeah, but last week we we already had some demo with her dry run demo, so yeah, please remind me to Wednesday, yeah, yeah, so I will, I will, I will write here as well, yeah, in the in the in the chat, yeah, so, but yeah, this is gonna be also interesting.
+
+Sukalya Rajendran   6:57
+Yeah.
+Okay.
+Sure.
+Okay.
+
+Oleksandr Pavlovskyi   7:13
+Use case, maybe, maybe Sukalya could could give more details here.
+
+Sukalya Rajendran   7:20
+Yep, this is to automate the JIRA documentation. So as part of the EDS data pipeline work, we have to create at least five documents for every JIRA task that involves code deployment, like project analysis, test case, back out.
+Plan, and a few other documents have to get written out, and it follows a certain template. In the first phase, we had a developer assistant that created these documents. In phase two, we are doing some enhancement, wherein we are trying an automated trigger, wherein...
+When the PR is ready, then it will call that agent and generate the documents. It will go through the Jira task and the PR and understand what the code change is about. And then based on that information, it will write out the documents that we need. And it will post it in the GitHub repo where we maintain our documents.
+So that is the automation that Deepti has worked on, which we should be able to showcase.
+
+Oleksandr Pavlovskyi   8:22
+Yeah, yeah. So, yeah, before guys had a huge amount of work came in in a manual mode, yeah, when they need to create some Word documents, yeah, before ticket going to be ready for production, yeah, they should prepare some documentation.
+Now, they have the ability to have ability to do it almost automatically, yeah. In our case, Deepti gonna use code me workflows, yeah, and I know that we had some manual step, yeah, and Deepti.
+
+Sukalya Rajendran   8:52
+Yep.
+
+Oleksandr Pavlovskyi   9:01
+Working on it, yeah, so probably we gonna see absolutely automatic process, yeah, on it, but anyway, yeah, then the case when we need to prepare this documentation already covered with, yeah, it's automatically collect information from Jira Confluence and so on, and generate these MD files.
+
+Sukalya Rajendran   9:21
+Yeah.
+
+Oleksandr Pavlovskyi   9:21
+That's absolutely great use case. And let me check. So there's going to be experimentation or you prepare this for production? How do you think? I mean, currently, it's on experimentation level or you are already...
+Using this workflow for.
+
+Sukalya Rajendran   9:41
+No, it's an experimentation level. So individually, the agents were shared with the developers offshore and they use it to generate the documents. But this workflow automation part is still under testing. If it works out, then yes, it will be shared across the DFP team for all the developers to use. These documentations are required only in the dev environment like that.
+for us to wrap up development and unit testing and get approvals to go into production, that's where this workflow will come in. So we will be using it, but only after testing it with multiple developers and getting feedback.
+
+Oleksandr Pavlovskyi   10:16
+Cool, cool, cool.
+All right, great use case also. Also, also today's logging on the out of office, yeah, but probably gonna have one more use case, yeah, from, well, the stream team and...
+Yeah, guys, regarding to these cases that we have in the progress, yeah, maybe you have any updates, yeah, maybe you would like to share something this Wednesday or maybe next week's, yeah.
+I see tickets from our new teams. Yeah, that's going to be the second generation of our EA champions. And I see several tickets from new teams. That's me and guys that we're going to have more new interesting session. Yeah, maybe new.
+view on the, I don't know, your processes, yeah, that's, I mean, present in the OMF and new implementation of our favorite tools. All right, so it seems like we have agenda for this Wednesday.
+I guess that's all for my side, guys. Any questions, any ideas?
+Anything that you would like to discuss today?
+Right, right, but these boards will be leaving after the phase two, so we're gonna use these boards like main.
+I don't know, centralized, centralized source of our use case collection. So guys, don't forget to submit these use cases not only for sharing. Yeah, maybe you would like to raise some question during our office hours meeting. So we definitely going to have our open sessions, I mean, office hours meeting where we're going to discuss
+no topics related to our regular curriculum or agenda of late house session. You can discuss anything, any ideas, any proposals here, or just ask some question to our audience. So, and this ticket going to be a good.
+tracker here for the progress of this discussion. So don't forget to use this board here when you have any ideas.
+Right, so...
+Yeah, we have.
+19, 18 minutes. Yes, so if you would like, we can discuss something. If not, we can turn back to our work, to our tasks.
+or any other pleasant activities. Coffee, tea.
+So, what?
+Alright, guys, so thank you, and see you, see you tomorrow. Yeah, on our late call session, we tomorrow we're gonna have great demo. Uh, it's gonna be...
+
+Allen Truban   13:34
+Yeah.
+
+Oleksandr Pavlovskyi   13:39
+Sam's team, yes, I remember, yeah, Sam, am I right? Tomorrow we're gonna have your demo, yeah.
+
+Jason Daggs   13:42
+I.
+
+Sam Jayavelan   13:46
+We're not fully ready yet. We're still flashing out some of the information because a couple of our team members were out last week.
+
+Oleksandr Pavlovskyi   13:53
+So, you gonna be on Thursday, yeah?
+
+Sam Jayavelan   13:55
+Yeah, yeah, but our demo, yeah, for Thursday, yeah.
+
+Oleksandr Pavlovskyi   13:56
+Yeah, so.
+So tomorrow going to be SIAM team. Yeah. So guys, don't miss the sessions. It's going to be very interesting. You guys prepared very interesting for four, and that's going to be production use case. So in this case, that's going to be a combination of different tools.
+Figma, GitHub Copilot, of course. Yes, so don't miss the sessions. It's going to be very interesting and useful for you. And Thursday, we're going to have session from Sam. Sam, would you like to do some announcement, maybe?
+
+Sam Jayavelan   14:38
+Not yet. Like, it's mainly like how we are doing our end-to-end test cases, like, you know, for the entire, sorry, it was just multitasking. Sorry about that. So basically what we are trying to do is showcase how we are using AI in our complete PDLC. And it's not just one, two, we.
+use a combination of code me, cursor with the base methodology, and then also the role agents and couple of like co-pilot. All the tools that have been provided to us over the course of the training from the EPAM team, we're utilizing pretty much most of it.
+And the good thing is that we are saying these can be interchanged and we can even have an orchestration layer in the future. But for now, it's going to be like with manual gates and governance. However, with AI, you get the speed and with the human in the middle, you get the governance. With that, we are getting very good results and we are just going to showcase how.
+how we are doing it, a version of doing it within our team, and the kind of metrics we are collecting with it. That's the main demo for it. Sorry. Thanks.
+
+Oleksandr Pavlovskyi   15:51
+Cool, cool, cool, yeah, we are excited.
+Looking for.
+
+Sam Jayavelan   15:56
+We're excited too. It's definitely showing a lot of promises for us and we are trying to capture them as we go.
+
+Oleksandr Pavlovskyi   16:05
+Cool, cool. Great. Thank you, Sam. All right, I see several guys are joining us. Also, guys, do you have anything to discuss today? Because we already went through our agenda, yes, so we have planned for this Wednesday. We're going to have
+two or three demos. Yeah, so this week we're going to have two also great demos from servicing team and from science team, yeah, regarding to PDLC use cases. So any questions, any ideas?
+Ravi Stuart Shoaib.
+You see, you joined us.
+
+Ravi Nachimuthu   16:52
+No, I don't have any. Thank you.
+
+Stuart Sharp   16:55
+No, nothing, nothing for me. Teams are teams are working and finishing up their use cases this week, so...
+
+Oleksandr Pavlovskyi   16:55
+Cool.
+
+Shoaib Naseem   16:56
+Yeah, we are good.
+
+Oleksandr Pavlovskyi   17:02
+Great, great, yeah, yeah, so yeah, waiting, yeah, I already made some announcements.
+
+Ravi Nachimuthu   17:05
+I, I, yeah, I, I didn't talk about, yeah, I didn't talk about the dev mentors and everything, since that's an ongoing conversation outside of this, but I hope I'll hear back on that.
+
+Oleksandr Pavlovskyi   17:20
+Yeah, sorry, could you please repeat conversation regarding?
+
+Ravi Nachimuthu   17:24
+Dev mentors unavailability of Dev mentor for several teams.
+
+Oleksandr Pavlovskyi   17:30
+Yeah, let me clarify this with Mikhail. Yeah, I know that we provided from our side, we provided the list of candidates to deaf mentors, yeah, to your managers, to your leadership, and we need to get a recommendation from them. But let me check with Mikhail if he has any updates regarding to it.
+
+Ravi Nachimuthu   17:46
+And it.
+And a few of the teams, and I do want to bring this up, a few of the teams that I have been talking to, they are like one member team.
+And they have multiple use cases assigned to them. Either they have an engineer or an intern or they are themselves, you know, just a one-member team. What was the rationale when we built these teams for the cohort 2? And then as you're coming up with these use cases?
+So did we look at the team size and what they do or just like a one?
+In a solution applies all, regardless of how big the team is, as looking at, let's say, if we have one one of a team and we got like 3 use cases to do and they have their business to run.
+So, so even please don't expect them to do that.
+
+Oleksandr Pavlovskyi   18:39
+Um, maybe, maybe it's...
+Maybe this makes sense to combine these guys here, maybe to build from this one member team. I don't know. Take, for example, several guys here and build one team. If they, of course, have something that they can combine, yeah, I mean, regarding to the projects.
+project needs, yeah. Yeah, that's an interesting question, yeah. But I think that's, for example, if you're going to take some generic use cases, for example, related to development, yeah, I mean, work increase requirements here, for example, some requirements hard in it, yeah, and just.
+Trying to, for example, then preparation of implementation plan, implementation generation, and so on. That's we can we can say that, for example, this can be 3 use cases for this absolute absolutely generic things. It's applied for different projects.
+And I think if it's a team of one member, yeah, he or she should do these tasks, yeah, and it's possible to try, for example, at least these three use cases. Of course, it can be not maybe something very complex, yeah, or the beginning.
+But I think this can be a...
+possible yet to demonstrate at least these three basic use cases. How do you think, Rai?
+
+Ravi Nachimuthu   20:17
+Yeah, well, it depends on it depends on what kind of a team that is. They are not necessarily development team, they are monitoring and on the infrastructure team as well, and we can combine, but you cannot combine to completely unrelated.
+
+Oleksandr Pavlovskyi   20:18
+Because it depends on the.
+
+Ravi Nachimuthu   20:37
+team into one, not going to work. I think we may have to, let me come back, you know, let me, I'll probably have to talk to them one more time just to be sure about their comfort level on that and we'll get back. But I think my one cent is when we are putting the team together, we need to really see.
+
+Oleksandr Pavlovskyi   20:39
+Yeah.
+Got it.
+
+Ravi Nachimuthu   20:56
+or the team sizes as we are creating these use cases.
+And setting some expectations seems like those expectations are tough for them to meet because.
+For the obviously.
+
+Oleksandr Pavlovskyi   21:08
+Yeah, yeah, I can, unfortunately, I can don't have ability to comment on it, yeah, how this team has been chosen, yeah, but our leadership, your leadership, I mean, OMF leadership recommended these teams, and I think that these teams.
+has some priorities in their list yet to recommend to this CI enablement program. So that means that for this even one member team, yeah, it's important to do this CI adoption. But yeah, it's definitely a tricky case, yeah.
+Ravi, so let's turn back to this question. Probably tomorrow we are on our EA Leader sync up. Yeah, it's going to be a good topic to discuss.
+And I will ask Mikhail regarding to the updates, but if he is not provided it yet, yeah, unfortunately, probably he is waiting for the answer for the leadership, because I know that this information has been communicated last week. Probably we don't have answer yet.
+Alright, guys, any other topics?
+Alright, so turning back to you 9 minutes.
+Yes, and see you tomorrow.
+By Gish.
+
+Allen Truban   22:42
+Thank you, bye.
+
+Stuart Sharp   22:43
+Thank you.
+
+ stopped transcription

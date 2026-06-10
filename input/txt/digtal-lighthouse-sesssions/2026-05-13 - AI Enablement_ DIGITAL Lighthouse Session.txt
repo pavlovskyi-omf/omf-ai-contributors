@@ -1,0 +1,570 @@
+AI Enablement DIGITAL Lighthouse Session-20260513_155945UTC-Meeting Recording
+May 13, 2026, 3:59PM
+36m 4s
+
+Jatin Bagga   1:34
+Hello.
+
+Vlad Grubman   1:37
+Hey, Jatin.
+Alfredo, hey folks, is this, is that digital thing in, was it Delaware? Is it still going on? Should we expect low attendance today?
+
+Alfredo Achecar   2:28
+Yeah.
+I think so.
+
+Vlad Grubman   2:33
+Yeah, that's what I figured.
+Let's give folks another couple of minutes, but yeah, understandably, if everybody's there or mostly people are mostly there.
+
+Jatin Bagga   3:03
+Okay, it looks like we have a very thin population, Vlad.
+
+Alfredo Achecar   3:03
+Hey, Zach.
+
+Vlad Grubman   3:07
+Yeah, I mean, that's expected. I wanted to, basically, I wanted to run through the use cases and maybe do a demo, but since we don't have a lot of people, maybe a couple more minutes, I see. Maybe more, give everybody a couple more minutes, and then we'll see how we want to play this.
+
+Jatin Bagga   3:10
+Weiss.
+Yeah, my request is like, yes.
+
+Vlad Grubman   3:27
+I don't think, I don't think demo makes sense if if only like three people are.
+
+Jatin Bagga   3:30
+Yeah, no, I agree.
+I agree. I was just going to request that, you know, like if you could run this scenario that, what's his name? I forget, not Olaf, not Olaf, sorry, not Olak.
+Uh, Eugene, sorry, the one that Eugene was walking through, like, if we could do that like for 5 minutes, that would be great. Maybe it was a tail end, that would be helpful.
+
+Vlad Grubman   3:43
+Huh?
+Sorry, which part of what Eugene was running through?
+
+Jatin Bagga   3:53
+The automation part, right? Like he was showing the next case where you could add the comment and other details yesterday. If time permits, it'd be great because I was running into some issues yesterday. If.
+
+Vlad Grubman   4:03
+Do you, do you, do you, do you really need it like ASAP because we can just ping Eugene or we can we can go back to it on?
+
+Jatin Bagga   4:08
+No, not at all.
+
+Vlad Grubman   4:13
+On Friday.
+
+Jatin Bagga   4:13
+Whole office, that is fine.
+
+Vlad Grubman   4:15
+Okay, cool.
+
+Jatin Bagga   4:16
+A shirt.
+
+Vlad Grubman   4:17
+I don't wanna, I don't wanna 'cause I he had his own like idea in mind how he wants to present it. I don't wanna confuse you even more.
+
+Jatin Bagga   4:25
+Got it, got it. No, that's fair. Thank you for that.
+
+Vlad Grubman   4:25
+Okay.
+Yeah, sure.
+Right, the...
+Yeah, we don't have a lot of people, so if Jatin, I know your story with with the with some customer, we have another meeting today, we'll give you some options, so I don't we don't really need to go through the.
+For your use case, Alfredo, Steven, Eric, and Doug, the folks, I'm taking over, I'm taking over from just just so you understand what's happening. I'm taking over from Nikita, who's on another more important project right now. She says her best and she said everything's fine, so...
+I'm not allowed to say anything else, but everything looks good so far.
+
+Jatin Bagga   5:22
+That's good. Like, so she's healthy, right? And everything's okay? Okay, that's good.
+
+Vlad Grubman   5:22
+Oh.
+Yeah, yes, she went she went in one month earlier, which was kind of a social concern for us, but she said she's fine. Every every every everything is fine. Again, I she asked me not to tell anybody anything yet until I just suggested the pictures.
+
+Jatin Bagga   5:31
+Yeah.
+Great.
+That's okay, as long as she's healthy, that's the most important thing. That's a good thing.
+
+Vlad Grubman   5:42
+Yeah.
+All right, so folks, if anybody, we're not going to make this long. I wanted to do a demo, but because it's not a lot of people, I'm going to just say a couple of things. One, if you're working on the use case, please update it either in a ticket. Nikita had created tickets and she had assigned you folks to it.
+to them. So if you've been assigned a ticket, please update it with the current status. And another question is...
+Again, not sure if it's fair missing out on other folks, so I'll post the question again in Slack, but since we have a few minutes, I wanted to, I want you to sort of speak out and tell me how you feel about this. We were thinking, and Alfredo raised the same question, I think it was yesterday, the day before. Can we do a...
+Ohh.
+sort of a workshop or a hackathon or something.
+Hands-on for the digital team, and we would love to do it probably next Wednesday, but I want to do one of my goals for today was to ask the audience how you feel about it. Alfredo, I already know you like it. I already know you want this, Doug.
+Derek, Stephen, and Jatin, please tell me how you folks feel about hands-on hackathon.
+
+Doug Ball   7:08
+I like it. Any.
+
+Jatin Bagga   7:09
+I love it, but you're not going to judge us on speed though, even it's called a hackathon, right? Because I think...
+
+Vlad Grubman   7:14
+What do you mean I am not going to judge you on speed? I am going to judge you on everything.
+Yeah.
+
+Jatin Bagga   7:20
+My only request is...
+
+Doug Ball   7:20
+Yeah.
+
+Eric Trenz   7:20
+You gotta judge yourself. You're the teacher. You gotta judge his teacher. No, I'm kidding.
+
+Jatin Bagga   7:23
+I know, right? You're right. No, you're right. We should probably be judging ourselves too. Just one thing, man. The morning meetings are killers. Like I've got all this crap shoot of other meetings. Like if we're going to do this on Wednesday, it's got to be end of the day or later part of the day to make it really useful. Or I don't know, hate to say it, I know it's going to be.
+
+Eric Trenz   7:27
+Hey.
+
+Jatin Bagga   7:43
+you know, summers now, but like the Friday 22nd, maybe like at 12 or 1 P.m. I think that probably works best, at least from my scheduling standpoint.
+
+Vlad Grubman   7:52
+Wait, wait, wait, wait. We wanted to do it instead of this exact session that we're having right now instead of this session, do the hackathon next Wednesday. That's that was the idea. But if you tell me...
+
+Jatin Bagga   8:04
+Yeah, there's so many conflicts.
+
+Alfredo Achecar   8:04
+But.
+
+Vlad Grubman   8:06
+And.
+
+Alfredo Achecar   8:06
+But, but we need more time, Vlad though, like...
+Just half an hour, 45 minutes, kind of short.
+
+Vlad Grubman   8:09
+Well, it's I think it's the meeting itself is 45 minutes. Again, this is why I'm asking you folks like a week in advance. If we wanted to change, swap things up, I'd love to do it. I'd love to figure it out. I think one hour should be enough.
+So here's a couple of things. During your ELT, there was a two-hour hackathon, which basically gave people 45 minutes to work on things. Given all the pre-work, the setup, and everything, we're going to do setup offline so you come in prepared.
+One hour is genuinely a good time to wrap things up because you're not building production level stuff. You're just putting something together. We've done at back at EPAM, we've done a number of hackathons like that for product managers. We mostly wrapped up in 45 minutes.
+Some people keep going for like an hour and a half, but most of the folks kind of like tapped out at 45 minutes. It's very brain intensive. It's very cognitive, heavy cognitive load. So I don't want you to sort of...
+like run that 150% capacity for two hours, unless you tell me you're okay with that and everyone else will be okay with that. So what do you think?
+
+Alfredo Achecar   9:42
+So.
+
+Jatin Bagga   9:43
+Vlad, if you're gonna do it Wednesday, sorry, go ahead, Alfredo.
+
+Alfredo Achecar   9:47
+Uh...
+Sorry, before that, I wanted to just kind of like highlight, maybe put some emphasis on, I think usually the biggest pain points with hackathons are the things that I think could be really beneficial to solve beforehand are like team distribution, like the selection of the topics.
+Also, of course, the time limit, that's really useful, and maybe tooling, but I think solving the team like aggregation, so say, hey, okay, you know, here are the whatever, 10 teams, you know, keeping them small, they could also be very useful, especially like when doing it remotely.
+Um...
+Like, okay, you know, there's three, maybe four people per team at most, and then sort of separately, I think part of the big issue that, you know, Jatin is also commenting, like speaking about is, like, you know, the time allocation, so that we have, you know, we get kind of buy-in from our higher ups or leadership to say, hey, yeah, you know, we can we can dedicate.
+X amount of time to doing this, and you know, what I sacrifice or postpone or whatever, like, you know, that this is like an acknowledged piece of time that we're doing that we're doing this, and it's not just like we're trying to like sneak it in, if that makes sense.
+
+Vlad Grubman   11:07
+Yeah, yes, I have a meeting with Moses, I have a meeting with Shai, so it would not be sneaking in. I wanted to make sure, before I bring this to them, I want to make sure that the team, you people are fine with this, because I don't want to push this on you if you're not happy with it.
+
+Alfredo Achecar   11:14
+No.
+
+Vlad Grubman   11:26
+So that was my, that was my intent really here. And the second part to this, I don't know about the teams. Like, I really wish you folks.
+
+Doug Ball   11:26
+Thank you.
+
+Vlad Grubman   11:37
+sort of tapped into this capability individually, but if you feel like grouping in teams will work better, I'm all for it. Whatever works the best.
+
+Alfredo Achecar   11:46
+Oh, oh, okay. Oh, so you were thinking about just doing them like just each person. That could be cool too.
+
+Vlad Grubman   11:50
+Really? Yeah.
+
+Alfredo Achecar   11:54
+You know, I made an assumption there.
+
+Vlad Grubman   11:54
+Because then, then, then nobody gets the slack off. Nobody gets the slack off.
+
+Doug Ball   11:58
+I actually, I like the idea of doing them independently while being in a team is nice. The scheduling challenges that we have still exist outside of this meeting. So being able to work independently kind of lets it be flexible.
+
+Alfredo Achecar   11:58
+Sure.
+
+Vlad Grubman   12:12
+Yeah, total.
+
+Alfredo Achecar   12:12
+Yeah, true, true, true.
+
+Doug Ball   12:17
+Weekends.
+
+Jatin Bagga   12:18
+What are you talking about, Doug? Like, use Eric's like special AI agent that he's created. What is he called? What's your agent called, Eric? What was the catchy word that you used for your agent? Your...
+
+Eric Trenz   12:27
+What?
+Ohh, um...
+
+Jatin Bagga   12:35
+Dream.
+
+Eric Trenz   12:37
+I'm not sure what you're talking to.
+
+Jatin Bagga   12:38
+Remember the agent that you created that's supposed to shave off now? Oh man, that was supposed to be a joke. That went out so bad, Doug. Never mind.
+
+Eric Trenz   12:45
+Yeah.
+
+Jatin Bagga   12:47
+I'll remember the name, Eric. No, but I agree with you, Doug. I think it would be great if we do it independently, all of us. I fully support that.
+
+Eric Trenz   12:55
+Pai.
+I also think that people just need to like...
+get their hands dirty. Like I feel like all of these, like, um...
+If we work as teams, it could have essentially just be like demos. And I...
+
+Vlad Grubman   13:09
+Yes, thank you for saying that. Yes.
+
+Jatin Bagga   13:11
+Agree, agree.
+
+Eric Trenz   13:12
+Like, it feels like, to be honest, and I'm not sure if Alfredo or Doug or John, anyone kind of feels this way, but it's like we...
+or kind of like, hey, you're using AI in your life, like, and stuff like that, and then being tasked with like spreading it, and kind of being like evangelists, and it's just like, you just gotta, you just gotta use it to see how it works for you.
+
+Alfredo Achecar   13:46
+A 100%. I'm with that. Yeah, I think we need more time, like getting our hands dirty for sure. I had made the assumption that, like, whenever I thought the hackathon, I thought team, so that that's just that's on me, and that not actually I prefer I would prefer independent also.
+
+Vlad Grubman   14:03
+Alright, cool, cool, so...
+
+Alfredo Achecar   14:03
+Individual.
+
+Vlad Grubman   14:06
+Seems like you guys are all for it. Individuals fine. The last question is...
+I, I was asking Nikita that, and before she left, she...
+gave me kind of like a couple of options. One is we want I want to do a demo of the sort of your personal brain, second brain, whatever you want to call it. And the one of the ideas for Kakathon is everybody needs one, whether you know it or not, you need it. So.
+Everybody will build one, one way or another. But not everybody wants to. So the two options that she sort of presented to me was, hey, one is here's the brain, build it. The other one is pick a use case from the list and build something, POC, something you can stitch together in an hour.
+On it, um, for for that, this also the use case.
+Additionally, because one of the things that we wanted to offer was, hey, if you can stay away from 2 cops of Starbucks for a month, maybe you can scrounge 20 bucks and sign up for smallest ChatGPT plan to get Codex unlocked.
+You already have ChatGPT Enterprise, but you don't have access to Codex, and we're trying to fight it out, but for some reason it's moving so slow that I can't express, I can't even express my frustration with that, but it's moving very slow and I have very low.
+expectations right now that Codex will be unlocked by the time we get to this hackathon. So I know it's a lot asking people for, you know, to sign up for just one month just for a hackathon, but it really is a lot of usage, a lot of power, and a lot of, you can build a lot of cool things.
+So, yeah, go ahead.
+
+Alfredo Achecar   16:05
+And we just, sorry, just a question there. Oh, go ahead.
+
+Vlad Grubman   16:11
+No, I was just saying, well, there are options. The options are, you know, do the pre-work, sign up for it if you want to, and build something.
+
+Alfredo Achecar   16:11
+No, sorry.
+
+Vlad Grubman   16:21
+The reason why I'm talking so much about this is that if you sign up for personal account, you can't use stuff on OMF. You can use OMF stuff, but you can build something. It's still not going to be very generic. You can still solve for it. You just can't use the data, the information.
+that is on OMAP. But again, you're fine if you want to build something generic and then transfer it over one way or another. So up to you how you want to do this.
+
+Alfredo Achecar   16:51
+Yeah, that was that was that was gonna be my question. Like, if we if we sign, can we do the the Codex add-on to our enterprise accounts, so that way we can use one of them?
+
+Vlad Grubman   16:51
+Bob.
+Mm.
+It's already there; it's locked by security team, and I've been I've been fighting specifically, so, so, so you would understand each one of us, if we failed Mikhail, Svetlana, and myself, we kind of fighting for our sort of respective streams to get the tooling that we need. We got we got the we got the MCP service approved as of last week.
+
+Alfredo Achecar   17:03
+And.
+
+Vlad Grubman   17:22
+which is now we have Figma MCP, Atlassian, GitHub, a couple of others. But mostly if it's an MCP server hosted by a third party, most likely you're going to be able to use it. The next step is getting more models in CodeMe and getting Codex unlocked.
+probably potentially in a couple of weeks or more getting cloud code. But that's again, that's another uphill battle because you just.
+gets stalled for whatever reason. It's really frustrating, but again, like I said, we're fighting to get you guys access to those tools. And if we won't be able to get you tools on time, then the alternative is sign up, spend 20 bucks for a month, and then cancel it. It's month to month. You don't have to sign up for a year.
+Um, and you know you get to feel what the codex feels like, because it really is, it's really like...
+Completely different feeling, completely different capabilities compared to the just the chat.
+So, with that said...
+If, if, if that's a possibility, then we can we can do more stuff. Again, the tools at this point is a secondary question. The first question is, do you all want to build the same thing and compare notes, or do you all want to build your own things and then sort of spend a couple of minutes presenting it? What is the what is more interesting?
+Building, building, I don't know, building your own brain, which again, a lot of a lot of use cases are revolving around knowledge management, which is what brain basically solves, but you don't have to do it. It's just...
+Just a thought, you want to, again, three options. Everybody build, like most people build this brain thing. Second option, pick a use case and build it. Third option, build whatever you want, build a computer game. As long as you fit in that one hour, then we're going to schedule, or we're going to take over this meeting and replace it with a hackathon.
+That's, those are your options. What do you think will fly better with the team?
+
+Doug Ball   19:23
+I'd like to build the brain.
+
+Vlad Grubman   19:29
+OK, any, any, OK, cool. Anybody else wants to chat in?
+
+Eric Trenz   19:34
+Sorry, can you just uh...
+Can you provide a little more context on what you mean by that exactly? Are you talking like about an operating system or...
+
+Jatin Bagga   19:48
+Yeah, I'm also a bit fuzzy. What are we supposed to do? I'm still unclear. Glad to, again, to Eric.
+
+Eric Trenz   19:48
+Yeah, what?
+
+Vlad Grubman   19:52
+That's exactly the question. What do you want to build in the hackathon?
+
+Eric Trenz   19:56
+No, no, I'm sorry. My question was, what do you mean by build a brain? Yeah.
+
+Vlad Grubman   20:03
+Build a brain. It's kind of like build-a-bear, but build a brain. So it's a knowledge management concept and it's been around for at least a year.
+
+Eric Trenz   20:06
+Kate.
+Yeah.
+Uh-huh.
+
+Vlad Grubman   20:15
+There's, there's a, there's hundreds of permutations of this, the one I...
+team up with specifically for digital team for OMF is it has certain limitations like you guys don't have access to direct access to models, but you have cursor, you don't have direct access to other things, but you can probably check things into GitHub or something like that. So it's very portable in a way that you can just.
+Grab, it's so flat files. You can just basically grab the files, move over, move on to something. It supports, it's all again, it's all plain text, so you can, even if you don't have AI, you can read this stuff that's in there. It's structured in a way that you know where things are. And you need, you can sort of update it, change it.
+It's yours, you can do whatever you want with it. The idea behind it is you don't have to read, same thing we did with the confluence, right? We put so much stuff in the confluence, not so you can find individual pages, but so you can talk to all that data, all that massive sort of data source, and get something out of it.
+as a result. And the idea here is that you don't really have to use Confluence as your data source. You can use whatever it is you want. I use, I don't know, medical records and my conversations about my diet and everything else to put everything into my brain that
+
+Eric Trenz   21:33
+Okay.
+
+Vlad Grubman   21:42
+my mini brain that only focused on my health. And it's very compartmentalized. So if you're working on two different projects, you can sort of populate the brain with the knowledge of 1 project and then have another instance populated with the knowledge of another project. And they don't talk to each other. So they're not contaminating each other with the knowledge.
+So you can be very focused, very, very deliberate about the information that's in there. Again, it's a very popular concept. There's hundreds of Implementations out there.
+
+Eric Trenz   22:01
+I see.
+Okay.
+
+Vlad Grubman   22:14
+You can pick and choose, you can build it once and then you keep evolving it. Again, if you have access to that, to the tools, like for example, Codex, you can just keep having conversations about like, hey, I wanted to add this to my brain. How do I do that? So that is how you get your hands dirty and that is how you kind of grasp the concept of.
+how to build things. And then that's the goal. But again, you don't have to build it. You can pick another use case or pick another thing. And that's been my question. What would team love to build? Again, as an individual, what would you want to build?
+
+Eric Trenz   22:34
+Makes sense.
+Okay.
+Yeah.
+So I'll say that I kind of built like what I'm understanding the brain to be with like cursor essentially, where you have like it has all the context and you can kind of pull it as needed. I mean, within the constraints of
+
+Vlad Grubman   22:56
+Mhm.
+
+Eric Trenz   23:07
+the MCPs I have available.
+
+Vlad Grubman   23:10
+Mm.
+
+Eric Trenz   23:12
+I think that that's probably an extremely valuable use case for the larger organization. Like it wouldn't, like I already did it, so I'd like to do something else, but I think just organizational value-wise, it's probably the best use case personally.
+
+Vlad Grubman   23:30
+Yeah, part of the reason why I picked it is because we looked, we posted that whole list of use cases.
+we collected from you through the conversations through survey and otherwise, there's about 30 of them, 30-ish, and about 30% of that is effectively knowledge management.
+So, that's, and you're right, there's a there's a huge, huge value in it.
+But again, I don't want to be super prescriptive. If folks wanted to build something else, I want to know, I want to hear it, because that would be, hey, when I'm going to go to Moses and Shai and present this to them, that would be a part of the pitch, right? People want to build this, people want to build that. Let's get their hands dirty.
+
+Alfredo Achecar   24:25
+I will.
+
+Vlad Grubman   24:25
+So, any any other use?
+
+Alfredo Achecar   24:27
+I will brain also.
+
+Vlad Grubman   24:29
+Cool.
+But, well, again, we'll see if we can keep it open, but...
+I'll make sure if you decide to build a brain, I'll make sure that you have enough to fit that build in an hour.
+So, that, that, that it is doable. I just rebuilt one myself and it took out.
+30 minutes-ish.
+So it's totally doable. All right, I don't know if anybody has any other questions.
+If no, if yes, tell me if no, we can disband because again, this is a very light by session, please again.
+One more time, the use cases, if you're working on them.
+
+Alfredo Achecar   25:22
+Hey, Vlad, I had a separate question, semi-related, but so I know that some of us have use cases that are actually...
+
+Vlad Grubman   25:24
+Go for it.
+
+Alfredo Achecar   25:34
+I, I, I would call them cross-functional. I guess I know you know you guys are using cross-functional to mean, like, out out to mean, like, you know, for you guys, cross-functional means like engineering, design, and PMs. I think that the way that I've been using cross-functional has been actually like teams that are not teams that are like, you know, marketing, legal, business stakeholders, that kind of stuff.
+
+Vlad Grubman   25:51
+Mmhm.
+
+Alfredo Achecar   25:56
+So I think for certain people, certain people here that their use is their first functional use cases are actually significantly more powerful.
+I'm just curious, like, what?
+Do you have any sense if like other teams outside of digital are going to get AI training? And is there even a possible way to kind of bring in those teams that we collaborate with into these into the fold or collaborate with them into these kind of hackathons to solve those problems that are actually cross-functional?
+And I don't mean with, yeah.
+
+Vlad Grubman   26:32
+Well, first, my first reaction is, who decides if they're more powerful or not? Are they solving a real problem? Yes, they're powerful. Are they not, then they're not powerful. That's really the only measure I would apply. If it solves a real problem, do it. Again, cross-functional, the ask for the cross-functional was from both the digital and engineering organizations.
+make teams work together. Does that mean you can't work on your correspondential use cases if they involve outside stakeholders? No, absolutely not. I would actually encourage you to bring those cases in, all of you. It's just that we never heard that that might be the case, so we didn't really talk about it. Now that you bring this up, yes, absolutely bring it in.
+
+Alfredo Achecar   27:16
+Well, yeah.
+
+Vlad Grubman   27:16
+If, if, if I need to go and argue with with Larry or, or I don't know, Shai to, hey, to keep this use cases use case in the fold, I'll go and do it because I think it adds value to what you guys are doing. It makes your life easier and it makes you use AI in a proper way.
+
+Alfredo Achecar   27:35
+Yeah, I think I think it makes sense. I think the the...
+
+Vlad Grubman   27:36
+Makes sense.
+
+Alfredo Achecar   27:39
+I think it's a more fundamental, I think we're talking about, I think I see it in a different way, which is like.
+You know, we it wouldn't make sense for us to make some kind of solution involving a team that that whatever other team needs to be involved in this in this solution, they need to be they need to be at the table, like you know, and they kind of need to be on equal grounds, so like we couldn't say, "Hey, we're gonna make a solution for marketing," and we...
+we make it and pass it on to them, they're not gonna, you know, that's not, that wouldn't fly. They need to be, yeah, so of course that's fine, but like that, the big unlock there is a collaboration between the teams, like it actually bringing those teams together, not like for us to do it, it's really, it's really labor intensive.
+
+Vlad Grubman   28:11
+No, you have some, yeah, you're right, you have to bring them in, and that's fine.
+Yeah.
+Pai.
+
+Alfredo Achecar   28:27
+Like, that's, you know, like, hey, now we're gonna do a, you know, a workshop with legal, compliance, security, marketing, all together, and let's solve this problem together. Like, that would be ideal, but it's not, you know, having the infrastructure of a third-party consultant like you guys, you know, kind of could give the justification of bringing, of actually enabling that.
+Is that making sense?
+
+Vlad Grubman   28:51
+Yeah, it does. I'm just trying to understand what the question is, 'cause I think I said...
+
+Alfredo Achecar   28:52
+Yeah.
+The question is, the question is that we, we, we, the bigger fish to fry for us, at least the way that I see it, this is a personal point of view, is not within engineering and like QA, like, 'cause that stuff is, we can work on that stuff, the stuff that that's like that are really big pain points are things that are outside of our teams.
+
+Vlad Grubman   29:13
+Okay, okay. Thank you.
+
+Eric Trenz   29:15
+Yeah, I would second that. I like we, my team was in in-person meetings Monday and like we were looking at kind of like the PDLC, right? And for us, it's kind of like a marketing slash product development life cycle.
+
+Alfredo Achecar   29:15
+I mean, yeah, the.
+
+Vlad Grubman   29:33
+Mmh.
+
+Eric Trenz   29:34
+And when we look at like the full kind of like concept to...
+
+Vlad Grubman   29:37
+Yeah.
+
+Eric Trenz   29:40
+to developer ready items process. Like four of the six weeks are in like marketing, whether it's like brand or creative and things like that. And then kind of agree that like fixing the.
+We're all technical and like understand how to kind of get our hands dirty in engineering and product, but not quite as much. We're trying to like kind of catch people up and like sell them on something that they don't even understand.
+
+Vlad Grubman   30:11
+Mhm.
+Okay.
+
+Eric Trenz   30:21
+Like, I, I think we have bigger.
+Value, and I just exactly what Alfredo said, and like the other areas of our processes, a little bit more so than engineering and product.
+
+Vlad Grubman   30:38
+I would probably, the way I wanted to react to this is just tell me how I can help and we'll do that.
+
+Eric Trenz   30:45
+Yeah, I'm sure it kind of feels like we're like...
+
+Vlad Grubman   30:45
+Because I'm still not sure what the question is, but if the question is, is there something we can do about it, then the answer is yes, of course we should. Tell me how we can help so we can step in and help. If that means advocating for this use case in front of your leadership, perfectly fine, we can do that. If that means...
+Again, you guys need to set those conversations. We can come in and help educate or bring these folks along. Like, I'm more than happy to work on this anytime you guys are ready. I don't think we need to exclude these use cases, TLDR. I don't think we need to exclude these use cases.
+where the cross-functional means product and marketing and legal and compliance and whatever, just because it's, oh, it's not engineering, so we can't work on that. Yes, we can. Yes, we should. It's cross-functional. It's not just the, you know, very narrow product case. It's fair.
+So, fair game.
+
+Eric Trenz   31:45
+Mhm.
+
+Vlad Grubman   31:47
+So yeah, if you guys need any help at all, I'll be happy to help any which way I can.
+
+Eric Trenz   31:57
+Um, Alfredo, I don't know if you agree, but I think like advocating for...
+bringing marketing partners into.
+And these conversations and kind of just having like...
+them involved in the AI education could be helpful.
+
+Alfredo Achecar   32:17
+100%, 100%. I just, I don't definitely, I just don't know if that's within the scope of work of EPAM and their contract. So I don't know, like, you know, it's obviously, I think, well, way above my own rank, what.
+
+Eric Trenz   32:25
+Ms.
+Yeah.
+
+Vlad Grubman   32:30
+So, so that is, that is a very good question. So, the easy way to answer it is, if you have a use case to work on, then it is within the scope of this SOW, this contract that we're in right now.
+For the phase three, we haven't started that yet, obviously, because we're still in the SW2. The third phase, we can absolutely add a clause that's saying, hey, we can expand this to other parts of the organization if it solves a problem, if it's touching digital.
+Again, it's not that we don't want to do it or contract specifically precludes us from doing it. It's just we need to have a solid justification to work on these use cases and explore them. And we can, again, because we have the third phase coming up, we can absolutely alter that or update it to accommodate these requests. I personally...
+Like, I see that that, okay, as a product manager, I see these these use cases are viable as a as a stream lead, as a product product management stream lead on this whole engagement. I think that this adds even more value to EPAM being here, so I absolutely want to include that. Like, you know, from both perspectives, it's a win-win.
+But again, it would be helpful if we can speak more materially and drag these people in and understand the use cases, how it solves the problem, not just for product, but also for the other parts of the organization.
+Makes sense.
+
+Alfredo Achecar   33:56
+Fair enough. Yeah, it makes sense, and I think I think you've clarified that that.
+Those, I was under, perhaps, on the I was under the wrong impression that those teams were in scope for your training, but they're not.
+At least for now.
+
+Vlad Grubman   34:11
+Put myself on mute, they're not in scope of our training because it's basically Donna and Larry's organizations only, but that doesn't mean we can't we can't touch them again, if it's if it's if it's a use case rather than an educational effort that that is doable, and if they want to participate in this again, I don't know how the budgeting works on OMF, so I'm not gonna say.
+
+Alfredo Achecar   34:17
+Right.
+Sure.
+Um, I certainly don't either, so...
+
+Vlad Grubman   34:31
+If they want to fund it, right? Yeah, I, I don't wanna say that, but if, if, if it's a use case, if it's a if we can come in and educate them same way we have educated digital engineering QA, perfect, we would love to do it, but again, we need to have those conversations first with them.
+
+Alfredo Achecar   34:49
+Yeah.
+Yeah, that's it.
+
+Vlad Grubman   34:52
+Whoever, whoever runs those organizations, and maybe, maybe we need to give them a taste, right? Like, work on a use case or two together, show them what you know, what's possible, how we approach things, and then maybe they'll become interested. Who knows?
+
+Alfredo Achecar   34:54
+Actually.
+Yeah, fair enough.
+
+Vlad Grubman   35:07
+All right, cool. I have a meeting with Moses tomorrow. I have a, I should have a meeting with Shai on Friday if he's not going to cancel. So we'll, in any case, I'll reach out to them, bring the idea of the hackathon up, see if they specifically, extremely oppose it. And then we'll probably, we should probably chat in the Slack.
+to understand what timing looks like. Should we use this meeting on Wednesdays or something else? And then we'll figure out the timing.
+Cool. Unless we have anything else, I'm going to give you guys 10 minutes back.
+
+Alfredo Achecar   35:49
+Thank you, Eilat. I appreciate it.
+
+Vlad Grubman   35:51
+Thank you, folks. Really good discussion. I appreciate you all. Thank you for thank you for everything. This has been cool.
+
+Eric Trenz   35:52
+Thanks, everyone.
+Thanks, everyone.
+
+Vlad Grubman   36:00
+All right, take care. Let's rub up.
+
+Alfredo Achecar   36:00
+Have a good day. Bye.
+
+ stopped transcription

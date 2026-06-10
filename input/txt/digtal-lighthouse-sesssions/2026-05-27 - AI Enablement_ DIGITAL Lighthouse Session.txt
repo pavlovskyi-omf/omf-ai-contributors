@@ -1,0 +1,806 @@
+AI Enablement DIGITAL Lighthouse Session-20260527_155953UTC-Meeting Recording
+May 27, 2026, 3:59PM
+47m 46s
+
+Monika Burnham   0:27
+Hey, guys.
+
+Vlad Grubman   0:36
+Is it good afternoon or is it still good morning?
+
+Jatin Bagga   0:39
+Thank you.
+
+Monika Burnham   0:41
+Depends where our.
+
+Jatin Bagga   0:41
+Good morning, Vlad.
+
+Vlad Grubman   0:44
+Good afternoon.
+I'm still on the East Coast.
+
+Jatin Bagga   0:50
+Wait, what afternoon are you in?
+
+Vlad Grubman   0:53
+It says 1212 PM. It's 12 PM here. I don't know.
+
+Jatin Bagga   0:53
+Just kidding.
+
+Monika Burnham   0:59
+The.
+
+Vlad Grubman   1:42
+Giving everybody a couple more minutes to join.
+
+Jatin Bagga   2:15
+I'll be right back.
+
+Vlad Grubman   2:25
+Short week, so we don't expect a lot of people, but those who will who will attend will be rewarded.
+Alright, let's start rolling. It's already it's all recorded, so we can.
+Yeah, whoever's gonna watch later will watch later. I know there's not a lot of people, I understand it's a short week, a lot of people doing other things. I've heard this.
+I've heard there's been holidays. Hell, I'm on holiday myself today. So before we move on, are there any questions about the last week stuff that we, how we build the brain, what was it for, what did work, what didn't work?
+Anybody wants to chime in? I don't know, Bertha, if you wanted to, yeah, yeah, go ahead.
+
+Jatin Bagga   3:33
+Good.
+Yeah, I sent you a note, Vlad. Sorry.
+I sent you a note last week, right? And I thought, I think you followed up, but I was having a lot of issues with it. I think I just finally gave up on this and I just used cursor to tell me what to do. And I think it's been working so far.
+
+Vlad Grubman   3:47
+Can you show me what exactly the issues you had?
+That's not a bad idea. That's not a bad idea. So were you able to resolve it or do you feel like you need help?
+
+Jatin Bagga   4:01
+No, I think I was able to resolve it. I just have another question before it actually starts working in the real way, but overall I think Kursu was more helpful. I got through it. It's a good exercise, really.
+
+Vlad Grubman   4:12
+Yep, that's that's basically how we how we get to how we get through things. We tell it what we want to do, what we want to achieve, and ask questions. That's really how most of it works.
+So, what was...
+
+Jatin Bagga   4:26
+And I might ping you offline, I think, just Vlad, just to get 15 minutes maybe, just to see a couple of things that I was trying. Thank you.
+
+Vlad Grubman   4:30
+Shirt.
+Sure, but do you mind telling us what was the problem and how you resolved it? Because I think it would be useful for everyone to sort of learn from it.
+
+Jatin Bagga   4:41
+I mean, I basically, my biggest problem was getting that folder, like, where it was saying that you need to have a spec, like, you know, what, there's a, like, when you had to compare the two specs, that's where I was tripping. I don't know what was going on, but, like, cursor was hanging up, hanging up, like, it literally would get hanged for some reason. And so.
+I just literally went into then chat GPT first to give me the instruction that didn't work. Then I told cursor, here's what the requirements are. Just help me get through this. So I think mostly I'm done, but my main problem was just like you had to be in the folder to then open cursor. So then you can have the agent actually interact with all the files. Like for instance, I use a use case of like autofay cancellation.
+So, that's a part that I just need to finish 'cause I'm looking for one more file, so that's where the I ran into an issue with the with the comparison, but it wasn't like any rocket science as such, just user error, if that makes sense.
+
+Vlad Grubman   5:36
+Right, okay, okay. Because I kind of, it's kind of the feedback that we got, like more from more than one place, the part where you have to navigate from that folder. We, I actually have a bit of a small presentation for today to walk through that part specifically. Yeah, so I'm glad, I'm glad you, I'm glad you said that. Thank you.
+
+Jatin Bagga   5:52
+Oh, that'd be great.
+Sweet.
+
+Vlad Grubman   5:58
+Anybody else? Alfredo, Bertha, Josh, you guys, oh, Shai, you guys want to chime in?
+
+Alfredo Achecar   6:03
+Yeah.
+Yeah, I can, I can, I, yeah, I found it very useful and I, I, I try to build something on top of that, try to combine some stuff that I saw on the internet and like to try to make it work with this, so I can, I can show that I'm still tweaking it, so I can show that later.
+
+Vlad Grubman   6:22
+You can show it now. We're all we're all here for we're all here for it.
+
+Alfredo Achecar   6:25
+Yeah, no, no, but it sounds like you have something that could be useful for most of the team, so take it away.
+
+Vlad Grubman   6:30
+Okay, yeah, yeah, okay. Let's, I'll, I'm still collecting feedback. Feel free to chime in before I do the show and tell and then I'll try to be.
+Quick.
+About it, so we have time for Alfredo. Anybody else wants to add anything? Questions, comments, feedback, any really anything, guys. Everything helps.
+
+Bertha Cadena   6:54
+I was gonna ask, like after the walkthrough that you gave me, that was like super helpful. I was thinking about like another use case for these and just like thinking about transcripts. For example, if I have some transcripts from user interviews, like I just like put them on a folder, yeah, and then just like use that as a source and blah blah, right? Okay.
+
+Vlad Grubman   7:14
+Yes.
+Absolutely, yeah. I did mention that, but I know I did, when I do a lot of talking, people listen less and less, so I don't blame you for not for ignoring me. But yes, this is absolutely the use case. This is absolutely the use case, and that's exactly how you expand the knowledge in that brain.
+
+Bertha Cadena   7:27
+Yeah.
+Ha.
+
+Vlad Grubman   7:37
+By adding things like transcripts or even summaries from meetings or things of the nature. So yeah, you're spot on. Very good. Awesome. Thank you. Thank you for. Thank you for.
+
+Bertha Cadena   7:43
+Yes.
+Oh, thank you. Okay, and then...
+Of course, just like a follow up question. If, and I probably asked already this, I don't remember. I need to create different like mini brains for each of the topics that I want, right? To keep them like separate and avoiding it to get like mixed up.
+
+Vlad Grubman   8:05
+Ah, that is an amazing question. So, Ron, by the way, Ron is our new coach. By the folks, meet Ron. Hi, Ron. We actually discussed this exact question, or actually, sorry, we discussed a similar question in regards to what should we show today. And we decided...
+Ron, Ron's idea is just that he's being onboarded literally today, just got all his credentials, so I'll be doing the show and tell. He will be interrupting me, not only because he's my boss, but because he's the coach now, so it's his responsibilities to interrupt me. We were discussing, should we show what I'm about to show you, or should we show you?
+sort of how to expand the brains. And the question you're bringing up is really, really interesting because it's up to you to decide whether you want the brains to, like if you keep more information in one brain, first it gets overloaded faster. It's not like infinite, it's going to run out of.
+of capacity at some point or rather your LLM will run out of capacity to process the information. On the other hand, there are some, sometimes there might be a rationale to have that information together. So it's up to you to decide how much you want to compartmentalize. And one of the things we were discussing.
+was if we wanted to sort of continue with the knowledge management use case, if we wanted to demonstrate how you can have two separate brains and an agent talking to both of them.
+kind of pulling the information from two separate brains and compounding it together. So if that's an interesting use case for you folks, let us know. Slack, Teams, whatever. Ping us and we'll build it.
+
+Shai Eilat   9:49
+Vlad, can you explain the when we when you use the term brain, what's included there?
+
+Vlad Grubman   9:55
+I'm sorry.
+
+Shai Eilat   9:56
+When you use the term brain to brains, what's included in that brain? Is that, is that which code me? Like what are we talking about here?
+
+Vlad Grubman   10:04
+The brain that we built in the last session, we built a second brain. It's all flat files. It's completely tool agnostic. You can use it with cursor, you can use it with Codex, you can use it with Cloud Code. I'm not sure if you can use it with...
+
+Shai Eilat   10:07
+Okay.
+
+Vlad Grubman   10:20
+Code me, you can use the process to build it in code me, sort of to replicate replicate the process in code me using built-in RAG, but it's not going to be portable, it's not going to be too agnostic if you build it in code me, which is one of the reasons why I wanted to show you how to do it without code me.
+
+Shai Eilat   10:29
+Mhm.
+
+Vlad Grubman   10:40
+So it becomes portable. You can literally email it to somebody else or post it into GitHub and use it from there. As a matter of fact, you probably can post it in GitHub and use it in CodeMe as well.
+
+Shai Eilat   10:53
+So is this essentially all the context that we're providing?
+
+Vlad Grubman   10:56
+It's the it's the brain is the it becomes the context for whatever it is. So if you have two projects, you build 2 separate brains and you can have conversations with them.
+
+Shai Eilat   11:09
+Okay.
+
+Vlad Grubman   11:10
+It's kind of solving for that knowledge management. We collected the use cases, a quick recap. We collected use cases, we go to 33 use cases from phase two, five of them were about knowledge management. So we figured it might be a good idea to show one of the solutions for knowledge management problems.
+for the knowledge management use case. It's not the solution, but it's one of the solutions that people increasingly build for themselves. If you look at the latest round of Y Combinator, they put out the call of problems to solve. I think it's problem #3 or #4 on the list, knowledge management.
+Enterprise Knowledge Management.
+basically enterprise brain. So I think it's...
+I think it's really useful, and again.
+Digital team said these are the problems we wanted to solve, so we're trying to help, if that makes sense. All right, any more questions? Anything else?
+Let me start sharing something real quick.
+I'll try to go as slow as possible.
+And again, feel free to stop me at any time. Let me see what's the best way to share this.
+I'm going to share a whole screen.
+Okay, tell me if you can see my empty cursor.
+Window.
+
+Alfredo Achecar   12:44
+Yep, it is here.
+
+Mia (Xiaoling) Zhou   12:45
+Yes.
+
+Vlad Grubman   12:45
+Okay, cool.
+
+Jatin Bagga   12:45
+It's loading, yup.
+
+Vlad Grubman   12:47
+Cool, okay. So again, using cursor because it's the one agentic tool that's available to you folks. I can do the same thing in Codex. I can do the same thing in Cloud Code. I would love if you can follow this. Open your cursor, very important part.
+Do not open cursor on the web. It's not going to be able to do any of this.
+The only way this works is if you open the app, the actual app, cursor app.
+
+Joshua Smith   13:18
+I'll have to download it. I have I've been using web.
+
+Vlad Grubman   13:19
+Yeah, you have to download it and install it. And that's what Bertha and I figured out as one of the first things, like I didn't make it very clear in my last week's presentation. So, and that's kind of what prompted what I'm showing you today.
+Again, I'll try to go very slow because that's kind of the point.
+And.
+We'll try to...
+We'll try to get you guys there.
+What, what we, what we want to build, we want to build a dashboard based on some app data.
+I wouldn't worry about the data. I'll get you the...
+Let me see which browser do I have this thing open in? Hold on.
+So it's based on mobile app reviews. It will look somewhat like this. Again, don't worry about what it looks like. It's not about the actual dashboard, it's how to build things. The purpose of today's meeting is showing you how to build things using cursor on your machine, on your local machine. So that's what.
+we're going to be focusing on right now. And it's not going to be very long in presentation. It's going to be really fast.
+
+Jatin Bagga   14:37
+And.
+
+Vlad Grubman   14:41
+Up.
+
+Jatin Bagga   14:41
+Hey, Vlad, just real quick, if you have like already open cursor through your folder and you want to open like a net new agent, how do you change that? Like, I think that's another thing that...
+
+Vlad Grubman   14:53
+Perfect. Perfect. That's exactly where we're going with this. Awesome.
+So, if you go on the cursor, you go here, you can select open folder.
+And it's going to give you a bunch of stuff. So I'm going to go into a projects. I'm going to create a new folder. I'm going to call it demo 3, demo 2. Demo 2 is fine.
+And that would be my folder where everything is going to be working on, working now, right here.
+Kate.
+Again, it's right here, right next to local. You open folder or select the existing folder.
+
+Joshua Smith   15:35
+So Vlad, quick question on that. Does it have context on any other projects or folders if we open the folder or not? Okay.
+
+Vlad Grubman   15:35
+Very short. Sure, go ahead. Yeah.
+Nope, and that's the point. That's exactly why we're creating a separate folder so we can run it with an existing project. There is a way to sort of cross-pollinate it, which is not going to do it for now. We're trying to stay focused on one project. Again, there is a way to do it in, again, in cursor, in codex, and...
+
+Joshua Smith   15:55
+Okay, fair enough.
+
+Vlad Grubman   16:03
+Kotwal.
+Let's start small and let's expand later.
+K.
+Let me know if I can continue if this is the right pace. If you want me to go faster or slower, feel free to chime in.
+
+Jatin Bagga   16:18
+Yep, it's good, it's good.
+
+Vlad Grubman   16:20
+Cool, OK.
+So.
+What we're going to do, the plan that we're going to have is we're going to ask our AI agent right here, it's GPT-55 medium. Unfortunately, this is the only model. This is the most...
+This is the only model that makes sense to use. You can use Opus 4.7, but it's X high thinking. So you're going to burn through tokens like crazy, and it may be, you may run out of tokens before you complete the project. I really don't want to do this in the demo, but feel free to experiment. Maybe it will be sufficient.
+Um, I think, I think the budget is like 20 or $30, uh, so whenever you burn through that, that's it, you're done.
+
+Mia (Xiaoling) Zhou   16:57
+Eat.
+Uh, well, uh.
+
+Vlad Grubman   17:06
+Yeah, good.
+
+Jatin Bagga   17:06
+And where are you getting that GPT one? Sorry, because this window looks different for me in cursor app versus yours. And the plus gives me something else.
+
+Vlad Grubman   17:15
+Do you have orders?
+
+Doug Ball   17:15
+If you turn off the, if you turn off the auto, then it'll give you the other options.
+
+Vlad Grubman   17:20
+Yep.
+Yeah, thanks Doc, exactly.
+
+Mia (Xiaoling) Zhou   17:24
+Yeah, I have a quick question on model because I I've been this scenario I use the like a good one and then I run all the run all of the credits and I changed to it's allow me to change to another one. So is that a fact? So I'm not sure like how how that's like affects the whole project. It's it looks like still work, but I.
+
+Vlad Grubman   17:24
+You see.
+Um...
+
+Mia (Xiaoling) Zhou   17:47
+But I know it's like running by different models.
+
+Vlad Grubman   17:52
+Yeah, you can you can do auto and then cursor will decide which model to use it all by itself, which is I think what.
+What Jatin is asking for, or you can specify a model that you wanted to use. I think Composer is free. I don't think it uses your credits. Honestly, I'm not sure. I don't want to mislead you. I thought that the budget is set for all the models, not a per model.
+basis, but I could be wrong. So I don't want to mislead you. I'll just say I don't know. I don't want to pretend that I'm ChatGPT.
+
+Mia (Xiaoling) Zhou   18:24
+Ohh.
+Yeah.
+Because I'm being, for example, I use cloudy, and then I got a, actually there is no like reminders that I'm like almost run on my credit. I just know when I'm run out of my credit, so I'm unable to run anything. Then I change to another model. It keep working.
+
+Vlad Grubman   18:47
+Uh-huh.
+
+Mia (Xiaoling) Zhou   18:48
+Yeah, that that's what I.
+
+Vlad Grubman   18:50
+That is probably, there's probably a budget per model, and I think the way to do it is you have to go into the cursor settings, and it there's a...
+There's something somewhere that tells you how close you are to your quota, but yeah, so anything else you guys, you guys clear where you, yeah, yeah, go ahead, please.
+
+Mia (Xiaoling) Zhou   19:02
+Okay.
+Thanks.
+
+Ron Seager   19:09
+One thing, Vlad, yeah, so I think what she might be asking, and I'm not sure, but when you change models within a session, you're basically starting a new session. So any context that the previous session had, you have to give it back to the new model when you switch.
+That help?
+
+Mia (Xiaoling) Zhou   19:34
+Yes, but it just.
+But for for in my in my case, I I'm not sure if that's true because I I actually like run all. Yeah, yeah, let me go back and check. Thank you. Yeah.
+
+Ron Seager   19:52
+Yeah, OK.
+
+Vlad Grubman   19:53
+I think there are two things that you might want to watch out for. One is the budget and 2nd is the context.
+So, you, you, yeah, go ahead.
+
+Joshua Smith   20:01
+So, even if we're up, oh, sorry, go ahead, bye.
+Just to clarify, even if we're operating within the same folder, like you have demo 2 chosen, if we change models within that folder, it still loses context or how does that work?
+
+Vlad Grubman   20:05
+No, no.
+I'm not sure, we'll we might be able to check, um, as we as we build this, so we'll...
+
+Joshua Smith   20:18
+Okay.
+
+Vlad Grubman   20:22
+Let's see if we can get to it to the point before we run out of time, but that's a good point because I didn't, I wasn't sure if that's true or not. If Frances says it's true, it probably is true, but we can, we should be able to check.
+
+Joshua Smith   20:25
+Sure.
+
+Vlad Grubman   20:35
+Okay, so first thing, so back to the episode. What we're trying to do is we're trying to build the dashboard. The way we wanted to build the dashboard is 3 very simple steps. Step one, we want to ask AI to create a spec.
+Then we're going to use that spec and the data package to build the actual dashboard. The actual dashboard is going to be a plain HTML file. You don't need to run a server. You don't need to do anything. You can copy and paste it into anything, and it's just going to work.
+So that's the goal. Again, I tried to make it as simple as possible. I'll share the data package in.
+in Slack channel, same way we did last time when I start this. So first thing I'm going to do, and I already have this prepared, I'll share all the prompts, everything. What I'm going to do is I'm going to say right here, I want to build a local HTML dashboard demo from prepared customer review data package.
+Before writing in HTML, help me create a clear dashboard specification. This is where I'm asking it to create a spec.
+Spec is basically, as we discussed before, it's effectively a PRD for AI. It's the specification for AI to build something.
+And then I explain, again, it doesn't really matter. We're not, this demo is not about the actual dashboard, it's about how to build things. So this is just to build something. Should use aggregation first, start with the execution summary TPIs, blah, blah, blah, go there. Data package will be provided separately, which should.
+I have it. It will contain some of this stuff. And I prepared the data package. I basically took the same app reviews we've been talking about, same app reviews that are publicly available on the internet. And I just compressed them into a JSON so that AI will have an easier time picking them up.
+from instead of a CSV file.
+And then create a dashboard spec that includes all these things. Do not build a dashboard yet. Create a spec as a markdown file named dashboard spec MD in the current folder. Okay.
+I'm going to give it a go. Yeah, I've tried it on a higher level model, but we'll see what happens. In the meantime, I'm just going to go and...
+Send the file that we just discussed.
+
+Bertha Cadena   23:12
+But do you have to have?
+
+Jatin Bagga   23:12
+Can you post that prompt there? Can you post that instructions in the chat?
+
+Vlad Grubman   23:14
+Yes, yes, yes, I am doing this right now while it's thinking. Yes, give me one second.
+I'm doing that right this moment. I'm actually going to send you all three so you don't have to wait for me.
+to share each prompt one after another.
+
+Doug Ball   23:29
+Copilot was transcribing it for me.
+
+Vlad Grubman   23:34
+Goodbye.
+
+Joshua Smith   23:36
+So Vlad, while it's doing that, like I don't need the plan new idea tag, right? And I don't need the ask tab, so it's strictly just using the prompt to plan.
+
+Vlad Grubman   23:46
+I like using the prompt to do this, but again, it's up to you. The beauty of it is you can go any which way you want about this, as long as you get through the result to the outcome that you really want to.
+
+Joshua Smith   23:56
+Okay.
+Just like life.
+
+Vlad Grubman   24:03
+Yep.
+
+Jatin Bagga   24:05
+Wow, Josh, that was smooth. You got really philosophical there. Nice.
+
+Alfredo Achecar   24:05
+Take it so poetic.
+
+Joshua Smith   24:10
+Yeah, yeah, well, hey, stay tuned, maybe more to come.
+
+Vlad Grubman   24:14
+Good thing we're recording this wisdom. I'm really, really happy about it. All right, they're all in Training Digital General in the channel. Feel free to pull all three prompts we're going to be using today.
+Alright, it's done, so let's uh, let's see if I have that open anywhere.
+Was in my AI projects.
+Down to wait. Yep, it's right here. Dashboard spec MD. It's right here.
+So...
+Next thing I'm going to do, I'm going to, oh wait, I have to give you guys the data package. That's not very, not very friendly of me not to give you the data package.
+Give me one second.
+demo, data prep.
+So I'm going to give you 2 versions of the data package. One will be JSON and one will be JavaScript. The reason for that is if you just use JSON, the...
+The local, because this is a local HTML file, you're going to have a problem pulling in the JSON file from local. So I had to change it into...
+into the JavaScript, but it's the same.
+It's the same thing.
+Kate.
+
+Bertha Cadena   25:56
+O, we need to download both.
+
+Vlad Grubman   25:58
+You can do both and you can do either one. It's fine. However you want it to do it. The beautiful part is if you download JSON and you tell the machine to use JSON.
+When you look at the resulting HTML file, it's going to fail. You're going to see an error message. What you can do then, you can tell exactly what Jatin did. Hey, there's an error, fix it for me. And it's going to fix it for you. Just to save time, because we're already at almost 1230 Eastern, I wanted to, I'm just going to shortcut it and.
+Um...
+And create, and just supply the the JavaScript, but you can do either one. You're not gonna, it's not gonna, it's not gonna affect anything. You're just gonna have to execute one additional step.
+
+Bertha Cadena   26:48
+And that Jason, or sorry, the JavaScript, that one goes inside of our folder that we were working with. Okay.
+
+Joshua Smith   26:49
+Black.
+
+Vlad Grubman   26:54
+Yes, this is this is what I'm showing on the screen right now. Here's your dashboard spec that you just created in.
+
+Bertha Cadena   26:58
+Okay.
+
+Vlad Grubman   27:03
+in cursor and this is where you can put dashboard data JSON. Again, don't worry about the data. We're just doing it to learn how to use how to use cursor to actually build things. I think Josh, if was I, did I hear you? Yeah.
+
+Joshua Smith   27:16
+Yeah, just a silly quick navigation question. What's the best way or best practice to open up this file in cursor?
+
+Vlad Grubman   27:21
+Sure.
+
+Joshua Smith   27:27
+Because I downloaded it, the ones you shared, the markdown. Yeah.
+
+Vlad Grubman   27:30
+The markdown files you can just open. I open them here. I open them as text. If you just text edit, yeah, yeah.
+
+Joshua Smith   27:36
+Okay, so you copied it because like okay, it's interesting because when when
+
+Mia (Xiaoling) Zhou   27:40
+Josh, if you just, if you just click it, it will open by cursor automatically.
+
+Vlad Grubman   27:40
+If...
+
+Joshua Smith   27:46
+Yeah, that was my question is I did that and it did open in cursor automatically, but it opened it up as a new agent instead of inside the repository that we were working in. So I just wasn't sure like the best way to navigate that.
+
+Mia (Xiaoling) Zhou   27:47
+Yes.
+Okay.
+
+Vlad Grubman   28:00
+It's up to you. I'm just a little bit old school, so I like my files separate, but you can absolutely have it. They're going to be right here. You can dump all your prompts in here if you want. It's totally fine.
+Again, I'm just trying to simplify this to keep your focus on what I'm doing, but you guys feel free to use this any which way that works for you. So I'm going to use the, yeah, go ahead.
+
+Jatin Bagga   28:25
+Yeah, and, um, and sorry, can you, um, sorry, I need to draw it. Can you post the other two prompts as well? Um.
+
+Vlad Grubman   28:31
+They're already there.
+
+Jatin Bagga   28:32
+Oh, I thought there's just one. Am I not seeing it?
+Am I hallucinating?
+
+Vlad Grubman   28:37
+All 3, I don't know.
+
+Bertha Cadena   28:38
+They they are in slag Jatin.
+
+Vlad Grubman   28:40
+It's all the slack, all three prompts.
+
+Jatin Bagga   28:41
+Oh man, slack, okay.
+
+Bertha Cadena   28:43
+Yeah.
+
+Vlad Grubman   28:44
+All 3 prompts are in Slack. I have a problem. I have a problem with Teams.
+
+Ron Seager   28:46
+Sorry, Jatin, I don't have, I don't have Slack yet, so I pasted the first one in the Teams chat.
+
+Vlad Grubman   28:52
+Oh, that's probably why. Okay, you can post the rest of them.
+
+Ron Seager   28:54
+Yeah.
+
+Jatin Bagga   28:54
+Yeah, and I just saw the first problem there, but it's okay. Well, I'll take them slack.
+
+Ron Seager   28:56
+Sam.
+My bad.
+
+Vlad Grubman   29:00
+All right.
+So what we're going to do, we're going to do the same thing again with the second one. We're going to have this, and these are all generated by AI, so you can ask AI to help you with these prompts. Build the dashboard described in the dashboard spec using provided data package.
+I'm gonna just add in the same folder.
+Jack Sanchez.
+Okay, dashboard must open directly from the file system by double clicking index HTML. Do not require a backend server, localhost Python, or NPM dev. This is basically telling the AI agent that's going to build this, do not use any backend. Just do the HTML file so that I can copy and paste it.
+Browsers block fetch for local JSON file, so you need to use JavaScript. And then it goes and does all these cool things.
+After building validate, make sure it works. The prompt is there, prompt is there if you if you're interested, and off we go. What it was gonna do is gonna do exactly what it says. The best part is you have you now have a spec.
+on how to build the actual dashboard rather than just asking to build a dashboard. So you can, if you want to, you can go and you can go in.
+While it's building.
+You can go in and read this back. Let me rearrange the screen a little. And if you feel like there are some things you wanted to change, you can go ahead and change them before you build it.
+So you can, or you can ask AI to adjust certain areas or specific sections of this spec.
+Notice how huge it is and how long it would take you to build it. But if you were doing this by yourself, now you don't have to do this. You can just ask for things.
+So it's gonna build, it's gonna build the HTML, it's gonna build the dashboard. Usually takes a few minutes. This is a smaller model, so it should be faster than the thinking one.
+Hopefully, hopefully it'll get done. It's obviously it's doing something. So while it's building, any other questions, anything?
+
+Doug Ball   31:30
+But uh, what was it that turned on that preview?
+On the right.
+What was the?
+
+Vlad Grubman   31:40
+This is the icon, hide panel. It's a like right panel and then you click on the specific file that you wanted to look at and you can preview. Once it built HTML, you can, there's a built-in browser right here, so you can do that. There's a terminal that you can use. It's a fully, it's basically Visual Studio, but.
+Uh, re-rebuilt for agentic first.
+purposes. So basically the ID, the standard ID is just a genetic first. This is what you're seeing on the screen, agents building things.
+
+Joshua Smith   32:18
+I might have missed it, but where do you, at what point do you plug in the data package that you provided?
+
+Vlad Grubman   32:25
+When, okay, when I built, I built the spec first.
+
+Joshua Smith   32:25
+Is it?
+
+Vlad Grubman   32:30
+I asked, sorry, I asked the agent to build the spec first. It created the spec, dashboard spec MD.
+And then when I said build the dashboard described in spec, I added.
+the dashboard data, Jason and JavaScript into the same folder.
+
+Joshua Smith   32:51
+Okay.
+
+Vlad Grubman   32:53
+So...
+If you want to, if you want to start building the dashboard, you need to provide the data. I already prepared the data for this, so we can save some time and not watch me struggle with the CSV. But obviously, depending on your use case, depending on what you're actually building this for, might be additional steps to prepare the data or prepare the inputs.
+
+Joshua Smith   33:04
+Mhm.
+Yeah, I went ahead and started that second prompt without providing the data package. So I wonder if it'll just be blank, like a dashboard, HTML dashboard that's blank maybe.
+
+Vlad Grubman   33:24
+It might be blank or it might be worse. It might hallucinate some data for you.
+
+Joshua Smith   33:31
+Either way, we'll know.
+
+Vlad Grubman   33:33
+Yep. Ron, do you have anything else to add? Am I missing anything? Please.
+
+Ron Seager   33:39
+In fact, I purposely am doing this in parallel without the data to see if it will hallucinate. So it's still thinking, but yeah, I don't, we can post results later if everyone has to drop. But other than that, no, this was good.
+
+Vlad Grubman   34:04
+I want to bring folks' attention to this little to-do list.
+this little to-do list. It actually creates a plan. It plans the implementation, creates A to-do list, and makes sure that it follows the to-do list. So it's self-organizing in this way, which I think is really cool.
+You can always tell it to change things, either while you're at it or later.
+Ohh.
+Yes, run.
+Yeah, these will show up and ask you for permission to run certain things. Like for example, validating URL when it's built it. So watch out for those and see. See, yes.
+Kate.
+What happened?
+
+Bertha Cadena   35:14
+And did you already enter prompt #3?
+
+Vlad Grubman   35:18
+Nope, I'm waiting for it to be done.
+
+Bertha Cadena   35:19
+Okay.
+
+Vlad Grubman   35:26
+And problem #3 is a separate validation step. So it does validation by itself.
+because that's a part of the spec and here, validate local file behavior and syntax, and that's what it's trying to do right now. And then I wanted to do another validation. All right, looks like it's done. Cool. So let's try this. I'm going to open that third. Let's move this out. This is my validation prompt.
+Really short.
+I'm going to use this and Mia, just like you said, I'm going to try to do this. I'm going to throw it at Oppos thinking extra high because first of all, I know there are some issues with this spec because I deliberately didn't fix certain things, so there might be problems.
+And second, I wanted to see what the extra high thinking, extra high thinking means is just going to think, literally think harder about what I'm asking it to do. Let's see, no preview. I want to preview. What's wrong with you?
+No, it doesn't want it; it doesn't want to do the preview, but it builds something. Hold on, let's hold on, let's see where was my...
+Thing.
+All right, it's okay. It's not very beautiful, but it's okay.
+This is what it built so far.
+Again, we're not, we don't really care about the actual data. We do care.
+about, oh, look, it changes everything. Cool. So it's somewhat functional, which is great.
+All right, so...
+
+Bertha Cadena   37:17
+How did you get to that one with the HTML?
+
+Vlad Grubman   37:22
+Sure, here's my folder, demo two. Here's the index HTML file that it built, and I can see the insides of it right here when I click.
+Alright, let me when I'm when I'm in this tree, this is my index HTML.
+Right, so I can see it right here.
+And all I need to do is go to the same folder where I'm building everything and click on index HTML and everything's just going to.
+Show up in my default browser, which is right here.
+As you can see, a projects demo 2 index HTML.
+Makes sense.
+
+Bertha Cadena   38:06
+Yes.
+
+Vlad Grubman   38:07
+Cool, OK. Any other questions before we move on? Sorry, I know I'm trying to wrap up before 12:45, but...
+If there are any questions, feel free to stop me.
+
+Shai Eilat   38:19
+Did did the for the dashboard specs, is that something that the tool generated for you and you just saved it?
+But what's in that folder?
+
+Vlad Grubman   38:29
+I'm sorry, can you repeat the question? I'm not sure I heard it correctly.
+
+Shai Eilat   38:32
+In that, the dashboard specs that you have here, what's in that folder again? Can you open it for a second?
+
+Vlad Grubman   38:37
+Uh-huh.
+Dashboard spec or data prep?
+
+Shai Eilat   38:43
+Yeah, you're on it. You're on it. You were just on it.
+
+Ron Seager   38:47
+Yeah, it's a file. It's a MD file.
+
+Shai Eilat   38:50
+But is that something that, yeah, exactly.
+
+Vlad Grubman   38:50
+This one.
+
+Ron Seager   38:50
+Sell.
+
+Shai Eilat   38:55
+Is that something that, um, person?
+
+Vlad Grubman   38:55
+It's a text file. It's a markdown file that cursor has created. Actually, it's right. You can view it in here with better formatting.
+
+Shai Eilat   39:01
+Okay.
+Ohh, I see. OK.
+So it essentially created it for you.
+
+Ron Seager   39:10
+That was.
+
+Vlad Grubman   39:12
+Yes, that's what the first prompt, that's what the first prompt was creating. The first prompt was create this spec.
+
+Ron Seager   39:12
+That was after the first prompt, after the first prompt.
+
+Shai Eilat   39:12
+Based on your instructions.
+Okay, okay.
+I see it, I see it, I see it.
+
+Vlad Grubman   39:20
+Then, if you want, if you want to be a human in the loop, you can change it, add it, you can do it manually, you can ask AI to make make changes to it, then you ask AI to build to this spec, and that's how we got the dashboard.
+
+Shai Eilat   39:28
+Yeah.
+Yeah, yeah, OK.
+
+Vlad Grubman   39:37
+The the reason why we're going with this this this way, not just asking to build a dashboard, but but injecting like...
+introducing a spec to it is it helps AI to sort of understand the full scope of work and it's sort of a planning stage. Turns out AI is much better at building things if it has a full specification. In a way, we're doing this in a waterfall fashion.
+But because the delivery is so fast, the waterfall is almost instant.
+
+Doug Ball   40:05
+Mhm.
+
+Vlad Grubman   40:11
+Okay, so back to the episode. What we're doing right now is we're validating the dashboard against the spec. We wanted to understand if that, and for the heck of it, we're using a different model altogether to see if the HTML we just got is actually.
+It actually adheres to the spec that we provided.
+Because it's a high-thinking model, it's probably going to take a while to figure this out. But yeah, you can see there's like 6 steps.
+in the plan, so probably going to take a few minutes. So if you have to drop, basically, I mean, if you have to drop, you have to drop. This is the end result. We built what we set out to build. It's absolutely modifiable from here.
+from inside the cursor or whichever tool you're using. You can absolutely make changes, update things. As a matter of fact, I am pretty certain at the end of the run, once the model will, well, once this model will complete, the validation is going to suggest some improvements and you can just say yes.
+Do the improvements, and it will give you a different a different flavor of the dashboard.
+So again, I know we're almost at the time. There's like 4 minutes left to the official end of the meeting. So I wanted to pause here and ask if there are any questions. Let it run. Don't worry about it. Are there any questions, any concerns, any ideas how to make this more interesting?
+
+Doug Ball   41:53
+I was able to follow along with everything.
+The only thing that was different is yours is listed under repositories.
+And...
+I don't know where, why that is different.
+N.
+
+Vlad Grubman   42:11
+Sorry, what is listed under repositories?
+
+Doug Ball   42:13
+You're working on your dashboard specification underneath the heading of repositories.
+And, yeah.
+
+Ron Seager   42:22
+The left in the left nav pane.
+
+Vlad Grubman   42:24
+Here? This one? Yeah, okay.
+
+Ron Seager   42:25
+Yeah.
+
+Doug Ball   42:26
+And does that signify anything about the way that you have it set up or?
+
+Vlad Grubman   42:33
+Nope, no, it it the way I have it set up, no, it's all folders. The thinking, and and it's half hypothesis, half observation. So I think why it's called repository is because it expects these to be actual Git repos.
+
+Doug Ball   42:50
+Okay.
+
+Vlad Grubman   42:52
+And you can absolutely do that. As a matter of fact, you can.
+If you have, if you have your Git repo where you want to store this, you can just ask cursor to store it on the Git repo and it'll just be there, which is kind of a cool thing because then you can share the repo. Let's say, for example, from the previous time when we built a brain, if you want to share it with your team, if it's a project brain that your team is working on, everybody wants to use it.
+This is the ideal way to share it, check it into repo and have everybody else sort of contribute to it.
+Make sense?
+
+Doug Ball   43:28
+Yep.
+Thank you.
+
+Vlad Grubman   43:31
+Sure. Any other questions? Anything else?
+
+Mia (Xiaoling) Zhou   43:37
+I have a question not very related to what we are doing, but yeah, but in my case, when I'm doing something like what you are doing today, right, it's always asked me, like always stopped and asked me like run something. I need to manually click run or fetch, but I didn't see that in your step.
+
+Vlad Grubman   43:40
+Cool.
+
+Mia (Xiaoling) Zhou   43:58
+It also happened today, like just right now, for several steps I need to like manually click the wrong button to make it wrong.
+
+Vlad Grubman   44:06
+If you, if you look at the screen right now, it's exactly what it does, yeah.
+
+Mia (Xiaoling) Zhou   44:08
+Yeah, yeah, yeah, yeah, yeah, yeah, exactly. So, yeah, basically, I I don't understand what's what is running. I just click wrong, so...
+
+Vlad Grubman   44:18
+It it it gives you the the commands.
+Ron, Ron, do you wanna do you wanna answer that?
+
+Mia (Xiaoling) Zhou   44:24
+Yeah, so I'm trying to understand why it's asking it and is there any way I can like setting, I can put in settings so I don't need to click wrong every time.
+
+Ron Seager   44:39
+For sure, I think.
+They all probably have a global mode where you can accept all of the changes. I just haven't said it myself. Do you know about cursor, Vlad? If it hasn't?
+
+Vlad Grubman   44:55
+So basically, it's not exclusive to cursor. If you do the same thing in Cloud Code or Codex, it's going to do exactly the same thing. The reason for that is because AI is non-deterministic. These are the guardrails to prevent AI from doing all those cool things like deleting your whole code base or...
+wiping off your computer, like we've heard in the news, things happen, right? So it does have those sort of guardrails on like what should and shouldn't do. You can absolutely change that in permissions and in settings or in an individual session. I don't remember exactly how to do it. I would just.
+Probably just ask JGPT, hey, I'm using cursor, this is my, this is my thing, where do I, where do I change the settings? There is, I think, the most popular one is closed code, dangerously skip permissions, which allows it to do everything.
+So yeah, that's basically, there's a way to change that, but again, it comes with this dangerous thing when...
+It can go outside of your sandbox and wreak havoc. By the way, I think it was a question, I think Josh asked that question earlier. Can we do other?
+Can we go outside of a specific brain or a specific folder? And that's how you go outside. Like I, for one of my brain projects, I allow the codex to go outside and whenever I'm updating the brain structure, not the knowledge, the actual structure, it's allowed to go into my second.
+Brand that I'm using for another thing and update the.
+and update the structure there as well. So if I'm changing the structure of the brain, like the layout, the files and everything, it goes and updates it into different places in the sort of canonical place where I kind of copied from and in another instance. So TLDR.
+Yes, you can change the permissions. Just be careful about it.
+Makes sense.
+All right, we're officially over time, so I'll let it run. I'll tell you how it ends. But if you have any questions, you don't have to stay. We can wrap up. If you have any more questions, feel free to ask.
+
+Mia (Xiaoling) Zhou   47:16
+Yeah.
+
+Vlad Grubman   47:30
+And thank you for, thank you for being with us.
+
+Bertha Cadena   47:37
+Thank you.
+
+Alfredo Achecar   47:38
+Thanks, Vlad. Appreciate it.
+
+Vlad Grubman   47:39
+Cool, thank you, folks. See you next time.
+
+Mia (Xiaoling) Zhou   47:39
+Oof.
+
+Ron Seager   47:41
+Thanks.
+
+Byron Purdy   47:44
+Thank you.
+
+ stopped transcription

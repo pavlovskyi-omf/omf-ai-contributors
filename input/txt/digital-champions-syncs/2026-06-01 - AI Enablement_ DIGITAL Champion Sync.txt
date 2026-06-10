@@ -1,0 +1,458 @@
+AI Enablement DIGITAL Champion Sync-20260601_153038UTC-Meeting Recording
+June 1, 2026, 3:30PM
+30m 28s
+
+Moses Song   0:13
+Yeah.
+
+Vlad Grubman   0:27
+Good morning, everyone. Let's give everybody a couple of minutes to start.
+
+Jatin Bagga   0:49
+Hello!
+
+Vlad Grubman   0:51
+Learning.
+Howdy, folks.
+Let's get this rolling, hopefully.
+We'll get through this real fast. As most of you know, the purpose of this call is to check for the progress, see if there are any blockers, see if there are any issues, see if you guys are ready to do the demos and how you're progressing. As I was saying, Nikita moved on to a more important project, so.
+Here we are. We have Ron. Again, remember, Ron is our new guy. He's going to start taking over these calls gradually.
+
+Moses Song   1:49
+Yeah.
+Pink.
+
+Vlad Grubman   1:55
+But in the meantime, I'll step in and help us navigate moving forward.
+So, let's start with, let's start with any updates. Anybody did something, anything cool, any experiments you folks conducted over the weekend or last week? Anything you build anything amazing? Please go ahead and share.
+
+Jatin Bagga   2:16
+So, well, yeah, go ahead.
+
+Moses Song   2:17
+Quick question.
+Quick question, does everybody who has chat now have this agent capability?
+
+Vlad Grubman   2:25
+Ah, great question. We all had it last week and now it's gone. I already pinged Nick this morning because we even delivered a demo, I believe Thursday. It was a Thursday, Tuesday last week. So everybody was very eager to test it and now it's gone.
+
+Moses Song   2:25
+The.
+
+Vlad Grubman   2:44
+Most of us lost it. We had it and we lost it.
+
+Moses Song   2:47
+Okay, so it's no longer available. Okay, thank you.
+
+Vlad Grubman   2:49
+Correct, yeah.
+
+Jatin Bagga   2:50
+Wait, it's available for me. Am I?
+Am I the only one?
+
+Vlad Grubman   2:55
+We're seeing it very inconsistently. Like it's available for you, it's available for Nick. I just came from AI champion calls and AI engineer calls and some folks there lost it. I lost it. Eugene lost it. Eugene who was doing the demo actually doesn't have it anymore. So it's really weird how...
+
+JT Tabencki   3:12
+OK.
+
+Vlad Grubman   3:12
+how it's sort of unevenly distributed. I have a suspicion that it's contracts versus FTEs, but I might be wrong.
+
+Nicholas Crowley   3:24
+And I did, I put it in the tools channel. I think Brian is probably the right person to help with that and I think he maybe had been traveling this morning, so I'll keep following up.
+No, no good answer yet.
+
+Moses Song   3:36
+Sorry, Nick, who are you talking to, Nick?
+
+Nicholas Crowley   3:40
+Ryan Chastain.
+
+Moses Song   3:42
+Right.
+Thanks.
+
+Vlad Grubman   3:53
+Yeah, it was, it's really weird. We had it, and then it was gone. I thought it was just me last Thursday or Friday, and this morning turns out it's almost everyone on our end.
+But the question remains, if you folks ever experimented with it, it's just it's still still fair, still tell us. Anybody did anything cool?
+Jatin, you wanna say something?
+
+Jatin Bagga   4:17
+Yeah, yeah, I was just gonna say, so I use agent, remember like your session and then Eugene session on like how do we use, how do we like get information from different repositories? So I was keeping the case, the use case a little bit more simpler. So I'm working on this engagement or this initiative called Method FI, which is very critical, like, you know.
+Dinesh, Dana, Micah, like all are very much interested in that initiative. It's Method FI, it's new money is over like 120, $130 million. And long story short, there are lots of people, lots of stakeholders, lots of cross-functional conversations that are going on. So one of the challenges that I've been experiencing is like just trying to keep up with it. Like it's just so really genuinely very difficult. Teams chat, Slack chat, email.
+just general, right? So what I created, again, I didn't succeed, but I was successfully extended. I created an agent with very specific instructions of like I wanted specific meetings.
+to be monitored, the content from those meetings, emails. I listed out the players that are actually part of this agent. And actually, I can share it real quick. Nothing rocket science, but just so you can see.
+And really being able to consolidate that into PDLC, right? Like, so for instance, this is the method FI review agent for me. I haven't shared this with Doug yet. Doug is the another product manager from originations is on it. But, and I can edit the agent so you guys can see. So like, this is the role. So your method FI initiative review agent, your job is to review, you know, grounded source material related to the method FI cross-functional business initiative.
+
+JT Tabencki   5:41
+Yeah.
+
+Jatin Bagga   5:51
+synthesize the most important new topics and issues, and surface discrepancies, net new information changes that may be needed in Jira, the PRD that I maintain, and then also any related documentation. So it sounds very easy, but literally it's taking me hours to just keep up. Like literally every other day I have to spend like hours just trying to figure stuff out.
+So I just looked at three sources, Jira, SharePoint, SharePoint is where the transcripts are stored, and then Teams. I did not put Outlook email. I mean, I did, but I was having an issue, so I removed it. But I literally had to put in like, okay, these are the players, these are the meeting chats, you know, here's the PRD, here's sort of the main epic from a payment standpoint of what needs to be done.
+I highlighted like where some of the issues that I'm running it from like transcripts and so forth. Long story short, I went through this. It did a pretty good job, except there's one minor issue that kind of big issue. It cannot read the transcripts basically because there's some new issue where transcripts are only available to the meeting owner.
+Not anyone else, unless they...
+physically go in and forward it. So that's the thing that I just posted in the technology chat as well, just asking anyone who can help activate that feature. But the bottom line is, like all these stakeholders, any type of communication, I can just synthesize it. So next time I'm like when I'm meeting Dana Wassam or Donna or whatever, right? Like it'd be easier to communicate it out. So not super sexy, but very.
+functional, like really, if I could get this to work, it's going to shave off a ton of my time and also the team collectively. So that's me.
+
+Vlad Grubman   7:26
+This is awesome. 90% of the stuff is not sexy, but it's very useful. Thank you for sharing. I, off the top of my head, if you don't mind hearing some feedback.
+
+Jatin Bagga   7:30
+Yep.
+
+Vlad Grubman   7:36
+Off the top of my head, I would probably add, I would probably add.
+
+Jatin Bagga   7:37
+For Shai.
+
+Vlad Grubman   7:42
+saving this somewhere in Confluence. So it's not just emailing you stuff, it's saving the summary so you can point it back at them. Emails get lost. The other thing, I think we discussed it, and I think somebody posted in one of the meeting chats, there's a setting on the meetings that can make the transcript available to everyone.
+
+Jatin Bagga   7:49
+Okay.
+
+Vlad Grubman   8:03
+So you can ask the meeting order to change it, especially if it's a serious, it's actually easier. Yeah. Yeah, I think so. Yeah, yeah, yeah.
+
+Jatin Bagga   8:09
+You're talking about this one, right? Yeah, they tried. It did not work. It did not work. We tried. That's why I'm saying that I, that's why I now posted on the technology org and I sent it out to like Shai, Erin, Brian, that anybody can help with this. That it's really been a pain in the neck for me because I'm trying to copy paste all of the individual, like it's just a mad.
+
+Vlad Grubman   8:14
+No.
+
+Jatin Bagga   8:30
+Craziness.
+
+Vlad Grubman   8:30
+True, yes, yeah, I I think I think it's kind of it's kind of a new thing since since everybody's using AI to analyze the transcripts, it should become a new norm that transcripts available to to everyone.
+
+Jatin Bagga   8:41
+Especially at least just in the meeting, right? Like at least if you're invited to the meeting, it should be, right? So then that's, yeah.
+
+Mia (Xiaoling) Zhou   8:41
+So.
+
+Vlad Grubman   8:44
+Especially the especially the meetings, yeah.
+
+Mia (Xiaoling) Zhou   8:46
+So, Jatin, do you have the transcript access on Teams?
+
+Jatin Bagga   8:54
+No, so like I'll show you an example, right? So like if I see this method, if I weekly touch point, so like I need this, I need it so desperately, but then when I go here, it basically says the transcript cannot be downloaded. Go to Nicholas Crowley, let's say, oh, well, this is sorry.
+
+Mia (Xiaoling) Zhou   8:54
+Like, no, okay, okay, I see.
+Mhm, mhm.
+Ohh.
+Yeah.
+Oh, but it's available here. Have you tried, because I've been in similar situation, but if I just, for example, in GPT, I open a new chat, I add the like knowledge, like connect with teams in that, like just a regular chat, and it looks like it's able to pull the transcript if the transcript was available.
+
+Jatin Bagga   9:18
+Uh-huh.
+Yeah.
+
+Mia (Xiaoling) Zhou   9:32
+For me, on Teams.
+
+Jatin Bagga   9:34
+No, I think that I got this message. See this, Mia. So I used it in the part of the chat and what it told me, I looked for this specific May 20th method, because I was just playing and testing yesterday, or day before, I forget, on the weekend. Instead of that, blah, blah, blah. It says, I found the correct list thing, but I couldn't really download the transcript code is disabled. So like it really couldn't pull.
+
+Mia (Xiaoling) Zhou   9:35
+So yeah, I was very confused, you know.
+Yeah.
+No.
+Yeah.
+The.
+Do you mind try start new chat and like just search this exactly the same meeting and to see if it's able to like get information from transcript? Because I, yeah, same on me, I couldn't done by agent or like a like a GP.
+like a cheap BT, but sometimes it works in your individual chat if you add the complete knowledge like.
+
+Jatin Bagga   10:25
+Alright, let me try this. I, I...
+
+Mia (Xiaoling) Zhou   10:27
+No, no, hold on, you need to add the company knowledge.
+Like binary.
+
+Jatin Bagga   10:32
+It's already there. I already added the that's already part of my app.
+Teams is already part of my app that's activated. So you see Slack, Alicia, Robo, SharePoint, Outlook, Calendar, Teams, and Figma.
+
+Mia (Xiaoling) Zhou   10:46
+Yeah, yeah, I understand, but in that chat, you also need to add, yeah, yeah, yeah, that, that's how it works on my mind, yeah.
+
+Jatin Bagga   10:50
+Again? Okay.
+I see.
+So I have teams activated here.
+
+Mia (Xiaoling) Zhou   10:58
+Yeah, you did.
+
+Jatin Bagga   11:00
+Okay, so let me try one more time.
+
+Mia (Xiaoling) Zhou   11:01
+Yeah, you see, it's in that chat bubble.
+
+Jatin Bagga   11:04
+Okay.
+All right, let's see. Can you read the transcript in the Teams meeting?
+Let's see what it says.
+And I can come back. It's going to take some time to process. Maybe other people can go and I'll tell you what I get.
+
+Vlad Grubman   11:33
+Just curious, Mia, what is the problem you're solving, if you don't mind me asking? It sounds familiar. Or is it just everybody's after transcripts?
+
+Mia (Xiaoling) Zhou   11:42
+Ohh.
+Yeah, just, yeah, like the week before last week, there is a meeting. I was, I didn't be invited and I'm not attend, but for some reason I need the content in that meeting. So I was being at after the meeting.
+And I tried to, at the beginning, I'm able to access like the records or transcript, but I applied the access. The meeting organizer approved and then I was able to like.
+Pull everything through JT for in that meeting.
+So that's what happened on my end. But I, but as I mentioned, I work on like in phase one, I was on launch management, but that's a long time ago. And I tried to test different access, like different tools to a Teams meeting. Sometimes GPT able to pull everything from Slack from Teams, but sometimes it's not. And I.
+
+Vlad Grubman   12:33
+Mhm.
+
+Mia (Xiaoling) Zhou   12:49
+I even cannot tell in which, what situation is able, even in the same chat. But that's a long time ago. I'm not sure things have changed.
+
+Jatin Bagga   13:01
+Yeah, and Mia, just to stitch it finally, like I think it's still reading, but it keeps saying I do not see the full spoken transcript text. It's still searching, but I don't think it can pull out if it's like disabled. I mean, that would be kind of violation if it's disabled, then.
+
+JT Tabencki   13:18
+Yeah.
+
+Jatin Bagga   13:21
+Chat GPT is pulling that information. I would think security is going to jump on that. I think it needs to be naturally be available to anyone and then Chat GPT can pull it. But yeah, it just ended the conversation saying it cannot read transcript.
+
+Vlad Grubman   13:38
+Okay, so TLDR looks like, well, security rules are working. That's good news. The bad news is we need to we need to go and get get the either ask for meetings to be set up in a certain way or escalated to technology like Jatin you did or.
+Do something.
+
+Jatin Bagga   13:59
+I mean, there's notes, right? Like there's also like manual transcript that you can see, like the actual each and every note. So that's what I was trying, but I felt like that.
+like didn't really help much. I really think having a full transcript available would really help. The video scraping, like literally looking at the video and trying to then, that's too much processing, like I, yeah.
+
+Vlad Grubman   14:18
+Yeah, that's too much work, I guess.
+Nick, maybe there's something else you can bring up to the technology. I'm not part of that channel, so I don't know what type of questions you have there, but maybe that's worth asking. I think it's pretty universal that a lot of people are using transcripts to extract insights, knowledge, and everything. So, like I said, it should be a new norm. Everybody should have access to the transcript.
+
+Anu Perera   14:29
+You.
+
+Jatin Bagga   14:45
+Yep, perfect. Thank you. That's it from my side.
+
+Vlad Grubman   14:47
+Cool. Thank you, Jatin. Thank you, Mia. Anybody else? Anybody else got anything else before we move on to the next exciting part?
+What, what did you do this last week?
+I'll share mine while you guys are thinking. I actually was very upset that transcripts are not available and this goes both for
+For all the meetings, especially on the EPAM side, I was very extremely annoyed with the fact that I have to go and create the whole stack of.
+I forgot, I forgot the terminology, but basically you have to create a cloud application in order to be able to get access to this, so I instead I just use Codex to write my own subscriber service.
+I built basically if you've ever seen granola, that's exactly what this thing does. But I built it in a probably like 3 hours ish because I was flipping between two different activities. It's working and I'm now exploring the possibility of using local models for prescriptions because I don't want to.
+If I ever to use this app to transcribe anything professionally, I don't want the conversation to leave my machine for privacy purposes. So I wanted to see if I can transcribe it locally using local models to do transcription locally. This way, I preserve the privacy. It's kind of like me taking notes on a piece of paper or typing them up on my computer. This way, nothing leaves my machine in.
+Sort of everything, everything stays stays secure. Probably need another three, 4 hours put into this before it's ready, but the whole experiment, the whole the whole experience of building this thing was really cool because you really have to sit down and think through, and this is very similar to what we did Wednesday. You have to think through the goal.
+Set up the right goal, set up the right sort of what success looks like, and then just keep pushing, keep pushing Codex through, which reminds me, Nick, this team really needs Codex.
+Yeah.
+All right, I'll shut up now. Anybody else?
+
+Nicholas Crowley   17:02
+Yep, heard.
+
+Vlad Grubman   17:10
+Anyone else with anything cool? Anu, Wajdan, JT, Kevin.
+A dog, Byron. I'm gonna, I'm gonna, I'm gonna play Nikita. I'm just gonna call people's names.
+
+Anu Perera   17:26
+I don't have anything cool. My last week, I think I was trying to understand that my last week was spent with the teams trying to get everybody to work towards the goal that the three teams that are assigned to me kind of removing roadblocks and getting them up to speed.
+Mostly my effort. One of the takeaways I have is...
+I feel like, sorry, I didn't have my camera on. I feel like talking to the teams.
+Are the teams fully aware of, like, maybe maybe I got Kevin and and watch added to the meetings as champions for those groups, but it seems like not everyone got the memo and I'm kind of trying to make sure everyone's kind of fully up to speed on phase two.
+So I know this is not the probably the time and the space, but I want to kind of bring that up. Just has that been like feels like it's not yet fully communicated this guess.
+
+Vlad Grubman   18:32
+Tell me more. This is the time in the space, so tell me more. What is not being communicated? What can we do better to communicate to those teams? What else can we do to make them fully aware?
+
+Anu Perera   18:33
+Okay.
+Yeah.
+The common theme I heard is the meetings that they attended, it was not clear what the expectations were. So that was a common theme that I see Watch shaking his head too. So that's the common theme that I heard. And so
+
+Vlad Grubman   18:58
+Which teams are those? Sorry, which teams are those?
+
+Anu Perera   19:01
+This is the ELF DSS and IDP teams.
+
+Vlad Grubman   19:10
+Okay, sorry, sorry for the interruption, keep going.
+
+Anu Perera   19:14
+So that's just my kind of observation as part of what I'm hoping with Wajdan and Kevin are in this meeting going forward, there will be some benefit. And I think the other piece that I want to kind of understand is from an engineering leadership standpoint,
+the expectations clearly communicated that they need to allocate X number of hours for working on AI initiatives to show outcomes. I don't know whether that was fully communicated, but I'm kind of getting a mixed bag when it comes to resource allocation and other stuff. So what I set the expectation is at least 20% of your time should be spent on.
+Like for phase two, based on how much time we spend during our phase one.
+But I want to kind of bring that up as kind of observation. I don't know whether everybody has seen and observed that.
+with other teams or not. So, and then the other one last thing, Jatin, the other thing is kind of getting teams access to resources like, you know, tooling. Not everyone has access to tooling, so we are asking them to do stuff without tooling. That's going to be another struggle.
+
+Jatin Bagga   20:10
+Yep.
+
+Anu Perera   20:26
+Nesh.
+
+Nicholas Crowley   20:29
+Yeah, I know you're specifically speaking to the new Lighthouse 24 teams that we're bringing on and you work with them as a leader, right? Mentor. Yeah.
+
+Anu Perera   20:29
+Good number.
+That is correct, yes.
+
+Jatin Bagga   20:39
+Yeah, I was just gonna say, I was like in payments, for instance, like we had explicit conversations. There was a lot of pushback initially that, oh, how are we assigning tasks to them when they've got AI work and stuff? So we all mutually agreed that, you know, we'll just create sort of a epic and then add tasks. So like the QE team members who are part of the AI work, you know.
+So they were literally every sprint over sprint, they were reporting time. Now, I'm not seeing really tangible output come back from them, but the bottom line is that from an engineering standpoint, they wanted allocation and I aligned with Kamal as well. And you know, he's also aligned that X percent, I think, I don't know if it's 20% or 25%, I forget, but.
+That's going to be dedicated for AI. So that's how we're managing it so that it, you know, from velocity standpoint, on the calculation, it shows up, plus teams get credit for the work that they're spending on AI.
+
+Vlad Grubman   21:29
+Sorry, is this on the Teams board or is this on AI and the open board? They take us here referring to for the AI work.
+
+Jatin Bagga   21:37
+So the one in, at least in payments, is very strictly under the PMT Jira board itself. Like local to us, our velocities for each individual team member and collectively for each sprint are tracked accurately. They're not rolling up to anything on AI side as such.
+
+Vlad Grubman   21:42
+Ah-ha, okay.
+OK, OK, alright, 'cause here's, here's, here's what I'm asking: We are calculating our metrics based on AI enablement board, uh, because we track tasks there, so...
+On occasion, we're seeing some metrics demonstrating that teams have done nothing, like exactly 0. And that's probably why, which you're saying is explaining why, because they're tracking it on their own board, not on AI enablement board. So we need to, I'll need to work with our team, see how we can.
+What can be done in order to account for that work? Yeah, are they tagged somehow specially? Like, is there like a label or are they all under the same epic? So we can maybe pull that stats in.
+
+Jatin Bagga   22:28
+Yeah, yeah, I mean, week over week, yeah.
+So, like...
+Yeah, I'll just put it here for you. Like PMT is the acronym that we use for all of our payment tickets. So if you just want to extrapolate PMT and then AI in Jira, you should be able to see all the AI, you know, tickets assigned to like the QA engineers that are working on any AI initiative.
+
+Vlad Grubman   22:57
+Okay, okay, I'll have someone take a look at this. I know Mikhail and Oleksandr are working on, basically they have the whole automated pipeline to bring in the metrics. I don't want to disrupt it, but I'll talk to them, see if we can do something. Yeah, it looks like this is not the only team that does that. It looks like that's probably why we're not seeing.
+
+Jatin Bagga   23:14
+Okay.
+
+Vlad Grubman   23:19
+Some teams report 0 output or zero.
+whatever AI enable to work is because it's done on their own board. We'll see how we can resolve it.
+All right, that's good. Good, good thing we have gone through this. Anu, I heard we heard you will recirculate the message. We'll see what else can we do to make people more aware of the situation. Any anything else anybody else wants to either share what they built or share the blockers or challenges? Please, this is this is the right place. Please go ahead.
+
+Kevin Yang   23:59
+The basic question, so are these sessions meant to share any kind of AI stuff we've done, or is it just focused on the one, sir?
+
+Vlad Grubman   24:05
+Yes, specifically for champions.
+Specifically for champions, share the blockers, share the achievements, share the good news and the bad news.
+
+Kevin Yang   24:13
+So is it specific to the use cases that we selected for Arya or is it for anything that we're doing?
+
+Vlad Grubman   24:21
+It's specific for AI champions. So whatever you folks feel like you need to share, that's that this is the this is the right forum.
+
+Kevin Yang   24:29
+Very nice.
+
+Vlad Grubman   24:29
+It's not exclusive to use cases, it's exclusive to the champions. So as champions, the goal, the purpose of the whole champions is so you guys can lead the...
+Yeah, enable it across your respective teams and organization. So if you build something and you wanted to share it, that's great, that bring it in. If you, like Anu or Jatin, if you guys are seeing some challenges, this is also the right forum to bring it in so we can take action on it. The more we know, the more we're positioned to.
+to help you be more better champions.
+
+Shai Eilat   25:05
+Kevin, Kevin, it can it can go beyond what we discussed in phase one, if if you're working on anything side project. I I've I spent last week playing a little bit with the new agents tool in in ChatGPT, and it's working pretty well. I I tried like different different combination of...
+
+Vlad Grubman   25:05
+Makes sense.
+
+Shai Eilat   25:26
+of both with Outlook and with Confluence. For example, I ask to give me a summary every week of all the emails that were sent to me that I did not answer. And I specifically ask, you know, to include only emails that are either directly to me and only me or me plus less than five.
+additional recipients so it will exclude all the group emails and then kind of like give me a summary of like what was the email about and sounded a pretty pretty good job so far in doing that I ask it to review my promotion folder for all the stuff that I'm getting from from vendors and events that like I never have time to look at and give me kind of like a summary of.
+who are the vendors, what's the technology, what are the events, and it's also been doing a pretty good job in that. So it's a pretty useful tool and very easy to just create simple flows.
+
+Jatin Bagga   26:18
+I agree. I agree. I think the only thing, Shai, like I was wondering, and I don't know, I asked Eugene about this, but can we get like access to this? Oh my God, that'd be Eureka if we could. But you know this feature that says connect to other sources where we could like, where is that? MCP, right? Connect to other MCP.
+servers? Oh my god, if we could get that, you know, like Shai was thinking like when we were working with, for instance, what is that company? Not Pendo, not Mixpanel. Was it Mixpanel? No. Aplitude, yeah. I was like, we could just like quickly run quick dirty API tests with their data right away. Like I don't need to wait for an engineer to do that.
+
+Shai Eilat   26:50
+Amplicates.
+Amflicted.
+
+Jatin Bagga   27:01
+I could just like quickly pull it in, see what they've got in terms of a structure because they've got like sample APIs. I feel like that'd be so powerful, but for some reason we can't connect to anything outside of like this Teams, SharePoint, blah, blah, you know.
+
+Vlad Grubman   27:12
+Because, because there are only a handful of...
+There's only a handful of MCP servers that are approved. Figma, Microsoft.
+Uh, Playwright, I'm not sure about Playwright, uh, like there's like three or four that are already approved.
+
+Jatin Bagga   27:28
+It's Figma, Atlassian Teams, you know, your SharePoint, like just the regular, but not like anything like, mm, go out.
+
+Vlad Grubman   27:31
+Right, yes, yes, yes.
+
+Shai Eilat   27:32
+Yeah.
+
+Vlad Grubman   27:34
+Yeah, we can add, we can, if there's a strong use case, if you guys are already using everything, we can add it to the list, but it's up to your OMF security team to actually approve it, but we can absolutely add it to the list. We we're the reason why that AI enabled move board exists is that we can track all these cool things.
+what the progress is and what's on the table. So we'll add it to the, I'll add it to the board today, right after this call. You already have an account with Amplitude, right? And it's, the MCP is hosted on the Amplitude side, right? You don't have to build anything locally.
+
+Shai Eilat   28:10
+We still, we're still kind of like in the planning phase with Amplitude. We're going to hopefully start a pilot in a month or so, but that that is a conversation that I'm going to have with the, you know, the tech governance team, so it's going to take a while and we're also starting with Amplitude with like bits and pieces. We're going to start testing their session replay and then we're going to start.
+
+Jatin Bagga   28:10
+Open.
+
+Shai Eilat   28:32
+testing maybe their experimentation tools. So it's gonna be, it's gonna take a while and probably, you know, the MCP server is not gonna be the first priority. First, we wanna make sure that like it's covering the bases of like doing what we're doing today with Glassbox before we expand it into, you know, connecting to some other LLMs we're using. So it's obviously the.
+
+Vlad Grubman   28:36
+It's a little rd, got it.
+
+Shai Eilat   28:54
+The gold division, but not tomorrow morning.
+
+Vlad Grubman   29:00
+Would it be nice if everything was available tomorrow morning?
+
+Jatin Bagga   29:04
+And and just for modification, so Vlad and Shai, like if we needed to connect to any other, like if you just need to pull some data from some another API where they're hosting the MCP, we have to go individual like API by API or connection, not like.
+You know, is there like a form where we could just submit, hey, I want access to this and then the security team can evaluate and give a quick response.
+Is that a dream?
+
+Vlad Grubman   29:31
+Nick, I'll let you, Nick, I'll let you answer that question because you're, you're, I'm not even in the chat where you guys are doing this.
+
+Nicholas Crowley   29:37
+Yeah, it's an MCP by MCP. The kind of the model that you're talking about where it's hosted by the vendor has, you know, been approved as a model that should make it faster than if it's some other sort of model of how they do it, but it will have to go through.
+you know, kind of product by product.
+
+Jatin Bagga   29:59
+Got it. Thank you.
+
+Nicholas Crowley   30:02
+And it's a submission Jatin in Jira, so we have a an epic set up for MCP connections.
+
+Jatin Bagga   30:10
+Got to think.
+
+Vlad Grubman   30:12
+All right, we're at the time. If anybody else has anything else, please send me a Slack, Teams, chat, whatever. Otherwise, thank you folks for being with us. See you tomorrow.
+
+Wajdan Mahbub   30:25
+Thank you.
+
+Nicholas Crowley   30:26
+Thanks a lot, thanks a lot.
+
+Nicholas Crowley stopped transcription

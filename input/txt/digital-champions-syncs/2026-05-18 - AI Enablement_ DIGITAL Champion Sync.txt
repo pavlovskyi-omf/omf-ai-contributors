@@ -1,0 +1,544 @@
+AI Enablement DIGITAL Champion Sync-20260518_153014UTC-Meeting Recording
+May 18, 2026, 3:30PM
+30m 14s
+
+ started transcription
+
+Jatin Bagga   0:17
+Oh my god, are we the only two hard-working employees at OMF?
+
+Eric Trenz   0:24
+I think so.
+
+Jatin Bagga   0:26
+Yeah.
+
+Eric Trenz   0:27
+Still the weekend for everyone else.
+
+Jatin Bagga   0:29
+I know, right? We must be really, really hardworking.
+
+Eric Trenz   0:34
+Yeah.
+
+Vlad Grubman   0:36
+Good morning.
+
+Jatin Bagga   0:37
+Yo, Vlad, what's up?
+
+Vlad Grubman   0:41
+What is happening?
+
+Jatin Bagga   0:43
+Wait, what?
+
+Vlad Grubman   0:46
+What is happening? Why is my camera not turning on? Ohh, there it is, finally.
+
+Jatin Bagga   0:52
+Mhm.
+
+Vlad Grubman   0:53
+This technology thing is complicated.
+
+Jatin Bagga   0:56
+All men use AI. Did you hear a thing called AI? Like especially the gen AI aspect?
+
+Vlad Grubman   0:59
+No, no, no, no. It's AI is bad. AI is bad for you. It takes up too much water, too much energy, and it just generally makes you dumb and stupid.
+
+Jatin Bagga   1:09
+This voice is being recorded and shared with Dana Meir now.
+
+Vlad Grubman   1:11
+Yeah.
+
+Jatin Bagga   1:16
+Anyway, um...
+I have some questions on MCP, but I don't know what you have in the agenda, so we can go through that, but then I want to pivot for the last couple of minutes.
+
+Vlad Grubman   1:31
+And let's give everybody a minute or two.
+To join.
+Wanna make sure I wanna make sure we have people, 'cause I have a couple of things first. I wanted to check the...
+Progress on the use cases that everyone been assigned and second I wanted to see if we're okay with proceeding with the with the hackathon that we discussed.
+I actually had a conversation with Moses on when they had fun idea, and the general notion was, let's do a demo 1st and then let's build it, which tells me.
+It should probably, it's not about the demo, it should probably be a little bit more guided versus just throw stuff at you and...
+See what sticks so.
+I know.
+
+Jatin Bagga   2:26
+Okay, so while we're waiting for others, I'm just going to ask this question, so because it's an easy one. Can you tell me, like, I, first of all, Oleg did a fantastic job. He created a whole user guide on this, which is fantastic. He's in VS Code, click the search bar and select show and run commands in MCP. I feel like I'm, my thing defaults to this auto pay. I don't know why.
+
+Vlad Grubman   2:30
+Go for it, yeah.
+
+Jatin Bagga   2:47
+And wherever I'm trying to post, whatever I'm trying to post, it's not clearly working. So what am I doing wrong here? Is this search?
+
+Vlad Grubman   2:56
+What are you trying to do? I'm not sure I understand what is the what is the goal? Which which MCP server are you trying to get to GitHub or are you trying to get to Atlassian? Because we just had a discussion on Atlassian and it seems like they're deprecating some of the URLs.
+
+Jatin Bagga   3:00
+The MCP server, remember, like he's trying to...
+Yeah, I think this one.
+
+Vlad Grubman   3:11
+So that might be...
+
+Jatin Bagga   3:11
+Yeah, I had Lacey and Anne this one both, I think. I'm trying to see which one. But so he posted this screenshot, but I don't know if he's referring to me posting it here.
+in that screenshot here that he has.
+He says in VS Code, click the search bar and select search and run commands. I feel like it's East on my here. Is that correct?
+
+Vlad Grubman   3:33
+I, I don't have VS code from OMF. I can't replicate that, so I, I, I don't think I can answer that without confusing you even more, and I like, I, I don't like to confuse people. Let me see if I can, was it Oleg B. or, oh, sorry, Oleg, Oleg's.
+
+Jatin Bagga   3:46
+No, I like confusion, you know, that's how we become better people.
+
+Vlad Grubman   3:52
+B or Alex T?
+
+Jatin Bagga   3:54
+Ohh, that's now you're asking a real tough question, you know, like now you're getting really Oleksandr Pavlovskyi, yeah.
+
+Vlad Grubman   4:02
+Pavlovskyi, okay, yeah, so it's Pete, Oleks P, okay, hold on.
+I'll ask him to reach out directly to you and have you go. Okay. No, again, I don't want to confuse you more and I have no idea what you guys already did. So too many cooks in the kitchen.
+
+Jatin Bagga   4:10
+Yeah, he did. So I could thank him directly. I thought you would know.
+It's fine.
+I know. I just hope the dish is nice. That comes out.
+
+Vlad Grubman   4:22
+That's what I'm trying to avoid.
+It's whatever you guys want to cook.
+All right, we're 4 minutes and I think I think this is it. So really quickly we are moving forward with the hackathon. Hopefully you guys can spread the word and say it's going to be exciting. We're going to have a couple of use cases. So one would be obviously the brain because it's.
+kind of the most common use case across the things that we've collected in that list of use cases in that complex page. If you don't remember what it is, just ask Robo or do a search for phase two potential use cases in digital. It'll bring you right to that page.
+Again, uh, don't have to.
+You don't have to know the exact URL. You can just search. So 2 things. One would be your own personal brain, and two would be another use case we're still debating probably going to be something like a...
+Um, dynamic roadmap or something like that. Well, we'll finalize it once we once we have a full full picture on this.
+The other part is, Eric, I know you build your own version of the same mini brain. Do you feel like you can do a demo on this?
+Because I would love for people to see different.
+
+Jatin Bagga   5:52
+Vlad, I have a question.
+
+Vlad Grubman   5:54
+Sure.
+
+Jatin Bagga   5:55
+But I thought you said it was like, go crazy, go wild.
+Right.
+
+Vlad Grubman   6:01
+One doesn't preclude the other. These are not, these are not conflicting paragraphs.
+
+Jatin Bagga   6:01
+You.
+So like, can like, can we come up with something simple that we think we can do without a lot of bag and baggage? I mean, ignoring too much knowledge and stuff and perfection. Like, can we just do something?
+
+Vlad Grubman   6:17
+I'm not sure what you refer to as baggage and...
+
+Jatin Bagga   6:22
+Like too much of technical knowledge of like backend interfaces itself.
+
+Vlad Grubman   6:22
+Knowledge.
+It's not going to be technical knowledge. It's not going to be backend. It's not going to be any of those things. You'll be surprised how easy it is. Seriously.
+
+Jatin Bagga   6:29
+Okay, so like if we have a use case, no, but like if we have a use case, can we come up with it on our own or do we need to sort of go through that approach with you guys? That's the part I just got lost with what you had a conversation, Moses on. You're on mute now.
+
+Vlad Grubman   6:44
+Sorry, I didn't want to interrupt. I'm medic now. Do you, are you referring to hackathon or are you referring to the generally doing stuff?
+
+Jatin Bagga   6:54
+OK, now I'm confused. No, I'm doing a hackathon general stuff. We've got the world moving in its axis, right? I'm talking about the hackathon.
+
+Vlad Grubman   6:56
+Okay.
+Okay.
+Okay.
+Can you rephrase the question? I'm not sure I understand what you're asking.
+
+Jatin Bagga   7:09
+Okay, I'm saying for the hackathon, based on your conversation with Moses, are you going to give us the use case and walk us through it, or can we come up with our own use case, which is low live, low tech backend or no tech backend?
+Just a quick sort of stuff that we can build on the fly.
+
+Vlad Grubman   7:34
+Okay, okay, now I understand what you're asking. Okay. The answer is I would prefer not to give you something simple. I would prefer for you folks to really, truly feel like you're building something, something useful and something that makes you actually understand that it's not that hard to build.
+*****.
+So it's not going to be build a back end, build a front end. It's going to be very.
+Super simple.
+You know, what was that? What was that? What was the phrase? Super simple, parallel inconvenience. Half of it will be guided, so we'll walk you through it, some of it. And the idea is to break out of that mentality that, oh, I can only build these small, tiny things.
+because everything else requires too much technical thinking. That's precisely the point of the hackathon, to make you sort of break out of that thinking and sort of see how you can actually build this stuff on your own and it actually works.
+Make sense?
+
+Eric Trenz   8:37
+Vlad.
+
+Jatin Bagga   8:37
+Perfect, but use case is not use keys can be predetermined. That's what I want to know.
+
+Vlad Grubman   8:42
+We're trying to get you to use cases. So if you don't like the brain concept, which I totally understand, there would be another one, which again, might be a little bit more complicated than just throwing stuff at custom GPT and CO6, but it's still going to be manageable to build within the hour.
+
+Jatin Bagga   9:04
+Got it. So you're going to give us the use cases and we need to do them, not we come with our own stuff.
+
+Vlad Grubman   9:07
+Yes.
+Yes, yes, yes. We sort of debated that part a little bit, and the consensus was we want people to succeed. We want you folks to actually build things, but we also want these to be not just like a single prompt things. We want them to be complicated enough for the audience to feel like they've built something, not just...
+Oh, hey, this was easy. I just, you know, ask ChatGPT to do something and it did it. We really want you to go through the build phases, like try it, build it, fail, do it again.
+
+Jatin Bagga   9:42
+Got it. And I have to drop, so one last question. Are you going to give it to us before the end of the day or in the next hour or so?
+
+Eric Trenz   9:44
+The.
+
+Vlad Grubman   9:48
+We'll give them to you way before the hackathon starts and we'll also tell you like what kind of pre-work needs to happen because unless we get either Codex or Cloud Code unlocked within like next couple of days, the ask would be to either sign up for your own and it's only 20 bucks for a month and you can cancel.
+I don't think it's a big deal, but if it is, if it's really like that much of a money, we'll see if we can build stuff in using cursor so you don't have to spend the money.
+
+Eric Trenz   10:18
+I don't even think everyone has access to cursor.
+
+Jatin Bagga   10:19
+Okay.
+Yeah, that, that too.
+
+Vlad Grubman   10:22
+Yeah, that's exactly why I wanted to do Codex or Cloud Code. But again, we want to be flexible.
+
+Jatin Bagga   10:29
+Codex also, there's issues. Codex also has issues through ChatGPT, right? Like it's not, you can't directly connect.
+
+Vlad Grubman   10:34
+That's why I said personal subscription. We're not going to use any of the proprietary company data. So it's all going to be either synthetic data or just public stuff, something like that. So it's all going to be useful, but again, in order to build it, there'll be some shortcuts or some.
+
+Jatin Bagga   10:47
+Okay.
+
+Vlad Grubman   10:55
+things that we need to do. So pre-work, we'll publish it, we'll make sure everybody knows what needs to happen if they wanted to participate.
+
+Jatin Bagga   11:02
+Okay, sounds good. I'll be on the call, but I'll be on mute for another one.
+
+Vlad Grubman   11:06
+Yeah, multitasking, gotcha.
+Eric, I'm sorry. We spoke over you like five times. Please go ahead.
+
+Eric Trenz   11:13
+No, you're okay.
+You had asked if I, I think you had asked if I could demo buildings in Simbert.
+
+Vlad Grubman   11:20
+Yeah, because you said you said you built the same concepts or similar concept, and I wanted you to demo it for people to see that there are multiple approaches, multiple ways to solve same or similar use case.
+
+Eric Trenz   11:32
+To be honest, I'm not super confident in my ability to do so. I kind of, I followed a guide from a podcast like two months ago, and I haven't really tweaked it since. Like, honestly, the better
+
+Vlad Grubman   11:43
+OK, perfect.
+
+Eric Trenz   11:49
+The better option, I know it wouldn't be live, so you'd have to worry about people participating, but the better option would be to have people watch that demo or read that article.
+It was really...
+An easy way.
+
+Vlad Grubman   12:06
+No, I mean, I'm sorry, I might not have been clear. Demo and hackathon are separate things, but I, but I still the question is still, if you're demo and and it's fine that you built it, you know, off of something else, it doesn't really matter. You built it, that's what matters, right?
+You took the instructions and you made something out of it that you're using. That's the point.
+
+Eric Trenz   12:30
+Yeah, yeah, yeah. I'm just saying that I don't remember how I did it.
+
+Vlad Grubman   12:34
+Uh, okay. Yeah, that complicates things. You remember which, uh, which, which podcast or which episode it was?
+
+Eric Trenz   12:34
+Chen.
+Yeah, I'll put it in the chat.
+
+Vlad Grubman   12:43
+Okay, cool.
+
+Eric Trenz   12:46
+It was one.
+
+Vlad Grubman   12:52
+Oh, Lenny's. Okay. Yeah, it makes sense.
+
+Eric Trenz   12:56
+Yeah.
+
+Vlad Grubman   12:56
+Yeah, yeah, yeah, I know, I know that one. I looked at it. As a matter of fact, when I was working on this brain concept, I took, I believe, about five or six different concepts of a brain, and I had them analyzed and sort of
+smushed together to come up with one that would work for the OMF product management sort of setup.
+
+Eric Trenz   13:22
+Yeah.
+
+Vlad Grubman   13:23
+So I don't remember if I looked specifically at this one when I was building it, but the idea was to make sure it fits whatever you guys have right now. Like whatever tools, whatever the environment, whatever the limitations that you have, all of that together.
+So, hopefully it will, it will fit, it will fit the agenda.
+
+Eric Trenz   13:42
+Yeah.
+Yeah, I would say like, well, one question I have is like, are we going to...
+encourage, discourage, just kind of not mention the ability to follow guides because I feel like that's one of the easiest ways to...
+just get familiar and kind of as a...
+inapproachable entry point to this type of thing as opposed to just trying to do it all yourself.
+
+Vlad Grubman   14:16
+Ohh.
+I don't think.
+It's a question of if, if you know, either or, it's just...
+Like I said, I want, I want the folks to unlock the thinking that, ohh, we can only do so much. I want, I want people to really feel like, ohh, we can do so much just with these limited set of tools, and it, it's, you know, even even with the current limited capabilities.
+You're really...
+You're capable of building so much more than you think, and that's that's the point, right? So, which is why, which is why I was like, "Hey, if you start thinking creatively, this is there's really no limit how you how you can do this. That's one thing, another, and another thing is it doesn't really matter if you're following the guide. Following the guide requires...
+
+Eric Trenz   14:55
+Yeah.
+Yeah.
+
+Vlad Grubman   15:09
+Certain mindset from the guy requires, hey, I can build this. I just need some guidance as to how to proceed.
+
+Eric Trenz   15:15
+Yeah.
+
+Vlad Grubman   15:15
+Right, I...
+I wish Jatin didn't drop off. I kind of like how we approached it. Like, can we build something really simple? No, that's the whole point. I don't want you to build simple. You guys have been building simple things for the past four months plus, right? Let's move to something more interesting. That's the goal.
+
+Eric Trenz   15:35
+Yeah, yeah, I just think it would be interesting to see, like, how many people have...
+
+Vlad Grubman   15:36
+And and.
+
+Eric Trenz   15:43
+Build.
+Like.
+I just think, yeah, I don't know. I'm just trying to think about like.
+For people.
+For people's, I guess, yeah, this is as I'm thinking through what I'm trying, what I'm trying to think through, I think it makes sense to kind of think big and then like there might be some hiccups on the way of like I was trying to build this and I was nowhere near.
+Able to, but at least it opens up the mind to then say, like...
+That's what I want to do now that I know it's possible. So I think that makes sense.
+
+Vlad Grubman   16:22
+Yeah, and frankly, I tried building this spring concept like five or six times in different ways and different.
+flavors. And this one that got stuck with me because it's so dumb and simple and really straightforward that I just like, oh, hey, you know, spawn up another instance, throw this stuff at it, and now I can chat with it. And it's like dumb, dumb, but super useful. It's just amazing how useful it is.
+
+Eric Trenz   16:51
+Mhm.
+
+Vlad Grubman   16:51
+So yeah, and that's kind of one of the reasons. And when we looked at the list of the use cases that you folks gave us, there's like 30-ish of them, if I'm not mistaken.
+So yeah, 33 at the moment.
+Like 10 of them fall on their own knowledge management, and and this this brain concept solves form knowledge management one way or another, and and and and again the idea is to give you sort of a...
+a jumping platform where you can understand how to approach it, how to build it, and then, oh, I can take it in this direction. I can take it into this direction. I can, you know, start. And on top of it, it creates this upward pressure that I actually discussed with some of the more senior folks. This creates the upward pressure where you folks need to start voicing out, hey, we still don't have access to this, hey.
+We still didn't have access to this and it will be helpful. It will give us more capabilities and so on. Because as far as far as I'm concerned, EPUM can only do so much in order to get you guys access to tools, but you have to make some noise to say, as the saying goes, the squeaky wheel gets the grease.
+
+Eric Trenz   18:00
+So question on that because I totally agree and I think it's a little
+It's a little strange that we're honestly doing something at work and don't have the tools to do it.
+But, like, I'm almost thinking, like, I want Claude, so are you almost saying, like, show off the capabilities and the value of these tools to try to get?
+get access to them and like prove the value so that there's no way that they can say no.
+
+Vlad Grubman   18:29
+Yep, yep.
+There's always a question of justification. Like every time we approach folks asking, hey, can we have this? Can we have this? They always ask why. And it's not because they don't know. It's because they want to see that justification kind of like, we want to see them writing. So when you do this and you build this and you say, hey, I can build this, but I need these capabilities.
+And it comes, it doesn't come from external consultants, it comes from directly from the people who are building this. It just has a different way to it.
+
+Eric Trenz   19:02
+Makes sense.
+
+Vlad Grubman   19:11
+All right, so if so that that that's all I had, we're planning the demo probably this Wednesday and then have it on next Wednesday to give you folks ample amount of time to get ready and prepared, but the problem is I think the next, ohh God, what is the calendar doing?
+Next week is a short week.
+So I know we have a limited audience. This Wednesday, next Wednesday. Yeah, next Wednesday is a short week. There's A Memorial Day there. Given that we have a limited audience, please shout out this Wednesday or next Wednesday for the hackathon.
+It's gonna is probably, if it's this Wednesday, we're keeping the existing time, if it's next week, we can we can schedule something different.
+So if you want to chime in in chat, if you want to chime in in Slack, if you want to say it out loud now, doesn't matter. I just want to know what the story is.
+
+Jatin Bagga   20:12
+Vlad for me, I think if we could do something this Wednesday, like a quick dirty one, that would be good. And then next week again, maybe, but next week is also a holiday remember. So it's like the holiday things that people might be in and out. But like Wednesday, like for, if it's not elaborate and something more like, you know, simple, I feel like we should at least get our hands dirty this week. Why waste?
+
+Vlad Grubman   20:21
+Yes, that's what that's what I said is holiday week.
+
+Jatin Bagga   20:33
+another week.
+
+Vlad Grubman   20:34
+So, Jonathan, because you keep repeating this, I'll share something. We've got feedback from your leadership meeting last week that a lot of stuff, a lot of stuff is too detailed and a lot of stuff is too generic. And the ask was to get people more engaged and more involved.
+
+Jatin Bagga   20:44
+Mhm.
+
+Vlad Grubman   20:55
+So one of the reasons, and that was our feeling as well, even before we got it. So that's the reason why we wanted to do the hackathon and we wanted to get everybody on this page and get everybody building, start building things. Additionally, we're working on the recognition rewards program and the overall sentiment is we want to reward.
+Building, not participating in meetings.
+All that said, I am.
+
+Jatin Bagga   21:18
+Or like rewards like to you'll give us a reward or is it rewards for?
+
+Vlad Grubman   21:21
+Yeah, yeah, OMF OMF will give you points which convertible to dollars, when which means you can go and buy stuff on Amazon, so I know, right? So, my...
+
+Jatin Bagga   21:24
+Yeah.
+Yeah.
+Amazing!
+
+Vlad Grubman   21:35
+opinion at this moment is if we can get three or four hackathons in the next three or four weeks until the end of phase two and potentially go into phase three, that would be even better than just sitting and talking about other use cases. If we can just keep turning each meeting into a mini hackathon where everybody builds something.
+That would be even better. So I'm all 100% with you on getting the hands dirty. Just don't stop yourself. Don't think, oh, can we get something small? No, we should build big things and we should fail and we should build them again until we are successful.
+Makes sense.
+Hope it does.
+
+Jatin Bagga   22:17
+Oh, it does. It does. No, it does. I hear you. No, this is fair.
+
+Vlad Grubman   22:23
+Cool, okay. Eric, please think about doing the demo. I would love to have a different perspective, especially the one that was not, that you arrived at on your own. Because I remember you kind of were a bit inspirational to us in a way of like thinking about the knowledge management. Remember when you built your first custom GPT to take notes?
+That's when you kind of, yeah, so it would be really great. It would be really great if you show what you have, even if you don't remember how you built it. You can just show the capabilities and benefits, basically.
+
+Eric Trenz   22:43
+Yeah, I still wouldn't fix that, to be honest. It fell up.
+
+Vlad Grubman   22:54
+Show us what the value is of having that thing in one of these meetings. Don't have to do it now, don't have to do it. We only have like what, 7 minutes left. But I really, really want to show what people are doing, what people are building. So.
+And it's not like a theoretical exercise. Well, we looked into this and it's like, yeah, no, show us what actually works.
+
+Eric Trenz   23:15
+Okay.
+
+Vlad Grubman   23:16
+That, that would be really cool.
+
+Eric Trenz   23:19
+Yeah, I can think through, like, maybe I could just share that this is how I build it, just like following this simple guide. Not really show much about the build, but then jump into the benefits of what I gained from.
+
+Vlad Grubman   23:31
+Yeah, if you need any help, let me know. Ron and I will be happy to help. By the way, folks, for those of you who didn't meet Ron yet, I'm sorry, Ron left you, left you for the last day. I was just hoping that sometimes people join like last 15 minutes, so I was holding out. I was holding out on you, man. Ron is...
+
+Ron Seager   23:49
+Yeah.
+
+Vlad Grubman   23:50
+Ron is our is our another one of our internal EPAM people who understand AI, so he's going to be helping us now that Nikita moved on to her most important project ever.
+So meet Ron. He's also my resource manager, so he's responsible for me being paid. So please say nice things about me now, from now on in front of him.
+
+Ron Seager   24:12
+Sir.
+
+Jatin Bagga   24:14
+Oh, Ron, we need to have a heart to heart above Vlad.
+
+Ron Seager   24:21
+I don't know if I have that much influence.
+Nice to meet everyone.
+
+Jatin Bagga   24:27
+Nice to have you on board.
+
+Eric Trenz   24:27
+Okay.
+
+Alfredo Achecar   24:31
+You're welcome, Ryan.
+
+Ron Seager   24:32
+Thanks. Yeah, I'm getting onboarded, so I won't have access to a lot of things for quite a while. So I'm trying to absorb as much as I can by listening. But nice to meet you guys. Look forward to working with you.
+
+Vlad Grubman   24:47
+Right, and that's about it. So what I've heard was, and unless you folks object, this is what I've heard. Hackathon every week.
+Build something every week. Doesn't have to be hackathon, but build something every week, starting from this week. Next week might be iffy because it's holiday week, but we'll see what we can do. So let's, and again, the feedback that we've got was not really, either it's too generic or too specific, and we want to fix that. I want to get you guys more engaged.
+But again, spread the word. We're going to start doing hands-on build. I'll publish something today in AI Champions Slack channel. But.
+Please sign up. If you don't have access, please sign up for your own personal, if you didn't already, your own personal code, ChatGPT account, which allows you to use Codex or Cloud Code, doesn't really matter. I'm going to be using ChatGPT's Codex because it just has larger allowance of tokens, so I can build more with it.
+Cloud code is a little iffy on that, is getting a little wonky. I do have cloud code through EPAM, but it doesn't really matter, whichever one you feel comfortable with using.
+
+Mia (Xiaoling) Zhou   26:09
+Hi, Vlad. I have a quick question. Yeah, sorry, I joined a little bit late. So you said we register the codex by ourselves, right? And but if I understand correctly, and so we need to use our own like email to register it, and then how we can make sure the data is like.
+
+Vlad Grubman   26:10
+Yeah, yeah, go ahead, Mia.
+
+Mia (Xiaoling) Zhou   26:31
+Communicate, we use fixed data.
+
+Vlad Grubman   26:31
+So, okay, good question. Good question. Let me clarify that. I did say it a little weird, so probably worth repeating, especially given that we're on record. So folks who missed the camera listen and clarify, this is a clarification. So
+
+Mia (Xiaoling) Zhou   26:35
+Okay.
+
+Vlad Grubman   26:49
+Unless we get access to Cloud Code or Codex within the next couple of days, I would recommend signing up for your personal ChatGPT, which gives you Codex or Cloud Code.
+We will use synthetic data. We will not use company data. We will not use anything proprietary. It's just first exercise, you know, very basic, very easy stuff. Again, if we get, if we get company access, it's a little different, but for now, the direction is this.
+If you want to use cursor, you can use cursor. Absolutely fine. If $20 is not that big of a deal, sign up for your own account. I recommend ChatGPT because Codex has a larger allowance of tokens, so you can build more before you run out of quota.
+
+Mia (Xiaoling) Zhou   27:24
+No.
+Okay.
+Okay.
+
+Vlad Grubman   27:44
+It's up to you. I'm not telling you which one to sign up for or which one to use. I'm just recommending things based on my personal experience. I know some people just love code to death and they will never betray it ever, even if they go completely out of business. I don't know. Again, we're not going to be using companies information. We're not going to be using...
+
+Mia (Xiaoling) Zhou   27:44
+Yeah.
+Okay. Okay.
+Okay.
+Mhm.
+
+Vlad Grubman   28:05
+anything proprietary, it's all going to be either synthetic or publicly available. So the idea is first to introduce you to these tools, get your hands dirty, and two, create this upward pressure from all of you, so you can go to your team leads, managers.
+VPs and so on, and say, hey, I was able to build this in Hackathon in an hour. If you give me these tools within the company's confinements, within sort of the security perimeter, we can do so much more using these tools. Again, we can only do so much as consultants asking for the access.
+We, you guys, when you guys are asking for these things and you show the value that you're creating with them, it carries so much more weight and, you know, that outward pressure builds up. We discussed this with several leaders.
+from OMF and they are of the same opinion. You folks need to show the value that you will, that these tools can bring that makes our job of getting access is a lot, makes that job getting access a lot easier.
+Does that make sense? Cool. All right. We're at the time. We're at the time. If you have any questions, please, yeah, go ahead, Derek.
+
+Mia (Xiaoling) Zhou   29:18
+Yep, thanks.
+
+Eric Trenz   29:20
+Uh.
+Vlad, I'll be out next Wednesday. I know just one person, but so I ideally that first hackathon wouldn't be then, but at the same time, if we're going to do one every week, then missing one's not a huge. Okay, yeah. And then I'll...
+
+Vlad Grubman   29:28
+Okay.
+Hopefully, we'll do it every week, so yeah, yeah, well, awesome.
+
+Eric Trenz   29:42
+think through the second brain thing. This week's a little crammed given that I'll be out next week, but I'll, yeah, work through.
+
+Vlad Grubman   29:47
+Yep.
+Understood. Yep. Yeah. Like I said, if you need any help sort of coming up with ideas on how to demo it, let me know. I'll be happy to help.
+It doesn't have to be super convoluted half an hour presentation. It can be like 5, 10 minutes.
+
+Eric Trenz   30:06
+Okay, sounds good. Thanks.
+
+Vlad Grubman   30:08
+Alright, thank you folks. Appreciate you all.
+
+Eric Trenz   30:11
+Thanks, Chris.
+
+Vlad Grubman   30:11
+Be careful.
+
+Nicholas Crowley stopped transcription

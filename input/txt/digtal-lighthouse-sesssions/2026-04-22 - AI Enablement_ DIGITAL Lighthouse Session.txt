@@ -1,0 +1,751 @@
+AI Enablement DIGITAL Lighthouse Session-20260422_160006UTC-Meeting Recording
+April 22, 2026, 4:00PM
+47m 49s
+
+Nikita Kumar   0:06
+Hello, hello.
+Everyone time to hop in here.
+We're just going to give everyone a couple of minutes to hop in.
+Get some more people in today.
+
+Jatin Bagga   1:38
+Hello.
+
+Nikita Kumar   1:39
+Hello.
+I'm also going to incorporate the link of our...
+on, as well as a demo from our side for some knowledge management use cases. But ideally, some of these still say TBD because we want to make sure that we're covering the topics that you guys actually want to see from us versus what we think you want to see from us. So that's why we've kept some of these items TBD. But yeah, just feel free to add to that as you guys have more questions or if there's specific things that.
+you do want to learn about. And as we go through the weeks, we kind of learn from our cross-functional sessions as well to see what people are looking forward to the most or getting confused at so we can help kind of iterate and push on that as well a little bit more.
+I don't see, we wanted to start with Alfredo and talk about some of the email agents that he's been working on, but I don't see him on right now. But we'd love to see, you know, just to get everyone started, we want to see what everyone has been working on in their own perspective, like agents, whether it's something that's helping you with your team, whether it's something that you're working on individually. If we can get some demos, or this includes, you know, the homework that we had from our cross-functional session, we'd love to see.
+see that things that are working or not working. We do want to reiterate the homework assignment isn't just for show and tell for one day. It's also like across the board. We do want to see homework and seeing people getting things done. So if we can get some hands or raised for people to show us what you've kind of been working on, that would be great. And then we can pass it on to our part of the demo as well.
+So if we can get a volunteer to kind of show us, oh, I see Alfredo, I know you just joined in. I might put you on the spot real quick, Alfredo. But I know we were talking about your email agent assistant. We wanted to see if we can get like a quick demo of that, just so we can kind of help figure out what to do next for next steps for that, if that's possible.
+
+Alfredo Achecar   3:47
+Yeh, yeah, sure. I just give you...
+
+Nikita Kumar   3:49
+Thank you. I've just voluntold you to help me out. Thank you so much.
+
+Alfredo Achecar   3:53
+Ohh, yeah, yeah, yeah, let me uh...
+Hold on, let me let me fetch this stuff. OK, so the so, for context, what I was trying to do was, in the in the exercise of you know, using orchestrators in in phase one, I was part of the voice of the customer team. One of the one of the channels that we were looking at.
+where our contact form emails. So in our OMF help center, because this is customer facing, our customers can access a form and enter information there. And it's really, really useful information there because the questions tend to be very, very tactical and very directed.
+Like, you know, like, please stop my payment or how do I do this? Or, you know, please help me with this.
+So we had processed those with using a GPT from ChatGPT. So now, and we had basically structured them by lane. So we had created three separate GPTs, one for originations, one for payments, and one for SIAM. So that it would take the same set of emails and just.
+spit out insights based on those lanes. So, and at the time we had about 1500 emails since some time has passed since then. Now we have about 2700, like over, it's probably today it's probably like 2800 emails. So, okay, so now let me share my screen.
+So, basically, in short, I was trying to take that same GPT that we made in ChatGPT and remake it and code me with this larger email base.
+Give me one second. Hold on.
+I have a bunch of screens open, trying to figure out the right one.
+And.
+
+Vlad Grubman   5:50
+Open a new one. Never close the screen. Always open a new one.
+
+Alfredo Achecar   5:53
+Yeah, exactly. Now, sorry, now I have to log into the to the to the VPN.
+We should insert some weight music here.
+Hold on a second to get a verification code for Makarov.
+So, what just, just I know, I know, so the comment from from Oleksandr was that the.
+That 2,700 emails is too many to go over.
+Um, what do we know, like, what the, like, what the threshold limit is? Like, how does that like work about that?
+
+Vlad Grubman   6:31
+So, so, so let me, let me, let me answer that. Unfortunately, it's too late for Alex. We'll probably, we'll try to get, we'll try to get him next time, but...
+
+Alfredo Achecar   6:37
+Yeah, yeah, no, I'm good.
+No, no, no.
+Responded.
+
+Vlad Grubman   6:43
+TLDR, yeah, yeah, yeah, TLDR, the this data source that you're using in in in code me is is a rag, right? It's not it's not your regular database, so you can't iterate over records like you would in a regular database, right? If that's if that's the goal, then you should be using regular database.
+The rag chunks up, and...
+And I think Chunk is the right word here. The content based on some semantic value. Again, I'm not a data scientist, don't listen to me. I'm trying to, I'm trying to TLDR it in the best way possible the way I understand it. So in other words, RAG is the storage where you need to.
+find things based on semantic value, based on context. If the way I understand what, if I understand what you're trying to do, then your approach should not be, oh, I'm just gonna upload all the 2700 emails into RAG and then try to extract some value out of it because.
+That's not what you should be storing in the rack. I believe, and again, this is where you probably should work with Alex, and I'll help you to move things along.
+The way you should be looking at this is process each individual email, extract what is it about, extract the themes, topics, sentiment, whatever you need to do, aggregate that, and that's what you can store in the rag if you really need to. So that you can work with those extracted values. But ultimately, what you're trying to do, you're trying to have.
+AI, you read each individual email.
+so that you can extract the insights that you need. And that's kind of where this approach, it's not that there's a code me limitation on this, it's that the approach of storing these emails in the RAG is just not the right approach, because RAG is fundamentally different from regular database, like the way you would.
+You would store, you know, 2700 emails in a table, and then you go through each row, read it, so that's the regular database, right? Rag is something different, so in...
+
+Joshua Smith   8:56
+So is rag limited to the context window of the chat? I mean, sorry, the AI tool.
+
+Vlad Grubman   8:59
+No, no, no, Rag, Rag is actually Rag is actually built so that you're not limited to the size of the context window. It, it, it, the purpose of the Rag in in this sort of AI plus Rag or Agent plus Rag is so that you don't have to load.
+All the data that you have, you can find.
+relevant chunks of information in the rack, pull those chunks only into your prompt, like into your context window and work with them. But this is the part where I was lost, I was lost in exactly the same place some time ago as well. So I'm speaking from experience here as well.
+When I say pulling the relevant chunks, this is the reason why you would use RAG versus a regular database. You're basically asking the search to say, hey, I'm trying, let's say for example, you have emails about experience at the branch, experience with the app, and experience with the phone conversations.
+And once you have all this information properly stored in rack, you can say, hey, give me like top 10 things from, like what are the top 10 grievances of people talking over the phone? That's what the rack can do. But if you're going to ask, like, give me every single reason what people didn't like.
+You know, when they're interacting with the app, that's not what Rag can do. The Rag will try to give you either top results or aggregated results, but it's not going to give you all the results like the database would. And that's that's kind of that was that was a big mind shift for me personally when I when I started using Rag. Like, yeah, it's good for some things, it's not good for all things.
+
+Alfredo Achecar   10:39
+Okay.
+
+Vlad Grubman   10:46
+It has its limited use case when you work when you need like.
+specific things extracted, but you can't really iterate over records, if that makes sense. Again, I'm not a data scientist. I may be explaining this a little awkward, but I'm trying to make it very relevant to the problem that Alfredo is trying to solve for. It's not your regular database. You can't iterate over records. It will give you like semantically relevant chunks of information.
+but it's not going to give you...
+the records that you're looking for.
+Does that, did that make sense, or should I should I go ask JT to give to give you a better explanation?
+
+Alfredo Achecar   11:23
+Okay.
+Ah.
+Yeh.
+I think it may click for me a little bit later. I think that where I'm getting like hung up on is that when we did this, when we had 1500 emails in the chat in the ChatGPT GPT, it was able to give me like, okay, here's a table with the like top 10 trend of issues.
+Um...
+So, as far as I understood, it will go to those 1500 emails and give me insight specifically for for those lanes that I was looking that I was looking at.
+Does that make sense, Vlad?
+
+Vlad Grubman   12:08
+Yes, absolutely. Yes. Believe it or not, I was in the same boat just a little earlier. So we're all learning the same way. So I don't know if you remember, because this was like 100 years ago, three months ago, four months ago. We talked about harness.
+
+Alfredo Achecar   12:20
+S.
+
+Vlad Grubman   12:28
+and how ChatGPT is a whole separate product around the model, the actual GPT model. So what you're getting when you're uploading these 2,700 emails is that harness, probably, potentially, even writing some code behind the scenes to unpack your emails and sort and process them.
+
+Alfredo Achecar   12:34
+Right, right, yeah, yeah, yeah.
+
+Vlad Grubman   12:49
+And you should be able to do the same thing with others. And actually, I have a demo that kind of sort of shows you the same thing. But when you talk to model directly in CodeMe, that harness doesn't exist. The chat part of the GPT doesn't exist. So you're basically, if you want to talk to the model directly, you have to rebuild the part of the harness.
+
+Alfredo Achecar   12:56
+What?
+Okay.
+
+Vlad Grubman   13:14
+that you need in order to process your data.
+
+Alfredo Achecar   13:16
+Okay, okay, so, okay, let me, okay, I'll share my screen, maybe, I don't know if it's gonna be helpful enough, but I'll share it anyways. So.
+So these so these are the 27 plus 100 emails in Jason format. This.
+The way that I got the emails was through Power Automate. So the Power Automate would is reading some is reading a folder in my Outlook and extracting the content of those emails with some metadata as well. And then and then I asked ChatGPT, hey, what's the best way to like format the emails so that it's.
+Parsable through, you know, through an through an AI tool, and it gave me it gave me a JSON and it also gave me a dot TSV, which is a format that I'm just learning about now, and it said that the dot TSV one was like faster, less token usage, so...
+
+Vlad Grubman   14:02
+Yeh.
+
+Alfredo Achecar   14:12
+Yeah, so I I tried both with the JSON and the and the dot TSV files, making it a data source and code me, but it whenever I asked it to, like, you know, I gave it the same the same instruction, the same prompt as a as the as the GP as the ChatGPT GPT, and yeah, it just it just it just hung there.
+I'm not sure if that adds any more light to what you were sharing, Vlad, or you just confirms your initial diagnosis.
+
+Vlad Grubman   14:45
+So, this is the right, this is the right move. You're in the right space, like you prepared the data for the analysis, not.
+run the actual analysis. And when you upload this, I don't even know, I don't care, I can't even imagine how big this file is, just probably, I don't know.
+
+Alfredo Achecar   14:53
+Cor.
+It, it's how big is this file?
+
+Vlad Grubman   15:06
+Yeah, almost.
+
+Alfredo Achecar   15:06
+I mean, it.
+Yeh.
+
+Vlad Grubman   15:09
+I would do, I would chunk it manually, and that's kind of what I did when I was when I was when I was processing the your your public app reviews. I chunked it into, I forgot, I think it was 50 per file, so I did exactly the same thing. I had exactly the same structure, both JSON, JSONL, and either...
+
+Alfredo Achecar   15:10
+Okay.
+
+Vlad Grubman   15:30
+comma separated or type separated values. The only thing that I broke them into.
+Two 50 per file, and if I...
+
+Alfredo Achecar   15:39
+OK.
+
+Vlad Grubman   15:41
+I've had those files basically into an agent and have agent had agent build sort of the sentiment or or sort of whatever the outcomes I wanted to do, right, themes or whatever. And what I was demoing, again, it's somewhere in the recording somewhere. What I did that.
+Dashboard of of.
+like priorities or themes based on the app reviews. This is exactly what was happening in the background. I had 20 of those, I had 1000 app reviews, I had 20 of those files. I had a script that was feeding these files one by one to AI to process it, build out the sentiment or themes or whatever.
+sort of the data for the dashboard and then visualize the dashboard. That's kind of the way to make sure you don't overload the context window, which is what ChatGPT harness does for you, which is why it's so cool and everybody likes to use it. But once you start building these things for more like regular use, like you
+
+Alfredo Achecar   16:37
+Okay.
+Okay.
+
+Vlad Grubman   16:44
+You don't want to do it manually every time. That's when you need to rebuild the harness the way it works for you.
+
+Alfredo Achecar   16:47
+Right.
+Look.
+Okay, okay, so...
+OK, so if we're if...
+Right, so I'm trying to think of what a scalable solution.
+I mean, probably what we did for that for the phase one, and maybe and maybe this thing that I'm doing right now is probably not like a robust enough enterprise solution for this. I don't, I mean, I don't know, I don't think so, because just the manual patching of the emails is already kind of, you know, kind of a process. What?
+What, what would be a...
+
+Vlad Grubman   17:31
+This scalable solution.
+
+Alfredo Achecar   17:32
+Yeah, yeah, that maybe something that probably goes to the HTTP server, gets the emails, brings a main and it.
+
+Vlad Grubman   17:33
+No.
+
+Alfredo Achecar   17:41
+Like does that parsing automatically, so that no, not even have to like chunk it out in 50 emails.
+
+Vlad Grubman   17:42
+Yeh.
+Yep, yep, yep, something, something like, again, I, I, I'm not a developer, I, I don't know, I don't know, what I would have done, I would either automate your power power power app so that it does the extraction automatically and then run a script or something.
+
+Alfredo Achecar   17:49
+Sure.
+
+Vlad Grubman   18:05
+Let's say, on a daily, weekly basis, however often you need to, and it's scalable in a way that it doesn't have to be just the emails, right? It can be, you know, app reviews or whatever else you guys have. Run, run a script that processes these files by...
+building that harness and talking directly to the model, which is one of the main reasons why I'm trying to, I'm working with your security team and with our leadership and with your leadership to get you access to the models directly, which is going to say is through the API, so you can actually build a script that makes an API call to the model directly.
+It's probably going to be on Bedrock. I don't know, whatever they decide to do. Point being, you should be able to get the API call directly to the model so you can build this sort of in a scalable way. Because every time you need to do something manually, that's not scalable. CodeMe allows you to do that.
+
+Alfredo Achecar   19:00
+Yeh.
+
+Vlad Grubman   19:03
+So we probably can build something automatable in CodeMe. Again, the same way, chunk it, chunk it into smaller pieces so that it's processable by the models that are available in CodeMe and build out the sort of the final version. So basically,
+
+Moses Song   19:22
+Does this does this have to be done in code me?
+
+Vlad Grubman   19:22
+Yeh.
+It doesn't have to be. Again, we're trying to figure out how to use the tools that we have. Ideally, it should be just a plain, I don't know, Python script that talks directly to AI model, stores data wherever it needs to store, either a flat file or some kind of a database. And then we can continuously build it.
+
+Jatin Bagga   19:43
+Yeh.
+
+Vlad Grubman   19:45
+We do, but we got, we gotta start running into problems, like, OK, fine, we can we can run the script on a local laptop, but where's the database?
+
+Moses Song   19:51
+Sorry, if can we can we just just take hold on, so Alfredo, can you just read reiterate what the objective is?
+
+Alfredo Achecar   19:59
+Yeah, the good thing is to get insights from our contact form emails, insights that could be specific to either Elaine or company wide. So anybody can, potentially anybody could be like, hey, what's going on with, payments is a really big one, but like, what's going on with login stuff? Let me see what people are saying in the contact forms.
+
+Moses Song   20:05
+Yeah.
+Yeah.
+And then what is the issue that you?
+
+Shai Eilat   20:19
+Is this part of the VLC work that Jatin is working on the same effort? OK.
+
+Alfredo Achecar   20:23
+Yeh.
+
+Jatin Bagga   20:24
+Yeah, Shai, I didn't want to say anything. So this is the ones part, which is just the email with Donna really feels is not critical. But what Alfredo is doing is just trying to prove that using CodeMe can we just get insight.
+
+Moses Song   20:25
+So.
+
+Alfredo Achecar   20:25
+Yeah, yeah, I was part of the team.
+
+Moses Song   20:34
+Yeh.
+Music.
+Yes.
+
+Jatin Bagga   20:39
+I just send those emails itself, the broader voice of customer that I'm talking about.
+
+Moses Song   20:42
+Because.
+
+Shai Eilat   20:42
+Yeah, and I think that this is this is the right approach, Jatin, because I know you try to go after coal miner data and other resources that are that are more complicated, and I would really, I think the low hanging fruit is the emails and the app reviews, and if we can take those two resources and synthesize them and try to distill them into insights that we can use, that would be a great.
+
+Alfredo Achecar   20:43
+Yeh.
+
+Moses Song   20:43
+I think that.
+Call.
+I know this is the Sarkar.
+
+Jatin Bagga   20:50
+Yeh.
+
+Moses Song   20:50
+Yeh.
+Thank you.
+
+Jatin Bagga   20:54
+Yeh.
+
+Moses Song   20:55
+Okay.
+
+Jatin Bagga   20:56
+Yeh.
+
+Moses Song   20:59
+I can.
+
+Jatin Bagga   21:02
+Yeh.
+
+Alfredo Achecar   21:03
+Wood.
+
+Moses Song   21:03
+Okay.
+
+Shai Eilat   21:04
+Yeah, that ****.
+
+Alfredo Achecar   21:04
+Which we, which we did, which we, which we didn't face, sorry, which we did in face one, but it was, but it was static.
+
+Jatin Bagga   21:05
+Yeah, so I think we have exactly. We've done that in phase one already. If you remember those dashboards.
+
+Moses Song   21:06
+So.
+Yes.
+
+Alfredo Achecar   21:12
+Like we would take a chunk, put it in JT, get insights, and like if we wanted to add more, we have to like do that same manual process.
+
+Jatin Bagga   21:13
+Incorrect.
+
+Shai Eilat   21:18
+Yeah, yeah, yeah.
+
+Jatin Bagga   21:19
+Yeah, these are not agents, Shai, like what we've been wanting to do. And I think the good news, Shai, just right, hot off the press, I just got the first Excel file for Call Miner. Woo-hoo! So I just have to look at it now and try to scrub all the PI and all that fun information. But that's also not going to be an agent just yet. So we'll have that conversation like what I was discussing with you, with Jago and you and others.
+
+Shai Eilat   21:20
+Yeah.
+
+Moses Song   21:20
+Oh.
+
+Shai Eilat   21:42
+Yeh.
+
+Jatin Bagga   21:43
+But what Alfredo is doing is really just trying to pressure test code me, because we ran into a whole bunch of issues, if you remember with code me, right? Like so many. But the beauty that I find, and Alfredo, keep me honest, right, is this orchestrator piece that we've learned recently. This is what I really needed two months ago. But that orchestrator can act as an umbrella if there's an agent.
+
+Shai Eilat   22:14
+Yeh.
+
+Jatin Bagga   22:15
+So that's sort of what it is, but I don't want to steal Alfredo's thunder. Alfredo, please keep going.
+
+Shai Eilat   22:18
+But...
+
+Alfredo Achecar   22:20
+No, no, no, no, no.
+But the original question was, okay, what problem are we trying to solve, which is like gathering from our data, right? And, but the problem that we seem to be running in now is like, how do we manage these large data sets so that they're consumable by the AI? And I think that's what Vladislav is trying to speak to as well.
+
+Moses Song   22:41
+Mm.
+Okay, so what?
+
+Shai Eilat   22:44
+Have we had? Yeah, go ahead.
+
+Moses Song   22:48
+So yeah, I, it's still hard for me to follow, but like, what, what is the resolution then?
+
+Alfredo Achecar   22:54
+Hi.
+We, I don't know either. I think I think Vlad is trying to suggest a way to automate to just like echoing what Vlad was saying just now, which is like talk talk directly to the model in some particular way, so that with with a script so that the the that we can.
+get all the data to the model directly. It's not necessarily the maybe a more code-based agent than what we have now. Actually, Vladislav, maybe you should be speaking about this. I don't know why I'm trying to echo your words.
+
+Vlad Grubman   23:27
+No, no, I actually I actually like where you're going with this. There are multiple ways to solve this, and I don't want a solution on the call, but the way to do the solution, one of the ways to for the solution is have CodeMe chunk it out for you and feed to the model, because you can have direct access to the model with CodeMe.
+You can chunk it up and feed the pieces to the model and then build it. The other way is to access the model directly. Like you write a script, I don't know, Python script, literally write a code that accesses the model through the APIs and does what it's supposed to do, sends each.
+individual email or a chunk of emails to AI, AI analyzes, returns the response, and then you build a database of responses, themes, sentiment, topics, whatever. Yeah. Either way is fine.
+
+Moses Song   24:16
+Sure.
+Yeah, and then, Alfredo, just so just so I'm clear, you're saying that this analysis cannot be done because of the size of the data set right now, or are you saying because you want to add new data to an existing data set and the data set continues to grow?
+
+Alfredo Achecar   24:36
+Both, both, it's.
+
+Jatin Bagga   24:37
+Yeah, and I can also share some details. I think A, there was a limit, right? And keep me honest, Vlad and Alfredo, I think it was like 10 MB or was it 1 MB, I forget. That's sort of the limit. So you can't go beyond that. So you can appreciate like Moses, like, you know, the data that we're talking about, like large volume. For MVP, it's fine.
+but it's not scalable, right? And so that's one of the issues.
+And we actually have documented sort of the issues that we ran into, which I think Vlad and Nikita have shared with their engineering team, and they've enhanced a bunch, but there's still opportunity for us to enhance it further.
+
+Moses Song   25:20
+Okay, so where do we go from here?
+
+Vlad Grubman   25:25
+for this specific use case or in general.
+
+Moses Song   25:28
+Yeah, isn't the point of this call to unblock? And it sounds like Alfredo's use case, he's asking for help unblocking. Or am I misunderstanding this completely?
+
+Alfredo Achecar   25:37
+No, no, no, you're right.
+I think I think we're talking about potentially 2, let's say 2 scales. One is, hey, can I prove the concept right now? Which we have. We did it with ChatGPT. We put the emails, we get some really some really interesting insight.
+Now, and I, now, and I was, OK, let me take this to the next step, which is with Code Me. Now, we have agents, we could potentially orchestrate some and automate some of those pieces, but I'm finding that I, I, I'm not able to do it with Code Me.
+And then on a large scale, this is a larger scale problem, right? Like Jatin is going to get some coal miner data. Those are probably the humongous files. We have app reviews, we have the contact form emails, we have other channels coming in with probably large volumes of data set. So surely we will need a larger.
+If we want to get information from these channels, we probably would need a larger solution for this.
+
+Moses Song   26:31
+Okay, I understand.
+
+Alfredo Achecar   26:32
+So if I can like small term and then like, okay, what's a larger enterprise solution?
+
+Moses Song   26:36
+Okay, let's start a separate conversation with Dominika and Aaron, because this is a workforce enablement and infrastructure issue that the AI accelerator can take on.
+
+Alfredo Achecar   26:51
+Okay, okay.
+We definitely can do that.
+
+Eric Trenz   26:54
+Hey, Alfredo, have you have you entertained at all? And I'm not sure if it's positive or if it if it would be beneficial, but have you looked at using Power Automate to get stuff into SharePoint and then extracting?
+
+Jatin Bagga   27:13
+Yeh.
+
+Eric Trenz   27:14
+ROM SharePoint.
+
+Jatin Bagga   27:16
+That was phase one, yes.
+
+Eric Trenz   27:18
+Okay, okay, sorry.
+
+Alfredo Achecar   27:20
+No, no, I think, yeah, yeah.
+
+Shai Eilat   27:22
+Alfredo, have we had success before we even go into kind of like the orchestration layer just to build an agent with code me that is to automate some of those tasks? Like we also get some goals there.
+
+Alfredo Achecar   27:37
+That's what I do now.
+No, I mean, I...
+
+Jatin Bagga   27:42
+There is no, there is no direct way right now, Shai. These emails, getting these emails to come in to CodeMe to then be able to scan and then produce, it's right now, it's still rudimentary.
+
+Shai Eilat   27:53
+I'm not, I'm not even talking about like the email, just maybe for anyone else on the team here, has anyone had success building an agent with code me?
+
+Jatin Bagga   28:06
+Up.
+
+Nikita Kumar   28:07
+I think teams across QA and engineering have built a ton of agents across CodeMe, which is why part of the homework that we're doing is cross-functional so people can build their own agents and build their own assistants. So like people are building things and they are actually doing a lot of advanced stuff in QA and engineering. The goal of us doing some of these conversations with cross-functional is so the rest of the team, including digital, can also learn how to build some of these more.
+So it is happening across the board on like different teams.
+
+Moses Song   28:36
+So why don't we do this then? So why don't on the next call next Wednesday?
+
+Shai Eilat   28:36
+But it sounds like...
+
+Moses Song   28:42
+Why, excuse me, by next Wednesday, why don't the champions have a discussion on what we would, what agent, agentic capability we'd like to build and let's build it live on this call next Wednesday.
+Yeah, can we agree that to that?
+
+Jatin Bagga   29:05
+And it's regardless of code me or anything, right? Because there are some basic constraints that all these tools have. Cursor has a restriction and code me has a restriction and so forth, right? So when you say agent, it means like the pipeline's built. So if there isn't a pipeline that the engineering teams built, I think Nikita will need a little bit more clarity. And we're on those calls, like.
+
+Nikita Kumar   29:23
+Mm.
+
+Jatin Bagga   29:24
+you know, what are they using? So building on the fly on the call, like I just want to make sure you're.
+
+Nikita Kumar   29:30
+Well, yeah.
+
+Moses Song   29:30
+Oh, 100%, Johnson. That's why we need to have a preparation, right, discussion around what is the use case. And then let's use next Wednesday as an opportunity to build it live with everyone on the call so they can see a use case from soup to nuts using one of our approved systems.
+
+Jatin Bagga   29:30
+Yeh.
+The.
+Fair enough.
+
+Nikita Kumar   29:50
+Yeah, and if you guys have like the use case in advance, we'll also try to get Oleksandr on the call next week, who's like our code me expert to help with that too. Because a lot of the people like the demos that we're doing in cross-functional are live, right? They are from nothing to something. That's what the team is building, building an agent from like from scratch. That's why we're trying to make them very hands-on so everyone can follow along without having to.
+
+Jatin Bagga   29:51
+Sure.
+
+Moses Song   30:11
+I.
+
+Nikita Kumar   30:14
+any prior prerequisites as well. So that is the goal. But yeah, if you guys have your use case that you want in place and you want to send it to us prior to, we can also have Oleksandr ready on the call.
+
+Moses Song   30:24
+No, no, no. Let's make sure that we use Monday's call in the champion sync to finalize that so that we have a streamlined understanding and all the integrations are there so that it can be a successful Wednesday call. Let's not do this on the fly. Let's align on the Monday call.
+
+Nikita Kumar   30:32
+Yeh.
+Yep, that's fine. And then any integrations that are not there, we will let you guys know what's not possible, what's possible, depending on what your use case alignment is. So like we know Figma's not there yet.
+
+Moses Song   30:52
+No, no, no, no, we.
+On Monday, let's make sure it is a use case that the integration is there. OK, like.
+So let's make sure that this will be successful on Wednesday.
+
+Nikita Kumar   31:09
+Yep, so are you guys as a team going to figure out what your use case is going to be presented to us on Champions on Monday?
+
+Moses Song   31:17
+That's what we should do, and we should make sure on that call that we align and that the use case can be done because the integrations that we need exist. And if not, then obviously we need to have the due diligence between that call and Wednesday to ensure that it is successful. Okay?
+
+Nikita Kumar   31:35
+Yeah, so the yeah, the current integrations we do have is Jira, Confluence, and GitHub.
+
+Moses Song   31:42
+No, regardless of tool. So that may be true for CodeMe, but chat as an example has other integrations, right?
+
+Nikita Kumar   31:52
+Okay, so I see.
+
+Shai Eilat   31:52
+But I I don't think we have the ability to. I don't think we can build an actual agent on ChatGPT. I think the only place that's.
+
+Nikita Kumar   32:01
+Not an agentic flow. You can build it, yeah, it won't reference each other.
+
+Shai Eilat   32:02
+Yeh, I think.
+
+Moses Song   32:03
+Ohh, okay.
+
+Shai Eilat   32:05
+I think the only place where we can actually build agents is on Rovo and through CodeMate. Rovo, I know that it's that it's doable and I know that, like, I've seen it working. This is why I want to understand, like, can we build an agent with CodeMe? How, like, what are the blockers, I guess, for building an agent with CodeMe and make sure that, like, it's working?
+
+Nikita Kumar   32:14
+Mm.
+
+Shai Eilat   32:24
+whether it's integrated into Figma or Jira. I just want to see.
+see it in action and understand the limitation and the benefits from the tool since we're spending so much energy in trying to learn it.
+
+Jatin Bagga   32:30
+Yeah.
+
+Joshua Smith   32:39
+So if we can build an agentic workflow in Rovo, does that mean the confluence?
+can be mapped to Jira.
+Like, let's say the use case is like we have product requirements on Confluence and they get up.
+Can we have an agent that text add and then updates and your tickets?
+
+Shai Eilat   33:07
+Yes, that should be possible, yeah.
+
+Nikita Kumar   33:07
+Yes, with your automated, I think that was something, yeah, yeah, and there's automation on that too, right? Like, so you can use your...
+
+Vlad Grubman   33:07
+I can do that, I can do that.
+
+Nikita Kumar   33:14
+Your automation, it just depends on if the tools have.
+The access to use all that I think we were to do last time was try to make sure, yeah, it is possible if it's available to use. If the access is there, then yes.
+
+Joshua Smith   33:19
+Well, that's what I'm asking. Yeah, is the access.
+That's what I'm trying to get to. Yeah, I had a hunch and I do know it's possible, but I'm trying to understand if it's possible for me with the integrations that currently exist. And it sounds like it would be.
+
+Vlad Grubman   33:35
+Yes, you can, you can do this, you can do this as a role agent, and you can do this as code me agent, yeah, and and I'm sure you can do this through Atlassian automation as well.
+
+Shai Eilat   33:35
+And, and okay.
+
+Nikita Kumar   33:38
+No.
+
+Joshua Smith   33:40
+Okay.
+
+Nikita Kumar   33:44
+Mhm.
+
+Shai Eilat   33:44
+Right, what?
+
+Vlad Grubman   33:45
+But so like I said, three different ways to do it.
+
+Joshua Smith   33:45
+And is there like...
+Is there a preferred method kind of consensus because I got so far in code me is to start the integration like I got my API keys from.
+that I needed to put in and I just haven't gotten as far yet down that path. But are we kind of converging on any like specific method to do this across teams or is it just are we still in the experimentation phase?
+
+Vlad Grubman   34:08
+It's whatever it's whatever whatever you experiment and whatever you find most useful. Like, here's here's here's how I would think about this: You can do this in Rova, absolutely not a problem. Just keep in mind that Rova is a little wonky when it comes to AI, which AI model is going to respond to your request.
+So that's when you have a lot of uncertainty. The code me allows you to be more granular, more sort of precise into which models you use, so you can kind of guarantee the results better. Both of them are connected. There are some limitations on what exactly you can do. Like for example, last time I checked, robo agents cannot change the content of
+a page in a conference, code me can, so you can rewrite the whole page if you need to, or add it or post comments or whatever. Robert has some limitations on that. So it's whatever your use case requires, then you just use the best tool for the job.
+
+Joshua Smith   34:58
+I see.
+OK.
+
+Shai Eilat   35:07
+I, I see that the new is here. Anu, can can you drop now? He's still here. Where did you like? I know that you there are a couple of use cases that you use the role for agents, like what? How successful were you in in kind of like using it?
+
+Anu Perera   35:20
+We.
+I did not, excuse me, I did not try to, I was actually trying to set up an agent just to test out what Josh was talking about. I have not personally played around with like updating confluence content, but there are workflows out there. We just need to kind of figure out, you know.
+Play around with it and figure out what is optimal and what is um sustainable, uh, but my my biggest my biggest thing is...
+My biggest concern is that there is fully automated workflows versus many in the middle, right? So whenever we write something, we should always kind of go through the process of review and finalize it. So if we can build, experiment with it, I personally haven't done it yet.
+something I could spend some time on to figure out whether that can be done. If that is can be done, you know what Josh was talking about, the use case is like, hey, I have a updated information from Confluence. We just trigger the agent, agents goes and update those stories that can potentially be done.
+All what you have to do is provide the correct content, because I have tried now writing stories and updating stories through the agentic flow. So it does, it used to prevent us from actually inserting content into a given story. Now it has full capabilities. You kind of insert.
+the stories and stuff. So it does have that capability to kind of review, update stories and all of that stuff. So as long as you point saying, hey, here's a reference, here's the content, go do it. It should definitely be doable. It's just a matter of figuring out the right workflow to execute.
+
+Shai Eilat   37:04
+But I think I think I know the more common use case that I think you did create is a robo agent to kind of like evaluate existing Jira tickets and give you some sort of like a feedback, right?
+
+Anu Perera   37:16
+Yeah, so yeah, that that one I test out, and that's actually in works right now in Arlene, like reviewing readiness, so that's to talk emails and all that stuff, so it's...
+
+Shai Eilat   37:27
+Yeh.
+Yeah, and I do, I do, and and Josh, you know, reach out to Anu to just see what he created and see what you can adopt, because you know, I think the best way just to to learn from his process and then adjust it to your needs, maybe make some changes in the instructions or focus on a different area. What I do want you.
+guys to think about is in 2 1/2 weeks we are meeting like the extended leadership team in Wilmington. So I'll reach out to you guys individually, but just going to use the form here to think like how can we bring some of those use cases, some of like what we're doing.
+And Nicole, that's relevant for you. I know it's relevant for you, JT, and Eric, and Doug, Alfredo. We have time, we have people in person. I think it's going to be a good opportunity to either do a live demonstration, maybe do a work kind of like workshop, but I want to use that opportunity to do a little bit of a...
+
+Anu Perera   38:16
+I.
+
+Shai Eilat   38:30
+a more formal knowledge sharing of what has been working and where we're seeing benefits. So just think about it and I'll reach out to you guys individually because we are now kind of like trying to think about the agenda for that. Yeah, Nicole.
+
+Nicole Davis   38:46
+I didn't mean to raise my hand. I was trying to give a thumbs up. Happens all the time.
+
+Shai Eilat   38:48
+Off.
+That was the problem is the UI in Teams.
+
+Joshua Smith   38:51
+Yeh.
+One thought along those lines is, you know, in addition to demoing, you know, tools or new workflows that we've built on the tools, it might be worth talking about successful operating models as well. For example, what I mean by that is I'm getting together with
+the My Money team later today with like Karly and Bertha and Nicole and Geoff, just to kind of like get more specific on what we want to get out of, you know, our efforts with this. Because I think in, you know, in the broader kind of framework that we've been discussing in these large.
+I don't think we get specific, so we're just kind of like having taken the opportunity to do like a breakout session, and I feel like it could be like the beginnings of a good working model that will allow us to be more effective.
+
+Shai Eilat   39:34
+Yeh.
+The only limitation is, is, is you know, it's only gonna be digital folks in the room, so you know, we're not we're not gonna have kind of like the engineering or QA perspective.
+We talked about it, I think, you know, last week. I think we talked about it in the coffee chat this week. We talked about it on Monday, like there is a lot of push and pull around.
+Eventually, we will need to create some sort of an operating model of like what agents are we using and where do we have, you know, a human in the loop and what is kind of like the interaction model between human and agents and what is the interaction model between engineering, product, design, and QA.
+But I think for now, we just want to encourage everyone to experiment in their own lane and see what is working. You saw in Texas when we were there last week, you know, like Sam and the servicing team, they are experimenting with Cursor on Catalyst, they're using AI Hive, you know, Anu created some agent, Mike Oliver and his line created some agents, so like...
+Try to think based on everything that is working and I encourage you to reach out individually to Anu, to Mike, and to Sam, what are they doing, what is working, and try to see what you can adopt. And I hope that like in a couple of months we will have enough kind of like experience in the different team to start thinking, you know, what do we want to consolidate and where do you want to allow it.
+teams to kind of like continue with their separate experimentation. I think that there is a lot of different opinions on how much freedom we should give different teams to kind of like develop their own.
+Playbook.
+But I think from your perspective, just reach out to folks, understand what is working for other lanes and what you can adopt both for your product team and for the engineering team.
+
+Joshua Smith   41:33
+Yeah, no, we're doing that. We're talking to Mike and others. I'll reach out to Anu as well. I just meant like, I think from the feedback I've been getting is that we've, you know, we need to have more focused discussions to drive that experimentation forward.
+
+Shai Eilat   41:48
+How do you like in that context, like what do you think will be a good use of our time in Wilmington in a couple of weeks?
+
+Joshua Smith   41:54
+I haven't thought that far ahead. I think let me let me meet with the team this afternoon and I'll circle back with you to feel to discuss offline if there's any like, you know, tangible benefits we might be able to get from that. I just like at this point, I'm just trying to take it from the 30,000 foot level to the team level and figure out if we can get benefits from that.
+
+Shai Eilat   41:58
+OK.
+Yeh.
+Yeh.
+
+Joshua Smith   42:13
+And I hear you definitely still in the experimentation phase. That's for sure where we're at.
+
+Shai Eilat   42:18
+Yeah, and I think again, there's a lot of like interesting pockets. I know that Jatin has been, he dropped, but he's been trying to create some automation around Optimizely.
+Yeah, yeah.
+I just like, I want, I wanna in in May, because we're kind of like have this.
+I want to bring forward what we already know has been beneficial and just kind of like do a bit of a more than what we've done in the, which, you know, was pretty was pretty quick, but a bit more of like a deep dive and a live demonstration and open it up for discussion and then I'm sure other people will share, oh, I'm doing it a little bit differently and just just sharing some some learnings and insights.
+
+Joshua Smith   42:41
+Mhm.
+
+Shai Eilat   42:57
+So I want to hear from you guys, you know, I know that all of you have done different experimentation, and if there is something that you feel is working and is mature enough to kind of like bring forward, whether even if you are not part of like the extended leadership team, we can bring you kind of like remotely to that session to do a bit of a show and tell.
+
+Nikita Kumar   43:24
+I know we only have two minutes left, so for Monday.
+It would be great to get together and figure.
+they are trying to solve for and then we can figure out which tool will be the appropriate tool to solve the use case.
+And then, on Wednesday, we could do a live.
+
+Shai Eilat   43:42
+I, I, I would, I would, just because we we know that we have some success with Rohan, and we know that the only other way for us to create an an agentic flow is with CodeMe.
+I would be interested to see use case, like to explore use cases where we can build in a genetic flow with CodeMe, whether it's, you know, using the Figma integration or the Atlassian integration, but I just want to see it in action and understand what are the limitations and the benefits of using CodeMe to.
+
+Nikita Kumar   44:10
+Really?
+
+Shai Eilat   44:14
+Create attention point flows, because I don't think there is anyone here on the call that has successfully created an agent who's called me understand what.
+What are the the locations there?
+
+Nikita Kumar   44:25
+Sure. We did also do how to build it. So Code Me, by the way, assistant and agent, same thing on Code Me. So if you hear that interchangeably, we can also send you a link of like that first session we did, but I think the team, the leadership, there was a lot of people who were in the leadership conference in Dallas, so that might have been missed. So I can also send that link across for the team again to take a look at.
+
+Shai Eilat   44:32
+Yeh.
+Yeh.
+
+Nikita Kumar   44:47
+So you can kind of get a refresher. But yeah, I think if we need to start with like, this is how you build an assistant with the right API calls, like I would say, take a look there first. There's a recording, there's all the information is in there. And then when we get in on Monday, depending on the tool, like since CodeMe does is able to do the agentic flows, if we want to use CodeMe for Wednesday, we can have Oleks on the call. If we want to use Robo.
+we can show Robo as well. So I would just say before we even get to next week there, people should look at this prereqs and really look at the data that we sent across on the assistant creation as well. So and even try to build your assistants because that's, you know, that's how you like learn is doing by doing it. It looks a little complicated. It does look a little scary at first, but once you start like getting the hang of it, it's really not.
+that hard because the goal for us here is not to train you on one agent or like one platform. It's platform agnostic because generally the instructions of building an agent is going to be pretty similar no matter what tool you use. The wording might be different, but it is pretty similar across board. So I'll send that across as well. And then if we need a little.
+If we need a refresher on that, we also have our office hours on Friday, which people can come in on and we can walk through how to build an assistant so people can do it again in real time as well.
+But I'll send you guys the link also on that first session for assistance, so that way everyone has access to it.
+
+Shai Eilat   46:11
+Okay, yeah, and if you can send those on Nikita, like, even like conversation starter over a Slack channel, like, these are the integration that we have for our CodeMe. Here are some potential things that we can do with CodeMe in the context of Figma, in the context of Atlassian. Like, I don't know if you guys have, you know, I know that you're using CodeMe internally.
+So maybe share some ideas on how your guys are using CodeMe internally in EPAM and where have you seen success? Just to give people some ideas.
+
+Nikita Kumar   46:44
+Mhm.
+
+Shai Eilat   46:46
+Okay.
+
+Nikita Kumar   46:46
+Yeah, we can work on something that's done across for that. And I just sent the link on how to build assistance as well.
+
+Shai Eilat   46:49
+Okay.
+
+Nikita Kumar   46:54
+And another assistant I think like eventually we'll be able to show that we've been actually working with Monique and Carrie on is doing accessibility, right? So anytime like a screenshot or anything comes through for accessibility, it can tell you exactly what's missing, what's not there, and input comments right into JIRA on a specific ticket. So that's already been built. We've worked on that. We also built some stuff.
+for like looking for sprint reviews and like, like as an orchestrator, like sample template was, okay, here's like, you know, what are you looking for, sprint notes or sprint communication? And it goes and does it for you. It tells you exactly what you're looking for, gives you that answer as well. But we can take a look at that. Yeah, I sent this, I sent the link so everyone can take a look at that as well.
+
+Shai Eilat   47:32
+Okay.
+Okay, sounds good. Thank you, guys.
+
+Nikita Kumar   47:38
+Cool, thank you everyone.
+Have a great rest of your day.
+
+Vlad Grubman   47:43
+Thank you, folks. Alfredo, if you have a minute, can I?
+
+ stopped transcription

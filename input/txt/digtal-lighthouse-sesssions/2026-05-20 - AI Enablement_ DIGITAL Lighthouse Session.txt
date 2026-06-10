@@ -1,0 +1,900 @@
+AI Enablement DIGITAL Lighthouse Session-20260520_155940UTC-Meeting Recording
+May 20, 2026, 3:59PM
+1h 2m 31s
+
+Ron Seager   0:22
+Vlad.
+
+Vlad Grubman   0:25
+Hey, Rohan, how are you?
+
+Ron Seager   0:30
+Doing well.
+
+Raymond Gralewski   0:31
+Hey there.
+
+Vlad Grubman   0:32
+Raymond, how you doing?
+
+Raymond Gralewski   0:36
+Sound like Jerry Tribbiani a little bit. Doing well, how about yourself?
+
+Vlad Grubman   0:38
+What?
+Good, haven't heard from you in a while, that's why.
+
+Raymond Gralewski   0:43
+Yeah, yeah. No, I've been operating the shadows recently, so it's good to service now and feel light every now and then.
+
+Vlad Grubman   0:52
+Ouch.
+
+Raymond Gralewski   0:53
+Yeah.
+How about you? How have things been going for you?
+
+Vlad Grubman   0:59
+We're good. I don't know if you've heard we had a.
+A bit of a change in the team. Nikita went on to for more, she went in for a more important project. We so we have Ron is who's on the call in case you have you you haven't met him, meet Ron.
+
+Raymond Gralewski   1:13
+Ha.
+
+Vlad Grubman   1:19
+Um, all.
+
+Raymond Gralewski   1:19
+Nice, nice to meet you, Ron. And also, congrats to Nikita. It does send well wishes and congrats to Nikita for that. That's amazing.
+
+Ron Seager   1:23
+Right.
+
+Vlad Grubman   1:28
+Will do, absolutely.
+
+Raymond Gralewski   1:34
+Ho.
+
+Vlad Grubman   1:37
+Alright, let's give folks a...
+Join.
+As always.
+Maybe.
+It's gonna be a lot of a lot of a lot of awkward posing, so let's get used to it.
+Just, just, just so everybody would be aware, because I'm gonna be sharing a ton of screen. I'm not gonna be sharing my video, because my...
+Wherever I am along I-95 between New York and Florida, for some reason, and I think it's a Teams feature, it's not a bug. Whenever you're sharing the video, your screen gets murky and audio degrades significantly.
+Sell.
+Because I don't know why some, but as I keep saying, somebody got promoted over this feature, so...
+All right, one more minute and we'll get started. In the meantime, I'm going to start sharing the screen so you folks can entertain yourself in the meantime.
+Of course, the hell is my...
+How is my browser? What the hell is my browser doing?
+Jay.
+This is the screen I want to share, please.
+In Brian, OK.
+Invokes it.
+
+Alfredo Achecar   3:37
+I can see it.
+
+Nicholas Crowley   3:38
+Yep.
+
+Vlad Grubman   3:39
+Awesome, awesome. Okay, we're gonna start slowly. It's all recorded, it's all transcribed, it's all preserved for...
+for the future generations, but also it expires in, I think, 60 or 90 days, so future generations need to hurry up. All right, what are we doing today? What is this workshop is about? You guys are the few chosen ones who will get to build your own second brain.
+Call it team brain, call it shared brain, call it lazy brain, whatever. Whatever your terminology, whatever you feel is safe to call this, call this whatever you want. I call it lazy brain, not because...
+Not because the brain is lazy, because I am lazy. And it's always been sort of a dream of mine to have this second brain that knows everything I know, and I can ask the brain questions, but I don't really want to be bothered with.
+operating it. So this is where it all started. And I promise you, it's important, what I'm saying, it's important to understand what is it that we're building, why are we building this, and why we're building this in this specific way. Right? So I can't remember.
+When I started taking notes, because it's been it's been a while, I was going through a couple of a couple of stenographers notebooks per quarter, I think, with all the amounts of notes that I was taking, and it was it was really a challenge because with all the convenience and and and your low low tech and everything,
+One thing that your notebook cannot do is Control-F. So I pushed myself really hard to start taking notes into some kind of a technology thing so that I can do Control-F over it. Eventually, we were able to solve Control-F so hard that you can have online notes, you can have an app on your phone or an application on your computer.
+that are all synchronized, they all talk to each other, and you can do Control-F all day long on any surface that you want to.
+But then, once you've solved that problem, the next problem is...
+How do you, how do you connect the dots? How do you, how do you connect the things together? How do you extract the actual knowledge rather than a specific page? And this is where your...
+kind of problem appears, right? You have your knowledge as a bunch of different notes, bunch of different pages. Think of your confluence, right? You have multiple pages, you use Rover probably, or same search.
+to find things, but you're not really sure if it's a stale knowledge, if there's another document that supersedes it, if it's really true, or has a decision been made just not documented. So this is how it kind of gets messy. And I've seen the confluence that you folks operate, the digital team confluence.
+We've created one for you of the another another section of Confluence for this specifically for this AI project, and it's nowhere near the mess that EPAM operates on. So, the longer the longer you operate in this sort of...
+Let's add another page to Confluence, the more messy it gets. But how do you, how do you, how do you solve for that, right? I think we'll understand the problem. How do you solve for that? This is, this is where it gets interesting. You need to capture decisions, you need to onboard people and give them the latest and greatest, the your tacit knowledge or institutional knowledge, however you want to call it.
+And you need to understand not just what's the latest, but also what did we believe before and why did we change our mind. And this is also important because what we've heard from a lot of folks
+is, hey, we have new people coming in or new teams start working on the existing part of functionality and they go through the same decision making that we went through six months ago. We just can't capture it.
+TLDR, you want to preserve not just the facts, not just the most recent version of the fact, but also the most sort of, sort of, you want to preserve a decision making process. And confluence or any other note making, note taking thing, this is, it's really, it's really.
+debatable how you can do that. So this is when we start building. We're not going to get to the sort of full solution, but this is how you build a solution moving forward. And the best part is, because it's flexible, because it's very...
+Independent of anything, it's a flat file structure. You'll be able to build on top of it or build it or spawn a new instance or do whatever you want. This is how it works. We have...
+We have sources, we have the team brain that's curated and does things that need to be done. And then you can have a conversation with it instead of just finding the right page and finding and having a dialogue with it.
+Really simple, really straightforward. We're going to start at the very, very basic. Don't expect the enterprise production grade solution, but you will understand how this thing operates, how this thing works, how you can leverage for yourself, for your team, or your project, and how can you sort of...
+move on with it. We're not going to be using any of the proprietary data. Please make sure you don't use any OMF data. I have a starter pack. I'll share it in a moment. We'll use Lenny's free tier data just to populate the brain.
+It doesn't really matter at this point during the workshop. It's just so that you have some information in there so you can test if the brain works and adjust if not, or if there's something's happening. But once you understand the inner workings, how to stand it up, how to populate it, how to adjust it,
+that and you get the tools inside the OMF security perimeter, that's when you can start using it for OMF purpose should you decide to do so.
+Does it make sense so far?
+Please feel free to speak up. This is a workshop. This is hackathon. This is build along. So it's not a lecture. Speak up.
+
+Doug Ball   10:12
+Yep.
+Thank you.
+
+Jatin Bagga   10:18
+I mean, it does make sense, I think, of Vlad. Can you share this deck real quick, or is that a secret sauce, like where you have exactly?
+
+Vlad Grubman   10:26
+It's absolutely not a secret sauce. It's in the Slack channel already. It's not a, it's not a... I'm sorry.
+
+Jatin Bagga   10:30
+Oh, it's in Slack.
+It's in Slack, you're saying, not in Teams, but in Slack?
+
+Vlad Grubman   10:36
+Yeah, it's in Slack. It's the HTML file actually. It's not a deck. I'm trying to move away from decks because HTML is so much cooler and you can do so much cool stuff with it.
+
+Jatin Bagga   10:37
+Okay.
+
+Vlad Grubman   10:52
+It's in the, what's the channel called? AI Digital, AI Training Digital General.
+I think you are all there. There's like so many people there. So I'm pretty sure the whole digital team is there.
+I would hope so. I would hope you guys are all there. Yep.
+
+Doug Ball   11:07
+Ohh.
+
+Jatin Bagga   11:08
+Yeah, I think I see it now. Oh, so it's the, it's that code that's there, the HTML code.
+
+Vlad Grubman   11:13
+Yes, you, you have, you have, it's a HTML file, it just displays as a code, you can you can download it locally, uh, and it should be readable.
+
+Doug Ball   11:14
+Save my.
+But...
+
+Eric Trenz   11:24
+Hey, Vlad, whenever you, I think I've had success in the past too, just sharing it as a zip file, and then you can open it in the browser.
+
+Vlad Grubman   11:24
+Just.
+Oh, yes. Good call. Thank you. I'll do that. I have a couple of artifacts I'm going to share along, so I'll see if I can share them a zip. So just take a pause to...
+to archive it. Okay, let's move forward because I really want you guys to start building stuff rather than just listening to me. Talking is cheap, building is expensive because tokens are getting more and more expensive every day. Anyway, the another cool part is you're gonna have this separation of duties.
+Anybody can ask the brain. Some people can be contributors or suggest updates to the brain. And you as an owner or your team as an owner is the only one who can teach the brain new things. If you remember, and I'm pretty sure you don't, but just in case, if you remember, there were questions.
+back in the beginning, in phase one, sometime around January, we had a conversation about how you cannot teach AI because you need to train AI. And every notion of you teaching AI things in the dialogue when you talk to ChatGPT is basically just keeping stuff in the context window and as long as soon as you...
+blow out of that allocation of that context window, AI is going to start forgetting things. It may remember certain things, may remember the overall notion of what you discussed, but it was going to start losing facts. The cool part about this brain is this is one of the solutions. There are many, just
+search for second brain or AI memory online, you will be overwhelmed. There's thousands, there's thousands of solutions out there. I'm just, and that's exactly the reason why I'm using this as a very first sort of topic for this hackathon build along workshop.
+whatever we're doing right now, so that you can build your own, you can go and compare the nodes, and you can do exactly what I did. You can look at the repos that are out there. You can ask your cursor or your, I'm not sure cursor actually does it, but Codex and Cloud Code absolutely do this. If you show them the folder where you have your mini brain.
+
+Doug Ball   13:38
+Cortana.
+It'll kill me.
+Good.
+
+Vlad Grubman   13:52
+And you tell them, hey, look at my mini brain.
+look at this repo and compare them and see what I can borrow for my specific use cases. It will do exactly that. And that's why it's so cool, because you're in complete control over how this is going to work.
+
+Doug Ball   14:05
+Yeah.
+That's great.
+I don't use my.
+
+Vlad Grubman   14:10
+Okay, um, so...
+
+Doug Ball   14:12
+Um, I would say.
+
+Vlad Grubman   14:14
+No teams, one person, single topic for everyone, so you guys can borrow ideas, you know, steal the homework, do whatever, share, share, share across. There's, like I said, there's thousands of these. There's absolutely no point in kind of...
+
+Doug Ball   14:16
+Yes.
+Thank you.
+I, uh...
+
+Vlad Grubman   14:34
+pretending like this is not a not a classic thing. It's very open source, very accessible.
+Best part?
+The best part of all of this is it's portable. It's only flat files. You do not need any other functionality. You can zip your brain. I know it sounds crazy. You can zip up your second brain, take it to another computer, unzip it, point your AI harness at it.
+and it's just gonna work.
+But the harness has to have hands. It has to be agentic. So it has to be Cloud Code, Codex, worst case scenario, it can be cursor. Cursor is a little weird, and it's really more of a coding tool. You can use it, and I use it for other purposes, but.
+Ideally, it's coding tool 1st and everything else second. But so Codex or Cloud Code would be ideal. If you have a personal subscription, again, free to use it. We're not going to touch any OMF data whatsoever. We have a starter pack with completely different data. It's again, freely available on the web.
+So we're not doing anything bad. All right. I've been talking for too long. You guys have this access to this thing. You can look it up. Let's get started. As I was saying, the...
+
+Doug Ball   15:49
+Oh.
+
+Vlad Grubman   16:00
+requirements. This is where we start. We start with why do we need the brain? What is it going to do? What are the things? And this is where you can start using whichever tool you have, right? I'm not going to tell you, oh, start using Codex or start using Cursor. You're in complete control of how you want to build this. These are the constraints that you need to say, and this is exactly what you need to say. I'm going to copy paste the.
+prompt both into Slack channel and in Teams. Teams will be a little bit delayed, I apologize, but this is what you need to start with. This is how you start building this. You need to create a spec and the pathway is really, really simple.
+You have your requirements, you create a spec, you ask AI to build your brain using the spec. That's it. That's really very simple, very straightforward. I have artifacts that will sort of you can compare whatever you've created at every step. You can sort of look at what you built.
+to the artifact that I'm going to share. You can borrow, again, you can borrow, you can use mine, just discard yours, you can update yours, discard mine, you can just keep yours, whatever you want to do. I'm trying to help you sort of move along the way, building this thing by yourself. But I understand it can be challenging, it can be a little tricky at first. So
+Well, we'll go slow and I'll give you sort of a booster pack at every turn. So we start with requirements. These are the things you want the model to use. These are the assumptions that you want model to use when it's building the spec.
+So you really need to ask your AI harness, your Codex Cloud Code cursor, spawn a new agent, point it to a blank folder on your hard drive and say, hey, I need a spec, create a spec for me for a mini brain implementation. It needs to use flat files only, so it's portable, human readable and tool agnostic.
+It needs to have minimal scaffolding. I need to be able to inspect and control manually all the files.
+I need to implement this trust model. Facts come from sources, inferences are labeled, contradictions are preserved. Again, we know we want to understand why we made certain decisions, right? So we want to keep all of that. Stale knowledge is marked not silently deleted, and it has to be agentic. So you need to prescribe using different agents for different purposes. Again, remember, your harness is agentic.
+Codex, Cloud Code, and cursor can spawn individual agents to perform certain tasks. You don't have to write prompts for those agents, but you can tell your codex, for example, or your cursor to say, hey, use different agents for different purposes.
+Use the separate agents for intake, processing, QA, and answering. This way, you have this separation of duties. Again, all of this is how you build this spec. Spec is effectively your PRD for AI harness.
+So why don't you start with that? I'm going to keep the slide on. I'm going to...
+Switch over to Slack and then to Teams to copy paste an example of a spec that you should get. I'm going to start with, actually as a matter of fact, even better, I'm going to start with the prompt that you can use to create a spec. This way.
+You can compare what you're trying to build.
+With what I what I have sort of prepared.
+All right, it's in the Slack if you guys are interested.
+And I need, I'm gonna need a minute to get into Teams on the Citrix, so give me a moment.
+Any questions, anything? Feel free to start speaking. Again, this is a build along, not a lecture.
+
+Mia (Xiaoling) Zhou   20:21
+So, is is I need one hour, so we may need extend this meeting, do we?
+
+Vlad Grubman   20:29
+I think you guys gotta be done way before that.
+
+Mia (Xiaoling) Zhou   20:33
+Okay.
+
+Vlad Grubman   20:34
+I, I, I...
+In full transparency, I, because I already know how to do it, I did this in 15 minutes. I'm like tripling the time. So you only going to need like half an hour, 45 minutes to get to the very end.
+
+Doug Ball   21:11
+And we should be putting this in ChatGPT. I for some reason I'm getting...
+
+Vlad Grubman   21:16
+Ideally not. Ideally, you should be putting this in your harness, your codex or your cloud code or something like that, not ChatGPT.
+
+Doug Ball   21:24
+Yeah.
+
+Vlad Grubman   21:31
+I mean, you can do this in ChatGPT, it's fine. I just want to make sure you leverage your existing tools to the full extent.
+
+Doug Ball   21:34
+Vin.
+Could you, uh, could you show us as we go along, like...
+
+Vlad Grubman   21:40
+Because, yeah, yeah.
+Sure, of course. Yes, I would love to.
+Don't you never ask?
+Okay, I'm not sure what that is.
+
+Doug Ball   22:03
+That's what I got when I was trying to get into ChatGPT for some reason.
+
+Vlad Grubman   22:08
+Okay, we'll need to, like I said, that's why I said you guys need to figure out how to prepare for this earlier. So I'm okay.
+
+Raymond Gralewski   22:17
+I'm getting the same thing. No.
+
+Doug Ball   22:19
+Yeah, like it normally works all the time. Like.
+
+Rohan Pendyala   22:20
+Yeah, me as well.
+
+Mia (Xiaoling) Zhou   22:21
+Yeah, I got the same thing.
+
+Vlad Grubman   22:23
+Okay, do you guys have any, because if if if you don't have any alternative, if you don't have chat, if you don't have Codex, your personal subscription or Cloud Code or even Cursor, then you can't you can't do this in ChatGPT. ChatGPT will not allow you to do this.
+That's what I wrote from the beginning. You will need you will need that sort of agentic flavor.
+
+Doug Ball   22:52
+Yeah, even cursor is giving the same sort of error.
+
+Vlad Grubman   22:57
+This is interesting.
+Does it mean you need to log in or re-log in or?
+
+Doug Ball   23:03
+I'm not sure this is a new.
+New issue.
+
+Raymond Gralewski   23:09
+Yeah, I was using ChatGPT yesterday and it was working for me. So I think this is like a very new turn here.
+
+Vlad Grubman   23:09
+Let me, let me show what I have.
+Probably, yes. Can you folks see my screen?
+
+Doug Ball   23:27
+Mhm.
+
+Vlad Grubman   23:28
+Okay, so this is cursor.
+I'm using one main cursor. Apparently it's working. I'm using GPT on the medium.
+It's a compromise. I would prefer to use it on the Macs, GPT-55 high, but again, it's a demo, so I'm okay with that. I use the prompt that I copy pasted because I don't want to start from the scratch. I just want to show you how this works.
+This is.
+I already opened the existing folder, right? And...
+I'm probably going to delete this and I'm probably...
+I'm going to say, create a file in.
+The current folder, call it.
+Menu.
+Brain.
+Spec dot MD.
+
+Nicholas Crowley   24:33
+Hey guys, this is Nick. Can you put in the chat which applications you're getting the Zscaler firewall issue? I see it with ChatGPT as well. I'll track that down and see if they can open that back up.
+
+Vlad Grubman   24:33
+OK.
+Thank you, Nick. Nothing.
+Nothing works better than getting taking away access right when the right when the workshop starts, yeah.
+
+Nicholas Crowley   25:11
+Right when you're doing a hackathon, right? Great timing.
+
+Vlad Grubman   25:25
+Right, would it be helpful if I continue showing while you folks wait for the resolution or?
+
+Doug Ball   25:31
+Yeah, that way we can at least go back and do the video or follow along and set it up once access is fixed.
+
+Alfredo Achecar   25:34
+Yeah.
+
+Vlad Grubman   25:34
+Okay.
+Absolutely, like I said, you can absolutely use your personal subscription if you have it, or you can go sign up, it's like 5 minutes, and then you have access to codecs if you if you decide to sign up for ChatGPT, your personal, and it works exactly the same, you exactly the same way you open your open local folder.
+you prompt it and it's going to do what you ask it to do. So this is creating specification for small portable mini brain knowledge workspace. We'll be using workshop. This is actually not needed.
+Don't need this, it's just extra stuff. Requires to use flat file. Let's do use markdown files only. This way everything's marked down and we can sort of control this better.
+Now, not requires equal blah, blah, blah. Yes, you want to have this sort of thing there because otherwise it's going to start over-engineering things. Again, remember, we want this to be portable. We want this to be flat files only. So you can read each file manually if you decide to. I don't know why you do that, but you can do that.
+Uh, you ha, you can.
+
+Doug Ball   26:50
+Ohh.
+
+Vlad Grubman   26:52
+You can zip it, send it to yourself, use it on another computer, move it, just use another harness, and it will still work. The result must be portable across codex cursor, cloud code, terminal, and text editor. This is basically what it is. It should start blank, right? Because sometimes it will think, oh, hey.
+I'm creating something that's totally useless. Let me put some random facts in there and it will varnish or bias your brain in a way and you don't want to do that. You only need the scaffolding. You really don't want anything else there. Use pending placeholders. Yeah, this is fine. Preserve search material before summarizing it.
+Separate source. This is the these are these are the instructions that it's going to then put into the instructions for the brain and brain needs its own instructions to operate and I'll show you what it looks like once it's created. So when you have this.
+Spec it will have these. This is what good looks like. This is where you get sort of the.
+where you need to be. Required root files, folders, purpose of each file and folder, rules for the brain. Remember, rules for the brain, very important. Agent roles and their responsibilities. Again, you're not programming these agents. You're not telling these agents specifically how to do their jobs. You rely on AI to create these agents as they are needed.
+Kate, um, let's hit go and let's see what's gonna happen.
+No idea what it was gonna create.
+It will take a few minutes because of how slow these things are.
+Usually takes a few minutes. And again, depending on which model you choose, if you remember, I chose medium because it's kind of like a happy medium. It's right here.
+If you select a high or X-high, it's going to be even slower. If you select a mini or smaller model, it's going to be faster. But I wouldn't guarantee that the results are going to be good.
+Is it?
+It it it gets a little wonky, so if created um mini brain spec.
+So let's take a look at what it looks like. Wait, which folder was it?
+I have like 5000 folders open. Oh, there you go.
+Should have done this in the 1st place. Alright, I have put there stuff, so this is your spec.
+And it created basically the instructions for AI, how to create your brain.
+Again.
+Very, very important. You are not writing these instructions. You have AI created instructions for AI on how to create the brain based on your original specifications.
+The best part is you don't have to live with this if you want to.
+continue using it and you need something more sophisticated, you can update this, update these original instructions.
+create a new spec and build a new brain. Or you can update this spec and create additional brain. Or you can just keep telling your harness, your codex, or your cursor to update the existing instance with more functionality. It will do that for you. That's how I arrived at.
+basically where I am right now. It's a lot more complex right now and I'm not even reading the visual files anymore. This is this is all.
+This is all AI driven. All I do is I tell it what to do and I ask questions.
+So at the end, it shows you what the required folders are. Basically, your, sorry, so fast, what the folders are, where things are going to be located, and it has created a required agent roles. Remember we said create agents and their responsibilities.
+This is what it does. This is exactly what it does. And it tells you which agent is going to be there. It's going to be processing, QA, and intake.
+Required workflow, intake, processing, QA. I'm not reading this because that will take forever, but that's kind of the...
+general understanding of what the spec should have. Again, you're more than welcome to modify it. It's a markdown file in your folder right here. So you can take it, use it, do whatever you want to do it. For example, I have this simple spec that I've built for this workshop that I'll share it in the Slack in a moment. I'm not sure why I can't get into.
+Um...
+Citrix, I guess I'm having same issues you folks, you folks do. This is this is the spec that I've created. It's very similar. It has a bit more of a...
+structure here.
+
+Jatin Bagga   32:40
+Hey, Vlad, sorry, Vlad, I just want to understand. I dropped for a few minutes. I just want to think through this. So are we doing anything like what we were discussing? Like, can I do stuff?
+
+Vlad Grubman   32:40
+But, yes, yes, go ahead.
+Yes, but I think I think half of the team, yes, you should be doing the same thing. You should be basically following along. I think the problem is everybody has a problem using ChatGPT or cursor from OMF, and I'm assuming you folks don't have personal accounts. So you folks decided to just watch, which is.
+
+Jatin Bagga   33:06
+Got it.
+
+Nicholas Crowley   33:08
+Yeah, and I don't know if people are keeping chats in the chat live, but Ray said ChatGPT is working for him now. It's working for me now as well. And I did ask in the chat if Codex and Cursor are now working. So if folks that are using those tools can let us know, that'd be great.
+
+Jatin Bagga   33:08
+Got it.
+
+Vlad Grubman   33:08
+which is fine, but that was not.
+Okay.
+
+Doug Ball   33:23
+Yeah.
+
+Vlad Grubman   33:23
+Okay.
+
+Doug Ball   33:26
+I'm now in cursor, but I'm not exactly sure where to start. Curtain, this is my first time dipping into cursor at this.
+
+Nicholas Crowley   33:36
+Got it.
+
+Vlad Grubman   33:37
+Okay, it's very simple. You can go cursor.
+Open folder or create an empty folder on your hard drive, and then open that folder in cursor.
+And then just say new agent, you will see something similar to this, like your folder name, I call it Warsha Brain. You go and create new agent in that folder and then copy paste the same prompt that I pasted in Slack.
+Is that, does that help?
+
+Doug Ball   34:15
+I'm working my way through it.
+
+Vlad Grubman   34:17
+You can share the screen, we can walk you through it, and I'm thinking it might be helpful for the rest of the folks who are struggling with the same thing.
+
+Jatin Bagga   34:27
+I'm in cursors, but I can share my screen if you want, Vlad.
+
+Doug Ball   34:27
+Sure.
+
+Vlad Grubman   34:31
+Whatever, whatever is helpful for everybody else, so you guys can see what's happening, 'cause we still we still need to create the actual brain.
+
+Doug Ball   34:34
+Oh.
+
+Jatin Bagga   34:38
+I know, I feel like we've, we've just scratched the surface.
+
+Vlad Grubman   34:42
+Yes, we were at the first on the first third of.
+But for learning, now we know what needs to happen before these hackathons, 'cause if you guys like this format, we can we can do more of these. We have another interesting topic for the next Wednesday already, if that's if if this is your thing.
+
+Doug Ball   34:48
+Okay.
+Mm.
+
+Jatin Bagga   35:05
+I'll steal your screen and I'm just going to share mine so you can tell me if I'm doing it the right way. Okay, so here's cursor.
+
+Mia (Xiaoling) Zhou   35:06
+If.
+
+Doug Ball   35:11
+That's kind of what I was sharing my screen for.
+
+Jatin Bagga   35:13
+Oh, I'm sorry. You want to share yours? That's fine, Doug.
+
+Vlad Grubman   35:15
+Oh, I missed it.
+
+Doug Ball   35:15
+Go ahead, go ahead.
+
+Jatin Bagga   35:17
+No, it's okay, man. No child left behind. Everybody has a say. Go ahead, dog. I stopped sharing.
+
+Doug Ball   35:18
+No, go.
+Yeah, so, so we've created a folder on the desktop. I'm in cursor.
+
+Vlad Grubman   35:30
+I like, I like how you call it.
+All right, yes, yes, you're...
+
+Doug Ball   35:39
+And...
+
+Vlad Grubman   35:40
+Are you using are you using web web version of the cursor?
+
+Doug Ball   35:44
+Currently, yeah.
+
+Vlad Grubman   35:45
+Yeah, that's not ideal because you will need that file locally. Again, that's the whole reason why we wanted to use Codex Cursor or Cloud Code so that you have your local, the file is local. This is exactly like what happened here. It created a file in a current folder locally. This is the local folder structure.
+
+Doug Ball   35:48
+Okay.
+Got it. Jatin, it sounds like you are steps ahead of me, so you take over now.
+
+Jatin Bagga   36:13
+Okay, I am honored. One second.
+So I was able to pull in the agent, like create a new agent, Vlad. And then all I did was just took the instructions that you pasted in Slack and posted it here.
+I was trying to add the, sorry, not here. I was trying to then add the folder, but...
+
+Vlad Grubman   36:31
+Yeah.
+
+Jatin Bagga   36:39
+I think I've forgotten the 1st place to add the folder, but I guess I could do it here.
+
+Vlad Grubman   36:43
+You, uh, you, yeah.
+
+Jatin Bagga   36:46
+But there's nothing in that folder, right? So that's where I'm like, I can just open.
+
+Vlad Grubman   36:50
+Yeah, the instructions, the instructions that you had in.
+In the prompt, that that that's exactly what I've changed. Let me.
+I see all the way to the end.
+
+Jatin Bagga   37:01
+Oh, I see what you're saying. So maybe I should create just a net new agent in that attach the folder and then add all the instructions. Okay.
+
+Vlad Grubman   37:09
+You can, yeah, you can do that. You can do that, or you can do even better. You can say, this is, I'm operating in this folder, so everything that happens happens in this folder.
+
+Jatin Bagga   37:19
+Okay, so I just opened it, but then it didn't do anything when I was writing it.
+
+Vlad Grubman   37:22
+You're opening it in Finder, it looks like.
+
+Jatin Bagga   37:26
+Yeah.
+
+Vlad Grubman   37:27
+No, no, you have to you have to open it in whichever tool you use. Is it is this cursor? We'll save this code for a moment.
+
+Jatin Bagga   37:32
+Cursor.
+Mhm.
+
+Alfredo Achecar   37:38
+If, if you go to the on the top on file.
+
+Vlad Grubman   37:42
+Right, file open folder, yes, thank you, I forgot. Yeah.
+
+Jatin Bagga   37:45
+Okay, got it. And then here, just go into this. Thank you, Alfredo. Okay.
+
+Vlad Grubman   37:48
+Yes.
+
+Alfredo Achecar   37:49
+Yeah, of course.
+
+Vlad Grubman   37:50
+Thank you, Alfredo. Yes, I forgot it's the other way around. Yes, allow it.
+
+Jatin Bagga   37:53
+Cursor would like to access, allow it. Okay, voila. And then hit this.
+
+Alfredo Achecar   37:55
+Yeah.
+
+Vlad Grubman   37:57
+And.
+
+Jatin Bagga   38:01
+And that's what you were showing.
+
+Vlad Grubman   38:02
+Yes, yes, that's exactly not, yes, now that's that's gonna create that spec in the folder.
+
+Jatin Bagga   38:08
+Got it, got it. Okay. But we still have to pick the topic that we want, get the sources and everything. All that magic has to happen, right?
+
+Vlad Grubman   38:14
+Hold on, hold on. We're not there yet. We're not there yet. We're not there yet. OK, so let me let me let me steal my screen because it's gonna be creating. It's gonna do the same thing. It's gonna be creating stuff. So let me go back to what I was showing.
+
+Jatin Bagga   38:21
+Okay.
+
+Vlad Grubman   38:29
+All right, okay, perfect. So we've just created a spec, simple spec. What was the name of it? Mini brain spec. This is the one I just created. I'm just going to go ahead and use simple spec. It doesn't really matter which one we're experimenting.
+But I'm just going to go and do the next step. Use the simple spec MD to stand up a.
+Meanie?
+Instance.
+OK, I create it in a new folder named.
+Demo Brain.
+And the is created in a new.
+is the subfolder in the current folder.
+All right.
+Actually, you can do one more thing before you do that.
+I'm gonna, I'm gonna share my simple spec, um, this.
+Back with.
+Simple.
+MP.
+From the same.
+This way you can see the difference and you can see what...
+What's what?
+Alright, I'm sharing, I'm sharing my simple spec in the meantime, see if folks can use it.
+Simple stuff.
+Okay, sorry, I don't want to waste time. We only have like 20 minutes left, so I'm going to keep posting stuff and...
+into the Slack and if anybody wants to cross post it into Teams, feel free to do it. As you can see, it compares the strengths and weaknesses, gaps, recommendations, use this, use that. You can.
+augment the spec that you are creating, or you can use the one that I posted. It doesn't really matter for the experimentation. So I'm just going to, again, in the interest of time, we're going to move forward, use this simple.
+MD to stand up. Oh, wait, I already typed it. Yes. Use a simple spec to stand up mini brain instance, creating a new subfolder named Demo Brain in the current folder. Let's see if it's going to do that. It's going to take about two to three minutes, depending on.
+How cursor feels today?
+It's always fun to read how it thinks about this thing, about this problem, and it will start creating the file structure.
+Like I said, it's going to take a bit.
+And it will result in a...
+Let me.
+Let me do something different with me.
+Share the screen.
+And I can drag in the...
+Their screen, screen.
+One, see if it's the right one.
+Right.
+Are you folks seeing the cursor right now on the screen?
+
+Alfredo Achecar   42:00
+Yep.
+
+Vlad Grubman   42:01
+Okay, perfect. So what the...
+File structure will look like when it's done is something similar to this.
+You're going to have candidates distill, index lint, ops, raw sessions, thoughts, topics, and you're going to have agents, brain, dashboard, and all these files. Actually, it just finished, so let's take a look. Demo brain, where's my demo brain?
+Which folder am I in?
+Workshop Brian.
+Oh.
+Topics, topic, yeah, okay, makes sense.
+Share pass, and it even validated its own work. Cool.
+Now I need to remember which workshop brain. There it is. Perfect. Can you see? Can you see my screen?
+Can you see the workshop brain folder with all the folders in it?
+
+Mia (Xiaoling) Zhou   43:07
+Yeah.
+Yes.
+
+Alfredo Achecar   43:08
+Mhm.
+
+Vlad Grubman   43:09
+Okay, cool. So this is...
+This is exactly what you need. This is now an empty brain.
+As you can see, none of it is SQL. None of it is requiring any kind of tools for you to operate. And let's just inspect this for a moment.
+Okay, come on.
+Why are you not dragging?
+Sorry, technical difficulties. Anyone?
+OK, there it is.
+As you can see, this is the file called Agents MD, and it shows you the roles of the agents.
+as prescribed by the spec. All of it created by AI. I haven't written a single line of this in here. It's all in here.
+created sort of bootstrapped by that one spec, which was again, we didn't write the spec, we asked AI to create a spec.
+and you have this brain right now.
+Okay.
+Next.
+I'm gonna share another.
+
+Jatin Bagga   44:31
+So, Vlad, we have just one minute left for the meeting, right? Or is it more?
+
+Vlad Grubman   44:32
+Bob.
+Yeah, I mean, we can stay until the end of the hour. It's up to you folks. I'm just going to show you what the next step is, how to populate the brain. And you can you can you can take it and do it and do whatever you want. So I have the starter pack, which is a download from Lenny's.
+free version of it. What you want to do is you want to take your data and you this can be anything really. I shared the starter pack in Slack so you can use that. The raw folder in your brain scaffolding you can you can let's say for example.
+I want to do this, right?
+Gonna take a moment.
+Jay.
+So while it's copying, what I'm going to do is I'm going to start writing the next prompt. I'm going to say in the new newly set up brain.
+Look into row folder and absorb.
+All the information.
+from there.
+Into the brain.
+Is it?
+That's it. That's all you need to do to populate your brain with the information. And it can be anything. Like I said, I downloaded Lenny's, what is it, 50?
+50 podcasts and 20 newsletters.
+It recognizes automatically it.
+figures out what it is, it's going to start populating it. It's going to take a minute or two. You don't have to watch it. If you have to go, if you have to go, you have to go. We'll keep this recording. So it will just...
+Parse these transcripts, include them as raw sources, they're going to be preserved now forever, and then it's going to start making assumptions and sorry, inferences, assumptions, inferences based on it, and you can have a conversation about what was in those what was in those podcasts. Similarly, if the if you were using this.
+for your conversations about the project. And you have 50 transcripts from your meetings. It's the same exact process. Now you have this brain that you can have conversations with.
+You can absorb them and you can.
+have conversations, talk, ask questions, understand why things are the way they are. As I said, it's going to take a while, so you don't have to, if you have to go, you have to go, you have to watch this. Any questions so far? Yes, Eric, I think you have a hand up.
+
+Alfredo Achecar   47:21
+What?
+But...
+EOK.
+
+Eric Trenz   47:27
+Yeah, yeah, one question. So ideally, right, like we would want to in later stages have this set up to say Teams or SharePoint somewhere to get like transcripts, right? That would be a...
+
+Alfredo Achecar   47:28
+Yeah, go ahead.
+
+Eric Trenz   47:46
+Am I correct that that would be like a later stage like MCP or CLI to get that context in automatically?
+
+Vlad Grubman   47:54
+Ideally, yes. The there, if like, so, so here's here's what I tried: the I think the MCP server for for the Microsoft Teams is open, so in case you have the transcript in your OneDrive, you can access it through MCP.
+Already today.
+
+Eric Trenz   48:14
+Ohh, but if someone else recorded...
+
+Vlad Grubman   48:16
+But if it's someone else, then you have to ask that person to either make the transcript available to you so you can pull it, or you have to download it manually.
+
+Eric Trenz   48:27
+And then question is, is everyone able, is more than one person able to record a Teams meeting? Could like just everyone that wants it record it individually?
+
+Vlad Grubman   48:36
+I don't think so. I don't think.
+
+Jatin Bagga   48:38
+You can in most cases, in some cases is locked out, but you can as long as you're on the desktop, like the mobile phone or something may not allow you, iPads may not allow you. That said, recording sometimes, like when you have a video or something,
+
+Eric Trenz   48:44
+Okay.
+
+Jatin Bagga   48:57
+Or you have a transcript, sometimes it's not accessible, like there's some configuration settings that need to change.
+
+Vlad Grubman   49:01
+Okay.
+
+Eric Trenz   49:05
+I gotcha.
+
+Jatin Bagga   49:05
+So there are some nuances. So your meetings for sure, like you can have your own party, but it's the other part, like it's a bit complicated.
+
+Eric Trenz   49:11
+Yeah.
+Gotcha. And then.
+So that would be something that would be cool to figure out. And then, because that's like the part where I feel like I have something similar to this setup and it's really helpful, but like it still goes to the point of needing manual work to bring the context in.
+
+Jatin Bagga   49:35
+Exactly. In ChatGPT, I've tried this as well. Yeah.
+
+Eric Trenz   49:39
+And I'm like either lazy or forget or don't have time. And then it's not as beneficial. So that was one question. And then I know that you had the like 50 podcast episodes. Do you see a benefit in summarizing them prior to bringing them in?
+say using like a tool that's more specific to
+summarization such as notebook LM and then bringing that in versus doing it in cursor to start or is it pretty apples to apples comparison if you had to guess?
+
+Vlad Grubman   50:18
+Phil.
+Two things. Let me answer the question in two different ways. It depends on your personal workflow. If you feel like you want, you need Notebook LM to summarize this and you have access to it and you're okay with uploading your internal data to it, by all means do it. Notebook LM is.
+effectively A lobotomized version of one of the Google models.
+That it is only allowed to look at your data, so it's really great, it's really beneficial for that for that matter.
+But if that's not the case, I would actually think it's not beneficial. It actually would be detrimental because summarization loses a lot of detail and nuance for the sake of, well, summarization. What happens here is you're not really using cursor.
+Right? You're not really using cursor to process the data. You're using this model right here.
+to process everything that you need. This is a effectively a hack.
+
+Eric Trenz   51:27
+Right, I see, I see. Yeah, yeah, yeah. And that's, to be honest, I miss that. And that's kind of why I like cursor to begin with, because it has all the context, but then
+
+Vlad Grubman   51:29
+Right.
+Yeah, yeah.
+
+Eric Trenz   51:39
+only listens to what you're looking for as opposed to say having like a transcript or a not a transcript, a summary, it missed the part, the one part you're looking for that you're trying to call on it for and it just cut that out because a summary is a summary.
+
+Vlad Grubman   51:48
+Yeah.
+Yes, the the the cool part, so so when I when I built my own, the cool part, what what happened was it, if you ask a question that cannot be answered by summary.
+And the brain does that to a degree. It does a summarization.
+because it needs to know what is located in which file. Basically, the way it works is it analyzes the raw file, it creates a summary so that it knows what it is about, and creates index. So that, oops, sorry.
+Um...
+This, it knows where things are and what's happening there, and where...
+here, index, sources, where things are, what's going on, source cards, right? So you have sort of...
+a meta about what's in there. And what happens when you ask a question that cannot be answered by summarization, it says, okay, I understand this question is about X. Where was this X discussed? Oh, in this particular raw document. Let me go to that raw document, analyze it.
+with focus on the user's question.
+is going to answer your question. And the best part is, if you ask for it, we didn't get to doing this, but it will create.
+I think in either in, I forgot which distill I think, I think it will be here. It will create another file which basically summarizes the answer to your question to a degree that you find satisfactory.
+The more you ask, the more brain will know what you're looking for and will continuously create those sort of knowledge points.
+to be able to answer your questions better and better. So by pretty much like a human brain, the more you ask questions, the more you understand what is the project and, you know, what is the topic you're discussing. It's sort of self-improving in that way. I don't want to call it self-improving,
+
+Eric Trenz   53:51
+Mm mm.
+Yeah, makes sense.
+
+Vlad Grubman   54:06
+But it is, to a degree, self-improving in that own way.
+
+Eric Trenz   54:10
+Yeah.
+
+Vlad Grubman   54:10
+So the more information you add, the more information, the more questions you ask, the more to the point brain will become.
+
+Eric Trenz   54:18
+Mm-hmm.
+
+Vlad Grubman   54:19
+There's also a limitation, just sorry, I have to say that before we wrap up. There's A limitation. You can't do this indefinitely using the flat file structure. At some point, I think, depending on the size of your documents and the overall size of your library and the amount of questions you're asking,
+But I would probably say around 1000 source documents, given all the surfaces, given all these additional topics, thoughts, sessions, and everything else it creates, it's probably going to start choking and it's probably going to take way too long or the context will keep overloading, at least with the current.
+generation models. I don't know. I haven't checked Twitter for 20 minutes. I don't know. Maybe they already released GPT 5.6 for the larger context window. But there is a certain physical limitation to this implementation, at which point you might want to start looking into, hey, do I need the rag? Do I need the vector storage?
+Do I need a combination of those to keep going beyond those limits? Make sense?
+
+Alfredo Achecar   55:22
+So, that was that was actually gonna be my question, Vlad, like...
+I'm not even sure that I'm asking it in the correct way, but how?
+How is it doing it? Basically, okay, so I was looking at, I was watching a video from these UX researchers and what they were doing was basically using embeddings and RAG to like tag some, tag a bunch of data and then using like, like so they use a local model to tag the data and then and then.
+
+Vlad Grubman   55:48
+Mhm.
+
+Alfredo Achecar   55:53
+We're basically running all this stuff locally, and then a local model to, like, basically run Python and do, and like chat with the data, essentially.
+
+Vlad Grubman   55:53
+Yup.
+Yep.
+Okay, yeah, you can do that.
+
+Alfredo Achecar   56:05
+But yeah, is that is that more robust, less robust? Is that that's not this? No, that's...
+
+Vlad Grubman   56:09
+It's very similar, the what you're doing effectively, like, OK, this is half half of the answer I gave to Eric. This is a hack to be to be able to access this model.
+through, because we don't have access through API, this is the way to make this model, whichever I'm selecting here, right? Think about the sources, understand what's in the source file, and give you the answer.
+Like, we're effectively hacking around the limitation of accessing the model, and this is this is one of the reasons why I said don't use OMF data, even if you're using cursor, at least if it's your personal account, because it goes into one of these public models with cursor license.
+to OMF, you can, because you're allowed to write code for OMF, so therefore you're allowed to use data for OMF.
+So, but if you're using your personal, please don't use OMF data. So this is a hack. This is how we can access the models without having direct access to models. You can still ask cursor, or if you have a personal solution, you can ask Codex to process this data for you.
+Local model in your case does exactly the same thing. It processes your data. The difference is you're using Frontier model, top of the line, the best of the best, at least what's publicly available. When you're using something like this, when you're using Codex or using cursor and you're using GPT-5
+family models. If you're using a local model, a local model is working on your local machine. If even if it's a M5 Mac, it's still, you're probably going to be able to run some kind of a Quinn with probably like 20 tokens per second.
+If that, this one, you're getting thousands of tokens per second, which is not even comparable. For convenience, for security, for safety, sort of to keep things internally so you don't have to go over internet. Yeah, local models are fine. I use local models for.
+certain tasks as well. They're slow, they slow, but they work.
+But it's really up to you how you want to do this.
+
+Alfredo Achecar   58:25
+Okay, yeah, I probably need to, I definitely need to rewatch this so I can like fully grasp the mental model here. So, but is this, when you were saying that it may eventually, like, you know, if you have thousands of attachments or data sources that it may eventually choke, is that
+
+Vlad Grubman   58:25
+Does it make sense?
+Mhm.
+Yes.
+
+Alfredo Achecar   58:45
+So is the model like...
+Vectorizing the sources, you know.
+
+Vlad Grubman   58:49
+Models not doing anything. Models only trying to understand what you're giving the model. This is exactly the, this is a good question. Too bad it's coming 2 minutes before we wrap up, but I'm going to answer it anyway. Models only processing the information. What you're doing is you're replacing the memory.
+Your.
+your like our human brain has memory and processing as a single unit, right? It floats in our heads and we feel very good about it. But if you go back to the computer, computer has two separate units. It has a CPU, which is a processing unit, and it has a memory. And that memory can be a hard drive, it can be RAM, it can be something in between, whatever.
+But those are two separate units. As it stands today, this is exactly what's happening with AI. You have a processing thing, which is your LLM, but that LLM lacks context. It can only remember the command that you're giving it, which is your prompt. So
+you can, you can, it doesn't have the memory. You can pretend there's a memory because of a large context window, but it's really not.
+So when you need, when you have 500 documents, when you have 500 transcripts that you want to process and understand what's in them, right, you need some kind of additional storage, some kind of additional memory, a true memory that will help you make sense out of those 500 transcripts. That's where solutions like these come. They help you.
+
+Alfredo Achecar   1:00:20
+Yes.
+
+Vlad Grubman   1:00:24
+have conversations with that memory. What do we know about this? How do we decide that we want to implement things in a certain way?
+
+Alfredo Achecar   1:00:32
+And, and that, and it's using that memory locally, then that's what that's what you were saying, like.
+
+Vlad Grubman   1:00:36
+It's using these flat files as memory. And you can apply RAG, you can do vector storage with a local memory. LLM has almost nothing to do with it. LLM will just go back to memory, same way CPU goes to RAM or hard drive, and say, hey, give me this piece of information, and memory will respond giving.
+
+Alfredo Achecar   1:00:39
+OK.
+Okay.
+
+Vlad Grubman   1:00:56
+that piece of information to it. It's easier to imagine this when you're building a mental model, easier to build, to think about this as LLM as a CPU and this structure that we've created as a memory, as a RAM or something like that.
+
+Alfredo Achecar   1:01:14
+Got it. Thank you.
+
+Vlad Grubman   1:01:14
+Uh, we're at the time, but I see Mia has a handoff, so Mia, we don't want to hear anything.
+
+Mia (Xiaoling) Zhou   1:01:16
+Yeah, when you say flat files, do you mean like all the folders and like the like memories you create in this like bringing?
+
+Vlad Grubman   1:01:24
+Yes.
+When I say flat files, I really mean flat files. If you can see my screen.
+
+Mia (Xiaoling) Zhou   1:01:31
+Okay.
+Okay, okay. The file's here.
+
+Vlad Grubman   1:01:35
+files here. These are the memories of this brain. And you can go into each individual file and read it if you so decide. Like, for example, if I created the vector storage, you can't, if it's a SQLite or PG vector or whatever, you can't read them. You have to trust that database.
+That, that, that, that, um...
+
+Mia (Xiaoling) Zhou   1:01:55
+Mhm.
+
+Vlad Grubman   1:01:58
+embedding model created the right embeddings and it stored them properly and because you can't review them.
+Here, everything is inspectable. Not that not that I would ever read this outside of this workshop, but that's kind of that's kind of.
+
+Mia (Xiaoling) Zhou   1:02:11
+Mhm.
+
+Vlad Grubman   1:02:15
+Yeah, this is how it is. Hopefully this was helpful. I'm going to stop sharing, stop recording. We're at the, we're actually over time, so I want to respect everybody's calendars. Thank you, folks.
+
+Mia (Xiaoling) Zhou   1:02:18
+Sykes.
+
+Alfredo Achecar   1:02:26
+Thank you, Vlad. This is great. Thank you.
+
+Nicholas Crowley stopped transcription

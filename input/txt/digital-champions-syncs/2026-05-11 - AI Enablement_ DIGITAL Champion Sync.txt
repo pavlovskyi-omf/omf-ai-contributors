@@ -1,0 +1,203 @@
+AI Enablement DIGITAL Champion Sync-20260511_152936UTC-Meeting Recording
+May 11, 2026, 3:29PM
+12m 21s
+
+Nikita Kumar   0:47
+Hello!
+
+Alfredo Achecar   0:50
+Hey, Nikita, what's happening?
+
+Nikita Kumar   0:52
+Good, how are you? How was your weekend?
+
+Alfredo Achecar   0:55
+Yeah, not bad, not bad. Yeah, the weather was super nice here in New York, so I'm sure you noticed.
+
+Nikita Kumar   1:01
+Yeah, yeah, I was out in Long Island because my family's out there, so I went to go see my mom, which was nice.
+
+Alfredo Achecar   1:07
+Oh, that's nice. Yeah, yeah, from us is very nice.
+
+Nikita Kumar   1:09
+Yeah, it was nice out there also.
+
+Alfredo Achecar   1:12
+Wait, which, which part of Long Island is she in, or did you work?
+
+Nikita Kumar   1:15
+They're in Suffolk County, so they're in Lindenhurst. It's a bit cooler by them because they're right on the water, so it's definitely a little bit more foggy. But it's still nice to go. Yeah. Always nice to have a little break from New York City.
+
+Alfredo Achecar   1:18
+Okay, yeah.
+Hello.
+Oh, super nice.
+Is it? Yeah, for sure, for sure. Is it, is it beachy there or more just like, like coastal?
+
+Nikita Kumar   1:37
+More just like coastal. They do have like some private beaches nearby that they go to. Like, it's like very like small town vibes, but it's cute because it's like nice and it's by the water and we've got private beaches over the summer. It's really nice to have like just to go down for the summer and they're like an hour and a half away. So it's not super bad.
+
+Alfredo Achecar   1:54
+Yes.
+Yeah, that's great. I bet. I bet that's really nice.
+
+Nikita Kumar   1:58
+Yeah, but like, you know, the hair, it's not as like, uh, not as like cute as the Hamptons are.
+
+Alfredo Achecar   2:03
+Yeah, yeah, yeah, yeah, yeah.
+
+Nikita Kumar   2:07
+Give everyone a few minutes. I know there's also like a Steerco meeting today, so I don't think a lot, like the leadership might not be on. I also know that there is, I think there's some leadership meetings happening this week as well, so not quite sure how many people will be able to be on today, but we'll give everyone a couple of minutes.
+
+Alfredo Achecar   2:13
+Yeah.
+
+Nikita Kumar   2:27
+and see who's able to join in.
+I think we're just, I think across the board, I think that's been low attendance today just because I think there's a ton of meetings happening. So we probably won't be on here for super long, but I just wanted to quickly share my screen. Let me know when you guys can see it.
+Can you guys see my screen?
+
+Alfredo Achecar   3:46
+Yep.
+
+Nikita Kumar   3:47
+Okay, awesome. I do see people adding names in, which is great. I've seen people kind of going in and putting their names in. If A use case is too complicated, I think we're probably not seeing much names and that's okay. But I just wanted to kind of just go over this with everybody. Alfredo, I think there was one more use case that you had. Or was this the one?
+
+Mia (Xiaoling) Zhou   3:47
+Yeah.
+
+Alfredo Achecar   4:11
+Ohh.
+
+Nikita Kumar   4:12
+Because I had added one of them that you had put in. I wasn't sure if you had added the second one.
+
+Alfredo Achecar   4:13
+But it.
+Yeah, yeah, yeah, I did. Was that in the same border or?
+
+Nikita Kumar   4:23
+Yeah.
+
+Alfredo Achecar   4:24
+Pretty certain I did.
+Ohh.
+It was there no, because we had there was like the cross-functional and then there was also like the larger one, this one, I think it was in the cross-functional one.
+
+Nikita Kumar   4:30
+It.
+Okay, oh, I see. Okay, so this cross-functional one. Got it. Okay.
+Um...
+
+Alfredo Achecar   4:43
+But there's definitely, there's surely overlap between.
+
+Nikita Kumar   4:46
+Yeah, it just.
+
+Alfredo Achecar   4:47
+But.
+
+Nikita Kumar   4:49
+It's like I have so many cross-functional use case like list things open. Let me just up right here. This one. Okay, perfect. Awesome. Yeah, I can. I'll review this with our team as well this week. So like these two I'll review with our team and then we can see how we can incorporate them into the cross-functional use cases as well and then have them as separate sessions also.
+
+Alfredo Achecar   4:54
+Yeah, yeah, yeah.
+
+Nikita Kumar   5:11
+So thank you for that. So basically what our goal was today, I just wanted to make sure that there was names attached to these, the ones that people think are interesting or want to work on. Some of them might be a little bit more complex, and that's okay. It might take some time to get there, but I am seeing quite a few people adding names in. There might be some that are not on there quite yet, and that's okay.
+But basically what we're going to be doing is this Monday session is now going to be more of like a status update of like, hey, where are you guys at? Where are you guys blocked? Where you guys need help from us? And then the Wednesday meetings that we have are going to be lighthouse meetings where the team is going to go over and show us like what their progress is looking like, give us like a little demo if they're stuck on something and we'll help you kind of walk through it and how to fix it or if there's.
+things that you guys need help with or need to ref ideas off of, we'll do that. So it's going to be a lot of you guys doing show and tell versus us doing show and tell. So I just wanted to put that out there. I also put that in our Teams chats as well, just so everyone is aware. But come this Wednesday, we're hoping that there are some teams, like even if it's phase one use cases that the team's already working on or.
+use cases that are not on here that they want to show. We just want to see what people are working on, and we can then take those use cases and start adding them into JIRA for transparency. So all the use cases right now that everyone's put names on, I'm going to go ahead and add all those in JIRA, assign, put their names on the people who have their name on there, just so leadership can also see, and there's transparency across the board on what's being worked on, what's in progress, and you guys can move them along.
+as you know, in progress or to do or you know, whatever planning phase that you're in for that specific use case as well. So that's going to be the plan for our champions and our lighthouse meetings. Any questions here? I know there's only a few of us on the call today, but I'll also reiterate this in our chat so everyone who's not here can see that as well. But any questions on this?
+
+Alfredo Achecar   7:03
+Nikita, not a question, but just a kind of a wild idea. Or maybe you guys have considered this already. Like, have you guys thought about doing perhaps maybe like a sort of like a maybe like a hackathon type thing where people, I'm just wondering like if it's if it's a.
+
+Nikita Kumar   7:03
+Yeah.
+
+Alfredo Achecar   7:23
+That could be a good forum to bring people together to, like, you know, actively attend some of these use cases.
+
+Nikita Kumar   7:29
+Yes.
+I think Vlad, we were just talking about this.
+
+Vlad Grubman   7:33
+Yes, we were just talking about this exactly. We were exactly talking exactly about that. We were, we just wanted to check with Moses and Shai. Well, if you folks can chime in and sort of voice it from your end, it would be really helpful. And we have a couple of ideas as to what that.
+what the topic of that hackathon should be. One of them is that brain thing because so many use cases, one way or another, touch knowledge management. But of course, not limited to it. Feel free to create your own. Maybe not this Wednesday, maybe next Wednesday. It actually might be feasible because I really don't want to delay it. I want to.
+Sort of push people into this as fast as humanly possible.
+
+Alfredo Achecar   8:20
+By this, you mean what, Vlad?
+
+Vlad Grubman   8:24
+building things, doing this hackathon, like honestly, I'm sure you know, I'm sure we're all kind of just pretending you don't have access to all these things because they're not like officially allowed, but I'm sure you know how much stuff, how much.
+How big of a thing you can build within an hour using using something like Codex or Cloud Code or something like that, so that's that's kind of that's kind of what I'm what I'm getting at. Maybe we can build something that's not really.
+
+Alfredo Achecar   8:47
+Right, right, right.
+
+Vlad Grubman   8:55
+That's not based on the company data, so we can use something more generic and use, I don't know, maybe you can sign up for a trial or sacrifice a couple of lattes and sign up for a month for Codex, 20 bucks, is more than enough to do a very heavy ex-high level hackathon session for an hour.
+
+Alfredo Achecar   9:00
+Mm.
+
+Vlad Grubman   9:17
+So...
+You know, something like that, we can we can probably do pretty easily, maybe get a few use cases on board and have people pick and choose or assign them, and and and literally I I was in ELT in Texas a few weeks ago, and there was a...
+
+Alfredo Achecar   9:29
+Yeah.
+
+Vlad Grubman   9:37
+two hour hackathon using free version of Lovable. And of course, free version of Lovable allows you exactly 3 questions. So not much, not much to go on, which is why I was thinking let's get everybody either on Codex or Cloud Code or something like a personal thing.
+And, and, and select the use cases that will definitely fit, so yeah, we, we, we're trying to get this.
+
+Alfredo Achecar   10:13
+Okay.
+
+Vlad Grubman   10:14
+appreciate it because we're thinking the same thing.
+
+Alfredo Achecar   10:16
+Okay, okay, cool. Yeah, yeah, good, yeah, good to know. I'm, yeah, that's helpful, that's helpful, helpful insight.
+
+Nikita Kumar   10:25
+Thanks, Vlad. I don't know, Vlad. I don't think since there's only a few people on right now, I think 3 from OMF because there's a lot of calls happening. I don't want to keep people, but I think we are seeing people adding names to use cases. So I'm going to take those and put them into JIRA. So on Wednesday, we can review that, show the team, and then ask for people to do presentations for Wednesday this week.
+Does that work?
+And then that way, hopefully by next week, we can try to figure out maybe a hackathon situation.
+
+Vlad Grubman   10:57
+Yeah, just want to bring this up for you all folks, and then please, please relay the message to tell your friends. We are tracking things in Jira, so all these use cases need to be tracked in Jira because that's how we look at, that's how we generate our metrics that are then surfaced to upper management higher leadership.
+
+Nikita Kumar   11:12
+But.
+
+Vlad Grubman   11:15
+So, we'll do the pre-work for you. We'll move the stuff into the JIRA, set things up, but then you will need to do the actual reporting so that the work that you're doing is visible and recognized. And there will be recognition. I'm spoiling a couple of things or foreshadowing.
+There will be a recognition, so...
+
+Nikita Kumar   11:39
+Thank you.
+Yes, we have nothing else for today. I'll give everyone time back. I'm sure people have lots of things to do on Monday, so I can give everyone time back. If you have any questions, just let us know. And if you want to take a look at adding your name to the use cases, I'm sure I'm going to be honing in on that more and more chat. So you'll probably see that coming in across more too.
+Let us know if you have any questions, and then for Wednesday, I'll show you guys where the JR board is with everything in it, and then we'll see if anyone's able to do a demo on Wednesday as well.
+Thanks, everyone.
+
+Vlad Grubman   12:14
+Thank you, folks.
+
+Nikita Kumar   12:16
+Have a great day. Bye.
+
+Alfredo Achecar   12:17
+You too, thanks.
+
+Iryna Pashko   12:19
+Thank you.
+
+ stopped transcription

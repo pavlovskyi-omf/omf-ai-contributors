@@ -1,0 +1,761 @@
+AI Enablement DIGITAL Lighthouse Session-20260506_155941UTC-Meeting Recording
+May 6, 2026, 3:59PM
+50m 29s
+
+Nikita Kumar   0:16
+Hello.
+
+Vlad Grubman   0:19
+You know when you join the meeting it says organizer plus two people joined.
+
+Nikita Kumar   0:25
+It's me.
+
+Vlad Grubman   0:26
+You got home.
+
+Nikita Kumar   0:29
+It's always me. I'm all the people.
+Pudota.
+Hopefully we get some good attendance today.
+Hello!
+
+Vlad Grubman   1:03
+While we're waiting for folks, hey Josh, while we're waiting for folks, I restored my extension that saves AI chats automatically.
+
+Joshua Smith   1:08
+Good morning.
+
+Nikita Kumar   1:15
+Uh-huh.
+
+Vlad Grubman   1:16
+I'm gonna use that to populate my brains.
+
+Nikita Kumar   1:19
+Yes.
+
+Vlad Grubman   1:20
+I'm losing, I'm gonna start losing stuff. Like, I remember I had the conversation, but I don't remember what it was, so I'm just gonna gradually save everything, all the conversations, and populate the brain with them.
+
+Nikita Kumar   1:34
+Nice.
+I feel like there's so much sometimes in my brain that I'm like, what happened here? What was I talking about?
+
+Vlad Grubman   1:42
+Yep, yeah, yeah, you need to offload that cognitive load. You need to delegate it, but where can you delegate it? So, cool, second grade.
+
+Joshua Smith   1:50
+I think that's an underrated use case. I think that's great. It's underrated, I think.
+
+Vlad Grubman   1:56
+I'm not gonna, I'm not gonna say like how I would prioritize it because it comes from necessity. I have so many like parallel threads, like several projects, use cases, even within within EPAM, and even within this engagement, there are multiple things that I need to take care of, so it does help.
+Was like compartmentalizing and, like, hey, what do we have here? What do we have here?
+Technically, it's knowledge management, but it's kind of like...
+Really weird.
+But I'm happy to share.
+if you folks are interested.
+
+Nikita Kumar   2:36
+I'm just going to use your brain as my brain, so you'll know whatever I need as well.
+
+Vlad Grubman   2:44
+Sure, whatever works.
+
+Nikita Kumar   2:44
+Hello, everyone.
+Hello, everyone. Okay, I think we can get started. I was hoping Mo would be on here so he can give us a demo of process improvement today. So I think that was our plan.
+Let me do a quick thing.
+see if he's able to join. If not, it might be towards the tail end of the session.
+
+Vlad Grubman   3:29
+While we're waiting, Xavier, I saw your message. I just didn't get a chance to, I need to talk to Mikhail. He's done something very similar to it. So before responding to you, I wanted to check with him, see if there's a better, faster way of doing what you wanted to do. But I didn't forget about it. I just didn't really know how to respond until.
+I asked him how he did.
+She's got something similar.
+
+Xavier Ferguson   3:54
+Okay, I appreciate that Vlad.
+
+Vlad Grubman   3:57
+Yeah, yeah, don't, yeah, sorry, I think we had meetings since 8 A.m. until like 5 P.m. last night, yesterday, so I just didn't get a chance to type the response back.
+
+Xavier Ferguson   4:08
+Yeah, no worries.
+
+Vlad Grubman   4:08
+But I'm looking into it, I'm looking into it.
+
+Nikita Kumar   4:15
+It seems like this is it. Just a quick question, Shai. Is there anything we could do to encourage more people to hop into these conversations? Because there are like these are mandatory meetings for them. So just wanted to see it. Just it feels like the attendance keeps dwindling down a little bit.
+
+Shai Eilat   4:34
+We can yell at them. Maybe that would work.
+
+Nikita Kumar   4:37
+I'm gonna leave that to you.
+Should be like, at Shai requesting attendance, please come through.
+
+Shai Eilat   4:42
+Yeah.
+Yeah, we'll bring it up there. We have a...
+
+Alfredo Achecar   4:49
+Yeah.
+
+Shai Eilat   4:53
+Have an off-site with our leadership team on.
+Tuesday, so we'll discuss it.
+
+Nikita Kumar   5:00
+Okay, cool. I know we wanted to do a demo for Mo today, but since he's not right now, we can save that for later if he joins in later. But today we did send across the potential use cases that we've seen and heard from you guys in the last couple of weeks for phase two. And Shai, I have your phase one update too. I'm just getting an update from one more team and I'll send you what that is.
+I'll send you the link to that so you'll have everything from phase one as well. But I'm going to share my screen. What our plan to do today is I'm hoping everyone's looked at these or at least done some looking at these. We've sent this link out quite a few times already in this past week. But basically our goal is these were the use cases that we heard from you guys in, you know, what's ideal scenario in the survey that you guys have sent.
+just talking through in conversations. What we would love to do is go over these use cases and then assign if you want to work on it, put your name to here, and if you want to just use it and not work on it, but be aware, we'll put your name here. But this way, the goal is you guys can start taking these use cases, start working on them offline, and Vlad and I can hop in with you guys whenever you guys need to actually start building these out.
+That way, it's not just, you know, the first phase of use cases, but you are getting a lot more use cases, different, especially these are the ones that you guys have brought up to us. And then the goal for the Lighthouse sessions going forward will be you guys demoing these use cases, what you're working through, and our champion session will be status updates from the champions themselves.
+How does that sound for everyone? Did anyone get a chance to look at this link as well beforehand?
+
+Xavier Ferguson   6:34
+Nikita, I take a look at it. I would like to sign my name up for use case two. I'm doing something. We have a similar issue from like the payments line perspective where.
+We have a lot of information to share across our partners. There's a lot of meetings to do that. So I saw Karly mentioning this. I think right now manually, I've created a confluence page to be shared. I'm sharing that out on like a biweekly update. But I think there's definitely an opportunity to use AI to.
+all that information for us and for the team from different sources. So it just makes it a little bit easier. But at the end of the day, it's reducing the meetings and providing the information to our stakeholders in a meaningful way. So I can definitely work on that.
+
+Nikita Kumar   7:22
+Hmm.
+Perfect. Thank you. And then for anyone else who wants to use this after it's been built, we can put your name here as well. So you can just keep an eye on it. You don't have to go into it, but you can, if you want to use this later, we can tag your name to this as well.
+Uh, but...
+
+Alfredo Achecar   7:39
+Hey, hey, Nikita, just a kind of a question and a comment.
+So some of these are more, so there's some overlap in some of these and also some of these are much more complex than others. And I'm sort of thinking like if they were put down here is because it's not something you can just do with one, you know, with like one simple GPT, right? Like these are kind of complex use cases.
+that involves multiple teams and multiple levels of approval and like coordination. So there's like a significant level of effort in some of these.
+So, I'm trying to see, like, is there some kind of grooming that we should do here, 'cause you know there's like twenty-seven use cases or so, like, is the idea that we're in or more actually way more thirty-five, like, is the idea that...
+
+Vlad Grubman   8:26
+Can I, can I, can I jump in here for a second? I'm sorry, I apologize. I really, I really like your question, Alfredo, because it really...
+
+Nikita Kumar   8:28
+Yeah, go ahead.
+
+Alfredo Achecar   8:29
+Sure.
+
+Vlad Grubman   8:37
+We kind of meant it like that. So, and we already put the theme in to kind of nudge you towards that towards that end. Of course, there are overlaps and putting all these use cases together and presenting them all to you folks is our way to encourage you to think about is there a more generic.
+
+Nikita Kumar   8:53
+I.
+
+Vlad Grubman   8:56
+way to look at this? Is there a better way to address these use cases? Can we combine and solve for more people instead of doing one off here and one off there? So first part of the answer is yes, of course. The second part of it, the complexity. So
+I know there are, and it's probably the, there's probably two ways to address that. One is how we did it before, and the other one is how we encourage you to try to do things now. Again, notice the word encourage, right? It does a lot of, it does a lot of work here.
+So, for example, any use case, take whatever, decision knowledge management agent, right, the number one. In the original sort of way of doing things, the original ways of working, you would have to go to, you know, through proper channels, get approval, get...
+you know, scope it out, build the roadmap, build the backlog, and build things. That's the proper way of doing it, right? The way...
+I guess we, Nikita and I, would probably encourage you to try doing these things is try building them yourself. Like, forget about everything, just try to build it on your local machine, however, whichever way you can. You have access to GPT, you have access to cursor, you have access to Robo, see what you can stitch together.
+to see, to even understand, like, does this solve a problem? Where does AI come in? Because AI is not like a silver bullet. It's not going to solve everything. You need to think through how you're applying it. And again, it's not like you're doing something wrong. It's just the way of doing things. But if you can go and build these things yourself using the tools that are available to you, and it's mostly cursor.
+But you can use others if you want to. You can use code me if you're if you're there, or you can you can wait until security team finally unlocks something something else, and and you can do things there. For example, we just got a word last night that some of the MCP servers are unlocked. So, for example, Figma.
+Should be working the.
+Microsoft Graph MCP should be unlocked. I haven't tested it yet. I can't vouch if it's working or not, but you can try it. What it does is you can basically connect to Microsoft MCP server and say, hey, given the transcript of the latest meeting, again, caveat.
+Your your your transcript has to sit on your heart on your OneDrive, so you have to be the meeting um originator to have access to the transcript, otherwise you're back to score one. No, you're not gonna have access to it, but...
+TLDR, try building things yourself, see how far you can go before trying to start that whole process. Because honestly, to me, the whole process is very discouraging, right? I need to start thinking about it. I need to start building the whole workflow of approvals, you know.
+Just try building things. That's kind of what I started doing with that second brain concept that I was showing a couple of people. I just build it locally on my machine, and it turns out I don't really need a complicated infrastructure. It's just a bunch of files on my local machine that I can use and share with other people if I want to.
+
+Alfredo Achecar   12:27
+So I think I'm following your logical thinking here, Vlad. But there are, so I think there are some projects where they're much more, the scope is much more limited. So like I say, yeah, on my own, I can kind of give it a go. But a lot of these projects, for example, you know, decision and knowledge management,
+
+Vlad Grubman   12:27
+Just try it.
+
+Alfredo Achecar   12:47
+If that's a if the scope of that is multiple teams.
+Then, like, and even even within one team, there has to be an agreement there. OK, now everybody's gonna record every meeting, now we're gonna funnel this into some kind of repository, and then we're gonna like do, you know, you know, some processing in somebody's local machine or Harvard's Harvard's done. It's not a it's not a.
+It's not a simple scope. So that's what I'm trying to kind of like point to here. Like if these were easier to try on my own, on our own, I think we would have.
+Is that making sense?
+
+Vlad Grubman   13:24
+Sorry, say again, can you repeat the last one instead of trying it on your own?
+
+Jatin Bagga   13:25
+Yeah, can you, Alfredo, sorry, go ahead.
+
+Alfredo Achecar   13:29
+So, okay, I think some of these use cases are kind of chunkier than others.
+And not only are they chunkier, they also involve multiple teams.
+So like this concept of like, yeah, just try it on your own, I think is valid for smaller scope projects.
+That you know don't affect multiple teams, that don't require approvals, that don't have like a privacy issue, for example, but some of these projects require multiple teams coordinating and multiple endpoints coming together. So, for example, like in the knowledge management.
+Like, you know, that that may be that may involve recording multiple meetings, having having everybody agree to record the meetings, that way that you can sync that all knowledge together, right? So, that's not a it's not a it's not just like a one person experimenting, it's multiple teams agreeing to a process together.
+And also, it's way more impactful for sure, but it's not just as simple as like, you go and try it on your own.
+
+Jatin Bagga   14:28
+Well...
+
+Alfredo Achecar   14:28
+Because if it was that simple, we probably would have already done it.
+
+Jatin Bagga   14:31
+Yeah, and Alfredo, I kind of agree with you. I would just like to say one thing though, right? We're a very process heavy sort of org for some things more than others. And I feel like with AI, we should be less process heavy and we should feel like we should be able to experiment with stuff that we think is right in a more nimble fashion. I feel like that's where the power of this AI initiatives comes into play.
+And so yes, it could be decision by committee with like 10 people agreeing on stuff, but that's just going to delay it, right? Like we've seen, at least I'll say in payments that lane, right? Like a lot of things just get delayed because of process approval. I don't know if Eric's on the call, but he can vouch for that too. So I think that it's a hybrid that we need to figure out, like what's the best way that the right people are in place and then they become sort of the evangelists, you know, like any product manager would.
+
+Alfredo Achecar   15:07
+Yeah.
+I think that's never lane.
+
+Jatin Bagga   15:18
+When I say product, meaning product UX and you know everyone. But to me, I feel like we need to really find ways how we can quickly make decisions and move forward rather than just waiting for everybody to align. That's just my two cents.
+
+Alfredo Achecar   15:30
+Oh.
+100%. It's not, but I'm, I think I'm putting to something different. Okay, for example, let's take an example, number 13.
+Customer support, self-service chatbot. That's something that someone can try on their own, perhaps, but to actually get it working, then you need legal approval. You need, like, and I know, Jatin, you worked on some, you know, you're working on the one on the one advisor project. That's not a simple, yeah, it's a simple maybe proof of concept.
+But the actual application is not so simple.
+
+Jatin Bagga   16:04
+I hear you. I hear you.
+
+Nikita Kumar   16:04
+Yeah, and like, these use cases are meant to be like, some of them, if they are complex, like, we're not saying you have to work on every single one of these. I think the goal is like, there's a lot of these. We're not expecting everybody to, we're not expecting people to work on 35 different use cases. What the goal is to go through and see what's actually feasible to work on, and that will benefit you or your team.
+So you don't, we don't have to assign every single one to someone. It's more so like, here's what we've heard, but if this doesn't make sense right now, that's okay. We can pause on it. We can move on to a different use case that might make more sense. And like certain things that like, if you're saying like, for example, this one is gonna bring in a lot of people, a lot of different processes and a lot of different teams.
+Maybe try it at a smaller scale, similar to what Jatin is doing, right? Like voice of customer was very heavy on like, oh, let's see what we can do with everything. And now that he scaled it down to just the payments team, it's a lot easier for him to build that based off what his team needs. And then the goal is so you build it for yourself and your team first, see if it works, and then other teams can replicate that work.
+and then can take those agents or workflows or agentic things and actually replicate and see if it works for them, because it'll be different across the different teams. But if something is super, super complex, we're not saying you have to work on it immediately. It's more so like, here's a list of use cases, which ones do you prefer to work on and do you think are going to add value to your day-to-day and your teamwork?
+
+Jatin Bagga   17:28
+I agree with Nikita. I think what you said it well. I think, Alfredo, it's, first of all, I think your question just amazing. It's very appropriate, very true. But I don't think you can get a clear answer on this. Really, I think it's like situational based and then you'll have to pick and choose minor use cases. Really, that's the way I feel.
+
+Alfredo Achecar   17:45
+I.
+Yeah, fair enough. Fair enough. I don't. Okay, last thing I'll share here, because like if we were thinking of these as products, right, or let's frame them as pain points. In the product building process, we have methods for actually like prioritizing pain points,
+Figuring out which ones will have more impact, and then figuring out, like, which ones to tackle and how, like, we have processes for that, and it's, you know, there's multiple workshops, there's design sprints, there's brainstorming sprints, etcetera, so I'm wondering if...
+Like they're worth applying, I don't know. I feel like I'm maybe going too far out on a limb and taking this maybe more seriously than it should be taken.
+Yeah, I feel like this is, there's other methods of doing this that, but that maybe, I don't know, that maybe more more impactful if we're taking it very seriously.
+
+Nikita Kumar   18:46
+It can also be like, you know, if you want to take it as a product, that's fine. Like if it's you and like somebody else working on it, you can take that offline. Like once you have your use case, you guys can still talk about like, okay, here's how we want to build this. That's okay. It's not like you don't have to dive right into building. You can come up with a plan for your team or like whoever you're working with on this to help.
+work on it together if that makes it easier as well. Like we, everyone's got a different style of working and we don't expect everybody to dive into everything, you know, head first. But if you need to plan it out and do that, that's okay. And if you need to, if you want to go in and experiment, that's also okay. At the end of the day, we just want to see like how these use cases are evolving and how they're coming about so they're beneficial for your team.
+
+Jatin Bagga   19:28
+And Alfredo, one more thing, you know, which should help, I think, you know, Chantelle is in our team. She's a back end for front end, like BFF developer. And she and I were talking today in our sprint planning. One of the things she said, Jatin, your point was great yesterday in the call, you know, when I forget the name of the gentleman, not all X, but the other chap who was showing us, you know, how to automate some of the workflows.
+And I asked the question, hey, how about as the status changes, can we like have a push request that goes directly to the GitHub rather than like people manually waiting? And I think that Chantel just brought up, she says, you know what, that would be a great idea for us to test it out. Now suddenly there's a use case, potential use case, where Chantel and I, and you know, a couple of other people in engineering at QA can just partner and you know, test it out. It's a small use case.
+Doesn't mean other teams can't do it, but hey, if we could prove it out and it helps everyone, anyone could jump on it. That's why I feel like there's a little more scrappy than like a structured way of doing things from my perspective.
+
+Nikita Kumar   20:22
+Yeah.
+Yeah, agreed. It is more so, it's more, I think we, in phase one, we were trying to do process, we were trying to say, here's the five use cases, and it's taken a while to get there because everyone's trying to scale it bigger rather than going small 1st and figuring out if it works for you. So in this phase, we want to say like, here's a bunch of use cases.
+which ones are interesting to you to work on and like be scrappy, play with them, go forth and experiment because that's how you're gonna kind of learn, right? Like you're, we're just gonna, we're tossing you into the pool and you're just gonna have to swim, sink or swim, but not, well like we're here, right? We're here, we're your floaties, we're here to help with all of that stuff, but realistically like.
+Like we don't have to scale it right away. We don't have to think about going big picture immediately. It can start off small, see if it even works and it's feasible. And then if it does, then great, then we can start talking about bringing in other teams, bringing in other people in general, and scaling your use case to a wider audience as well.
+Matt.
+So, oh, thank you, Joshua. I saw your name on this one. So yeah, these are all also, by the way, mentioned from all conversations from you guys and surveys that have come up from you guys. So we're trying to separate them out because some of these, yes, there's themes to all of them, but they all have multiple different ideas in them. So yeah, we have a decision and knowledge management agent. So Josh,
+Thanks for putting your name here. Does anybody else want to work on this? Or if they want to use it, I can put your name here as well.
+
+Joshua Smith   21:57
+Yeah, I put that.
+
+Shai Eilat   21:57
+Which one is that? Is that number one?
+
+Nikita Kumar   22:00
+Yes, number one.
+
+Joshua Smith   22:02
+I put my name down there because it sounded very similar to what we were discussing offline with kind of the setup that.
+that you all forwarded over to kind of get started with setting up the structure for that. So.
+Seems like.
+
+Nikita Kumar   22:17
+Cool.
+
+Joshua Smith   22:19
+Yeah, overlap, so I took it.
+
+Nikita Kumar   22:21
+Yeah, yeah, similar, for sure.
+And then anybody else who wants to also use this, I can tag your name or if you want to tag your name after for I want to use this, you guys all have access to the links as well.
+
+Doug Ball   22:27
+Yeah.
+
+Nikita Kumar   22:37
+Ohh.
+
+Xavier Ferguson   22:37
+You can tag my name and Josh, we can work on those together, one and two, to your point, they overlap. So.
+
+Joshua Smith   22:43
+Yeah, I love that. That's a great, great call.
+
+Jatin Bagga   22:43
+Yeah.
+And I would say Josh and X, like for instance, one advisor does some of this work as well. So maybe like we can just talk through like if we've built already the foundation, like is this just an add-on to like a trusted knowledge source or something that would help, or just the documentation, something we can talk for quick like 10, 15 minutes and align on.
+Like, can we take advantage of what's already there from a rack search standpoint?
+
+Xavier Ferguson   23:10
+Yeah, absolutely.
+
+Joshua Smith   23:13
+Yeah, good idea. Let's not reinvent the wheel. So let's pull that knowledge forward and build on it.
+
+Nikita Kumar   23:15
+Yeah.
+Thank you. And #2, we've got names. Okay, three, meeting actionable insight agent, converts transcripts into summaries, decisions, risk, inconsistencies, and action items. I know if you're using Copilot, it already does this a little bit, but if you want to build a more different agent that's actually
+specific to what you're looking for, that's also feasible on here. So does anybody want to work on this one?
+We can add your name on here.
+
+Xavier Ferguson   23:48
+I.
+
+Nikita Kumar   23:58
+Somebody comes back to this, we'll put your name on here. AI knowledge hub and shared repository, central hub for agents, prompts, trainings, and workflows and use cases to avoid duplication and improve discovery. This is also part of knowledge management. There's a lot of, the pain point is fragmented, confluence, duplicated work.
+So if anybody wants to work on this.
+
+Vlad Grubman   24:19
+For those who are undecided and somebody wants to tackle us, I already have like 70% of the work done. So if you want to just take it off of my hands and move on with it, feel free to feel free to do it.
+
+Nikita Kumar   24:42
+Should I just assign them all to you, Shai?
+
+Joshua Smith   24:48
+We could do like a raffle or something like that. Yes.
+
+Nikita Kumar   24:50
+Yeah, pick a name out of a hat.
+
+Shai Eilat   24:53
+I mean, I assume someone, someone suggested it, right? Like, I, how did we kind of like collected it? Someone suggested it, so I, I would imagine whoever I see mentioned by...
+
+Nikita Kumar   24:54
+What?
+It's Mia.
+It was like dream scenarios.
+
+Mia (Xiaoling) Zhou   25:08
+Ohh.
+Yeah, I mentioned it, but I, I'm not sure is that like a like a true use cases we.
+
+Shai Eilat   25:17
+You can put, you can put Dominika, because I know that she's already working on that.
+And, uh, Mia, I know that you suggested something similar, so I think you, you can, I know that more of us ask you to kind of like reach out to to Dominika.
+
+Mia (Xiaoling) Zhou   25:33
+Yeah.
+Yeah, yeah, I remember Moses that they already working on something.
+
+Nikita Kumar   25:40
+Like.
+
+Mia (Xiaoling) Zhou   25:42
+Like this.
+
+Shai Eilat   25:42
+Yeah, but I think you can definitely use your kind of like design perspective and some of like your technical knowledge to.
+To partner on, so maybe we can we can tag you there, and you can tag me if I want to use this, 'cause...
+
+Mia (Xiaoling) Zhou   25:53
+Yeah.
+
+Shai Eilat   26:00
+This is something I wanted to create and I'm happy that someone has taken the initiative on it.
+
+Nikita Kumar   26:03
+Yeah.
+
+Joshua Smith   26:06
+Actually, Shai, I think you bring up a good point there. I wonder if we should try to get some sort of technical representation on other ones as well for like the one and two with me X.
+
+Shai Eilat   26:21
+I mean, I can't volunteer anyone from like the engineering team. I think it will be for you guys to reach out. And like, if you need someone to reach out to your engineering team and see if they're, you know, Jatin asked my help specifically with like a resource that was like kind of like more dedicated, like four or five hours a week over six weeks. So I
+
+Nikita Kumar   26:22
+Ready?
+
+Mia (Xiaoling) Zhou   26:22
+Yeah.
+
+Nikita Kumar   26:29
+Thanks.
+
+Joshua Smith   26:34
+There, we.
+
+Shai Eilat   26:42
+I went to Dana, I went to Kamal, I did kind of like all the, but if you need someone to help, at least look at it and understand the effort and, you know, start kind of like just reaching out to people and if you need help, you can reach out to me.
+
+Joshua Smith   26:50
+Yeah.
+Sure, absolutely. We can take that approach. I was just curious if there's anyone on the call who wanted to raise their hand as well right now. But if that's not the case, then yeah, we'll do that.
+
+Shai Eilat   27:04
+I think we're only product and design folks here.
+
+Mia (Xiaoling) Zhou   27:04
+Oh.
+
+Nikita Kumar   27:06
+Yeah, it's just a digital team, yeah.
+
+Mia (Xiaoling) Zhou   27:10
+Yeah, but Josh and X for the first use case, I was in the like knowledge management, like something pretty similar for the phase one use. I was in that use case group. I did some exploring and.
+If you need, I can share some the work I did, but I just run it like tech, I mean tech technically, I make it like works, but I'm not sure if that's like a...
+helpful like from like functional.
+Standpoint, yeah.
+
+Xavier Ferguson   27:48
+Yeah, I think between Josh and what they've created with One Advisor and what you've done, Mia, then to Josh's point, we shouldn't reinvent the wheel. So we will love all the perspectives we can get.
+
+Mia (Xiaoling) Zhou   27:49
+Mhm.
+
+Shai Eilat   28:00
+Yeah, yeah, I agree with Jatin. I think it would make more sense to add another data source to one advisor instead of like trying to create a new tool because it's working, it's ingesting multiple sources, we're adding more sources. So like it is, it is, it was built at least initially with like a mind of like how do we support team members.
+
+Xavier Ferguson   28:21
+Mhm.
+
+Shai Eilat   28:21
+But I know that there's a lot of other folks that are using it. So maybe we need to think from like a product perspective.
+What can we ingest anything into that without breaking it, obviously, and to make it more helpful for product managers?
+I don't know, Jatin, something to think about. It is an enterprise tool, so I'm more reluctant to...
+you know, mess with it.
+
+Jatin Bagga   28:45
+Yeah.
+Yeah, and you're absolutely right, Shai. And I think just a couple of tidbits for reference, right? So since we've added policy and procedures, we've added ops comms, like operation communication in there. This week, we're going to pilot test job aid. Hopefully next week I can launch that. Then we're going to go to the bigger piece, which is HR total rewards, so all your benefits, right?
+So I feel like there are a lot of good knowledge, trusted knowledge sources that we're adding. So like, I feel like X and Joshua, like there's specific things like that, like we can evaluate the ROI and stuff, but I feel like those would be easy, like low lifts, I think. And Dana, Shai, she's been saying, right, she wants like the things that makes good sense, just add them as long as there's some ROI to prove. So I feel like.
+Should be a very useful, you know, thing for one advisor to add.
+
+Ron Seager   29:31
+Wow.
+
+Xavier Ferguson   29:36
+Yeah, I'm curious. I don't want to break the tool, right? So I'm wondering if we can copy and paste it and use as a proof of concept somewhere else. And then that way we can inject or feed it more data sources and.
+We can play around with it without breaking in. If it works, great. And we can talk through, does it make sense to have just one tool for that? For everything team members in and product, or should it be two separate use cases or tools to be used?
+
+Jatin Bagga   30:01
+Yeah, that's a good question, X. I think the way it was built was very scrappy to now a little bit more enterprise scale. Like we got the dev environment, we got, you know, the state, not the state, yeah, the staging, but not UAT yet. Maybe we can talk offline, X. I think there may be some legs to this. I think, like, you know, how do we create like a plone of this maybe to experiment with.
+
+Xavier Ferguson   30:15
+Yep.
+
+Shai Eilat   30:24
+Yeah, Nick, Nikita, what's the what's the overlap between this list and the list from phase one? Is it is it kind of like encompassing everything?
+
+Nikita Kumar   30:31
+There's.
+No, from phase one, so this is different agents in knowledge management, so it's not really an overlap. It's now breaking down knowledge management from different perspectives. So this is everything new that we've heard in the last couple of weeks. I tried to dedupe it from like phase one as well, and there wasn't really much overlap there. Because I think phase one was just from like our assessments. We tried to capture what we can from that, and like we got those five use cases.
+This is like different parts of like the theme which is knowledge management or a different part of voice a customer, different part of additional different things that are happening throughout.
+
+Shai Eilat   31:08
+Okay, because I did see like the voice of the customer use case there.
+
+Nikita Kumar   31:12
+Yeah.
+Yeah, this is.
+
+Shai Eilat   31:14
+So that's essentially the same as what we had in phase one.
+
+Nikita Kumar   31:17
+Yeah, I think because this has been brought up multiple times, I left it in here because I know the team's already working on it and it's gone into phase two as well.
+So this one I kept here because I know Jonathan's already working on this one.
+
+Shai Eilat   31:32
+Okay.
+
+Nikita Kumar   31:34
+Yeah, and I know Jonathan, do you want, your name is already here, but do you want me to, can I also add your name on here because you're already working on this?
+
+Vlad Grubman   31:42
+I think he just dropped.
+
+Nikita Kumar   31:44
+Oh, okay, well, when I add his name anyways.
+He'll see it.
+Cool. I know we only have like 14 minutes left, so let's try to get through as much of this as we can. And then you guys offline can also fill this list out by the end of this week and just put in your name on what you want to work on and versus like what you want to use after. Okay, so we'll come back to here. Meeting actual agent. I don't think anyone wants to work on this. That's okay. If you want to look at it later, feel free to add your name to this.
+document freshness. Thank you, Xavier, for putting your name down. With some customer, we have Justin and a few other, sorry, Justin and a few other folks here as well. This was something that was also brought up from the team, faster AB testing workflows, so accelerate full experimentation life cycle from idea validation design. This is a really good use case. It can be worked on if anybody wants to take part of this.
+as well. Any volunteers here?
+
+Eric Trenz   32:39
+I'll work on this. I'll work on.
+The next three are pretty related. I'm wondering if they...
+
+Nikita Kumar   32:48
+Okay.
+
+Eric Trenz   32:52
+Should even be.
+Separate line items.
+
+Nikita Kumar   32:58
+We can combine, yeah.
+
+Eric Trenz   32:58
+But, but I'm happy, I'm happy to work on the three or however you wanna you wanna put that.
+
+Shai Eilat   33:02
+Yeah.
+Yeah, I I would I would combine them, but Eric, I have I have another point here. I was just asking, Eric Lee, sorry, if if there is there is an opportunity to use AI. So, one of the issues that we've been facing, especially now in in collection or we're trying to design some AB test, is that customers are being exposed.
+To both the variant and the control, and there are a lot of like issues with just like making sure that what we kind of like created is what customers are being exposed, so we create like an A/B test in Optimizely, but then we go to Glassbox and we pick a few user IDs and we're like, oh, this person is actually exposed to both.
+
+Nikita Kumar   33:38
+Oh.
+
+Shai Eilat   33:42
+this is exposed, this person is exposed to neither. And we talked about it, Eric, that Optimize, they have their own kind of like AI assistant. I just want to understand if there is like a more systematic way to validate that what we design is actually what customers are being exposed to outside of randomly picking up customer IDs and doing validation like that.
+
+Eric Trenz   34:06
+Yeah, I'll say.
+I haven't looked at that much. I like that side of things, like the validation, more so looked at lines like 8 and 10, or 7 and 9. I haven't looked at that side much.
+Um...
+I do.
+I'm thinking if that's more so like caching and like technical issues as opposed to...
+I, I, I guess.
+Long answer short, I have to think about that more and like whether AI can be utilized there and how.
+
+Shai Eilat   34:52
+Yeah, I, I, I ask, I ask Eric Lee to, you know, also connect with with them.
+Which Brian Woods and for Brian want to kind of like reach out to the vendor and understand like can we use what's the name is that Opal the AI system they have?
+
+Eric Trenz   35:06
+Opal, I want Opal access for other reasons, but sorry, go ahead.
+
+Shai Eilat   35:12
+Yeah, so like it seems like we're doing validation in a very primitive way right now, and I want to understand if Optimize may have some sort of like a solution for that, and if they do not, can we think about something internally that we can build to do a more systematic validation? So I understand that it's a little bit separate than what we're doing here, which is seems more kind of like setting up an.
+experiment and accelerating the setup.
+But something to think about in this context of experimentation.
+
+Eric Trenz   35:43
+OK, fair enough.
+
+Nikita Kumar   35:45
+Thank you. I combined all of them into one so you can see all of it here because the theme is across the board the same and then I have you and Alfredo on here as well.
+And Alfredo, I see your name here. Thank you so much for AI design and copy generation. AI powered user testing and research acceleration, generate test scripts for user stories, real or synthetic, and accelerate research cycles. Thank you, Alfredo. Anybody else want to work on either of these two we can add in here?
+For names.
+No worries, you can add your name in after. Synthetic user and persona simulation. I think Nicole and team is already working on some of this with their CIA work as well, but this is more so that you can actually start using them and using your different environments to start testing ideas before the real users. I know we're building the users.
+but I'm not quite sure how much of the actual experimentation with the users has started yet.
+So if anybody wants to work on this, I think you'll probably be working with Nicole and Manu and team as well.
+Katie.
+
+Shai Eilat   37:00
+But again, same question asked before, is this a follow on work to kind of like the CIA agent? Like how is that different?
+
+Nikita Kumar   37:09
+Yes, so the work that they're doing is actually building the personas and building the agents, but we haven't seen any actual in like experiments done with the work that they've already built. So this is more to test that work now to say, okay, now I have like 3 or 4 personas that are built off of our research. What ideas can we test with them early before we even get to the user? So now it's actually building on that theory that they already have.
+Set in place.
+
+Shai Eilat   37:35
+So we're not building anything new, we're testing what we already built. Okay, maybe let's just clarify that.
+
+Nikita Kumar   37:38
+Yeah, so you can use this as like agents. Yeah, yeah. So we can put a note on here, useful for...
+I don't know if anybody wants to work on this, but it's a great way to test your synthetic experimentations to see if they're working.
+
+Shai Eilat   38:02
+Has anyone here used, for whatever reason, whether it's brainstorming or experimentation or anything else, that CIA tool that Nicole created in the first phase?
+
+Alfredo Achecar   38:15
+Yeah, I've used it a few times.
+
+Shai Eilat   38:18
+In what, uh, in what context? Like, what did you guys do with it?
+
+Eric Trenz   38:19
+Either.
+
+Alfredo Achecar   38:19
+Nothing.
+So, like, we're working on some new account creation concepts, and I was running, like, you know, uploading screenshots to this to the ChatGPT to the GPT to see what what what feedback they gave me.
+
+Joshua Smith   38:38
+And our designer, our designer Bertha used it to validate some concepts for plaid token sharing.
+
+Shai Eilat   38:38
+Sam.
+
+Joshua Smith   38:45
+As well, so I think it was is useful in that capacity.
+
+Shai Eilat   38:49
+Do you guys think the main user in the context of research and experimentation, is that going to be more product and more design or a little bit of both?
+
+Alfredo Achecar   38:59
+I think a little bit of both. And it's something that can also, if it was, let's say, if it was agentic, then you can kind of run a chain of agents to say, hey, look at the copy, look at the design, you know, give us feedback, maybe create a prototype based on it. So.
+Yeah, it's definitely very useful, both on its own, and it could be even more useful if it was like chainable with something else.
+
+Nikita Kumar   39:28
+Thank you. And I know this is like, you know, meant for kind of like real users as well. I think it's great that you guys are already using it internally to help, but this kind of can tie in a little bit into your AB testing because if you have your synthetic users already, you can use some of these for your AB tests before you even go out live and like a lot of that bottleneck kind of releases for you as well.
+But again, like, like these are, like, I'm going to say this because I know there's a stigma around, can we trust the data around this that's coming in? These are the users that you guys are researching, you are building them, you are putting them in place. So if you trust your data, your answers will be pretty fair to what your customer is going to be looking for as well.
+Just going to put that out there.
+I'll leave it as blank, so if anybody wants to put their name down after by the end of this week, I'd love to see names on here, so we will send this link for homework tonight.
+Um, the next one we have a customer support self-service chat bot, which was for Mo, user intent and route users to correct app flows or actions.
+If anybody wants to work on this to reduce some support calls, you'll need guardrails because chatbots are interesting to work with. But yeah, if you wanted to try something, feel free. It is a bit more complicated, I would say, on the use case side of things. So maybe it's a bigger use case that you might want to think about. But I don't know if anyone's going to volunteer for this.
+just yet because it's a little bit more complex.
+The next one we have is AI assisted intake quality checker, validate intake request for clarity, completeness, problem frame link from submission, before submission. I think she's already built this partially and the goal would be to kind of take this further. So if anybody wants to work on this with Nicole, she already has like part of this, her idea like built out on this.
+Leave it for now. Similarly, centralized intake and intelligence hub, storing, connecting, take requests with password, decisions and outcomes to like eliminate duplicate work. This was more on intake as well. And then the next one she also had was also on intake, hub and spoke intake orchestration, start from one intake and generate downstream artifacts. So.
+There's an intake form that comes in, what part goes to design, research, dev. Again, she has part of this already built out in terms of like what her idea is. So if someone wants to connect with Nicole, they can to work on this as well, because they feel like this would be really beneficial across the board for all your teams.
+And then future to build on that would be roadmap generation from your intake. So as you get intake, you've pulled it into backlog, you're saying you're going to do these items, it can help you, like you can have an agent help build out your entire roadmap as well for all the intake processes that you're getting.
+Um, and then also.
+
+Shai Eilat   42:28
+Wait, 17 again, and roadmap generation from intake.
+
+Nikita Kumar   42:28
+Yes.
+So it'll build an agent to build out your roadmap after you've vetted all your intake requests and saying like, okay, these are the five we're working on. Build me a roadmap on when we can start building these. We're going to be working on them and actually building you a roadmap. But like that's, you'll have to identify what your roadmap looks like, what comes in first, and like really put.
+
+Shai Eilat   42:35
+Yeah.
+
+Nikita Kumar   42:56
+the right features and requirements into your agent for this one.
+This can also be like one-off, like right now also, like if you want to build something like this in Rovo, if you have the criteria of what your roadmaps look like, you can put that all in there and say, take these five stories, build me a roadmap, it should be able to build it for you. Or even in GPT, like as a custom agent as well. Like this one can be simpler or like.
+Vlad, let me know if I'm oversimplifying this, but this seems pretty simple for me.
+
+Vlad Grubman   43:28
+I mean, it depends on how you do it.
+
+Nikita Kumar   43:29
+Yeah, I mean, if you just want to prioritize stories to build on a roadmap, it can be pretty simple.
+I know we only have two minutes left. So Shai, I'm going to send this link across to everybody as well. And I'll put your homework on here. Everyone assign yourself to the use cases you think you want to work on. You don't have to do them at large scale. Do them at small scale first, see how they work. And then if you can also assign yourself to the ones that you want to use after.
+And I'll ask the team to get this to us by the end of week this week. It'd be really great to just get an understanding of what the team is thinking. On the bottom here, we have identified cross-functional use cases that the team has brought up. You don't have to look at these just yet. These are more cross-functional within your teams that can work at some point, but I just wanted to put them in here because they were brought up for cross-functional sessions, but...
+the focus will be for on these in these first use cases as first. So if everyone can take a look at these, add your name to them if you want to work on this or if you want to use this, that would be great. I will send out the link and I'll put all the notes in the chat for everybody for homework for this.
+Any questions before we hop off in the next minute?
+
+Shai Eilat   44:49
+I know that the Doug Ball has been working.
+the first phase on some sort of like an intake solution.
+Is that something that you guys have seen? I'm not sure, kind of like, oh, I see, like I see that you're here. I haven't seen you before.
+
+Doug Ball   45:03
+Hello.
+
+Shai Eilat   45:05
+What's kind of like the latest of that?
+
+Doug Ball   45:05
+No.
+I have it on my personal GPT and I use it, but I don't have a way to really get it out to other users to actually like try it in practice. Like I'd love to send it to my business folks and make them use it.
+
+Sean Monaghan   45:18
+I...
+Okay.
+Okay.
+By the end of the day, if you don't have it, just send you enter. I've seen it. I've seen it on the enterprise ChatGPT, Doug. I can see it. I can access it.
+
+Doug Ball   45:29
+to send me the request so I could get feedback, but right now just play with it.
+Yeah.
+
+Eric Trenz   45:41
+Yeah, I use it.
+
+Doug Ball   45:42
+Okay.
+
+Sean Monaghan   45:45
+It should be accessible.
+
+Doug Ball   45:45
+Cool.
+
+Shai Eilat   45:47
+Can we, Doug, have you thought about turning it into some sort of like a simple web application that we can send folks like a link and let them?
+Kind of like maybe go through some some some process of like Q&A until they they refine their their request and then they send it to you.
+
+Doug Ball   46:07
+That's basically what it does, yeah. Like, um...
+Where do I not view?
+
+Shai Eilat   46:13
+How, how would, how would like a business stakeholder, whoever are your stakeholders, like, how would they interact with it?
+
+Doug Ball   46:22
+Oh, well, that's one I'm used to.
+Ohh.
+Because really, if I had an access point to it, you can really just go in and start saying exactly what you want. And it walks you through the process.
+
+Shai Eilat   46:28
+Just because...
+
+Joshua Smith   46:42
+With our just a quick site related question with our enterprise chat GPT, do we get API keys?
+
+Vlad Grubman   46:50
+Nope.
+
+Joshua Smith   46:51
+No one, we don't. OK.
+
+Vlad Grubman   46:52
+Nope, it's all, we're trying to get you guys something beyond just plain GPT chat. For example, direct access to models and access to codecs. It's still being blocked.
+
+Joshua Smith   47:06
+Yeah, OK.
+
+Vlad Grubman   47:06
+We're trying to get through is just very, very slow, but...
+
+Joshua Smith   47:11
+Understood. Thanks.
+
+Vlad Grubman   47:12
+Yeah, well, it's in the works, that's as much as they know.
+
+Joshua Smith   47:15
+Because if I'm thinking about this correctly, if we had API keys, we could connect the web app that Shai is talking about to this model to make it, you know, to service it. So, okay.
+
+Doug Ball   47:16
+Yeah.
+
+Vlad Grubman   47:22
+Absolutely, yes, yes, you can do, yes, once you have a, that's what I call direct access to model, that's the API key to the model, either on the bedrock or however, however, whatever your infrastructure allows, but it has to be, it has to be that, otherwise you're kind of stuck.
+
+Doug Ball   47:23
+Yeah.
+And I don't think...
+
+Vlad Grubman   47:39
+I mean, the only other alternative is sort of wiggle your way through CodeMe. CodeMe allows you accessing the models, but in its own way through assistance. So again, it's not a direct access as well.
+
+Doug Ball   47:54
+Yeah, the way that, but this is one that I went through for an actual integration. It's I want to create an.
+integration, this is who is affected by it.
+Um...
+What's the job to be done?
+How it works today?
+And then at the very end of it, it gives me a confirmation and I have it so they could just copy it and email it to me as part of the instructions. Ideally, I'd like to get to the point where...
+based off of keywords, terms, and like a library like that, instead of just telling it to go to me, it could determine who it actually needs to go to and then it could be more global.
+But those additional pieces I haven't gotten into yet.
+But works well for me internally.
+
+Sean Monaghan   49:04
+I thought I remembered that Nicole had done similar, like a similar type of thing. I don't know if you ever...
+Cross notes with her or share notes, Doug. I don't know if it does the same thing or if it's something, if they had something unique to them.
+
+Doug Ball   49:15
+Not much.
+
+Nikita Kumar   49:30
+If you guys want to connect on this offline, I think if there is something there, you guys can connect on that as well. I don't want to keep everyone waiting because I know we're out of time.
+
+Doug Ball   49:37
+Yep.
+
+Nikita Kumar   49:44
+I also put in the link for the use cases, what your homework is, and when it's due by. So this will be for end of day Friday. Take a look. If you're also working on additional use cases that are not on here, please feel free to add those in as well, just so the team can have visibility also. But yeah, add anything additional. Assign yourself to the ones you want to work on or the ones that you want to use, but not necessarily work on.
+
+Sean Monaghan   49:46
+Ohh.
+
+Nikita Kumar   50:06
+just take a or you at this and again, like, you know, this is kind of like not as not at a large scale. It doesn't have to be so big. It can go, it could be smaller. So you can start somewhere small and see if it's feasible to then build out for bigger. But we'd love for everyone to have this by the end of the day, Friday.
+Thanks, everyone. Have a great day.
+
+Doug Ball   50:24
+Oh.
+
+Vlad Grubman   50:25
+Thank you, folks.
+
+Nikita Kumar   50:26
+Sell.
+
+Doug Ball   50:27
+Thank you.
+
+ stopped transcription

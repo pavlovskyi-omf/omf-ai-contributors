@@ -1,0 +1,412 @@
+AI Enablement DIGITAL Champion Sync-20260504_153024UTC-Meeting Recording
+May 4, 2026, 3:30PM
+32m 8s
+
+Nikita Kumar   0:12
+Mm.
+Hello.
+Giving everyone a couple of minutes to hop in here.
+
+Nicole Davis   0:29
+Yeah.
+
+Nikita Kumar   0:45
+Very much some time.
+No.
+Thanks.
+I'll give everyone another minute. I know it's Monday and everyone's kind of going from back-to-back meetings, I'm sure. So we'll give everyone another minute to hop in here just so we can see a little bit more attendance as well.
+Well, this is getting recorded, so I think we can get started. And as people join, we can get some more feedback in here. But welcome back. Happy Monday, everybody. Just wanted to kind of first pulse check with everyone. How did we feel about the session on Wednesday for Lighthouse? Just wanted to get some feedback. We tried to make it as live demo and hands-on as possible, but...
+Want to get some feedback from the team. So if you have some feedback on that, that would be super awesome. Just give us your updates. If you liked the session like that, if you want something similar to sessions like that, we'd love to have more as well. But yeah, I kind of want to give the floor to you guys to give us your feedback on the Monday, on the Wednesday session on Lighthouse last week.
+
+Alfredo Achecar   3:09
+They could like you remind us what what what happened in that session, like we have so many sessions.
+
+Nikita Kumar   3:11
+Yes. Yes. It's okay. Totally fair. The Monday session, sorry, the Wednesday session last week on Lighthouse was a live demo we did with creating assistance in CodeMe, where we had Oleks kind of have have everyone like follow along to build the different types of assistance. So that was the one on Wednesday, because we know a lot of people had missed it due to the leadership call in the first couple of weeks of the program.
+So I wanted to make sure that people were kind of caught up on code me and just had an understanding of like how assistants were built.
+
+Alfredo Achecar   3:45
+Yeah, I thought it was super useful. Yeah, I mean, I really, I really like that sort of show and tell, because it opens up like the possibilities of, oh, okay, here's some new ideas of what we could do. Yeah, I think that was, I think it was useful.
+
+Nikita Kumar   3:59
+OK.
+
+Byron Purdy   4:00
+I'll say that as well. I think this was the first one that I've done something end to end in. I would say the only challenging part, Nikita, was, you know, watching Olek's screen while watching my own screen, trying to follow those steps. So probably is on user error that I probably should have pulled up Cody and got a little more familiar with it prior.
+to join in that way. I kind of knew where things were, but then once we hopped over to the JIRA piece, I never clicked through those screens before. So I was really lost over there, kind of listening to what the menus were called and then getting to JIRA, trying to find them, just a little bit of a hang up on my part there. But now I know
+where that API area is, I'm dangerous.
+
+Nikita Kumar   4:47
+Nice. So good to know. Yeah, it is a little bit of a little learning curve too.
+
+Vlad Grubman   4:49
+Nice. Wait, I, wait, I don't mean you don't have two screens, three, three different monitors where you can monitor all of that. Like, what's going on?
+
+Byron Purdy   4:57
+I was on my laptop here at home, so just a single monitor for me at home. So yeah, that's probably something too. If you are with like a triple monitor setup, it's much easier.
+
+Nikita Kumar   5:10
+Yeah, for sure. Yeah, because then you can watch and do as you're going through it as well. Awesome. Yeah.
+
+Vlad Grubman   5:13
+Yeah, yeah.
+Oh, so these are recorded, so by all means go back and review if you have time.
+
+Nikita Kumar   5:21
+Yeah, for anyone who might have missed them, like, yeah, please feel free to go back and review them as well. Any other feedback on that session? I hear that we like sessions like that. So, you know, maybe that's something like we'll take into account for future sessions as well. If there's like, you know, some complex use cases or things like that, we can help with that as well. But
+Anything else on the sessions?
+If not, we are going to Vlad and feel free to jump in here at any point. We do want to get an understanding of where the use cases are for phase one, where like where you're at with progress, if there is a blocker, what your blocker is. And then, you know, if the use case is predominantly done and there's nothing else more you can do, let us know that too. So then we can start figuring out newer use cases for the.
+team as well. So I'm going to share my screen. This is something that, Shai, I know you're on the call. We just want to make sure that everyone has like an update of what is happening with these use cases, because for phase one, we do want to make sure that we do at least hit these use cases. If some of these use cases don't make sense anymore, since these were from our first assessment, or if you are at the point where you feel like you've done the most and.
+this is all you're able to do on them, that's fine. We can start turning it into more use cases because we did hear of a lot of use cases that have come up from the last couple of weeks as well for phase two. So we can start pivoting into bringing in different use cases and more use cases for each team to work on for phase two as well. So first I'm gonna go over, I'm gonna share my.
+screen with phase one. If we can get a quick update of where you're at, what your blocker is, if you have any, and what next steps look like for you. We can document all this and then Shai will have a full one-pager document on this as well. That way you have everything on your end too.
+Voice of customer, Jonathan, if we can get a quick update on here.
+
+Jatin Bagga   7:15
+Yeah, for sure. So I think some progress is being made, obviously, on that front, trying to secure, you know,
+an enterprise architect from one main. And that's kind of very critical. And so I think I've been able to get the final approval. Dana, sorry, Dana Meir had sent a note. So I think once that gets solidified, I think we're just going to probably want to kick off on a very small use case.
+So that's where we are. But overall, I feel pretty good. I feel like, you know, it's been a little bit of a journey, but I think we're going to probably kick tires on it pretty soon.
+And I think for a voice of customer, I just want to point out one thing, right? Like we casted the net quite wide last time, so it got a little bit lost in terms of, you know, getting specific concrete feedback. So this time around, I think we're going to focus on payments. I think I called out in one of the calls earlier, I think a couple of weeks ago. So this time it's going to be laser focus on payments to really prove it out.
+
+Nikita Kumar   8:12
+Mhm.
+
+Jatin Bagga   8:17
+right? Like that's going to be critical for us. And then once we sort of prove it out, then it's just rinse and repeat, right? Like then it's just we can add all function like CM and origination, acquisition, everything can be added on top of that from a function standpoint. But also from data sources standpoint as well, I think there's going to be a lot more momentum. But first, it's just getting the foundational core architectural stuff.
+aligned, right? Like, MVP was fine, like, you know, when, let's say, Alfredo Achecar, Rohan and I were worked on to build the MVP, but that was just very rudimentary, as you know, right? Nikit and Vlad. So now it's like real, like we need a little bit more thought and automation done before we start.
+
+Nikita Kumar   8:43
+Ohh.
+Ohh.
+
+Jatin Bagga   8:59
+You know, going into a sort of like a real MVP or POC, whichever angle you want to call it from. Does that make sense, Nikita?
+
+Nikita Kumar   9:06
+Yep, that makes sense. And I think scaling it down to just payments will be helpful too, because once you can run it on there and prove that it works, it'll definitely be a lot more easier to bring in other teams and other people on board as well.
+
+Jatin Bagga   9:20
+Correct. Correct. And again, the goal is that it should be disseminated, right? This is going to be democratized. It can't be just one person. So that's another part, right? We don't need this to be just like I am managing or somebody's managing. It's like once we build it like a playbook, then it's like rinse, repeat, anybody can use it for their use case, tweak it the way they want it as well. But again, baby step versus just foundational architectural.
+
+Nikita Kumar   9:22
+Awesome.
+Correct.
+Mm.
+
+Jatin Bagga   9:41
+Alignment.
+
+Nikita Kumar   9:43
+Yep, for sure. Thank you. So it seems.
+
+Alfredo Achecar   9:43
+Wait.
+Sorry, I had a good question there for Jatin. Jatin is...
+Is the is the sort of process structure you mentioned that it was okay, we can start with payments, but wasn't our biggest blocker back then the like the specific channel, like getting data from you know, like emails versus calls versus app reviews, like the actual the access like?
+The access to the channel was actually much harder than the processing part.
+
+Jatin Bagga   10:14
+No, it's kind of both, really. I think so, obviously, channels was another very tricky one, right? That's sort of the genesis of everything, but also I think, you know, focusing on multiple things and trying to really figure out what's right versus wrong also sort of created a little bit of a stir, and I think based on the feedback we got as well, like, you know, there was misalignment on...
+you know, who's the real user of this? Like, why are you producing backlogs? And now we've sort of removed all the noise. We're keeping it focused on just one function and then the core data sources. But prior to that, it's for us to really understand how are we going to build this up from an architectural standpoint so that it's meaningful and also it adds value. That's where we are at. And then after that, we're going to start adding functions to ensure that there is.
+you know, greater adoption of this voice of customer.
+There's going to be a lot of lot of stuff that needs to be done in order to even get to a stage where we can actually launch some sort of insights itself, which is what I think like you, Nick, I think Nicole, Manu have been asking for. So again, laser focused on one use case, but only just the insights part, nothing to do with the backlog and stuff. Okay.
+
+Nikita Kumar   11:25
+Thank you. So it seems like pretty much all the things that were originally blocking you have unblocked you. Now we're just trying to talk. I know we have a meeting today about this as well. So now we're just trying to get to like what our next steps are going to look like because a lot of the major blockers are kind of resolved in going in that direction.
+
+Jatin Bagga   11:42
+Yeah, like I think again, for the POC, right? Like I think there's a whole slew of things in PII, like doing it in a scrappy way is one thing, but really doing it right. I think those are like the technical architectural decisions and discussions that need to happen before we take it to any level, you know, after that. But yeah, overall good news. I think this is this is good stuff.
+
+Nikita Kumar   11:45
+Right.
+Awesome, thank you. Yeah. No, that's great. And we'll keep a note of that as well. Next up, we have knowledge management. So if we can get some updates on here. Mo, I have you as a group leader.
+
+Mauezatur Khan   12:16
+Yep, hey everybody. So the code me work that we've been doing has been pretty helpful for the knowledge management side. I do think we'll be able to have a demo that we can show in our next sync call. So been making slow and steady progress there, but the main thing for us is just kind of pivoting. Now Teams has an integrated feature where you can have meetings set to auto record.
+
+Nikita Kumar   12:36
+Yeah.
+
+Mauezatur Khan   12:37
+So that's going to be good. It'll just be a process improvement that we have to do for our shared teams moving forward, just to make sure that, hey, moving forward, set everything to auto record, and then that will create a transcript for us. And then just getting the agents in place to create meeting notes and document updates from those transcripts are kind of what we're working through at the moment.
+I've been using Robo a lot to handle the updates and everything, so I should be able to get something bolt out to demo fairly soon.
+
+Shai Eilat   13:03
+No, can you please just remind me?
+What's the 'cause we we went back and forth around the scope here? What's gonna what's the kind of like target model that we that we are that we're trying to get to here? What's gonna be what are gonna be the benefits?
+
+Mauezatur Khan   13:09
+Mhm.
+I think for MVP1, for the document management part specifically, it's just going to be like, hey, we will have an agent that can automatically go through our meeting notes, the conversations that we have, and then suggest updates to existing documentation or suggest creating documentation if those don't exist already. So for example, if you and I have a conversation about a project that's coming up,
+A Rova agent will then be like, hey, this project needs a PRD. And if it already exists, then it will suggest updates to what's in that PRD.
+
+Shai Eilat   13:49
+So, it will it will start with with you need to to to kind of like start the interaction with the Rover model and and and give it a prompt, or it will offer something periodically or based on meetings, like what's going to be the starting point?
+
+Mauezatur Khan   14:03
+The trigger, I think we can have it be something that kind of automatically scans on a time frame basis. So for example, Hi built out a Rovo agent for our JIRA that we've been kind of playing around with and using for our development workflow. And that agent just kind of sits and monitors and listens for any updates.
+dates for new tickets that are made. So we'll probably have a trigger based on something like that where, hey, it will kind of listen for documents that are uploaded and see if there's any changes that have to be made based on those like transcript documents that are sent and or we can have it just scan on a recurring basis.
+for any updates to our conversations. So it'll probably be a mix of the two.
+
+Shai Eilat   14:51
+Okay, and now we have an issue with Rova in the past that we struggled with getting it to update existing confluence pages rather than creating new confluence pages. Do we still have that issue?
+
+Mauezatur Khan   15:04
+I haven't ran into it. It's been pretty good at finding, like I just used it for a couple of those types of tasks. It's been pretty good at finding the exact existing document that a conversation is referring to, even if I don't give it a precise prompt. So I just asked it, for example, to find what we release in the 10.4.
+mobile version and it found our release note confluence document perfectly. So I don't think we have that issue. I don't.
+
+Shai Eilat   15:31
+But can it also update, like update an existing confluence page based on like your prompt?
+
+Mauezatur Khan   15:36
+I don't think we, yeah, I don't think we want it to automatically update. I think right now we just want it to automatically comment and suggest updates. And that's on purpose because I think we have to prove out that the suggestions work and are accurate before we have confidence to be like, hey, let's have this automatically do its own thing.
+
+Shai Eilat   15:45
+Okay.
+
+Mauezatur Khan   15:56
+in a space where like human generated artifacts exist in tandem with machine generated.
+Artifacts.
+So I think that part still needs to be approved out for sure, but to kind of as a stopgap there, we're just going to have it suggest updates instead of doing the updates automatically.
+Yeah.
+
+Nikita Kumar   16:18
+I don't know if it's been implemented in Robo yet either, because every time we try to do it as well, it just, it can't update the page in Confluence, but it just adds to the page instead of actually updating the copy that's already in the page. It'll just add another section to that exact page again, so you have to still go through and like find where it made the update. So.
+
+Mauezatur Khan   16:38
+Mhm.
+
+Nikita Kumar   16:38
+I think the comments at the moment is helpful because then you can always go back and see where to make the update for the comment. But yeah, Shai, I don't know if it's, it doesn't let you replace the content just yet. It lets you append it so you can add more to that same page with the old content as well.
+
+Mauezatur Khan   16:53
+Yep.
+
+Shai Eilat   16:54
+Yeah, but I like this approach because I was feeling a little bit uncomfortable with Row Voyage and updating existing confluence pages. So I think this is a bit more conservative approach.
+
+Mia (Xiaoling) Zhou   16:54
+Yeah.
+
+Nikita Kumar   16:58
+Okay.
+
+Mauezatur Khan   17:06
+Yeah, and it doesn't feel like a compromise. It feels like the better way of doing it. And same thing with like the Robo agent for the software development, right? The fact that it leaves a comment and ties into like our existing SDLC flow where it triggers like human action, I think that's the better way to do it because that way any updates that are made to the Confluence doc.
+are vetted by a human who's a subject matter expert in whatever that confluence talk is about. So this does feel to me less like a compromise and more like a better practice for us to follow.
+
+Shai Eilat   17:38
+Okay, cool. Thanks.
+
+Nikita Kumar   17:39
+Yeah.
+
+Mauezatur Khan   17:40
+Yeah, thank you. Um, yeah, if there's any other questions, just let me know.
+
+Nikita Kumar   17:41
+Thank you.
+
+Shai Eilat   17:44
+When, when, when, Mo, do you think you'll be able to do a demo?
+
+Mauezatur Khan   17:48
+I'm hoping to have one for the next meeting that we have, which I think is on Wednesday. So that's my plan. That's what I'm trying to shoot for.
+
+Shai Eilat   17:56
+Okay.
+
+Nikita Kumar   17:56
+Oh.
+Thank you. That was awesome. The next one we have is product artifacts. Anu, you're the group lead on this one.
+
+Anu Perera   18:06
+I have not had any chance. I've been out for a couple of weeks, so I have not had a chance to sync up with the team at all. I think last time where we left off, we had playbooks created and we had kind of a demo show and tell with the team as well. And then there was feedback from the team as to.
+Um...
+People who are interested in kind of using the services ping me and ask me for questions. So I think that's where it was left off. Kind of the goal one was, hey, how do we get people engaged and have a consistent approach to it was kind of the initial outcome that we were focusing on.
+Shai, do you do you do you see anything else that we need to focus on? When I kind of talked about a lot of stuff, I just want to make sure.
+
+Shai Eilat   18:59
+Yeah.
+I think I know the only thing I have in mind that I wanted to ask you is we...
+our meeting in Wilmington next week for like the digital leadership team and I wonder like if we want to do some sort of like a live demo.
+for like the, you know, the playbooks that you created, the agents that you created, like, how would that look like? Do you feel that like you'd be ready to share something?
+
+Anu Perera   19:32
+Yeah, I mean, it shouldn't be a problem. Why don't we sync up later on just to make sure what the time frame, not the time frame, the duration and all of that stuff so that I can kind of come up with the script for it.
+
+Shai Eilat   19:47
+Okay, and I know, do you feel like, do you feel that there's still work for you guys to do here or from your perspective, you're kind of like done and now it's more about sharing what you guys have done with other teams?
+
+Anu Perera   20:01
+Yeah, the initial goal was more around literacy and making sure that everyone has kind of a starting point. Sorry, I didn't have my camera on for starting point to make sure that everyone knows where to begin the work. And then each team kind of needs to know, as part of kind of phase two,
+
+Nikita Kumar   20:05
+Yeah.
+
+Anu Perera   20:19
+extend that out based on each team, how they operate. That's the piece that we want to, we kind of stayed away from is the kind of each team has a slightly different operating model and how they operate. So we kind of kept it at a high level so that team can get started and start using it. I did get a
+
+Shai Eilat   20:33
+Yeah.
+
+Anu Perera   20:39
+few feedback from others saying, hey, can you share this agent, that agent. So that has been shared out. So I kind of given everyone instructions as to, hey, here's what you do as well. So.
+
+Shai Eilat   20:51
+Yeah, and I know I know that your team.
+I think the CM team together with one of the servicing team or one of like those two teams that's supposed to do some extra work, like, what are you seeing there? I know that like one of the goals is to create better connectivity between, you know, digital team and keyway and engineering. Like, how is like the work that you've done here?
+
+Anu Perera   21:03
+Mhm.
+
+Shai Eilat   21:16
+been adopted or not adopted or connected to what's happening on like the engineering side.
+
+Anu Perera   21:21
+So for us, for our team, from a use case creation, use case, epic creation, use case creation, all of that is done through ChatGTP right now. We have not built anything for those things. We are kind of using ChatGTP or Robo for us to do it. So that's a tight integration that we have and we have.
+
+Shai Eilat   21:39
+I think.
+
+Anu Perera   21:42
+story readiness and all of that stuff running as agents right now in our production environment. So everything to do with getting the story ready, breaking down our stories, making sure the stories are ready to be consumed by engineering for their processes, that is
+Basically, all AI-driven to the most part, and then we...
+
+Shai Eilat   22:04
+Yeah.
+And are there other other metrics that we can point at? I know, I know that that's been the case, you know, probably for the last two months. Like, have you seen any like improvement that we can kind of like point at and and and and talk about it?
+
+Anu Perera   22:11
+I.
+I don't think there is, I mean, we have not really paid attention to the measuring of it, to be honest. I mean, the measuring could come from the clarity of the story. So right now, I think our stories are picked up. To the most part, even in the past, it was
+I think the big, sorry, I'm kind of word jumbling here. The big change is the efficiency, I think, more than anything else of like, you know, the first go around. I don't know whether we had baselines to begin with to say, hey, this is how we.
+Did the work in the past? Maybe I maybe we can sync up with the Pam team to kind of figure out how how best to measure that. Um, I'm not so sure how we can measure that.
+
+Shai Eilat   23:03
+Yeah.
+You should do that, I know, because the the EPAM team and Vlad and Nikita can can also share more. They have like very rich dashboard that is measuring everything, pull through rates and then story pointing and and rework and and and and.
+you know, bugs and everything that you can measure is being measured.
+And now the question is like, can we see any sort of correlation between adopting some of those tools and improvement to those, you know, numbers?
+
+Anu Perera   23:41
+I think when we have a full PDLC life cycle, I know our engineering team is working on some of the agentic framework as well through CodeMeet. I think when we have a full blown, I think that probably is a good indicator for us to see how things are being shipped. But yeah, I would like to kind of understand myself on.
+
+Shai Eilat   23:41
+Yeh.
+
+Anu Perera   24:01
+how we can truly measure because some of it is like the rework and other stuff. It's just time spent on stuff, but sometimes it's harder to, you know, capture those values, to be honest.
+
+Shai Eilat   24:05
+Yeah.
+Yeah.
+Yeh.
+OK, I know, and Nikita, that we only have 5 minutes, and I know Nicole spoke a lot of time about about CAIA and what she's doing there. Can we can we jump to to #5 to process improvement?
+
+Nikita Kumar   24:24
+Yeah, I'll sync with Nicole and team after as well and get you any blockers or any updates as well. So yeah, so process improvement. We have JT for the lead on this one. I don't know if anyone from the team is on right now.
+
+Shai Eilat   24:29
+But.
+
+Nikita Kumar   24:41
+I don't see anyone from the team.
+
+Shai Eilat   24:41
+Hello.
+I know that we are working on, I think, some sort of like an intake process that Doug has been working on, but I don't know what's the recent updates. I haven't heard from that team for a while, so I'm not sure where they are.
+
+Nikita Kumar   24:58
+I can, I'll ping them on Slack as well and just to put the whole team on and get an update for you. That way we can have it all on like a one-pager for everything. So I can ping the team on Slack as well.
+
+Shai Eilat   25:10
+Okay, Moses, do you want to talk about the plan for next week? Because I think for next week we don't necessarily have to just limit ourselves to this list, but we can go beyond if there are good kind of like demos and use cases.
+
+Nikita Kumar   25:18
+Up.
+I think Vlad has his hand up and that was also what we were going to do on Wednesday as well after the demo. But Vlad, go ahead.
+
+Vlad Grubman   25:35
+All right, before we move on from this topic, I just want to bring this to your folks' attention. There's A JIRA board where we track all these and other use cases and the progress. So ideally, we should not be going, well, this was a good exercise, but ideally, the progress should be tracked in.
+Those tickets, it's we can we can share the link and.
+in the chat or in the Slack, but the whole purpose of having those tickets is so that we have a way to collect information automatically and produce those dashboards on how the use cases are performing. We can we can take it offline. Yeah, yeah, we can take it.
+
+Shai Eilat   26:12
+Can you please put a link here, Vlad?
+
+Nikita Kumar   26:15
+I'm getting you the Gerboard link now, and I'll pop it in the chat, yeah.
+
+Vlad Grubman   26:17
+Oh, thank you, Nikita. Yeah, because I need to I need to go through the Citrix magic.
+
+Shai Eilat   26:17
+Okay, thank you.
+
+Nikita Kumar   26:22
+That's okay, I'm already on it. Don't worry about it.
+
+Vlad Grubman   26:24
+Oh, cool. Sorry, let's move on. I'll shut up now.
+
+Nikita Kumar   26:30
+I know, so I know one of the things that we wanted to talk about on Wednesday after our demo is also to go through the new use cases that have been coming up that might be more beneficial for the team to start working on as well. So we did come across, like I think we got over like 30 plus use cases from.
+just our digital team that I've put together in a confluence page and I can send the link across for that as well. But it would be really helpful for the team to start looking through those and maybe we can start figuring out like which of these are going to be useful for phase two so we can at least start helping implementing some of these. And they don't have to be the most complicated ones either. It can be the more simple ones as well, but at least something to show like, okay, like we're actually working on these and actively building use cases like as they should be.
+be happening offline as well outside of just these five, but we do have a list of use cases that everyone's kind of mentioned in all of our calls and like, just like dream scenarios and things like that. So we want to make sure we can start bringing some of those forward as well.
+Sorry, I'm going to give Moses. I know if you have something for use cases, feel free.
+
+Moses Song   27:35
+No, I was just mentioning that at our off site next week we have a time slot where we want to talk about. What we've been able to develop in the PDLC. I know Nicole, Anu, Eric have all presented in various forums and so it's a question of.
+How do we?
+showcase something unique or different or perhaps a follow-up on something that
+the leadership team within digital have already seen or something new to showcase.
+Good.
+
+Shai Eilat   28:12
+Yeah, I wonder if like, even stuff that we presented, for example, in the town hall, that was a very brief kind of like introduction and not a full-fledged demo. And maybe like, it's worth it for folks to see, you know, maybe Nicole taking like an interesting use case, whether it's...
+designing an experiment or doing brainstorming or maybe something that you personally have done in the past and with the tool and show like how did you use it? What were the outcomes? What were the benefits? Same thing for Anu, maybe thinking about like actually seeing it live and not in like a deck, but like how do you use it on a day-to-day basis and
+Where are the benefits? We just have more time and it's an in-person session and I'm hoping to do something that will be more kind of like a demonstration than a presentation.
+
+Moses Song   29:08
+Yeah, I mean, I think it may make sense for people to see.
+maybe the thought process of like...
+how I've identified the problem, how I went about creating the solution, and then here's how the solution, here's a real live use case of how the solution helps.
+walking through those three phases might be helpful to help other folks in the room understand how these solutions were thought through and how they can make an impact across the teams.
+Because it's really about how do we get everybody to think in a way to leverage these tools and create these tools, not necessarily just
+Sorry, it's more about the way of thinking and to create these tools, not just use the tools, right?
+Yeh.
+Yeah, maybe I'll reach out with Shai to the lead in the different areas and we can brainstorm offline.
+
+Jatin Bagga   30:22
+Yeah, and I think Moses, just one more thing to your point in Shai. Like, for instance, you know, I created something for like AB testing, which wasn't part of our core topics, but it really helped me, for instance, like just a brainstorm myself, like I mean, sort of a session for an AB test that I was conducting. I don't know if that's something that might help. It's not hugely
+
+Shai Eilat   30:31
+Yeah.
+
+Jatin Bagga   30:42
+You know, it's not like you have to use it every day, but it really helps when you have a use case to AB test something. So I don't know if that's something also that you'd be interested in.
+Using optimizing, optimizing visual editor.
+
+Shai Eilat   30:54
+Yeah.
+Yeah, definitely. I think, I think, I think we, we don't again, we don't have to limit ourselves to what we're working here. It can be smaller, and we'll reach out. Let's, you know, let's think about it.
+
+Nikita Kumar   31:08
+Yeah.
+I think that's also one of the use cases that's in this list as well. So yeah, feel free to take a look at these ones. These are everything that we've kind of captured from conversations in this phase so far. And again, like if it's not on here and you're working on it, feel free to add it as well, because we want to make sure or like add like somewhere if you want to let me know if you're already working on something different.
+We can add that to the list of use cases already in progress as well. Like they don't have to be these ones. Because I know like, you know, we're working on accessibility for the design team with Monique for some stuff. So anything like that, feel free to add, or if you want to send me a message, I can create a page where it's like currently in progress use cases as well, so everyone can see those too.
+And I know we're a little bit over time. So we have open hours now. So if you have any questions on any agents or things that you guys are building, feel free to hop into the open hours and our team can kind of help out there as well.
+
+Moses Song   32:01
+Thanks.
+
+Nikita Kumar   32:01
+Thanks all for joining. Have a great day.
+
+Eric Trenz   32:04
+Thanks.
+
+Vlad Grubman   32:07
+Thank you, folks.
+
+ stopped transcription

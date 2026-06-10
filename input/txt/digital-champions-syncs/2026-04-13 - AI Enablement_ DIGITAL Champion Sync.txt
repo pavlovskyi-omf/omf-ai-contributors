@@ -1,0 +1,424 @@
+AI Enablement DIGITAL Champion Sync-20260413_155929UTC-Meeting Recording
+April 13, 2026, 3:59PM
+32m 17s
+
+Nikita Kumar   0:20
+Hello.
+
+Doug Ball   0:24
+Hello.
+
+Nikita Kumar   0:26
+Give everyone some time to hop in here.
+
+Byron Purdy   0:31
+Morning.
+
+Nikita Kumar   0:32
+Morning.
+I guess afternoon, morning. I don't know what time zone everyone's in.
+Yeah.
+Just give all of our champions a little bit of time to hop in here.
+and see who's able to come in today.
+Okay, I think we can get started. It's recording anyway, so as people come in, we'll be able to see people coming in. Welcome back to our Champion Sync session. This is a continuation from our phase one, where we have all of our champions, some
+old faces, some new faces in here where we're basically going to be all discussing the use cases that the team has been working on in phase one and doing demos of that to the rest of the team, as well as we identify new use cases, we can figure out who'll be working on those and pushing those across the board as well for the team also. So today, I think we've got some new faces in here as well.
+But I guess I just wanted to go over a status update of our old use cases from phase one. I know they're still in progress, so just wanted to get like an update from folks around that. We can go around the room. I'll see if people are on for those conversations or at least to give us an update of what's going on. The first one we have is voice of customer. I don't see.
+Jatin on right now, but not sure if we can get some sort of feedback around that.
+Yet today, so maybe wait for Jonathan to hop in here to go over a voice of customer with us.
+
+Alfredo Achecar   3:21
+Yeah, I think I I was part of that team, but I think Jatin is definitely the point person to to update us on update us on that, for sure.
+
+Nikita Kumar   3:23
+Yes.
+Okay, he's been, yeah, we've connected with him offline a little bit just as an update for the team, like in terms of some stuff on how we can do this in CodeMe so people can kind of get a demo or just see what's going on. So we've kind of been like on on offline with him, working with him separately, but I just wanted to see if there was anything else that he had.
+
+Alfredo Achecar   3:30
+Just wanted to.
+Okay.
+
+Nikita Kumar   3:48
+that he wanted to show to the team. So maybe if he pops on later, we can ask him that later.
+
+Alfredo Achecar   3:51
+Okay.
+Cool.
+
+Nikita Kumar   3:56
+The next one we had was knowledge management, which LaJuina was the lead, but I don't see her on here and I don't see Vlad either. But I know Mia, I see you're on. So if you can give us an update on what's happening there or Ray, just so we can get an understanding. And if there's anywhere you guys are stuck and you need help, where we can help as well.
+
+Mia (Xiaoling) Zhou   4:13
+And.
+Yeah, before the last phase end, we, we did like a, yeah, we're not going well with like the automation, like, like, like pull the meeting notes, stuff like that, but we are able to get like a...
+Agent in in like GPD and help that was like and also another like the chat through the revolt to see any updates need like if yes, like how that's gonna be like to make make the PRD updated.
+Yeah, I had a demo for that, yeah.
+
+Nikita Kumar   5:02
+Awesome. Yeah, it'd be kind of cool. It'd be great to kind of see where that how that's going. If you want to do a quick demo on that, we can potentially use that to show the Lighthouse team at some point as well. But yeah, if you if you feel comfortable wanting to show something, we'd love to see it.
+
+Mia (Xiaoling) Zhou   5:04
+Mm.
+Mm.
+No.
+Yeah.
+Mm.
+I, I, yeah, I am not prepared. I need to find because I have like 1000 chats here. Yeah, I need to find like the chat. I like the demo I did before. I remember long time ago because that meeting I prepared, I didn't got chance to to present.
+
+Nikita Kumar   5:22
+No worries.
+
+Mia (Xiaoling) Zhou   5:38
+So yeah, can you give me maybe 5 minutes? I'm able to set it up. Yeah, thank you.
+
+Nikita Kumar   5:43
+Yeh.
+Yeah, thank you. Yeah, we can come back to that. That would be great. Thank you. The next one that we were doing was product artifacts. We have Anu and Prabhash and Eric on that team, as well as Karly and Josh. Do we have any updates or what's going on with that? If you guys need any help here and how we can help dive in here.
+Eric, I see you're the only one here from the team, so I'm going to pinpoint this at you.
+
+Eric Trenz   6:10
+Yeah, I mean, I can give you like a high level, but to be honest, I probably am not the best person to speak on it at this point. We're working through kind of like the...
+
+Nikita Kumar   6:15
+But.
+
+Eric Trenz   6:30
+different workflows for utilizing different agents and custom GPTs for these four product artifacts. So we've kind of thought through like whenever there's, we've already gotten to the point where we have custom like.
+GPTs or in some case Robo agents for the creation of a PRD, the creation of stories, the reviewing of stories for refinement status, et cetera. But now starting to think a little bit more about like the actual workflows, whether that's.
+more of a defined playbook or whether that's like setting up actual automations. That's where we're at at this point.
+
+Nikita Kumar   7:26
+Okay, I think actually some of this will tie into the knowledge management and also I think Anu and team were working on further use cases around requirements hardening where some of this can kind of play a good role in that, especially with the requirements hardening, just seeing like what's ready, what's not ready. And that's a great way to like bring in a workflow.
+
+Eric Trenz   7:33
+Yes.
+
+Nikita Kumar   7:45
+Similar to what the cross-functional team is, what we'll be doing on, you can take the case of like requirements hardening, seeing if that's a workflow that's working, where it like triggers like, okay, here's a ticket, we've deemed it to be done and moving it to Dev, and that way the automation, the agent will trigger.
+run it to make sure if it's actually ready for Dev based on like what they actually need. And then once you get that feedback, then it can go across the board to the different teams as well. So it'll play into not just not just for like knowledge like management and product artifacts, but it'll also help with your actual agentic workflow with the counterparts for QA and for Dev as well.
+So we can keep an eye on that. We can keep, we can come back to that as well if we need to add more in there. But we do have the prompt for the requirements hardening that I can send to you later if you want. That was a larger demo that our team had done last week in the first cross-functional meeting that we did. So if you need that, I can send that across and see if there's something that we can play with in that area as well.
+
+Eric Trenz   8:43
+Okay, yeah, that would be helpful. Thanks.
+
+Nikita Kumar   8:46
+Thank you for your update. I know we've got synthetic users and experimentation, Nicole and Jonathan. I don't see them on yet. Alfredo, I don't know if you have a quick update on that yet or not.
+
+Eric Trenz   8:48
+Uh-huh.
+
+Alfredo Achecar   9:00
+Yeah, basically that effort is really being led by Manu right now, who's been adding, like adding and updating the CIA, the Customer Intelligence Agent. Yeah, she's, yeah, she's been sort of like evangelizing it and like, you know, continuously adding and updating the...
+The instructions and the documents for references.
+
+Nikita Kumar   9:22
+Okay.
+
+Alfredo Achecar   9:24
+Yeah, I think that that was pretty like...
+Pretty, it's pretty far along the way, let's say.
+
+Nikita Kumar   9:30
+Okay, it would be kind of great to get a demo from them as well, just so we can make sure that when we are going through it, like we can see how far along it's gotten because I'd love to see all the research that Manu is doing. I feel like she's doing so much and it doesn't always get showcased. So it'd be really cool to see all the work that she's putting into it. And perhaps that could be once the team is a little bit more like ready to show, but it could be like somewhat cool of a way.
+
+Alfredo Achecar   9:46
+Yeh.
+
+Nikita Kumar   9:54
+the Lighthouse demo for the rest of the Lighthouse team to see all the cool things that you guys are doing as well.
+
+Alfredo Achecar   10:00
+Yeah, for sure, for sure. Is she part of, she's part of, is she part of the of these meetings?
+
+Nikita Kumar   10:07
+Um...
+No, I can check. I'll make sure to see if she's not. We can add her because this is just for the champions for digital, but I will double check.
+
+Alfredo Achecar   10:15
+Right, fair.
+No, I mean, I'm not sorry, I'm not saying to add her to more meetings. I just like that that she should be informed, that she should be informed directly is what I'm trying to communicate.
+
+Nikita Kumar   10:21
+Oh, she is part of this.
+Yes, yes. But she is a part of the, actually, she is part of the champion, so she is in the meeting. I think everyone's still adjusting their schedules because we put these meetings on very last, all of last week. So I totally understand everyone's moving things around as things are coming up.
+
+Alfredo Achecar   10:35
+Mm.
+
+Nikita Kumar   10:40
+But yeah, I can also ping her separately and I can chat with her.
+Then last but not least, we've had process improvement. We have JT for the lead for that. Doug, I see you're the only one on from the team right now. So if you want to give us a quick update there.
+
+Doug Ball   11:00
+I don't have any updates to provide at this point.
+
+Nikita Kumar   11:05
+No worries. We can come back to that. Hopefully in our next call, we can have more people come in and talk about process improvement. But I can go back to you, Mia, if you're ready to show us what you have for knowledge management, just so the team can get an idea of what your team has been working on.
+
+Doug Ball   11:12
+Yeah.
+
+Mia (Xiaoling) Zhou   11:22
+Yeah, let me share my screen.
+And.
+So the thing I did is I made an agent like kind of convert the, like able to convert the conversations happening in different place. This is an example, I like just drop the meeting link here and ask like any updates.
+For this meeting, please help me like draft like any like the potential needs change, and this is a...
+This is like the result I got, so somehow I need to copy this and into the where the the our like original PRD exists. Most of them are on conference, so...
+Because I'm not a product manager, so I just use like example one. I cannot find a real one. And to be honest, for this project, since like team members schedules are literally just like Rai and I like working on it. So.
+I just trying to test like technically, technically it can work. So maybe not like we need to consider more like scenarios, the true cases somehow. But I like this is example, for example, this is existing PRD. So.
+I can just like tap this, like, please turn in this information to clear, like, that's a prompt I use as like example prompts, and I also let it follow the guideline. I test the agent in Revo and the simple prompt. I feel they work similar, so I think it like a simple prompt works, and then the information here I just...
+Like, paste, ohh, sorry, I paste the information I got from.
+from the agent we built in, for example, I probably not copy all of them. I just copy some of them. But what happened?
+And then I paste here.
+And then it will help me and will have a new screen somewhere and it will ask me do you want like updates this or you want a new file.
+One second, it may take some time.
+
+Nikita Kumar   14:09
+Something that you can also do instead of doing the agent in GPT, since Rovo has access to everything, if your transcript is in Confluence, you can let it, like, you can use it all throughout, like Confluence within Rovo to make it easier at some point.
+
+Mia (Xiaoling) Zhou   14:10
+Yeah.
+Mhm, mhm.
+It'll come.
+Yeah, yeah, yeah, yeah, yeah, yeah, yeah, one thing, because at that point, we're trying to gather information happening in like GPT Slack, like all different place, so that time GPT is the only resource can able to connect like the.
+
+Nikita Kumar   14:38
+Yeah.
+Yeah.
+
+Mia (Xiaoling) Zhou   14:42
+Yeah, yeah, that's the reason. Yeah, I remember, I remember last time it had like some new window at me, like, do you want like a new file all this or that and not works on this time? Yeah, maybe, yeah, I need to figure it out. Yeah, that's all the updates we have.
+
+Nikita Kumar   14:43
+Got it. Okay.
+Nice. Thank you. No, this is really cool to be able to see all of this come to life now. I know a lot of the stuff that we've been talking about is just updates and things, but it's really nice to see demos and starting to see things come to life. And that's kind of more of our plan for phase two anyways, is making sure that we can get these use cases out.
+
+Mia (Xiaoling) Zhou   15:05
+Yeah.
+
+Nikita Kumar   15:22
+for you guys to be using and everyone else to be seeing and adding value to as well. But these aren't the only use cases we have. When we did our Lighthouse session last week, we did have a discussion on like what people's dream scenarios look like, kind of what they want to see upcoming. So we're going to pull those through and figure out some way to use some of those dream scenarios as your use cases as well.
+And part of like part of this session, this phase is basically for you guys to be able to like for us to like help take the training wheels off and you guys to kind of ride the bike on your own, but we're here to help and, you know, catch you if you guys fall in the background. But I think this is really great to be able to see it. Jonathan, I see you're online.
+Can you give us a quick update on the VOC use case?
+
+Jatin Bagga   16:07
+Yeah, hey, sorry. Yeah, there's just a bunch of interesting meetings going on. But yeah, from a VOC standpoint, I think we're trying to first of all figure out like new sources of data. So I think Ray and I are partnering on a couple of things. There's some PII concerns and stuff. So we're trying to parse through that because that would be an.
+
+Nikita Kumar   16:12
+Yeh.
+
+Jatin Bagga   16:27
+additive sort of, say like that would be really helpful for us to use as part of an input because the insights that you can get out of some of the call miner data, you know, can be very beneficial. I do have, like Renee and I were able to get approval from the Enterprise Architects almost like a month ago.
+But the process to get sort of just the metadata just has taken a little bit of time. I just got it on Friday, I believe. So I'm working through those logistics. In parallel, there's another voice of customer activity, I believe, that's happening on the research side, not our UX design research, but like the OneMain financial research team.
+under marketing. So I think there are a couple of things that need to happen, like, you know, bringing sort of all parties together and align on scope, if that makes sense. So those are some of the discussions happening, I think. Bottom line, if I can get this other source, non-PII source, or I can get the source and...
+able to suppress PII data, it would be good for us to include that as part of an MVP. But also just an org alignment on voice of customers priority, where it stands would be really, really critical, I think. So I have a couple of follow-up meetings internally, but this week, like Donna, a bunch of folks are, I think, out in Dallas this week, by the way, for an off-site.
+So probably be next week before we get some details on that front. So that's what's going on on VOC. That being said, Nikita, I think Anita, in line with you and Vlad on just code me, like whatever was done, I was out in India last week, so I didn't have a chance. So I'll block some time with you just generally to understand, you know, the code me part of it.
+
+Nikita Kumar   18:01
+Mhm.
+Yeah.
+
+Jatin Bagga   18:11
+So, that's from me.
+
+Nikita Kumar   18:14
+Yeah, yeah, that works. Happy to help there as well. I know Vlad is actually going to be in Dallas. I think he's at the airport on his way. He's getting there to talk with the team as well. Yeah, that's why he's silently listening and letting me talk today. Just kidding, he always lets me talk. But yeah, Vlad will also be there so he can be in person and also get some information from the team as well and get an understanding of why.
+
+Vlad Grubman   18:21
+Yeah, I'm standing, standing the security line right now.
+
+Jatin Bagga   18:25
+Lucky you.
+
+Nikita Kumar   18:38
+what's going to be happening in this phase. Nothing's really changing from like our champion syncs, which is these conversations, like, you know, weekly we'll do our update on what's happening with the use cases. We will be adding more use cases, which is gonna be great because we did get a lot of feedback from our Lighthouse session on Wednesday. I sent a note across on that on, you know, the fun hacks and tips and tricks that people are using AI for throughout our conversation.
+But the point is, we're going to take those dream scenarios and everything that was kind of discussed through our transcript and, you know, build an agent to pull through what's happening. But we were able to pull through a lot of really cool themes that people wanted to discuss and bring about knowledge management. So it's a big theme coming up. So we want to make sure we're able to target that really well. And then for our cross-functional sessions that are coming up.
+Basically, our goal is those sessions are going to help you guys, you know, since you're not siloed, you are working with devs, you are working with your QA teams. We want to make sure there's a way to combine all three of these like work streams together to be able to build these agentic workflows. So the whole goal for these like functional sessions that are happening Tuesday, Thursdays is that we can give you a demo of CodeMe and show you like how CodeMe works to build those workflows together. And then you guys.
+Like, you know, there's a ton of meetings that are going to be happening with AI cross-functional syncs with champions, as well as like other different meetings. There's a ton on the calendar right now. But basically, we want to make sure like you as digital teams can build really cool agents or assistants using CodeMe or whatever platform we end up going down the route of as new things come up.
+but being able to build agents and assistants for yourself and then being able to then workflow them with what the Dev team and the engineering team is doing. So it's one large workflow. And even if it's like one part of the PDLC or one part of your system that like takes something that's manual and turns it into something that's automated to make your lives easier, that's kind of the goal to like make it really successful in that way.
+I know one of the things that Vlad and I have also been talking about is, okay, if there's a PR, if there's like a PR ticket that goes out into, that goes out into production, okay, now we know there's a PR in production, take the information of that, tie it back to the GR ticket, pull all the information of like, here's the details of this ticket.
+and then take that geo ticket information and pull it into your PRD. So at the end of the day, whatever is in production is in your PRD and you don't have to worry about going in and updating it because the whole flow is, the point of the flow is that it'll update it for you. So when you people join in or when you go back to say, well, what went out for this PRD, it'll have all that information there. So just use cases that we're also thinking of on our end to help the team.
+But the goal is to like eventually get you guys to be doing the use cases. But that's why we want to involve all of like the digital team, the engineering team, and the QA team together. So everyone can work on them together because it's not just one team versus another. Because you guys work together on a daily basis. It's just, you know, some of these hours a week, we separate everyone out a little, but we also want to bring everybody back together.
+Vlad, did I miss anything here?
+Like, there's a lot happening.
+
+Vlad Grubman   21:40
+Nope, I think, yeah, there's a lot of meetings, a lot of confusion. So if you guys have any problems, any questions, anything we can clarify, feel free to reach out. Oh, yeah, one more thing. We have this cross-functional twice a week, and then we have the...
+
+Nikita Kumar   21:43
+Yeh.
+
+Vlad Grubman   21:59
+office hours on Fridays. It doesn't mean that's the only time you guys can reach out and ask for help. By all means, get on our schedules, reach out. We'd love to help you.
+
+Nikita Kumar   22:11
+Yeah, super, super ad hoc on that, as well as not ad hoc, we have the Friday optional hours. There will be potentially the new use cases that we're kind of thinking as they come through, we'll discuss them again with Shai and Moses as well to make sure that they align with what the team is looking for, and then we'll start adding them into the digital.
+the digital board as well. So we can make sure that that part also gets assessed properly. But yeah, lots of cool things coming, lots more hands-on sessions, which is kind of the goal of like our Tuesday, Thursday sessions that are going to be happening. That's why we want to make sure everybody has access to CodeMeet because there's going to be a lot more hands-on sessions. If there's something that you guys want to learn or specifically want to know about, please let us know and we'll be able to, we'll be happy to add that in.
+into the curriculum as well. There is a curriculum for the cross-functional sessions, but we know it's going to be pretty fluid and we can change things as needed.
+I saw a hand go up and it went back down.
+
+Alfredo Achecar   23:06
+That was me. I had a actually had a question for for Jatin. I know, I know it feels like a long time ago when we did the the voice of the customer presentation. I remember that Shai had some comments regarding like the output of what we put out. I think I remember like, you know, the the desire was for it to be kind of more agnostic.
+
+Nikita Kumar   23:07
+The.
+
+Alfredo Achecar   23:27
+Just more like insight rather than necessarily like product features and backlog items.
+Did we have we made any changes since then, or or not yet, or like, where, where did we get out with that?
+
+Jatin Bagga   23:38
+Yeah, I think it was more feedback from you, Manu and stuff, right? Like you guys and Nicole that you guys do not want product backlog items, so we did take that into account, right? So I think right now our goal will be just to produce insights. I think then I think it'd be the product managers picking the stuff up, because for me, you know, insights is important, but I also want to look at the product backlog, but that's not going to be the primary goal.
+So, that's where we are, but right now we're just trying to find you on the source, Alfredo. Like, that's the key thing, right? Like, a which tool to use for us, so that where we can share across teams, right? It's not just contained with one person working on his on their local machine. That's why we called me out.
+
+Alfredo Achecar   24:14
+Oh, you mean like, oh, I see. You mean like, like which platform, like which is it or code?
+
+Jatin Bagga   24:18
+Yeah, like for instance, if it's called me a cursor, if there's no construct of a project, how do you share that across different team members itself? So anyone can leverage it, right? It shouldn't be contained with one person, which is the drawback that we saw, right? Like we were so like regimented with GPT, right? Like I had to do it and you had to do it. And then we had to combine, so I had to copy over this stuff.
+
+Alfredo Achecar   24:21
+Mm.
+Yeah.
+Totally.
+Mhm, mhm.
+
+Jatin Bagga   24:39
+So that's one part. But above all, I think the source as well. So like if we can get non-PII based data, like let's say call miner or something other source, that would be super helpful and would make the insights even more meaningful if that makes sense. So that's the part that we need to still work through.
+
+Alfredo Achecar   24:47
+Yeah, that'd be awesome.
+Yeh.
+Cool, okay. Thanks for letting me know.
+
+Jatin Bagga   24:58
+Yeah, yeah.
+That's it, I think, from my side, Nikita. I do have a question just on the meetings overall, because I missed, so I just want to share my calendar just to talk through that, but we can do it whenever you're done with your agenda, basically.
+
+Nikita Kumar   25:12
+I mean, today was just update. So I think everyone kind of went through down the line of what each team is working on. I think we'll probably have more next week to demo and see what everyone else is showing across the board. So yeah, if you want to, if you want to take a, oh, I see a question. And then I could give the floor to you.
+
+Mia (Xiaoling) Zhou   25:27
+Yeah.
+Yeah, before Jatin jumping, I just want to share, because our team, we do need like a product manager, like join, because now we kind of like stopped at, so like real needs there, like, and what is is the like...
+The things we put together works, um, since no product manager like actively working the team now, yeah.
+
+Nikita Kumar   25:57
+Okay, and then for you guys, it's, all right, we can, I will discuss that with Moses and Shai offline for a product for you guys. Yeah, I can, yeah, of course. Happy to help.
+
+Mia (Xiaoling) Zhou   25:58
+Mhm.
+Mhm.
+Thanks.
+
+Nikita Kumar   26:11
+Okay, yes, Jonathan. Happy to help you now.
+
+Jatin Bagga   26:15
+Yeah, I think just a quick question. So I see five meetings every, like 6 meetings, I think. So I just need to make sure that I've got that right. So Monday meeting is digital. And there's a Tuesday, that's the Tuesday and Friday is the AI leaders and mentors deep dive. And then there's a Wednesday that's digital all lighthouse session.
+
+Nikita Kumar   26:24
+Mm.
+
+Jatin Bagga   26:33
+And then there's a Thursday that is digital cross-functional AI enablement champion sync. And then there Friday, there are two of them.
+One's the AI leader and mentor sync, and then there's an AI enablement, cross-function lighthouse hours. So can you help me understand like...
+
+Nikita Kumar   26:52
+Yes.
+
+Jatin Bagga   26:53
+And if you have a, like, if you have a list or something, you take a look and see which ones like actually must have, and the one that's optional, we've got other sort of things that we're working on as well at the same time, if that makes sense.
+
+Nikita Kumar   26:56
+Yes, yes.
+Yeah, so the one that's on, so today is the one that, today's Monday, right? Yeah, today's the one that the Digital Champion Sync, which will be on. Tomorrow, the AI mentors deep dive is to go over people who are AI leaders and mentors. If you're on that, you are on one of those lists to do a deep dive of what your roles and responsibilities are. That won't be the case for next week, I don't think. And then also tomorrow, we've got the cross-functional Lighthouse PDLC session. That's on.
+on Tuesday and Thursday every week so that everyone will be on. Then yes, Wednesday is our digital lighthouse session. And then I also, there's also a cross-functional champion session on Thursday. So I think it's like, so it's Monday is one meeting. This coming Tuesday is 2. This Wednesday is.
+two. Now this Wednesday is 1, this Thursday is 2 meetings. So if you're a champion across the board for the whole program, so I don't know why there's balloons. If you're a champion across the board, they'll pull you in. They'll pull you into a lot of the meetings.
+
+Jatin Bagga   28:00
+I know, that's like funny.
+
+Eric Trenz   28:02
+Were those were those like a background or real balloons?
+
+Nikita Kumar   28:06
+No, I think it was just like floating balloons.
+
+Jatin Bagga   28:08
+No, it's like sometimes there's a movement of the laptop sometimes when you do thumbs up it just...
+
+Nikita Kumar   28:10
+What do you do like?
+
+Mia (Xiaoling) Zhou   28:11
+Yeah, if it moves something.
+
+Nikita Kumar   28:11
+Yeh.
+What?
+
+Eric Trenz   28:14
+That's crazy. Sorry.
+
+Nikita Kumar   28:15
+We're celebrating all the meetings that we have.
+
+Jatin Bagga   28:15
+I don't know.
+Got it. So I think this week is kind of really like action-packed. My one request is, look, most of us have mornings busy with other work, our regular responsibility as well. And I don't want to miss any of these meetings, but can we like push them to the late afternoon or something so that we're not like tied up?
+
+Nikita Kumar   28:19
+Uh...
+Yeh.
+So we have a lot of like the morning meetings is because of our, like our champ or coaches that are in Eastern Europe because they have to work with their team. And for them, it's like already like 7, 8 o'clock at night. So they're already working the late hours. That's why the Tuesday, Thursday mornings are for those.
+
+Jatin Bagga   28:38
+Haha.
+
+Nikita Kumar   28:56
+The ones that for like digital, I'm trying to keep them after 12 at least, or like starting at 12, but there are certain cross-functional meetings that everyone needs to be a part of, so we can't really move them just because they need to, we need to have all the right people from our side in those conversations also.
+
+Jatin Bagga   29:13
+Yeah, got it. Okay.
+
+Nikita Kumar   29:14
+Yeah, I know it's a lot. Like, even when I look at my calendar, it's color-coded, but it doesn't mean anything because we have to be in every single meeting. But yeah, for you guys, like, I think if you're a champion, you're going to have to be in those conversations. If you're, like, if they're on your calendar, it means you have to be in them, unfortunately.
+I know it's quite a bit of meetings and everything's like packed into the morning hours. So we could try to see how to like change them, but I don't think we can push anything out just because we have different people from like all in different time zones to be able to help lead some of those. But yeah, but I think like since you are, I think one of the AI either leader or mentor, I think we have you on one of those lists.
+you'll have to be in those. But if you're not like a, if you're like the AI leaders and mentors, if you're, I think you're on one of those lists, so you'll have to be in that conversation on Friday. Jonathan, you'll probably also have to be in the cross-functional champions as well as our, just our digital meetings. But the open hours on Friday are optional. So if you don't have any questions, you don't have to go on there. You can ad hoc.
+Message us and ask any questions in there as well.
+Hopefully, yeah, hopefully I didn't miss anything. I mean, if you're on the call, I know you have a better idea of the calendar than I do.
+
+Iryna Pashko   30:34
+Yeah, thanks, Nikita. Yeah, that's exactly right. So we try to combine multiple time zones and a lot of meetings. Maybe for some of them, yeah, I will talk to Monique and Nick. We can mark the optional participants because for some meetings, like champions are must have, and for some, they might be like optional. So we'll see if we can.
+Triage and Mark required an option, I think this.
+
+Nicholas Crowley   30:57
+Yeah, and we did try to lay out the required versus optional on each of these. So recognize people are going to make, we had to make 100%, but best effort to get there. Yeah, Jatin, your outlier as a mentor, you get, you win the most meetings award. So recognize that it's a challenge, but appreciate your commitment.
+
+Iryna Pashko   31:02
+Mhm.
+
+Nikita Kumar   31:14
+Yeah.
+And then you should ask for breakfast every morning for every meeting.
+
+Nicholas Crowley   31:24
+Yeh.
+
+Nikita Kumar   31:28
+Well, that's kind of all we had for today. Just wanted to welcome everybody back, get an understanding of where phase one use cases were. I'm not going to take your time if we don't have much more. And then next week we'll continue this session. Hopefully we'll have a little bit more demos and more of the champions can join when everyone, once everyone's kind of aligned their schedule a little bit. I know it's been a
+a lot of meetings. So hopefully we can get people to align their schedules a little bit more. But yeah, I can give everyone time back for their lunch.
+
+Alfredo Achecar   31:58
+Thanks, everybody. Appreciate it.
+
+Nikita Kumar   32:00
+Thanks, all. Have a great rest of your day.
+
+Iryna Pashko   32:00
+Thank you.
+
+Vlad Grubman   32:04
+Thank you, Fox.
+
+Nicholas Crowley stopped transcription

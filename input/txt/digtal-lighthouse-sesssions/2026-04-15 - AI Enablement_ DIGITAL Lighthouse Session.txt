@@ -1,0 +1,369 @@
+AI Enablement DIGITAL Lighthouse Session-20260415_155908UTC-Meeting Recording
+April 15, 2026, 3:59PM
+25m 37s
+
+Chandra Willett   0:36
+Good morning.
+
+Nikita Kumar   0:39
+Hello!
+
+Alfredo Achecar   0:40
+Hey, good morning. Nikita, you're doubling up today, huh?
+
+Nikita Kumar   0:44
+I know. I always log in on both so I could share notes off of the off of OMF, but then like if I have screen recordings, I can do it off of EPAM because it's quicker.
+
+Alfredo Achecar   0:55
+Wait, so what's your setup? Are you guys like on a Citrix thing or like what? Ah, okay.
+
+Nikita Kumar   0:58
+Yeah, we're on Citrix and it's so slow. So anytime I want to demo anything that's like code me is on Citrix. So when we demos code me, it's so slow because it just, it just lags A lot. So that's why like a lot of our demos, like I have like a whole like OMF window open outside of Citrix for.
+
+Alfredo Achecar   1:11
+Ohh.
+
+Nikita Kumar   1:18
+GPT and Robo and things like that to make it quicker. So then I can do the demo off of there, but still have it like shown and tracked properly. Because then after these calls end, I don't have access to the chat from EPAM, but I have access to the chat in OMF. So it's a fun time.
+
+Alfredo Achecar   1:35
+That's really confusing. I'm like, okay, so half follow you, like, yeah.
+
+Nikita Kumar   1:37
+Ho.
+Yeah, it's very fun. It's a good time.
+
+Alfredo Achecar   1:44
+So is the rest of the EPAM team also in that setup?
+
+Nikita Kumar   1:44
+Yeah.
+Yeah, yeah, we're all on citrus.
+
+Alfredo Achecar   1:47
+Good.
+
+Nikita Kumar   1:49
+It took us a long time to get access to Citrix in the 1st place, so that was fun. I did like have them upgrade my like Citrix machine to be a little faster, so it is a little bit quicker, but aside from that, like it logs you out like very quickly, so I have to continuously make sure like I'm on to like stay logged into Citrix because it'll log me out and then I have to go through.
+
+Alfredo Achecar   1:53
+Mm.
+
+Nikita Kumar   2:10
+like authentication again and I'm like every single like it's like every like 10 minutes if I'm not like actively pressing buttons.
+
+Alfredo Achecar   2:14
+Hey, Hai.
+Yeah, okay. That's wild.
+
+Nikita Kumar   2:20
+It's a good time.
+
+Alfredo Achecar   2:21
+Yeah.
+
+Jatin Bagga   2:22
+Hey, Nikita, I'm on another call. This is Jatin, how are you? But I am dialed in and I will soon join back if, let's just stay on, okay, just to listen in parallel.
+
+Nikita Kumar   2:23
+Oh.
+Is it?
+Yep.
+Take your time.
+Yeah, take your time away. We're also recording this. You know, I feel like I have to say that in every call, but we'll give everyone a few minutes. I know that there's at least as well happening. I know a lot of the digital teams there in Dallas today, so I'm not quite sure how many people are going to join, but we can kind of get started.
+basically. So today what we really want to do is make sure that you guys are set up for our session tomorrow. Our session tomorrow is the orchestrator with cross collaboration teams and right now I just want to make sure that you guys have at least two agents set up within CodeMe so you can follow along for tomorrow's demo because that's going to be hands-on.
+where they're going to show you the orchestrator and then you can attach your sub agents, which is the two that you're going to be creating today. So from like the team who's on right now, do you guys have like code me agents set up just yet or no? Or if you need help, like we can walk through that. Just because like that's going to set you up for success for tomorrow's demo.
+And it does get a little bit complicated with CodeMe, so I totally understand. So just let me know where you guys are at with that, or if you want to show any of the agents that you've been working on for the homework from last week, and we can take it from there.
+
+Alfredo Achecar   3:51
+Hey, Nikita, I know that you know this, so I'm just reiterating it's, you know, some of us, while the work in design, our tooling is not fully connected yet, so...
+Yeah, like this stuff with like Gear and Confluence is definitely interesting, but it's not super duper relevant to our work.
+
+Nikita Kumar   4:10
+OK.
+
+Alfredo Achecar   4:11
+So, just kind of calling it out.
+
+Nikita Kumar   4:14
+Yeah, well I guess like just to make sure that you guys have the integrations in place, like it's not necessary they're going to use your confluence, but like for one of the agents that we're working on for Monique is accessibility and making sure like when your tickets are made for accessibility, the agent actually runs through the ticket and calls out any accessibility issues before you go.
+
+Alfredo Achecar   4:36
+Mm.
+
+Nikita Kumar   4:54
+But the goal is to make sure like it doesn't have to be like just because like you have to have JIRA and Confluence integrations to make sure that if you're posting something it's there, but it can also be something for intake, right? Like we had done like an intake form in Rovo with like just a practice one that I had put together was it's a if it's a design intake of.
+here, if it's capability type intake, go here, if it's service, go here. Something like that can also be helpful for you guys. Even like within the design team, right? If you have intake that's coming in, that's, oh, like Alfredo works on this type of intake, so we can pass it this way, or Nicole works on this, or Monique works on this, depending on which team, you can even build intake based off of that. And as long as.
+
+Alfredo Achecar   5:21
+Mm.
+
+Nikita Kumar   5:36
+Because you have like that agent built out within CodeMe, we can show you like the top level orchestrator to then like pass it down correctly.
+
+Alfredo Achecar   5:40
+Yeh.
+I see. Got it.
+
+Nikita Kumar   5:44
+So it's not, yeah, it's not just for like user stories and things like that, but also it could be for, okay, we have this design. I understand that we walked through, you know, this is like, this is the accessibility. I understand we walked through it. Here's my feedback on it. Do you want that feedback now put into the ticket or do you want it like on a confluence page? Just depends on what you're showing. So if you've got like.
+
+Alfredo Achecar   5:46
+Gotcha.
+
+Nikita Kumar   6:07
+Like the way our agent right now works, that we'll do a demo of after we show Monique, is you put in your JIRA tickets that have accessibility requirements, the agent runs through the JIRA ticket, looks at all screenshots, looks at any of the designs, gives you feedback on like what's missing in that or what's not missing or what's there, and then it'll post that comment within JIRA on that ticket itself. So like you as a designer can go back and say, okay, here's all the comments.
+So if there's any, you know, if there's not a lot of, the flow just goes a little bit quicker for you that way.
+
+Alfredo Achecar   6:36
+Yeah, no, that makes sense. The, I mean, arguably, the flow would be go faster if it connected directly to Figma, right? Like if so, you know, but but fair enough.
+
+Nikita Kumar   6:44
+Yes, that's a blocker on our side. Yeah, we have that tracked on our end as one of the items that we're trying to get you is to make sure that you get Sigma integration quicker. And I know Vladislav already brought that up in the sessions as well. So yeah, that's definitely on our list of things for sure.
+
+Alfredo Achecar   6:56
+Bagga.
+Cool, cool.
+
+Eric Trenz   7:03
+Pam.
+
+Nikita Kumar   7:03
+But I guess like, it's more so just so when you do get all these integrations in place, you just have like the background on how to get it all set up and making sure like the agents are ready to go for you. But I know like, I'm sure there was a lot happening in these like, like I know there's a lot happening in all of our sessions because there are so many sessions, but.
+I also wanted to give this space for Lighthouse to be able to answer any questions that the team might have with some of these cross-functional sessions. But then also, like, part of the homework was to make assistance an agent. So if anyone has something to show, I would say, like, we can go over that today. But we would say, because your homework tomorrow will be.
+Make sure you have two assistants and create the orchestrator agent to be able to go to each of those sub-agents depending on what the requirement is. Just to give you guys a heads up.
+Questions, or someone wants to show something.
+
+Mia (Xiaoling) Zhou   8:00
+Uh, Pai.
+Yeah, Nikita, I do have a question. I trying to build a system on code me, but I kept having the like failed to fetch error.
+I am not sure how to.
+
+Nikita Kumar   8:15
+Okay.
+Can you send me a screenshot or if you want to share it so I can see it really quickly?
+
+Mia (Xiaoling) Zhou   8:21
+Yeah.
+Okay, sure.
+
+Nikita Kumar   8:25
+I don't, I think our CodeMe team is offline at the moment, but let me see if I can help you troubleshoot some of it.
+And then we also have open hours on Friday, Mia, if you, if we're unable to resolve it today, we can come into open hours on Friday where the whole cold meeting will be there as well. But yeah, sometimes if it's like fetchers, it might be something in our logs and that's something that then our team will have to look to.
+
+Eric Trenz   8:36
+Such.
+
+Mia (Xiaoling) Zhou   8:42
+Mmh.
+No, thanks.
+Okay, thanks.
+
+Nikita Kumar   8:58
+But if you want to send me a screenshot, I can take a look at it.
+Chandra, I see you have your hand up.
+
+Chandra Willett   9:08
+Yes, just a real quick question. I was not at the last two sessions. So this build, was this in the last session? So I can just go back and listen to it and make sure I have it ready for tomorrow. Okay, that's all. Thank you very much.
+
+Nikita Kumar   9:16
+Yeah.
+Yeah, yeah, so building the assistance, correct, was in our last, which was Thursday, the cross-functional session. Let me actually, I can send you the link to that as well, so you have it, and it has like everything on how to build an assistant. So I can put a link in here for anybody who might not have it.
+
+Chandra Willett   9:33
+Thank you.
+
+Nikita Kumar   9:37
+Give me one second.
+I got many links and many things.
+Yeah, here we go. OK.
+Okay, I will send you the one for assistant that I believe the team has sent us.
+Observe.
+I'll find it for you. I have like 7 million links open for Cody, but I'll find the right one. I'll pop it in the chat for you. That way you can see the summary in the background and just like watch through if you need to. But it's pretty simple to build the assistant. I would say the more the extra step is making sure that you have your API tokens.
+set up correctly. And all of this is happening in the one main Atlassian training environment. So I'll send the link for the training environment as well. And you can make your own API tokens through there for Confluence and for Jira, depending on whichever part you're on. But once you have those in place, that's where, and just save those so you have them, that's what you'll be using for the integration portion for the project management part that's going to go into the agent itself. But.
+Building the agent and the instruction itself is very similar to what we've done with GPT and like other places. But I just want to, I'll send across the information with that. Do you have it?
+
+Chandra Willett   11:01
+Thank you.
+
+Nikita Kumar   11:02
+Hello.
+Yeah, OK.
+Okay, so can you actually put this screenshot in the code me chat? Because I think this is something that the team needs to look at into their logs as to why it wouldn't be working.
+
+Mia (Xiaoling) Zhou   11:12
+Okay.
+Mhm.
+Okay.
+
+Nikita Kumar   11:18
+Thank you.
+Cool. Does anyone have any other agents that they worked on for homework that they'd want to show?
+Or at least like have them ready for tomorrow. Because it will be all very hands-on tomorrow as well.
+Okay. We don't really, like this week, I mean, like I really want to be able to see assistants. So like if you, if it's something that's not working, we'd love to see that as well. It doesn't have to be a working agent or something not working. We'd love to see that. But next week, just a quick update, Vlad and I are working on this concept called the brain.
+And it's basically like your knowledge management made easier, but we were able to, we were able to play around with it and like take in confluence pages and ask it questions, whether it's, you know, I have a different use case and I'm gonna get the answers I need and Vlad has a different use case. So next week's demo will be our brain demo. And that way you guys can start at least figuring out like, okay, like this can be something great for knowledge management, figuring out where every.
+everything is. And again, that works best if the knowledge is all accurate and in there properly. But we will show you guys how to build the brain using Claude. I think that's what we're both working on at the moment.
+Um, Kai, I see you have your hand raised.
+
+Kai Jei   12:52
+Yeah, I just got called me access not like too long ago, so I kind of missed the set up steps. Do you have it somewhere or could you like just run me through really quickly if that's possible?
+
+Nikita Kumar   13:02
+Go away.
+Yes, let me actually send you all the setup steps because this is what you're going to need for integration setup. So I will send you that and I'll send you the prompt as well that we did for our last, one of our last demos in this chat. So people have it.
+
+Kai Jei   13:18
+It's.
+Just.
+
+Nikita Kumar   13:29
+Oh, Alfredo, for Miro, I can ask Vlad. I think this is something we can ask about as well.
+
+Kai Jei   13:35
+I.
+
+Nikita Kumar   13:38
+Help center. I'm gonna send you guys all the links that we bought.
+That we've been like sending across, so people have them.
+I mean, through your school.
+So this was for the use case one, and I'll also send you guys the link for how to set up an assistant. So we also do have that in one of my many chats and links.
+
+Kai Jei   14:01
+Shah.
+G.
+
+Nikita Kumar   14:14
+I'll put Miro on our on our list for me to ask as well, Alfredo.
+Help Center, okay, and I'll send you guys what the Code Me Slack channel is also, so you have it.
+
+Kai Jei   14:30
+Thank you.
+
+Eric Trenz   14:31
+Nikita, a high level question is, um, are folders essentially projects? Like, do they share, do they save?
+
+Kai Jei   14:31
+But.
+
+Nikita Kumar   14:33
+What?
+
+Kai Jei   14:34
+Yeh.
+
+Eric Trenz   14:40
+context based on previous conversations.
+Okay, awesome. Thank you.
+
+Nikita Kumar   14:58
+The naming is so different on here sometimes, because like even for us, we're like, this is right, right? Okay. So the folders are basically like the projects that you'll be in. So like when you're in a project, you should be able to across the board, like I'm in the Code Me project and the training project, so I can see anything that's in both.
+
+Kai Jei   15:00
+Sam.
+S.
+
+Eric Trenz   15:04
+Yeh.
+Oh no, I...
+
+Nikita Kumar   15:18
+It might not necessarily be conversation, but it's assistants that are created across the board within that project.
+
+Eric Trenz   15:24
+Oh no, I'm sorry. I think I was unclear. I meant is, so like ChatGPT has projects that allow you to kind of give it context.
+That's specific to like.
+that use case or project or whatever. And in CodeMe, there's a section for folders, and I didn't know if that was similar to ChatGPT projects.
+
+Nikita Kumar   15:48
+Thank you.
+Not for that case, I think, I don't think, but I think in data sources, you can probably manage all your information there, but I can find out more for you from that. But in projects, it's just whatever project you're assigned to be able to share across the board.
+
+Eric Trenz   16:10
+Okay, thank you.
+
+Nikita Kumar   16:11
+Yeah, I can get that information for you.
+
+Kai Jei   16:16
+What would you say are the advantages of using Pord me versus all the other AI tools we've got available?
+
+Nikita Kumar   16:24
+Yeah, so code me is basically where your agentic workflows are going to be happening. Other tools have not been quite able to do that yet. And the code me can also automate a lot of these. The goal of us kind of asking you guys to use code me because it's going to be cross-functionally across all the teams. Because at the end of the cross-functional meetings that we have Tuesdays and Thursdays, we want you guys to be able to build an agentic workflow with.
+design, product, Dev, QA, and just from like full PDLC. That doesn't have to be the full PDLC, but part of PDLC, but that's where your advantage for agentic workflows will come in, which I know everyone buzzwords have been going around for agentic workflows, but that's really where the agentic workflows are going to come into place and it's all going to be within CodeMe platform itself. And again, like it's tool agnostic, so.
+Learning it in one place will be helpful for any other future tools that come in that all sort of authentic workflows, but it will just put you guys in a better place to know how to already do it and just move that skill set over to whatever next tool that might come into place.
+
+Kai Jei   17:24
+At.
+
+Nikita Kumar   17:29
+Were you guys able to create assistance and code me people who have access for tomorrow just so you so you guys are prepped for tomorrow?
+Just went out.
+
+Eric Trenz   17:51
+I was able to create one, but one or two, but I'll say they're.
+Pretty.
+And drastic, you could say, not super well refined at this point.
+I, yeah.
+
+Nikita Kumar   18:14
+Okay, I mean, as long as it's like you're able to build the assistance and have assistance being able to be there and like use the chat for it. The goal is really to make sure that when you have these assistants in place, we can do the orchestrator, which is going to be for tomorrow and then you can play into that. So I put some
+Examples in our chat earlier. So if you wanted to do something that was build an agent that was, you know, sprint nodes to say like, okay, I want sprint nodes in this format versus building an agent that says I want sprint communication in this format going to stakeholders. Those can be your two separate agents and then tomorrow when you do orchestrator, you can use those as sub agents.
+depending on like what the client is or like what the user is looking for. But I would say have at least two kind of ready to go for you for tomorrow so you guys are following along with it. And it can be very basic if you want them to be basic too, right? Like you can have one that's saying, okay, I have an intake form for design and it could be like 5 random questions or I have an intake form for capability team and it could be 5 questions, which is what we've done in Robo already.
+But now we're kind of just trying to show you how to build all of that within CodeMe base as well. But I think it's okay, like as long as you have your agents and you were able to run it and create agent, that's that was part of the homework to make sure that that the basic setup is there because I know we didn't have a lot of CodeMe training in phase one. So we do want to make sure that we are actively giving you all of this.
+the code mean training that you need for phase two because after May 7th or 8th, I believe, that's when you guys are going to go into your own teams and start building out these workflows with your Dev team and your QA team. So we just want to be mindful of like making sure that everyone's on the same page in terms of like the learning path that's happening.
+Um...
+So yeah, so I mean like I guess my ask is like please make sure you're doing the homework if you have access. For tomorrow, just have two agents, it could be like two smaller agents just so you guys are ready for orchestration because that's gonna be a really big part of tomorrow and that's most of the demo is orchestration. And then after that on Tuesday, we will be picking volunteers to show their orchestrator.
+on the Tuesday homework show and tell. That way people can start seeing like how you're also using orchestrator because it's going to be different across the board with different teams. QA is going to use accept differently. Devs are going to use it differently and then digital is going to use it differently. So there will be some show and tell happening at that point as well.
+
+Nicholas Crowley   20:51
+I get a real quick question for those that may not know that they have code me access. I'm going to make sure they're good. I assume that's Okta enabled and they have a template. I don't know if some of the folks can confirm that. That's how they access it or if they're going through it like to get to code me.
+
+Nikita Kumar   21:13
+Um...
+Yeah, so did they, people who don't have access, did you guys go through that, the how to request access? Is that what you're asking for, Nick?
+
+Nicholas Crowley   21:26
+I'm just asking how people actually access it. When they get onto their system, they want to go to CodeMe or they go into Okta and clicking on one of the chicklets there.
+
+Nikita Kumar   21:28
+Oh.
+Oh, yes.
+Yeah, it should be on Octa, but you can also go on the code me link and that should show up. So if they have access and they requested it, they can go on either or.
+
+Nicholas Crowley   21:45
+Great. Yeah, let me know if you don't have access and I can make sure we get that taken care of.
+Everyone should have access.
+
+Nikita Kumar   21:58
+Yes, I'm hoping everyone does have access for tomorrow at least.
+Um...
+Trying to find you guys the the page for the agent, because it's on a different team channel, so I can get you that.
+Some of them are going to be more Q&A based, some of them are going to be more you guys showing us what you're working on. And again, like this is homework. So we do want to make sure that everyone is doing their homework and like we do have to make sure that you guys are showing and telling a lot of that. I know we had a lot of in phase one, so it will be a continuation of phase two as well.
+But anything else in the meantime, I know I'm not going to keep you guys super late if there's not a lot. We just want to make sure that the team is working on assistance. And if you have access, I would really highly recommend you build two small assistants so they're ready for tomorrow's session as well. And then next week in our lighthouse session will be.
+going into the brain demo, so we'll be able to show you guys what that kind of looks like as well. There is potential talks of making these meetings slightly shorter. Irene, I think you'll probably have more on that whenever we find out, because we know there's a ton of meetings and there's meetings every single day.
+So we're also talking about if you are an AI champion, we're also talking about shortening some of those conversations as well so people can have time back to actually do the work with their teams and not just be in like 10 hours of meetings a week. So we are trying to actively shorten the meetings so you guys have more time as well.
+
+Iryna Pashko   23:46
+Yeah, this one question in the chat about playwright integration into the code meeting. Is it on our list already?
+
+Nikita Kumar   23:54
+I will pass that on to Vlad as well, because he's talking with the leadership for integrations. So as of right now, I think we've got a rating on Figma, Miro, and Playwright. I will ask Vlad how that is looking, because he's the one.
+He's helping push that with the leadership team.
+And in the meantime, I'm still looking for our page for the assistance. I know I have it. I'll send it to you guys. But yeah, take a look at that page. You'll be able to see everything that was done for creating an assistant. And you can use that to then build out your assistance for CodeMe as well.
+Any questions, anything else? I don't want to keep you guys if we don't have a lot more and then just come back next week and tomorrow with everything ready to go.
+Just make sure you are doing your homework because I will be calling on people to show homework next week. I was lenient this week.
+I will give everyone time back then.
+
+Nicholas Crowley   25:12
+Thanks, Nikita. Thanks all.
+
+Nikita Kumar   25:14
+Thanks, all.
+
+Iryna Pashko   25:14
+Thank you. Bye.
+
+Alfredo Achecar   25:15
+Thank you.
+
+Nicholas Crowley stopped transcription

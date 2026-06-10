@@ -1,0 +1,887 @@
+AI Enablement DIGITAL Lighthouse Session-20260429_155945UTC-Meeting Recording
+April 29, 2026, 3:59PM
+1h 4m 28s
+
+Nikita Kumar   0:23
+AL.
+Give everyone some time to hop in here. Thank you for staying late to join today.
+Hello, just giving everyone a few minutes to hop in.
+
+Karly Bolger   0:57
+No.
+
+Nikita Kumar   1:25
+Just giving everyone a few minutes to hop in here. Also, I know we need Oleks for today's session, so make sure he's able to hop in as well.
+Did everyone get the link for today that we sent in the chat of like the prompts that we'll be using?
+
+Alfredo Achecar   2:06
+Yes.
+
+Nikita Kumar   2:07
+Okay, great. Yeah, once Oleksandr gets on and the rest of the team, we can get started. But those will be really helpful for today to kind of walk you guys through the guidance of building assistance and kind of like starting from the bottom level before we get to the rest of the complicated stuff.
+
+Alfredo Achecar   2:08
+Is better.
+
+Nikita Kumar   2:28
+So we'll give everyone just a minute or two.
+We can get started.
+Um, just because I don't want that new one.
+
+Oleksandr Tsyganok   2:43
+Hey, guys, can you hear me well? Because I joined from VDI and had some issues with microphones, so switch to APAN.
+
+Nikita Kumar   2:45
+Yep.
+Yep, I...
+We can hear you.
+
+Oleksandr Tsyganok   2:53
+Great.
+
+Nikita Kumar   2:53
+I'm just giving everyone another minute to join in because I know this is more hands-on and people have to follow along. So I want to make sure they follow along from the beginning.
+
+Sean Monaghan   3:01
+He said.
+
+Oleksandr Tsyganok   3:03
+Yeah, while we're waiting, Nikita, can you explain the current like state of like this knowledge and progress in CodeMe? Do we need to start from the very beginning and prepare this like 2 integrations for Confluence or in Jira? Or we assume that most of guys already have it? Okay.
+
+Nikita Kumar   3:03
+Ah.
+Yes.
+
+Oleksandr Tsyganok   3:23
+Good.
+
+Nikita Kumar   3:23
+Yeah, we will need to do integrations to get everyone on the same page. Because a lot of our digital folks were in the digital conference in Texas when we went over our two sessions regarding integrations and assistance. So we want to make sure everyone's on the same page. But this is recording, so I'll get us started. We're going to be walking through a live demo on how to build assistance today.
+On our last call, we heard that many teams on the digital side didn't really have a chance to build one. So we want to make sure that we're starting everyone there. Also in our last call, we heard a lot of strong use cases from everybody. The challenge in these that they are a little bit more complex to execute without first understanding the fundamentals of CodeMe, or I guess that's a platform that we have at the moment.
+Before we get into all the orchestrations and we get into the advanced agentic workflows, we need to be able to make sure that we can build you guys a baseline of understanding the fundamentals first. So the goal for today is to get everyone comfortable on how to build an assistant with the integrations for JIRA and for Confluence so that everyone is starting at the same foundation.
+Once this is in place, then we can get you guys moving forward into upcoming sessions where we go into orchestrator, we go into agentic workflows, and a little bit more of the complicated tasks. I've sent the link across as well on for what's going to be happening today. And that also includes basically what our prompt is. It's a sample prompt. You can use that, you can use something different, whatever makes it easy for you.
+for you for the assistant. And then we also put together a sample PRD of what the assistant that we're trying to build is. So the assistant we're going to be building is basically it takes in what your PRD has and a bunch of user stories and it's going to compare if the PRD matches the user stories or if there's anything missing in your user story. So this is a bottom, it's like pretty basic, but we want to make sure everyone gets the fundamentals of this first.
+So we built a sample PRD as well, which I sent the link to. And in that PRD file, there's also two user stories that we built a link to. So one that matches, one that, I don't know what this is doing, one that matches and one that doesn't match it. But Olex is going to walk you guys through that step by step so you guys can also follow along. So I will pass the floor over to Olex.
+Yeh.
+I think you there you go.
+
+Oleksandr Tsyganok   5:37
+Yeah, thanks. Let me know if you can see my screen.
+
+Nikita Kumar   5:44
+Yep, we could see it. And everyone here should have access to code me by now. If you don't, just pop it in the chat, but I think everyone should have access to code me.
+
+Oleksandr Tsyganok   5:46
+Ahh.
+
+Nikita Kumar   5:58
+Go ahead.
+
+Oleksandr Tsyganok   5:59
+Yeah, I I will I will share this like another like additional link that was from like our previous session, so you can open it in parallel and you will see how to like follow up with me and create like this integrations that we need for.
+Jira and Confluence, but yeah, you can also just follow like my steps and basically get same results, but maybe you'll want to return back to it later. Yes, it's a correct shot.
+Yeah, so we can scroll it for the like to very bottom like to this like step-by-step guide creating first assistant. Yeah, before we will start, actually maybe let's take a look what we will get today as like final like outcome. So as Nikita mentioned, like we will build an agent that can.
+Work in, like, tool set. For now, we will connect Confluence and Jira, so it will this agent will work with this like PRD documents in this link that we already shared with you should see.
+this like sample Purdy. Yeah, it's just a simplified example, like not a real one, but we just want to like explain this like ideas, how it will work, and then you can try it with your like real data. So first of all, it will be able to check like regional requirements that we have in.
+PRD and compare it against like 2 user stories. Like one is a valid description of this like PRD where like acceptance criteria have like full match and second one is kind of deviated from original requirement. So yeah, I just cloned.
+this user story to have like some final result. So original description was not like matching this requirements and this agent can run and analyze like all these details. So here you can see like some comments here about.
+This like deviation and differences plus, like, once we will find some difference between our PRD document and user story, like agent will help us update the content of the string item and rewrite this like description and leaving this like traces what was actually changed.
+So, with set outcome, we will get like fully consistent user story with original like PRD, like all this like traces what was changed, and that like a final run, final verification when like this kind of invalid user story finally have like fully match with original PRD.
+Okay, so in order to start like building this agent, first of all, we will need to connect tools for agents. In our case, it will be Confluence and Jira. So please navigate to Codename.
+Again, I will just copy this link for your convenience.
+But yeah, it should be like in original document that I share it. Then if you have this not fully expanded menu on the very bottom, you will see this like expand menu button. So you can expand it to make it easier for you to see like this like functionality.
+On the left side, we will need to navigate to integrations page.
+And you will need to create specifically a user integration. So you have this like create button here. When you click on it, please make sure that you select and create user integration.
+
+Nikita Kumar   10:16
+Just want to make sure everyone's following along so far.
+Is this making sense and everyone has access to follow along?
+You can give me a thumbs up on your thing, no.
+
+Oleksandr Tsyganok   10:29
+Yeah, since since we are creating like 2 integrations, one in Jira and another in Confluence, I would recommend just to speed up this process, just duplicate as a stop. So one tap will be for Confluence integration.
+
+Nikita Kumar   10:30
+Cool. Thanks.
+
+Oleksandr Tsyganok   10:48
+Another will be for Trira.
+OK, so.
+
+Joshua Smith   10:51
+And can you just briefly give us, sorry, can you briefly give us an idea of what the differences are between the two integrations, between a user integration and the other one?
+
+Oleksandr Tsyganok   10:59
+Yeah, so user integration is your like kind of private integration, your private username and password store like securely in code me. It's not shared with like anybody. So once you use an agent, agent will act on behalf of you. So it will post comments in Jira, read the user story. So whatever set of permissions you have, same permissions.
+This agent will have, so nobody can access this like user integration, but project integration is a shared credentials, so you might have like some service account I know that is running like automatically and like reviewing some JIRA items for like readiness and just posting this like comments automatically, so.
+Technically, nobody started this like flow, just like some kind of bot user. So that's a place for this shared credentials. For now, like for more situation, you will work with your like private username and password. So for all cases, you can just use this user credentials type.
+User integration, I mean.
+Okay, so you will be assigned to two different projects. So one is like your team project and second one is this training project. So you should see it here in the down. If not, you can also try this like search and you should see this like training.
+Since we like doing just this like testing like example of a system creations, let's not like add it to like original project. Let's keep like everything that we building during the sessions in this isolated training project.
+So please make sure that you select a training.
+This like global integration, you can keep it unchecked as it have like by default. That's just like some control of like cross project integrations. For now, for now we will keep it simple like and all this integration should be isolated within like a given project for our case it's training.
+Then you will need to find in this list Jira integration. We have pretty huge list of different integrations, so maybe it will be just easier to use search.
+Yeah, for this alias, you just need to provide some friendly name that you will use to identify your integration. So it has like no technical meaning, just something that can differentiate different integration. For now, we will have a connection to not a production, but training environment.
+So we can call it something like Jira.
+OMF.
+Training.
+Yeah, here in the Jira URL, we will need to.
+Where it is.
+We should have like some links here.
+Mhm.
+Yes, so not sure, like we should have it.
+somewhere like in a separate section where it's easier.
+Easier to find and follow, maybe I'm just open like Ron.
+Run session here, but anyway, you can even find it here in this like document, like the suggestions that for this like end of testing and demo purposes, we we using this like training environment. Yeah, I lost it and cannot find it anymore.
+It's pretty big document here. I will copy it again.
+
+Nikita Kumar   15:05
+I can send you the training environment for confluence in Jero.
+
+Oleksandr Tsyganok   15:10
+Yeah, we just have like this nice table somewhere like with all this links that I prepared. Maybe it was like just rewritten and updated or by just open a run session. I just shared this link. Yeah, so.
+
+Nikita Kumar   15:17
+Oh.
+
+Oleksandr Tsyganok   15:27
+Uh, here.
+We will need to actually provide this like URL in this like authentication section. Yeah, make sure that it's like not a production one that you usually use in, but we have this like additional dash training.
+
+Nikita Kumar   15:45
+Yeah, just wanted to point that same thing out. We're using a training environment for this and not production at the moment. So make sure to get your API tokens from the training environment, including the links for all the training environments that Oleksandr sent.
+
+Oleksandr Tsyganok   15:45
+Yeh, I bet.
+Mhm.
+Yeah, you're using this like cloud instance, please make sure that you selected this checkbox. So it's like highlighted with this like blue color. If you're using this like white theme, basically make sure that it's checked.
+OK, I will do exactly the same stuff, like on parallel, like top.
+Yeah, looks like we just deployed.
+new version where we have this like editors. So here you will need to repeat like all the steps that we already done before like select training. Here we select in confluence instead of JIRA. Here I will say that it's confluence.
+On my training, and here should be the same URL.
+Where is this like training part?
+Then in the username email, you need to provide your email.
+Basically the same like email as you have in Jira Confluence, just a regular one of your work work email.
+
+Joshua Smith   17:21
+Might have missed it, but did you save the other JIRA integration and you're on to a different? You just changed it to Confluence.
+
+Oleksandr Tsyganok   17:25
+No.
+No, no.
+I have like 2 open tabs, as I mentioned in the beginning, just, it's still not saved, just we're doing it in parallel to speed it up because it have like exactly the same set of fields. The only difference that in one you have Jira credentials and another one you have confluents.
+
+Joshua Smith   17:31
+Oh, gotcha. Yep, that's what I missed. Thanks.
+Mhm.
+
+Oleksandr Tsyganok   17:49
+So let me know if we like can move forward. The last step that we need to accomplish is to create this token in Jira. And yeah, that's will be like our last step.
+
+Byron Purdy   18:00
+Oh, can you flash back over to the confluence really quickly?
+To the confluence tab, then the next tab, I think I missed. Did you select the slider there as well? Yes, okay, cool. Thank you.
+
+Oleksandr Tsyganok   18:16
+You mean this confluence cloud? Yes, both checkboxes should be checked.
+Okay, so next we will need to generate this like API token. As Nikita mentioned, please make sure that you navigate into this like training environment.
+And from that page, you can go to your profile.
+Account settings, I believe.
+
+Nikita Kumar   18:46
+When you're in here, it defaults to seven days. So just set your token to like six months or later because it will expire after seven days.
+
+Oleksandr Tsyganok   18:56
+Yep.
+So, here you will need to navigate to this security tab.
+And, on the very bottom.
+You have this like link, create and manage API tokens.
+Oh.
+So you have like full control and you can create a token with like very limited permissions that will do only one specific task in the confluence. I don't know, like maybe you need some agents that will post only comments and will not be able like to read any data if you have like some security requirements.
+For now, we will not overcomplicate the stuff. We just use this like create API token that will just have exactly the same permission as your user have. So create token, as Nikita mentioned, please make sure that you select in this expiration time. Like maximum option is one year.
+So you can just click this next year and select like maximum load value. And here you can type something like.
+What's me?
+training or code me something like this. It just will be like a list of tokens so you can differentiate one token from another.
+Then you will see this like dialogue. Make sure that you're not closing it, because if you will close it, you will need to recreate this token again. So ideally, it's better to store it somewhere in secure place. I know that you might use this like 1 password key manager, so I would recommend you to store it there.
+So you can copy this token and you will need to use it for both integrations. So let's navigate back to our...
+unfinished unsaved integration for Jira. And here in the last field, let's paste this token and click test. You should see this like green indications that everything is okay. Don't forget to click save.
+Again, please make sure before you save in first part that you create in this integration in training project.
+And you selected Jira Cloud.
+Without that part, you will have troublesome next steps. So if your test was successful, you can click Save.
+And your integration will be created.
+You should see it, yep.
+
+Byron Purdy   21:32
+Only CA.
+Can you go back through the top menus on the Atlasian side, how you got to that security tab? I am not seeing what you're seeing on your screen.
+
+Oleksandr Tsyganok   21:40
+Yes.
+Yes.
+
+Byron Purdy   21:45
+So, it starts.
+
+Oleksandr Tsyganok   21:45
+First of all, you navigated to training, like instance of Jira, right?
+
+Byron Purdy   21:51
+Correct.
+
+Oleksandr Tsyganok   21:52
+Yeah, then you have this profile icon with your photo or name.
+
+Byron Purdy   22:01
+OK, let me.
+I think when I went to training, it didn't take me to training because I'm not seeing that dot training in the URL. So let me just pick that again.
+Thank you.
+
+Oleksandr Tsyganok   22:23
+Yeah, I can simplify stuff for you. So I'm just click this like account settings. I will just share a link that is opened. After like clicking it, I will just navigate to security and I will share this link with you.
+
+Byron Purdy   22:32
+Yeh.
+Yes, deep links are our friend.
+
+Oleksandr Tsyganok   22:42
+Can you try just using this link directly?
+
+Byron Purdy   22:52
+Perfect, I'm there.
+Down to the bottom, creating maintenance.
+
+Oleksandr Tsyganok   22:55
+And on the bottom you have this create and manage repair tokens.
+
+Byron Purdy   22:59
+Mm.
+
+Oleksandr Tsyganok   23:00
+Yeh.
+
+Byron Purdy   23:01
+And it was the create API token first button. Got it.
+
+Oleksandr Tsyganok   23:04
+Yes.
+Don't forget to set expiration time.
+
+Byron Purdy   23:10
+Six months out.
+Into the end of the year.
+
+Oleksandr Tsyganok   23:20
+Anybody else have some questions?
+Maybe stuck on like some part.
+
+Jatin Bagga   23:25
+Yeah.
+
+Byron Purdy   23:34
+And the token name is going to be consistent across Olek, or did you name one, called me Jira, the other called me confluence?
+
+Oleksandr Tsyganok   23:34
+Bye.
+No, no.
+No, it's just for you like to differentiate this like tokens. You can create a single token here and reuse for both integrations.
+
+Byron Purdy   23:50
+Got it. So just the code me training as the token name.
+
+Oleksandr Tsyganok   23:54
+Yeah, up to you just to like differentiate them. It's not used by system anyway.
+Yeah, hope that you didn't copy anything because please make sure that you also uncopied something. Yeah, that's like my mistake. So if you if you still have like this token that you created saved, you can just reuse it for conference integration as well.
+
+Jatin Bagga   24:12
+Up.
+Yeah.
+
+Oleksandr Tsyganok   24:23
+I made this like mistake, was distracted, and now I lost it, I believe. Oh no, I have this like tab opened, so I just will copy it from here. But yeah, if you have like somehow like lost this like token for confluence, just create another one.
+
+Jatin Bagga   24:42
+Hey, Oleksandr, when Byron, are you done? Sorry.
+
+Byron Purdy   24:45
+Yes, yes, I'm good to go. Both tested. Thank you, Willett.
+
+Jatin Bagga   24:46
+Oh.
+Of course. Can I share my screen real quick? I just need to make sure that I'm not doing something wrong.
+
+Oleksandr Tsyganok   24:54
+Sure.
+
+Jatin Bagga   24:57
+Oops, can you see this right here?
+
+Oleksandr Tsyganok   25:01
+Yes.
+
+Jatin Bagga   25:02
+So this is what I created, let's say, on the production values, the ID.atlassian, right?
+
+Nikita Kumar   25:08
+You have to do it in training, yeah.
+
+Jatin Bagga   25:08
+What you're showing the training, so now I'm trying the training one.
+
+Nikita Kumar   25:12
+Mhm.
+
+Jatin Bagga   25:13
+And this is where I feel like I'm running into some issue.
+
+Nikita Kumar   25:14
+Yeh.
+No, you have to go to Account Settings, not Profile.
+
+Jatin Bagga   25:19
+Okay, then user error, NVM, Nikita. Thank you very much. Let me fix it.
+
+Nikita Kumar   25:26
+No worries.
+I'll expect you.
+
+Oleksandr Tsyganok   25:31
+Yeah, let me show my screen.
+Yeh, so guys, let me know, like, if everybody have this like integration created and available for you.
+Some thumbs up reaction.
+Okay, I will assume that we can move forward.
+Yeah, so now we need to navigate to this like assistance tabs. Here we will create like our custom assistance. If you're familiar with GPT, you can think about it as custom GPTs.
+Powered with additional like tools, like for our case, we will connect to Confluence and Shira.
+Yeah, so you will need to create this assistant by clicking Create Assistant button.
+Yeah, we we just released looks like new version in parallel where we have this like guided tours. We we have like some.
+Work here with like models compatibility looks like that OpenAI changed something on there like API level.
+I'm not sure, like maybe with like latest.
+Version this issue was fixed.
+Let me quickly try this like our API capability for generating assistance. If not, we will do it like an old school way, like manually. Because yeah, it has like some...
+Additionally, content filtering like APIs that like have like some false positive results and not allowing like our request to generate assistance. Unfortunately, yeah, looks like we still have this issue.
+So we will go with like this manual stop. For that you will need this like links that Nikita initially shared.
+We will use this like kind of simplified assistant prompt. I intentionally didn't adopted it for kind of code me standards where we have like explicit set of like rules how to use tools and like all other like code me related stuff because this example is simple enough and.
+performs like pretty well even without like this additional information for tool setup. I believe that I even tested this with like some low quality models with this GPT media and it was like working fine. Yeah, please open this page. You will need to copy this like prompt.
+And here.
+I'm assuming that you like click this like assistant, create assistant, you see this like pop up, you will select for now like create like manual because of this like API issue that we have right now. Again, here you will need to select first of all like your project. If you will select different project like integration created in one project and assistant in another.
+assistant will not be able to access this integration. So you will need to paste your prompt in this system instruction section.
+Ideally, you should like review this like prompt, understand details, what it does, and have like full control over this agent. Yeah, so let's maybe quickly take a look. What do we have here? I will expand it to...
+better see it. So we're saying that it's like product requirements consistency reviewer, like main job is to review our PRD and compare it with JIRA requirements, make sure that we have a consistency with user story.
+So, we have like 2 inputs: this PRD from confluence and the user story from Shira. The main goal is to have some like running comparison of like 2 documents and find like some mismatch, and if we will...
+see like some difference, like definitely PRD is our main source of truth here. So we will have like this list of like potential contradictions and like list of fixes that we want to apply to make sure that we have like consistent.
+like documents, like just that the user story basically following like PRD requirements. Yeah, that's pretty much it. So I mentioned like for now we will not overcomplicate it with some like low level tool usage and some configuration. We will see it later. So if like our agent will struggle with.
+to execute like this instruction, we will try to use some techniques to improve it.
+Okay, so first of all, we like configured this like system instruction. Then we need to provide a name for your system. It will be displayed everywhere, like when you search in it in code name. So basically just a name for your system.
+I would not recommend to share it with project at this moment, because, like, we will have not like currently like multiple assistants in this like space, and let's let's not to create like huge amount of like different like resources in this like project.
+And like some short, short description should be added that will describe your like assistant. Plus you can add conversation starters. Basically this like some kind of set of commands that you can click and run automatically.
+Oh.
+when you start a new conversation. So something like help.
+Near you.
+DRB and.
+Bell.
+Store.
+And for description, I will be a lazy.
+Let me just steal it from existing assistant that I created before and showed you like the idea what we want to achieve here.
+You can just provide your custom description here. Yep, that's all that you need for the setup. But since we created this integration and we don't want to have like just regular again, like kind of custom GPT agent.
+we want to have like a real AI agent and the main differentiation that agent can use some tool and run some operations. So here again, you will need to navigate to the very bottom to this like tool configuration.
+You will see this like available tools, like everything is expandable. So please make sure that you click in this expand buttons here. And here in this like huge list of tools, you will need to select this like data management. Sorry, it's not, it's project management. Project management tools, and you will need to click this
+generic confluence and generic JIRA. And yeah, instead of this like default configurations that we had before, like we hear like many complaints that this like, like too confusing that we have like some like tricky automatic credentials look up. Let's uncheck it.
+And select our integrations that we created before, so confluence training or MFPR that they created before, and...
+Yeah, I think.
+Jira training home for Jira. Yes, that's like 2 integrations that you need to configure. And once it's done, you can just click save and your agent will be ready.
+
+Joshua Smith   34:29
+Which menu was that under?
+
+Oleksandr Tsyganok   34:33
+Is that one?
+
+Joshua Smith   34:33
+That these two configurations under tools configuration.
+
+Oleksandr Tsyganok   34:35
+Yeh.
+It's on the very bottom, you have like this like tool configuration expandable section and this like available tools subsection here. And inside you should see project management and...
+This like Confluence and Shira.
+
+Mia (Xiaoling) Zhou   34:57
+Um, where, where we can find the instructions you pasted there? Yeah.
+
+Byron Purdy   35:03
+Yes, can you drop them in the chat, Oleg? I was just about to say that I was looking on the confluence.
+
+Nikita Kumar   35:06
+Um, do you mean the the system prompt? Um, let me send you the page for that again, because we sent it earlier. Let me resend it to you guys.
+
+Mia (Xiaoling) Zhou   35:07
+Yeah.
+I in that page, but the only thing I have is a system prompt, is that like a sample PRD.
+
+Nikita Kumar   35:21
+That's.
+There's another page. There's 2 links.
+
+Mia (Xiaoling) Zhou   35:23
+It's different.
+Okay, sorry.
+
+Oleksandr Tsyganok   35:26
+Yeah, assistant prompt and second link sample PRD. I just shared this link for a prompt.
+
+Nikita Kumar   35:30
+Yeah, the.
+Yeah, there.
+
+Joshua Smith   35:34
+And I got a missing integration there.
+Keycloak was missing.
+
+Nikita Kumar   35:46
+Which one was missing?
+
+Oleksandr Tsyganok   35:46
+So, you say, you say...
+
+Mia (Xiaoling) Zhou   35:46
+Oh.
+
+Joshua Smith   35:47
+When I tried to save, yeah, when I tried to save it, it's saying assistant has one tool which requires integrations that are not configured, saying key cloak.
+
+Oleksandr Tsyganok   35:56
+Yeah, it was done.
+
+Joshua Smith   35:59
+Should I just add that?
+
+Oleksandr Tsyganok   36:00
+Then find keep lock integration and check keep lock. I'm not sure like why it's selected for you.
+So that means that you like selected this integration potentially. Can you check that it's like...
+
+Joshua Smith   36:16
+No, it's saying I needed it. Let me double check.
+
+Oleksandr Tsyganok   36:25
+Oh.
+
+Joshua Smith   36:25
+So we don't, on your screen, I saw select all checked. Is that true?
+
+Oleksandr Tsyganok   36:33
+Yeah, I just checked that with like new release, we didn't introduce some like new bug, looks like not. Can you just share your screen? It will be easier to figure out.
+
+Joshua Smith   36:42
+Yeh.
+O, when I click save.
+That's what I get.
+
+Oleksandr Tsyganok   36:57
+Yes, in the search, yeah, close it, cancel in the search, type kicklock.
+You see, you have selected tool.
+
+Joshua Smith   37:10
+That's strange because I don't remember checking it, but okay, so just check it.
+
+Oleksandr Tsyganok   37:15
+Have you used this feature to generate agent with AI, or you created that manual?
+
+Joshua Smith   37:21
+Not yet, no, this is the first one.
+
+Oleksandr Tsyganok   37:24
+I'm not sure, like, somehow you check this checkbox.
+
+Joshua Smith   37:27
+Okay, yeah, all right.
+Because I thought it might have been from select all, because I saw you do that, but maybe not.
+
+Oleksandr Tsyganok   37:34
+Oh.
+Yeah, I didn't click select all. So yeah, that's the first one, access management, and that's a key clock where you have it. Once you click select all, yeah, key clock will be selected.
+
+Joshua Smith   37:37
+Okay.
+Yeh.
+Awesome, thank you.
+
+Nikita Kumar   37:47
+There's A screenshot from Alfredo. Can you just show us what you're seeing, Alfredo, really quickly?
+
+Alfredo Achecar   37:54
+Uh, yeah, one second, I'm trying, I'm trying it again for like a fifth time and see if I can.
+
+Nikita Kumar   37:55
+Hmm?
+
+Alfredo Achecar   37:59
+OK, I'll show my screen in a second.
+Youying, okay.
+No, not this screen, sorry.
+Okay, so I'm gonna go through integration, so everything is ready, actually, the Confluence Cloud training.
+And then I I press test.
+Successful, I press save, and then it's it's like empty here.
+
+Oleksandr Tsyganok   38:31
+Yes, do you see this like arrow near analytics tab on the left? It's like expandable menu.
+
+Alfredo Achecar   38:40
+Analytics, yep, yep.
+
+Oleksandr Tsyganok   38:41
+Analytics.
+And on the right, you have this like, yeah, navigate back to integrations.
+
+Alfredo Achecar   38:43
+Oh, here, yep.
+Yeh.
+
+Oleksandr Tsyganok   38:52
+and click clear all. You have filter for a project.
+
+Alfredo Achecar   38:57
+Okay, filter by up.
+
+Oleksandr Tsyganok   38:57
+On it.
+
+Alfredo Achecar   39:00
+There we go. Wow. Okay.
+Good to know. Thank you.
+
+Oleksandr Tsyganok   39:04
+So filter was previously applied for your project and you close this like filter panel and yeah, it was not showing anywhere.
+
+Alfredo Achecar   39:11
+Yeah, I see what happened.
+Got it. Thank you.
+
+Oleksandr Tsyganok   39:14
+Mhm.
+Any other questions before we move forward and test our agent?
+Team.
+So let's navigate to assistants. You should see your recently created assistant. You can click the start chart here or...
+You can see this assistant description, and again, start like new chat.
+Stop spamming me with this suggestion to review functionality. Yeah, so for that part.
+Let me share it with you. We prepared this like 2 user story.
+One have like a valid description that fully matches like original PRD requirement. Just for you not to type like and collect like all these links, you can just run.
+We have another question.
+Wouldn't be in integration, it's in assistance.
+Okay.
+Yeh, so first link.
+is for like invalid user story. Maybe let's.
+Let's start with valid one.
+Mhm.
+Yeah, so you can just copy this like 2 inputs, one is PRD and another like Jira link.
+You can check like this documents, you can check this like the Jira contents, so...
+I'm assuming that you have like opened chat with agent that you created, and here we have this like conversation starter that I mentioned. You can add up to, I don't remember, maybe 5 like different ones, so you just like some pre-filled like common tasks for this agent that user can easily clicked and...
+Just.
+Send it here, so I didn't provide this link, but system know it's like role and like main task, so it's saying that it like will produce this like summary, as we described, and just describing what we have in the system prompt, like main responsibility for this assistant, but it's...
+asking us for this like PRD and just story because in the very top of system prompt we're saying that it's like inputs that's required. Okay, so we will provide this information to our assistant.
+and hope that it will work because in the system prompt, we just simplify it. We didn't say that a system need to use specifically this confluence tool for like retrieving confluence content, JIRA tool for like loading.
+Jira user story, but yeah, technically when you connect to this integration assistant already know like all these details, but it's better to have like this clearer description which tools to use when in the system prompt.
+Yeah, so we saying that this doesn't match.
+And so...
+Why it's.
+Why it doesn't match? Because I provided like wrong wrong URL. That was the second second the user stories that actually do not match and the valid ones that have like correct match is 61. So you can just.
+Copy this like part.
+And here you can start another conversation. So you should see this like chat history here, and you can click on your agent name, start another chat here, or you should see the assistant list, start new chat, or another option, you have another chat with same assistant with this button.
+on the top. So when you're working with assistant play, please make sure that you're not confusing it when you want to switch to a different JIRA and different PLD. Don't continue your discussion in the previous chat because it will be mixed with like another documents and it will be hard to.
+And yet to understand like the specific topic. So when I made this like mistake that was like incorrect Jira ID, this 61 is a valid one and 62 is like invalid. So let's try this like positive scenario 1st and then we will return back to.
+This mismatch.
+Okay, so then we see that it's like complaining, that's what I thought that it's saying that I cannot open external links, please paste PRD. That's like result that we were not like clear enough and we didn't provide this information in our system prompt.
+that when you load in Jira tasks, please maybe be restricted to the specific URL and like use this like Jira tool that we connected. So as you can see, like one time it managed to extract it successfully, second time it struggles. First reason that, as I mentioned, I'm using this like mini model that it's.
+If it's stupid, can make this like mistakes. And second, like a main reason that I didn't provide enough information in the system prompt, how to work with it. Let's try to force it. We have like this resend message button, but the best option when you're building like production ready agent.
+You should like revisit your system prompt and reconfigure it.
+Okay, it's still, it's still like struggling.
+Um...
+Let let me like try it in a different way. Have I switched the model potentially not?
+Uh, use.
+Jira and...
+Learns tools to log.
+So, that's that's the problem that you might face with the Codney. So, it's just a tool that gives you full control what's going on with this like integrations and how AI like executes like this rule that you have in the chat. So, as you can see, once I give you this like...
+simple hint that it should use during confluence. It's immediately like pulled all like this documents, say that we have like full match. Simply like AI is not on this like level that it can do like some miracles. If you're using some like ChatGPT, that's just the result of.
+additional like tool set that tries to make like a user life easier. Like you might know that say using like some memory feature, they will do like some assumption based on your input. They will like rework and like reanalyze like original inputs that you provided and.
+We will try to adopt it for like AI and so on. Here we don't have everything in the code. You can definitely add it as a separate step for your assistant that you can like run this like additional analysis for user input, like rework it and only then feed it for the next document.
+On one hand, you need to do like something extra, but that gives you like a limitless opportunity to like customize this like agents for your needs. Yeah, so the like idea that to avoid like this issues, you just need to add.
+this like examples, how to call tools to your original prompt. And you will never see this like issue again. In order like to return like to our like result, we see like that we have like full match with our original documents, like no contradictions and everything fine.
+So we can ask it, usually we like can trace some evidence. We can say that post like results as Jira.
+moment.
+Okay, so we have a link to our comment. Yeah, we didn't specify that it should be like user-friendly comment again, and we don't have like any instructions. So it just like provided the link to API. Again, why it's happening? Because we didn't give like very...
+specific instructions and when you create this like comment successfully, it's actually created. You should like reply with a nice response to a user with a human readable link to original comment. Since I don't have it in the user prompt, I can do it like here. But yeah, the idea is that you should test your agent.
+like have like several iterations and consistently improve your original prompt. So we can say that provide link to UI.
+Start API.
+Yeah, now, now we have like...
+better link that is actually user friendly and I can simply click it. Yeah, so we have this like comparison between PRD and user story. We have this verdict that we have like full match, everything fine. We have this like comment. Please try to pause this like comment so we'll see.
+Is that you successfully?
+configure with your agent and yeah.
+can deal with this like simplified like prompt.
+If like AI complaining and it doesn't work to follow your instructions.
+Yeah, and now we will see. Yeah, let's give everybody a minute to finalize it.
+Okay, see that somebody managed to create Adrant. Yeah, we have like already Adrant, like it's called like prompt.
+Prompt engineer, it's like built-in pro agent in the system, so just have like some instruction for best practices for prompt engineering, so we can ask it like to improve our agent, so we already have like some issues that...
+Oh.
+Agent couldn't figure out which tool use to use and didn't provide like nice link, so we can say that I want to improve.
+Front of my agent.
+It didn't use Jira and.
+Confluence tool.
+Also, it's...
+Out.
+Put a link to comment.
+Warren.
+Point into API.
+So it will just check like all those troubles that you had with your agent and that that agent will like provide some like recommendation. If it's like too long and like too many like details, you can just like ask it to like summarize it, make it short.
+Yeah, yeah, how to deal with it, and yeah, what we got.
+So we just generated for us like whole prompt, but I need just like a small like improvements. I didn't say that for for as a CA agent, so that's why I have like pretty long text. Let's be more specific. I need only.
+Couple system prompt.
+Final.
+Steps to add, yep.
+
+Nikita Kumar   52:58
+Alex, there's also a quick message in here from Kai. She said her agent says that they can't access the internal JIRA links and she used the right link. So after maybe we can see why that is.
+
+Oleksandr Tsyganok   53:12
+Mhm.
+Yeah, so we just have like this recommendation, basically our problem that it just saying that mandatory tool use, you should ask.
+Uh...
+You should like use this like tool, you should ask those should just ask users to provide like this like content, unless we fail in this like permission, because, as we saw before, like it was just potentially suggesting that you can just type Jira content here and we have like some.
+Recommendations, like how to post post this like comment, and we have like specific format, so the only thing that you need to do, you just need to like copy, we even have this like button, then you need just to add like this part to like your system prompt, edit your like original agent.
+After rules, add this like couple of additional rules, and yeah, next time when you like talking to your assistant, you should have like all these issues like resolved and expect better behavior. So, after like, I don't know...
+Three to four like iterations, you will have like perfectly behaving assistance that dealing with your specific like task.
+Okay, so that time, it's not struggling with this like calls. It's not saying that it doesn't have access like to something. It's immediately executed this tools because it have like this instructions already in the system prompt.
+The only thing that we say that it should post comment, but we didn't say that never post comment before, like we get the user approval, and that's like again best like option to set it up, because if you have this like somewhere mentions that you you will need to post this comment, AI can decide that it can do it.
+without user interactions. That's actually what we got right now, that it just runs this like review. And since we added that it needs to post comment in this like format, it decided and didn't ask us about this like comment validity. It just immediately created this comment.
+So that's what I'm trying to say, that with like great power comes great responsibility. So you need to have like full control over what your agent like does, because we slightly modified this like system prompt. And as you can see, it's still like publishing like correct comment, but it did it without like our approval.
+So be careful with it. So like always think about this like flow. If you post in like some comments to Jira, make sure that you mention it directly in the system prompt that you should do it only after user approval. So just a simple like mentioning like where to post this like comment.
+resulted in automatic like posting of this like review without like user intervention.
+Yeah, so let's fix this issue that we have.
+
+Mia (Xiaoling) Zhou   56:25
+Mm.
+
+Oleksandr Tsyganok   56:30
+What was the problem?
+And who reported it?
+
+Kai Jei   56:38
+Oh, I reported it. It says that it's not able to access the Jira URL, but I've got the integration done and I added the tools. So I'm not sure what's going on.
+
+Oleksandr Tsyganok   56:51
+Can you, can you share your screen?
+
+Kai Jei   56:54
+Yeah.
+The.
+Yeah, I'm sharing my screen now.
+How do I get this to like expand a little bit more?
+
+Oleksandr Tsyganok   57:30
+I think you cannot. You can just open like editing panel for agent. It will be easier. You can just click this three dots near agent name on the left panel and click edit.
+
+Kai Jei   57:44
+I.
+Yeah.
+
+Oleksandr Tsyganok   57:48
+You have assistance on the top, have product requirements assistant, not that panel.
+
+Kai Jei   57:52
+Yeh.
+And...
+
+Oleksandr Tsyganok   57:57
+Uh, yeah, can you, or you can edit from here.
+
+Kai Jei   58:00
+Oh right, from here. Okay, edit.
+
+Oleksandr Tsyganok   58:02
+It's also an option.
+
+Kai Jei   58:04
+Gash.
+
+Oleksandr Tsyganok   58:05
+Let's check like your tool setup. Can you scroll down to the bottom and show that you have configured tools?
+
+Kai Jei   58:07
+Yeah.
+Yeah.
+Yeah, I selected these two.
+And I've got my integrations as well working for Jira and Confluence. If I, let's see if I can test it. Yeah, so these are working. This is also working. Oh, wait, access denied.
+
+Oleksandr Tsyganok   58:16
+Yes.
+
+Kai Jei   58:35
+or influence.
+and
+This is working last week. Not sure why.
+Sorry.
+
+Oleksandr Tsyganok   58:51
+Expired token.
+
+Kai Jei   58:52
+Inside.
+Okay.
+But should that affect the ability to fetch a Jira link though because it's
+
+Oleksandr Tsyganok   59:03
+No, no, no. Yeah, you set it up, everything correctly, and that's a problem that I showed in my example that I provided like 2 simplified prompts.
+
+Kai Jei   59:04
+Yeah, so that's my issue here.
+
+Oleksandr Tsyganok   59:19
+In this prompt, there is no mention about tool usage, when we should use this Jira integration and when we should use confluence integration.
+
+Kai Jei   59:23
+Sorry, I can make it.
+Okay.
+
+Oleksandr Tsyganok   59:28
+So that's why urgent will work unreliably. One time it will decide that it will use this Jira tool. Another time it will just skip it. There's possible like options to fix it and I showed it how I fixed it in my scenario. I switched to like more sophisticated model currently using GPT 5.
+
+Kai Jei   59:30
+Singh.
+So, right.
+So.
+Something.
+
+Oleksandr Tsyganok   59:48
+If you select a like smarter model, sometimes it will be just enough, it will behave a bit better. Let me show you how we can select it.
+
+Kai Jei   59:59
+Okay, so go to like 5.4 or something.
+
+Oleksandr Tsyganok   1:00:02
+Yeah, it's temporary fix, but let's do it permanently for your agent. Navigate back to editing menu of your agent.
+
+Kai Jei   1:00:04
+That's what you were.
+What's up?
+Step.
+
+Oleksandr Tsyganok   1:00:17
+You have this like assistance on the top.
+
+Kai Jei   1:00:17
+REEVES.
+Yes.
+
+Oleksandr Tsyganok   1:00:20
+You have charts, not not that one. Now we get back to charts. Yeah, here. Yeah, you can edit it directly from here. Yeah, and scroll bottom and under system prompt, extra configuration.
+
+Kai Jei   1:00:25
+This one, OK.
+Oh, gotcha. Okay. All right, so I should use 5 and 4 here.
+
+Oleksandr Tsyganok   1:00:42
+Yeah, so yeah, that might work, but that's not the best option. The best option to actually provide like detailed instruction for Agent when to use specific tools. I will share my chat so you can copy it.
+
+Kai Jei   1:00:43
+Save that.
+I.
+Is.
+That's good.
+Okay.
+
+Oleksandr Tsyganok   1:01:05
+and try to apply to your agent, but let's try to force it without adding it in the system prompt. So you can run it like multiple times and hope that finally, yeah, as you can see, for example, it used JIRA, but for some reason decided not to use Confluence. So in the economy, you have like full control and full understanding of what's happening.
+
+Kai Jei   1:01:18
+OK.
+Yeah.
+It's 9.
+
+Oleksandr Tsyganok   1:01:26
+and which tools are actually executed. So if you scroll up.
+Yes, you can see this like generic Jira tool. So we called Jira, but we forgot to call confluence.
+
+Kai Jei   1:01:33
+Second.
+Mhm.
+Is it?
+So.
+
+Oleksandr Tsyganok   1:01:43
+But I think it will not work because you have like this limitation in confluence integration.
+
+Kai Jei   1:01:44
+Cool.
+Yeah, so I'm going to fix that and track. What was the...
+
+Oleksandr Tsyganok   1:01:52
+Yeah, but the the...
+The best options that I'm saying that you need to add this like small instruction which tool to use when can you open this link that I shared?
+
+Kai Jei   1:01:56
+So.
+
+Oleksandr Tsyganok   1:02:16
+So, that's my conversation, and that's where I was using this like prompt engineer agent, and that's like an improvement, this like part mandatory tool usage, so you can copy this like 2 lines.
+
+Kai Jei   1:02:25
+Just.
+
+Oleksandr Tsyganok   1:02:32
+Um...
+And so, yeah, then you will have like...
+
+Kai Jei   1:02:34
+I mean.
+Do I just directly put it in the chat?
+
+Oleksandr Tsyganok   1:02:39
+It will work for one time, but next time when you will use in this agent, you will get exactly the same issue. So that's why it's important to like have several like iterations and improved agent system prompt. So it will be like persisted and like stored like for you and for everybody else that will use this agent and.
+Nobody will need to deal with this same issue again and again. So better to apply it like once and forever. Yeah, just edit.
+
+Kai Jei   1:03:04
+Right. So.
+No.
+
+Oleksandr Tsyganok   1:03:13
+Uh, I mean, like, edit.
+
+Kai Jei   1:03:15
+Instead of instead of doing it here, do I just put it inside of the assistant settings in the system instructions? OK.
+
+Oleksandr Tsyganok   1:03:20
+Yeh, yes, yes, yes, yes, yes.
+
+Kai Jei   1:03:27
+So somewhere down here.
+
+Oleksandr Tsyganok   1:03:28
+Jeff put it on the very bottom, yeah, yeah.
+
+Kai Jei   1:03:33
+Yeah.
+
+Nikita Kumar   1:03:36
+I know we're also over time, so we also have we also have open hours coming in on Friday as well, so we can always go through some of these additional details and open hours as well.
+
+Kai Jei   1:03:44
+Sir.
+But.
+Yeah.
+Okay. Yeah, I think I think it's fine now. Thank you.
+
+Nikita Kumar   1:03:58
+Thank you. Thank you, Oleksandr, for the demo as well. I'm glad everyone was able to create agents. But yeah, if there's anything that you might have additional questions on, we have open hours on Friday, so we can go over items then as well.
+
+Kai Jei   1:04:10
+All right, thank you.
+
+Nikita Kumar   1:04:12
+Thanks, everyone. Bye.
+
+Kai Jei   1:04:13
+Okay.
+
+Oleksandr Tsyganok   1:04:15
+Goodbye.
+
+Alfredo Achecar   1:04:15
+Kent.
+
+ stopped transcription

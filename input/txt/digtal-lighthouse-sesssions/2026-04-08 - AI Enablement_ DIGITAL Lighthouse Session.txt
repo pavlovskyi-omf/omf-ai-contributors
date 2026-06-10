@@ -1,0 +1,730 @@
+AI Enablement DIGITAL Lighthouse Session-20260408_155927UTC-Meeting Recording
+April 8, 2026, 3:59PM
+1h 1m 58s
+
+Vlad Grubman   0:09
+Yeah.
+Hello everybody.
+
+Nikita Kumar   0:27
+Hello.
+
+Monika Burnham   0:28
+Hi.
+
+Nikita Kumar   0:32
+There's always two of me because I have to present EPAM. Well I I I get in from both because on OMF I could share in the chat and then on EPAM I can share my screen cause most of our stuff is on our side.
+
+Monika Burnham   0:34
+I'm like, what is that? How is that possible?
+Yeah.
+Yeah, yeah.
+
+Nikita Kumar   0:48
+So there's always two of me.
+
+Vlad Grubman   0:53
+As it should be for any Gemini.
+
+Nikita Kumar   0:53
+Oh my God, right? That'd be kind of like 4, 'cause I already feel like my Gemini personality.
+
+Monika Burnham   0:54
+Yes, we need. We need 2 Nikita's.
+
+Nikita Kumar   1:04
+Which I'm a little scared for because my son is going to be a Gemini coming in June, so we'll see how I feel when he's here.
+
+Monika Burnham   1:12
+That's exciting.
+
+Nikita Kumar   1:14
+Mm.
+
+Vlad Grubman   1:15
+As a fellow Gemini, I I feel like you're in for a treat.
+
+Nikita Kumar   1:20
+Oh, I'm my mom. When I told her that the baby was due in June, she was like, this is your karma. And I was like, oh, OK, thanks immediately.
+
+Monika Burnham   1:28
+Pay back.
+
+Nikita Kumar   1:33
+Give everyone a few minutes. We've got quite a bit of an agenda today, so I'll try to get through it fast so we can get to our main activity.
+But we'll give everyone a few minutes to hop in here.
+
+Monika Burnham   1:45
+Yeah.
+
+Nikita Kumar   1:53
+Mhm.
+So put my topics in here as well.
+
+Monika Burnham   2:18
+Just so everybody knows we are recording.
+
+Nikita Kumar   2:22
+H.
+Perfect.
+Yeah.
+Everyone's coming back from a break from us, so it'll probably take a little bit to get used to these calls again.
+Okay, well, since it's, yeah, yeah, yeah. I guess we can get started since this is recorded and as people join in, they'll also be able to have everything. Welcome back to our Lighthouse sessions or welcome to any new folks in here as well. My name is Nikita in case you are not tired of me yet.
+
+Joshua Smith   3:09
+It's like writing a book.
+
+Nikita Kumar   3:28
+And we also have Vlad on the call with us as well. We'll be leading the Lighthouse session. So this is basically our existing Lighthouse team. So that is all of you guys. We're not trying to shake things up too much, but a few things will be changing. So without further ado, let me just kind of dive a little bit into what we're kind of going into for this phase two.
+what's going to change, what's going to be different, or what's going to remain the same. Generally speaking, most of the stuff will be pretty similar, minus the training portion of things. So I don't really have anything to show, so I'll just run it down quick. My intro says say welcome, so welcome back. So next part, we're going to shift a lot into our phase two.
+So phase two is where the ownership kind of starts to shift from us to you guys, where you will kind of be leading more on the use cases, a little bit more on the training sessions, more on the teaching and mentoring portion of this as well. This is where you guys are going to shine and show us everything you've learned in phase one and show us all the cool use phases that you guys are working on.
+and not just siloed to your specific team and your specific practice, but within your larger team. So you'll also be working with the devs and the QA team as well. And those are the cross-functional sessions that we've already been starting to have. So we had one yesterday, and then we have one tomorrow as well. Those cross-functional sessions right now, they might seem slightly technical, but it is because it is a mixed audience of people.
+We are talking about all of QA, all of engineering, and all of digital. So there is going to be topics that are going to be hit across the board. So everyone can kind of see how they're going to work together. Since you guys already work very much together throughout the day anyways, within your teams, we also want to focus your AI work to be working together as a team. So
+
+Iryna Pashko   5:03
+Jeanine.
+
+Nikita Kumar   5:13
+the authentic flow may look something like one of our demos that we had done, and that could be from requirements hardening to the Dev planning to QA planning, and then on to production. So we want to make sure that we are giving you guys the tools and the knowledge and the skill set to be able to do all of that in a team flow and a team effort, because towards the end of these bigger sessions, the cross-functional sessions, you'll also be demoing.
+what your team is working on for that. So as these priorities kind of shift, the digital team will be starting to take a lot more ownership, which is you guys, on strategy, the execution, and the outcomes of what you are looking for for your specific team. And I want to emphasize the accountability because it will be a lot for you guys. Moses, I have a note here to pass the floor to you real quick.
+And then I'll go back to my part after.
+
+Moses Song   5:58
+Oh.
+
+Nikita Kumar   5:59
+Just for accountability for digital.
+
+Moses Song   6:00
+Okay.
+Oh, yeah, yeah. So I think I know most folks on this call, but if we haven't met, you know, happy to set a time one-on-one with each one of you. But obviously, from a PDLC standpoint, this is one of Donna's highest priorities is to digitally enable or AI enable the digital team.
+And so anything that I can do to help facilitate the advancement of AI tooling, your knowledge base, moving folks up the AI learning curve. And obviously, if there's any tools or concerns or, hey, we would love to have access to this or that,
+Like, please, please reach out. Please let me know. This is a dialogue. This is an opportunity for us to lead the organization forward. And so, you know, my door is open and I will work very closely with you all and close with Nikita and Vlad to ensure that we are successful by the end of this engagement.
+So over the next three or so months that we have this, let's make sure that we're engaged. Let's ask a lot of questions, and let's make sure that we take ownership of how we want the PDLC to be in the future.
+
+Nikita Kumar   7:15
+Thank you. And with that, there are some new roles coming in as well. So we already have AI champions, but we will also be adding AI leaders who are going to be owning the strategy and the planning. And then we also are adding AI mentors. We're going to be coaching the teams level 2 maturity. So that's kind of like what Vlad and I were doing in Flaved 1. We're going to teach you how to do the actual coaching. And anytime you onboard new people or bring in new members to the team, they'll kind of help
+to iterate that process and keep it going for you as well. Before I go on to the next part, I do want to show the calendar to everyone. I know that there's quite a bit of meetings, so I want to clarify what the days are looking like for everybody across the board. So let me just quickly share my screen and we will share this if it hasn't been shared yet with you guys as well.
+Are you able to see my screen?
+
+Mauezatur Khan   8:02
+Yes.
+
+Vlad Grubman   8:02
+Yeh.
+
+Nicholas Crowley   8:02
+Yeah.
+
+Nikita Kumar   8:03
+Awesome, of my very large calendar. So we're going to start off all of our meetings this time around on Mondays. So if you are an AI champion, we will be having AI champion syncs on Mondays from 12 to 1 Eastern time. We also will be having AI leader sync on Monday from 11 to 12 P.m.
+So that those are anyone who is an AI leader. We'll send the list across to the people who are in the digital practice who are in each of these sessions as well. So that way you can take a look at if you're a champion or a leader or a mentor, but you have an idea of which meetings that you also need to be getting into if you don't have that just yet. On Tuesdays is where the Lighthouse sessions happen. So the Tuesdays and Thursdays, there will be the Lighthouse PDLC sessions, and these are all.
+cross-functional across the board. This is where we'll be teaching the agentic workflows with CodeMe. The reason we're kind of doing this on CodeMe is because we have had a lot of feedback that had come in from your teams from all across the different boards asking for a little bit more on the agentic workflow and how to kind of incorporate everything together. So we want to address that feedback using CodeMe and like we know it's been a little bit confusing and we've only had one session trying to.
+training on that. So these cross-functional sessions are going to be really helpful in that sense because we will show you how to actually use CodeMe from a digital standpoint, but you're also going to see how engineers and QA are using it in order to then parse together your agentic workflow from digital all the way down to QA. So these sessions are going to be very heavily involved. So some of these sessions might be a little bit technical just because they are across the board trying to get.
+target every group that's in there. And then some of them might not be as technical. But we want to also ensure that we are giving homework so everyone is learning and able to work on these together, whether it's siloed or within a team. But generally, it's probably better if you work within your team because you'll be working with devs and QAs on an everyday basis anyways. So it'd be nicer to be able to work with your own team to see what flow works best for you or what type of use case works.
+works best for your team. And by the end of these sessions, what we'd really like is for each of your individual teams that you're on or each individual like work stream to have their own use case flow that's going to benefit you guys from digital all the way down to QA. So that's kind of the goal of these cross-functional sessions that we'll be having. On Thursdays, we will also be doing a cross-functional champion 6. So these are the champions across the board, whether it's QA, engineer,
+or digital, they'll all be meeting together to talk through all the different use cases and the different flows that they're working on together. So this will be those meetings. We have not quite kicked off these sessions yet, so you are pardoned from this week from AI Leads Champions and the Champion 6, the Champion Sykes. Those are coming across soon. Monika, I think you might have better dates on when that's happening as well.
+Yes, question.
+Oh, you're on mute.
+
+Moses Song   10:54
+I see leaders and I see champions. And then we also have the mentor role. So do the mentors just kind of like work in the background? They don't have their own meetings.
+
+Nikita Kumar   11:04
+So, there won't.
+
+Moses Song   11:05
+or our mentors also champions and there's like a strong overlap.
+
+Nikita Kumar   11:09
+So there will be mentors as well, and the mentors are going to then coach like how we were coaching in phase one. The mentors will be coaching new folks and anyone else coming in. There should be separate meetings for mentors, but I think we're combining the kickoff together. Is that right, Monika?
+
+Monika Burnham   11:25
+No, actually, there's going to be a weekly leader and mentor sync because the leaders and the mentors will be working pretty closely together. And then a lot of where the mentors will be playing is watching how sessions are running and then also working closely with
+
+Nikita Kumar   11:26
+Are we doing separate?
+
+Moses Song   11:33
+Yeh.
+
+Monika Burnham   11:45
+the new Lighthouse teams that were onboarding. So there's going to be a shadowing component to that to learn kind of the steps that are involved in bringing on new teams and then playing a pretty active role in the experimentation process that you guys went through in phase one. So I know that we don't have these on the calendar yet. We are waiting on a few decisions on the
+OMF side, just to clarify some folks. And then we'll start getting these champion kickoffs on the calendar, as well as there will be a deeper dive for leaders and mentors to understand specifically their, you know, the kind of differences in their role compared to what they've done in the past.
+Champions, there are still, everyone's a champion regardless, but there will be some more defined roles within those three groups.
+So look for as soon as we get some decisions, we'll be getting things on the calendar. So they'll be coming on pretty soon.
+Yes, you are champions. Thank you.
+
+Nikita Kumar   12:47
+Thank you.
+Awesome. Yeah, so we will be having these things across the board for that as well. And since this new cohort of folks is going to be, you know, a lot of our phase one, we did end up having a lot of the digital team already in it. There is a lot more engineering and QA folks coming in, but they also have product counterparts. That's where our mentors are kind of going to lead the way to help.
+train them in how product is working and how like proper way to do product that you guys are already doing. So they'll kind of come pop in there and show like, here's what we're using for product or here's what we're doing within the digital work stream. They're going to be the ones coming in to help the product counterparts within the engineering teams themselves because not.
+all the engineering teams have product counterparts or like a specific product person. So that's where the leaders and mentors and champions and all these other roles will come in. And as Monika said, when we have kickoff, there will be a little bit more of a deep dive in each of these specific roles. And then you'll get meetings scheduled accordingly as well. And then the next.
+meeting that we have on here. I just want to run down through it. It's the cross-functional Lighthouse AI open hours. So this is from the Tuesday, Thursday calls that we're having. This is the open hours. If you guys have any questions, need help with homework, tell us something that's not working or kind of just need help coming in and like asking questions. We have this here. It's as needed. We'll have the hour there.
+people can pop in and out as needed. But if you want to have a specific one for digital, also feel free to ad hoc meetings with myself and Vlad. We're available. Vlad told me not to say 24 7. So Monday to Friday from 9 to 5, we are available.
+
+Vlad Grubman   14:24
+Yeah, I need I need time to experiment with my AI. I need I need to learn what to pass on to you, folks, so...
+
+Nikita Kumar   14:30
+Okay.
+So yeah, we can have ad hoc sessions for digital as well. But some of these meetings for Lighthouse, I also want to clarify, we have been already working on use cases from our last session. So we will also be continuing those use cases. But on top of that, we're also going to help identify any other use cases that are coming up that are newer, things that you have been working on on your own that.
+might be working, might not be working that you want our help and guidance on, but our goal basically is to set you guys up for success for phase two to then be able to like train other people and do all these things that we're already doing, but now you guys have like the liberty and freedom to do them as well. And our goal is also to get more tools for you guys so you have more access to play with more cool things as well.
+Where am I on my talk track? Okay. Quick. Oh, yes.
+
+Moses Song   15:15
+Also, just a quick point here. I do want to stress that we do want to encourage questions and discussions. So if you can't figure something out, don't be shy about it. Like there's probably five or half a dozen more people or even everyone.
+maybe having the same problem as you.
+So I'm going to do my best to sound stupid on these calls to encourage other people to also provide their concerns. But again, this is all about learning. This is all about improving our knowledge collectively. So if you're unaware or you're frustrated or you don't know how to do something, there is
+chances are there's like plenty of other people who are like that. So I encourage you to just ask the question because there are no dumb questions.
+to put it, to use a television, or not a television, a movie phrase, we're in the tree of trust. And if you get that reference, please let me know, because we're going to be fast friends.
+
+Nikita Kumar   16:18
+Yeh.
+Okay.
+Thank you. Yeah, there's definitely going to be lots of questions. Vlad knows I ask him questions all day long. I'm sure he's aware. But yeah, we want you guys to ask those questions. If you don't feel comfortable asking in a larger environment, that's okay. You can always ask us separately, and then we can bring it back up again in a larger group and just talk about it. That's also fine. We're very open with that. There is no...
+There's no like dumb question here. Like everything is very valid because everything is very new and there's a lot of different things happening. And with the space that we're in within AI, like everything's changing all the time. So we totally get it. Quick recap on phase one. I also added the link to this. So I am going to quickly show you guys where everything is. I've sent the link across, but.
+If you have missed a session or if you were out for something, feel free to take a look at this guide on digital track. We've got everything in here. So every single topic that we had discussed, all of these also have within each of these topics. There's a video recording. There is also an agenda, what the summary session was, takeaways.
+transcript, also any like prompts or anything we've put together, any basics of things that we have in here. So feel free to take a look at this to kind of just get your baseline set for phase two because we will not be going over these things again, but it's a great way just to get yourself back into the think track of everything that's happening from phase one going into phase two.
+Stop sharing my screen there. And then, yeah, so that's all the boring stuff that I wanted to kind of get through. Now we're going to get kind of more into like the fun things. One thing that we wanted to kind of understand was team false check. We wanted to know what AI tools that have you been using or have you discovered from January to now.
+Raise your hand, pop it in the chat. We kind of want to see what everyone's been doing, not just like it doesn't have to be work related specifically, but what are the cool things that you're working on with AI or what are the things that are not working with AI for you as well? We'd love to kind of hear your feedback and give the floor to you guys. After this, we're going to do a quick survey, which I also sent the link on. It's going to be more interactive in real time. We want to ask you these questions as you're going through them, but
+The question that we're going to really like hone in on is like the magic, right? Like what's the magical thing you want AI to do? So then we can help figure out if that's a valid use case to build an agentic workflow that you can then actually have in the real world and it's no longer magic and it's viable and you can play with it after. And then we'll have some time for Q&A as well. So step one, what are some cool things that you have learned or tools that you've
+played with since January. Love to hear from you guys.
+
+Moses Song   18:53
+My super not fun thing, but it has saved my skin more than once, is whenever a meeting is recorded and subscribed, and inevitably I am multitasking and not paying attention, I will ask Copilot to recap the last 5 minutes, and then I'm back on track and I don't have to use the
+Oh, I'm sorry, I was on mute. Could you repeat the question? I don't have to do that anymore.
+I love that. It's super simple, but it has saved me so often because we are in this, you know, ADD world. So I really like that feature.
+
+Nikita Kumar   19:35
+Nice. That part's always been fun, especially when, like, I think the best part about one of those things are as well that every time if I'm out of office or I can't catch up on a meeting, I don't, like, if you don't want to listen to a 60-minute recording, just give you the highlights of what happened and what's coming up next. So that's always fun.
+
+Moses Song   19:53
+Yeah.
+
+Nikita Kumar   19:54
+Anyone else with anything cool that they've discovered? Yes, JT.
+
+Nicole Davis   19:55
+Move me.
+
+JT Tabencki   20:00
+I discovered, interestingly enough, when I run my PowerPoints through Copilot and JetGPT to be like, hey, does this make sense outside of me? I have enough data and transcripts and responses that I've Copilot will ask me, hey, is this PowerPoint for Donna, Perry, or Suman?
+and actually would reframe, suggest reframing certain bullet points or certain verbiage that has been known to register with those audiences. So if I know I have a meeting with Donna, okay, cool. Like I'll use certain verbiages that may ring truer for her than would say for a Perry or Suman.
+
+Vlad Grubman   20:41
+I love it. I would actually...
+
+Moses Song   20:42
+Yeah, Peter Yang has an article about that, like how to create a custom GPT for your specific executives because they have specific preferences. Let me see if I can find that and send that out to you guys.
+
+JT Tabencki   20:51
+Yeh.
+Awesome. Thanks.
+
+Vlad Grubman   20:55
+Please do, because that's exactly what I was going to suggest. Create separate agents for separate people that you mostly talk to, and keep updating them as you discover new traits. And yeah, it works, my magic works wonders.
+
+Eric Trenz   21:11
+Just to chime in here, if you're using like an ID, so if you're using like cursor or that's I think the one we have access to now. I don't know if CodeMe also has this, but you can provide knowledge files, right? So I do like a similar thing.
+where I have a stakeholder file and then it has like what the stakeholders care about. So for example, like a marketing partner cares most about application starts. So it's kind of the same idea. I can ask, like, how would you reframe this or?
+Like, create create a deck for this stakeholder, and it it has that context, so...
+It's been helpful in that way as well.
+
+Nicole Davis   22:05
+I mean, I would think that all of these chats and calls being recorded, there's probably already an agent learning us to create the materials to be able to create the agent, if you think about it like that.
+I know, kind of scary. Something that I've been doing is I created an agent to summarize my week and all the work that I have done, because every Monday morning I send that out to Brian and I let him know, like, here's where I spent my time last week, here's what I was focused on. It gets it down to a percentage.
+
+Nikita Kumar   22:21
+Mhm.
+
+Nicole Davis   22:40
+of my week. And it's doing this based on my email, my calendar, my chats, things like that. And maybe I shouldn't let it have that much control over my life, but it has been very helpful because I treat it sort of like an assistant, because otherwise this would take me, I mean, an hour every week to try to summarize everything that we do in our day.
+So that's been really helpful. And it also helps me to see where am I over-indexing? Am I spending too much time doing this? You know, and how can I pivot, be more efficient? So that's been very cool.
+
+Alfredo Achecar   23:15
+Nicole.
+
+Vlad Grubman   23:15
+And that's how open close started. Literally, that's how open close started.
+
+Nikita Kumar   23:17
+Yeh.
+
+Nicole Davis   23:20
+Yeah, I know. Open claw came up when I was putting this together, but that's a little bit dangerous. So I'm keeping it locked down.
+
+Nikita Kumar   23:20
+Yeah.
+
+Alfredo Achecar   23:27
+Nicole, are you doing that through ChatGPT's integrations with like Slack and Outlook and OK?
+
+Nicole Davis   23:32
+Yeah.
+Yeah.
+
+Alfredo Achecar   23:36
+Very cool.
+
+Vlad Grubman   23:36
+No, the question is if Brian has an agent that reads all the reports and just processes it instead of...
+
+Nicole Davis   23:41
+Probably. I mean, probably. I mean, if I were Brian.
+
+Nikita Kumar   23:42
+Yeah.
+So fun. We do have this. Oh, yes, please go ahead.
+
+Eric Trenz   23:51
+I have a quick question.
+Sorry, I have a quick question on that. One thing I've run into when trying to utilize like...
+Someone trying to do something similar is I get kind of responses that are just like what you taught, what I talked about, or like what the meetings were about, but not necessarily like outcomes or decisions. Has anyone run into that problem or maybe been able to?
+run into it and been able to solve that.
+
+Nikita Kumar   24:22
+Yeh.
+
+Mauezatur Khan   24:22
+I actually ran into that when I first started using AI tools to generate meeting summaries. I'm like, why are you just recapping transcript line by line? What happened? So I changed my prompt a little bit to now say that like, hey, I only want high value.
+items and decisions that are being made, don't give me a play-by-play. And having that included in every prompt whenever I ask an AI to create like a meeting summary or action items has made it so much more valuable. And what I've noticed too is that the output goes from like an 8-page summary to something that's like actually concise.
+and something that's much more easier to consume after the fact. So that would be my recommendation. It's worked wonders for me in the past.
+
+Eric Trenz   25:10
+Thanks so much. That's super helpful. And like, I love how just adding like one line to a prompt can make such a difference.
+
+Mauezatur Khan   25:11
+Mhm.
+
+Nicholas Crowley   25:13
+Okay.
+
+Mauezatur Khan   25:18
+Yeah, I'll, I'll post it too.
+
+Nicholas Crowley   25:18
+Team Som.
+Yeah, Teams meetings also added a template feature so you can create your own specific template within the Teams meeting summary to actuate that so you don't have to like re-enter it every time. It's been helpful.
+
+Nikita Kumar   25:37
+Alfredo, I see you have your hand up.
+
+Alfredo Achecar   25:40
+Yeah, hey, this is a question a little bit aside from this. I'm curious what...
+Is the AI training right now focused just on digital teams, or do we have other teams that are doing this AI training as well? I'm asking because of like, you know, how do we solve cross-collaboration problems of teams that are outside of digital?
+
+Nikita Kumar   26:01
+So that's where the cross-functional sessions come in on Tuesdays and Thursdays, and that includes engineering, QA, and digital. So that's where you'll be learning all the agentic flows, working with all the different teams. So it's not just for you, it's not just for digital, it's for everybody. They're going to hit topics related more so on CodeMe, getting you guys set up on CodeMe, making sure everyone knows how to create assistance, workflows, integrations, all the data indexing in there.
+because that's when at the end of those sessions, what the goal is, you'll be working with your Dev team and your QA team to build a workflow that goes from for you guys from design to product to Dev to QA and like flows in altogether. So that's going to be the goal for those. These lighthouse sessions are going to remain digital.
+So we will just talk to digital teams, but we're going to have a little bit more advanced training from the last session. So it'll be like 20 minutes of like an advanced demo of something for you guys to kind of learn a little bit more and then some, and then you guys take that and demo from there. But the cross-functional ones is going to have all the teams in there. And their new trainings is all of the, like the new teams that are getting onboarded for QA and engineering. They're actually going to be learning this stuff from phase one, I believe, right, Monika?
+
+Alfredo Achecar   26:59
+Yeah.
+
+Nikita Kumar   27:11
+because those new teams are brand new, they don't have concept of what was done in phase one, so they'll be kind of learning a lot of what was happening in phase one with the new teams since they are all different teams now.
+
+Monika Burnham   27:21
+Yeah, yeah. They're definitely on their own track.
+
+Moses Song   27:21
+Right, and, and Alfredo, Alfredo, I think you also might be referencing teams outside of the direct software development life cycle, and...
+
+Alfredo Achecar   27:31
+That's what I mean. That's what I mean. Yeah.
+
+Nikita Kumar   27:32
+Okay.
+
+Moses Song   27:33
+Okay, yeah, so we are addressing that in the workforce enablement work. So I'm sure you guys, most of y'all should already have ChatGPT, but we are rolling out ChatGPT to select pilot individuals across the firm and all of our other functions. So capital markets, HR,
+legal, marketing, everybody, there's going to be pilot groups. So Alfredo, if your concern is around, not if, but I'm assuming your concern is around, hey, if we accelerate what we do, or just putting more work in a location that may already be a bottleneck, like we need to
+accelerate them for us to accelerate. It's an excellent point. And so if you and your team are facing those types of potentials and challenges and you want to front run that, please, please, please reach out to myself, Dominika, and Aaron. So Dominika and Aaron
+are leading the workforce enablement with ChatGPT and the pilot across the other functions. And so if there are clear opportunities and synergies between what we're doing and how do we use ChatGPT or AI to accelerate what they're doing, we can drop those nuggets or we can try and
+get those other teams to think about how do we accelerate this aspect of their work to ensure that we can continue to move faster.
+
+Alfredo Achecar   29:04
+That makes sense, text Moses.
+
+Moses Song   29:06
+Of course.
+
+Nikita Kumar   29:08
+Thank you. And once these teams have access to ChatGPT, all the agents that you guys are building, you can share them across the board too, and people can also use what you're using and what you're building as well.
+Eric.
+
+Eric Trenz   29:25
+Are we still sharing? Like things we've been doing? Okay, I wasn't. I wasn't sure if it was more QA or Q&A, sorry. So one thing that just like really quick to mention, because I don't know if it's been a feature and I've been missing it or...
+
+Nikita Kumar   29:27
+Yes.
+Feel free, yeah, we'll go on to the survey after this.
+
+Eric Trenz   29:45
+It's a new feature that, but within ChatGPT, I previously had been utilizing like custom GPTs within their own conversations and then kind of trying to like manually take that knowledge and maybe input it into another conversation.
+
+Nikita Kumar   29:53
+Ohh.
+
+Eric Trenz   30:06
+and just kind of like come up with an output from that given GPT and then.
+transfer it over to another conversation. And I just realized at the end of last week that you can just use that at symbol within one conversation to call on a specific GPT. So like for example,
+I can run an initiative by a GPT that has industry knowledge on AI search best practices and then say like, okay, this has been tidied up and I think I have the right idea. Let's use.
+Doug's product management assistant within the same chat. So it has that previous context to create the PRD. And that's been helpful for me just to kind of like stay in one area and have all of that relevant context.
+
+Nikita Kumar   31:12
+Yeah, that's pretty cool because I think in the past we weren't able to share much on like the chats if you're switching chats or moving things around. So that's a cool feedback. Is that newer? Because I don't know if we had that before, right?
+
+Vlad Grubman   31:23
+Yeah, it is new. It is new. It hasn't been, again, I don't keep up with all the release notes, but it hasn't been available.
+Recently, so, as you can see, they they they are two different tracks. They released the Frontier models, and that's usually make the make it a big news. Everybody's talking about it, and then they update the harness, which is the chat interface, and that's that also has its own cool perks.
+
+Mia (Xiaoling) Zhou   31:51
+Yeah, we are still sharing, right? I, I also, yeah, like Eric said, I also try that, like, add like the agent you build before one scenario I use this, like sometimes I'm starting a project, I probably like just because I also use GPD to organize my goals, like tracking that, I just like add, add that, like my goal agent.
+
+Nikita Kumar   31:54
+Yeh.
+
+Mia (Xiaoling) Zhou   32:15
+It's like, is this fit what my goal or something like it will help me analyze the wake and and advantage stuff like that.
+
+Nikita Kumar   32:26
+Nice.
+Yeah, it's really cool to see all the different things that people are working on or learning or discovering, because that's kind of the goal of the phase one, right, was more so discovering all these cool new things. And now phase two, we can help kind of apply and integrate into your day-to-day. Okay, you know, we're at 1232, so we do have a survey. There is
+
+Mia (Xiaoling) Zhou   32:32
+Yeah.
+
+Nikita Kumar   32:49
+Let me know if you guys are able to see the link in that chat. If not, I can resend it on here. But basically, similar to what we're just doing, it's talking and filling out the survey so we can collect those responses as well. Let me send you guys the link again so you guys have it. So you don't have to keep scrolling all the way up, make it easier.
+Okay, and there's only three questions, so we're not trying to make it anything super long. It's going to be in real time with us together, so it's not, you don't have to take time out of your day to do it. But basically, question one on here, Vlad, did I miss anything before I continue on to the survey? Okay, cool. Question one we have on here is,
+
+Vlad Grubman   33:25
+All good.
+
+Nikita Kumar   33:29
+I know some of you already answered this, but it would be really cool to just put it in here and like if you have built other cool things to talk about. What have you built using AI recently between January to April? So what cool things have you guys been doing recently off on your own within your workspace? We'd love to kind of hear from you and also type out your responses in here just so we can see where everyone is in their AI.
+journey, I guess you can say.
+We are still sharing. I don't want everyone to be quiet for 5 minutes so you can tell us what you're building and then you can write it down for us so we have it as well.
+
+Moses Song   34:02
+So...
+Similar to what Lewis discussed previously, I created my own custom GPT by prompting chat.
+To create a system prompt for a custom GPT that addresses the feedback that I am aware of, that I've received from my senior leadership, and then I've also uploaded my own job description, and I've asked it to create.
+kind of an advisor to me and then I just use this custom GPT anytime I'm questioning how to approach something and it makes it much easier and it's pretty good at addressing what I'm trying to work on and I've been tweaking
+the systemic prompt on this custom GPT, the more I get feedback and the more I use it. So I highly recommend people do that for their own reporting lines, because I think it can really help your work resonate with your audiences.
+
+Nikita Kumar   35:14
+That's pretty cool. It's like your, it's like your own therapist, but like a work therapist.
+That's awesome. I might have to do that. I feel like we work with so many different types of people in our, in like being consulting. There's always different audiences to reach out to. So that's a, I might have to steal your idea there.
+I see another hand raised, Kai.
+
+Kai Jei   35:39
+Yeh.
+So pretty much doing like similar things because I also have my own like career co-pilot for OneMain and I like to work not in the chat, but in VS code. So basically using Codex, the extension in VS code because I like to have everything in Mark.
+down and I like to see the documents it generates without doing that feedback loop of like downloading a document and uploading it back into the chat as a source, stuff like that. So pretty much my entire workflow is I have context, I have multiple folders, like I have my agent folders, my context folder, I have
+like my goals folder, and then I have a prompts folder. And all of these have markdown files in it that basically give my agents as much context as possible. So this helps me to write my goals, to basically just write about what impact I've achieved during the week.
+because it's got skills like a kind of impact writer skill that I provided to it, where I can basically just write in what I like did during the week and it's able to optimize that into impact statements. So I think, yeah, that's something that's pretty.
+Cool, because it allows, it frees me up. I still do the work, but I don't have to think about how to.
+narrate the work that I've done in terms of impact.
+
+Vlad Grubman   37:17
+Cool. Love it.
+
+Moses Song   37:17
+Awesome. The other thing I will also say is that anytime you guys have something cool that you've built that you want to share, you know, we have periodic town halls. We also have monthly business reviews from an AI perspective. And so folks have come to me and.
+you know, they're on the town hall to present to the group or they've, I've engaged folks to present at the MBR. So as an example, Anu and Nicole are presenting stuff that they've done at the town hall. Eric is presenting at
+the Gen AI MBR this week as well. If there's anything cool that you guys want to present or just to provide that visibility to senior leadership that you are one of the cutting-edge folks on the team and you want to raise your profile, feel free to reach out to me. I would love to get you on the docket.
+
+Nikita Kumar   38:00
+Yeah.
+Thanks, that's awesome. Anyone else have built anything cool?
+
+Kai Jei   38:20
+S.
+
+Nikita Kumar   38:29
+I see people responding in there, so that's awesome. So feel free to keep popping your answers in. But if not, we can go on to the second part, which, you know, I think a lot of times people have a hard time talking about this, but what have you tried that didn't work? Something that might have failed or just didn't pan out the way that you wanted it to. So what's something that you guys have been working on that might not have worked exactly how you wanted? We'd love to hear that or like how you kind of got
+through that or if you haven't yet, haven't quite figured it out, that's also fine too because the whole point of it is, you know, trial and error. We fail quite a few times before we can get it right. So yeah, I'd love to hear from like something that didn't work for you guys.
+
+Anu Perera   39:08
+I want to, I'm sorry, I want to tackle what went right, just I couldn't hit unmute fast enough.
+
+Alfredo Achecar   39:08
+I can.
+
+Nikita Kumar   39:13
+Oh yeah, no, please go for it.
+
+Anu Perera   39:16
+I do have a question for Nikita, you and Vlad. So I've been experimenting with BMAT. I don't know whether you guys have looked at the BMAT method. And it's a fully agentic, you know, agent flow that does all of the stuff from, you know, brainstorming to development to.
+you know, UX, UY to QA development and all that stuff. Is there an appetite to bring, like, I know we're kind of constantly trying to build our own, you know, robo agents and, you know, chat GTPs when we have, you know, folks who, you know, spend a lot of time researching and kind of doing the work.
+There's a huge active, you know, community when it comes to the BMAD method. Is there appetite as an organization to bring those things in that can be used across different, you know, agents, different LLMs that will actually benefit us as a whole, because...
+We don't need to reinvent the wheel, just like everything else. I have not seen a whole lot of conversations around that. I want to kind of get your feedback on that topic.
+
+Vlad Grubman   40:28
+Sure, absolutely. So,
+
+Anu Perera   40:32
+I.
+
+Vlad Grubman   40:32
+One of the goals of this program is to bring everybody up to the level where they can take full advantage of things like BMAT and it's not the only one out there. I think...
+
+Anu Perera   40:38
+Two.
+Mhm.
+
+Vlad Grubman   40:43
+As we, as we go through our our our sessions, as we go through our process, if you see that that what is happening is there's a lot of there's a lot of sort of we still need some some some we need still need some of the training wheels that we have, because we need to.
+
+Anu Perera   40:57
+The.
+
+Vlad Grubman   41:03
+learn how to ride this bike before we start riding, you know, on a highway at 70 mph. So it's not that there is no appetite to bring the BMAT or any other frameworks for that matter. It's just that we need to know enough as or OMF needs to know enough as an organization to be able to operate it efficiently.
+Right, you can't just throw stuff at the wall and see which one of that is spaghetti and which one is really not. So, I would love to be able to do that, but you know, first prerequisite is we need to have some kind of coding tools for that. We need to just just having just having cursor is.
+probably not going to be enough because you need the deployment environment. You probably want to have things like Codex or Cloud Code or any other tools to be able to fully utilize that and produce the results and share the results somewhere. So it's not just to be mad, it's the whole infrastructure around it, including the knowledge and understanding, the trust in the system, and
+I think trust is the first thing we need to build. So when you head it over to, you know, 50 agents working overnight, you need to know that you can trust the outputs that they're going to produce. TLDR, yes, there is an appetite. Yes, we would love to do that. But in order for us to do that, we need to unlock a lot of other things.
+including the infrastructure, including the actual access to models, the access to the tools, and so on. Does that make sense?
+
+Anu Perera   42:37
+It does. My only kind of question around is there, because there are lots of like, we went through the, I do agree that, you know, the knowledge, you know, bringing everyone up to par in terms of what the knowledge is. But is there a appetite within engineering and other organizations?
+because you guys are kind of going across many of the verticals, right?
+
+Vlad Grubman   42:59
+Yep, yep.
+
+Anu Perera   43:03
+Like, what is kind of the end goal? What are your experiences with working with other organizations using these types of, you know, methods and publicly available information that we can rely on?
+S.
+
+Vlad Grubman   43:19
+The, the, the, honestly, what I'm seeing and what we as EPAM seeing across the board is exactly the same thing. Some people are running forward and and adopting everything, and even within EPAM, it's the same thing, right? Nikita and I are probably somewhere somewhere closer to the front, we have some people closer to the back.
+that they're still figuring out things that we've already adopted and moved on with. So organizationally, you need to have everyone on the same level. Individually, people are going in and experimenting with a ton of stuff. So again, if you're really looking at adopting things organizationally, then you need to bring everybody to the same level.
+same level where they can all operate. Specifically within the OMF, we're seeing in the engineering and QA, we're seeing exactly the same picture as everybody else. There are some people who are frontrunners, champions, and, you know, at the front of these things and experimenting and doing tons of stuff. There are some people who are lagging behind and waiting for others to figure it out and tell them how to do it.
+So, it's almost, it's almost like it's, you know, it's not the engineering or or digital or product or QA. It's almost like we're all people and we're all kind of adopting things at a different pace.
+
+Anu Perera   44:33
+Sky.
+
+Vlad Grubman   44:38
+So, yeah, I would imagine, and I've been a very big proponent on of sort of AI native AI native teams thing when AI native team basically writes the spec, hands it over to Agentic, what's called Dark Factory.
+and then processes the outcomes. But we're not there yet. We need to bring everybody up to speed. We need to bring everybody to the same level so we can all operate that.
+Make sense?
+
+Moses Song   45:07
+Yeah, and Anu, if you have a specific question, concern, or approach, you know, feel free to set up time with myself, Sanjith, Rik, et cetera. Like, we're happy that people are thinking about this and about scaling and what this feature looks like. And the more people that think about it, the better. And so I welcome your thoughts. I welcome your concerns.
+Let's have a conversation.
+
+Anu Perera   45:30
+Sure, yeah, I've been using BMAD lately for my full end-to-end stack. So building apps and building, you know, pages and, you know, sites and other stuff, it's super helpful. So
+Yeah, I'll set something up my sister.
+
+Nikita Kumar   45:47
+Thank you.
+
+Moses Song   45:49
+Yeah, awesome. Yeah, I would love to see it. And then, yeah, if it works, then yeah, let's scale it. Let's get other people on board.
+
+Nikita Kumar   45:59
+Thank you. I see people are putting responses in, so that's great. The last question we have on here is, what is your dream thing with AI? What would you absolutely love to build? And this could be literally anything, or it could be OMF related. We'd love to hear your thoughts on this, and for people to put them in as well, because some of these can actually translate into future use cases.
+that we can help actually take your dream and build it out for you and help get that dream to a reality. So I'd love to hear if there is some dream scenario that you guys would like, whether you type it in or we'd love to also hear it here with the team as well.
+Yes, Alfredo.
+
+Alfredo Achecar   46:39
+Hey, I, I know, so what I'm about to share is within the scope of Manu's work, so I want to like kind of respect and honor her work there. Ideally, like I would love to get faster at like basically user recruitment to it's actually twofold user user recruitment, like to be able to like be faster and accurate, so I can be like, you know, one week say, hey, we want to.
+test this new feature with people that kind of correspond to our population. We can either deploy to them or have a conversation, show them a live, show them a live prototype. That would be amazing. And then two, and I'm sure this, so I'm sure that probably many teams are actually working on, like probably companies are working on how do we do faster recruit.
+password recruitment because everybody wants that. And then B is like, like how do we do faster AB testing where we have also like faster deployment as well as approvals from legal compliance and information security as part of that as well. Because everything that we deploy here.
+Most things have to be have to run through legal, legal and compliance, and sometimes security for especially for our for the work that the team that I'm in. So, like, if we can kind of expedite that, or you know, integrate the work faster, it will be amazing.
+And that was, that's what I was asking earlier about the the cross-team collaboration beyond beyond just like digital development.
+
+Nikita Kumar   48:06
+Nice. Yeah, that's awesome. Can you, if you haven't put that in, can you also put that in our little survey so we can figure out how? Oh, perfect. Awesome. I see Monique is up next.
+
+Alfredo Achecar   48:13
+I did.
+
+Monique Braxton   48:18
+Yeah, I was going to say the one for me is I have a lot of initiatives across acquisitions and originations from a design perspective. And I think it would be amazing to have an AI agent that tracks all of the decisions that we have made from a steel thread perspective to get an MVP out versus like what we.
+like ultimately want the product to be so that we have a higher understanding of like why we decided to use Plaid or not use Plaid for initial launch and what were the like trade-offs that we had to take as a business as a result of that and what it takes to go back and kind of implement those things. So like I think the why behind our decisions are pretty critical and if we could have a clear thread of tracking.
+decisions over time to capture both like business rationale as well as complexity as we continue to like push out phases for the business. I think it'd be helpful to understand that context.
+
+Vlad Grubman   49:17
+Let's talk about this more. I would really like to understand the use case here. I think it's...
+It, it, it, it.
+sort of overlaps a little bit with the knowledge management use case that we've been talking about a lot, but I think it expands in other directions. So I would love to know more about this. I would love to hear more. So let's maybe schedule an upside conversation. I'd love to follow up. Thank you.
+
+Monique Braxton   49:32
+Mhm.
+Yep.
+Yep.
+Mhm.
+
+Vlad Grubman   49:47
+Yeah, Mauezatur, I think you're next.
+
+Mauezatur Khan   49:50
+Oh, cool. So something that we've been looking at just in general from like the growth, account management side, we've been working really closely with our marketing partners on a couple of initiatives just outside of AI on how to drive for like our revenue numbers, our new money numbers, et cetera, and how we do better messaging and targeting for customers, right?
+Something that I have found that AI does particularly well is it can run in background in parallel to us, the humans that are kind of like doing, you know, other parts of the work and can ingest large volumes of data and signals that we necessarily can't always do on the marketing side. So I would love to get, or my dream thing that I
+would love to build is something that some kind of AI agent, I don't know if it's an agent or what it is, but some kind of AI-powered tool that can kind of take this inbound volume of data and maybe even signals that we might not be listening for today in the marketing world and get a better idea of, hey,
+How can we better target and how can we better deliver marketing and growth messaging so that we can get better drivers for the other KRs that we're having? So kind of how I imagine that working is like, hey, we might not even know what signals to look for, but based on customer behavior, something that happens in someone's life, how can we make sure that like one mains?
+marketing messaging is the first thing that they see. And not only that, the messaging that they see is just perfectly tailored to where it's a near 100% conversion rate. I know that's a lot to ask, but in like a dream world, something like that would be incredible to have.
+
+Vlad Grubman   51:27
+I just want to tell you, it's not as far from reality as you might think. We actually we actually did experiments internally at EPAM doing specifically what you're saying, but again, it's it it it goes further than just absorbing marketing signals, but it's a I feel like it's a great beginning of a of a larger thing, so yeah, if you feel like...
+
+Mauezatur Khan   51:32
+Yeah.
+
+Vlad Grubman   51:49
+you have materials or you have some pointers, let's schedule something. Again, now that we're running with this phase two, this is exactly what we'd love to start building out and help you sort of realize. And it could be a small POC to begin with, but once you kind of get the direction in, once you get your hands on it.
+
+Nikita Kumar   52:02
+Hello, sir.
+
+Vlad Grubman   52:09
+You can you can take it further, so yeah, let's let's do a follow up on this. I'd love I'd love I'd love to see how you read what you're reading off of the market signals, so that we can help you sort of start absorbing that and start start incorporating that.
+
+Mauezatur Khan   52:23
+Yeah, that sounds great.
+
+Nikita Kumar   52:23
+Yeah, if you want to put that in the survey as well, anything that's in there, like we're also happy to schedule follow-up calls just because we want to hear these ideas because like we said, essentially these will turn into the use cases that we'll be building in phase two so you can see like the real value of all like not just ideas, but like actually happening in the real world.
+
+Mauezatur Khan   52:42
+Right. Okay. Awesome.
+
+Nikita Kumar   52:44
+Uh, Moses.
+Oh, you're on mute.
+
+Vlad Grubman   52:50
+You're on mute again.
+
+Moses Song   52:54
+I have three things. Number one, asynchronous knowledge transfer. I feel like we have a ton of meetings in this organization just to talk, which can be a waste of everybody's time. So if there's a way for documents and information to be centralized so that you can just ask an agent rather than having to ask the person,
+
+Nikita Kumar   52:55
+Yes.
+
+Moses Song   53:16
+That would be fantastic.
+Approval swirl reduction. I'm sure many of you feel this pain where you have to get a ton of people to approve something. And if one person doesn't approve, then it's like a house of cars and then you gotta start over and you gotta get approved from everybody. So outside of...
+switching our organization to a single owner organization. How do we leverage AI to get us to a point of ready so that there's less swirl?
+And then number three, change management. Leveraging artificial intelligence, when it comes down to anything, it's change management in terms of humans. And so how do we leverage AI to get humans to get out of their own ways and out of their own ruts and our own habits and our own routines?
+And so those are the three kind of macro things that I'm thinking about, about how can we leverage artificial intelligence to move those three like big rocks from my perspective.
+
+Nikita Kumar   54:21
+Yes.
+
+Joshua Smith   54:22
+Yeah, Moses, on that note, I was actually going to mention this earlier, but I was pleasantly surprised the other day when I was using Chat GPT to prepare for a meeting and it actually started searching across the one main resources for knowledge, like for specialized, to answer specialized questions that
+I wouldn't have known, wouldn't have even known where to look. ChatGPT knew like it was scanning our document repositories across various systems and it was able to come up with some answers to some pretty niche questions. Like for example, what's our portfolio runoff rate for the rest of the year and how that can act as
+you know, context for a specific analysis that I was doing over in financial wellness. So I think, yeah, that there's a lot of value in that.
+
+Moses Song   55:09
+Yeah, that integration to SharePoint and scanning through those documents is super powerful. And so if we do that with Confluence, and if we do that with JIRA, it'll become even more powerful. And then it's a question of as employees, we need to make sure that everything is on these repositories that are accessible so that...
+
+Joshua Smith   55:20
+Yes.
+
+Moses Song   55:28
+we can leverage each other's information.
+
+Joshua Smith   55:33
+Totally.
+
+Nikita Kumar   55:36
+Thank you, Eric.
+
+Eric Trenz   55:40
+Mine's actually fairly similar to that, like leveraging leveraging colleagues' skills or different workflows that they have, as well as well as information. I saw a cool setup where you all kind of contribute, like...
+you contribute different skills to a repo and then basically you can adopt whatever, your teammates can adopt whatever you want from that, right? So like if I add like a skill to for a SQL query of the Snowflake database, like.
+my teammates can also leverage that if they have a similar analytics task that they want to complete. So I think that that would be really helpful and help with like building the.
+the team context, as opposed to everything being very localized or everything being very global, but potentially too global, where it's like you're pulling all organizational knowledge or you're pulling none at all.
+
+Vlad Grubman   57:00
+I have too many responses for this, but yes, this is the, notionally, this is the right direction. We only have 4 minutes, so let's keep moving. And again, another reminder, please, please, please, please add things to the survey. It's not really truly a survey, as you might have guessed already. It's A collection. We're just trying to collect more information about more use cases. We can unlock you folks and give you more opportunities to build more cool things.
+
+Nikita Kumar   57:08
+Yeh.
+Yeah.
+
+Kai Jei   57:20
+S.
+
+Nikita Kumar   57:24
+Thank you. Yes, Kai.
+
+Vlad Grubman   57:24
+Kai, please go ahead.
+
+Kai Jei   57:26
+Yeah. Mine is kind of, I think we're all thinking in very similar ways in terms of what we would like to implement. And I think mine is also along like the line of intelligence. So it reaches into specifically the intake
+process that we've got that Nicole set up. And now we have all these intake forms that get filled. And I was thinking, okay, how do we create a centralized intelligence hub for all of this intake and not just make it intake forms that product people need to fill out, but
+One, help them fill out that intake. So use AI to help them fill out the intake. I know we're already doing that on a level. How can we take that to the next step? So we're using AI to flag like weak thinking, missing metrics, vague problem statements, stuff like that. And then
+after this intake has been created, how do we house it in a central repository that people can go to and we can kind of start to see threads between like related work that other teams are doing. So if you start to create an intake or you search through the repository, you can see like.
+past initiatives that are pretty similar that have tried to hit the same metrics and goals and stuff like that. And you're also making sure that you're looking into that intelligence to see what decisions were made, like Monique said, what worked, what didn't work, stuff like that. And so this is
+definitely going to help us see a bigger picture of like initiatives across OneMain, what's working, what metrics, and we can even tie it to like the company goals and stuff like that. So that's what I was thinking.
+
+Nicole Davis   59:20
+Pam.
+Mine piggybacks on that.
+
+Vlad Grubman   59:22
+I love how you all converge on the same, sorry, Nicole, I love how you all converge on the same concept of knowledge management system. I would love to help you folks on this. Yeah, go ahead, Nicole, please.
+
+Nicole Davis   59:28
+Mhm.
+
+Kai Jei   59:31
+Yes.
+
+Nicole Davis   59:33
+No, it's kind of the same thing. You know, I built this intake readiness rover. I think a couple of you have seen it that touch on some of the things that Kai is on her wish list of like, are we really writing these to the best of our ability? And like, what are we missing? And it all converges into this one, like.
+Mega, mega agent. It's all these little agents that all talk to each other that we're going to daisy chain together here in these workshops. I have a lot of ideas around that, but like thinking more strategically about it.
+It would be really nice if this was kind of a hub and spoke model, where there's one central.
+Let's call it brief or intake or something. There's one central idea from which all of the intake forms that need to be created are spun off of, right? And then they're given to the people that need to work on their particular piece. Like I'm thinking there's probably a, there's a research intake, right? There's a design intake. There's sometimes there's a marketing one, but they all ladder up to one
+Central objective, right? So, like, how could we...
+automate that, you know, basically become the product manager of project managers.
+
+Vlad Grubman   1:00:51
+Yeah, we're at the time, but my first reaction is, yes, we've actually, I think Nikita has already shown something like this or something very similar to it, like an intake form that sort of does implement hub and spoke mode would be more than happy to build it on your platform of choice as an agentic flow, because...
+The whole theme of the phase two is bringing agentic flows into the mix. So yeah, absolutely, would love to help you there.
+
+Nicole Davis   1:01:19
+Nice.
+
+Nikita Kumar   1:01:20
+Yeah.
+Awesome. Yeah, I know we're out of time. So if you guys can just take some time today to pop in some of your server responses on here. This was super great. And thank you so much for joining. We will see you guys next Wednesday. So next week we'll have probably a little bit more of an advanced session to show you guys some hands-on work. And then similarly, we're going to talk about use cases and kind of pull from some of the use cases that you guys have
+talk to us about today and see how we can kind of make some of these a reality for you guys.
+Thank you, everyone. Have a great rest of your day.
+
+Joshua Smith   1:01:50
+Yeh.
+
+Nicholas Crowley   1:01:51
+Thanks, Bob.
+
+Joshua Smith   1:01:51
+Mhm.
+
+Monique Braxton   1:01:53
+I guess.
+
+Vlad Grubman   1:01:53
+Thank you, folks. Appreciate you all. Thank you.
+
+Mauezatur Khan   1:01:54
+To everybody, bye.
+
+Nikita Kumar   1:01:54
+Byron.
+
+Alfredo Achecar   1:01:55
+Thanks.
+
+Nicholas Crowley stopped transcription

@@ -1,0 +1,347 @@
+AI Enablement DIGITAL Lighthouse Session-20260603_155832UTC-Meeting Recording
+June 3, 2026, 3:58PM
+41m 8s
+
+Jatin Bagga   0:34
+Hey, Vlad, how's it going?
+
+Vlad Grubman   0:38
+Morning, how are you?
+
+Jatin Bagga   0:41
+Living a dream. I don't know who dreamed, but someone.
+
+Vlad Grubman   0:44
+The.
+Well, at least it's a dream, it's not like a brutal reality of some sort.
+
+Jatin Bagga   0:52
+I mean, it's an AI class, like we should probably talk about artificial reality, should we?
+
+Vlad Grubman   0:57
+I mean, things out there.
+Hey, Ron.
+Hey, Doug.
+
+Doug Ball   1:18
+Hello.
+
+Vlad Grubman   1:33
+Let's give everybody a couple of minutes. The setup for today's demo is in the Slack channel. I'm trying to get into my VDI to post the same thing because I can't copy paste otherwise.
+
+Ron Seager   1:36
+Yeah.
+Yeah.
+Yeah.
+The.
+
+Vlad Grubman   1:49
+Trying to copy paste it into the channel into the Teams meeting, so that's why I need another couple of minutes.
+All right, let's get started. My VDI is giving me a hard time, so I'm just not gonna, I'll try not to waste too much time on this.
+Right, today's presentation is brought to you by last week's.
+Low attendance, so here's here's what we're gonna do.
+I'm trying to manage a couple of monitors here, so bear with me. So here's what we're going to do. Last week, we talked about building the dashboard. Building the dashboard based on the data, and it's a boring static dashboard. The point of last week's exercise was to walk you through creating a spec and executing the spec inside the
+I saw the cursor.
+Given that the agents were...
+We're taking away, we're taking away, you know, security give us, security key taketh away. I thought it would be a really interesting exercise to show you how to do something very similar, similar to what agents do in ChatGPT, but also connected to...
+Similar activity, right? So, and that's kind of how this whole concept for today's demo came together. It's considered as a SQL, right? We're gonna build a very similar thing using deliberately using agents, and I'll show you how to build your own agents using cursor, using...
+sort of agentic harness, the cursor really is. The cute thing about it is it doesn't have to be cursor. You can, if you have access to Codex, you can do this in Codex.
+Um, you can...
+Have you can use cloud code, you can use anything. The approach that I'm showing you in cursor, I'll only show you this in cursor because most of you or all of you should have cursor. But it works in every other AI harness tool just exactly the same way. There's no difference. If you.
+take the same artifacts I posted in a Slack and throw them into Codex or Cloud Code, it will work exactly the same way. And that's kind of the cool part about it.
+So, I ran out of I ran out of credits last night when I was setting up the demo, so we're gonna we're gonna go through a shorter route, and that's why I posted the the already prepared spec and agents, but I'm gonna show you what it is and how to how to deal with that and what what does this really mean?
+So I have demo 3 folder already set up.
+Right now, oops.
+Three right now, it's empty, so let me actually let me start sharing my screen and...
+It will become a lot more exciting.
+Let's do entire screen and let's do this one.
+All right, so as you can see, demo 3, empty. I'm going to go and send the same thing in here that I already have.
+Kate.
+Oops, didn't need to do that.
+Kate.
+All right.
+These are my files. This is my agent chat, so...
+Again, I'm assuming you folks either have been in last week's presentation or you at least watched the video so you kind of have a concept of what we're trying to do. I already built the spec. I can show you how I did it. It's really boring. It's just a lot of back and forth with AI and hey, I need to do this. Oh, by the way, I forgot to tell you that.
+My files are going to be coming in a certain way.
+So I have a spec. The spec is really, again, we're using the same reviews that we used before, but instead of a static dashboard, we're going to build, I'm going to show you how to convert that into a living roadmap.
+By living roadmap, I don't mean, again, we only have like 40 minutes. I don't want to, I don't want to overcomplicate things, which is why I simplified a lot of stuff, so that we can fit in this demo timeline. But I can, I'll talk through how it would really work in the real life. And of course.
+you're more than welcome to reconnect after this demo offline or however you want to do it to make it real. Again, remember, this is a demo and it was deliberately simplified so that we can fit in our timeline. I want to respect everybody's calendar. I don't want to run this for three hours, which is what it took me to run it.
+first time. So the spec is really, we're going from reviews into the living roadmap. Living roadmap means every time a new piece of data comes in, the roadmap is updated based on that new thing. Again, for simplification purposes, I'm only using the same 1000 reviews we've been banging on for the last three months.
+Again, the point is not to really build the living roadmap. The point is demonstrate how you can do this using just the cursor. Ideally, what's going to happen is we're going to use the same hack we used last time. We're going to have cursor's own agent process the reviews. Ideally, this should be a dedicated.
+call to a separate AI model. So for example, whenever I say, hey, go read the.
+Go read the reviews and, you know, cluster them, prioritize them, make sense out of them.
+agent inside the cursor is going to do that. And that's only going to work because this is a demo. In real world, this is not a scalable thing. Like I said, I tried, I ran, let me drag this in, I ran this couple of times and I ran out of all the limits in my cursor. And this is a bump instance of cursor.
+I ran out of all the budgets possible. So don't try this at home. Don't try this at home for the for real, but as a practice experiment, as a practice thing, this is absolutely doable. This is absolutely a valid way to hack your hack around the limitation of not having direct access to model.
+Another way of doing this is potentially create a webhook or some kind of a call into CodeMe, which does let you use a model.
+with a larger allocation, larger budget. So it's a way to do it. But again, for the purposes of the demo, to set things up and to show you how things work, I really wanted to demonstrate that, hey, you can do pretty much everything inside the cursor. It's just, you're only limited by.
+You're only limited by the...
+token location inside here. And again, I'm using a GPT 5.5 medium model, which is very affordable in terms of pricing. If you go higher than that, you're probably going to blow out of tokens pretty fast. Any questions before I start showing this stuff?
+Yes, no, maybe. Okay, let's keep moving. So I have my files here. I'm gonna, and as you see, this is just files, just nothing really, nothing else. Let me walk you through this. This spec is really explaining what things are and what should be done. This is like we talked, this is more or less a PRD for.
+AI to build things.
+Agents, and these are all files, you have them in Slack. Please take a look at that whenever you have a chance. Agents is really a list of agents that we're going to use.
+for the purpose of processing the reviews that have the sample, the sample of 1000 reviews, building, analyzing, processing them, analyzing them, and generating the roadmap. And because we're going to run it several times in several iterations, we'll create a couple of artifacts each time we
+run it fast the first time. That's going to be the roadmap itself and what changed sort of.
+change document. It consists of shared agent principles. All agents must abide by these rules. And then each individual agent. For the, again, this is a demo, so I simplified A lot. Originally it was like 8 or 9 agents. Yeah, I know I missed on the 6-7 joke, but it was really much more than that.
+I simplified it so that they will fit into the demo. They all run pretty slow.
+You'll see it. The intake agent basically reads the file, tries to understand what the hell is in there. Signal analyst agent tries to analyze the signals from the reviews. A roadmap builds a roadmap. So the way the roadmap is built is the input files are JSON because CSV is hard for AI, so we do that.
+Did JSON and I and I, we both agree that using JSON for this, the resulting file is a JSON as well, and then it's rendered into HTML, so you get sort of a universal representation in form of JSON, but then you can render this HTML and you can.
+Tweak it any which way you want.
+Then, like I said, shared principles and then a description of each individual agent. What it's supposed to do, what is it looking for?
+And this is basically becoming instructions for each individual agent, what to do, how to do it. All these agents, these four agents that I've shown before, will exist inside the cursor's harness. So when you run it, something like this,
+This is all the work that I've done to improve things. Like I said, that's why I ran out of tokens real fast. When I ran it, it...
+Hold on, let me scroll up to it. Ah, I'm missing it. You'll see it in the round. Basically, the story here is when you run it, they all execute it sequentially, because that's, again, for simplification purposes, that's how it's done. In the ideal world, if you have access to the model directly, and you can do this, you don't have to run them, you don't have to.
+start to work manually, it can be a time to trigger, say, collect all the information, all the app reviews for a week, and then trigger the execution of these agents. All can be done automatically. You don't have to do it manually. But I did, and that's why it's...
+That's why it's only a demo.
+All right, any questions so far?
+No, okay. Feel free to stop me if there are any questions. I'm looking at the screen, I can't see raised hands, so it's okay, just interrupt me. I don't mind. The third important piece here is the orchestrator. Notice how all of these are markdown files, you know, our favorite language.
+For for the for the AI, so the markdown file of the these this markdown file is effectively telling you, telling the AI, telling the agentic harness that's going to run these agents how to run them.
+And what are they supposed to do? It's basically an explanation of things. Like, here's how you do. It's kind of a working instruction, right? This is what you do. They run this, put them in these folders, do all these cool things, and...
+Just.
+Basically, the execution plan - how do you how do you use these these these files to process to process the input?
+Okay, requirements is what you need. There's Python scripts in the back end, and read me is basically a thing that you need to understand in order to do this. So what I'm going to do is I'm going to unpack these shorter reviews.
+These are five JSON files that we're going to be using. Each one of them contains 200.
+app reviews, which is why I call, they're started, because this is the amount of information AI can safely process without choking on and without overloading the context window.
+So, that's the setup; that's I, I, I hope I I went through this. I don't really need this file anymore, so, so it's not so not to confuse us.
+All right, that's basically the setup. That's all we're going to need to run the demo.
+Now I'm going to...
+Ask.
+My thing is, there is a...
+Back in.
+The current folder.
+Along with.
+Agents and.
+Orchestrator review and set up the Warren and for processing of the.
+Reviews.
+Because we already created the spec, because we already created pretty much everything we need to create, we don't really need to rethink the spec, rethink the agents, we just need to set up the environment, and that the environment is really a bunch of folders, so that as this this thing.
+Executes it's.
+It no, it has the space to move files around and go between those different things.
+It will work for a little bit of 5.5 medium is faster than deep thinking model, so hopefully it will finish today.
+At some point.
+But it does take some time. And one thing to note is...
+I tried these things in different, using different tools. Cursor is noticeably slower. So if I were doing exactly the same thing in Codex, or if I were doing this exactly the same thing in Cloud Code, it would have been marginally faster.
+By marginal, I mean, it's not going to be like in five seconds, but it would be noticeably, it would take noticeably less time. Like this might take 5 minutes. I'm giving you kind of approximate numbers. Codex specifically would have taken two or three.
+So it depends, depending on how much time you have or where's your, where do you have more tokens? It might make sense to use that tool. So it's creating scripting. Again, remember I didn't give it any Python code. It creates everything by itself just based on the spec.
+and the requirements for agents and orchestrator.
+Hopefully, it remembers, and again, this is this is the part where spending more time on the spec pays off, because the more precise you are in describing the requirements, describing what is it that you're really trying to build, the better the results will be, and less time, and there's less time.
+less time you need to spend on going back and forth and improving things, which is really the point where you go and really, truly pay attention to.
+What is it? What is it you're asking the model? What is it you're asking the machine to build, and how well does it do it?
+Okay, yeah, it probably going to go through a bunch of iterations.
+I'll try to find the Python versions, and I think I have like three of them on this laptop, so it it gets it it it it obviously will get confused at some point.
+Uh, but it'll it'll figure it out.
+
+Jatin Bagga   21:11
+Hey, Vlad, sorry, Vlad night.
+
+Vlad Grubman   21:12
+I already did that before. Yeah, please go ahead.
+
+Jatin Bagga   21:14
+Sorry, Vlad, I had to, I got pulled into another meeting for just a couple of minutes. Can you one more time just tell me what exactly are we doing here with this? Is it an agent in cursor or agent in ChatGPT?
+
+Vlad Grubman   21:23
+The.
+So we don't do ChatGPT, right? This is all in cursor. This whole demo is in cursor.
+
+Jatin Bagga   21:31
+Okay.
+Got it. And what's the objective? I'm sorry, what's the problem statement here? I'm sorry.
+
+Vlad Grubman   21:36
+The problem statement is, we remember how we build a dashboard based on the app reviews last last Wednesday, so we wanted to take this to kind of like make make the next step and use a genetic flow. Basically, we build the agents, we build the agent, we build the orchestrator, we use agents to build a dynamic roadmap.
+
+Jatin Bagga   21:45
+Uh-huh.
+
+Vlad Grubman   21:57
+Again, roadmap is a really big word. It's the same dashboard we built last time, but it's more like roadmap with the purpose of creating a roadmap out of it. And we want to make it dynamic. So every time we upload a new piece of data, the roadmap changes, the agents process the data and change the roadmap for you.
+so you don't have to do it manually.
+
+Jatin Bagga   22:18
+Got it, got it. Okay, perfect. Thank you. And all these, yeah, all these files and stuff, you'll give us access to this, right, so we can play it after.
+
+Vlad Grubman   22:21
+And again, yeah, go ahead.
+They already in Slack. I had a problem accessing. I had a problem accessing VDI today. For some reason, I need to figure out what's going on. So I posted it all in Slack.
+
+Jatin Bagga   22:29
+Oh, it's not.
+
+Vlad Grubman   22:39
+Sorry, I know, I know we wanted to do it in Teams, but...
+
+Jatin Bagga   22:40
+Got it, just got it. Thank you. Yeah, and then that's OK. I got it from that. Thank you.
+
+Vlad Grubman   22:45
+Cool, alright, so what do you have is um...
+This, among other things, the spec and everything created.
+This thing created this structure, archive, artifacts, inbox, state, and roadmap, and I have my sharded review. So, what I'm gonna do next, and I'm gonna, I refuse to do this. This is my, this is the point. I don't wanna do this. So, instead, what I'm gonna do is I'm gonna go to the sharded reviews. I'm gonna take...
+The first two files.
+Gonna throw them into data inbox. Ohh, wait, I didn't I didn't ask for this.
+And be here.
+Kate.
+And I'm going to say...
+There is a first.
+Batch of data.
+What's wrong with my typing to the files in the data?
+Books folder.
+Process them, do not create a change.
+Document, since this is the first run, let's see what it says.
+The problem with placing these charted reviews under in the same folder is that it will find it and it will copy it. I kind of, I should have done it. I just wanted to keep everything in the same folder.
+But yeah, it's sometimes it gets too smart and goes roaming through the whole folder and like, oh, I found it. You don't have to, yeah, don't touch that.
+Yeah, yeah, yeah, apparently, so why it noticed the Google Play because the 1st 500 reviews are from Google Play and the other 500 reviews are from Apple's.
+App Store, so it it's it's queued in in in that way.
+But...
+It's fine. We can live with it.
+It it tells you, you can suppress that, you can tell, you can tell it, don't don't think out loud, just process it internally, but it's kind of fun to read these reviews and see how it processes them. Again, if if if that's your thing and this is something you can.
+Entertain yourself by looking at this.
+See.
+Like I said, it takes time and the reason why it takes longer is because this is still an IDE, so the agents that are running inside are tailored towards writing code, not analyzing the data. Like I said, this is effectively a hack around not having access to the model.
+Cool.
+OK, let's see.
+Let's see what happened. Okay, so files are gone, which means it probably did the right thing and processed the files and removed them from the inbox so it doesn't have to process it again. I was going into artifacts, run 001 and the roadmap.
+So where's my roadmap? Okay, here it is.
+It has this now, next, later.
+And it has these cards with actual evidence that this is something.
+Something's happening. Okay, cool. Let's repeat this. Let's do this again. Let's go back to...
+our shared reviews. Let's take another one. I want to run this two more times. So I'm going to take this one and then the last two.
+I'm going to go back to data, inbox, and I'm going to say...
+Run the process again on the new input.
+Produce both the new roadmap and...
+Change, since this is a...
+Up, run.
+And if you're automating this, you wouldn't have to do this stuff. You would.
+probably just make it a triggered event and the prompt.
+And since you're probably going to front load stuff, it doesn't have to be a roadmap and app reviews can be literally anything. But it would be something like, hey, keep doing this until there's no more files left in the input. Or anytime there is a file in the input, just.
+Kick it in.
+depending on how often do you want to run this, how much you want to run this. But this is how you would set things up for the automated process. And again, the only, if you really wanted to make this real, the only thing you would need to change is give it an instruction. Oh, hey, I have an API key.
+to process the reviews using the real AI, not inside, not the agent inside cursor. So that would, it would probably create a separate Python script that would bounce your reviews against the real API.
+Connected to OLM.
+Otherwise, this is...
+practically working setup. It's the only difference is.
+How do you how do you want to how do you want to handle the data and which data do you want to handle?
+So, let's wait for it to...
+Finish creating next iteration of artifacts is actually, it's supposed to create two, one, the new version of the roadmap and a change.
+Let's see.
+Okay, the files are gone.
+Perfect.
+Yes, it created roadmap and it created change report. So let's open both.
+And let's take a look at them.
+So this is a new roadmap around 0002.
+Different, more stuff, different allocation, and it tells you what else.
+Full batch transfer payment syndication, self-service, biometrics. Obviously, this is not.
+not real definition of what the breakdown is. The best part is you can adjust that in the agent instructions. We're not going to do it now because we probably not going to have time to fully elaborate on that. But if that's something you were looking for.
+And this agents MD, you go into the signal analysis or roadmap and change here or just give AI instructions. And this is what I did yesterday. It was the breakdown was not granular enough. I had out of 1000 reviews, I had just eight themes and I said, this is not real.
+But let's look into making it more granular. And it suggested it analyzed the reviews again, suggested a couple of improvements and we implemented them. So it's very flexible in a way that you can interact with the system and improve it on the fly. For example,
+And again, it's a superficial example. Don't get me wrong. But I just want to show you, like for example, I have now, next, later, but I don't have a count of cards. I don't know how many cards in there. I don't really want to count. So what I'm going to do is before processing the next one, the HTML produced.
+As now, next.
+Later columns, let's add count of cards for each.
+Ohh.
+This is the beauty of it. You don't have to go and figure out how to do it from the code perspective. You don't have to run, you don't have to write the Python script to, or edit Python scripts. You just ask AI to improve the stuff that AI already built. That's the beauty of it.
+Okay, it introduced some changes.
+And guess what? I just refreshed, sorry, I'm pulling it from a secondary screen. I refreshed this around 0 to roadmap, and it now shows me the count of cards in each column. So let's wrap this up by running this for the...
+Running this in the third time. Let's go back to our sharded reviews, our last two files.
+Data inbox.
+Kate.
+OK, this is great. Let's process new inputs and create.
+Both the and change report.
+Very simple, just very straightforward.
+You don't really, you don't really do much because everything you did, everything you need to do, everything that is required to do is really in those spec agents and orchestrator files. This is where most of the stuff really lives and.
+Effectively, these are your brains. This is what tells AI what you want it to do. And of course, you can add more agents. If you want quality check, is this really truly a thing? Or I mean, you may have another.
+checkpoint in the process with a very specific breakdown of where the issues belong. I think Jatin brought this up earlier. There's very specific breakdown of where these, which buckets these reviews belong to, as far as the teams are concerned. So.
+that you may give that taxonomy to AI so it knows what you expect of it. So it's very flexible in that sense, how you can do this. And you don't have to, the best part is you don't have to program it. You can just tell AI what your expectations are, as long as you're very deliberate in your.
+instructions, it will do exactly what you want to do. And again, you can always test run it, see if it does what you expect it to do, and adjust later, just like I did.
+Cool.
+Let's look at this again. Inboxes empty, artifacts, we have now round three. We have a roadmap and we have changed report. Let's take a look at that. Okay, okay, right. Again, because we keep adding new and big, large.
+huge chunk of reviews and now these are from the Apple Store. We keep adding them.
+Okay, and this is what the roadmap now looks like.
+And now we can play with this any which way we want. We can add more. I don't have more reviews to add, so that's pretty much it as far as data. But we can tweak and tailor the way this looks and feels.
+We can adjust the priorities. It collects a specific evidence score, calculates a specific evidence score. That can be tweaked as well, again, through the conversation.
+And you basically have a dashboard of issues reported by.
+app reviews in a dynamic sort of way. As soon as new batch of things come in, you can readjust this dashboard and based on how you prioritize them, you can create that sort of prioritization framework inside the agent, inside the...
+Where's my agents?
+It probably would be either signal analyst or roadmap or you add another one. As a matter of fact, the original idea had a prioritization agent as a separate, but again, because I wasn't sure how long this will run.
+How long this will take? I kind of bundle them all together. In the ideal world, you probably want to separate these.
+That's the story. Are there any questions? Are there any concerns? Anything you folks want to?
+Yes, no, maybe.
+Ho.
+All right, then that's all I have for you today. You have all the information, all the inputs for this specific.
+For this specific demo, I highly encourage you to try and set this up and do this yourself. Use whatever data you want. This is public data, which is why I used it and which is why it's available to you as well. But feel free to do this on your own, hopefully.
+Hopefully, you'll make you'll make something useful out of it.
+
+Mia (Xiaoling) Zhou   37:36
+Hi, Vlad. I have a question. So I see you put the, I will put like the raw data, like the JSON file in that folder. So I'm just curious, is that possible if we like build the interface on the output like HTML and like?
+
+Vlad Grubman   37:37
+Yeah, sure. Go ahead.
+
+Mia (Xiaoling) Zhou   37:57
+upload the file there and it's like the model still able to run the file we upload through the like.
+
+Vlad Grubman   38:05
+Yeah.
+So, so, so to be to be to be fully transparent, the original data that I had is in CSV format.
+
+Mia (Xiaoling) Zhou   38:14
+Mhm.
+
+Vlad Grubman   38:15
+What I did, let me see if I still have it. What I did is really this.
+I said, I have a file called app review CSV, contains 1000 app reviews. I want you to break it into shards to 100 reviews each following this template. And it created a Python script. The point was not for AI to do the breakdown. The point was for AI to create a script that will do that. And.
+It did exactly what I asked it to.
+this created this field mapping, created the Python script, and then turns out, I think App Store views don't have a language field, so I had to drop it. So not everything has to be done by AI. Sometimes you need AI to write the regular script. You just.
+
+Mia (Xiaoling) Zhou   38:47
+Mhm.
+Mhm.
+Mhm, mhm.
+
+Vlad Grubman   39:04
+It would have taken me probably a couple of hours to polish the script manually, and it took me less than 5 minutes to build the script using AI. That's the sort of the force multiplier, right? I don't have to think about this. All I need to do is just tell it, hey, write a script, do this.
+
+Mia (Xiaoling) Zhou   39:05
+It.
+
+Vlad Grubman   39:24
+create this JSON files, I'm going to use them for a demo. That's it. Same thing with the upload, right? If you upload, you still need to process them, sort of clean them up. If you notice, I know I only like flash it on the screen real fast, but if you notice, there's some...
+
+Mia (Xiaoling) Zhou   39:33
+Mhm.
+Mhm.
+
+Vlad Grubman   39:43
+like nasty characters because I probably, when I was creating those JSON files, I probably forgot to clean them up or something else happened in the meantime. So this became kind of annoying, but that's something I would probably would have addressed as I was sanitizing it here.
+
+Mia (Xiaoling) Zhou   39:44
+Mhm.
+Mhm.
+Mm.
+
+Vlad Grubman   40:02
+Other than that, you really don't have to do much. It doesn't really matter whether the files are uploaded or manually moved into the folder. I only move them into the folder manually to demonstrate that, hey, as soon as the new files comes in, this is what you can do. Because the whole thing is automatable, right? You don't need to.
+
+Mia (Xiaoling) Zhou   40:02
+Okay.
+Yeah.
+
+Vlad Grubman   40:22
+do anything, just set up a pipeline and it will magically work for you.
+
+Mia (Xiaoling) Zhou   40:28
+Sounds good. Thanks.
+
+Vlad Grubman   40:31
+All right, any other questions?
+All right, then we can wrap up 5 minutes early. Thank you folks for being a great audience. Appreciate it. And if you have any questions, feel free to reach out. I'll be happy to walk you through guys again, or help you set up your own. Again, this is just a demo. It's very simplified. The real thing should be real.
+Right, folks.
+
+Bertha Cadena   41:05
+Thank you, Vlad. Bye.
+
+Eric Trenz   41:05
+Thanks, Estes.
+
+Vlad Grubman   41:05
+That's it. Take care.
+
+ stopped transcription

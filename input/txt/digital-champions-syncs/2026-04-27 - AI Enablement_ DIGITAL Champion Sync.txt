@@ -1,0 +1,459 @@
+AI Enablement DIGITAL Champion Sync-20260427_153004UTC-Meeting Recording
+April 27, 2026, 3:30PM
+31m 33s
+
+Nikita Kumar   0:15
+Hello.
+
+Eric Trenz   0:19
+Hello.
+
+Nikita Kumar   0:20
+We'll give everyone some time to hop in here.
+
+Eric Trenz   0:24
+Sounds good.
+I'll be right back. I'm gonna run to the bathroom.
+
+Nikita Kumar   0:30
+And worse.
+Hi, we're just giving everyone a few minutes to hop in.
+I think a few folks are also in a steer core leadership conversation, so they might not be able to join today, but I'll give everyone another minute to see whoever's able to hop in and then we can get started with use cases from the team.
+This is recording, so I'll keep it on recording, but we wanted to today discuss about the different use cases that the team was bringing to us so we can do a live demo on Wednesday. So if you guys want, I'm going to give the stage to you guys because that was part of your homework for last week. So if you want to just walk through any use cases that you have in mind and
+There is no wrong use case. Again, everything is what you want it to be, but we want to kind of figure out what's the best way to take some of those use cases and then do a live demo to show you guys how it would work, whether it's in CodeMe or if it's in Robo or if it's in anything else. So I'm going to...
+give this stage to you guys. So whoever wants to volunteer first, let me know what use case they're thinking of, because this is going to be part of what we're going to be showing you guys on Wednesday for the Lighthouse. So I'm going to pass the floor to you guys. Any ideas on what you guys are thinking for use cases?
+
+Karly Bolger   3:07
+I can go. I think I'm actually meeting with you right after this to discuss the use case with Josh. But the main use case that we were discussing was kind of consistent or...
+
+Nikita Kumar   3:12
+Yeah.
+
+Karly Bolger   3:21
+Decision management, so being able to...
+feed an agent all of like the transcripts from meetings related or even chats related to a project and being able to use that agent as a source of truth. So if we run into a question like the engineer working on it, they can go talk to the agent and ask.
+hey, what's the latest on the decision for this? Because one thing we struggle with is updating the original document. And I don't think we need like a living document right now, but something that's more interactive that we can talk to and maybe pull out a document at the end from.
+
+Nikita Kumar   4:09
+Yes, and that is something, yeah, that Vlad is going to be showing that to you guys in our demo after this. It's a little bit of like knowledge management, but it kind of like plays into the larger, the larger goal of, you know, like having all the, if you have all your documents and files in place, then what like the, what the agent can pull can be really helpful for your team, whether it's like a team project or specific meeting and things like that. So yeah.
+Yeah, we'll show a demo on that. That is not on CodeMe or on any of the other platforms at the moment. That's kind of something Vlad, that was, Vlad was building on his own. So we're trying to see if we can use something like a tool that might be approved to show you guys that. So he can show more on that. But I guess for...
+That's a really good use case for us to have, but for Wednesday, is there any other ideas that people might have or other use cases that you guys want to potentially see live demo? Because we still need at least one that we can live demo with you guys on Wednesday.
+
+Alfredo Achecar   5:11
+I mean, I have a few ideas, but maybe I wonder if, like, faster A/B testing or something to do with A/B testing could be interesting.
+
+Eric Trenz   5:22
+Hey, Alfano. Mia and I have been talking about that quite a bit. So that's something that like we have started a little bit on. So yeah. So maybe we can share a little bit. So I started.
+
+Nikita Kumar   5:22
+Sure.
+
+Alfredo Achecar   5:32
+Aggarwal.
+
+Eric Trenz   5:42
+creating a chat GPT agent that has our design system tokens and like brand guidelines and will basically allow you to conversationally get to the point where you can have the
+
+Nikita Kumar   5:45
+Yeh.
+
+Eric Trenz   6:02
+the custom CS or JavaScript to input into Optimizely for a visual editor test. And then Mia, I don't know if, I'll just share at a high level and then she can add there, but.
+
+Mia (Xiaoling) Zhou   6:19
+Yeah, go ahead.
+
+Eric Trenz   6:21
+But she's been kind of working on, well, she had a while ago, but it fits well into the flow where it looks at a design and kind of suggests copy or suggests changes. But.
+Mia, if you want to share a little bit more on that.
+
+Mia (Xiaoling) Zhou   6:40
+Uh, yeah, so do you want do you want wish just share the like the mirror ball we put together? Like, I think that's...
+That can be.
+
+Eric Trenz   6:50
+Yeah, yeah, that could be helpful. I can get it up if you want. Oh, it just logged me out. One sec.
+
+Mia (Xiaoling) Zhou   6:55
+Kent.
+
+Alfredo Achecar   7:01
+I mean, if you, if you guys, I mean, I would love to see that, but if you guys are already working on it, not sure, Nikita, this is something that you guys, maybe we can forward on something else, perhaps.
+
+Nikita Kumar   7:11
+Yeh.
+Yeah, I agree. I think we want to maybe focus on something that you guys haven't started yet or just thinking about like, you know, that's why we sent all like the ideal ideas as well. So the goal for today, just, you know, coming together with like a use case that everyone can kind of agree on and then we can do a live demo of. It doesn't even have to be super complicated, but just this is more so to show you guys the different tools that are available to build.
+Certain types of use cases, whether it's on CodeMe or Robo or GPT or like wherever, wherever this use case fits best.
+
+Eric Trenz   7:47
+Gotcha. Yeah, then we'll hold off on sharing like kind of that flow since we've already kind of started working through it and can start with one that's more like net new.
+
+Alfredo Achecar   7:53
+Yeh.
+
+Mia (Xiaoling) Zhou   7:57
+Yeah, but the like high level, the whole idea is to like short the current AB test process processing time, because now we have like from we got the idea to like when we really get the AB test launched, it's...
+Being like several different steps, and the flow we work on is to like leverage AI to make it like each steps shorter and like faster, yeah.
+
+Nicole Davis   8:32
+Couldn't we like piggyback on that customer intelligence one that we built?
+
+Mia (Xiaoling) Zhou   8:37
+Yeah, we we did. We actually...
+
+Nicole Davis   8:38
+Yeah, I mean, I think that's what I would do is like...
+
+Mia (Xiaoling) Zhou   8:40
+Yeah, we since Nicole, we actually did, yeah, we put on that mirror boat, like the process, like CAIA is one of our process, yeah.
+
+Nicole Davis   8:48
+Mm.
+Oh, okay, cool. I'm sorry, I was out. I don't know. I don't know what's going on, guys. Interestingly, I just came from, and this might amount to nothing, but I'm just putting this out there for us to think about. I just came from a demo from usertesting.com, which we have a subscription to, and they have a plugin that.
+
+Mia (Xiaoling) Zhou   8:54
+No, we we just shared.
+
+Nicole Davis   9:09
+plugs directly into Figma and allows you to run user tests with AI, helping you to create the script in the test to just like run it. And obviously we need to put some guardrails around that because I can see like a gazillion tests coming out of that really quickly and us arriving nowhere.
+But I think it's really interesting because I'm thinking, oh, this is like CAIA on drugs. Like we could take this and...
+Um, you know, beef it up some with actual users that they're...
+canvassing from usertesting.com. So that's an interesting thought that I was mulling around in my head today.
+Maybe that could be useful for this AB stuff too.
+Mmh.
+
+Alfredo Achecar   10:11
+Yeah, I know that, I know that user testing can do that, can do that for us, but there's still...
+
+Nicole Davis   10:11
+Huh?
+
+Alfredo Achecar   10:17
+Yeah, you know, of course we have to pay for that and there's, you know, and I think there are segments that are probably harder to recruit for, including like one main customers and maybe like, you know, either older customers or people that are not super tech savvy. So, yeah, I was wondering how, just thinking a lot about how AI could potentially help us solve that.
+
+Nicole Davis   10:19
+Right.
+Yep.
+Yeah, that's exactly where I was going. I was like, I was trying to not shut myself down by thinking about like cost and legality and all of that, since we're in this exploratory mindset. But you're absolutely right, because like, if we can build it and not have to pay for it, that's what we should be doing.
+
+Nikita Kumar   10:58
+Yeah, but does a lot of that stuff require like, yeah, because if you're recruiting customers that like you're going to be using for.
+
+Nicole Davis   11:07
+Yes and no, like they can be using a flow that has already been set up with them with dummy data and just say like.
+
+Nikita Kumar   11:08
+Okay.
+Ohh.
+
+Nicole Davis   11:14
+you know, how would you work your way through this scenario, right? Like where you could, it does heat maps and like all of that kind of stuff. So, you know, we wouldn't be asking them to provide anything PII necessarily.
+
+Nikita Kumar   11:17
+Hello.
+Yeah, okay. Yeah, I guess I'm just trying to think from like, like how would you picture that working? Like what, what, what is that? What does that flow look like to you so we can see if that's something that's we can help build? Because I guess that's what I'm just trying to wrap my head around. Like what is the current process right now and what is the process that you want it to get to?
+Like, what makes it easier?
+
+Jatin Bagga   11:49
+Yeah, I have a response, but I think Karly got a hand up first, but so Karly, go ahead and I'll chime in about the agent I created.
+
+Karly Bolger   11:55
+Oh, okay. I just had a question if we had like a agent that had background in like brand voice or like overall brand consistency so that we could throw like a design or copy into it and it could give back like.
+this aligns, this doesn't type thing.
+
+Nicole Davis   12:17
+Mhm.
+
+Karly Bolger   12:18
+So that would feel, or that could make things move faster for us if we could ask questions to even like what type of copy should we be using here, whatnot.
+
+Nicole Davis   12:29
+I don't even think you should be asking it questions. I think it should be doing it automatically and like, you know, kind of like a ride along kind of thing. And it could say, hey, tone for this is off or whatever. It could run a check maybe periodically.
+
+Nikita Kumar   12:36
+Yeh.
+
+Karly Bolger   12:40
+Mhm.
+
+Mia (Xiaoling) Zhou   12:42
+Yeh.
+
+Karly Bolger   12:42
+Well, I wonder if it could generate the content, like if we asked, like gave it design and, but it wouldn't be final copy, but like to have something.
+
+Mia (Xiaoling) Zhou   12:46
+Yeh.
+Yeah, I actually already.
+
+Nicole Davis   12:48
+Yeah.
+Mhm.
+Directional.
+
+Karly Bolger   12:55
+Directional.
+
+Mia (Xiaoling) Zhou   12:57
+Oh.
+
+Karly Bolger   12:57
+because we have a lot of little copy that takes a long time to get through all the checks and balances. So if we could speed that up, not like emails and stuff, but everything on our dashboard, you know, takes some.
+
+Mia (Xiaoling) Zhou   13:10
+Hi, Karly. Hi, Karly. I already made a demo for that, like, like you upload, like you upload the image or the website, and it will like generate a copy for you, like based on...
+
+Karly Bolger   13:16
+No.
+
+Mia (Xiaoling) Zhou   13:29
+Uh, some guidelines, but we we always can optimize that guidelines now, but but functionally it works in that way, yeah.
+
+Karly Bolger   13:38
+Okay, cool. Yeah.
+
+Mia (Xiaoling) Zhou   13:39
+I...
+
+Nikita Kumar   13:41
+Cool. Um, Jatin, I know you had something.
+
+Jatin Bagga   13:42
+Yeah, I was just gonna, yeah, I was just gonna say, yeah, yeah, I was just gonna say, so I did create sort of, if you remember, like, oh my God, like from Dark Ages, it was like late January, early February or something. I'd known the experimentation might be slightly different use case, but basically how you can use, you know, and we just use GPT configuration to be able to perform AB tests. So A, you could actually.
+have a AB test validator, like, you know, just analyze if it's, you know, if it's worth the idea of pursuing AB test. And then also, like, if you want a ready to use copy paste visual, optimize the visual editor based test, since we're talking about AB testing, that was something that we had demoed. So I'm thinking, like, is this just sort of an extension of that or we need some tweaking?
+We never really got around talking too much about that because I think the goal was to sort of figure out from phase two standpoint what we can do. But I'm just thinking like maybe there's an opportunity to sort of take that to the next level or something based on, you know, this conversation. So just a call out there.
+
+Nikita Kumar   14:46
+Mhm.
+Yeah, I think we can probably take it to the next level. We can work with our team to see like what next level looks like for you guys or what your mindset is there too. I think what I really want to try to get out of this call today is use cases that you guys have not worked on, like net new, completely separate from what we're already doing. So we can do a live demo of how to work on it together.
+Because I think a lot of people have been working on different things throughout, and that's great because it's really cool to see all the different use cases everyone's working on on their own. The goal for us today, like, so if we can get to it, it would be to understand, like, what is a net new use case that you know might not be tied to anything else, but net new for you guys that would be helpful.
+from one of maybe the ideal ones that we've already sent or something that you have in mind. Agree upon that so we can set up a demo for you guys for Wednesday.
+
+JT Tabencki   15:37
+Um, ohh, sorry, you have a handout. I'll go after you guys.
+
+Mauezatur Khan   15:42
+Okay, no worries. Mine will be quick, I promise. So I think something that I was kind of toying around with the idea of is like, hey, from an account management self-service side, which is kind of what my team runs on a day-to-day basis, right? Kind of the servicing flow of things. It would be great if we could alleviate a lot of the
+calls that we get, a lot of support calls that we get that can be answered very easily through either reading through documentation traditionally or just, you know, a customer having more experience and time with the app. I was thinking if we can implement some kind of AI chatbot, doesn't have to be an actual like LOL.
+like an actual language model that responds, but just something that can take human input in natural language and then just kind of point them to different parts of our app. Basically something that can take, you know, the human input and then kind of deep link you into the correct part of our app or our website based on the job that you want to complete.
+
+Nicole Davis   16:28
+Good.
+
+Nikita Kumar   16:37
+Yeh.
+
+Mauezatur Khan   16:41
+Something like that I think would be a very valid use case for us and tie in very closely with some of our other strategic initiatives. So that's something that I haven't worked on so far, but I think it could be a pretty big win for us if we did something like that.
+
+Nikita Kumar   16:59
+Okay, that's good to know. Yeah, well, I'll keep a note of that one as well. I don't know if a chatbot is...
+going to be like, we can see what we can build on that. It might take way longer than one session to actually do that because that's going to, it takes a lot more time to build a chat bot because we need to understand what needs to go in there because it's not, it's AI, but it's also like, you'll also need a lot of guardrails on chat bots because we've noticed in the past if there's a free-for-all chat bot in other places.
+You can a lot of things have gone haywire on there.
+
+Mauezatur Khan   17:30
+Gotcha, okay.
+
+Nikita Kumar   17:34
+Nicole, I see your hand up as well.
+
+Nicole Davis   17:38
+It, yes, I have an idea that, um, it's more from like this.
+strategic side of the house. I was thinking about like a lot of the agents were thinking about help us with little pieces within the process, but I'm thinking about like a design decision intelligence something or other. Basically, I'm looking for an agent that can
+Sit in in our meetings or review the notes or emails or things, and...
+analyze like what's coming out of these? Where are these approval inconsistencies coming up? Some of these like risk tolerance differences and can help us to ensure more consistent decision making and prioritization because like too many times have we been like, wait, what happened? You know, because frankly, I don't have time to read all of the
+reviews that come out of these meetings. And I think it's a self-fulfilling prophecy, really. Like you have more meetings than you have to read about the other meetings just to get up to snuff, you know? So it would be cool if we had a design decision agent go in there and just start to summarize and consolidate this down. And maybe this is some of what Vlad's working on already.
+
+Nikita Kumar   18:52
+Yeh.
+
+Nicole Davis   18:53
+But it needs to be able to like flag similar projects receiving different decisions, things that are really low impact but are being prioritized. I want to know like why. And I think that could help us like optimize our backlog prioritization really and help our design team feel better allocated.
+And it's like, maybe this is really just me venting. But it seems like we go through our quarterly planning, road mapping, and then something changes halfway through. And I don't always understand the why behind that. And I can't be the only one here at the company that feels that way. So.
+It could help us from that lens.
+
+Nikita Kumar   19:36
+Yeah, I think that that is something that what Vlad is working on could potentially tie into it. So yeah, I mean, I think that this all kind of still at the end of the day goes into like knowledge management, decision management, where if everything, if everything clean is in one place, it's easy to pull these decisions, these answers, all this information. So yeah, I'll bring that up with Vlad.
+
+Nicole Davis   19:50
+Mhm.
+
+Nikita Kumar   19:58
+I don't know if he'll be able to do a hands-on on Wednesday on how to build that, but I know he has a demo of what he's already currently working on, but I will let him know as well. Yeah, but I think that's like the one big thing that's come out from like all of our phases, like something with knowledge management, just understanding why things are happening, what is happening, and what decisions are made.
+
+Nicole Davis   20:09
+Yeah, I think.
+
+Nikita Kumar   20:19
+so you're not having multiple meetings around the same topic over and over again.
+
+Nicole Davis   20:23
+Yeah, for sure. Okay, cool. Well, maybe it wasn't exactly new. But it's a pain.
+
+Nikita Kumar   20:28
+I mean, it's still new. I mean, it's not quite built out yet, right? So, but it just depends on what we can show you on Wednesday and the time that we have.
+
+Nicole Davis   20:36
+Right, sure.
+
+Nikita Kumar   20:37
+Yeah, um, Mia, I see your hand as well.
+
+Mia (Xiaoling) Zhou   20:41
+Yeah, I have a like a similar idea. It's like, I'm thinking like a AI hub, but it's not for designs for like this, all the trainings and all the AI works we're working on. Because me personally, I always lost in like the conference page. Like there are.
+So many of them, I, yeah, very least of time I can find the correct one I'm looking for, and and I also saw this happening in chat, like someone asked something, but we actually had a training before, so I saw Nikita share the link there, like this training we have, we covered this.
+And another case is sometimes we, for example, Karly working on something. It sounds like, for me, it sounds like very similar to the knowledge management we did before. And like someone is working on something and someone have an idea.
+similar as something we did before and now we don't have a transparent like a platform able to share that or like able to see that who is working on work or what we already have. Like, so I'm thinking on like a place that can hold all this kind of stuff, like all the ideas, all the agents we built and.
+Or the training materials.
+That's it.
+
+Nikita Kumar   22:08
+Okay.
+Cool.
+Um, JT, I see you also have your hand up.
+
+JT Tabencki   22:16
+Thanks. Um, I'm just looking at talking to my other coworkers, right? Like...
+Looking at our processes and our current like issues and bottlenecks and because a lot of times we're being kind of thrusted upon and say, hey, like use AI, make things better. I'm like, okay. But I think part of the exercise that we're doing, you know, in parallel, like, hey, let's use AI agents and do all that fun stuff is like.
+Looking at our current flows or processes of how we get things out, whether it's projects, AB tests.
+automation with testing, et cetera. And...
+One of the bottlenecks we do have is dealing with legal and compliance, right? Like, let's say we can we can expedite the number of variants and A/B tests and build a backlog, but it's still a still getting legal and compliance to align on what we do or have or have working with like UX to kind of agree, hey, let's let's...
+get you in on maybe finalized copy, but not like test copy. It's still slowing us down. So I was wondering if, given your guys' experience with other companies, is how do you frame these conversations with legal and compliance and other teams that we are necessarily relied on to get like approvals or kind of like.
+get them on board because even if we build out this huge backlog of AB tests generated by AI, like we're still going to be stuck at a per test alignment with legal and compliance unless we get them all on board with a, hey, this paradigm of this is what AI is going to do. They're going to work in the kitchen, but focus on the sink.
+We want your approval that they can work on the sync, even though we don't know yet what they're going to do with the sync. Does that make sense?
+
+Nikita Kumar   24:01
+Yeah, and I think part of that is like, I have worked on this in the past, but it's not like it wasn't AI related. It was just still the struggle of dealing with legal and compliance in general. But I think like something that what we were noted, like what I've done in the past is like workflows even prior to getting work out there, even just showing like, hey, like you said, right, this is the kitchen, like we're in the kitchen, but we're working on the sink. Can you give us like prior?
+prior approval to this so we can at least start testing it. And then obviously before anything even goes out, like you have the approval, but that's a really good use case to bring up because maybe there's a way we can incorporate some sort of workflow with user, with legal and compliance so they have like the comfortability to look at everything prior to.
+and then can give you like the preliminary sign off on like, yep, this where VH is okay or this is okay. But I think it just depends on like what, how comfortable they are also giving all of that approval to you guys in general, because as with legal and compliance in general, it just also depends on how comfortable they are being like, okay, yeah, this works for us. Like go do what you want to do.
+So yeah, maybe that's something we can look into. I'm taking a note of this one as well.
+
+JT Tabencki   25:10
+Thanks, because I don't think they are comfortable or they are at least aware of what we're doing. And I think perhaps we need to loop them in like, hey, like this is coming down the pipe. We need your input before we go down too far down the rabbit hole.
+
+Nikita Kumar   25:14
+Yeh.
+Yeah, that's that was like, that's what we've done. I've done something like that similar in the past where the workflow and it's like non-AI before, like AI was like a huge thing. And I, and I worked at, you know, I worked at Goldman prior to this and it was very legal compliance was such a heavy part of our process for everything. But even so, I think like for us to even get things in motion, what we had to do was get like workflow approvals done prior.
+
+Nicole Davis   25:22
+Yeh.
+
+Nikita Kumar   25:46
+to to say, hey, this is what we're thinking. Of course, like, you know, final verbiage will come to you before anything goes out to production. Like, nothing would ever go out to production without their approval, obviously, but at least they had like the comfortability of being like, okay, I at least understand what you're working on for your AB test prior to, because like, we would include them in the very beginning.
+right as we were bringing in branding and design, like they were all involved in the process so they could see what the verbiage was going to look like, where it was going to go, what interest rates might be out there and things like that. So they were seeing it with us as we were building versus seeing it at the end after we were done and saying like, okay, approve it now. So maybe there's a way we can start to like.
+Maybe there's a way to build a workflow that says, hey, legal compliance, this is what we're thinking, here's what our thought process is. Get them the heads up prior to so then when you are getting further down the road, you already have your preliminary like thumbs up. And then when you get to the production part, they just have to approve like the main verbiage or whatever else that needs to go out.
+
+JT Tabencki   26:43
+Agreed. Hey, Ray, can we get like a legal and compliance AI champion on board?
+
+Nicole Davis   26:43
+Yeh.
+
+Raymond Gralewski   26:52
+Yeah, I'm certain we can. I don't know who those folks are, but I can connect with Shai and see who they have that are involved in the program.
+
+JT Tabencki   27:00
+Thank you, sir.
+
+Nikita Kumar   27:01
+Yeah, I built like a... Oh, go ahead.
+
+Eric Trenz   27:01
+I feel like, um...
+I was just going to say real quickly that I feel like brand or like creative specifically would be helpful to get on board to like if we
+Move towards having AI, like at least start with some of the copy, just because they they do that today. Sorry, Nikita.
+
+Nicole Davis   27:16
+Yeh.
+
+Nikita Kumar   27:21
+Yeah.
+
+Nicole Davis   27:25
+Yeah.
+
+Nikita Kumar   27:25
+Do you, in your current process right now, when do you guys include like brand or legal compliance coming in?
+
+Nicole Davis   27:35
+So that is something that I was working on in November. And I worked with the marketing team, some people call them creative, to put together a process where we're involving them at the beginning. Because what ends up happening is they're feeling like a little bit like a sweatshop to be included at the very end. Same with legal.
+
+Nikita Kumar   27:59
+Mm-hmm.
+Okay.
+Yeh.
+
+Nicole Davis   28:18
+in place. So I would welcome the assistance on that. Yeah.
+
+Nikita Kumar   28:19
+I was just gonna say, ohh.
+Yeah, no, I was just actually like super spot on because like I was just going to say, you know how you guys have like intake for you guys? Maybe it's an intake agent for a brand legal and compliance, right? You put your request in, they see it. If you get you have approval, you get your flow working faster, right? So now you've gone in and put your put agents in for them in place.
+they've gotten their items a lot sooner than like the very end. They can look at everything, they can approve it, you have your approval back, and then that doesn't bottleneck you guys from stop working on things because you can work on things a lot quicker. And then at the end, you can have like final approval agent where you're sending the final designs to be like, here's the final like intake ticket for you. It goes to whoever it needs to go to, whether it's brand, legal, or compliance, whoever that person is.
+
+Nicole Davis   28:49
+Yeah.
+Exactly.
+
+Nikita Kumar   29:05
+They approve it, and then you're good to go.
+
+Nicole Davis   29:07
+I don't know if you guys remember that like weeks ago I spoke about this, about a hub and spoke model. We need one centralized intake form from which all these other things branch off and start spinning up their own processes. I mean, that's truly what you need.
+
+Nikita Kumar   29:19
+Mhm.
+It could be a great agent for us to show you on Wednesday, because I think that's a problem that everyone has, right? No matter what the team is, that could be something that we can kind of look into, Nicole. So if you want to send me like your details, because I know we're almost at time, but if you want to send me like what you're thinking, because I think you did mention it before and it was a really good idea because it gives everyone the opportunity.
+
+Nicole Davis   29:30
+Mhm.
+Yeah.
+
+Nikita Kumar   29:43
+to be involved from the very beginning. Maybe that's something that we can help you guys build on on Wednesday as like a live agent and you guys can see it and then tweak it as needed depending on the team and the criteria.
+
+Nicole Davis   29:45
+Mhm.
+Yeah, I'll also send you the intake readiness rover that I built back when, last, I think Jatin said years ago. Yeah, it's ready. It's basically the little puppy that goes in and checks to make sure this isn't solution led and helps you write that better intake.
+
+Nikita Kumar   29:58
+Right.
+Yeah.
+Last face, yeah.
+No.
+
+Nicole Davis   30:14
+But truthfully, I am getting frustrated with like the various ways that we call intake and just like the mess that we've kind of created for ourselves, where I hear things like project brief, I hear things like intake form, I hear things like, oh, this is just a small one-off request, but like truthfully, it's all the same thing. It's
+It's a project that needs to be started and you need to have a format and a process for that. So yeah, I'll send over what I have and take it from there.
+
+Nikita Kumar   30:32
+Yeh.
+Yeah.
+Awesome, yeah, I think intake would be really helpful because like I played around with some intake for different teams, like even like as like a Robo agent, but I think there's a lot more we can do with that because that seems to be something that everyone has, you know, something with. So yeah, if you want to send me your details, I can work with Vlad and our team.
+
+Nicole Davis   30:56
+Yeh.
+
+Nikita Kumar   31:01
+See if that's either or GPT or Rovo, wherever that best is, we'll do, we'll let you guys know. So then for the live demo on Wednesday, you guys can follow along this month.
+
+Nicole Davis   31:11
+Okay, if you have some extra time, I'd like to walk you through like what I have set up because it's a little bit of a mess. So I'll find some time for just you and I and yeah, run with it from there.
+
+Nikita Kumar   31:17
+Sure.
+Okay. Yeah. Thank you. Thanks, everyone. Thank you all for joining.
+
+Nicole Davis   31:26
+Bye.
+
+Nikita Kumar   31:27
+Sell.
+
+JT Tabencki   31:27
+Thank you.
+
+Eric Trenz   31:28
+Thank you.
+
+ stopped transcription
