@@ -6,6 +6,8 @@ A small utility repository used to extract text from DOCX files and produce simp
 
 - `docx2txt.py` — DOCX-to-text extraction script
 - `merge_reports.py` — merges per-session Markdown score reports into one combined report
+- `confluence_scores.py` — fetches Confluence pages and aggregates participant scores into a summary table
+- `.env.example` — credentials template for `confluence_scores.py` (copy to `.env` and fill in)
 - `input/` — source DOCX and TXT files (not committed)
 - `docx2txt_output/`, `output/` — generated outputs (ignored)
 - `_prompts/` — prompt templates
@@ -71,6 +73,72 @@ Notes about behavior:
 - Running without arguments defaults to `output/champions-syncs/` as input.
 
 No additional dependencies — stdlib only.
+
+## Summarising scores from Confluence — `confluence_scores.py`
+
+Fetches Confluence pages that contain score tables (`| Name | Date | Activity | Score |`) and produces a single summary Markdown table aggregated by participant, sorted by total score descending.
+
+### Setup
+
+1. Copy `.env.example` to `.env` and fill in your credentials (the file is gitignored):
+
+```
+CONFLUENCE_URL=https://onemainfinancial.atlassian.net
+CONFLUENCE_EMAIL=you@example.com
+CONFLUENCE_TOKEN=your-api-token
+```
+
+Generate an API token at: https://id.atlassian.com/manage-profile/security/api-tokens
+
+2. Install dependencies:
+
+```bash
+pip install requests beautifulsoup4 python-dotenv
+```
+
+### Usage
+
+```bash
+# Use the default pages defined in PAGE_IDS inside the script
+python confluence_scores.py
+
+# Save output to a file
+python confluence_scores.py -o output-report/scores-summary.md
+
+# Single page – full URL
+python confluence_scores.py -p https://onemainfinancial.atlassian.net/wiki/spaces/PE/pages/1433669146/Engineering+-+Phase+2
+
+# Single page – bare numeric ID
+python confluence_scores.py -p 1433669146
+
+# Multiple pages (URLs, IDs, or a mix)
+python confluence_scores.py -p 1433669146 1672708119 1672708235
+python confluence_scores.py -p https://.../pages/1433669146/... 1672708119
+
+# Save output while specifying pages
+python confluence_scores.py -p 1433669146 1672708119 -o output-report/scores-summary.md
+```
+
+When `-p` / `--pages` is omitted, the script falls back to the `PAGE_IDS` list defined at the top of the file.
+
+### Output format
+
+```markdown
+| Name             | Total Score |
+| ---              | ---         |
+| Sukalya Rajendran | 35         |
+| Jason Daggs       | 28         |
+| ...               | ...        |
+```
+
+### Optional: atlassian-python-api wrapper
+
+```bash
+pip install atlassian-python-api
+python confluence_scores.py --use-atlassian-api
+```
+
+Uses the same Confluence REST API under the hood; useful if you already have `atlassian-python-api` in your environment.
 
 ## Notes
 

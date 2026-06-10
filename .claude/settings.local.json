@@ -11,7 +11,8 @@
       "mcp__atlassian-rovo-mcp__lookupJiraAccountId",
       "Bash(python3 *)",
       "mcp__atlassian-rovo-mcp-api__getTeamworkGraphObject",
-      "mcp__atlassian-confluence__getTeamworkGraphObject"
+      "mcp__atlassian-confluence__getTeamworkGraphObject",
+      "Bash(pip install *)"
     ]
   },
   "prefersReducedMotion": true
