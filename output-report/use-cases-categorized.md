@@ -22,6 +22,9 @@
 13. **Vazgen Ayrapetyan (5/27)** — Figma MCP + Atlassian MCP multi-repo code generation with CX design system enforcement and Optimizely A/B feature flag (APE-1465)
 14. **Shoaib Naseem (6/3)** — CodeMie workflow generating structured release notes for a real SIAM production release with batched PR/Jira processing (APE-1028)
 15. **Amit Kumar (6/3)** — GitHub MCP in IntelliJ for local AI-driven PR review and fix implementation; shared via team agent repo (APE-112)
+16. **Jason Daggs (6/10)** — CodeMie 4-step multi-agent workflow generating structured markdown changelogs linking GitHub PRs, commit IDs, and Jira tickets for CAPS/Domain Gateway release communication
+17. **Deepti Pathak (6/10)** — Jira automation + GitHub Actions pipeline auto-generating four mandatory audit documents (project analysis, deployment checklist, backout plan, test cases) per Jira ticket; eliminates a real recurring compliance gap
+18. **Loquen MeyersJones (6/10)** — Cross-tool Dependabot risk classification agent (Cursor + GitHub Copilot) producing structured risk assessments with evidence trail; applied to a live 48-PR open backlog
 
 ---
 
