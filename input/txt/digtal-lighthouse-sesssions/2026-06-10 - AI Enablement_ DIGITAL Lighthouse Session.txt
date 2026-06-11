@@ -1,0 +1,455 @@
+AI Enablement DIGITAL Lighthouse Session-20260610_160025UTC-Meeting Recording
+June 10, 2026, 4:00PM
+50m 17s
+
+Vlad Grubman   0:06
+Hi Ron, how are you?
+
+Ron Seager   0:10
+I'm good.
+
+Vlad Grubman   0:13
+Awesome, and the sound check worked.
+
+Ron Seager   0:22
+It failed.
+
+Vlad Grubman   0:31
+Hey, Doug, how are you?
+
+Doug Ball   0:34
+I'm doing well, how are you doing?
+
+Vlad Grubman   0:37
+Great, great.
+
+Ron Seager   0:39
+Can you hear me, Vlad? Doug? Okay.
+
+Vlad Grubman   0:40
+Yes, I, I.
+I Mia.
+
+Ron Seager   0:46
+Yeah.
+
+Vlad Grubman   0:54
+Let's give folks a couple of minutes to join.
+
+Ron Seager   0:56
+It is.
+
+Vlad Grubman   1:00
+You'll not be two and two people from EPAM and two people from, hopefully, it will be more and more people on this call.
+
+Ron Seager   1:06
+Yeah.
+I'll let you guys tell me when we've reached a quorum and we can get started.
+
+Vlad Grubman   1:40
+There is no quorum. It's just, it's a pressure of time against how much you wanted to show and tell and how people follow along.
+
+Ron Seager   1:43
+There's no quorum.
+
+Vlad Grubman   1:52
+Let's make it one more minute. Hi, JD. Hi, Alfredo. And we'll get started. I'll do a preface because this is all on record, so a lot of people may be watching this when we're done.
+So, I wanted to set things in over the right perspective.
+Is shy, is Xavier?
+We're almost 3 minutes in. Let's make it another, let me, okay. It flipped to 1203 on my screen. So let's get it started. I'll set up things briefly and then I'll head over to Ron, who's going to show you guys an amazing demo. It's going to be almost like magic, but it's going to be real. So brace yourself. Feel free to follow along. Feel free to ask questions.
+So as you know, the phase two of this amazing journey is coming to an end. This is our last dedicated digital lighthouse session.
+Hopefully it was useful for you folks. We've got some really valuable feedback from you. If you have more feedback, if you feel like you didn't have a chance to express yourself, please reach out. We do need your feedback. We're not just asking for it. I'm practically begging you, okay? Okay, so.
+Um...
+Here, here's me on the camera begging you for feedback. So please feel free to reach out, tell us how you feel about it. Tell us mostly, tell us how else can we help you in the upcoming weeks. There'll be some lull period between the end of phase two and the beginning of phase three.
+We intend to keep the office hours, but if you folks want more time, either reach out and schedule it individually. We don't know how flexible your calendars are. Ours is always flexible for you because you are the client. And we're also going to be ending the series of all the calls that we have. So we're going to have more time for you, even though it's not officially.
+phase two or phase three. So please feel free to reach out. We'll be more than happy to help you. Again, one more time, reminding you to update or create the tickets on our APE Jira board. Yeah, it's called APE. Not my idea. I would have made it funnier.
+The create tickets on the JIRA board so that we can recognize the work that you're doing. I know a lot of you folks do a lot of AI stuff. You're just not sharing because you're not in the sharing mode. That's bad. Sharing is caring. So please, please go and make those tickets so we can account for them. This is, there's not a big process that.
+does all of that. So there is no human in the loop, it's just a bunch of agents Mikhail created.
+There are no, we're still unclear on the person who is of agents, so he makes them work 24 7. I don't know if I would have done that. I'm way nicer than him. So please make sure you give those agents some loving by creating those tickets.
+Uh, well, well, will account for the work you do.
+And if you guys want a combined session, Shai, that's probably more question for you and Moses. If you want a more organized, like continue this series or creating new series at a more convenient time, let us know. We'd be happy to set it up in this interim session. Interim before phase three starts.
+And we can basically extend it into phase three, because phase three is not going to be a lot of meetings and coaching. It's mostly going to be working with teams and individuals directly. So whatever would be useful, tell us. We'll take it as feedback and we'll make it happen. I don't think I have anything else. If there are any questions, feel free to ask.
+in the chat, in the Slack, I don't know, send pigeon mail, whatever you folks feel like doing. And with that, I'm going to hand it over to Ron. Ron, this is your show now. Thank you, folks.
+
+Ron Seager   6:18
+Go ahead. Well, good to meet everybody. I'm Ron Seager. I am a product manager with the EPAM. And the original plan was for me to sort of take over for Nikita at the phase three interface, because that was her due date was this month. But, you know, things happen and she got called away early. So I've been getting up to speed.
+slowly as to what you guys have been working on. And so I wanted to end this phase with a demo slash working session that tries to build on everything that you've been taught and shows sort of an end-to-end flow. It's going to be a very abbreviated flow. It might be a bit aggressive, so we'll get through as much as we can.
+and we'll go through it. So some of this is going to be demo and some of it I'm going to ask if you guys have your cursor interface to go ahead and pull that up and do a prototype at the end. So let me just talk through and I'll share my screen here so we can get started.
+So what I've done, and a lot of this is going to be working in a sandbox JIRA environment as well as Claude code, just because we have a lot of restrictions right now on some of the tools. We will get to cursor towards the end, but when I was preparing for this, there were some restrictions. So
+I'm going to, you know, think of this as the art of the possible once we have all these integrations in place. So what I've done here is I've created a Crestview Consumer Finance, sort of a fictitious version of OMF, and we have this Jira product discovery board with a bunch of ideas.
+Okay, so as product people, there's a lot of different ways we can manage our ideas, but typically from a PDLC perspective, we would look at all these ideas and we would, you know, rate them, we would come up with some sort of prioritization, and we would start to try to prioritize the work and get those in.
+right? So how can we use AI throughout this entire process to help us receive this intake, work on these things, and then finally put them into a sprint? So that's sort of what I want to walk through today. So if you notice the board here, we have some comments and in a
+In a particular idea, I'll just pull one up. What I've done is I had previously created sort of a product discovery tool. This is something I built with Cloud Code in order to speed up product discovery and try to get us moving in the right direction. It's my experience product discovery.
+is one of the things that gets neglected in a lot of organizations, right? So a lot of times the product team is told what to build and we're just gonna go build it and try to come up with the best way. So I like to try to advocate for product discovery in the proper way as much as possible. So how can we use AI to do that, right? So let's take this particular.
+initiative here, alternative data underwriting signals. Okay, so it's been prioritized, but I wrote an agent using cloud code, but it's agnostic, right? And I'll show it to you here in a minute. But what it does is it has some sub-agents that does some synthetic user research for you, okay? And
+So that's part of the demo portion. We're not going to build that today because it would take too long, but I wanted to illustrate how that can help, right? So we have a title and we have the short description of what this initiative is like. And down here in the comments, if we, oh,
+Click over to comments here. You can see here that this is not something I wrote by hand. These are based on the synthetic user agent, and we have different personas. So you can see Marcus here is a 28-year-old gig worker with an inconsistent income, limited credit history,
+no traditional bank account. So the agent went out and created Marcus and ran this initiative by him with the context of our company, with what we're trying to achieve, the product, and what this particular initiative is.
+and gives you some insights, right? And did it again with Jennifer and did it again with David. Okay, so now we have some synthetic feedback on this particular initiative, which is really helpful, right? That's a good starting place. We don't want to use that as the end all be all, but it's a good starting place. Okay.
+The next agent is a compliance agent. So it looks at the initiative and says, what's the compliance risk for this particular initiative? And you can see here, it comes back with different concerns and talks about what they are and logs them for you. And then some actionable
+recommendations here, and what a success metric is like, and so on and so forth, right? So this next one is a competitive intelligence agent, gives you a competitor review, some differentiation angles, and you can do this for each and every initiative, okay? And so this is a great starting place.
+market research agent, and so forth. So once we have all this information, now we can actually go do some product discovery. So let me close this.
+And...
+If, for instance, we have this in our JR product discovery board, now we can come over.
+to influence and we can see, all right, let's take all that output and run it through AI and what's the voice of the customer findings overall, right? So I showed you one initiative. Let's consolidate that into a much longer version of what that means for that one issue, right? And I think this one is.
+soft pull pre-qualification flow. Okay. So this is the setup right now. Let me go over to my claude and I'll show you how this happens.
+Okay, so this is the read me for this Jira product discovery agent. So how did I get all this set up? So first of all, all that information there was created using this agent and an API. Okay, so sometimes you can use APIs.
+Sometimes you can use MCP. When would you want to use one versus the other? Okay. In this example, we want to be able to write and pull information directly and not really interpret it that much, right? So in that case, we want to use an API. So for instance, if I just run...
+And I'm using the terminal here for this because I'm not using Claude right now. I'm using the actual Python that was written.
+And this is, I called it Scout, right? So Scout is this agent, and Scout is actually the orchestrator, and then the sub-agents, the market analysis and the user personas and all those things, those are the sub-agents within here. So you can see at launch.
+The scout orchestrator is going to load the board context.
+Be at.
+And quick question while this is loading, has everybody run through setting up an MCP or an API to things like Atlassian to date? I think it was listed as one of the use cases, but I don't know if you guys have actually done it.
+
+Alfredo Achecar   14:20
+I think we did with Eugene, we did one of the sessions where we set up a...
+
+Ron Seager   14:21
+****.
+
+Alfredo Achecar   14:27
+Yeah, that was that was sent to the API, where we got a token from from Atlassian, put it into code me as one of the integration sources, and then like looked at the ticket, commented on the ticket, so I think we, I think we did do that.
+
+Ron Seager   14:40
+Pink.
+Yeah, and if you go to, I won't show you my ENV, but there's an ENV example here. And you can kind of see how it's set up. And Claude or Cursor will walk you through all this. But you can see like here is all the information. You got your JIRA URL, your email that you use to log in, your API token here.
+You want to, you can generate that from the Atlassian website. You put in your default project key, your anthropic key, or your whatever API key that you have, and so forth, right? So that's how it was set up. But down here, you can see it pulled information from the board. I've got 10 issues, nine of them.
+in discovery with full agent findings. So CLSF 29 is sitting there with nothing run yet. So this is sort of like a little chat thing, right? So run.
+Discovery.
+On CLSF 29.
+And it's going to run all of those agents. Now, it's going to take a while, so what I'll do is I will...
+Let's see.
+I want to highlight, so I'm working right now in VS Code. So while that's running,
+Let me show you cursor for a second.
+Okay, so typically this is our main cursor interface, right? So we have, I can select my Jira product discovery agent here so that it's just exactly what I was doing in VS Code. And what I did at the top is I said, pull all voice of customer feedback from Jira issues and consolidate them into themes.
+Okay, so you can see here, I'm in my one main financial cursor environment. And how is it doing this? So I go down to settings.
+You can see over here under tools and MCPs, you can configure custom MCPs and plugins. Now, this is why I'm in VS Code and Claude today, because you can quickly see I tried to create a custom MCP to demo for you guys, and it says server is blocked by team admin. So all custom MCPs are blocked. I don't know if that's a me issue or if that is.
+enterprise wide. But here is where you can create custom MCPs. And if I, if I see, I don't know if I can go, if I say new MCP server, you can kind of see where it's created and how it's created. And you can you can use AI to create these for you.
+But that's how you create your custom MCPs within Cursor. Now with plugins, you can come down here and you can configure them and manage them through this interface here.
+And it will open U.
+Oops, sorry.
+Let me see.
+That's what I want to configure at team MCP servers.
+And I think, if I recall correctly...
+This should show all the available plugins. Now, if you've played with this before, my experience is there's all these available plugins and you select them and for some reason it's not coming up.
+Um...
+It's sort of like experimenting, right? So the only MCPs that I could find that actually where I'm going to close this, that I was able to get in here. You see, I tried chat PRD, I tried Figma. So Figma's working. Atlassian does work in cursor, although I was only able to get it to connect to the old JIRA instance.
+not the new JR instance. So again, play with it, see what you can do, and see if you can get further than I have. But if I go back, I'll show you what I was able to do with the MCP.
+Well, there we go.
+Okay, so I basically just, here's my prompt. Pull all voice of customer feedback from Jira issues and consolidate them into themes. Okay, and it basically went through and looked under the old Jira instance and queried as much as it could and pulled out the themes here. And so
+Here's a way that today, like I was able to pull all of the voice of customer and now I can iterate and ask questions about what is in our Jira instance. Okay, so I wanted to show you that in cursor. And if we can connect this to our new Jira instance, now you have a readily available chat instance where you can just start asking questions about any board that you have access to. You can write.
+You can open tickets from here. You can review them before they're posted. Very cool stuff here. Okay. Any questions on that? I know I went to that very quickly.
+
+Jatin Bagga   19:45
+Is it?
+
+Mia (Xiaoling) Zhou   19:47
+Yeah.
+
+Jatin Bagga   19:47
+Yeah, Ron, first of all, this is really good. Sorry, who was asking? Sorry, go ahead.
+
+Mia (Xiaoling) Zhou   19:52
+Go ahead, Jatin.
+
+Jatin Bagga   19:55
+Yeah, so I think the first of all, this is really cool. I guess the question that I've been sort of trying to get an understanding of is, you know, we have the usual suspect, you're Atlazian, Jira, Confluence, Teams, Outlook. That's like, we have plenty of tools to sort of be able to query off of that, right? I thought when you were going with the new MCP configuration was.
+Like if we needed to test just a general API, can we do that? Like how do we do that? Or are we still constrained with the cybersecurity approval for every single, you know, like any source, knowledge source or otherwise that we need to connect to outside of those usual suspects is what I'm calling. Does that make sense, Ron? Like is that something that you're able to showcase?
+
+Ron Seager   20:35
+Yeah.
+Well, I mean, so let me make sure I understand your question. So if you're talking specifically about understanding what you have access to and what you don't, or is it around testing API specifically?
+
+Jatin Bagga   20:58
+Ron, I missed your question. Can you repeat that, please? Sorry.
+
+Ron Seager   20:58
+Are you mad?
+Yeah, so are you asking how do we test what we have access to via API or are you asking about testing APIs specifically?
+
+Jatin Bagga   21:10
+Kind of both, really, like whatever I get, right? Like we have opportunity to really, you know, make a huge dent without bothering our engineering team, right? Because they're super busy, especially like in my lane, I can't even approach them because they got other higher critical priorities and I work with them on the backlog prioritization. So like if I needed to test something, can I just go direct?
+
+Ron Seager   21:18
+Right.
+
+Jatin Bagga   21:29
+Right, A from an API standpoint and the otherwise, so both.
+
+Ron Seager   21:33
+Yeah, so that's what I was saying earlier. So if you come over here and you go to MCP tools and MCPs and you start testing these plugins and seeing what works and what doesn't. You can see here I tried to load chat PRD and it didn't work because it says server is blocked by admin team. So
+That one's out. Atlassian worked, but when I started playing with it, I noticed, oh, I only have access to the old JIRA, not the new JIRA, right? So I don't have, I mean, I don't know if we know as a group what we have access to and what we don't, but after going through, like, you know, when you pull up...
+the configuration and look at what you have available or what's proposed in these plugins. Maybe we could create a list and say, all right, I don't know who the approver of or the configurer of them is, but maybe it's some sort of IT compliance where we go, hey, here's the list of all the plugins that we really need as a digital team.
+and let us know when you can open these up because we're trying to do some of this stuff and it's only going to make things better for us and for our engineers.
+
+Jatin Bagga   22:44
+Okay, got it. No, I think I got my answer. Thank you so much, Ron. Appreciate it.
+
+Ron Seager   22:45
+Yeah.
+Yeah. Okay, great.
+
+Mia (Xiaoling) Zhou   22:51
+Yeah, I was planning to ask, you mentioned like the VOC or something like that part, it's another agent and you call that. So where is that agent live and how you call that agent in the demo?
+You, you're showing.
+
+Ron Seager   23:11
+Yeah, so all right, so I will, I'm going right back there. Yeah, so any questions about cursor for now? We'll come back to cursor, but I want to switch over to Claude code and continue on with the demo. And I can answer Mia's question, but if there's any questions about this, this is sort of the output that you can see and it's really powerful once we get it.
+
+Mia (Xiaoling) Zhou   23:12
+Yeah.
+Okay.
+
+Ron Seager   23:33
+Okay, so just like what we did, Mia, with the brain a few weeks ago, and we created a folder in our hard drive locally, and then we started to build the brain. Did you go through that?
+Sure, OK.
+
+Mia (Xiaoling) Zhou   23:58
+Okay, yeah.
+
+Ron Seager   23:59
+Yeah, so similar to that, so what I did to, I created this, it's called JPD Discovery Agent, right? So this is something that I created using Claude code, right? And you guys could create something similar to this using cursor. And it's just building a project with Python and.
+using Claude code to do that. So what I did is I created a folder called JPD Discovery Agent, and then I opened up my Claude, and I said, here's what I'm trying to build. And we went through that whole process similar to the brain building where we said, here's all of our requirements. This is what we're trying to build.
+Please create a spec for building this, and then you go through and you build it. Now, what might help Mia is further in the demo here, I'm actually going to go through that process for us to build the prototype.
+
+Mia (Xiaoling) Zhou   24:43
+Yeah.
+
+Ron Seager   24:57
+We will probably get more clarity on your question a little bit later. But for now, does that make sense? You're just, this is just a bunch of files on my local computer.
+
+Mia (Xiaoling) Zhou   25:02
+Thanks.
+Yeah.
+Yeah, yeah, yeah, I got it. Yeah, just like the brain.
+
+Ron Seager   25:08
+Okay, so then, yeah, and so, you know, when I built this, and I go into, you can see here, I'm in the directory of Jira Product Discovery, and I ran this Python Scout.py. I'm actually running that program now here, and it's basically a little chat.
+
+Mia (Xiaoling) Zhou   25:11
+Mhm.
+
+Ron Seager   25:28
+bot in Python that has all these sub-agents, okay, configured to talk to my particular JR instance.
+
+Mia (Xiaoling) Zhou   25:34
+Yeah.
+Mhm.
+
+Ron Seager   25:38
+And confluence instance, right? OK, so we come back here and now we see the output, right? So I said run discovery on CLSF 29, and that was the one.
+initiative that didn't have any discovery associated with it, right? So it ran the market research, the competitive analysis, compliance, and the synthetic users. And it gives you a little overview here saying that, you know, hey, this is really interesting. It's got, you know, differentiation potential and
+It moved the state. So in your product discovery, you can have a workflow, right? So you have a new idea. It has discovery. It has all these other things. So if you go to, I think I documented it in Readme somewhere.
+Up here.
+Um...
+You got parking lot, you have discovery ready for validation, accepted and declined. So you can move your ideas through discovery until they get to the point where you have a bunch of user stories and now you're sending it to the engineering team. Okay, so it ran all four agents and...
+It gives you a summary at the bottom. Now, it also has some other features I won't go through here, but you know, do you want me to score this feature against the rest of the cohort, write our live research plan to confluence, or do a full board scoring pass now that we have all these 10 things, right? So you can kind of see where, like,
+This is sort of like a full product discovery program. So if I go back...
+Here.
+And you can see now that before this was blank, and now it's got these four, and it updated the score.
+And if we go down to the comments.
+You can see all these, all the output is written here.
+Okay, so that's where we're at. So now how do we go to the next step? Okay, so again...
+I can use my Python code to summarize the findings, so...
+Let's imagine that we are tasked for...
+figuring out what are the next steps for soft pull pre-qualification flow. Okay. What does that mean? It's lets applicants check loan offers without a hard credit inquiry up front. Okay. And what do we want that user experience to look like? Okay. So we take all of the
+research that we've done to date and we create a scout findings.
+Influence page, and we summarize it here in a lot more detail. So now we have everything over here. We have a prototype specification. This is what we want the screens to be. Okay, so now let's go to Claude and figure out how we can build.
+Our prototype, so...
+OK, so before I do that...
+I wanted to show you, so...
+I talked about how to configure MCP and cursor. Claude's a little bit different. Oh, I'm sorry, Jain, you have a question.
+
+Jatin Bagga   29:01
+Yeah, sorry, I just need, I need to drop in for another call, but one very interesting thing that you just showed about the Python. You know, typically when you need to set up Python, there's a lot of configuration files like that you gotta really download, right? And sort of have on your machine. Did I see that this was the coolest hack, like where we don't need to do that entire setup?
+
+Ron Seager   29:15
+You're right.
+No, you do. I have node on here. Yeah, you got to have certain level of node and all the dependencies installed. Yeah, so that's why I didn't want to build this because there's more to it than just being able to do it in a 20 minute demo. So yeah, and yeah.
+
+Jatin Bagga   29:22
+Or did I miss that? Oh, you do. Okay, got it.
+Oh, you got it, got it, got it.
+Okay, got it, got it. But this is very cool. Thank you. This is really cool.
+
+Ron Seager   29:41
+Yeah, for sure. And again, I built this just as this is a very prototype type of thing. And you could even put a UI in front of this and build it out. But something that, you know, is totally possible for phase three if it's something that's interesting.
+
+Jatin Bagga   29:58
+I love it. I think this is amazing. I think sources, I get really hung up with sources. Like I need more sources, not just where we are, but I think this is really cool. Thank you. I need to drop, but this is really helpful. Thank you very much.
+
+Ron Seager   30:12
+Thank you, Jain. Okay, so with Claude code, setting up MCP servers are a little bit different. It's not so UI driven. And so you can see here, you have a file called.claude.json, right? And you run a command in Claude and you just Google it and it'll give you the command.
+And then it will write in a section called MCP servers. So we're up here.
+I can't find it, but here's the Atlassian, right? And so once you have that, now you launch Claude.
+Oh, I'm in the wrong...
+Oh, you know what? I didn't mean to do that.
+Gonna do it in here.
+Let me get out of here.
+Yeah, let's launch Claude from here.
+So I want to be in the folder JPD Discovery Agent.
+A lot is slow today.
+Okay, so now that I'm in...
+This directory.
+I just want to ask, and it doesn't really matter that much that I'm in this directory because I have my MCP set up and I'm asking a question specifically about CLSF and CLSF 20s specifically, right?
+And so, if I do that...
+Now, remember...
+Soft pull pre-qualification flow, that is CLSF 20. Okay, so it's going to look at this page and summarize everything for me so that we can ask it questions.
+Now, it's doing this using the MCP and not the API that I did in my in my.
+Python code here.
+You can see where it's calling MCP.
+So it has little prompts there and again, cursor's very similar where it will tell you what it's doing. Now it's calling Atlassian.
+Of course, this went a lot faster when I was preparing.
+Okay.
+All right, so now we have a summary of everything and we have the priority score. So this is basically a summary of the confluence page that we already have. So I didn't need to do this step specifically, but you can kind of see how MCP can use similar to an API, but it also interprets what's going on versus just pulling data like an API would.
+So now let's say we want to move towards what is the actual solution that we're going to implement instead of, hey, we got a lot of great data. What are we going to do about it, right? So what are the main pain points and how are they grouped? We can do that, kind of like what I did earlier in cursor with.
+the old JIRA instance. I'm asking this now about this particular initiative.
+
+Shai Eilat   35:05
+I have a question. Earlier in phase two, we developed a tool with a custom GPT. We call it a CIA, Customer Intelligence Agent, where we provided a lot of context from customer research. We created personas. We did a lot of kind of like the backend work to describe here, but in the context of...
+of the custom GPT. I'm trying to understand what are the added benefits of what you're doing here in compared to the custom GPT that we have that we can send, you know, to, you know, do similar analysis on different JIRA tickets. So some, I guess that's my question. What are the...
+benefits of what you're doing here and compared to just have a very rich custom GPT with all the customer contexts and some user personas.
+
+Ron Seager   35:55
+The short answer is not much, right? It's two different ways of doing the same thing. However, it depends on what you've built and how it's exposed. So if you're using custom GPTs to do something, then, I mean, at the end of the day, all of these tools require the
+the GPTs or the agents to be configured and provide the proper context, right? So let's say we take all the context that you did for your custom GPTs and we configure it within this Python script, within Cloud Code, within Cursor, whatever tool we're using, if you do it and you use the same model, you're going to get very similar
+output, right? It's all about providing the context and then determining what model to use for what thing that you're doing. So for instance, you know, you don't need the latest and greatest model for writing certain code because it's very prescriptive, right? If you write your...
+your specs well enough, you can use like a claude sonnet or a medium level effort, you know, GPT. But if you want deep thinking, you want to use something a little bit, a little bit better. So kind of, you know, the long answer is, you know, to shorten it, get back down is like, like I said, it's not.
+but it depends on how you package everything and what the output is. Does that make sense?
+
+Shai Eilat   37:21
+Yeah, it makes sense. It just, it seems like very nuanced and complex work that you have done here in compared to what it feels a little bit more simple work that we've done in a context of custom GPT. And I want to understand if there is like added benefits that we're not going to get, especially.
+Now it's disabled, but for a few days we had access to ChatGPT agents. So I can imagine that like once you have agents and you have the custom GPT, you can create more of an agentic flow using that to update automatically Jira pages. So trying to understand if there is something that we are missing, but it sounds not.
+
+Ron Seager   37:46
+Yeah.
+
+Shai Eilat   38:01
+Necessarily, this is.
+
+Ron Seager   38:03
+No, no, you guys are not missing anything at all. So if there's a simpler way of doing what I'm doing using the tools that you guys have, you should absolutely do it. You know, like if there is Robo workflows or CodeMe workflows that make more sense from a UI perspective, absolutely explore. I'm trying to illustrate the power of MCP.
+as well as the difference between MCP and API, and the concept of like the scout uses an orchestration layer where it can call sub-agents. So if you can do that in your custom GPTs, so you're not having to go to each individual agent to call them, that's more powerful, right? So again, yes.
+This might be a little bit more complicated than what you guys have available in your tools, so definitely use whatever is most comfortable for you.
+Okay, all right, so we have the pain points and they're grouped by themes here, right? So now we can just ask it. And again, this is basically a chat interface and this chat interface can be done in Cursor, Claude, even ChatGPT, right? So I want to know which of these themes do we want to.
+Use for.
+Our product team to implement as a solution.
+And I know that we have 45 minutes scheduled for this. Do we have a hard stop at quarter till?
+Everyone.
+I might go 5 minutes over, based on how this is going.
+
+Shai Eilat   39:42
+I think that's fine.
+
+Ron Seager   39:43
+Yeah.
+Alright, so then.
+So it's basically saying theme two is the most actionable with the clearest solution path. OK, so.
+Basically, I will say, all right, let's...
+Let's take theme two.
+And...
+come up with a real world discovery plan, and tell me more about theme two, what we should do to validate potential solution through prototyping.
+So if you guys remember when we did the brain, Vlad gave you guys, here's the spec, right? That was the output. So I'm showing you kind of how I get to building that spec and.
+It's basically like, hey, I'm just saying give me a spec. There's other fancy stuff, kind of like what you were alluding to, Shai. You can have your agents in whatever tool specify what that spec should look like, right? How it should be structured, best practices, and so forth. I skipped that for now, and I just said.
+Build me a spec. Okay, so here's what we know, what we don't. Theme 2, deep dive, and discovery plan. So not only do I want a spec, but I want to know who do I talk to and what phases in this validation plan are there, right? So then finally, here is a functional pilot, and we can now say, create the prototype.
+Spec.
+And I'm going to specify where to build the specs, so I know where it's going to be, so...
+Make sure, and in lieu of having that hard-coded spec guidance, I just say make sure the spec is broken down into small enough chunks that each step is as isolated as possible. The other thing that I'm doing here is I'm telling it to create the document. I don't want it in my chat.
+output, I want an actual MD file, and I'm telling it where to put it. And if you look up here where it says prototypes, I'm asking it to put it in this folder.
+And you can see that I already have the discovery plan and the prototype spec up here from before. So that's just in case we are crushed on time. We already have it. So if I just click on that, you can see here's the actual spec that was given before.
+It came up with some of the design tokens and what the color scheme should be. Here's chunk one, you know, create a project scaffold, right? So it's basically an HTML scaffolding of the body, what fonts we want to import.
+And so you can geek out on this all day and view this and you can iterate on it, right? You can say, hey, you know, I'm not, you know, this color scheme doesn't make sense or what have you. Now.
+Now that that's done, if we go into cursor.
+One of the things that you can do is you can go into file and you go into open editor window.
+And this is almost exactly the same view as VS Code. And you can see I'm in my Jira product discovery agent over here. Now, what I can do...
+Is go to here and.
+Zhou.
+What I'm going to do is I'm going to paste the...
+the spec, the build spec in chat, and then ask everyone to go ahead and build their prototype based on that spec in cursor.
+A minute.
+Yeah, I put it in the chat.
+Trying.
+Right, it keeps failing.
+
+Vlad Grubman   44:55
+Do you want to do slack?
+
+Ron Seager   45:00
+Sure, what?
+to be AI enablement phase two.
+or digital general.
+
+Vlad Grubman   45:11
+Yep, AI Training Digital General, yep.
+
+Ron Seager   45:13
+Kai.
+
+Vlad Grubman   45:15
+That's where all the previous artifacts are.
+
+Ron Seager   45:18
+OK.
+Hannah.
+Almost there.
+Okay, did that work?
+Bye.
+For some reason, I am not able to get this.
+Vlad, I'm just going to give it to you.
+
+Vlad Grubman   47:05
+OK, yeah, send it, send it over. I'll cross post it, yep.
+
+Ron Seager   47:09
+Yeah.
+Okay.
+OK, so if you get that spec, so then what I would what I would ask is to create a folder.
+where you're going to build this in and then just tell cursor to go ahead and build it.
+And then, see, see what output you guys get.
+
+Alfredo Achecar   48:23
+Ron, thank you so much for this.
+It was a, it was good to see. Yeah, I think I think it did. I think it's, I may have to rewatch some pieces of it, but but I think the overall structure makes sense. Like you're trying to do like basically an entire end-to-end like life cycle with the product discovery where you're using agents to kind of.
+
+Ron Seager   48:26
+Sure, I hope it made sense.
+
+Alfredo Achecar   48:45
+automate each of those parts and then go all the way to like making a prototype based on the insights and the ideas that are that were identified.
+
+Ron Seager   48:54
+Yeah, and I think the big takeaway is, you know, if we as product people can create these prototypes, you know, they're a lot more powerful than 10 pages of Confluence words. You know, you can demo it with the design teams, you can demo it with the engineers that you want them to build.
+So getting to a spec and building something that is really close to what you want to end up in the hands of the customers, I think is really important. So hopefully that resonates with you guys.
+
+Alfredo Achecar   49:27
+Yeah, definitely. I fully agree with that.
+
+Ron Seager   49:28
+So.
+Okay, so yeah, it seems like people are dropping. Do we want to give 5 or 10 minutes to people to build this or do we want to close it, Vlad, and check in with them later?
+
+Alfredo Achecar   49:33
+Okay.
+
+Vlad Grubman   49:44
+I haven't gotten anything from you. I think it feels like putting a lot of pressure, so maybe it's worth.
+Maybe, maybe it's worth sharing the artifact, having people build it in their own time, and then we can reconnect. Starting next week, we're not going to have a lot of meetings, so hopefully we'll use some reuse some of the time to reconnect and build things.
+
+Ron Seager   49:57
+Okay.
+Sounds good.
+Well, thanks everyone.
+
+Mia (Xiaoling) Zhou   50:11
+Thanks.
+
+Eric Trenz   50:12
+Thank you.
+
+Ron Seager   50:13
+Alright, bye.
+
+Vlad Grubman   50:15
+Thank you.
+
+ stopped transcription

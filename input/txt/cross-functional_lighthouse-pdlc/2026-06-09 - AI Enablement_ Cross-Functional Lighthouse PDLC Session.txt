@@ -1,0 +1,765 @@
+AI Enablement Cross-Functional Lighthouse PDLC Session-20260609_135858UTC-Meeting Recording
+June 9, 2026, 1:58PM
+55m 29s
+
+Eugene Semenyuk   1:06
+You.
+Hello.
+Yes.
+Good morning.
+So.
+Yeah.
+
+Oleksandr Pavlovskyi   1:20
+Good morning, guys.
+
+Eugene Semenyuk   1:22
+Yeah.
+
+Wajdan Mahbub   1:25
+Good morning, everyone.
+
+Eugene Semenyuk   2:02
+The caller.
+Yeah, let's give folks maybe one more minute to join us, and then we'll start.
+Yeah.
+Okay, I guess we can start. So, hi everyone, good morning and welcome back to our cross-functional PDLC session. So, yeah, unfortunately we need to reschedule one of our demos we planned for today. So, yeah, but we decide to use this
+opportunity to explore some some other topics that we have been generating a lot of interest in the rest of recently. Yeah, and probably we will have some some time in the end of the session for some kind of open mic, and yeah, we can discuss
+your topics, maybe try to explore something together. Yeah, for example, as Jatin mentioned, so yeah, he would like to discuss some MCPs. So yeah, we can make, we can do it in the second part of our.
+today's session. So, yeah, today we'll, yeah, we'll talk about custom GPTs and apps integrations and how they compare to ChatGPT agents. So, yeah, as you may, yeah, I think you already heard.
+heard that ChatGPT agents are not available for us for now. So yeah, but they will, I hope they will be available again very, very soon.
+So, yeah.
+Yeah, well let me probably share my screen and...
+I was going to do it.
+Try, try to drive.
+Two posts, or maybe not this one.
+Entire screen, and...
+Number one, yeah.
+So, yeah.
+The timing is actually pretty good because many of us have already started experimenting with ChatGPT, with custom GPTs over the last few weeks or months. So yeah, and I've been getting a lot of similar questions like when should I build custom GPT? When should I use agent instead?
+difference? Can they use the same integrations? Which one is better for my particular use case? So yeah, so today we'll try to answer those questions and hopefully create a practical
+rules or maybe agent that will help us in future. So yeah, as usual, this will be a hands-on and discussion rate on session. So the goal is not just to look at feature, the goal is to understand where these capabilities can help digital QA and engineering teams.
+in real workflows. So yeah, and yeah, after that, so we will have open mic and we'll discuss.
+Something else, so OK.
+Let's start with building custom GPT and like describing what is this custom GPT. So yeah, I guess you already seen and maybe used some of already created GPTs or created.
+your own GPTs. So yeah, here in ChatGPT, you should see Explorer GPTs section. And here you should have Create button.
+You can see already published custom GPTs that you can reuse.
+So, yeah, they popular at OneMain.
+So yeah, but now let's create some something simple.
+
+Sanjay Kumar Parui   8:16
+Eugene, we don't have that option.
+
+Eugene Semenyuk   8:19
+Yeah.
+Um...
+
+Sanjay Kumar Parui   8:20
+Is it restricted? I don't know. I cannot follow with your screen.
+
+Eugene Semenyuk   8:27
+That's.
+
+Sanjay Kumar Parui   8:27
+I don't know if the same thing as someone else, too.
+
+Eugene Semenyuk   8:31
+That's strange.
+So, guys, do do you have such?
+
+Bandana Sriramka   8:39
+I have it usually.
+
+Eugene Semenyuk   8:41
+Mhm.
+Mhm.
+So, yeah, and I believe you, you are using your OneMain account, like you see OneMain enterprise here, and we don't have such.
+
+Sanjay Kumar Parui   8:53
+Yeah.
+
+Eugene Semenyuk   8:59
+Okay, yeah, let's...
+Let's connect offline, so yeah, and uh, and see, so yeah, maybe we will.
+
+Sanjay Kumar Parui   9:03
+Okay.
+
+Eugene Semenyuk   9:08
+Create some some request.
+
+Sanjay Kumar Parui   9:10
+Okay.
+
+Eugene Semenyuk   9:10
+To to to investigate this.
+So, yeah, let's review the...
+Yeah, what we have in custom GPT. So yeah, in each custom GPT, we have name, description, instructions. Here will be our prompt that we will use for the particular task. We also can add conversation starters. We can upload some knowledge.
+like some PDF files that can be used for our agent. Yeah, we can select the model and we select, we can select some capabilities, like search web pages, canvas, generate image, and use.
+some code tools. Yeah, and here you can see it. You can see the new feature apps. So now we can add.
+Apps that meant.
+
+Amit Kumar   10:14
+Sorry, Eugene, to interrupt, you know, how did you actually get to this new EPT in a page?
+
+Eugene Semenyuk   10:20
+Yeah, let me go. So here should be Explorer GPTs.
+
+Amit Kumar   10:28
+Okay.
+
+Eugene Semenyuk   10:29
+Yeah, and create button here.
+
+Amit Kumar   10:34
+I see that, thank you.
+
+Eugene Semenyuk   10:37
+So yeah, and here now we can enable these apps. And here are our apps that we already seen in ChatGPT agents. Yeah, let's select something, yeah, for example, a roll. Yeah, and the main difference with the
+Yeah, the main difference comparing with agents, so we we cannot configure these apps.
+So we cannot restrict some operations. We cannot manage their...
+Level of autonomy, so yeah, for example, in...
+in ChatGPT agents, we can select and set something like for this particular method, for example, add a comment for JIRA item. So we can
+Um...
+Yeah, we can set it like do it without approvals. So, and in this case, agent will automatically add the comments for Jira items. So, or you can, you can restrict adding comments or you can ask for approvals. So yeah, here in.
+In custom GPTs, we are not able.
+To to manage these writes, so by default it will read.
+all the available information for you, but for right permissions and right actions, it will request your approval. Yeah, for example, to write a comment, to create new Jira item. So yeah, this is like the first difference.
+Yeah.
+Yeah, uh...
+Yeah, we can we can add some apps. Yeah, and let's start with something similar. So we can build a similar like plan agent, but using custom GPTs. Yeah, and then we can we can try to
+Notice some.
+some differences. So yeah, let's add.
+Integrations first, so we need our Jira.
+To your items, we need our calendar, we need Teams.
+Yeah, and maybe that's it.
+So yeah, let's give a name for our agent. For example, in our case, it will be...
+Mm.
+Let it be daily plunder.
+And yeah, now we need to generate instruction. So yeah, so here will be our prompt with the logic, like how we, how we can and how our AI model will do each step and create a plan for us.
+Yeah, unfortunately we don't have such a...
+Chat interface to to generate to generate instruction for the agent for us, like we have in ChatGPT agents. So, yeah, here here is the chat.
+that can communicate with your chat GPT custom GPT. So yeah, to create instructions, I propose to use meta prompting. So yeah, we will use chat GPT to create instruction for.
+Custom GPT.
+So.
+
+Eric Trenz   14:37
+Eugene, sorry, what's the difference between doing that versus the create, toggling over to the create side when you're in the custom GPT build?
+
+Eugene Semenyuk   14:38
+Mhm.
+Uhh...
+
+Eric Trenz   14:53
+Like if you click on Create.
+
+Eugene Semenyuk   14:55
+Ah, yeah.
+Yeah, yeah, you're absolutely right. Yeah, yeah, you can, you can, we can, we can use all these, yeah, let's let let's do it here.
+Okay, what do we need? Let's...
+Create custom.
+GPT that will.
+Analyze.
+Uh...
+Our calendar.
+Jira items.
+And recent conversations in Teams.
+Let's also add...
+Action items from meetings.
+Mhm.
+As a result.
+Well, that's...
+Set a result, generate.
+Table with tasks for today.
+Okay, yeah, we have...
+Okay, we have instruction.
+Ohh.
+Not sure about uh...
+Okay, maybe we can adjust it a bit later. So okay, let's see. We have we have conversation starters. We have apps added.
+So, we can we can test it.
+Yeah, let's use what should I focus on today?
+
+Joshua Smith   17:14
+I missed how you got the prompt.
+It's asking me, uh...
+
+Eugene Semenyuk   17:19
+Yeah, yeah, so, so yeah, we we we use create a function.
+
+Joshua Smith   17:20
+Um...
+Yeah, I'm there and I put in, I put in that and instead of...
+Oh, okay. Got it.
+Yeah, it didn't generate that for me. It just said, I suggest making a daily task synthesizer. Does that name work for you? So.
+
+Eugene Semenyuk   17:40
+Mhm.
+
+Joshua Smith   17:41
+Did I miss something?
+
+Eugene Semenyuk   17:47
+So yeah, let's see what we have.
+Uh, okay, it analyzed my some of my meetings.
+AI use case implementation, yeah, recommended focus for today, suggested day structure.
+No.
+Okay, I see that.
+Yeah, that that's fine, but I think we can can improve it, like add more, add more structure, evidence, and so on.
+Okay, let's maybe use this.
+This chat to improve our instruction.
+Let's improve.
+The plan.
+Should be.
+Structured.
+Wait.
+And, uh...
+Specific actions.
+No.
+Yeah, I like it. This output format. Let's go back.
+Mhm.
+Yeah.
+Okay, let's...
+Before we continue refine behavior, should we keep the name?
+Okay.
+Okay, let's...
+Keep his name.
+Hmm, why isn't working? Let's update our...
+In.
+Peractions.
+Mhm.
+Okay, yeah, looks like...
+Yeah, it looks like we need to update them manually.
+Ohh.
+Okay, let's review.
+Let's review our JT.
+Less upcoming meetings.
+Okay.
+But, copy.
+and use it like this. Okay, it's saved. Let's run it again.
+Preparing up tools.
+Yeah, we can see some.
+Request tools.
+Yeah, now we have some evidences.
+Yeah, so we see some.
+JIRA items.
+attached to me.
+Yeah.
+Okay, um...
+
+Swathy Lokula   22:53
+Eugene, how did you integrate with Robert? Could you show once again, please?
+
+Eugene Semenyuk   22:54
+Mhm.
+Yeah.
+That's pretty simple. So yeah, we just need to click enable apps here and click add and select Atlassian Robo.
+
+Swathy Lokula   23:05
+Mhm.
+Okay.
+Thank you.
+
+Eugene Semenyuk   23:14
+So, yeah, this this app works well with conference, Jira.
+Yeah, and the robot.
+Okay, uh...
+Let's test one more thing.
+So yeah, we have a Rovo integration. Let's ask to update some ticket and see how it works.
+Yeah.
+Let's update this.
+Ticket.
+Blocked.
+Eight.
+So, this item is currently is currently in progress.
+Yeah, this is my item, so I...
+I don't afraid to.
+To play with it.
+Now it should ask us.
+No permissions.
+Mhm.
+You.
+Okay, let's hello.
+Yeah, now we can see that.
+that our ticket updated to block state. So yeah, here we confirm that.
+that we can do some write operations in our applications. So yeah, this is like the first difference that we mentioned earlier. So we cannot configure, we cannot configure the application.
+permissions.
+So yeah, and we need to confirm every write operation.
+So yeah, it looks like we cannot create some kind of sequence of actions where we have write permissions to
+To do something in an autonomous way.
+So yeah, here we need to confirm any any right operation. Not not not right, maybe like any.
+any update or delete and create operation. So yeah, but it can read without any additional permissions.
+So, yes, speaking about a level of autonomy.
+We can schedule ChatGPT agents.
+So yeah, this is the second point.
+speaking about differences. So ChatGPT agents, we can schedule for some execution, like every hour, every day, at specific time. So yeah, it looks like for custom GPTs, we cannot schedule them.
+So, yeah, this is...
+This is the second difference.
+Yeah, and yeah, let's create our daily planner.
+Yeah, and let's test it.
+And.
+in GPTS. So yeah, here we can see our recent chats, projects, and GPTS. Here is our newly created daily planner.
+Yeah, and yeah, here is the sort difference.
+So, custom GPT works like a pre-configured chat GPT chat. So, and you cannot combine like multiple, multiple custom GPTs.
+Into one.
+Into one workflow, like, like we can do in chats, like, like, like we can do with ChatGPT agents. Yes, yeah, in ChatGPT agents, you can select, or you can select the first agent, do something with this agent, then select.
+The second agent and proceed with the.
+Come on, context.
+Oh yeah, this is the sole difference.
+Play.
+Okay, now let's test.
+Okay, now we can see that this ticket is blocked.
+Mhm.
+Okay, yeah, looks like...
+Yeah, we have the similar structure as we had before.
+So, yeah, for.
+for such kind of agent, GPTs. So yeah, this is very important, like predictability. So yeah, we have pretty same result as in first execution.
+
+Swathy Lokula   29:27
+How do we save it? Could you show one more time, please?
+
+Eugene Semenyuk   29:27
+So, yes.
+Yeah.
+Let's go back to...
+Yeah, here you can edit your GPT.
+So yeah, and here, here is update or create button. So yeah, you just need to click it.
+
+Swathy Lokula   29:52
+I don't have it.
+
+Jurijs Markelovs   29:52
+You didn't give...
+
+Eugene Semenyuk   29:54
+Mhm.
+Sorry.
+
+Jurijs Markelovs   29:57
+Eugene, you have mentioned, correct me if I'm wrong, a few minutes ago, the fact that custom GPTs, we are not able, not able to schedule their execution autonomously. Correct me if I'm wrong, but I think it's accurate. I am able to schedule it.
+
+Eugene Semenyuk   30:07
+Mhm.
+
+Jurijs Markelovs   30:17
+I just asked them directly, can I schedule and saying yes?
+
+Eugene Semenyuk   30:17
+Ohh.
+
+Jurijs Markelovs   30:24
+Yeah, see if you can try it on your own.
+
+Eugene Semenyuk   30:26
+Oh, that's interesting. Let's try to do it. So this is like some kind of hidden feature. Okay, let's go back to our...
+Ohh.
+Yeah, the latest on chat.
+Mm.
+Can we?
+
+Jurijs Markelovs   30:51
+I was even, I was, I was able, no, sorry, too early. I was, I was able to schedule it directly for the GPT communication.
+
+Eugene Semenyuk   31:05
+Do you mean?
+
+Jurijs Markelovs   31:07
+Even I mean on the left on the main dashboard to the ChatGPT.
+
+Eugene Semenyuk   31:15
+Oh yeah, I see, I see.
+
+Jurijs Markelovs   31:15
+Yeah, yeah, right next to the daily planner.
+
+Eugene Semenyuk   31:19
+Mhm.
+
+Jurijs Markelovs   31:20
+It already had it, right? So next to the daily planner, if you can click on a daily planner.
+
+Eugene Semenyuk   31:26
+Mhm.
+
+Jurijs Markelovs   31:27
+Yeah, yeah, yeah, here we just like this, and ask this thing to be scheduled, like, yeah, yeah, at least it work, probably work for me.
+
+Eugene Semenyuk   31:33
+Here, I mean, yeah, let me.
+
+Jurijs Markelovs   31:37
+And.
+
+Eugene Semenyuk   31:37
+Let me double-check one thing.
+Now I cannot be deleted.
+From here, okay.
+Let's...
+Schedule face GPT.
+You are very.
+Morning.
+Ohh.
+At 8:00 AM.
+Yeah, looks like.
+Chantry Pitty tasks.
+
+Jurijs Markelovs   32:21
+Strange, because I'm unable to do that, at least. Alright, never mind, didn't mean to interrupt.
+
+Eugene Semenyuk   32:29
+Yeah, but yes, speaking.
+Yeah, frankly speaking, I, I, I've heard about like GPT tasks, yeah, but I'm not sure, like, do we have them enabled here?
+So, guys, have you have you ever used?
+ChatGPT tasks.
+At OneMain.
+Like to schedule some.
+Some task job, your custom GPT.
+Not sure about agent mode here.
+You.
+Okay.
+So, yeah, where I stopped, here is our...
+Yeah, here is our output.
+So, yeah, and we discussed that difference with scheduling, yeah, and the last point that was like combining few agents to.
+Some flow, so yeah, looks like for custom GPTs, yeah, we cannot combine them into one context to one chat, because yeah, each each custom GPT it has.
+Their own chat.
+
+Sanjay Kumar Parui   34:17
+But so there is no scheduler right to run this on this one.
+
+Eugene Semenyuk   34:17
+Ahh.
+Mhm.
+
+Sanjay Kumar Parui   34:22
+To confirm, OK.
+
+Eugene Semenyuk   34:29
+Yeah.
+But for ChatGPT agents, so yeah, we can we can use one chat and click plus select the particular agent and run them in some flow. Yeah, it will be a manual manual flow like.
+I'd like to say semi-autonomous. So you call each agent one by one. So yeah, but this is like.
+some workflow with a common context. So yeah, for example, agent number three knows the result from agent number one. So yeah, because yeah, everything is in one chat in one context.
+So, yeah, and.
+Yeah, I even have some follow-up with Jurijs today with high confidence.
+Okay, yeah, looks like it works. So yeah, it can read my calendar, my recent conversations.
+Yeah, and so on and so forth. Okay, yeah, and speaking about applicability, so yeah, let's try to think where we can apply such.
+Search, uh, Jupitus.
+So yeah, comparing with the
+Yeah, but we already compare these custom GPTs with the ChatGPT agents. Yeah, and yeah, we know the differences. And let's compare it with some other tools. Yeah, for example, for example, with the robot.
+Ohh.
+Yeah, for Robo agents, yeah, we can schedule and use some other triggers using Jira automation. So this is a good benefit for Robo agents. Yeah, we can also use some integrations.
+In Rover, yeah, but looks like, yeah, in custom GPTs and in ChatGPT agents, we can also use.
+some insights from teams conversations. Yeah, maybe some meeting transcripts and use some action items from these transcripts and convert them into something actionable. So yeah, probably this is the main limitation for Robo.
+for now, and good opportunity for custom GPTs, because yeah, looks like this is the only one tool for now, for now, and for now, for us, sorry, for us to work with the...
+Teams contacts.
+Because, as I remember, we didn't have, we didn't have teams MCP.
+Yeah, and we don't have Teams integration in Robo and CodeMe and other tools.
+Yeah, but here in chat, JT.
+So yeah, for now we have only custom GPTs. So yeah, we can use, we can use these custom GPTs for use cases where we need to analyze contacts from teams.
+Teams conversations, meetings, and so on.
+Tom.
+Yeah, looks like.
+Yeah.
+So, yeah, probably that's it for today for this particular topic. So, guys, do you have do you have questions?
+Do you have any other topics that you would like to discuss today? So yeah, we have at least 20 minutes.
+Yeah.
+To have Chati on the call.
+I know.
+He had some agenda.
+proposed agenda for us.
+Yeah, looks like he's stocked on.
+Some meetings.
+So, would you like to discuss some some other topics? Like, we can we can conduct some kind of...
+office, not hour, but some 20 minutes.
+The.
+Yeah, and while we're waiting, so yeah, regarding our next session, so yeah, this Thursday, we will have end-to-end demo from Sign team. So yeah, they will demonstrate their end-to-end.
+A cross-functional PDLC workflow, starting starting from requirements, then going to development and finishing this.
+Unit testing and end-to-end testing, so yeah, I I'm sure this will this is will be, yeah, this this this demo will be really available and exciting, so yeah, please join us.
+Is Thursday.
+Okay, any any other questions?
+ideas.
+Topics.
+
+Joshua Smith   40:57
+So Eugene, Slack is not available yet, right? In the custom GBT, when I tried to add it, it doesn't look like it's pulling from my Slack conversations for the daily planner.
+
+Eugene Semenyuk   41:07
+Uh, yes.
+
+Joshua Smith   41:07
+I added it, but it and I logged in, but it seems like some of the permissions are not like ready to pull from.
+
+Eugene Semenyuk   41:13
+Yeah, first first lock. Yeah, looks like first lock it requires some additional configurations.
+Let's see.
+Dun, dun, dun.
+
+Oleksandr Pavlovskyi   41:33
+Not sure if you have slot here, you have ability to cook.
+
+Eugene Semenyuk   41:34
+It will be here, yeah, we, we, we.
+But...
+
+Oleksandr Pavlovskyi   41:38
+We can, we can use like by MCP, but it's not possible with our licenses; we can use only these applications that are.
+
+Eugene Semenyuk   41:49
+Yeah, we have, we have select, but looks like it requires some some additional configuration, like, here are our apps.
+
+Oleksandr Pavlovskyi   41:55
+Well, could you do this to to click to to click to slack here and connect to the channel to say was trying this?
+
+Eugene Semenyuk   42:00
+Yeah.
+Yeah, well, let's do it.
+
+Oleksandr Pavlovskyi   42:09
+if it's required to create this application.
+
+Eugene Semenyuk   42:11
+Mhm.
+Yes, luck is connected, but all the current permissions for granted.
+Selections may not work until you reconnect.
+
+Joshua Smith   42:34
+Yeah, I got that same thing when trying and so I reconnected. But I think it generated and like a...
+
+Oleksandr Pavlovskyi   42:39
+Thank you.
+
+Joshua Smith   42:42
+request to the admin, which I know probably gets ignored for now.
+
+Eugene Semenyuk   42:45
+Mhm.
+Yeah, and it looks like we have similar, yeah, similar issue with GitHub.
+Because we cannot, we cannot connect organizational repositories, like only personal.
+Yeah, it looks like...
+
+Oleksandr Pavlovskyi   43:02
+Regarding to request to admins, you can check in the, it seems like this channel sounds like Slack Admins in a Slack. You can check directly in this channel, yeah.
+Uh, in the slack, I mean, and so probably it can speed up this request, but I'm not sure if they see this request. It was telling, but...
+Could you please go to the Slack, Eugene?
+
+Eugene Semenyuk   43:35
+Mm.
+
+Oleksandr Pavlovskyi   43:36
+Open Slack in the parallel.
+
+Eugene Semenyuk   43:37
+Jain, yeah, yeah.
+
+Oleksandr Pavlovskyi   43:39
+Yeah.
+
+Eugene Semenyuk   43:41
+Let me do it.
+Here it is.
+Ohh.
+
+Oleksandr Pavlovskyi   43:52
+Yeah.
+
+Eugene Semenyuk   43:53
+Yeah.
+Looks like.
+Yeah, here it is.
+Like, keep slack.
+Okay, and...
+
+Oleksandr Pavlovskyi   44:13
+Like, let me see you.
+
+Eugene Semenyuk   44:13
+What's next?
+
+Oleksandr Pavlovskyi   44:15
+And search for channel.
+Yes, like Admins.
+
+Eugene Semenyuk   44:26
+No.
+Yeah, here it is.
+
+Oleksandr Pavlovskyi   44:28
+Yeah, Admins, yeah.
+Here, so here you can ask.
+About this request here, somebody should answer to you.
+Yeah, when I was configurating the Slack MCP, yeah, I was use this approach.
+
+Eugene Semenyuk   44:48
+Mhm.
+
+Oleksandr Pavlovskyi   44:50
+I was using this approach here.
+
+Joshua Smith   44:52
+Okay.
+
+Oleksandr Pavlovskyi   44:55
+You should contact persons here, here, so probably can.
+write to somebody directly, yeah. For example, in my case, Hector helped me.
+
+Joshua Smith   45:05
+Mm.
+
+Eugene Semenyuk   45:06
+Yeah, let's remember, Hector.
+
+Joshua Smith   45:07
+Okay, good to know.
+
+Eugene Semenyuk   45:14
+Mhm.
+Yeah, let's ask our facilitator to note it.
+Okay, and yeah, and moreover, so you can use just like single chat, like not custom GPT. So you can connect the application, for example,
+Rolfo and like.
+Get items.
+Assigned to me.
+Yeah, they will use the application.
+To do something for you.
+Yeah, without any other additional instructions.
+Kian.
+Let's maybe use create task.
+That's interesting, so...
+Can we do it in custom GPT or no? Looks like no.
+And if we do something like this, like more create task.
+Around.
+Daily.
+Planner.
+Every morning at...
+Let's do it like custom.
+Should be teen.
+Can I do it like this?
+Yeah, looks like, yeah, looks like we can schedule custom GPT.
+Yeah, using task.
+Task feature.
+Like, create task.
+And yeah, ask it to schedule your custom GPT.
+
+Sanjay Kumar Parui   47:31
+Okay, where did you get that task option?
+
+Eugene Semenyuk   47:35
+So, yeah.
+Yeah, that's pretty interesting because yeah, it's available for new chat, but not available.
+
+Sanjay Kumar Parui   47:43
+Yeah, that's what I was saying. I it's several new chat here, right?
+
+Eugene Semenyuk   47:46
+Yeah, just new chat, plus more, and create task.
+Yeah, and here we can ask to do something, yeah, but from daily planner.
+It's not available.
+I mean from from GPT.
+Yeah, but yeah, looks like.
+Yeah, it looks like we can do this.
+Yeah, and the.
+That's pretty interesting.
+No, I have a...
+Have a desire to play with tasks, yeah, to understand the capabilities. So, yeah, guys, have you had have you had a chance to to play with tasks?
+To create something for you.
+Yeah, here is schedules.
+Yeah, and looks like you can schedule not only custom GPTs, but also you can schedule, for example, deep research or something.
+Yeah, and here is.
+Yeah, we can.
+Must turn on.
+Okay, this is a good alternative for my planner agent that I've designed recently. And looks like I will have a new plan each morning.
+That's good.
+
+Swathy Lokula   49:51
+Could you show one more time how did you schedule it, please?
+
+Eugene Semenyuk   49:55
+Yeah, you just need to open a new chat.
+Click plus, then more, and create task.
+Yeah, and then just to ask.
+To to create to to schedule this task.
+
+Swathy Lokula   50:15
+OK, thank you.
+
+Eugene Semenyuk   50:15
+For example, let's...
+Uh, scandal.
+DB.
+Go on there.
+GPT.
+Karan Avery.
+Morning.
+At.
+10 A.m. and it will create a task.
+Yeah, but the one.
+Interesting point.
+I don't know how to open the...
+How, how, oh yeah, here is schedules.
+So, yeah, to to open your tasks.
+So, yeah, you can click.
+Settings.
+schedules and manage.
+Yeah, and here you will see all the executions and all scheduled tasks.
+
+Swathy Lokula   51:32
+Thank you.
+
+Eugene Semenyuk   51:39
+Okay, yeah, for now, it can be some kind of alternative for ChatGPT agents.
+So yeah, I hope they will be available soon. Yeah, but for now, it looks like this is like the only one option to...
+Uh.
+Maybe not the only one. Yeah, but the convenient option to work with
+to work with recent conversations and Jira items.
+calendars and so on.
+Okay, any, any other?
+Questions.
+Ideas, topics.
+We have about 10 minutes left.
+Mm.
+
+Jatin Bagga   52:55
+Hey, Eugene, I just joined a little late. I posted a question about the MCP or this thing. Like, are we still talking the same stuff like Jira, Confluence, Teams? Like, I feel like those are boring, right? Is there anything else that we could do or is it still kind of constrained?
+
+Eugene Semenyuk   52:57
+Air.
+Mm-hmm.
+So, yeah, yeah, I guess you have a really, really good topic. So, yeah, and unfortunately, we have just 8 minutes.
+So.
+So, yeah, today, today we should have a end-to-end demo from one of our team here, but unfortunately...
+Yeah, unfortunately, we need to reschedule it. So yeah, that's why today, yeah, we came up with some new topic. And yeah, today we decided to touch something, yeah, something like this. So yeah, but
+but in the next sessions after the demo. So yeah, we can think about the topics that you mentioned. Yeah, and yeah, for now we have just 7 minutes left. Yeah, I propose to use our office hours time for this week.
+Yeah, to discuss these MCPs and connection things, like to pull information from Snowflake, S3 buckets, and so on.
+
+Jatin Bagga   54:27
+Okay, thank you.
+
+Eugene Semenyuk   54:37
+Okay, so yeah, let's probably pause here for today.
+So, yeah, let me remind you that on Thursday we will have we will have end-to-end demo from SI team. So, yeah, they will present us how the UCI end-to-end from requirements to code generation to unit test.
+and the two end-to-end tests.
+So yeah, it should be really exciting.
+So yeah.
+Let's.
+Stay tuned.
+Yeah, and yeah, have a good rest of the day and see you soon.
+
+Jatin Bagga   55:21
+Thank you.
+
+Rekha Bhamidipati   55:23
+Thank you.
+
+Eugene Semenyuk   55:23
+Bye.
+
+Sanjay Kumar Parui   55:24
+Thank you.
+
+Haresh Pasupureddi   55:24
+Thank you. Thank you so much.
+
+Sukalya Rajendran   55:26
+Thank you.
+
+Oleksandr Pavlovskyi   55:26
+Thank you, Sujan.
+
+Nicholas Crowley stopped transcription

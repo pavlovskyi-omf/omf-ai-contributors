@@ -1,0 +1,323 @@
+AI Enablement ENGINEERING Lighthouse Session-20260610_150013UTC-Meeting Recording
+June 10, 2026, 3:00PM
+45m 25s
+
+Oleksandr Pavlovskyi   1:00
+Good morning, guys.
+
+Sanjay Kumar Parui   1:04
+Good morning.
+
+Oleksandr Pavlovskyi   1:04
+I don't know why, but by some, can you hear me? Yeah, because, but yeah, can you hear me?
+
+Deepti Pathak   1:05
+Morning.
+
+Sukalya Rajendran   1:10
+Yep, good morning.
+
+Sanjay Kumar Parui   1:10
+A lot of beer.
+
+Deepti Pathak   1:11
+Yeah.
+
+Oleksandr Pavlovskyi   1:12
+Yeah, I don't know why I can't share my camera.
+Seems like it's conflicting with...
+Maybe with my bum, alright, so...
+Yeah, let me try to reconnect. Give me a second.
+The same.
+Bugs.
+I can see you alright, guys.
+Good day, good morning, good afternoon, or to everyone. So today we have our last.
+
+Jason Daggs   2:22
+Yeah.
+
+Oleksandr Pavlovskyi   2:28
+But the last in the phase two session, yeah, this is our late call session, and so...
+Probably we're going to have some temporary schedule, yeah, but we plan to leave Champions in Cups here, just to discuss some important topics here, maybe to think about our future sessions, yeah, about some...
+important highlights that we need to focus regarding to your projects. And we're going to have also our regular, on weekly basis, our office hours meeting, yeah, and that's going to be also.
+the stage here we can demonstrate our use cases here to share our knowledge. But today we have three great demos. Yeah, I see you guys. Yeah, you all in the call. So we have a great demo from our champions, from Loquen, from Deepti, from Jason.
+Oh, suitcase.
+Yeah, we have 3 minutes. I think all people are here. And let's start probably with Jason. Yeah, you are the first in the board. Yeah, so.
+
+Jason Daggs   3:54
+All right. No, that's great. I was prepared today, which is a little bit different than usual. So let me get my screen shared and we'll go, and I'll go ahead and begin.
+
+Oleksandr Pavlovskyi   3:58
+Yes, so.
+Cool, cool, great.
+
+Jason Daggs   4:11
+All right. All right. Thank you.
+Well, I hope I hope this presentation moves up to Alexander's high standards of having a great presentation. Well, I'll try. Change today, I wanted to just kind of demonstrate a use case that has come up in our team several times, and that is
+Being able to create a change log. And I think this is going to be used even more in the future as a way to go from PR to release notes so that we can have a documented set of changes that went into our releases.
+There are multiple teams that actually use the service that we build and maintain. We call it CAPS or Domain Gateway. Maybe some of you have heard of that. And anyway, there's a lot of different systems that contact us. So having change logs and being able to communicate what changes are in each release,
+very important that we can disseminate that information as widely as possible. And so for that use case, we've created this change log creator.
+And let me just go to the edit mode real quick.
+And here you see, it's actually a workflow comprised of several different steps.
+We have the PR retriever.
+extract Jira to list, Jira description, and markdown generator. And what I'm going to do is demonstrate specifically how, you know, what this does. And while that's running, I'm going to try to explain kind of what each of the assistants are for and kind of how I went about creating them.
+And then at the end, I'll talk about some strategy. So let me, oh, yeah, let me copy over my ticket.
+And so I'm running this from the workflows section.
+And so, let's see, let me just go ahead and run it now.
+As you can see, it started running. It takes a minute. So the PR Retriever, its only task is to go to GitHub and pull basically the list of commits that are associated to this PR.
+And then after it's retrieved all of that information, there's the extract JIRA to list. So this particular assistant is going to JIRA.
+Or excuse me, it's actually looking at the output from the previous step and creating a list of JIRA tasks that then...
+are passed in to the next assistant. And the JIRA description generator then takes that, and for each one of those, retrieves the description from the JIRA system.
+And once it's compiled all of that, excuse me, information, and it's generated some descriptions.
+That will then get passed into the markdown generator. And, you know, I've been kind of tweaking that a lot this morning, trying to get it to be more consistent in what it outputs. I've noticed that this step is somewhat non-deterministic. So
+There's, I'm sure there's some things I can do to make that more consistent, but it will take a little bit of time.
+And let's see, so now it's gone, it's completed the markdown generator step, and now it's just finalizing a kind of an out, you know, summarizing the results and kind of giving you just an output report on what actually happened.
+And so, here's the markdown that it's generated for us.
+And let's see, let me bring up my IDE. I want to paste. Oh, no, no, no, cancel that.
+Paste that and save it. And then let's, all right, and so that's the markdown it created.
+And so, currently, this is what it looks like in the Markdown Viewer, and so you can see here, it's got the PR number, then it's got the JIRA ticket.
+and a short description that it retrieved from that information, including from the PR and from the JIRA.
+And you can see it has the commit ID associated with each one of those tickets. And really, that's it. That's the change log that ties in each commit to the ticket and ties all of that to the PR. And that's really the important thing that we're trying to
+Accomplish with this, and I wanted to also, while I still have a few minutes, I wanted to talk about...
+how each one of these assistants were constructed. So first of all,
+The PR retriever, this is a normal assistant that we created here under the assistance section of CodeMe. And it's really just a very basic.
+Assistant.
+That gives us information on how we can go about.
+getting those PRs. I even include some paging rules so that if there are a lot of commits, as there could be, that it will retrieve 50 commits at a time to process. Now, this is, you know, you guys have seen this before, of course, it's just a normal.
+Agent setup.
+But going back over to the workflows.
+What I discovered, and maybe this someone's already, I'm sure all of you have seen this as well, but this workflow system allows us to create virtual assistants. That is assistants that are only viewed through a particular workflow. So it's not a general purpose assistant that
+like we've seen in other in the assistance tab. It's just, this is all it is, is just this.
+Single section right here.
+Use Virtual Assistant.
+And it's got most of the same features as a normal assistant. You know, the tool setting. You can also give it its own name, if you will, right here.
+And so, although I used a normal assistant here.
+For the next three steps, I went ahead and did virtual assistants just to kind of kind of exercise that functionality a little bit and try to understand it a little bit better, and so that...
+That's how I comprise this workflow. I have a set of essentially deterministic steps, and each one of those steps is able to kind of handle some ambiguity, some non-deterministic information that comes from the PR and from
+the JIRA system. And I came up with this, and I didn't really come up with it. This was something, a pattern that I researched and found on the internet that basically tells you to, when you have a complex task,
+Multi-step task breaking out each step into its own assistant or its own agent is routinely been viewed as a good thing, and because doing it all in one agent can sometimes confuse the...
+The model right, and it won't be able to properly separate each step, but in this case here, by breaking it out, you minimize that context that the agent sees for each step, and therefore can.
+Generally get better results in that particular pattern, so I found that to be at least somewhat easy. The immediate benefit I saw is that it also decomposes the task into smaller bite-sized chunks that me as a workflow developer.
+can easily reason about and understand and communicate to others. So I don't know if, in fact, this way gives you better results than one big step. It could be that this particular task as a whole is simple enough to not really benefit from that.
+But I would recommend that when you do have a single assistant that you're creating, think about if those steps can or should be broken out into a workflow, and perhaps try that just to see if it provides a greater benefit to you.
+And that is all I had for this particular workflow. And so I just want to ask if there are any questions.
+All right. Well, thank you very much.
+
+Oleksandr Pavlovskyi   14:42
+Guys.
+Yeah, thank you, Jason. Great, great demo, yeah, and great point, yeah. I mean, regarding to the context management, yeah, this is definitely really helpful, yeah, to decompose, yeah, your context, yeah, especially when you have this.
+
+Jason Daggs   14:55
+Yeah.
+
+Oleksandr Pavlovskyi   15:04
+task when you should work with a huge amount of context. So you can definitely separate these steps on the smaller parts, yeah, and in this case, you're going to be sure regarding to the quality of the result. So, yeah, that's why we have these workflows, yeah, and in the same time, that gives you ability
+and flexibility to work with the different tools, yeah, because we all understand, yeah, so using some tools and that context that we are getting, for example, from Jira or from some other source or data source, yeah, that's also part of our context, yeah, and it's also spending of our tokens.
+So, yeah, and that's the time when you need to start to think about it, yeah, because we start doing more complex and complex workflows, yeah, complex task delegating to the our EA assistance, yeah, and
+Some of our teammates, yeah, already get this unpleasant situation where they achieve the limits of our models usage, yeah, so yeah, and this is the time, yeah, and we...
+have all the knowledge here, how to optimize it. Cool, great demo as usual, Jason. Thank you.
+
+Jason Daggs   16:32
+Oh, well, thank you. Thank you.
+
+Oleksandr Pavlovskyi   16:34
+Alright, uh, guys, any questions?
+Today, we have a bit a bit tight schedule. Yeah, we should give ability to demonstrate Deepti. Yeah, her great use case, so Deepti stage is yours.
+
+Deepti Pathak   16:54
+All right, thank you so much. Let me share my screen.
+
+Oleksandr Pavlovskyi   16:56
+Hello?
+Yeah.
+
+Deepti Pathak   17:04
+Let me know if you all are able to see my screen.
+
+Oleksandr Pavlovskyi   17:06
+Yes, we are able.
+
+Deepti Pathak   17:08
+Okay, perfect. Okay, so again, brief introduction about me. I am Deepti and I work with data platform team and I work with Sukalya and Adnan. So this is a use case which I think when Sukalya was giving the demo on phase one, she did generated the documentation. But in this one, we are just, I am just involving more and adding the AI part of it. So
+To give a little bit of a background, and I'm pretty sure a lot of teams can connect with me on this. If not, let me know. So giving a little bit of a history about it. So let me start from this. So I am like, we are data platform team, right? And under our team, we have like multiple sub-teams. For example, we work with the Snowflake, we work with like...
+AWS, then we also have a data governance team. We have like a BAU where the daily activities comes on, right? And then a couple of years ago, we had the audit happens. Audit happens every year, but one was the time, there was a time when our Snowflake application was being picked up and they did the.
+audits and based on that, we worked with the audit teams and they shared like, hey, whenever you are going to have any Jiras, you have to make sure a couple of few things that if you are having a Jira, you need to have four or five documents, mandatory documents, which you should always have it. And also depends on what kind of Jira is your Jira is standard, is your Jira changes normal based on the ratings.
+You should add those documents accordingly. Let me show those templates before I go to what we have achieved it here. So let me go to the DBA. Give me one second. I should have kept that open.
+Okay, so meanwhile, this is, since it's getting open, I will try to show the... I think I have it away. All right, okay. So let me go through some of the documents which we always adding. So basically, if I'm a developer, I...
+get those JIRA tasks, I have to make sure that before it goes and applied into the prod, I should have those five documents created. So that is something we do it for every JIRA within our team for different like Snowflake team through that, application teams do that, like we data platform teams do that. So these are the temps, these are the documents we.
+go and be created manually. For example, this is the project analysis document. Let me open it from here actually.
+So this is the project analysis document where it tells you like what kind of project it is, what's the background context, all those things. Then we have a deployment checklist, what are the PRs getting deployed, then backout plan that because since Snowflake is a critical database, right? If you are deploying anything, if anything goes wrong, you have to have a backout plan properly.
+So we should have a backup plan for any JIRAs. Then again, risk change assessment is something where it tells you what type of JIRAs. Is it like your deployment is having a critical things getting deployed or is it just a basic change where you are, for example, just updating a column in our database or you are bringing a new whole data source from like new data from like a different source like from class or DB2 or.
+or different things. So, and then we have to have a test case generation. So currently, different teams, when they do their coding, they have to make sure that these codes gets added. And we do have right now automation where our code will not move from dev branch to QA branch unless these documents are there.
+But again, imagine our deployment happens every week or every Wednesday, and at the same time, we have tons of epics or releases happen. So for example, each developer have five or six Jira tasks. They have to create this documentation mandatory. There is no, like, you have to do that.
+So based on this, what we try to do is like we try to create the documentation automatically and that's what this demo is about. So before I go to the demo, anyone have any questions?
+All right, okay. So I will go through this flow diagram just at high level, which will help everyone understand. It looks like complicated, but literally if you go and read through it, it's nothing like a big thing. So basically what in this automation we are doing is we have a Jira ticket. So developer creates a Jira ticket or anyone like if the project manager is there, they create the Jira ticket.
+Right now I did my POC just with DFP 290, hence you see DFP 290 here. There is the automation where we, I'm using a Jira automation where I'm saying like if my Jira is from ready to, so when it's like ready to go, if it's transition from ready, sorry, ready for work to in progress, I need to update this, ready to work for work to.
+to in progress, my JIRA automation is going to get triggered. That's going to trigger my CodeMe assistant. So my CodeMe assistant is going to create those documentation. I did try to have those documentation directly attached it into the GitHub, sorry, into the JIRA, but looks like attaching.
+functionality in CodeMe is right now being not authorized. So hence I said like, hey, we cannot attach it. Let's try to have a comment. So now right now the two documentation, the project analysis and test cases gets attached into my TFP 290. So basically into my Jira. Once this is done.
+Whenever in my GitHub code repository, the branch gets created for adding all those documentations, it just fetch those information from the Jira and add those documentations and push it into the GitHub repository. What is my code means doing here? Basically.
+Based on the JIRA description, it creates the purpose of that particular JIRA, the benefits for project background, functional specification, technical specification, and testing considerations. And then what are the benefits we are going to have? It literally reduces manual efforts now going forward.
+We have to like even we have to do emergency releases, it takes time right to create those documentation. At least this is going to help a lot by for the developers to specifically focus on code instead of like doing the documentation. That it also ensures consistency when you have multiple developers, lots of teams are there, they.
+The team has been provided with the template, but when you have tons of tasks, you are doing it, you definitely don't add everything right. Like if you open it and just start auditing those things, you will definitely miss things. But with the AI, all those things is half already been prepared for you. It also helps you, it gives you a good traceability.
+and it's a faster audit readiness and standardized, and the template is very standardized as well. Beautification of the templates, the document which I'm about to show, I'm still working on it, but at least at high level it looks okay to have this demo, by the way. Okay, so before I show the actual work, any questions?
+All right, okay, so let me go to the first trigger, right? So let's say this is my DFP 290, and this was actually my task, and this is the task itself. I tried to add and change the details. So in DFP 290, let me remove this code so that, or actually it will add it. So right now, if you see the status of this particular Jira is ready for work.
+Let me change this transition to in progress. And once I do the change to in progress, my EPAM, this workflow should get triggered. This EPAM workflow is super simple. I'm not doing anything heavy on it. This is just one by one assistant where I'm telling that please go and create the.
+project analysis and test case. Instead of you ask for JIRA user to prompt it basically that confirmation, I want you to go ahead and comment it directly into the JIRA. So I will go through the assistant as well, but let me see once this is completed, I'll walk you through the assistant as well.
+So looks like, okay, it's still in progress.
+Let me see if it got created here.
+Okay, so this is the documentation. It got created and automatically it added the comment in my Jira. So this is the project analysis design. If you see the description here, I have given good description here, but generally people don't give a lot of description, right? So my recommendation, if you're using it, just have a nice description and based on that, it will create you the purpose.
+benefits, the project background, functional specification, technical specification, testing consideration. And then here is a test case documentation as well. Right now it's not super pretty, but I do have to work on it. But these are the test case scenarios. It generates it for you. Let me also walk you through the assistant.
+Here is the assistant.
+And these are the details, literally you can clone it or you can modify it based on your requirement for this one. And I did emphasize specifically that do not ask user, but if you use it over the chat, it is going to ask you like if you want these to be posted or attached. Attachment does not work, just wanted to call that out again. So yeah.
+That's the assistant and this is the, and I already showed the workflow. So let's say now in my JIRA, I already got the project analysis and my test cases. Now in our team, we do make sure that along with the codes, we make sure that we attach the code. And also before we deploy, we should have a proof like who approved the code, who deployed the code, all those details.
+details as well, let me go through it, sorry.
+I don't have here. Okay, I will show the PDF later, but that's something basically tells you like who approves the detail and everything. So if I go now to my now let me show my GitHub action what it what it actually do as well. So let.
+Okay, so inside this mic, so this is my basically a repository where I will be at, I add, we add all the documentations. And to make this whole thing automated, we have 4 templates where we are showing that, hey, this is how the template should look like. So basically fetch the information. I am telling my GitHub action workflow that go to the Jira.
+for this, fetch all these details and this is the template based on this template, make sure that you are going to add all those details. If something is not applicable or not there, you just put it as DBD. Similarly, here is my test case template right now, the deployment checklist template with what are the things I am going to deploy and a backout plan as well.
+So these are the templates and then here are my scripts, scripts which going to, so basically this is the main script which is going to trigger all of my sub scripts as well, which will add those documentation. So now I will be basically, let's say,
+I got a task of DFP 290. So now it's been assigned to me. It wasn't ready for work. I did the in progress. The documentation has been added. Now I want my, and assume that I already completed my code, and now I want my all four documentation to be added into the GitHub code, right? So my step will be, I will.
+be going to my GitHub document repository. I will create the name with Jira name exactly this should match and once I create this.
+I'll go to the place where the documents get created. So let's go there under this document TFP. These are the all the existing Jiras we have it. Let's see if the, so it should automate. So my script should automatically create that particular Jira folder inside this.
+repository. So if I find DFB-290, let's see if it got created.
+Let me refresh.
+Okay, so this is where my document got created and see, it's all got created on its own. So let's go and check the project analysis documentation. So yeah, it's giving the information DFP 290, who is the requester, who is the user, what's the name, what's the title, all the details, like what's the description of this task.
+benefits, project background, what is the purpose? These are very important from the audit perspective and we are like, they are doing the validations, right? So they already get all the details plus everything is in one place. Similarly, I have the deployment checklist. I kind of made this as more generic.
+because in our, this, basically I'm telling the deployment checklist to go and fetch all the details from the PR itself because we make sure that our code gets created based on the branches. So that's the reason all the details here, it's already there. So I'm just saying that, hey, all the PRs, please go and refer it from the DFP 290.
+And then coming to the, okay, great.
+Then I have my test case. Test case template is not good, but this got created. I do have to work on making it a little bit pretty with the templates. But right now, it did give you all the condition. Like, this is the condition, what actions we have to take and what is the actual result. And then developers can actually put it like, is this passed or failed as well.
+So these are the templates. Let me show the action what happens here from this script.
+So it goes to multiple steps.
+So it's basically fetching all the information from the Jira. And then I did just one more thing. You can ask like right now I use the Jira automation. Before this, I was trying to call the GitHub from the GitHub itself, the CodeMe API. And from my this curl command, I was able to call the workflow, but the same thing when the GitHub API was trying to call it, it does gives an error.
+So I think there is an issue with the internet, so we have to like enable the IP address. So I think there is a networking issue here. It says connection timeout error. But this particular curl command completely works if I do it from my local system, but from the GitHub role, it does not work. Hence, I.
+took an alternative path where in Jira itself, using the Jira automation, I'm trying to add those comments, and then my GitHub is trying to fetch those information and pushing it into this particular GitHub.
+All right, I think I am done.
+I'm open for any kinds of questions.
+
+Oleksandr Pavlovskyi   32:37
+Which is case, yeah, especially because this is demonstration of various tools where you which you use it for this workflow, yeah, great combination.
+Yeah, these guys, one more thing, yeah, that's corresponds, yeah, that we need to to understand all abilities which tools provide, and we can create these great workflows like Deepti demonstrated. So, guys, any questions?
+Yeah.
+Right, yeah, so guys use chat here, so if you're gonna inspire this use case or you're gonna need some help.
+just mentioned this in the chat, yeah, so we, our champions, yeah, or IPAM team, will be glad to help you. All right, Deepti, thank you. Great demo, and let's move to the next one, Loquen.
+Hello?
+
+Loquen MeyersJones   33:47
+Hey.
+Mm.
+So I'm an engineer on the My Money team.
+And this use case, see, let me start with...
+So we have Dependabot set up on our repo, but as you can see, we have 48 open Dependabot upgrades. And typically the workflow that exists right now is for an engineer to come in every day.
+sprint try to take a look at one of these and upgrade it, which is mostly like, all right, we're looking at the version number. Is this dangerous? We don't really know until we investigate. And there's someone's like this one that seems like, oh, it's only a minor upgrade, so that's probably okay.
+So this agent is that I've been working on is to help us with this risk analysis and to determine which of these are the low lifts, which ones are easy, which ones are potentially harder. So
+Um...
+I have created a...
+agent in that works in both cursor and GitHub Copilot so that it runs the same way you basically will do a slash command depend about risk review. This is one that already ran, but I was going to do an example.
+Introduce, and then all you need to pass in is the...
+PR number.
+and then it will pull all the information it needs using, if it's in cursor, right now we don't have the MCP access that we needed, so it's using the GitHub CLI tool. These are fetching the metadata and the GitHub status checks as well as the.
+diff between what to figure out what changed.
+And then...
+Once it has all that information, it's going to kind of follow a template that we laid out in this prompt that basically is.
+giving it a little context of what's going on, what might be breaking, what inputs to expect.
+And then the most important piece is this risk classification. How do we determine whether something is high risk? Because for most of us, we look at the patch and the minor, the version change, right? That's like the first thing you look at. And then you have to do some tedious digging through.
+requirements and what changed from each version, and then determine whether or not you should even proceed to testing.
+So the output is.
+Pretty straightforward that it will give you the, so this one is a low risk and its high confidence. So it's telling us proceed to local validation. So in that case, we would be able to put it on our staging environment, test it out, make sure everything works, and then we.
+pretty confident that we can merge it.
+The.
+Right now, this is just a single agent, but with the idea that this is the human readable output, but I also have a JSON output that gets spit out so that we can eventually will be building.
+The next agents in this sequence, because...
+For, is this the one?
+Yeah.
+Yeah, so actually this is the one. So this is for an ES Lin upgrade that's very high risk. Definitely breaking changes between 8 versions 8 and version 9. So the eventual direction that this will go is that we've created this output, says high risk. These are the things that.
+to look for this is the evidence that it used and this is the inferred risk. We'll pass this to another agent that can build a plan. And we're still exploring like what that agent looks like, but basically planning out the work that needs to happen in order to get us to ESLint 9.
+So, and potentially, if it's if it's straightforward enough, actually doing some of that work from from an agent perspective.
+The I think that the quick next pieces for this is to take this some of this output in the condensed form and comment on the actual GitHub pull request, because there's a couple actions that sometimes the developer might need to take on a PR.
+is to basically...
+Do A rebase.
+Think, find the one that has that.
+And that's pretty tedious. So we'll just be continuously rebasing as it, you know, every time you come back in and you've seen the PR is kind of stale, we'll need a rebase. So if we can have this agent run and just rebase it for us when it.
+When it needs to.
+that will save us a lot of time of going in and rechecking existing PRs. And then also once an engineer's ran this and it adds that comment onto it, then we can know, oh, someone has already checked this out. This is a low risk one. They didn't have time to get to it this sprint.
+but I can tackle it. So we can help share that context rather than right now, it's kind of working just locally. So I know that this PR is high risk, but it's not shared with the team yet. Yeah, it's pretty straightforward at this point. We haven't gotten into.
+the next levels of the...
+the chain, but I've tried to set it up in a way that it's ready for that next pass.
+That's pretty much everything that we did so far.
+
+Oleksandr Pavlovskyi   40:43
+So, Loquen, you need to do this action, yeah, or demand, yeah, for example, that's not the case, yeah, when you need to do this risk review, yeah, every time, for example, like pull request is creating, yeah, so you can create like a...
+GitHub action here to run this agent, for example, and probably mark this pull request with some tag, for example, which mentions that it's low risk or high risk or critical and so on, to have these, yeah, so you need to have this on demand, yeah, that's not for every pull request.
+
+Loquen MeyersJones   41:16
+Yeah.
+
+Oleksandr Pavlovskyi   41:23
+West this risk analysis.
+
+Loquen MeyersJones   41:25
+Yeah, yeah, right now it's like per per pull request, because that was kind of like, that's the that's the flow that we have been using as engineers, right? We go in and look at the pull requests that exist, and then can apply this, but yeah, I think that automating it on the creation, so depend about already is automatically creating PRs.
+
+Oleksandr Pavlovskyi   41:30
+Mhm.
+
+Loquen MeyersJones   41:45
+So tying that into a GitHub action that runs when the PR gets created, the risk review is automatically created and commented. Yeah, that's kind of the next steps.
+
+Oleksandr Pavlovskyi   41:47
+Mmh.
+Mhm.
+And how about code review? So do you need to do these steps during code review?
+For example, when you fixing something, yeah, to to to validate is another one time, yeah, the risk risks.
+
+Loquen MeyersJones   42:18
+Um...
+Yeah, I mean, I we haven't thought about it that use case, but I think this could be generalized and and applied there and and have that review.
+
+Oleksandr Pavlovskyi   42:26
+Yeah.
+So in this case, it's going to be great to have these instructions like a skill. In this case, it's going to be more flexible for you to reuse these instructions. Yeah, I mean, locate instructions regarding to the
+
+Loquen MeyersJones   42:43
+Mm-hmm.
+
+Oleksandr Pavlovskyi   42:49
+this risk analysis, yeah, like a separate skill, risk analyze, for example. In this case, you can use, reuse this part here with different agents. For example, you're going to have separate agents for a code review, yeah, there you're going to use some other skills here related to the code quality, some code conventions here on your project.
+
+Loquen MeyersJones   42:53
+Mhm.
+
+Oleksandr Pavlovskyi   43:12
+And also, for example, this risk analysis. For this case, you're going to use, for example, only this skill. That's going to be more easier to manage these skill sets, yes, that you need for different tasks.
+
+Loquen MeyersJones   43:22
+Mmh.
+
+Oleksandr Pavlovskyi   43:27
+It's just a recommendation from my side.
+
+Loquen MeyersJones   43:27
+Yeah.
+Makes sense.
+
+Oleksandr Pavlovskyi   43:32
+Alright, great use case. OK, any questions?
+Is you pretty silent today? Yeah.
+Seems like you're impressed, but all right, cool, cool. Oh, guys, thank you all. We are almost in time. Yeah, great use cases, yeah. Let's definitely interested to see that you're using these agent orchestration workflows and workflows, yeah, company company.
+Different tools, yeah, different data sources, like Jason showed, like Deepti, yeah, and the orchestration, like in this idea, this.
+I hope you all inspired. So looking forward for new use cases. Don't forget about our board. So in phase three, we're going to have our regular sessions here where we can demonstrate to share our knowledge, to talk about some abilities or maybe limitations of AI because we all
+should think about the optimal usage of these great tools. So guys, thank you all and have a great day. See you tomorrow.
+Yeah, don't miss a small announcement. Tomorrow we're going to have a demo from SIMD during our cross-functional session. So it's going to be also interesting showcase. So see you tomorrow, guys. Bye.
+
+Sukalya Rajendran   45:01
+Thank you.
+
+Sanjay Kumar Parui   45:02
+Thank you.
+
+Sukalya Rajendran   45:18
+Thank you.
+
+Deepti Pathak   45:19
+Thank you.
+
+ stopped transcription
