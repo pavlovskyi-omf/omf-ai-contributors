@@ -1,0 +1,658 @@
+AI Enablement Cross-Functional Lighthouse PDLC Session-20260611_140029UTC-Meeting Recording
+June 11, 2026, 2:00PM
+1h 17m 59s
+
+Praveen Lakshman   0:10
+In case, hopefully not, if there are two problems which are happening, one is the firewall, another one is the sequence I work.
+So, like people, so that I think you know it's really happening.
+Cool.
+
+Eugene Semenyuk   0:29
+Hello, good morning. Yeah, let's wait maybe one, 2 minutes.
+Well, guys, join us.
+
+Svetlana Stogni   0:37
+Yeah.
+Hi, everyone.
+
+Eugene Semenyuk   0:42
+Hello.
+In the shoes.
+Okay.
+What?
+Let's wait 30 seconds.
+Then I'll start.
+OK, I guess I guess we can start with some small introduction. So, yeah, yeah, while we're waiting for more guys to join us. So, OK, yeah, hi everyone, good morning and welcome back to our cross-functional PTLC session. So, today is a little different from...
+our recent workshops. So instead of building new use cases together, we have an opportunity to see a real example from one of our teams. So yeah, over the last several months, we have been discussing how AI can support different stages of PDLC process from requirements, refinement, through engineer implementation, testing, delivery.
+So yeah, we have explored different tools, agents, automations, workflows, but it's always available to see how teams are applying these concepts in practice. So today, the SIAM team will walk us through their journey and demonstrate how they are using AI across multiple stages of
+the delivery life cycle. So yeah, they will show how AI supports requirements, engineering, testing activities, yeah, and maybe share some of the lessons learned along the way. So yeah, as you're watching the demo, I'd like to encourage you to think about
+your own team and processes consider which parts of the workflow might be reusable and what ideas could be adopted for your area and what opportunities you see applying similar approach
+within your old delivery life cycle. So yeah, with that, I'd like to hand it over to Praveen. Yeah, and the same team. So yeah, Praveen, the floor is yours.
+
+Praveen Lakshman   3:37
+Yeah, thanks, Eugene. So, that would make sense, especially like, let me share my screen, and I think we can get started.
+Okay.
+So, are you able to see my screen?
+
+Eugene Semenyuk   3:56
+Yep.
+
+Praveen Lakshman   3:57
+Okay.
+So, what we have...
+This is more about we go through the complete process where we intake the user story, we'll make it ready for the development, we will go through the development process, the unit testing process, the pull request review.
+And finally, we'll end up in the, like, we'll show how we do the end-to-end regression. So what I will do is probably this is how it looks like overall in a nutshell, where we have the, I have categorized to agent one to agent 7 just for a ease of understanding.
+But we know like when we talk about the agents, there are multiple agents which are work together. So I've categorized it based on the functionality where the agent one is more responsible about creating the user story. Second one is checking the completeness of that user story before anybody.
+starts on the development and basically 3, 4, 5 is more on the development side. How there is one agent which is more like a meta repo agent which has a knowledge of all the other repos and which routes that based on what kind of work is needed. We will go through more detail in this.
+And 6 and 7 is more about a pull request review at a regression agent.
+So this is more about the same thing. Like I'll go through each one of the agent. The agent one is a Jira ticket builder and the readiness checker is the agent 2. So probably these two are product controlled on our side. If you look at that agent operating model.
+One and two is more like a product controlled. Three to six is more from an engineering development perspective, where we go through the development unit testing, the code review, those kind of things. And agent 7 is more related to UA and end-to-end testing kind of thing. I can start. What I will do is first I will go through agent one, agent 2.
+what it does and probably from our side, the Josh will give a demo on that. Then agent 3, 4, 5, 6, they are combined because it does still the unit testing and the code review. We did that previously, we did 2 demos on this and it.
+took a lot of time, probably around 40, 45 minutes, more than that. So what we have done is we have created a video on that. I will play a video specific to this 3, 4, 5, 6, and probably if you have any specific question, you can ask that. And finally, we'll go through how our end-to-end regression is built and how do we use an agent on that.
+So the first agent is a Jira ticket builder. We use a robo agent for that. What it does is basically depends, right, what the agent has access to. It has right now we are given access to the conference documentation, meeting minutes, requirement discussion, or anything. We do it in the teams and all those things.
+So what that agent does is it analyzes what are the business requirement, what is the functional expectation, and it drops a user story. And also it generates acceptance criteria and some of the test cases we can go through. So probably this is what the structure looks like.
+it is configured on our side. So Josh will go through this for the demo, this and the second one, which is more like a readiness checker. So once the user story is ready, as soon as we assign it to the developer, it checks whether it is ready for the developer.
+What it checks is basically the completeness of the user story. Basically, it does it has acceptance criteria that does it has a unit testing, whether it the scope is properly defined, what is the business context of it, and the clarity, whether it is understandable if somebody looks into that or what there are any disparances. Even it looks into.
+Auditability means if you tell attached or some documents or if you mention some of the links and the user story is missing those kind of things, then it will flag those. And even the estimation readiness, if you see anything, there is no user story point associated with that, like.
+These are the readiness indicator where the green indicates it's complete and ready. So yellow means it needs some kind of clarification and red means it's missing or some kind of action is required. So I know like Josh will show that and probably will open for a question if you have any specific.
+like question related to the first two agent and then probably from the agent 3rd whatever Josh has created a user story we can start taking that more from the development side of it. So Josh you want to take over?
+
+Joshua Cortina   9:17
+Yep, thanks, Praveen.
+Let me share my screen.
+Okay.
+Yeah, so Praveen gave a pretty good introduction there of what this agent does. It's actually a custom GPT and it's got the Rovo integration. So whatever the GPT.
+creates, we can automatically ask it to create the story in our Jira backlog.
+So like Praveen said, basically this will intake confluence pages, meeting minutes. You can even just start off conversationally and it'll ask clarifying questions until it feels that it's got all the information it needs to create the.
+Jira ticket as we've defined that we want it. So for this demo, we're going to use a confluence page.
+Put the link in here.
+This is our confluence page. It's got some basic information here with some acceptance criteria and some links. For the purposes of this demo, it's putting a new design on the login page.
+Also, the agent will look at your idea or your requirements and analyze whether it should be an epic with multiple stories or if it's small enough to just be one story.
+So I put in the confluence link, suggesting that it can be a single user story, give some rationale.
+And then these are all the sections of the JIRA ticket that we've defined that we need. So we got our title, we have our user story.
+We've got our description.
+I've got some Figma designs in here.
+scope assumptions.
+Here's our acceptance criteria.
+And then also test cases.
+After every output, it will then, it also gives us suggested story points as well.
+After every output, it will ask if it should be created in your backlog.
+We'll do that.
+All right, so now we can see the new user story, all 1703.
+Here's all our information.
+Test cases.
+and it'll give you a link so that you can go directly to the JR ticket itself.
+Here it is.
+So that's the first piece from the product side or kind of agent one as Praveen described it.
+So the second piece he described is actually with a Rovo agent, which is auto-triggered whenever a story is moved to ready for work. So it'll look at the criteria that Praveen has shown.
+For this demo, I'm going to leave story points blank just so we can see that the agent will pick up on that. Typically, you would take this through refinement, you would assign your points.
+before marking it ready for work.
+So, I'm going to do that.
+Ready for work.
+Now, what this agent does is it will add a comment on your Jira ticket with the red, green, yellow for each category, and it will also send an email to whoever you designate.
+to get the same information.
+But when I scroll down, here's my readiness checker.
+completeness, clarity, auditability. And you can see here for estimation is red because there's no story points. And it gives you the suggestions here down at the bottom.
+That's that covers agent one and two.
+
+Praveen Lakshman   15:13
+Start to assign. Thanks, Josh. Yes.
+
+Joshua Cortina   15:14
+Any questions?
+Yeah.
+
+Praveen Lakshman   15:20
+Brown.
+projects.
+
+Sanjay Kumar Parui   15:24
+Two, one question: How does that? Oh, sorry, sir, Vlad had a question.
+
+Praveen Lakshman   15:26
+Okay.
+
+Sanjay Kumar Parui   15:29
+Hello, next to me.
+
+Vlad Grubman   15:31
+Sorry, sorry, Sujan, a really quick one. Is that custom GPT that you're using, is it shared anywhere or is that just for your team because it's very specific to your team's needs?
+
+Joshua Cortina   15:44
+I can share it with, if I update the permissions, I can, it's not publicly shared to like everybody that it's, I used to be able to do that. Now it says that that's disabled. Like I used to be able to publish it for one main. I'm not, I no longer can do that. I'm not sure why.
+But if I specify who should have access to it, they'll get the link and they can use it.
+
+Vlad Grubman   16:11
+Okay, got it. Thank you. Appreciate it.
+
+Praveen Lakshman   16:16
+Yeah, Swathy, look.
+
+Sanjay Kumar Parui   16:16
+Yeah.
+
+Swathy Lokula   16:20
+Hi, Praveen. Josh, the second agent that once you change it to ready for work, was that another ChatGPT agent, custom agent, or was it all one agent?
+
+Joshua Cortina   16:36
+That's a Rovo agent.
+
+Swathy Lokula   16:39
+Okay, Van der Wajdan.
+
+Joshua Cortina   16:40
+Yeah, yeah, the first, yeah, the first one's a custom GPT with the Rovo integration, and then the readiness checker is a Rovo agent.
+
+Swathy Lokula   16:51
+Okay, so the word that integrated, I don't think.
+Like, do you have an orchestrator running for both?
+
+Joshua Cortina   16:56
+Yes.
+Sorry, what was that?
+
+Praveen Lakshman   17:02
+Please call.
+
+Swathy Lokula   17:03
+So how did it trigger once it changed to ready for work?
+
+Praveen Lakshman   17:07
+Updating the tags is one.
+
+Joshua Cortina   17:08
+Yeah, so there's, yeah, there's you can set up a automated workflow in Jira for when the agent gets triggered.
+
+Praveen Lakshman   17:12
+Thanks.
+
+Swathy Lokula   17:16
+Got it.
+
+Joshua Cortina   17:17
+You can use, you can use certain attributes.
+
+Swathy Lokula   17:20
+Okay, thank you.
+
+Joshua Cortina   17:21
+Mhm.
+
+Sanjay Kumar Parui   17:24
+So how did they know that it needs to generate the Jira ticket in your lane, like CIM lane? Did you have to specifically mention in your configuration with agent?
+
+Joshua Cortina   17:36
+Yeah, so in my GPT instructions, it says to ask if the story should be created in the auth backlog. So it was specific to our team's backlog.
+
+Sanjay Kumar Parui   17:51
+Okay.
+Thank you.
+
+Praveen Lakshman   17:54
+And.
+Oh.
+Okay, sounds good. Let me share my screen.
+Anyways.
+So before getting into the development, I just wanted to go through and talk about what is the user story that Josh created. So basically it is a existing login flow. We do have a login flow and now what we are doing is, I know throughout the one main they are standardizing A1 app design means basically they're coming up with a component.
+which is very standard for an external facing customer as well as there are some design components which are very specific to internal application or internal customer. So we are going through that redesign page. So now if you look at that, right, it is basically we have to modernize the login experience given you.
+one app design and what changes there. So there are change in the links, there is change in the styling, there is change in the CSS and all those things. And how do we control it? We know we use the optimizely flag to, it's more like a feature flag where we route the traffic based on the percentage and see how.
+It's more like a AB testing, how like the A versus B screen is performing. And this is where like we have existing login screen and we do create optimize leaf flag where we should be able to switch between two different screens. And also just for the demo purposes, I think it has a content where we show.
+Because we do support both web and a native iOS app, we do tell this, just we don't want to get into the more of a native, we just tell this because when we start coding, it asks whether this change is for only for the web or a native app. So we just put it, it doesn't include the web, Android, iOS.
+those kind of changes. Make it very specific to the web app. So this is how it looks like. If you look at that, right? Once I run that video, you should be able to see that. This is a whole Figma design and this is a new Figma design. So we are changing from this to this where you can look at that for the email. There is a placeholder.
+trust this device with the checked in, but there is a check mark here and that has been changed to remember this device. And here you could see there is a log space in and there is a login here without space. So there are some changes. And usually there was a customer used to go two different links here to get into what they needed.
+And here it is being like refactored to get into a single page. So basically this is the change about that. You create a new, this is a new Figma design and this is a whole Figma design. And like we will have an existing old design and we will use the optimized reflect to turn on and off.
+are probably like control the traffic, what kind of percentage goes to old versus new design. So before I get into the third agent, any question on this user story?
+Okay, I think I can go.
+Just.
+So, here, this is how our agent 4, 5, 6, 7 looks like. I'll go through each one of them. What we have done is we have created a meta report. Meta report means, as we know, like we work on a multiple reports, basically, so...
+This meta repo will have a reference as to all the repo that we work on. So basically this is more like a router kind of thing which has a knowledge of all the repo. When we give some kind of a task, it knows this change is going to go against.
+which specific repo. So this is more like that. You will see it in the demo when we start running it. And this is more like we have classified it as a agent 3, which contains A meta repo. And here the agents dot empty, it is a common file. What we have done is we should be able to use any kind of a.
+like tool for that, you have a cloud.md, it is just a pointer. So if you want to use a cloud agent, the cloud.md will point to the agents.md. You want to use a GitHub copilot, that will point to agent.md. So these are just a pointer and we have a cursor dot rules. So basically we should be able to run this against.
+any of this agent and what it contains is it has a one is this agent will have a knowledge about all this reports. Basically, it tells, okay, this is a front end workspace and when we talk about a SIM front end workspace.
+You are talking very specific to the customer login flow, customer self-service capability. If you want to update the profile, you want to go through the password reset, you want to go through any of these very specific to that, in this agent it has, this is very specific to SIAM front-end workspace and you need to.
+any of the tasks, you need to add up to this. And one main mobile, right? This is, we have taken only three, we have multiple repositories for this demo. One main mobile, anything related to Android and iOS, you need to associate here. And anything related to end-to-end regression building.
+there is one more repo unit to associate here. So one is it has a, the repo 3 has a information about all the repo and what the functionalities are. And also it has a knowledge about some of the thing which is shared across multiple repos. And for example, we are talking about a Figma design.
+right? There is a rules and CX design system. So these are some of the things. What the rules talks about this, these are very specific to the Figma design. This can be shared across one main mobile, SIAM, front end workspace, whatever the report we have, the rule tells some of the rules it puts it when it starts doing the Figma design.
+Don't create any of your own component. Don't try to invent anything. And we tell there is a CX design system, means there is a design component library where you need to go. When you look into the Figma, you have to go and look into that component library and try to find the one which matches. Don't try to go and invent. In that way, we make sure.
+Because when we look into the Figma design, right, even I see, like I'm color blinded, like I get missed out with the spacing you need to do and the color and all those things. So basically it does a good job of matching that and using that. And if you look at that, right now we are using two MCP server, Atlassian MCP and Fig by MCP, because when the...
+Jira story is created, it should have access to Atlassian to read that Jira story and understand. And it should have knowledge about the Figma as well. Whenever it goes and tries to read the link from the old and new Figma design, it should have. So right now our meta repo is configured with these two.
+So what it does is the agent 3, it has all the knowledge, it goes and reads the user story. Probably I can go through that here if you look at that, right? This is the entry point, agent start empty. And it has all the shared knowledge about like MCP servers and everything. And what it basically does is.
+It reads the Jira story, it goes and look into the Figma design, it looks into the selected and impacted report. When it looks into those report, it knows like, okay, this login flow is very specific to the SIAM workplace. Also, there is a Figma design with the rules and a design component library.
+Then what Agent 3 does is it will hand it over to Agent 4. It will tell this is the user story. This is specifically affecting your repo. Also, it tells it when you are building it. And this one, I'll talk about this Agent 4. So he tells it before you start.
+start applying your own rules, your own architecture specific to the repository, you go and look into the rules and the design system and make sure when you are building to that, it follows the same rules and you pick up the component from the design library. So then it will hand it over to the...
+agent 4. So any questions specific to the agent 3?
+I think I need to check.
+Okay, so then what Agent 4 does is, if you look at that, it has an index file. Again, this index file tells where to go and look into that, and there is an architecture testing, planning, and response. So it is very specific. So these agents, as I said, these...
+Agent 3 agents are more like a used across all the repos. It is more like a knowledge sharing, but these are very specific to the repository. Here what we does is agent 4, we will go through, we will show that in the demo. It goes to the architecture. This architecture is built in a way like.
+In the agent 4, what we tell is what is the pattern followed? What is the naming convention used very specific to this revo? How do we build a service layer? And what kind of state or session management we are using at? So basically it will have all the information very specific to the architecture about this. So what it does is...
+It picks up those information very specific to the architecture and also it goes and learns I need to pick up the rules and design system from this library and it knows how the repo is built. Based on this, the agent 4 will start generating a code.
+What we do is usually we do it in a plan mode. It shows all the changes that need to be done. And basically once everything looks fine, we can ask to implement it, then only it will implement it. Once it usually it asks whether it will go ahead and implement A end-to-end regression and unit testing together. What we do is, because sometimes we keep asking for some of the changes, it will not be perfect when we do this kind of work.
+So we will tell now just do with the coding. Once the coding is complete, everything looks good. Then there is a next agent which will start doing the repo. We tell, okay, now everything looks good. Now go and generate a unit testing. So dear, you look at that, right? Testing. This is one of the agent where I think.
+I can go through very specific to those reports, probably. And I think, yeah, you'll understand when you go through the complete demo of this three to six reports, and we will take it separate for end-to-end regression. So see, this is the agent 4 where it is a very application-specific repo.
+It has the architecture, like what kind of design pattern, what kind of how the services routes are used, what kind of naming convention. And this testing overview is more about the unit test cases generation, where it identifies what are the components changed after once we implement that.
+And we make sure everything, like if there is a first condition, if there is any of the error handling, we have given that don't test the component initialization or something like that, right, which is more basic kind of thing. Go through and make sure every logic is being tested, if there is any error handling path, if there is any.
+branching path if there is any route guards, utilities. So this is where Agent 5 kicks in and start generating and make sure we can set it telling like 80% of the test coverage, right? This is what the Agent 5 does. And then Agent 6, what it does is once that...
+development and unit testing is done, then it is more like a pull request review. It tells, okay, you have completed a development, you have done the unit testing. Should I create a pull request and send it to the developer? When you tell, okay, just go ahead and do the pull request here, I wanted to bring it up.
+There is, as part of a pull request, as a continuous integration, there are very basic things which the continuous integration does, and there are certain things the agent does. So I wanted to separate this out. What this continuous integration does is it usually builds, runs the unit test, makes sure everything is running, it has that linting formatting or whatever the application it checks, and it makes sure all the unit tests pass, right? This is not part of the agent.
+agent. But when it comes to the agent, right, when what it does is it goes against those code changes, it reviews the code against the convent, all the rules we have set, it goes, looks into the rules, the architecture, the text expectation. So this is more about a agent review gate. If you look at that, it.
+It checks for all these things, naming file convention, the architecture, the service layer patterns. We are creating a service, the routing standards, are we following it? If you have set a unit test coverage, does it covers what we have? And are we using a proper error handling and logging? So basically anybody...
+Before it gets into the human reviewer, whenever we raise the PR, whoever is the developer, there is a co-pilot which runs and create some of the reviews and they and even it tells based on the number of files changed, it tells whether it is a medium kind of risk or a high risk kind of thing that is a PR.
+risk as well. And then based on that, you should be able to look into that and hand it over to, once you go and close that comments, then only you will get a human reviewer, the next senior developer kind of thing where they look into.
+The second kind of a review are more like a functionality context and they will approve it. So basically, this is more about agent 3, 4, 5, 6. They all work together. And I know probably you, I think it's better you go through the demo. I can, it's a 20 minutes video.
+Probably. So what I would do is I can run the demo, the video, and whatever the time you can note it. And if you have any question, you can keep it open. Maybe after the demo, after that video, I will open it for if you have any specific questions. Sounds good.
+Okay, and you should be able to increase your volume if you are not able to hear if it is a low volume or something.
+
+Eugene Semenyuk   33:47
+Pe.
+Yeah, looks like we don't hear.
+
+Praveen Lakshman   34:00
+What was that, Eugene?
+
+Eugene Semenyuk   34:04
+Yeah, if uh, yeah, if you have some sound or on the video, so yeah, we don't hear it.
+Maybe you need to...
+
+Praveen Lakshman   34:11
+You can't hear it.
+Ah.
+
+Eugene Semenyuk   34:14
+Maybe you need to share the screen with a...
+Audio sharing.
+
+Praveen Lakshman   34:22
+Audio sharing, uh, but you're not able to, yeah.
+
+Eugene Semenyuk   34:25
+Let me check. Yeah, yeah, we are not able to hear.
+
+Praveen Lakshman   34:31
+Okay, let me check this if I'm able to do the audio sharing.
+
+Eugene Semenyuk   34:35
+Yeah, also share top audio.
+
+Praveen Lakshman   34:36
+It.
+
+Eugene Semenyuk   34:40
+There should be a setting.
+
+Praveen Lakshman   34:40
+Ohh...
+
+Oleksandr Pavlovskyi   34:40
+Yeah, while sharing, you need to include sound. You need to include sound, yeah. Stop sharing, press stop sharing, and then you're going to have like a toggle item, yeah, where you need to.
+No, just, just try to re-share.
+Yeah, stop sharing.
+
+Eugene Semenyuk   34:44
+Yeah.
+
+Oleksandr Pavlovskyi   34:55
+Yeah, and then choose, yeah, add sound, something like that, or include sound.
+
+Praveen Lakshman   34:55
+Okay.
+
+Svetlana Stogni   34:56
+The.
+
+Praveen Lakshman   34:58
+But.
+
+Svetlana Stogni   35:00
+In the cold sound.
+
+Oleksandr Pavlovskyi   35:02
+Yeah.
+
+Praveen Lakshman   35:04
+What should I include in the speech sound, right? Yeah.
+
+Svetlana Stogni   35:08
+Yes.
+
+Praveen Lakshman   35:11
+I thought you said one.
+Speaker built in. No, I think, see, I'm in the office probably. I'm having the headset.
+
+Sanjay Kumar Parui   35:19
+Yeah.
+
+Praveen Lakshman   35:23
+I think I'll be able, unless I go and remove this headset. Was you have this video, you should be able to play it, right? Share your screen.
+
+Vazgen Ayrapetyan   35:34
+You don't have the video?
+
+Sanjay Kumar Parui   35:35
+Praveen, I just shared some screenshot, maybe you can use that.
+
+Praveen Lakshman   35:40
+What's that?
+Here.
+Include sound. Okay, where is it? Share and include sound. Okay, let me try to do that. Share, include sound. Okay.
+OK, are you able to hear that?
+
+Svetlana Stogni   36:09
+You are not yet.
+
+Sanjay Kumar Parui   36:09
+We are not sharing it.
+
+Praveen Lakshman   36:12
+Ohh.
+Harry.
+I would say, yeah.
+OK, how about how about now description of the task?
+
+Svetlana Stogni   36:27
+Yeah. Yeah, we can hear.
+
+Praveen Lakshman   36:28
+And OK, OK, let me start from the beginning, OK?
+Okay, let's get started. I'm gonna be demonstrating the work of Agents Three and Four, as Praveen described. I'm gonna pull up the JIRA tickets so we can quickly look at what we're gonna be implementing. As you can see here, this is to implement the one app login.
+redesign behind and optimize the feature flag. So we want to be able to flip that flag on and off to go back to the original design and on for the redesign. So this has a description of the task and the name of the feature flag. Where is it? One app login.
+Which is already created and optimized, we can see it here on one app login, it's currently running, so as the agent implements this task, we'll initially see the new redesign immediately, and then we'll be able to toggle it off to go back to the old design.
+And notably, here we can see the old Figma design and the new Figma design. And we can open Figma to look at those links. So here, as you can see, I also have the application running. And this is the old design, which matches this Figma old design.
+And here's the new design. You can see there's some changes, such as the new toggle. There's like a placeholder in the input. The labels are a different color, and we have some alignment. It's more aligned to the left side. And we have some new links here.
+For the URLs for these new links, those are also included in the JIRA.
+Right here, create online account and find your application.
+And.
+So, to implement these changes, we can go to, we have this what we call a meta-repo, which is Siam AI Workspace. Basically, it's just a repository that contains links to all the other relevant repositories. So, if we look in GitHub, we can see here...
+Siam AI workspace. It has links to Siam front end workspace, one main mobile, and so you can click these to go to the actual repository. So this repository doesn't have any application code. It's more of a supporting repository as the parent to do AI workflows. And so it has...
+Different instructions and things for the agent, but the changes essentially it'll create pull requests in any of these associated repositories which are impacted by these changes.
+So we can, and you can see those here as well. So the skill is implemented using a skill MD file. And essentially, what it does, it goes, uses the MCP servers for Jira, Atlassian, and...
+Figma to get all the information. So, the first thing I'll do is look up the Jira ticket; it'll determine the requirements and whether this constitutes a design change. Of course, this will be a design change, as the example that we're using, and if it is a design change, it will require a Figma link for the new design.
+It will find it automatically in the JR ticket.
+So I won't have to ask this for one. It's going to ask some clarifying questions. These are usually going to be...
+
+Svetlana Stogni   40:19
+Yeah.
+Praveen, please unmute yourself.
+I can't hear anymore.
+
+Eugene Semenyuk   41:05
+Yeah, looks like you are muted and we can't hear.
+
+Vazgen Ayrapetyan   41:08
+I think we lost sound.
+
+Eugene Semenyuk   41:11
+Yeah.
+
+Svetlana Stogni   41:12
+You, can you unmute Praveen?
+
+Eugene Semenyuk   41:15
+No, no, no, I cannot.
+
+Praveen Lakshman   41:17
+So, we use here, plan, OK, I did to review the changes before it starts generating code.
+
+Eugene Semenyuk   41:19
+Yeah, no, it's OK.
+
+Svetlana Stogni   41:20
+Mhm.
+
+Praveen Lakshman   41:25
+So, the first thing it'll do...
+Let me drag these out of here. The first thing it'll do is look up the Jira ticket.
+And I'll have to give it permission a couple of times to retrieve those things using the MCP server, so that's for the Jira ticket.
+And.
+As you can see here, it looked it looked up the full JIRA description, and so it has the Figma design links and the scope and the links to use here, so it also has the test cases, so it's going to write the unit tests at the end of the implementation efforts.
+And...
+So it recognizes that it needs to be behind this feature flag.
+So it's going to start essentially looking for...
+Things to use, so I can see the here that it found the optimized the service that we already have, so it's gonna...
+Most likely, it's going to find this function, and this is not in any way planned. We didn't tell it to, you know, to use this existing service. We just said to put it behind the flag, and it found that we already use a common way of doing it. So, here it's trying to look up the Figma designs and...
+Before I allow that, I just want to go over some things that make this possible. There's a rules XML file, which is basically the rule book. It tells the AI how to implement designs in general, things like always using semantic color tokens, respecting platform boundaries like web and mobile.
+implementing all possible states, like hover state, disable state, error state. It's basically just a do this, don't do that type of guide. And then there's the CX design system catalog, essentially. And this tells what exists in the CX design system and where to find it in.
+Figma. So if we look at Figma here, we have the CX design library. And there's a page here per component type. So we have all kinds of designs for reusable components, like carousels and buttons and things like that. So anything that the AI sees in this new design, it has to assume like...
+that this is the input from, you know, that page about inputs here, right? And then this button and this toggle, they all have a page here that they can look at reference. And so these are just basically the links. It's the catalog of components. So right now it's asking for permission to use the Figma MCP server to look up the two designs. So I gave it permission twice.
+And one for the old design and one for the new design, so I'm just gonna look those up and post the screenshots here, so we can see that this is the new design from the Figma.
+So it notices here what changed in the design. So it sees that the login is left aligned. It sees that the top navigation is the CX web nav bar component from the Figma CX design library. It sees to use the tokens that we've defined in the design system. It sees that there's a new toggle.
+And the two links at the bottom, right? So, so now it's gonna go get that URL that we left the Jira ticket for those two new links. All right, so here's the client that's presenting to me.
+Yeah, just skimming all this through as a developer, I can see that it's using the existing optimizing servers. It's going to create a flag. It's going to use those two links that they found. It's going to wrap certain elements in the login.
+component based on those flags. So it's going to use those CX design components that it found. It's going to add to the track IDs for clickstream to track analytics for the clicking on those, clicking on those new links. It's going to give me a little chart here. So basically.
+I mean, this looks good to me. If it's not native, it's going to call to get that flag. And if that flag is true, it's going to render the new design. And if it's false, it's going to render the legacy design. And of course, if it's not native, it's also going to, I mean, if it is native, it's going to render the whole thing. Because we only wanted to implement this in the web. So it tells me, you know.
+Assumptions, such as that this flag has already been created in optimizing.
+
+Eugene Semenyuk   46:33
+Looks like Praveen is made it again.
+
+Vazgen Ayrapetyan   46:36
+And yourself, otherwise yourself.
+
+Eugene Semenyuk   46:42
+Maybe someone muted Praveen.
+So, yeah, please do not mute Praveen.
+
+Praveen Lakshman   46:53
+Here.
+Yeah.
+Yeah, I think the last night there was.
+
+Eugene Semenyuk   46:58
+So yeah, thank you. Thank you, Praveen.
+
+Praveen Lakshman   47:02
+So just to give a context, now he went for the implementation, looking into the other plan mode. So should we have seen this initially, but it just glitched out a little bit. Basically, it's all the same information that I just explained. This is the plan and we just have to click build. So I'll go ahead and click that.
+So it's going to start by creating the branch, and it's going to create the same branch name in all of the affected repositories. So it's going to get my permission to do that. And we should see that it's going to switch from the main branch to the new branch. There you go. I saw that right there. Now it's on the feature branch, where it's going to make the changes.
+And we should be able to see the changes in real time as they come in to Git from here. Okay, so the first thing it did is it created those clickstream IDs for tracking clicks on the two new links.
+You need to find the URLs for those two links that are going to be at the bottom. And when it goes to the login component, we can see it started to import the optimizer service. And here's the name of the flag that it's going to use. This was all in Jira. And there you go. It's going to add a property on the component, which it's going to toggle based on the flag.
+And then it's going to inject that service. And then eventually it should also make the request to check the value of the flag. There it is. So if we're not in native, so if this is a web, we're going to make a request to optimize the, to check if that feature is enabled. And if it is, we're going to set that flag. And so that property is then going to be used to control the rendering.
+So, I'm assuming the next changes is going to be in the login component HTML, and then the CSS, so we should be able to see these changes since that optimize the flag is currently enabled. Okay, we went ahead and generated those changes, so this is for the side of the enabled flag, and this is kind of below is the legacy implementation.
+So we should see some changes here on the left side already. Okay, so it's not fully there yet because the CSS is not there. So give it another minute. But we can already see that there's a placeholder. It changed the text and put it on the other side.
+It added those two links.
+Although it's not styled yet correctly, and we can see here on the right side that it's trying to use some of the design system tokens. And so the last thing it generates is usually some style sheets, which is what it's doing right here. So we should see the improvements. It'll start to look more like.
+The Figma design, right? So, we see the new color of the tooltip. Here's the Figma design. We can see that it's not finished in the sense of those links are not left aligned. There's an icon missing and the placeholder text.
+So, I would say it's a bit of a different color, and the login title is not left aligned. So, since it's moving on right now, writing the unit test, I just want to stop it and tell it, let's say that the icon is missing in the toggle with the icon.
+Pretty great, and then I'll just want to, and let's say the new links.
+as well as forgot username slash forgot password should be left blind. Thank you. The placeholder text has a lighter color.
+And title should be left lined.
+And the text of the labels should match the Figma, so it doesn't always get it on the first try, so we're nudging it in the right direction, so it'll just address those refinements real quick, and then we should get...
+Get it closer to what we want here.
+Okay, so it seems to have found the check mark SVG, and then it's just going to make a second call to Figma to double check. So it notices that the CX toggle on.
+It's supposed to show the check, so I'll let it just do its thing there.
+And we'll see the result. So it seems like the check mark that we already have is probably a little bit different than this one, so we decided to add a new one. I toggle check SVG.
+And then it's going to make that replacement in the CSS. So hopefully that'll have a good result. There we go.
+That looks perfect to me. And then let's see if we can get all those other adjustments in place.
+All right, there we go. So now it's finally got what we wanted here. So we can see that it looks pretty good. I'll just refresh that there. It's very close. We might have to do some manual adjustments or we can just talk to it to continue the way we have been making adjustments already. This looks good to me to continue. So I'll continue.
+If you have to, if there's a mobile, mobile, right, right, right, right, right, right, right, right, maybe, and you get a regular, I mean, they were telling us for other reasons why.
+That's true. The documents here. Thank you very much. While he's doing that, we can actually test. Yeah, this is good old mobile Alabama, 86 their documents, which is fine. I got this, so we need documents. I mean, I understand what you said. I think he has done with the agent three and four, now he's going with the agent 5, which is more like a unit testing. Wanna plug in?
+I think it was Castleberry.
+And then let me refresh one more time. Okay, so there we go. So now we're back to the old design, because I flipped off that flag. And you can see this is the old design untouched. And then I can run that flag again.
+And then, once again, I will reload without cache.
+And there we go with the new design.
+So, we can see that feature flag is working through Optimizely, and in the meantime, here it's generating some tests.
+So, these should be tests that are based on either the initialization test or based on the test scenarios in the JIRA, so I'll let it move forward with those. All right, so it's showing in all the tests.
+First.
+I think sounds good.
+Okay, so it's asking me some more questions. Earlier you chose to defer the end-to-end decision. Okay, yeah, so I'm going to let Praveen demonstrate the end-to-end test coverage. So let's skip any further tests.
+So now it's going to proceed to create the pull request.
+So, here we can see that it created a commit on our feature branch, and so now it's going to push it.
+And after that, it needs to create a pull request.
+All right, so now that it's pushed, it's going to try to use the GitHub MTP server.
+to create the pull request, but actually in cursor we don't have access to that yet, so it's going to fall back to using the GitHub command line to achieve the same thing.
+And so, this is the...
+Permission to.
+Create the PR via GitHub CLI.
+All right, so it says pull request 570 was created. And then it's going to add a comment.
+Of the complexity score.
+So, the complexity score is decided.
+Based on some criteria.
+that we have here, we have a grid. And then based on that, it's going to add a comment on the pull request with the complexity score and the justification for the chosen range. And so here we see the branch name and the pull request. So I'll go ahead and open that up.
+All right, so here we see the pull request. It says what changed. It has the full body of all the changes, the old and the new Figma designs, the acceptance criteria, the test. Here's the comment for the complexity score. So I rated this a 52 with its rationale here, mainly that this was tied to a single.
+Component.
+And also we have the CI/CD checks here that are running, but these are not AI-based. If we scroll up here, we can also see that Copilot is reviewing this. So as soon as a pull request is created, it's going to trigger Copilot to start reviewing it. And then we can go ahead and view the session here.
+And here we can see that GitHub Copilot is reviewing this work. So we have the AI that created the pull request, and then we have a second AI, which is going to basically check its work.
+Okay, so the pull request is now reviewed and we can go ahead and see the comments from Copilot. So if we scroll down here, all right, let me just refresh that actually.
+And here we can see the pull request overview, and we can see how it's made several comments.
+We can go ahead and address these either manually or there's also a button here to commit the suggestion if it looks good. Although I do recommend usually pulling the code anyways and retesting it. And also it looks like we missed some accessibility things, so we can put those into future instructions to always take care of the accessibility requirements.
+All right, so that concludes the...
+part of this PDLC, which generates the pull request and adds the comments and does the pull request review. And I'll hand it off to Praveen to talk about the regression testing agent that we have. Okay.
+Yeah, I know we have we don't have much time, right? Is it okay if I extend it for 10 more minutes?
+
+Eugene Semenyuk   58:17
+What do you guys think? So, yeah, let's, yeah, for...
+Yeah, for those who need to go, so yeah.
+Yeah, we have a recording, so yeah, for those who have time, so yeah, let's stay, yeah, and take another 10 minutes.
+
+Praveen Lakshman   58:39
+Yeah, yeah. Anyway, this is getting recorded, so they should be able to look into that as well. So, recording. Okay, sounds good.
+
+Eugene Semenyuk   58:47
+Uh-huh.
+
+Praveen Lakshman   58:51
+So yeah, I know like I think we can open it for last for the question or I don't know is there anything anybody feels anybody has any specific question on to that or we can get into the author end-to-end regression testing.
+Okay.
+So, once the development everything is done right, usually what we deployed is we have a art regression tester, we have created our own test RNS for this. The way it is built is we have a test RNS which is built in the angular on the front end with the Connect API.
+Probably I can try to run it and show it basically to know like how it is done. I'll try to run it further. You should be able to test it locally, auditing any one of the test environment. So basically if you...
+If you look into this, this is our test harness. You should be able to check the server health. And these are some of the available test accounts. Usually we use it. We use it for make sure we have some of the customer we are active and SMS enrolled, one with just the email enrolled, one with the expired password.
+one with the pending status, non-existent. So we have a couple of them. It shows which is ready and which is not ready. And this is completely built in using AI. So this is what test harness and connect API. These are the two things which is used to display the data and show what has been done. And then at the end, we have an end-to-end tester.
+basically, which runs those testing. And what we are doing is we are using a cucumber, more like a business-driven development, which even the product team should be able to go and manage it. If we look at that, this is the front-end workspace. Let me go there.
+And.
+If we go and look at this right, agents line.
+So, uh, so I, I, I would say that...
+Here, if you go and look into the feature, we have separate feature. You can write it for web and mobile. For example, if you look at forgot username, forgot fetcher, right? If you look at the scenario, the way it has been written, basically we are telling pending profile given the login name is launched in the browser with this when I tap.
+the forgot user name link when I see that, then I enter the details when and then like what happens, right? This is usually it is in the business language rather than doing more like a technology language where test all test before those kind of things. So we have done a cucumber for that and probably.
+and also we have built a skill. For example, if you want to make any changes, because if it is very specific to the web, right? So forgot username, forgot feature, anything you want to do it, you should be able to tell, implement, implement end to end or.
+Update end-to-end feature, so they should take off take care of updating the existing flow or implementing the new flows, so...
+See, this is what update the test. You create a business feature and you should be able to update and do that. The AI will take care of that. There is a skill layer which usually takes care of it. What it does is there is a rule and skill layer again. The rule layer tells there is a test darkness there. Whenever you are making a change, make sure you cover those test darkness and connect API.
+And also it tells what are the boundaries, what needs to consider. And the skill layer talks more about the future, very specific to the web and mobile, telling what gets updated in the web and what gets updated in the mobile. For example, if I just want to show this, right, Slay, right, Chromium, the login flow, what we did now.
+There are three scenarios. If you look at that right now, I will just go and run it on the FDC 01. So if I run it, one is just to do the submit blank field, like you want to test it. It's directly I'm testing it. It goes, it is testing with the.
+old login flow, old login screen. If you look at that, one is a black screen test is done, and probably other one is a pending profile where it has to show a message telling it's not been activated. And we use a playwright for this.
+And this is where it just shows telling like, it shows SMS, active profile with email and rolled, it shows the SMS. So what we do is usually we go here and we store the screenshots, basically telling.
+Um, and that can go to the regression here, that's all been taken care of, that's all, that's all working news, so this is where this is the hacking place that Sean's done.
+So regression. So if you look at the date by this, right, I just run the login flow. You should be able to go and capture that whole screenshot. This is for the active profile MS. This is what, this is submit blank field. Now I can, like I should be able to run the same test in the native mobile app.
+because of the time I don't want to go through this native mobile app testing. What I will do is, right now this has been, we are trying to run this test with the, like FTC 01 with the whole log in flow. Now if you look at that, if I should be able to run it for the.
+Local host here, let me start that local. This I have taken a changes from what was created a pull request. This will show the new login flow instead of the one I was hitting the test server. So now if you go and look into this.
+So now if you look at this, this has a placeholder and if there's a login, right, there was a space here, but if you look at that, there is no space in the login button. This is a new one. So what I can do is if I try to run this test, I can update this, I can update and show you how it looks like. If I...
+I will make it as a local instead of a DC 01. Now it will try to run this test locally. So now if I run this test, it should fail because the login button it's trying to click doesn't exist. So now if I go there, refresh it, now what I would do is I will try to...
+go there and try to go to the login screen where it tries to log in, right? And it should see the web mobile. There is no SMS. It should present with the email MFA, right? When I try to run this.
+That's.
+I think it's from the cache. Let me try to do this.
+If the ALB does get set up, so at this point, we're just focusing on testing, so we will need the ALB for product. This is really good testing, right? So, my understanding is again, so this is part of the larger catalyst initiative. So, my understanding is that this is one of the two,
+So, I apologize, I'm just, I'm more focuses on this, so, so, but this, this is, I think, something we're looking for.
+So, that's why it is, right? Just a follow-up on it is that...
+So, at least notice it is there, so I wanted to understand it is how of, you know, how advanced in advanced, just kind of automation application via Skype has a has been assessed. OK, now it got a error telling like the login flow what it is trying to run, right?
+it couldn't pick up that flow. Now what see the name login get rolled by button. It tells this it is looking for this login, but there is when we run that locally, we don't have a space there. So what we can do it here is probably what I can do is.
+Like.
+This is the test case. We wanted to pass it. And what we can tell is we can update the scale. Here, I can tell update end-to-end future. This is for the web, don't do it for the mobile. And I would just put the future name. Then basically what it does is.
+It takes care of those things, so right now.
+And, yeah.
+So, so now we...
+Have this temporary solution to the stuff.
+So, the idea is to...
+Speed.
+Two.
+Pizza.
+So, when we go, I think this is ready, that happens to start all of that, so I knew that this work, get that loaded, this will be on the services, so it will try to run that.
+So, what, what we, I guess we...
+So see right now. So if there are any that are out.
+Looks like what happened is my scenario got deleted. That's why it was causing a lot of issue and it went and added everything again.
+So this scenario, somehow it got deleted before the thing, but I think, yeah, should be able to do that.
+It's trying to run it.
+Oh, I'm running the reset password. Sorry for that. I have to go and run this.
+And, really, just, just, looks like this is an issue with that, where I think...
+I would have looked into that before the demo, so...
+App.
+I think it started building the future because it was not there because I missed out this probably. So it started building everything now because this was missed out.
+This is work. I haven't seen the verse. I guess.
+I'll get this cleaned up. And then what I'll do. Yeah. So it is more like absurd. So I'll just keep it for open question. Let it build it. Because now what it will do is it is making a change everywhere because somehow it got deleted here. What about the future I'm running it. And now it is trying to build the whole thing. I just wanted to show the update feature of it.
+So, I think I can show it running. See, it is it is completely showing what got changed, everything, and so it tells the validation pass, we should be able to run it now. It it basically it.
+it built it once again. Like I was trying to just make a change there and try to see if I could do it now. Okay, sorry, I'm again running the reset password test cases. I have to go and run the login one. So what I would do is close this, we'll go to the login flow.
+And this is the one which is running it locally.
+It's different.
+A new location that we're just opening in business, so then you have a brand new location, so any regular OK, yeah, so any any question I think it could it should have not build it from the beginning, somehow I missed it out, so basically if you look at that, it added a scenario again.
+I was supposed, it was supposed to go and modify this scenario. So it basically ended up building the whole thing in this. So at least we should be able to go and try to do that, update end to end or implement end to end. It will implement a new feature or it will update an existing feature, whatever we have in place.
+So that summarizes the all agent we have, one to seven, where we started with the user story creation, the readiness, then the agent 3, which will route telling which report got affected. The 4 is about the development, 5th is about the unit testing, 6th is about the...
+pull request review and the 7th one agent is more about the end-to-end agent. So any I'll open it for question if anybody has any specific question on this. Okay.
+For this share, I think there has to be one, but so, and I all may have shared with you as well here, but LinkedIn, either Claire, are you are you a?
+
+Eugene Semenyuk   1:14:05
+Yeah, guys, feel free to ask any questions. So, yeah, but by the way, yeah, thank you, Praveen, for for the great demo. So, yeah, I think it is very expiring. So, yeah, feel free, yeah, guys, feel free to connect with.
+Praveen, if you, yeah, if you see, if you seen that, yeah, you can reuse some ideas.
+So yeah, I guess same team will be happy to share their ideas, assets.
+And so on.
+Yeah, any questions?
+I can speak English.
+The.
+
+Oleksandr Pavlovskyi   1:14:47
+Yeah, I have a question. Can I ask you? Interesting to hear your feedback. So, as I understand Praveen, you started to use this flow, yeah, for your production tasks. Do you feel some changes here regarding to these agentic flows, yeah, comparing with the...
+
+Eugene Semenyuk   1:14:48
+If...
+Mhm.
+
+Oleksandr Pavlovskyi   1:15:08
+manual experience, yeah? How do you think how the human in the loop role become important, yeah, after this? Or we can move to the, I don't know, absolute automation. I don't know, in the future build, for example, like a dark factory or something like this. So how do you feel? Because your workflow is very impressive.
+
+Eugene Semenyuk   1:15:19
+MCB.
+Select somebody.
+You doing?
+
+Oleksandr Pavlovskyi   1:15:33
+Yeah, you combine in different tools, yeah, and that's a good start for the optimization.
+
+Praveen Lakshman   1:15:41
+Yeah, I think we have made sure every flow we go right, because there is a human integration required. Like as I said, the first one and the second one is gone by the product. Once it creates it, they are going to validate it. And if you look at that, the flows, right, we go in the planning mode and we implement and even the code, the PR.
+So basically if you look at that, even though it is automated, we have made sure everywhere there is a human approval, human is required for now. Yeah, that is, that is, that's our, basically, if you look at that, that's a limitation right now we have, right? So even though we automate everything.
+At least we make sure there is a human approval needed for the every agentic flow what we have in place now.
+
+Oleksandr Pavlovskyi   1:16:26
+Mhm.
+
+Praveen Lakshman   1:16:29
+Fest.
+
+Oleksandr Pavlovskyi   1:16:29
+Mhm.
+
+Praveen Lakshman   1:16:31
+Thank you.
+Vacation, for your vacation, there, there's, there, there's other, that's OK. I am sorry about that. Sure, thanks for sure. You were going to, yeah, I actually, I'm having this conversation, you go there, yeah, it's everything else that you put on this afternoon, so...
+
+Oleksandr Pavlovskyi   1:16:36
+It's.
+Have you had any thoughts here to create agencies that are going to help to do this approval? I mean, I mean to give more guarantees regarding to the qualities of the generated responses here regarding to, yeah.
+
+Praveen Lakshman   1:16:57
+Yeah, I think till we feel more comfortable, right? We are not thought about that, but yeah, I think once has and when this matures, because this requires again a fine tuning, right? If you look at that, even the development we did, we fine tune something and I ran into issue when I'm trying to do the end-to-end regression. So.
+
+Oleksandr Pavlovskyi   1:17:01
+Mhm.
+
+Praveen Lakshman   1:17:16
+Till we get more comfortable team users that and we get used to that, I think that that is the next phase where we could think of more like some of them where we really doesn't need a human get approval kind of thing. But for now, yeah, it is because it is it is kind of we just developed that and we have started.
+working on this, it's more like we go through and review it every time.
+
+Oleksandr Pavlovskyi   1:17:42
+Cool, cool. So, thanks again for the impressive demo, and good luck, guys. Is it?
+
+Praveen Lakshman   1:17:48
+Thank you.
+
+Oleksandr Pavlovskyi   1:17:50
+Mhm.
+
+Eugene Semenyuk   1:17:51
+Thank you. Have a great rest of the day and see you.
+
+Praveen Lakshman   1:17:54
+Yeah.
+
+Eugene Semenyuk   1:17:55
+Thanks.
+
+Praveen Lakshman   1:17:55
+No, no.
+
+ stopped transcription

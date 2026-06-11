@@ -14,21 +14,23 @@
 | Mia (Xiaoling) Zhou | 15 |
 | Amit Kumar | 14 |
 | Eric Trenz | 14 |
+| Praveen Lakshman | 14 |
+| Sanjay Kumar Parui | 12 |
 | Shoaib Naseem | 12 |
 | Amit Sharma | 11 |
-| Sanjay Kumar Parui | 11 |
+| Vazgen Ayrapetyan | 11 |
 | Anjali Pabbareddy | 10 |
 | Hai Le | 10 |
+| Joshua Cortina | 10 |
 | Joshua Smith | 10 |
 | Loquen MeyersJones | 10 |
 | Sanjay Parsi | 10 |
 | Uda, Balanarasimha Rao | 10 |
-| Vazgen Ayrapetyan | 10 |
+| Swathy Lokula | 9 |
 | Divya Ramkumar | 8 |
 | Doug Ball | 8 |
 | Muhammad Adnan Farooq | 8 |
 | Ravi Nachimuthu | 8 |
-| Swathy Lokula | 8 |
 | Ashwin Jain | 7 |
 | Denis Platonov | 7 |
 | Sam Jayavelan | 7 |
@@ -42,7 +44,6 @@
 | Swetha Koppula | 5 |
 | Heath Fest | 4 |
 | JT Tabencki | 4 |
-| Praveen Lakshman | 4 |
 | Brooke Borowiak | 3 |
 | Byron Purdy | 3 |
 | Haris Khan | 3 |

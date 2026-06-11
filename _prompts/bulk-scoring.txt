@@ -1,10 +1,10 @@
 Use the 'score-meeting' skill to score the following meeting transcripts using the recognition rules.
 
 Iteratively generate one Markdown score report per session and save each report to:
-C:\Projects\OMF\Reports\omf-ai-contributors\output\lighthouse-sesssions
+C:\Projects\OMF\Reports\omf-ai-contributors\output\cross-functional_lighthouse-pdlc
 
 Process the sessions in order.
-C:\Projects\OMF\Reports\omf-ai-contributors\input\txt\lighthouse-sesssions\2026-06-10 - AI Enablement_ ENGINEERING Lighthouse Session.txt
+C:\Projects\OMF\Reports\omf-ai-contributors\input\txt\cross-functional_lighthouse-pdlc\2026-06-11 - AI Enablement_ Cross-Functional Lighthouse PDLC Session.txt
 
 
 --------------------------------------
