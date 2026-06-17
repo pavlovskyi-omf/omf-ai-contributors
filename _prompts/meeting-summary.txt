@@ -1,0 +1,43 @@
+Use meeting transcripts: 
+'C:\Projects\OMF\Reports\omf-ai-contributors\input\txt\cross-functional_lighthouse-pdlc\2026-05-14 - AI Enablement_ Cross-Functional Lighthouse PDLC Session.txt'
+'C:\Projects\OMF\Reports\omf-ai-contributors\input\txt\cross-functional_lighthouse-pdlc\2026-05-19 - AI Enablement_ Cross-Functional Lighthouse PDLC Session.txt'
+'C:\Projects\OMF\Reports\omf-ai-contributors\input\txt\cross-functional_lighthouse-pdlc\2026-05-21 - AI Enablement_ Cross-Functional Lighthouse PDLC Session.txt'
+'C:\Projects\OMF\Reports\omf-ai-contributors\input\txt\cross-functional_lighthouse-pdlc\2026-05-26 - AI Enablement_ Cross-Functional Lighthouse PDLC Session.txt'
+'C:\Projects\OMF\Reports\omf-ai-contributors\input\txt\cross-functional_lighthouse-pdlc\2026-05-28 - AI Enablement_ Cross-Functional Lighthouse PDLC Session.txt'
+'C:\Projects\OMF\Reports\omf-ai-contributors\input\txt\cross-functional_lighthouse-pdlc\2026-06-02 - AI Enablement_ Cross-Functional Lighthouse PDLC Session.txt'
+'C:\Projects\OMF\Reports\omf-ai-contributors\input\txt\cross-functional_lighthouse-pdlc\2026-06-09 - AI Enablement_ Cross-Functional Lighthouse PDLC Session.txt'
+'C:\Projects\OMF\Reports\omf-ai-contributors\input\txt\cross-functional_lighthouse-pdlc\2026-06-11 - AI Enablement_ Cross-Functional Lighthouse PDLC Session.txt'
+
+
+
+Iteratively create a short meeting summary using the following format.
+
+We should have the following sections in the summary:
+
+- Meeting Title:
+Provide the name or main subject of the meeting, use key topics from the transcript.
+
+- Short Description:
+Short summary of "Key Points / Topics" section, highlighting the main focus of the meeting and any significant outcomes or decisions.
+
+- Key Points / Topics:
+Consice list topics discussed in the meeting, including any important decisions made or actions taken. Use bullet points for clarity.
+Mention tools features or processes that were highlighted during the meeting.
+
+Result should be in Markdown format and saved as an appropriate files in folder: "output\cross-functional_meetings-summary"
+
+Terms:
+- **CodeMe**: CodeMie is an AI agent platform that allows teams to connect various data sources (e.g., code repositories) and create custom agents capable of answering questions based on that data.
+- **Robo**: Rovo is an AI agent platform focused on software development tasks, providing agents that can analyze code, generate tests, and assist with various stages of the PDLC.
+
+
+
+
+
+
+'C:\Projects\OMF\Reports\omf-ai-contributors\input\txt\cross-functional_lighthouse-pdlc\2026-04-21 - AI Enablement_ Cross-Functional Lighthouse PDLC Session.txt'
+'C:\Projects\OMF\Reports\omf-ai-contributors\input\txt\cross-functional_lighthouse-pdlc\2026-04-23 - AI Enablement_ Cross-Functional Lighthouse PDLC Session.txt'
+'C:\Projects\OMF\Reports\omf-ai-contributors\input\txt\cross-functional_lighthouse-pdlc\2026-04-28 - AI Enablement_ Cross-Functional Lighthouse PDLC Session.txt'
+'C:\Projects\OMF\Reports\omf-ai-contributors\input\txt\cross-functional_lighthouse-pdlc\2026-04-30 - AI Enablement_ Cross-Functional Lighthouse PDLC Session.txt'
+'C:\Projects\OMF\Reports\omf-ai-contributors\input\txt\cross-functional_lighthouse-pdlc\2026-05-07 - AI Enablement_ Cross-Functional Lighthouse PDLC Session.txt'
+'C:\Projects\OMF\Reports\omf-ai-contributors\input\txt\cross-functional_lighthouse-pdlc\2026-05-12 - AI Enablement_ Cross-Functional Lighthouse PDLC Session.txt'
